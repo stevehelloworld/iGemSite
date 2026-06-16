@@ -1,205 +1,86 @@
-{% set pages =
-{
-"/": "",
-"/background": "Background",
-"/problem-statement": "Problem Statement",
-"/project-goals": "Project Goals",
-"/design-overview": "Design Overview",
-"/biological-design": "Biological Design",
-"/metal-binding-mechanism": "Metal Binding Mechanism",
-"/engineering-cycle": "Engineering Cycle",
-"/design-iterations": "Design Iterations",
-"/real-world-application": "Real World Application",
-"/future-implementation": "Future Implementation"
-}
+{%
+  set pages =
+  {
+  "/": "Your iGEM Journey Begins Here! We wish you a successful and rewarding season!",
+  "/contribution": "Make a useful contribution for future iGEM teams and document it on this page.",
+  "/description": "Describe how and why you chose your iGEM project.",
+  "/education": "Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology.",
+  "/engineering": "Demonstrate engineering success in a technical aspect of your project by going through at least one iteration of the engineering design cycle.",
+  "/entrepreneurship": "The entrepreneurship award recognizes exceptional effort to build a business case and commercialize an iGEM project.",
+  "/experiments": "Describe the research, experiments, and protocols you used in your project. It is designed to provide sufficient information for other teams to replicate our work.",
+  "/hardware": "Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better, or more accessible to our community.",
+  "/human-practices": "We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.",
+  "/inclusivity": "Every individual, regardless of background or experience, should have an equal opportunity to engage with scientific knowledge and technological development.",
+  "/measurement": "Synthetic Biology needs great measurement approaches for characterizing parts, and efficient new methods for characterizing many parts at once. Describe your measurement approaches on this page.",
+  "/team": "This page is dedicated to introducing the individuals who made our iGEM project possible. Here, you'll find information about our team members, instructors, and advisors.",
+  "/model": "Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.",
+  "/notebook": "This serves as a chronological record of your team's progress throughout the season. It documents your daily activities, experiments, discussions, and decisions.",
+  "/alternative-platform": "This award is designed to celebrate exemplary work done in alternative platforms, and covers anything that is not E. coli, S. cerevisiae, and B. subtilis.",
+  "/results": "Present the results of your project, along with a detailed analysis and discussion of their significance. Also outline future plans and reflections on the impact of your project.",
+  "/safety-and-security": "Detail the safety and security considerations of your project, adressing potential risks and outlining the measures taken to mitigate them.",
+  "/software": "Software in iGEM should make synthetic biology based on standard parts easier, faster, better or more accessible to our community.",
+  "/sustainability": "Describe how you have evaluated your project ideas against one or more of the SDGs."
+  }
 %}
-
 <!doctype html>
-
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"
+    />
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
 
-<head>
+    <!-- Bootstrap CSS -->
+    <link
+      href="{{ url_for('static', filename = 'bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Custom CSS -->
+    <link
+      href="{{ url_for('static', filename = 'style.css') }}"
+      rel="stylesheet"
+    />
 
-  <link
-    rel="icon"
-    href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"
-  />
+    <title>{{ title }} | VIS - iGEM 2026</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    {% include 'menu.html' %}
 
-  <link
-    rel="license"
-    href="https://creativecommons.org/licenses/by/4.0/"
-  />
-
-  <!-- Bootstrap -->
-
-  <link
-    href="{{ url_for('static', filename='bootstrap.min.css') }}"
-    rel="stylesheet"
-  />
-
-  <!-- Custom CSS -->
-
-  <link
-    href="{{ url_for('static', filename='style.css') }}"
-    rel="stylesheet"
-  />
-
-  <title>{{ title }} | MetalGuard - iGEM 2026</title>
-
-</head>
-
-<body>
-
-  <!-- Navigation -->
-
-{% include 'menu.html' %}
-
-  <!-- ========================= -->
-
-  <!-- HOMEPAGE HERO -->
-
-  <!-- ========================= -->
-
-{% if request.path == "/" %}
-
-  <header class="homepage-hero">
-
-```
-<div class="hero-overlay">
-
-  <div class="container">
-
-    <div class="row align-items-center min-vh-100">
-
-      <div class="col-lg-6">
-
-        <div class="hero-text">
-
-          <div class="hero-subtitle">
-            Team Name
+    <!-- Header -->
+    <header class="bg-hero py-5 mb-5">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-12">
+            <h1 class="display-4 text-white mt-5 mb-2">{{ title }}</h1>
+            <p class="lead mb-5 text-white-50">{{ pages.get(request.path) }}</p>
           </div>
-
-          <h1>
-
-            HEAVY METALS LEAVE.
-
-            <br>
-
-            <span>LIFE RETURNS.</span>
-
-          </h1>
-
-          <p class="hero-description">
-
-            A Synthetic Biology Solution for
-            Pb/Cd Remediation in Wastewater
-
-          </p>
-
-          <a href="#problem-section"
-             class="btn btn-success btn-lg">
-
-            Explore Our Project
-
-          </a>
-
         </div>
-
       </div>
+    </header>
 
-      <div class="col-lg-6">
-
-        <div class="hero-image text-center">
-
-          <!-- Hero Illustration -->
-
-          <img
-            src="{{ url_for('static', filename='assets/images/hero-cell.png') }}"
-            class="img-fluid"
-            alt="MetalGuard Hero"
-          >
-
+    <!-- Page Content -->
+    <div class="container content">
+      <div class="row">
+        <div class="col-12">
+          {# <div class="col-12 col-lg-10 offset-lg-1"> #}
+          {% if md_content %}
+            {{ md_content | safe }}
+          {% endif %}
         </div>
-
       </div>
-
+      {% block page_content %}{% endblock %}
     </div>
 
-  </div>
+    <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+    {% include 'footer.html' %}
 
-</div>
-```
-
-  </header>
-
-{% else %}
-
-  <!-- ========================= -->
-
-  <!-- NORMAL PAGE HEADER -->
-
-  <!-- ========================= -->
-
-  <header class="page-header">
-
-```
-<div class="container">
-
-  <h1>{{ title }}</h1>
-
-  <p>
-
-    {{ pages.get(request.path, "") }}
-
-  </p>
-
-</div>
-```
-
-  </header>
-
-{% endif %}
-
-  <!-- ========================= -->
-
-  <!-- PAGE CONTENT -->
-
-  <!-- ========================= -->
-
-  <div class="container content">
-
-```
-<div class="row">
-
-  <div class="col-12">
-
-    {% if md_content %}
-      {{ md_content | safe }}
-    {% endif %}
-
-  </div>
-
-</div>
-
-{% block page_content %}
-{% endblock %}
-```
-
-  </div>
-
-  <!-- Footer -->
-
-{% include 'footer.html' %}
-
-  <!-- Bootstrap -->
-
-  <script
-    src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"
-  ></script>
-
-</body>
-
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+  </body>
 </html>
