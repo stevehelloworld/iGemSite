@@ -63,3 +63,69 @@ footer a:hover {
   color: white;
   text-decoration: underline;
 }
+
+/* ==========================
+   HOMEPAGE
+========================== */
+
+.hero-section {
+  min-height: 90vh;
+  background: linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45)
+  );
+  color: white;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.problem-card,
+.solution-card,
+.highlight-card,
+.team-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+.highlight-card {
+  text-align: center;
+}
+
+footer {
+  background: #0f2433;
+  color: white;
+}
+
+/* ==========================
+   PROJECT MEGA MENU
+========================== */
+
+.mega-menu {
+  width: 1000px;
+  display: flex;
+  gap: 40px;
+}
+
+.mega-column {
+  min-width: 200px;
+}
+
+.mega-column h6 {
+  color: #4caf50;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.mega-column .dropdown-item {
+  padding: 6px 0;
+}
+
+.navbar {
+  background: rgba(0,0,0,.7) !important;
+}
