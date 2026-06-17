@@ -68,13 +68,111 @@ footer a:hover {
    HOMEPAGE
 ========================== */
 
-.hero-section {
-  min-height: 90vh;
-  background: linear-gradient(
-    rgba(0,0,0,.45),
-    rgba(0,0,0,.45)
-  );
+/* ==========================================
+   HOMEPAGE HERO
+========================================== */
+
+.homepage-hero {
+
+  height: 650px;
+
+  background-image:
+      linear-gradient(
+          rgba(0,0,0,0.45),
+          rgba(0,0,0,0.45)
+      ),
+      url("../assets/images/river-background.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.hero-container {
+
+  position: relative;
+}
+
+.hero-text h1 {
+
   color: white;
+
+  font-size: 4.5rem;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+.hero-text h1 span {
+
+  color: #7BC043;
+}
+
+.hero-description {
+
+  color: white;
+
+  font-size: 1.3rem;
+
+  margin-top: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+
+  position: relative;
+}
+
+.hero-image img {
+
+  max-width: 650px;
+
+  width: 100%;
+}
+
+/* LEFT PB/CD NETWORK */
+
+.hero-left-molecule {
+
+  position: absolute;
+
+  left: -80px;
+
+  top: 100px;
+
+  width: 250px;
+
+  z-index: 5;
+}
+
+.hero-left-molecule img {
+
+  width: 100%;
+}
+
+/* RIGHT CLEAN WATER BUBBLE */
+
+.clean-water-bubble {
+
+  position: absolute;
+
+  right: -120px;
+
+  top: 80px;
+
+  width: 180px;
+
+  z-index: 5;
+}
+
+.clean-water-bubble img {
+
+  width: 100%;
 }
 
 .section-title {
@@ -101,6 +199,8 @@ footer {
   background: #0f2433;
   color: white;
 }
+
+
 
 /* ==========================
    PROJECT MEGA MENU
