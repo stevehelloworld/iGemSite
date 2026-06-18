@@ -1,5 +1,5 @@
 body {
-  padding-top: 56px;
+  padding-top: 0;
 }
 
 .left-aligned {
@@ -170,7 +170,30 @@ footer {
 }
 
 .navbar {
-  background: rgba(0,0,0,.7) !important;
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: transparent !important;
+}
+
+.navbar .nav-link {
+
+  color: white !important;
+
+  font-weight: 600;
+}
+
+.navbar-brand {
+
+  color: white !important;
 }
 
 .hero-banner {
