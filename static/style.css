@@ -270,3 +270,41 @@ footer {
 
   margin-bottom: 30px;
 }
+
+.homepage-grid {
+  max-width: 1400px;
+  margin: 40px auto;
+  }
+  
+  .grid-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+  }
+  
+  .homepage-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+  min-height: 320px;
+  }
+  
+  .homepage-card h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  }
+  
+  .highlight-stat {
+  text-align: center;
+  padding: 12px;
+  }
+  
+  .highlight-stat h3 {
+  color: #4caf50;
+  font-size: 2rem;
+  font-weight: 700;
+  }
+  

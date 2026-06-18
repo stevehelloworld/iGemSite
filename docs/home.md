@@ -1,82 +1,118 @@
-# HEAVY METALS LEAVE. LIFE RETURNS.
+<div class="homepage-grid">
 
-A Synthetic Biology Solution for Pb/Cd Remediation in Wastewater.
+<div class="grid-row">
 
----
+<div class="homepage-card">
 
-# THE PROBLEM
+<h2>THE PROBLEM</h2>
 
-## Lead Pollution
+<h4>Lead Pollution</h4>
+<p>Lead contamination from industrial wastewater can accumulate in aquatic ecosystems and pose serious risks to human health.</p>
 
-Placeholder for lead contamination background.
+<h4>Cadmium Threat</h4>
+<p>Cadmium is highly toxic even at low concentrations and is difficult to remove once released into the environment.</p>
 
-## Cadmium Threat
+<h4>Wastewater Challenge</h4>
+<p>Current treatment technologies are often costly, energy-intensive, and may generate secondary pollution.</p>
 
-Placeholder for cadmium contamination background.
+<p><strong>Pollution in Taiwan</strong></p>
+<p>[Insert Taiwan pollution map here]</p>
 
-## Wastewater Challenge
+</div>
 
-Placeholder for industrial wastewater pollution.
+<div class="homepage-card">
 
----
+<h2>OUR SOLUTION</h2>
 
-## Pollution in Taiwan
+<p>🔍 <strong>Detection</strong><br>
+Identify Pb²⁺ and Cd²⁺ contamination in wastewater.</p>
 
-Placeholder for Taiwan pollution map.
+<p>🧲 <strong>Capture</strong><br>
+Engineered proteins selectively bind heavy metal ions.</p>
 
----
+<p>📦 <strong>Sequestration</strong><br>
+Bound metals are safely retained within biological systems.</p>
 
-# OUR SOLUTION
+<p>♻️ <strong>Removal</strong><br>
+Heavy metals are removed from wastewater streams.</p>
 
-## Detection
+<p>💧 <strong>Clean Water</strong><br>
+Produce safer water for environmental discharge.</p>
 
-Describe how heavy metals are identified in wastewater.
+</div>
 
-## Capture
+<div class="homepage-card">
 
-Describe how engineered biological components bind heavy metals.
+<h2>PROJECT HIGHLIGHTS</h2>
 
-## Sequestration
+<div class="highlight-stat">
+<h3>90%</h3>
+<p>Pb Removal Efficiency</p>
+</div>
 
-Describe how metals are safely retained.
+<div class="highlight-stat">
+<h3>75%</h3>
+<p>Cd Removal Efficiency</p>
+</div>
 
-## Removal
+<div class="highlight-stat">
+<h3>500+</h3>
+<p>People Reached</p>
+</div>
 
-Describe how contaminants are removed from the environment.
+<div class="highlight-stat">
+<h3>12</h3>
+<p>Stakeholders Engaged</p>
+</div>
 
-## Clean Water
+</div>
 
-Describe the expected remediation outcome.
+</div>
 
----
+<div class="grid-row">
 
-# PROJECT HIGHLIGHTS
+<div class="homepage-card">
 
-* Pb Removal Efficiency
-* Cd Removal Efficiency
-* People Reached
-* Stakeholders Engaged
+<h2>HUMAN PRACTICES</h2>
 
----
+<p>🏭 Industry</p>
+<p>🏛 Government</p>
+<p>🔬 Researchers</p>
+<p>👥 Public</p>
+<p>💧 Wastewater Plants</p>
 
-# HUMAN PRACTICES
+<p>We incorporated stakeholder feedback throughout project development.</p>
 
-Placeholder for stakeholder engagement preview.
+</div>
 
----
+<div class="homepage-card">
 
-# ENGINEERING CYCLE
+<h2>ENGINEERING CYCLE</h2>
 
+<p style="text-align:center; font-size:1.3rem;">
 Design → Build → Test → Learn
+</p>
 
----
+<p>
+Our iterative engineering process continuously improves system performance and reliability.
+</p>
 
-# MEET OUR TEAM
+</div>
 
-Placeholder for team member information.
+<div class="homepage-card">
 
----
+<h2>MEET OUR TEAM</h2>
 
-# SPONSORS
+<p>[Insert team photo]</p>
 
-Placeholder for sponsor logos.
+<p>Introduce team members, roles, and areas of expertise.</p>
+
+<p>
+<a href="/team">View All Members →</a>
+</p>
+
+</div>
+
+</div>
+
+</div>
