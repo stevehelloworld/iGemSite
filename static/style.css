@@ -76,15 +76,7 @@ footer a:hover {
 
   height: 650px;
 
-  background-image:
-      linear-gradient(
-          rgba(0,0,0,0.45),
-          rgba(0,0,0,0.45)
-      ),
-      url("../assets/images/river-background.jpg");
-
-  background-size: cover;
-  background-position: center;
+  background: black;
 
   overflow: hidden;
 
@@ -123,57 +115,8 @@ footer a:hover {
   margin-bottom: 2rem;
 }
 
-.hero-image {
 
-  position: relative;
-}
 
-.hero-image img {
-
-  max-width: 650px;
-
-  width: 100%;
-}
-
-/* LEFT PB/CD NETWORK */
-
-.hero-left-molecule {
-
-  position: absolute;
-
-  left: -80px;
-
-  top: 100px;
-
-  width: 250px;
-
-  z-index: 5;
-}
-
-.hero-left-molecule img {
-
-  width: 100%;
-}
-
-/* RIGHT CLEAN WATER BUBBLE */
-
-.clean-water-bubble {
-
-  position: absolute;
-
-  right: -120px;
-
-  top: 80px;
-
-  width: 180px;
-
-  z-index: 5;
-}
-
-.clean-water-bubble img {
-
-  width: 100%;
-}
 
 .section-title {
   font-weight: 700;
@@ -228,4 +171,73 @@ footer {
 
 .navbar {
   background: rgba(0,0,0,.7) !important;
+}
+
+.hero-banner {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 650px;
+}
+
+.hero-background {
+
+  width: 100%;
+
+  height: 650px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.hero-text {
+
+  position: absolute;
+
+  left: 180px;
+
+  top: 120px;
+
+  z-index: 10;
+
+  max-width: 550px;
+}
+
+.hero-subtitle {
+
+  color: white;
+
+  font-size: 1rem;
+
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+
+  color: white;
+
+  font-size: 5rem;
+
+  font-weight: 800;
+
+  line-height: 1.05;
+}
+
+.hero-text h1 span {
+
+  color: #7BC043;
+}
+
+.hero-description {
+
+  color: white;
+
+  font-size: 1.3rem;
+
+  margin-top: 20px;
+
+  margin-bottom: 30px;
 }

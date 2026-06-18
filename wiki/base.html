@@ -72,60 +72,39 @@
 
   <div class="container hero-container">
 
-    <div class="row align-items-center">
+    <div class="hero-banner">
 
-      <div class="col-lg-6">
-
-        <div class="hero-text">
-
-          <div class="hero-subtitle">
-            Team Name
-          </div>
-
-          <h1>
-
-            HEAVY METALS LEAVE.
-
-            <br>
-
-            <span>LIFE RETURNS.</span>
-
-          </h1>
-
-          <p class="hero-description">
-
-            A Synthetic Biology Solution for
-            Pb/Cd Remediation in Wastewater
-
-          </p>
-
-          <a href="#problem-section"
-             class="btn btn-success btn-lg">
-
-            Explore Our Project
-
-          </a>
-
+      <img
+        src="{{ url_for('static',
+        filename='assets/images/full-hero-banner.png') }}"
+        class="hero-background"
+        alt="MetalGuard Hero"
+      >
+    
+      <div class="hero-text">
+    
+        <div class="hero-subtitle">
+          Team Name
         </div>
-
+    
+        <h1>
+          HEAVY METALS LEAVE.
+          <br>
+          <span>LIFE RETURNS.</span>
+        </h1>
+    
+        <p class="hero-description">
+          A Synthetic Biology Solution for
+          Pb/Cd Remediation in Wastewater
+        </p>
+    
+        <a href="#problem-section"
+           class="btn btn-success btn-lg">
+          Explore Our Project
+        </a>
+    
       </div>
-
-      <div class="col-lg-6">
-
-        <div class="hero-image text-center">
-
-          <!-- Hero Illustration -->
-
-          <img
-            src="{{ url_for('static', filename='assets/images/hero-cell2.png') }}"
-            class="img-fluid"
-            alt="MetalGuard Hero"
-          >
-
-        </div>
-
-      </div>
-
+    
     </div>
 
   </div>
