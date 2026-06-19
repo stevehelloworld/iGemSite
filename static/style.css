@@ -68,6 +68,11 @@ footer a:hover {
    HOMEPAGE
 ========================== */
 
+.home-page .navbar {
+
+  background: transparent !important;
+}
+
 /* ==========================================
    HOMEPAGE HERO
 ========================================== */
@@ -171,17 +176,15 @@ footer {
 
 .navbar {
 
-  position: absolute;
+  position: fixed;
 
   top: 0;
 
-  left: 0;
-
   width: 100%;
 
-  z-index: 1000;
+  z-index: 9999;
 
-  background: transparent !important;
+  background: rgba(0,0,0,.8);
 }
 
 .navbar .nav-link {
