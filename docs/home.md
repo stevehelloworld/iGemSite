@@ -2,23 +2,58 @@
 
 <div class="grid-row">
 
-<div class="homepage-card">
+<div class="homepage-card problem-card">
 
 <h2>THE PROBLEM</h2>
 
-<h4>Lead Pollution</h4>
-<p>Lead contamination from industrial wastewater can accumulate in aquatic ecosystems and pose serious risks to human health.</p>
+<div class="problem-icons">
 
-<h4>Cadmium Threat</h4>
-<p>Cadmium is highly toxic even at low concentrations and is difficult to remove once released into the environment.</p>
+<div class="problem-item">
+<div class="problem-circle pb">Pb</div>
+<h5>Lead Pollution</h5>
+<p>Lead exposure causes serious health risks and accumulates in living organisms.</p>
+</div>
 
-<h4>Wastewater Challenge</h4>
-<p>Current treatment technologies are often costly, energy-intensive, and may generate secondary pollution.</p>
+<div class="problem-item">
+<div class="problem-circle cd">Cd</div>
+<h5>Cadmium Threat</h5>
+<p>Cadmium is toxic even at low concentrations and persists in the environment.</p>
+</div>
 
-<p><strong>Pollution in Taiwan</strong></p>
-<p>[Insert Taiwan pollution map here]</p>
+<div class="problem-item">
+<div class="problem-circle water">💧</div>
+<h5>Wastewater Challenge</h5>
+<p>Industrial wastewater releases heavy metals that are difficult to remove effectively.</p>
+</div>
 
 </div>
+
+<div class="taiwan-section">
+
+<h5>Pollution in Taiwan</h5>
+
+<img
+src="/static/assets/images/taiwan-map.jpg"
+class="taiwan-map"
+alt="Taiwan Pollution Map">
+
+<div class="pollution-sites">
+
+<p><strong>Taoyuan</strong><br>
+Industrial park effluents contribute to Pb and Cd contamination.</p>
+
+<p><strong>Taichung</strong><br>
+Heavy metal pollution in rivers affects agricultural safety.</p>
+
+<p><strong>Kaohsiung</strong><br>
+Industrial wastewater and harbor activities increase metal load.</p>
+
+</div>
+
+</div>
+
+</div>
+
 
 <div class="homepage-card">
 
