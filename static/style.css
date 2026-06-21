@@ -78,56 +78,38 @@ footer a:hover {
 ========================================== */
 
 .homepage-hero {
-
   height: 650px;
-
   background: black;
-
   overflow: hidden;
-
   position: relative;
 }
 
 .homepage-content {
-
   width: 96%;
-
   max-width: 1800px;
-
   margin: 0 auto;
-
   padding-top: 40px;
 }
 
 .hero-container {
-
   position: relative;
 }
 
 .hero-text h1 {
-
   color: white;
-
   font-size: 4.5rem;
-
   font-weight: 800;
-
   line-height: 1.1;
 }
 
 .hero-text h1 span {
-
   color: #7BC043;
 }
 
 .hero-description {
-
   color: white;
-
   font-size: 1.3rem;
-
   margin-top: 1rem;
-
   margin-bottom: 2rem;
 }
 
@@ -141,88 +123,72 @@ footer a:hover {
 }
 
 .problem-icons {
-
-  display: flex;
-  
-  justify-content: space-between;
-  
-  gap: 20px;
-  
+  display: flex;  
+  justify-content: space-between;  
+  gap: 20px;  
   margin-bottom: 25px;
   
-  }
+}
   
-  .problem-item {
+.problem-item {  
+  flex: 1;  
+  text-align: center;  
+}
   
-  flex: 1;
+.problem-circle {  
+  width: 70px;  
+  height: 70px;  
+  border-radius: 50%;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  font-size: 1.5rem;  
+  font-weight: bold;  
+  color: white;  
+  margin: 0 auto 12px auto;  
+}
   
-  text-align: center;
-  
-  }
-  
-  .problem-circle {
-  
-  width: 70px;
-  
-  height: 70px;
-  
-  border-radius: 50%;
-  
-  display: flex;
-  
-  align-items: center;
-  
-  justify-content: center;
-  
-  font-size: 1.5rem;
-  
-  font-weight: bold;
-  
-  color: white;
-  
-  margin: 0 auto 12px auto;
-  
-  }
-  
-  .pb {
+.pb {
   background: #555;
-  }
+}
   
-  .cd {
+.cd {
   background: #f39c12;
-  }
+}
   
-  .water {
+.water {
   background: #3498db;
-  }
+}
   
-  .taiwan-section {
+.taiwan-section{
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+}
   
-  margin-top: 25px;
+.taiwan-map{
+  width:100%;
+  height:auto;
+}
+
+.taiwan-map-column{
+  flex:0 0 35%;
+}
+
+.taiwan-text-column{
+  flex:0 0 65%;
+}
+
+.city-block{
+  margin-bottom:18px;
+  font-size:0.9rem;
+}
   
-  border-top: 1px solid #ddd;
-  
-  padding-top: 20px;
-  
-  }
-  
-  .taiwan-map {
-  
-  width: 180px;
-  
-  display: block;
-  
-  margin: 15px auto;
-  
-  }
-  
-  .pollution-sites p {
-  
-  font-size: 0.9rem;
-  
+.pollution-sites p {
+  font-size: 0.9rem;  
   margin-bottom: 12px;
-  
-  }
+}
+
 .problem-card,
 .solution-card,
 .highlight-card,
