@@ -25,7 +25,6 @@
     </div>
 
     <div class="taiwan-section">
-        <h5>Pollution in Taiwan</h5>
         <div class="taiwan-section">
             <div class="taiwan-map-column">
                 <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/taiwan-map-2.avif"
