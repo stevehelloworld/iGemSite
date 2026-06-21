@@ -3,53 +3,50 @@
 <div class="grid-row">
 
 <div class="homepage-card problem-card">
-
-<h2>THE PROBLEM</h2>
-
-<div class="problem-icons">
-
-<div class="problem-item">
-<div class="problem-circle pb">Pb</div>
-<h5>Lead Pollution</h5>
-<p>Lead exposure causes serious health risks and accumulates in living organisms.</p>
-</div>
-
-<div class="problem-item">
-<div class="problem-circle cd">Cd</div>
-<h5>Cadmium Threat</h5>
-<p>Cadmium is toxic even at low concentrations and persists in the environment.</p>
-</div>
-
-<div class="problem-item">
-<div class="problem-circle water">💧</div>
-<h5>Wastewater Challenge</h5>
-<p>Industrial wastewater releases heavy metals that are difficult to remove effectively.</p>
-</div>
-
-</div>
-
-<div class="taiwan-section">
-    <h5>Pollution in Taiwan</h5>
-    <div class="taiwan-section">
-        <div class="taiwan-map-column">
-            <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/taiwan-map-2.avif"
-                class="taiwan-map">
+    <h2>THE PROBLEM</h2>
+    <div class="problem-icons">
+        <div class="problem-item">
+            <div class="problem-circle pb">Pb</div>
+            <h5>Lead Pollution</h5>
+            <p>Lead exposure causes serious health risks and accumulates in living organisms.</p>
         </div>
 
-        <div class="taiwan-text-column">
-            <div class="city-block">
-                <strong>Taoyuan</strong><br>
-                Industrial park effluents contribute to Pb and Cd contamination.
+        <div class="problem-item">
+            <div class="problem-circle cd">Cd</div>
+            <h5>Cadmium Threat</h5>
+            <p>Cadmium is toxic even at low concentrations and persists in the environment.</p>
+        </div>
+
+        <div class="problem-item">
+            <div class="problem-circle water">💧</div>
+            <h5>Wastewater Challenge</h5>
+            <p>Industrial wastewater releases heavy metals that are difficult to remove effectively.</p>
+        </div>
+    </div>
+
+    <div class="taiwan-section">
+        <h5>Pollution in Taiwan</h5>
+        <div class="taiwan-section">
+            <div class="taiwan-map-column">
+                <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/taiwan-map-2.avif"
+                    class="taiwan-map">
             </div>
 
-            <div class="city-block">
-                <strong>Taichung</strong><br>
-                Heavy metal pollution in rivers affects agricultural safety.
-            </div>
+            <div class="taiwan-text-column">
+                <div class="city-block">
+                    <strong>Taoyuan</strong><br>
+                    Industrial park effluents contribute to Pb and Cd contamination.
+                </div>
 
-            <div class="city-block">
-                <strong>Kaohsiung</strong><br>
-                Industrial wastewater and harbor activities increase metal load.
+                <div class="city-block">
+                    <strong>Taichung</strong><br>
+                    Heavy metal pollution in rivers affects agricultural safety.
+                </div>
+
+                <div class="city-block">
+                    <strong>Kaohsiung</strong><br>
+                    Industrial wastewater and harbor activities increase metal load.
+                </div>
             </div>
         </div>
     </div>
