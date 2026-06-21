@@ -110,34 +110,34 @@ Produce safer water for environmental discharge.</p>
             <svg class="hp-arrows" viewBox="0 0 320 320">
                 <defs>
                     <marker id="arrowhead"
-                            markerWidth="4"
-                            markerHeight="4"
-                            refX="4"
-                            refY="2"
+                            markerWidth="6"
+                            markerHeight="6"
+                            refX="5"
+                            refY="3"
                             orient="auto">
-                            <polygon points="0 0, 4 2, 0 4"
+                            <polygon points="0 0, 6 3, 0 6"
                                      fill="#bfc5cc"/>
                     </marker>
                 </defs>
 
                 <!-- Government -->
-                <line x1="160" y1="120" x2="160" y2="95"
+                <line x1="160" y1="120" x2="160" y2="115" marker-start="url(#arrowhead)"
                     marker-end="url(#arrowhead)" stroke-width="1"/>
 
                 <!-- Industry -->
-                <line x1="120" y1="160" x2="95" y2="160"
+                <line x1="120" y1="160" x2="115" y2="160" marker-start="url(#arrowhead)"
                     marker-end="url(#arrowhead)" stroke-width="1"/>
 
                 <!-- Researchers -->
-                <line x1="200" y1="160" x2="225" y2="160"
+                <line x1="200" y1="160" x2="205" y2="160" marker-start="url(#arrowhead)"
                     marker-end="url(#arrowhead)" stroke-width="1"/>
 
                 <!-- Public -->
-                <line x1="136" y1="197" x2="118" y2="225"
+                <line x1="139" y1="194" x2="129" y2="210" marker-start="url(#arrowhead)"
                     marker-end="url(#arrowhead)" stroke-width="1"/>
 
                 <!-- Wastewater -->
-                <line x1="184" y1="197" x2="202" y2="225"
+                <line x1="181" y1="194" x2="191" y2="210" marker-start="url(#arrowhead)"
                     marker-end="url(#arrowhead)" stroke-width="1"/>
             </svg>
 
