@@ -234,6 +234,29 @@ footer {
     z-index: 9999;
 }
 
+.mega-footer {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 16px 20px;
+    background: rgba(76,175,80,0.08);
+    border-left: 4px solid #4caf50;
+    border-radius: 12px;
+}
+
+.mega-footer i {
+    font-size: 24px;
+    color: #4caf50;
+    flex-shrink: 0;
+}
+
+.mega-footer span {
+    color: #333;
+    line-height: 1.5;
+    font-size: 14px;
+}
 .mega-column {
   min-width: 200px;
 }
