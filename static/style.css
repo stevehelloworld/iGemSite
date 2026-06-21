@@ -239,6 +239,32 @@ footer a:hover {
   color: white;
 }
 
+.engineering-content{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  margin-top:20px;
+}
+
+.engineering-image{
+  flex:1;
+}
+
+.engineering-image img{
+  width:100%;
+  max-width:280px;
+  display:block;
+}
+
+.engineering-text{
+  flex:1;
+}
+
+.engineering-text p{
+  margin-bottom:20px;
+  line-height:1.6;
+}
+
 footer {
   background: #0f2433;
   color: white;

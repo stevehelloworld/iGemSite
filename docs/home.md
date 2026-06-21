@@ -118,17 +118,21 @@ Produce safer water for environmental discharge.</p>
 
 <div class="homepage-card">
     <h2>ENGINEERING CYCLE</h2>
-    <div class="engineering-cycle-image">
-        <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/engineering-cycle.avif"
-             alt="Engineering Cycle">
-    </div>
-    <p class="cycle-description">
-        Our iterative process helps us continuously improve and optimize our system.
-    </p>
+    <div class="engineering-content">
+        <div class="engineering-image">
+            <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/engineering-cycle.avif"
+                 alt="Engineering Cycle">
+        </div>
 
-    <a href="/engineering" class="btn-cycle">
-        SEE OUR ITERATIONS
-    </a>
+        <div class="engineering-text">
+            <p>
+                Our iterative process helps us continuously improve and optimize our system.
+            </p>
+            <a href="/engineering" class="btn-cycle">
+                SEE OUR ITERATIONS
+            </a>
+        </div>
+    </div>
 </div>
 
 <div class="homepage-card">
