@@ -125,9 +125,26 @@ Produce safer water for environmental discharge.</p>
         </div>
 
         <div class="engineering-text">
-            <p>
-                Our iterative process helps us continuously improve and optimize our system.
-            </p>
+            <div class="cycle-step">
+                <strong>Design</strong><br>
+                Identify heavy metal challenges and design a biological solution.
+            </div>
+
+            <div class="cycle-step">
+                <strong>Build</strong><br>
+                Construct and optimize the metal-removal system.
+            </div>
+
+            <div class="cycle-step">
+                <strong>Test</strong><br>
+                Evaluate removal efficiency and system performance.
+            </div>
+
+            <div class="cycle-step">
+                <strong>Learn</strong><br>
+                Improve the design based on data and stakeholder feedback.
+            </div>
+
             <a href="/engineering" class="btn-cycle">
                 SEE OUR ITERATIONS
             </a>

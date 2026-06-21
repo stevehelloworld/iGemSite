@@ -241,8 +241,8 @@ footer a:hover {
 
 .engineering-content{
   display:flex;
-  align-items:center;
-  gap:25px;
+  align-items:flex-start;
+  gap:30px;
   margin-top:20px;
 }
 
@@ -263,6 +263,16 @@ footer a:hover {
 .engineering-text p{
   margin-bottom:20px;
   line-height:1.6;
+}
+
+.cycle-step{
+  margin-bottom:16px;
+  line-height:1.4;
+}
+
+.cycle-step strong{
+  color:#7BC043;
+  font-size:1.05rem;
 }
 
 footer {
