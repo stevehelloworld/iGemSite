@@ -31,47 +31,66 @@
         </li>
 
         <!-- PROJECT -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbar-project"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+        <li class="nav-item dropdown mega-dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="navbar-project">
             Project
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbar-project">
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='description') }}"
-                >Description</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='engineering') }}"
-                >Engineering</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='results') }}"
-                >Results</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='contribution') }}"
-                >Contribution</a
-              >
-            </li>
-          </ul>
+
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h5>DESCRIPTION</h5>
+              <a href="{{ url_for('pages', page='description') }}">
+                <div class="icon"><i class="bi bi-book"></i></div>
+                <div>
+                  <strong>Background</strong>
+                  <small>Heavy metal contamination overview</small>
+                </div>
+              </a>
+
+              <a href="{{ url_for('pages', page='description') }}">
+                <div class="icon"><i class="bi bi-gear"></i></div>
+                <div>
+                  <strong>Problem Statement</strong>
+                  <small>Why Pb and Cd pollution matter</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>ENGINEERING</h5>
+              <a href="{{ url_for('pages', page='engineering') }}">
+                <div class="icon"><i class="bi bi-gear"></i></div>
+                <div>
+                  <strong>Engineering Cycle</strong>
+                  <small>Design → Build → Test → Learn</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>RESULTS</h5>
+              <a href="{{ url_for('pages', page='results') }}">
+                <div class="icon"><i class="bi bi-flask"></i></div>
+                <div>
+                  <strong>Results Overview</strong>
+                  <small>Summary of experimental results</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>CONTRIBUTION</h5>
+              <a href="{{ url_for('pages', page='contribution') }}">
+                <div class="icon"><i class="bi bi-globe"></i></div>
+                <div>
+                  <strong>Human Practices</strong>
+                  <small>Real-world stakeholder engagement</small>
+                </div>
+              </a>
+            </div>
+          </div>
         </li>
 
         <!-- WET LAB -->
