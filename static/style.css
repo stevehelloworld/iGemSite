@@ -334,6 +334,16 @@ footer {
   align-items:center;
 }
 
+.hp-node i {
+  font-size: 36px;
+}
+
+.hp-arrows {
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+
 .government{
   top:0;
   left:50%;
