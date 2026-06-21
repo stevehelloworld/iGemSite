@@ -35,7 +35,7 @@
 <div class="taiwan-section">
 
   <div class="taiwan-map-column">
-      <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/taiwan-map.avif"
+      <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/taiwan-map-2.avif"
            class="taiwan-map">
   </div>
 
