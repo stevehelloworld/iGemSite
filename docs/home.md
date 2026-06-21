@@ -117,17 +117,18 @@ Produce safer water for environmental discharge.</p>
 </div>
 
 <div class="homepage-card">
+    <h2>ENGINEERING CYCLE</h2>
+    <div class="engineering-cycle-image">
+        <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/engineering-cycle.avif"
+             alt="Engineering Cycle">
+    </div>
+    <p class="cycle-description">
+        Our iterative process helps us continuously improve and optimize our system.
+    </p>
 
-<h2>ENGINEERING CYCLE</h2>
-
-<p style="text-align:center; font-size:1.3rem;">
-Design → Build → Test → Learn
-</p>
-
-<p>
-Our iterative engineering process continuously improves system performance and reliability.
-</p>
-
+    <a href="/engineering" class="btn-cycle">
+        SEE OUR ITERATIONS
+    </a>
 </div>
 
 <div class="homepage-card">

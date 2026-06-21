@@ -203,6 +203,42 @@ footer a:hover {
   text-align: center;
 }
 
+/* Homepage Engineering Cycle */
+
+.engineering-cycle-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.engineering-cycle-image img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+.cycle-description {
+  text-align: center;
+  margin-top: 15px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.btn-cycle {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 2px solid #2d7a46;
+  border-radius: 8px;
+  color: #2d7a46;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-cycle:hover {
+  background: #2d7a46;
+  color: white;
+}
+
 footer {
   background: #0f2433;
   color: white;
