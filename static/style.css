@@ -222,19 +222,26 @@ footer {
     display: none;
     position: absolute;
     top: 100%;
-    left: -300px;
-    width: 1100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1300px;
     background: white;
     border-radius: 16px;
     padding: 30px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.2);
     grid-template-columns: repeat(4,1fr);
-    gap: 30px;
+    gap: 40px;
     z-index: 9999;
 }
 
 .mega-column {
   min-width: 200px;
+}
+
+.mega-column a {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
 }
 
 .mega-column h5 {
@@ -249,16 +256,10 @@ footer {
   margin-bottom: 12px;
 }
 
-.mega-column a {
-    display: flex;
-    gap: 15px;
-    text-decoration: none;
-    color: #333;
-    margin-bottom: 20px;
-}
-
 .mega-column .icon {
-    font-size: 30px;
+    font-size: 28px;
+    color: #4caf50;
+    flex-shrink: 0;
 }
 
 .mega-column strong {
