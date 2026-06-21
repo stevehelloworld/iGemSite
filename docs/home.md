@@ -115,19 +115,19 @@ Produce safer water for environmental discharge.</p>
                 <line x1="150" y1="150" x2="200" y2="250"/>
             </svg>
             <div class="hp-node government">
-                <i class="bi bi-building"></i><br>Government
+                <i class="bi bi-building"></i><span>Government</span>
             </div>
             <div class="hp-node industry">
-                <i class="bi bi-bank"></i><br>Industry
+                <i class="bi bi-bank"></i><span>Industry</span>
             </div>
             <div class="hp-node researchers">
-                <i class="bi bi-search"></i><br>Researchers
+                <i class="bi bi-search"></i><span>Researchers</span>
             </div>
             <div class="hp-node public">
-                <i class="bi bi-people"></i><br>Public
+                <i class="bi bi-people"></i><span>Public</span>
             </div>
             <div class="hp-node wastewater">
-                <i class="bi bi-droplet"></i><br>Wastewater
+                <i class="bi bi-droplet"></i><span>Wastewater</span>
             </div>
         </div>
 

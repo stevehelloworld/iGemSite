@@ -289,8 +289,8 @@ footer {
 
 .hp-diagram{
   position:relative;
-  width:280px;
-  height:280px;
+  width:320px;
+  height:320px;
   flex-shrink:0;
 }
 
@@ -317,8 +317,8 @@ footer {
 .hp-node{
   position:absolute;
 
-  width:75px;
-  height:75px;
+  width:90px;
+  height:90px;
 
   border-radius:50%;
 
@@ -334,14 +334,25 @@ footer {
   align-items:center;
 }
 
+.hp-node span {
+  font-size:11px;
+  line-height:1;
+}
+
 .hp-node i {
-  font-size: 36px;
+  font-size: 42px;
 }
 
 .hp-arrows {
   position:absolute;
   width:100%;
   height:100%;
+  pointer-events:none;
+}
+
+.hp-arrows line {
+  stroke:#9aa0a6;
+  stroke-width:2;
 }
 
 .government{
