@@ -103,17 +103,48 @@ Produce safer water for environmental discharge.</p>
 <div class="grid-row">
 
 <div class="homepage-card">
+    <h2>HUMAN PRACTICES</h2>
+    <div class="hp-layout">
+        <div class="hp-diagram">
+            <div class="hp-center">TEAM</div>
+            <div class="hp-node government">
+                <i class="bi bi-building"></i><br>Government
+            </div>
+            <div class="hp-node industry">
+                <i class="bi bi-bank"></i><br>Industry
+            </div>
+            <div class="hp-node researchers">
+                <i class="bi bi-search"></i><br>Researchers
+            </div>
+            <div class="hp-node public">
+                <i class="bi bi-people"></i><br>Public
+            </div>
+            <div class="hp-node wastewater">
+                <i class="bi bi-droplet"></i><br>Wastewater
+            </div>
+        </div>
 
-<h2>HUMAN PRACTICES</h2>
+        <div class="hp-text">
+            <div class="hp-step">
+                <strong>Listen</strong><br>
+                We communicated with stakeholders to understand real-world needs.
+            </div>
 
-<p>🏭 Industry</p>
-<p>🏛 Government</p>
-<p>🔬 Researchers</p>
-<p>👥 Public</p>
-<p>💧 Wastewater Plants</p>
+            <div class="hp-step">
+                <strong>Integrate</strong><br>
+                Feedback was incorporated into our design and experiments.
+            </div>
 
-<p>We incorporated stakeholder feedback throughout project development.</p>
+            <div class="hp-step">
+                <strong>Impact</strong><br>
+                Our solution was refined to maximize practical applicability.
+            </div>
 
+            <a href="human-practices" class="btn-cycle">
+                VIEW MORE
+            </a>
+        </div>
+    </div>
 </div>
 
 <div class="homepage-card">
@@ -145,7 +176,7 @@ Produce safer water for environmental discharge.</p>
                 Improve the design based on data and stakeholder feedback.
             </div>
 
-            <a href="vis/engineering" class="btn-cycle">
+            <a href="engineering" class="btn-cycle">
                 SEE OUR ITERATIONS
             </a>
         </div>

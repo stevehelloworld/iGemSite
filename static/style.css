@@ -280,6 +280,99 @@ footer {
   color: white;
 }
 
+/* Homepage Human Practice */
+.hp-layout{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+.hp-diagram{
+  position:relative;
+  width:280px;
+  height:280px;
+  flex-shrink:0;
+}
+
+.hp-center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+  width:90px;
+  height:90px;
+
+  border-radius:50%;
+  background:#0d2b45;
+  color:white;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-weight:700;
+}
+
+.hp-node{
+  position:absolute;
+
+  width:75px;
+  height:75px;
+
+  border-radius:50%;
+
+  background:#f8f9fa;
+  border:2px solid #d0d0d0;
+
+  text-align:center;
+  font-size:12px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.government{
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.industry{
+  top:50%;
+  left:0;
+  transform:translateY(-50%);
+}
+
+.researchers{
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+}
+
+.public{
+  bottom:0;
+  left:15%;
+}
+
+.wastewater{
+  bottom:0;
+  right:15%;
+}
+
+.hp-text{
+  flex:1;
+}
+
+.hp-step{
+  margin-bottom:16px;
+}
+
+.hp-step strong{
+  color:#2d7a46;
+}
 
 
 /* ==========================
