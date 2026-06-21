@@ -356,8 +356,8 @@ footer {
 }
 
 .hp-arrows line {
-  stroke:red;
-  stroke-width:5;
+  stroke:#bfc5cc;
+  stroke-width:1.2;
 }
 
 .government{
