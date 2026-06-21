@@ -33,7 +33,7 @@
 <h5>Pollution in Taiwan</h5>
 
 <img
-src="/static/assets/images/taiwan-map.jpg"
+src="assets/images/taiwan-map.jpg"
 class="taiwan-map"
 alt="Taiwan Pollution Map">
 
