@@ -299,6 +299,7 @@ footer {
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
+  z-index:3;
 
   width:90px;
   height:90px;
@@ -332,27 +333,31 @@ footer {
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  z-index:2;
+  gap:4px;
 }
 
-.hp-node span {
-  font-size:11px;
-  line-height:1;
+.hp-node span{
+  font-size:12px;
+  line-height:1.1;
 }
 
-.hp-node i {
-  font-size: 42px;
+.hp-node i{
+  font-size:34px;
+  margin-bottom:2px;
 }
 
-.hp-arrows {
+.hp-arrows{
   position:absolute;
   width:100%;
   height:100%;
   pointer-events:none;
+  z-index:1;
 }
 
 .hp-arrows line {
-  stroke:#9aa0a6;
-  stroke-width:2;
+  stroke:red;
+  stroke-width:5;
 }
 
 .government{
