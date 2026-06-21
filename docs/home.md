@@ -29,36 +29,31 @@
 </div>
 
 <div class="taiwan-section">
+    <h5>Pollution in Taiwan</h5>
+    <div class="taiwan-section">
+        <div class="taiwan-map-column">
+            <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/taiwan-map-2.avif"
+                class="taiwan-map">
+        </div>
 
-<h5>Pollution in Taiwan</h5>
+        <div class="taiwan-text-column">
+            <div class="city-block">
+                <strong>Taoyuan</strong><br>
+                Industrial park effluents contribute to Pb and Cd contamination.
+            </div>
 
-<div class="taiwan-section">
+            <div class="city-block">
+                <strong>Taichung</strong><br>
+                Heavy metal pollution in rivers affects agricultural safety.
+            </div>
 
-  <div class="taiwan-map-column">
-      <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/taiwan-map-2.avif"
-           class="taiwan-map">
-  </div>
-
-  <div class="taiwan-text-column">
-
-      <div class="city-block">
-          <strong>Taoyuan</strong><br>
-          Industrial park effluents contribute to Pb and Cd contamination.
-      </div>
-
-      <div class="city-block">
-          <strong>Taichung</strong><br>
-          Heavy metal pollution in rivers affects agricultural safety.
-      </div>
-
-      <div class="city-block">
-          <strong>Kaohsiung</strong><br>
-          Industrial wastewater and harbor activities increase metal load.
-      </div>
-
-  </div>
+            <div class="city-block">
+                <strong>Kaohsiung</strong><br>
+                Industrial wastewater and harbor activities increase metal load.
+            </div>
+        </div>
+    </div>
 </div>
-
 
 <div class="homepage-card">
 
