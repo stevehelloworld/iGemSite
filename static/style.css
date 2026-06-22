@@ -358,8 +358,8 @@ footer {
 }
 
 .hp-arrows line{
-  stroke:#9aa3ad;
-  stroke-width:1.5;
+  stroke:#c0c7cf;
+  stroke-width:2;
 }
 
 .government{
@@ -370,22 +370,22 @@ footer {
 
 .industry{
   top:115px;
-  left:-25px;
+  left:-45px;
 }
 
 .researchers{
   top:115px;
-  right:-25px;
+  right:-45px;
 }
 
 .public{
-  bottom:10px;
-  left:20px;
+  bottom:0px;
+  left:0px;
 }
 
 .wastewater{
   bottom:0px;
-  right:20px;
+  right:0px;
 }
 
 .hp-text{
