@@ -111,61 +111,61 @@ Produce safer water for environmental discharge.</p>
                 <defs>
                     <!-- Team → Stakeholder -->
                     <marker id="arrow-end"
-                            markerWidth="10"
-                            markerHeight="10"
-                            refX="9"
-                            refY="5"
+                            markerWidth="6"
+                            markerHeight="6"
+                            refX="5"
+                            refY="3"
                             orient="auto">
 
-                        <polygon points="0 0, 10 5, 0 10"
-                                fill="#d8dde3"/>
+                        <polygon points="0 0, 6 3, 0 6"
+                                fill="#c8cdd3"/>
                     </marker>
 
                     <!-- Stakeholder → Team -->
                     <marker id="arrow-start"
-                            markerWidth="10"
-                            markerHeight="10"
+                            markerWidth="6"
+                            markerHeight="6"
                             refX="1"
-                            refY="5"
+                            refY="3"
                             orient="auto">
 
-                        <polygon points="10 0, 0 5, 10 10"
-                                fill="#d8dde3"/>
+                        <polygon points="6 0, 0 3, 6 6"
+                                fill="#c8cdd3"/>
                     </marker>
                 </defs>
 
                 <!-- Government -->
                 <line
                     x1="160" y1="120"
-                    x2="160" y2="100"
+                    x2="160" y2="75"
                     marker-start="url(#arrow-start)"
                     marker-end="url(#arrow-end)" />
 
                 <!-- Industry -->
                 <line
                     x1="120" y1="160"
-                    x2="100" y2="160"
+                    x2="75" y2="160"
                     marker-start="url(#arrow-start)"
                     marker-end="url(#arrow-end)" />
 
                 <!-- Researchers -->
                 <line
                     x1="200" y1="160"
-                    x2="220" y2="160"
+                    x2="245" y2="160"
                     marker-start="url(#arrow-start)"
                     marker-end="url(#arrow-end)" />
 
                 <!-- Public -->
                 <line
-                    x1="136" y1="192"
-                    x2="123" y2="212"
+                    x1="135" y1="195"
+                    x2="105" y2="240"
                     marker-start="url(#arrow-start)"
                     marker-end="url(#arrow-end)" />
 
                 <!-- Wastewater -->
                 <line
-                    x1="188" y1="195"
-                    x2="232" y2="260"
+                    x1="185" y1="195"
+                    x2="215" y2="240"
                     marker-start="url(#arrow-start)"
                     marker-end="url(#arrow-end)" />
             </svg>
