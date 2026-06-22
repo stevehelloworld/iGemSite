@@ -289,9 +289,9 @@ footer {
 
 .hp-diagram{
   position:relative;
-  width:320px;
-  height:320px;
-  flex-shrink:0;
+  width:360px;
+  height:360px;
+  margin:auto;
 }
 
 .hp-center{
@@ -363,29 +363,29 @@ footer {
 }
 
 .government{
-  top:0px;
+  top:10px;
   left:50%;
   transform:translateX(-50%);
 }
 
 .industry{
-  top:120px;
-  left:-15px;
-}
-
-.researchers{
-  top:120px;
-  right:-15px;
-}
-
-.public{
-  bottom:15px;
+  top:95px;
   left:20px;
 }
 
-.wastewater{
-  bottom:15px;
+.researchers{
+  top:95px;
   right:20px;
+}
+
+.public{
+  bottom:25px;
+  left:55px;
+}
+
+.wastewater{
+  bottom:25px;
+  right:55px;
 }
 
 .hp-text{

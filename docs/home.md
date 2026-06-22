@@ -112,28 +112,28 @@ Produce safer water for environmental discharge.</p>
 
                 <!-- Government -->
                 <line
-                    x1="160" y1="120"
-                    x2="160" y2="65" />
+                    x1="180" y1="130"
+                    x2="180" y2="70" />
 
                 <!-- Industry -->
                 <line
-                    x1="120" y1="160"
-                    x2="35" y2="160" />
+                    x1="145" y1="165"
+                    x2="75" y2="120" />
 
                 <!-- Researchers -->
                 <line
-                    x1="200" y1="160"
-                    x2="305" y2="160" />
+                    x1="215" y1="165"
+                    x2="285" y2="120" />
 
                 <!-- Public -->
                 <line
-                    x1="135" y1="195"
-                    x2="85" y2="255" />
+                    x1="155" y1="215"
+                    x2="105" y2="285" />
 
                 <!-- Wastewater -->
                 <line
-                    x1="185" y1="195"
-                    x2="235" y2="255" />
+                    x1="205" y1="215"
+                    x2="255" y2="285" />
             </svg>
 
             <div class="hp-node government">
