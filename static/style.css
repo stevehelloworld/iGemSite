@@ -301,8 +301,8 @@ footer {
   transform:translate(-50%,-50%);
   z-index:3;
 
-  width:80px;
-  height:80px;
+  width:72px;
+  height:72px;
 
   border-radius:50%;
   background:#0d2b45;
@@ -370,22 +370,22 @@ footer {
 
 .industry{
   top:115px;
-  left:-10px;
+  left:-25px;
 }
 
 .researchers{
   top:115px;
-  right:-10px;
+  right:-25px;
 }
 
 .public{
   bottom:10px;
-  left:45px;
+  left:20px;
 }
 
 .wastewater{
   bottom:0px;
-  right:25px;
+  right:20px;
 }
 
 .hp-text{
