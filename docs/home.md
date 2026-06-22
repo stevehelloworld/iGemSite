@@ -110,35 +110,50 @@ Produce safer water for environmental discharge.</p>
             <svg class="hp-arrows" viewBox="0 0 320 320">
                 <defs>
                     <marker id="arrowhead"
-                            markerWidth="6"
-                            markerHeight="6"
-                            refX="5"
-                            refY="3"
+                            markerWidth="4"
+                            markerHeight="4"
+                            refX="3"
+                            refY="2"
                             orient="auto">
-                            <polygon points="0 0, 6 3, 0 6"
-                                     fill="#bfc5cc"/>
+                            <polygon points="0 0, 4 2, 0 4"
+                                     fill="#d8dde3"/>
                     </marker>
                 </defs>
 
                 <!-- Government -->
-                <line x1="160" y1="120" x2="160" y2="115" marker-start="url(#arrowhead)"
-                    marker-end="url(#arrowhead)" stroke-width="1"/>
+                <line
+                    x1="160" y1="120"
+                    x2="160" y2="60"
+                    marker-start="url(#arrowhead)"
+                    marker-end="url(#arrowhead)" />
 
                 <!-- Industry -->
-                <line x1="120" y1="160" x2="115" y2="160" marker-start="url(#arrowhead)"
-                    marker-end="url(#arrowhead)" stroke-width="1"/>
+                <line
+                    x1="120" y1="160"
+                    x2="55" y2="160"
+                    marker-start="url(#arrowhead)"
+                    marker-end="url(#arrowhead)" />
 
                 <!-- Researchers -->
-                <line x1="200" y1="160" x2="205" y2="160" marker-start="url(#arrowhead)"
-                    marker-end="url(#arrowhead)" stroke-width="1"/>
+                <line
+                    x1="200" y1="160"
+                    x2="265" y2="160"
+                    marker-start="url(#arrowhead)"
+                    marker-end="url(#arrowhead)" />
 
                 <!-- Public -->
-                <line x1="139" y1="194" x2="129" y2="210" marker-start="url(#arrowhead)"
-                    marker-end="url(#arrowhead)" stroke-width="1"/>
+                <line
+                    x1="132" y1="195"
+                    x2="88" y2="260"
+                    marker-start="url(#arrowhead)"
+                    marker-end="url(#arrowhead)" />
 
                 <!-- Wastewater -->
-                <line x1="181" y1="194" x2="191" y2="210" marker-start="url(#arrowhead)"
-                    marker-end="url(#arrowhead)" stroke-width="1"/>
+                <line
+                    x1="188" y1="195"
+                    x2="232" y2="260"
+                    marker-start="url(#arrowhead)"
+                    marker-end="url(#arrowhead)" />
             </svg>
 
             <div class="hp-node government">
