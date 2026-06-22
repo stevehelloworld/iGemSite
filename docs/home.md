@@ -111,26 +111,26 @@ Produce safer water for environmental discharge.</p>
                 <defs>
                     <!-- Team → Stakeholder -->
                     <marker id="arrow-end"
-                            markerWidth="6"
-                            markerHeight="6"
-                            refX="5"
-                            refY="3"
+                            markerWidth="8"
+                            markerHeight="8"
+                            refX="7"
+                            refY="4"
                             orient="auto">
 
-                        <polygon points="0 0, 6 3, 0 6"
-                                fill="#c8cdd3"/>
+                        <polygon points="0 0, 8 4, 0 8"
+                                fill="#9aa3ad"/>
                     </marker>
 
                     <!-- Stakeholder → Team -->
                     <marker id="arrow-start"
-                            markerWidth="6"
-                            markerHeight="6"
+                            markerWidth="8"
+                            markerHeight="8"
                             refX="1"
-                            refY="3"
+                            refY="4"
                             orient="auto">
 
-                        <polygon points="6 0, 0 3, 6 6"
-                                fill="#c8cdd3"/>
+                        <polygon points="8 0, 0 4, 8 8"
+                                fill="#9aa3ad"/>
                     </marker>
                 </defs>
 
@@ -144,14 +144,14 @@ Produce safer water for environmental discharge.</p>
                 <!-- Industry -->
                 <line
                     x1="120" y1="160"
-                    x2="75" y2="160"
+                    x2="55" y2="160"
                     marker-start="url(#arrow-start)"
                     marker-end="url(#arrow-end)" />
 
                 <!-- Researchers -->
                 <line
                     x1="200" y1="160"
-                    x2="245" y2="160"
+                    x2="285" y2="160"
                     marker-start="url(#arrow-start)"
                     marker-end="url(#arrow-end)" />
 
