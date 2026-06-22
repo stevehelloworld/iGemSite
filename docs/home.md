@@ -110,13 +110,13 @@ Produce safer water for environmental discharge.</p>
             <svg class="hp-arrows" viewBox="0 0 320 320">
                 <defs>
                     <marker id="arrowhead"
-                            markerWidth="10"
-                            markerHeight="10"
-                            refX="8"
-                            refY="5"
+                            markerWidth="12"
+                            markerHeight="12"
+                            refX="10"
+                            refY="6"
                             orient="auto">
-                            <polygon points="0 0, 4 5, 0 10"
-                                     fill="#cfd4da"/>
+                            <polygon points="0 0, 12 6, 0 12"
+                                     fill="#d8dde3"/>
                     </marker>
                 </defs>
 

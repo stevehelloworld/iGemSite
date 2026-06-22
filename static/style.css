@@ -354,11 +354,12 @@ footer {
   height:100%;
   pointer-events:none;
   z-index:1;
+  overflow:visible;
 }
 
 .hp-arrows line{
   stroke:#d8dde3;
-  stroke-width:0.8;
+  stroke-width:1.5;
 }
 
 .government{
