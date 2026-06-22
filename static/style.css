@@ -318,8 +318,8 @@ footer {
 .hp-node{
   position:absolute;
 
-  width:90px;
-  height:90px;
+  width:96px;
+  height:96px;
 
   border-radius:50%;
 
@@ -338,13 +338,13 @@ footer {
 }
 
 .hp-node span{
-  font-size:13px;
+  font-size:14px;
   line-height:1.1;
   margin-top:-3px;
 }
 
 .hp-node i{
-  font-size:40px;
+  font-size:44px;
   margin-bottom:2px;
 }
 
@@ -358,34 +358,34 @@ footer {
 }
 
 .hp-arrows line{
-  stroke:#c0c7cf;
-  stroke-width:2;
+  stroke:#d8dde3;
+  stroke-width:1.8;
 }
 
 .government{
-  top:10px;
+  top:0px;
   left:50%;
   transform:translateX(-50%);
 }
 
 .industry{
-  top:115px;
-  left:-45px;
+  top:120px;
+  left:-15px;
 }
 
 .researchers{
-  top:115px;
-  right:-45px;
+  top:120px;
+  right:-15px;
 }
 
 .public{
-  bottom:0px;
-  left:0px;
+  bottom:15px;
+  left:20px;
 }
 
 .wastewater{
-  bottom:0px;
-  right:0px;
+  bottom:15px;
+  right:20px;
 }
 
 .hp-text{

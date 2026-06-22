@@ -108,52 +108,32 @@ Produce safer water for environmental discharge.</p>
         <div class="hp-diagram">
             <div class="hp-center">TEAM</div>
             <svg class="hp-arrows" viewBox="0 0 320 320">
-                <defs>
-                    <marker id="arrow"
-                            markerWidth="8"
-                            markerHeight="8"
-                            refX="4"
-                            refY="4"
-                            orient="auto-start-reverse">
-                        <path d="M0,0 L8,4 L0,8 Z"
-                              fill="#bfc6ce"/>
-                    </marker>
-                </defs>
+
 
                 <!-- Government -->
                 <line
                     x1="160" y1="120"
-                    x2="160" y2="65"
-                    marker-start="url(#arrow)"
-                    marker-end="url(#arrow)" />
+                    x2="160" y2="65" />
 
                 <!-- Industry -->
                 <line
                     x1="120" y1="160"
-                    x2="35" y2="160"
-                    marker-start="url(#arrow)"
-                    marker-end="url(#arrow)" />
+                    x2="35" y2="160" />
 
                 <!-- Researchers -->
                 <line
                     x1="200" y1="160"
-                    x2="305" y2="160"
-                    marker-start="url(#arrow)"
-                    marker-end="url(#arrow)" />
+                    x2="305" y2="160" />
 
                 <!-- Public -->
                 <line
                     x1="135" y1="195"
-                    x2="85" y2="255"
-                    marker-start="url(#arrow)"
-                    marker-end="url(#arrow)" />
+                    x2="85" y2="255" />
 
                 <!-- Wastewater -->
                 <line
                     x1="185" y1="195"
-                    x2="235" y2="255"
-                    marker-start="url(#arrow)"
-                    marker-end="url(#arrow)" />
+                    x2="235" y2="255" />
             </svg>
 
             <div class="hp-node government">
