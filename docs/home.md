@@ -107,33 +107,33 @@ Produce safer water for environmental discharge.</p>
     <div class="hp-layout">
         <div class="hp-diagram">
             <div class="hp-center">TEAM</div>
-            <svg class="hp-arrows" viewBox="0 0 320 320">
+            <svg class="hp-arrows" viewBox="0 0 360 360">
 
 
                 <!-- Government -->
                 <line
-                    x1="180" y1="130"
-                    x2="180" y2="70" />
+                    x1="180" y1="145"
+                    x2="180" y2="90" />
 
                 <!-- Industry -->
                 <line
-                    x1="145" y1="165"
-                    x2="75" y2="120" />
+                    x1="145" y1="180"
+                    x2="95" y2="145" />
 
                 <!-- Researchers -->
                 <line
-                    x1="215" y1="165"
-                    x2="285" y2="120" />
+                    x1="215" y1="180"
+                    x2="265" y2="145" />
 
                 <!-- Public -->
                 <line
-                    x1="155" y1="215"
-                    x2="105" y2="285" />
+                    x1="150" y1="215"
+                    x2="110" y2="270" />
 
                 <!-- Wastewater -->
                 <line
-                    x1="205" y1="215"
-                    x2="255" y2="285" />
+                    x1="210" y1="215"
+                    x2="250" y2="270" />
             </svg>
 
             <div class="hp-node government">
