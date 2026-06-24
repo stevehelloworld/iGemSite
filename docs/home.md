@@ -127,13 +127,13 @@ Produce safer water for environmental discharge.</p>
 
                 <!-- Public -->
                 <line
-                    x1="150" y1="215"
-                    x2="110" y2="270" />
+                    x1="145" y1="205"
+                    x2="105" y2="265" />
 
                 <!-- Wastewater -->
                 <line
-                    x1="210" y1="215"
-                    x2="250" y2="270" />
+                    x1="215" y1="205"
+                    x2="255" y2="265" />
             </svg>
 
             <div class="hp-node government">
