@@ -256,56 +256,90 @@
             </div>
         </li>
 
-        <!-- ENGAGEMENT -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbar-engagement"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Human Practice
+        <!-- HUMAN PRACTICE -->
+        <li class="nav-item dropdown mega-dropdown">
+
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="navbar-engagement">        
+             Human Practice        
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbar-engagement">
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='entrepreneurship') }}"
-                >Entrepreneurship</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='human-practices') }}"
-                >Human Practices</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='education') }}"
-                >Education</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='inclusivity') }}"
-                >Inclusivity</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='sustainability') }}"
-                >Sustainability</a
-              >
-            </li>
-          </ul>
+        
+          <div class="mega-menu hp-menu">        
+            <div class="mega-column">
+              <h5>HUMAN PRACTICES</h5>            
+              <a href="{{ url_for('pages', page='human-practices') }}">            
+                <div class="icon">
+                  <i class="bi bi-people"></i>
+                </div>
+            
+                <div>
+                  <strong>Stakeholder Engagement</strong>
+                  <small>
+                    Understanding needs from multiple sectors
+                  </small>
+                </div>            
+              </a>            
+            </div>
+        
+            <div class="mega-column">
+              <h5>INDUSTRY</h5>            
+              <a href="{{ url_for('pages', page='industry') }}">            
+                <div class="icon">
+                  <i class="bi bi-building"></i>
+                </div>
+            
+                <div>
+                  <strong>Wastewater Treatment Companies</strong>
+                  <small>
+                    Real-world implementation and industrial requirements
+                  </small>
+                </div>            
+              </a>            
+            </div>
+        
+            <div class="mega-column">
+              <h5>ACADEMIA</h5>            
+              <a href="{{ url_for('pages', page='academia') }}">            
+                <div class="icon">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+            
+                <div>
+                  <strong>Professor Interviews</strong>
+                  <small>
+                    Expert feedback from environmental researchers
+                  </small>
+                </div>            
+              </a>            
+            </div>
+        
+            <div class="mega-column">
+              <h5>GOVERNMENT</h5>            
+              <a href="{{ url_for('pages', page='government') }}">            
+                <div class="icon">
+                  <i class="bi bi-bank"></i>
+                </div>
+            
+                <div>
+                  <strong>Environmental Regulations</strong>
+                  <small>
+                    Policies and discharge standards for heavy metals
+                  </small>
+                </div>            
+              </a>            
+            </div>
+        
+            <div class="mega-footer">
+              <i class="bi bi-diagram-3"></i>            
+              <span>
+                Insights from industry, academia, and government guided the development of our Pb/Cd remediation system.
+              </span>            
+            </div>   
+              
+          </div>        
         </li>
+
       </ul>
     </div>
   </div>
