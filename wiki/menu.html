@@ -102,54 +102,88 @@
         </li>
 
         <!-- WET LAB -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbar-wet-lab"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+        <li class="nav-item dropdown mega-dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="navbar-wet-lab">
             Wet Lab
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbar-wet-lab">
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='experiments') }}"
-                >Experiments</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='notebook') }}"
-                >Notebook</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='measurement') }}"
-                >Measurement</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='alternative-platform') }}"
-                >Alternative Platform</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='safety-and-security') }}"
-                >Safety and Security</a
-              >
-            </li>
-          </ul>
+        
+          <div class="mega-menu wetlab-menu">        
+            <div class="mega-column">
+              <h5>EXPERIMENTS</h5>
+        
+              <a href="{{ url_for('pages', page='experiments') }}">
+                <div class="icon">
+                  <i class="bi bi-flask"></i>
+                </div>
+                <div>
+                  <strong>Experiments</strong>
+                  <small>Laboratory workflow and protocols</small>
+                </div>
+              </a>
+        
+              <a href="{{ url_for('pages', page='notebook') }}">
+                <div class="icon">
+                  <i class="bi bi-journal-text"></i>
+                </div>
+                <div>
+                  <strong>Notebook</strong>
+                  <small>Daily research records</small>
+                </div>
+              </a>
+            </div>
+        
+            <div class="mega-column">
+              <h5>ANALYSIS</h5>
+        
+              <a href="{{ url_for('pages', page='measurement') }}">
+                <div class="icon">
+                  <i class="bi bi-bar-chart"></i>
+                </div>
+                <div>
+                  <strong>Measurement</strong>
+                  <small>Quantification and validation</small>
+                </div>
+              </a>
+            </div>
+        
+            <div class="mega-column">
+              <h5>PLATFORM</h5>
+        
+              <a href="{{ url_for('pages', page='alternative-platform') }}">
+                <div class="icon">
+                  <i class="bi bi-diagram-3"></i>
+                </div>
+                <div>
+                  <strong>Alternative Platform</strong>
+                  <small>Additional implementation strategy</small>
+                </div>
+              </a>
+            </div>
+        
+            <div class="mega-column">
+              <h5>SAFETY</h5>
+        
+              <a href="{{ url_for('pages', page='safety-and-security') }}">
+                <div class="icon">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <div>
+                  <strong>Safety & Security</strong>
+                  <small>Risk assessment and biosafety</small>
+                </div>
+              </a>
+            </div>
+        
+            <div class="mega-footer">
+              <i class="bi bi-droplet-fill"></i>
+              <span>
+                Our wet lab validates the biological system through experiments and measurements.
+              </span>
+            </div>
+        
+          </div>
         </li>
 
         <!-- DRY LAB -->
