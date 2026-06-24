@@ -644,3 +644,18 @@ footer {
 .wetlab-menu{
   width:1000px;
 }
+
+  /* ==========================================
+   DRY LAB
+========================================== */
+.drylab-menu{
+  width:900px;
+}
+
+.drylab-menu{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.drylab-menu .mega-footer{
+  grid-column: 1 / -1;
+}

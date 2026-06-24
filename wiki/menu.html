@@ -187,40 +187,75 @@
         </li>
 
         <!-- DRY LAB -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbar-dry-lab"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+        <li class="nav-item dropdown mega-dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="navbar-dry-lab">
             Dry Lab
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbar-dry-lab">
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='model') }}"
-                >Model</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='software') }}"
-                >Software</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="{{ url_for('pages', page='hardware') }}"
-                >Hardware</a
-              >
-            </li>
-          </ul>
+        
+          <div class="mega-menu drylab-menu">
+        
+            <div class="mega-column">
+              <h5>MODELING</h5>
+        
+              <a href="{{ url_for('pages', page='model') }}">
+                <div class="icon">
+                  <i class="bi bi-graph-up"></i>
+                </div>
+        
+                <div>
+                  <strong>Model</strong>
+                  <small>
+                    Mathematical simulation of heavy metal removal
+                  </small>
+                </div>
+              </a>
+            </div>
+        
+            <div class="mega-column">
+              <h5>SOFTWARE</h5>
+        
+              <a href="{{ url_for('pages', page='software') }}">
+                <div class="icon">
+                  <i class="bi bi-code-slash"></i>
+                </div>
+        
+                <div>
+                  <strong>Software</strong>
+                  <small>
+                    Computational tools and data analysis
+                  </small>
+                </div>
+              </a>
+            </div>
+        
+            <div class="mega-column">
+              <h5>HARDWARE</h5>
+        
+              <a href="{{ url_for('pages', page='hardware') }}">
+                <div class="icon">
+                  <i class="bi bi-cpu"></i>
+                </div>
+        
+                <div>
+                  <strong>Hardware</strong>
+                  <small>
+                    Supporting platform and implementation device
+                  </small>
+                </div>
+              </a>
+            </div>
+        
+            <div class="mega-footer">
+              <i class="bi bi-pc-display"></i>
+        
+              <span>
+                Computational modeling and software tools help optimize Pb/Cd removal efficiency.
+              </span>
+            </div>
+        
+          </div>
         </li>
 
         <!-- ENGAGEMENT -->
