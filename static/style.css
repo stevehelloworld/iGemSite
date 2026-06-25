@@ -684,3 +684,70 @@ footer {
 .hp-menu .mega-column a:last-child{
   margin-bottom:0;
 }
+
+  /* ==========================================
+   PROJECT HIGHLIGHT
+========================================== */
+.highlight-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:20px;
+}
+
+.highlight-box{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:18px;
+  border-radius:12px;
+  background:#f8fafb;
+}
+
+.highlight-box i{
+  font-size:38px;
+  color:#2d7a46;
+}
+
+.highlight-box h3{
+  margin:0;
+  color:#2d7a46;
+  font-size:2rem;
+  font-weight:700;
+}
+
+.highlight-box p{
+  margin:0;
+  color:#555;
+  font-size:0.95rem;
+}
+
+.future-box{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#10231c;
+  border-radius:16px;
+  padding:22px;
+  color:white;
+}
+
+.future-text{
+  width:65%;
+}
+
+.future-text h4{
+  color:#8cd36a;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.future-text p{
+  color:#ddd;
+  margin:0;
+  line-height:1.6;
+}
+
+.future-image{
+  width:120px;
+}

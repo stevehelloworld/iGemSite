@@ -72,33 +72,65 @@ Produce safer water for environmental discharge.</p>
 
 </div>
 
-<div class="homepage-card">
+/* ==========================================
+   PROJECT HIGHLIGHTS
+========================================== */
+<div class="homepage-card highlight-card">
+    <h2>PROJECT HIGHLIGHTS</h2>
+    <div class="highlight-grid">
+        <div class="highlight-box">
+            <i class="bi bi-flask"></i>
+            <div>
+                <h3>90%</h3>
+                <p>Pb Removal Efficiency</p>
+            </div>
+        </div>
 
-<h2>PROJECT HIGHLIGHTS</h2>
+        <div class="highlight-box">
+            <i class="bi bi-beaker"></i>
+            <div>
+                <h3>75%</h3>
+                <p>Cd Removal Efficiency</p>
+            </div>
+        </div>
 
-<div class="highlight-stat">
-<h3>90%</h3>
-<p>Pb Removal Efficiency</p>
+        <div class="highlight-box">
+            <i class="bi bi-people-fill"></i>
+            <div>
+                <h3>500+</h3>
+                <p>People Reached</p>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <i class="bi bi-handshake"></i>
+            <div>
+                <h3>12</h3>
+                <p>Stakeholders Engaged</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="future-box">
+        <div class="future-text">
+            <h4>
+                <i class="bi bi-leaf"></i>
+                Towards a Sustainable Future
+            </h4>
+
+            <p>
+                Our project provides an efficient and practical solution
+                for Pb/Cd removal, protecting both environmental and
+                public health.
+            </p>
+        </div>
+
+        <img
+            src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/sapling.avif"
+            class="future-image">
+    </div>
 </div>
 
-<div class="highlight-stat">
-<h3>75%</h3>
-<p>Cd Removal Efficiency</p>
-</div>
-
-<div class="highlight-stat">
-<h3>500+</h3>
-<p>People Reached</p>
-</div>
-
-<div class="highlight-stat">
-<h3>12</h3>
-<p>Stakeholders Engaged</p>
-</div>
-
-</div>
-
-</div>
 
 <div class="grid-row">
 
