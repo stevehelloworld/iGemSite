@@ -454,7 +454,7 @@ footer {
     font-size: 14px;
 }
 .mega-column {
-  min-width: 200px;
+  min-width: 0;
 }
 
 .mega-column a {
@@ -659,4 +659,20 @@ footer {
 
 .drylab-menu .mega-footer{
   grid-column: 1 / -1;
+}
+
+  /* ==========================================
+   HUMAN PRACTICE
+========================================== */
+.hp-menu{
+  width:980px;
+
+  left:auto;
+  right:0;
+
+  transform:none;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:28px;
 }
