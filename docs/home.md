@@ -72,9 +72,7 @@ Produce safer water for environmental discharge.</p>
 
 </div>
 
-<!-- ==========================================
-   PROJECT HIGHLIGHTS
-========================================== -->
+<!-- PROJECT HIGHLIGHTS -->
 <div class="homepage-card highlight-card">
     <h2>PROJECT HIGHLIGHTS</h2>
     <div class="highlight-grid">
