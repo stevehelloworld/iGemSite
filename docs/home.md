@@ -24,28 +24,26 @@
         </div>
     </div>
 
-    <div class="taiwan-section">
-        <div class="taiwan-section">
-            <div class="taiwan-map-column">
-                <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/taiwan-map-2.avif"
-                    class="taiwan-map">
+    <div class="taiwan-section">        
+        <div class="taiwan-map-column">
+            <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/taiwan-map-2.avif"
+                class="taiwan-map">
+        </div>
+
+        <div class="taiwan-text-column">
+            <div class="city-block">
+                <strong>Taoyuan</strong><br>
+                Industrial park effluents contribute to Pb and Cd contamination.
             </div>
 
-            <div class="taiwan-text-column">
-                <div class="city-block">
-                    <strong>Taoyuan</strong><br>
-                    Industrial park effluents contribute to Pb and Cd contamination.
-                </div>
+            <div class="city-block">
+                <strong>Taichung</strong><br>
+                Heavy metal pollution in rivers affects agricultural safety.
+            </div>
 
-                <div class="city-block">
-                    <strong>Taichung</strong><br>
-                    Heavy metal pollution in rivers affects agricultural safety.
-                </div>
-
-                <div class="city-block">
-                    <strong>Kaohsiung</strong><br>
-                    Industrial wastewater and harbor activities increase metal load.
-                </div>
+            <div class="city-block">
+                <strong>Kaohsiung</strong><br>
+                Industrial wastewater and harbor activities increase metal load.
             </div>
         </div>
     </div>
@@ -111,15 +109,15 @@ Produce safer water for environmental discharge.</p>
 
     <div class="future-box">
         <div class="future-text">
-            <h4>
-                <i class="bi bi-leaf"></i>
-                Towards a Sustainable Future
-            </h4>
-
+            <div class="future-title">
+                <i class="bi bi-leaf-fill"></i>
+                <span>Towards a Sustainable Future</span>
+            </div>
             <p>
-                Our project provides an efficient and practical solution
-                for Pb/Cd removal, protecting both environmental and
-                public health.
+                Our project aims to provide an efficient,
+                safe, and cost-effective solution for
+                heavy metal remediation, protecting
+                both environmental and public health.
             </p>
         </div>
 
