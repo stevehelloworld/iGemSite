@@ -126,6 +126,7 @@ Produce safer water for environmental discharge.</p>
             class="future-image">
     </div>
 </div>
+</div>
 
 
 <div class="grid-row">
