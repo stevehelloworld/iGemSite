@@ -205,7 +205,7 @@ Produce safer water for environmental discharge.</p>
     </div>
 </div>
 
-<div class="homepage-card engineering card">
+<div class="homepage-card engineering-card">
     <h2>ENGINEERING CYCLE</h2>
     <div class="engineering-content">
         <div class="engineering-image">
