@@ -205,7 +205,8 @@ footer a:hover {
 }
 
 .highlight-card{
-  text-align:left;
+  display:flex;
+  flex-direction:column;
 }
 
 /* Homepage Engineering Cycle */
@@ -245,9 +246,12 @@ footer a:hover {
 }
 
 .engineering-content{
-  display:flex;
-  align-items:flex-start;
-  gap:20px;
+  display:grid;  
+  grid-template-columns:  
+  160px  
+  1fr;  
+  gap:25px;  
+  align-items:center;
 }
 
 .engineering-image{
@@ -286,59 +290,30 @@ footer {
 
 /* Homepage Human Practice */
 .hp-layout{
-  display:flex;
-  gap:25px;
+  display:grid;  
+  grid-template-columns:  
+    260px  
+    1fr;  
+  gap:28px;  
   align-items:center;
 }
 
 .hp-diagram{
-  width:240px;
-  height:240px;
-  flex-shrink:0;
+  position:relative;  
+  width:260px;  
+  height:260px;  
+  margin:auto;
 }
 
 .hp-center{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  z-index:3;
-
-  width:72px;
+  width:72px;  
   height:72px;
-
-  border-radius:50%;
-  background:#0d2b45;
-  color:white;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  font-weight:700;
 }
 
 .hp-node{
-  position:absolute;
-
-  width:96px;
-  height:96px;
-
-  border-radius:50%;
-
-  background:#f8f9fa;
-  border:2px solid #d0d0d0;
-
-  text-align:center;
-  font-size:12px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  z-index:2;
-  gap:1px;
-}
+  width:82px;  
+  height:82px;
+ }
 
 .hp-node span{
   font-size:14px;
@@ -610,33 +585,39 @@ footer {
 
 .grid-row{
   display:grid;
-  grid-template-columns:
-      1.2fr
-      1fr
-      1fr;
-  gap:28px;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:24px;
+  align-items:stretch;
 }
   
   .homepage-card {
-  background: white;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 4px 20px rgba(0,0,0,.08);
-  display:flex;
-  flex-direction:column;
-  height:100%;
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    height:100%;
   }
   
-  .homepage-card h2 {
+.homepage-card h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  }
+  margin-bottom: 24px;
+}
+
+.homepage-card p{
+    line-height:1.7;
+}
+
+.homepage-card img{
+  max-width:100%;
+}
   
-  .highlight-stat {
+.highlight-stat {
   text-align: center;
   padding: 12px;
-  }
+}
   
   .highlight-stat h3 {
   color: #4caf50;
@@ -737,14 +718,7 @@ footer {
 }
 
 .future-box{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:24px;
-  margin-top:8px;
-  border-radius:16px;
-  background:linear-gradient(135deg,#0d2418,#173928);
-  overflow:hidden;
+  margin-top:auto;
 }
 
 .future-title{
