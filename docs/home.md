@@ -49,7 +49,7 @@
     </div>
 </div>
 
-<div class="homepage-card">
+<div class="homepage-card solution-card">
 
 <h2>OUR SOLUTION</h2>
 
@@ -131,7 +131,7 @@ Produce safer water for environmental discharge.</p>
 
 <div class="grid-row">
 
-<div class="homepage-card">
+<div class="homepage-card hp-card">
     <h2>HUMAN PRACTICES</h2>
     <div class="hp-layout">
         <div class="hp-diagram">
@@ -205,7 +205,7 @@ Produce safer water for environmental discharge.</p>
     </div>
 </div>
 
-<div class="homepage-card">
+<div class="homepage-card engineering card">
     <h2>ENGINEERING CYCLE</h2>
     <div class="engineering-content">
         <div class="engineering-image">
@@ -241,7 +241,7 @@ Produce safer water for environmental discharge.</p>
     </div>
 </div>
 
-<div class="homepage-card">
+<div class="homepage-card team-card">
 
 <h2>MEET OUR TEAM</h2>
 

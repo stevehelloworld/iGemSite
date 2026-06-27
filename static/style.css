@@ -192,16 +192,51 @@ footer a:hover {
 .problem-card,
 .solution-card,
 .highlight-card,
-.highlight-card{
 
+.highlight-card{
   text-align:left;
+}
+
+.problem-card{
 
 }
+
+.problem-icons{
+
+}
+
+.taiwan-section{
+
+}
+
+.problem-circle{
+
+}
+
+.solution-card{
+
+}
+
+.solution-card p{
+    margin-bottom:18px;
+}
+
 .team-card {
   background: white;
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+.team-photo{
+
+}
+
+.team-description{
+
+}
+
+.team-button{
+
 }
 
 .highlight-card{
@@ -209,7 +244,22 @@ footer a:hover {
   flex-direction:column;
 }
 
+.highlight-grid{
+
+}
+
+.highlight-box{
+
+}
+
+.future-box{
+
+}
+
 /* Homepage Engineering Cycle */
+.engineering-card{
+
+}
 
 .engineering-cycle-image {
   text-align: center;
@@ -289,6 +339,10 @@ footer {
 }
 
 /* Homepage Human Practice */
+.hp-card{
+
+}
+
 .hp-layout{
   display:grid;  
   grid-template-columns:  
@@ -590,15 +644,15 @@ footer {
   align-items:stretch;
 }
   
-  .homepage-card {
-    background: white;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 4px 20px rgba(0,0,0,.08);
-    display:flex;
-    flex-direction:column;
-    height:100%;
-  }
+.homepage-card{
+  background:var(--card-bg);
+  border-radius:24px;
+  padding:30px;
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
   
 .homepage-card h2 {
   font-size: 1.8rem;
