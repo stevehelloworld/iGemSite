@@ -344,21 +344,30 @@ footer {
 }
 
 .hp-layout {
-  display: flex;
-  flex-wrap: wrap;       
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  width: 100%;           
+  gap: 30px;
+  width: 100%;
   box-sizing: border-box;
 }
 
 .hp-diagram {
   position: relative; 
-  width: 320px;         
+  width: 320px;          
   height: 320px;
-  margin: 0 auto;
-  flex-shrink: 0;      
+  flex: 0 0 320px;
+  margin: 0;
+}
+
+.hp-text {
+  flex: 1 1 auto;
+  max-width: calc(100% - 350px);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
 .hp-center {
@@ -392,7 +401,6 @@ footer {
   align-items: center;
   z-index: 5;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-
   top: 50%;
   left: 50%;
 }
@@ -448,13 +456,7 @@ footer {
   transform: translate(-50%, -50%) rotate(288deg) translateY(-120px) rotate(-288deg);
 }
 
-.hp-text {
-  flex: 1;              
-  min-width: 250px;     
-  max-width: 100%;     
-  word-wrap: break-word; 
-  box-sizing: border-box;
-}
+
 
 .hp-step{
   margin-bottom:20px;
@@ -466,13 +468,9 @@ footer {
 }
 
 .hp-arrows line:nth-child(1) { x1: 160; y1: 160; x2: 160; y2: 40; }
-
 .hp-arrows line:nth-child(2) { x1: 160; y1: 160; x2: 46; y2: 123; }
-
 .hp-arrows line:nth-child(3) { x1: 160; y1: 160; x2: 274; y2: 123; }
-
 .hp-arrows line:nth-child(4) { x1: 160; y1: 160; x2: 90; y2: 257; }
-
 .hp-arrows line:nth-child(5) { x1: 160; y1: 160; x2: 230; y2: 257; }
 
 .btn-cycle{
