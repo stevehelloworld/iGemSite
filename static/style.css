@@ -348,8 +348,8 @@ footer {
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   align-items: center;
-  justify-content: space-between;
-  gap: 30px;
+  justify-content: flex-start;
+  gap: 40px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -467,11 +467,11 @@ footer {
   color:#2d7a46;
 }
 
-.hp-arrows line:nth-child(1) { x1: 160; y1: 160; x2: 160; y2: 40; }
-.hp-arrows line:nth-child(2) { x1: 160; y1: 160; x2: 46; y2: 123; }
-.hp-arrows line:nth-child(3) { x1: 160; y1: 160; x2: 274; y2: 123; }
-.hp-arrows line:nth-child(4) { x1: 160; y1: 160; x2: 90; y2: 257; }
-.hp-arrows line:nth-child(5) { x1: 160; y1: 160; x2: 230; y2: 257; }
+.hp-arrows line:nth-child(1) { x1: 160; y1: 160; x2: 160; y2: 40; }  /* 正上：Government */
+.hp-arrows line:nth-child(2) { x1: 160; y1: 160; x2: 274; y2: 123; } /* 右上：Researchers */
+.hp-arrows line:nth-child(3) { x1: 160; y1: 160; x2: 230; y2: 257; } /* 右下：Wastewater */
+.hp-arrows line:nth-child(4) { x1: 160; y1: 160; x2: 90; y2: 257; }  /* 左下：Public */
+.hp-arrows line:nth-child(5) { x1: 160; y1: 160; x2: 46; y2: 123; }  /* 左上：Industry */
 
 .btn-cycle{
   white-space:nowrap;
