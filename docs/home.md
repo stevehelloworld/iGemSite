@@ -155,7 +155,7 @@ Produce safer water for environmental discharge.</p>
             </div>
             
             <a href="human-practices" class="btn-cycle">
-                VIEW MORE
+                VIEW MORE ...
             </a>
         </div>
     </div>
