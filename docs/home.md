@@ -134,49 +134,26 @@ Produce safer water for environmental discharge.</p>
 <div class="homepage-card hp-card">
     <h2>HUMAN PRACTICES</h2>
     <div class="hp-layout">
-        <div class="hp-diagram">
-            <div class="hp-center">TEAM</div>
-<svg class="hp-arrows" viewBox="0 0 320 320">
-    <line x1="160" y1="160" x2="160" y2="40"/>
-    <line x1="160" y1="160" x2="274" y2="123"/>
-    <line x1="160" y1="160" x2="230" y2="257"/>
-    <line x1="160" y1="160" x2="90" y2="257"/>
-    <line x1="160" y1="160" x2="46" y2="123"/>
-</svg>
-
-            <div class="hp-node government">
-                <i class="bi bi-building"></i><span>Government</span>
-            </div>
-            <div class="hp-node industry">
-                <i class="bi bi-bank"></i><span>Industry</span>
-            </div>
-            <div class="hp-node researchers">
-                <i class="bi bi-search"></i><span>Researchers</span>
-            </div>
-            <div class="hp-node public">
-                <i class="bi bi-people"></i><span>Public</span>
-            </div>
-            <div class="hp-node wastewater">
-                <i class="bi bi-droplet"></i><span>Wastewater</span>
-            </div>
+        <div class="hp-image-wrapper">
+            <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/human-practices.avif" alt="Human Practices Diagram">
         </div>
 
         <div class="hp-text">
-            <div class="hp-step">
-                <strong>Listen</strong><br>
-                We communicated with stakeholders to understand real-world needs.
+            <div class="hp-section-block">
+                <h3>Listen</h3>
+                <p>We communicate with stakeholders, experts, and the public to understand their needs, concerns, and insights regarding heavy metal pollution and biosensors.</p>
             </div>
-
-            <div class="hp-step">
-                <strong>Integrate</strong><br>
-                Feedback was incorporated into our design and experiments.
+            
+            <div class="hp-section-block">
+                <h3>Integrate</h3>
+                <p>We incorporated feedback into our design, field applications, and safety protocols, ensuring our project is safe, responsible, and practical.</p>
             </div>
-
-            <div class="hp-step">
-                <strong>Impact</strong><br>
-                Our solution was refined to maximize practical applicability.
+            
+            <div class="hp-section-block">
+                <h3>Impact</h3>
+                <p>We aim to create real-world value by bridging the gap between wet lab innovation, community education, and environmental policy support.</p>
             </div>
-
+            
             <a href="human-practices" class="btn-cycle">
                 VIEW MORE
             </a>
