@@ -346,13 +346,13 @@ footer {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 30px;
+  gap: 35px;
   box-sizing: border-box;
 }
 
 .hp-image-wrapper {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 45%;         
+  max-width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -361,9 +361,41 @@ footer {
 
 .hp-image-wrapper img {
   width: 100%;
-  max-width: 320px; /* 限制圖片最大尺寸，避免在大螢幕上過大 */
+  max-width: 420px;       
   height: auto;
   object-fit: contain;
+}
+
+.hp-text {
+  flex: 0 0 52%;         
+  max-width: 52%;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  box-sizing: border-box;
+}
+
+.hp-section-block {
+  margin-bottom: 12px;    
+}
+
+.hp-section-block h3 {
+  margin: 0 0 3px 0;
+  font-size: 1.15rem;     
+  font-weight: 600;       
+  color: #2d7a46;
+}
+
+.hp-section-block p {
+  margin: 0;
+  font-size: 0.9rem;      
+  line-height: 1.35;      
+  color: #333;
+}
+
+.hp-text .btn-cycle {
+  margin-top: 15px;
+  display: inline-block;
 }
 /* ==========================
    PROJECT MEGA MENU
