@@ -141,17 +141,17 @@ Produce safer water for environmental discharge.</p>
         <div class="hp-text">
             <div class="hp-section-block">
                 <h3>Listen</h3>
-                <p>We communicate with stakeholders, experts, and the public to understand their needs, concerns, and insights regarding heavy metal pollution and biosensors.</p>
+                <p>We communicate with diverse stakeholders to understand real needs.</p>
             </div>
             
             <div class="hp-section-block">
                 <h3>Integrate</h3>
-                <p>We incorporated feedback into our design, field applications, and safety protocols, ensuring our project is safe, responsible, and practical.</p>
+                <p>We incorporated their feedback into our design and experiments.</p>
             </div>
             
             <div class="hp-section-block">
                 <h3>Impact</h3>
-                <p>We aim to create real-world value by bridging the gap between wet lab innovation, community education, and environmental policy support.</p>
+                <p>We aim to create a solution that is practical, safe, and widely applicable.</p>
             </div>
             
             <a href="human-practices" class="btn-cycle">
