@@ -348,7 +348,7 @@ footer {
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   gap: 20px;
   box-sizing: border-box;
@@ -358,20 +358,18 @@ footer {
   position: relative; 
   width: 320px;          
   height: 320px;
-  flex: 0 0 50%;         /* 強制左側圖表區域剛好佔用 50% 寬度 */
-  max-width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 0 0 320px;       /* 鎖定圖表容器寬度為 320px */
+  max-width: 320px;
+  margin: 0;
 }
 
 .hp-text {
-  flex: 0 0 50%;         /* 強制右側文字區域剛好佔用 50% 寬度 */
-  max-width: 50%;
-  white-space: normal !important; /* 允許文字正常換行 */
-  word-break: break-word !important; /* 遇到邊界自動切斷單字換行 */
+  flex: 1 1 auto;
+  /* 關鍵防重疊：寬度最大只能是（總寬度 - 圖表320px - 間距20px - 安全邊界30px） */
+  max-width: calc(100% - 370px); 
+  white-space: normal !important;
+  word-break: break-word !important;
   overflow-wrap: break-word !important;
-  padding-left: 10px;
   box-sizing: border-box;
 }
 
