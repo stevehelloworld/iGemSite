@@ -348,9 +348,9 @@ footer {
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   align-items: center;
-  justify-content: flex-start;
-  gap: 40px;
+  justify-content: space-between;
   width: 100%;
+  gap: 20px;
   box-sizing: border-box;
 }
 
@@ -358,15 +358,20 @@ footer {
   position: relative; 
   width: 320px;          
   height: 320px;
-  flex: 0 0 320px;       /* 確保圖表維持 320px，絕對不被壓縮 */
-  margin: 0;
+  flex: 0 0 50%;         /* 強制左側圖表區域剛好佔用 50% 寬度 */
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hp-text {
-  flex: 1 1 0%;          /* 關鍵修正：強制文字區塊均分並佔滿右側所有剩餘空間 */
-  min-width: 0;          /* 關鍵修正：防止 Flex 子元素因文字內容溢出而無法縮小 */
-  word-wrap: normal;     /* 恢復正常單字換行 */
-  overflow-wrap: normal; /* 恢復正常單字換行 */
+  flex: 0 0 50%;         /* 強制右側文字區域剛好佔用 50% 寬度 */
+  max-width: 50%;
+  white-space: normal !important; /* 允許文字正常換行 */
+  word-break: break-word !important; /* 遇到邊界自動切斷單字換行 */
+  overflow-wrap: break-word !important;
+  padding-left: 10px;
   box-sizing: border-box;
 }
 
