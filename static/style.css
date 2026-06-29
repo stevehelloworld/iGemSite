@@ -358,15 +358,15 @@ footer {
   position: relative; 
   width: 320px;          
   height: 320px;
-  flex: 0 0 320px;
+  flex: 0 0 320px;       /* 確保圖表維持 320px，絕對不被壓縮 */
   margin: 0;
 }
 
 .hp-text {
-  flex: 1 1 auto;
-  max-width: calc(100% - 360px);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  flex: 1 1 0%;          /* 關鍵修正：強制文字區塊均分並佔滿右側所有剩餘空間 */
+  min-width: 0;          /* 關鍵修正：防止 Flex 子元素因文字內容溢出而無法縮小 */
+  word-wrap: normal;     /* 恢復正常單字換行 */
+  overflow-wrap: normal; /* 恢復正常單字換行 */
   box-sizing: border-box;
 }
 
