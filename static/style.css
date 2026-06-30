@@ -1,5 +1,12 @@
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   padding-top: 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .left-aligned {
@@ -78,10 +85,13 @@ footer a:hover {
 ========================================== */
 
 .homepage-hero {
+  width: 100%;
+  max-width: 100vw;    /* 限制最大寬度為視窗寬度 */
   height: 650px;
   background: black;
   overflow: hidden;
   position: relative;
+  object-fit: cover;   /* 確保圖片縮放時能覆蓋滿畫面而不變形 */
 }
 
 .homepage-content {
