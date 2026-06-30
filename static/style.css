@@ -787,3 +787,49 @@ footer {
   height:auto;
   flex-shrink:0;
 }
+
+/* ==========================================================
+   終極排版修正：解決左側空白與選單文字變單個字母一行
+========================================================== */
+
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* 2. 解除父層對大選單（Mega Menu）的寬度限制，讓選單以整個導覽列為對齊基準 */
+.navbar .mega-dropdown {
+  position: static !important; /* 必須為 static，大選單才能拿到整行導覽列的寬度 */
+}
+
+/* 3. 重寫 Human Practices 選單定位與寬度 */
+.hp-menu {
+  width: 100% !important;              /* 強制寬度填滿導覽列容器 */
+  max-width: 1140px !important;        /* 設定符合標準網頁的合理寬度 */
+  left: 50% !important;                /* 以下三行組合：強制讓選單在畫面居中 */
+  transform: translateX(-50%) !important;
+  right: auto !important;
+  
+  /* 重新彈性分配三欄比例，給右側更多空間 */
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1.4fr !important; 
+  gap: 20px !important;                /* 縮小間距，把空間留給文字 */
+}
+
+/* 4. 防止選單內部的文字與標題因空間不足被瀏覽器斷行 */
+.hp-menu .mega-column strong,
+.hp-menu .mega-column h5 {
+  white-space: nowrap !important;     /* 強制不換行 */
+}
+
+.hp-menu .mega-column a {
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+/* 5. 修正導覽列偏右導致左側太空的問題 */
+.navbar-nav.left-aligned {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
