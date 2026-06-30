@@ -20,20 +20,18 @@
       <ul class="navbar-nav ml-auto left-aligned">
         <!-- HOME -->
         <li class="nav-item">
-          <a class="nav-link dropdown-toggle"
-             href="{{ url_for('home') }} 
+          <a class="nav-link"
+             href="{{ url_for('home') }}"" 
              role="button"
-             data-bs-toggle="dropdown"
              aria-expanded="false">Home
           </a>
         </li>
 
         <!-- TEAM -->
         <li class="nav-item">
-          <a class="nav-link dropdown-toggle"
+          <a class="nav-link"
              href="{{ url_for('pages', page='team') }}"
              role="button"
-             data-bs-toggle="dropdown"
              aria-expanded="false">Team
           </a>
         </li>
@@ -47,7 +45,7 @@
              aria-expanded="false">Project
           </a>          
 
-          <div class="mega-menu">
+          <div class="dropdown-menu mega-menu hp-menu">
             <div class="mega-column">
               <h5>DESCRIPTION</h5>
               <a href="{{ url_for('pages', page='description') }}">
@@ -114,7 +112,10 @@
         <li class="nav-item dropdown mega-dropdown">
           <a class="nav-link dropdown-toggle"
              href="#"
-             id="navbar-wet-lab">
+             id="navbar-wet-lab"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
             Wet Lab
           </a>
         
@@ -199,7 +200,10 @@
         <li class="nav-item dropdown mega-dropdown">
           <a class="nav-link dropdown-toggle"
              href="#"
-             id="navbar-dry-lab">
+             id="navbar-dry-lab"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
             Dry Lab
           </a>
         
@@ -271,11 +275,14 @@
 
           <a class="nav-link dropdown-toggle"
              href="#"
-             id="navbar-engagement">        
+             id="navbar-engagement"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">      
              Human Practices        
           </a>
         
-          <div class="mega-menu hp-menu">
+          <div class="dropdown-menu mega-menu hp-menu">
             <!-- Column 1 -->
             <div class="mega-column">        
                 <h5>OVERVIEW</h5>        

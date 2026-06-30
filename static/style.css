@@ -343,7 +343,6 @@ footer {
 
 /* Homepage Human Practices */
 .hp-card{
-  grid-column:span 2;
 }
 
 .hp-layout {
@@ -512,7 +511,7 @@ footer {
 }
 
 .dropdown-menu.mega-menu.show{
-  display:grid;
+  display:grid !important;
 }
 
 .navbar {
@@ -686,7 +685,6 @@ footer {
    HUMAN PRACTICE
 ========================================== */
 .hp-menu{
-  display: grid !important;
   grid-template-columns: 1fr 1fr 1.4fr;
   width:920px;
   left:auto;
