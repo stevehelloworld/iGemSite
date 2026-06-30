@@ -20,23 +20,32 @@
       <ul class="navbar-nav ml-auto left-aligned">
         <!-- HOME -->
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          <a class="nav-link dropdown-toggle"
+             href="{{ url_for('home') }} 
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">Home
+          </a>
         </li>
 
         <!-- TEAM -->
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('pages', page='team') }}"
-            >Team</a
-          >
+          <a class="nav-link dropdown-toggle"
+             href="{{ url_for('pages', page='team') }}"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">Team
+          </a>
         </li>
 
         <!-- PROJECT -->
         <li class="nav-item dropdown mega-dropdown">
           <a class="nav-link dropdown-toggle"
              href="#"
-             id="navbar-project">
-            Project
-          </a>
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">Project
+          </a>          
 
           <div class="mega-menu">
             <div class="mega-column">
