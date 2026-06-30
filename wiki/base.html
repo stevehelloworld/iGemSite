@@ -156,10 +156,90 @@
 {% include 'footer.html' %}
 
   <!-- Bootstrap -->
+  <!-- Bootstrap -->
 
   <script
     src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"
   ></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const toggles = document.querySelectorAll(".mega-toggle");
+
+    const menus = document.querySelectorAll(".mega-menu");
+
+
+    function closeAllMenus() {
+
+        menus.forEach(menu => {
+
+            menu.classList.remove("show");
+
+        });
+
+    }
+
+
+    toggles.forEach(toggle => {
+
+        toggle.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            e.stopPropagation();
+
+            const menu = this.nextElementSibling;
+
+            const isOpen = menu.classList.contains("show");
+
+            closeAllMenus();
+
+            if (!isOpen) {
+
+                menu.classList.add("show");
+
+            }
+
+        });
+
+    });
+
+
+    menus.forEach(menu => {
+
+        menu.addEventListener("click", function (e) {
+
+            e.stopPropagation();
+
+        });
+
+    });
+
+
+    document.addEventListener("click", function () {
+
+        closeAllMenus();
+
+    });
+
+
+    document.addEventListener("keydown", function (e) {
+
+        if (e.key === "Escape") {
+
+            closeAllMenus();
+
+        }
+
+    });
+
+});
+
+</script>
+
 
 </body>
 
