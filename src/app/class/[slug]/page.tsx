@@ -80,7 +80,10 @@ export default async function ClassSessionPage({ params }: Props) {
           </div>
         )}
 
-        <article className="prose-igem sticker mt-8 p-6 sm:p-8">
+        <article className="prose-igem sticker mt-8 max-w-none p-6 sm:p-10">
+          <div className="mb-6 rounded-2xl border-2 border-[#f0c4ce] bg-[#fff8f6] px-4 py-3 text-sm font-bold text-muted">
+            這是完整教材：請依「步驟」在電腦實際操作，不要只看過。建議左開本頁、右開 wiki 或編輯器。
+          </div>
           <MarkdownBody source={body} />
         </article>
 
