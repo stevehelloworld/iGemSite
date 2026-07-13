@@ -1,7 +1,7 @@
 ---
+# Content aligned with https://2026.igem.wiki/vis/ (official home)
 title: Cadture
-tagline: Capture heavy metals. Restore clean water.
-badge: Junior high · VIS iGEM 2026 · Team 6423
+badge: VIS iGEM 2026
 problems:
   - tag: Pb
     title: Lead Pollution
@@ -9,7 +9,7 @@ problems:
   - tag: Cd
     title: Cadmium Threat
     body: Cadmium is toxic even at low concentrations and persists in the environment.
-  - tag: Water
+  - tag: "💧"
     title: Wastewater Challenge
     body: Industrial wastewater releases heavy metals that are difficult to remove effectively.
 locations:

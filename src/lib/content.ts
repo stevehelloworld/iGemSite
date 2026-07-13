@@ -48,8 +48,8 @@ export function getPageBySlug(slug: string): WikiPageData {
 export type HomeData = {
   frontmatter: {
     title: string;
-    tagline: string;
-    badge: string;
+    badge?: string;
+    tagline?: string;
     problems: { title: string; body: string; tag: string }[];
     locations: { name: string; body: string }[];
     solution: { title: string; body: string }[];
