@@ -44,7 +44,7 @@ export default function Navbar() {
           </span>
           <div className="leading-tight">
             <div className="font-display text-base font-bold tracking-tight text-primary-dark">
-              CadArmor
+              Cadture
             </div>
             <div className="text-[11px] font-extrabold text-muted">VIS iGEM 2026</div>
           </div>

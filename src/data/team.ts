@@ -18,7 +18,7 @@ export const teamMembers: Member[] = [
     name: "Wet Lab Core",
     role: "Molecular Biology",
     focus: "Cloning, surface display, assays",
-    bio: "Designs OmpA-MT fusions, linker optimization, cadmium binding assays, and MICP validation experiments.",
+    bio: "Builds capture and assay work for Pb/Cd binding, cloning, and sequestration experiments for Cadture.",
   },
   {
     name: "Dry Lab Core",
@@ -30,7 +30,7 @@ export const teamMembers: Member[] = [
     name: "Wiki & Design",
     role: "Documentation",
     focus: "Wiki, graphics, UX",
-    bio: "Turns lab logs into a clear, judge-friendly wiki — the public face of CadArmor.",
+    bio: "Turns lab logs into a clear, judge-friendly wiki — the public face of Cadture.",
   },
   {
     name: "Human Practices",
@@ -43,35 +43,41 @@ export const teamMembers: Member[] = [
 export const attributions = [
   {
     area: "Project leadership",
-    items: ["Ray — overall architecture, literature synthesis, integration strategy"],
+    items: ["Overall Cadture architecture, literature synthesis, integration strategy"],
   },
   {
     area: "Wet lab design",
     items: [
-      "OmpA / Lpp-OmpA–MT surface display architecture",
-      "Flexible linker + codon optimization for synthesis",
-      "MICP urease cluster integration plan",
+      "Capture module: surface-accessible binder candidates (scaffold–linker–binder)",
+      "Detection module: metal-responsive sensing plan for Cd/Pb context",
+      "Sequestration / removal assay roadmap and controls",
     ],
   },
   {
     area: "Dry lab",
     items: [
-      "Preliminary ODE modeling from published MT Kd values",
-      "ESP32 hardware block-diagram definition (flow vs fluorescence sensing)",
+      "ODE modeling bootstrap from literature parameters for free metal + capture sites",
+      "Hardware MVP: sensing/logging first; safe limits for metal fluids",
     ],
   },
   {
     area: "Wiki",
-    items: ["Site structure, content, and visual design for VIS iGEM 2026"],
+    items: ["Team wiki deliverable structure, content, and visual design for VIS iGEM 2026"],
+  },
+  {
+    area: "Human Practices & safety",
+    items: [
+      "Stakeholder map and Listen → Integrate → Impact framework",
+      "Pb/Cd chemical safety and biosafety SOPs for a junior team",
+    ],
   },
   {
     area: "Inspiration & references",
     items: [
-      "NTU cadmium whole-cell biosensor (CadR.10Z)",
-      "Surface-expressed metallothionein bioremediation studies (2024)",
-      "Plant metallothioneins from Ipomoea aquatica",
-      "MICP dual-function industrial wastewater iGEM designs",
-      "Award-winning wiki UX patterns (e.g. GEMS-Taiwan 2024)",
+      "Metal-responsive whole-cell sensor literature (CadR-class)",
+      "Surface-displayed metal-binding protein studies",
+      "Industrial wastewater and dual heavy-metal problem framing",
+      "Award-winning wiki UX patterns (e.g. GEMS-Taiwan)",
     ],
   },
 ];

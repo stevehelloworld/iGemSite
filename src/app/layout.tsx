@@ -24,11 +24,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CadArmor · VIS iGEM 2026",
-    template: "%s · CadArmor · VIS iGEM 2026",
+    default: "Cadture · VIS iGEM 2026",
+    template: "%s · Cadture · VIS iGEM 2026",
   },
   description:
-    "VIS iGEM 2026 — CadArmor: detect, capture, and mineralize cadmium with surface-displayed metallothionein and MICP. A junior-high iGEM team wiki.",
+    "VIS iGEM 2026 team wiki (6423) — Cadture: detect, capture, sequester, and remove lead and cadmium from industrial wastewater. Competition URL: 2026.igem.wiki/vis.",
 };
 
 export default function RootLayout({

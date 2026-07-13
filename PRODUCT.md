@@ -1,4 +1,4 @@
-# CadArmor · VIS iGEM 2026 Wiki
+# Cadture · VIS iGEM 2026 Team Wiki
 
 ## Register
 brand
@@ -7,37 +7,46 @@ brand
 web
 
 ## Product
-Public team wiki for VIS iGEM 2026. Documents the CadArmor project: a dual-mode cadmium bioremediation system (Detect → Capture → Mineralize) built by a junior-high-led synthetic biology team.
+**This site is the VIS iGEM 2026 team wiki deliverable**, project **Cadture**, team **6423**.
+
+| | |
+|--|--|
+| **Live official wiki (current content baseline)** | https://2026.igem.wiki/vis/ |
+| **GitLab** | https://gitlab.igem.org/2026/vis |
+| **How students edit text** | Markdown under `content/` |
+
+### Content policy (important)
+
+1. **Facts follow the current official wiki** (`2026.igem.wiki/vis`) until the team confirms changes.  
+2. **If a page is still the iGEM template** (“What Should this Page Contain?”), keep that structure — **do not invent experiments, people, or results**.  
+3. **Design** (colors, layout, student-friendly UI) is maintained in the codebase; scientific text is edited via Markdown under `content/`.  
+4. **English only** on page content.
+
+### Home vs inner pages
+
+- **Home:** seeded from the current official home (problem, solution steps, highlights, HP, DBTL teaser, team placeholder).  
+- **Inner pages:** seeded from official **template guidance** where the live site has not been filled yet.
 
 ## Users
-- iGEM judges and other teams
-- Students (middle/high school) curious about synthetic biology
-- Mentors, parents, and partners
-- Ray and teammates as day-to-day editors
+- VIS students (edit Markdown)
+- Mentors / wiki lead (deploy to iGEM infrastructure)
+- iGEM judges (via freeze URL on iGEM hosting)
 
 ## Purpose
-Explain the science clearly, show engineering honesty (DBTL + choke points), and feel like an award-winning student wiki—not a corporate biotech site.
-
-## Positioning
-Youthful high-school competition wiki energy (inspired by GEMS-Taiwan craft) with real molecular-biology depth. English-only for international judging.
+A student-friendly wiki UI that remains a valid iGEM deliverable path: Standard Pages, English content, and deployability to `2026.igem.wiki/vis`.
 
 ## Brand personality
 Curious · playful · rigorous · maker · transparent
 
 ## Voice
-Friendly student voice in clear English. Short sentences. Explain jargon. No corporate SaaS tone. No Chinese on the site UI or page content.
-
-## Anti-references
-- Corporate biotech / SaaS dashboards
-- Purple AI gradients, Inter-everywhere defaults
-- Dense walls of text without hierarchy
-- Fake “enterprise navy” seriousness for a junior team
-
-## Accessibility
-WCAG AA contrast targets, visible focus, keyboard nav, `prefers-reduced-motion`, readable body ≥16px.
+Friendly student English. Short sentences. No Chinese on wiki pages.
 
 ## Stack
-Next.js App Router · TypeScript · Tailwind CSS v4
+Next.js App Router · TypeScript · Tailwind CSS v4 · **Markdown content** (`gray-matter` + `react-markdown`)
 
-## Design skills
-This project uses **Impeccable** and **UI/UX Pro Max** as agent design skills (installed project-local and user-global). Prefer claymorphic, soft, educational UI with committed rose brand colors.
+## Key paths for editors
+- `content/home.md` — homepage structured fields  
+- `content/pages/*.md` — each wiki page  
+- `content/README.md` — how to edit  
+- `docs/STUDENT_HANDBOOK.md` — student manual  
+- `docs/DEPLOY_TO_IGEM.md` — ship to GitLab / freeze compliance  

@@ -4,7 +4,7 @@ type CadMascotProps = {
   mood?: "happy" | "think" | "hero";
 };
 
-/** Armored bacterium mascot for CadArmor — pure SVG, no emoji dependency */
+/** Friendly bacterium mascot for Cadture — pure SVG, no emoji dependency */
 export default function CadMascot({
   className = "",
   size = 120,
@@ -28,7 +28,7 @@ export default function CadMascot({
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       role="img"
-      aria-label="CadArmor mascot: armored bacterium"
+      aria-label="Cadture mascot: friendly bacterium"
     >
       {/* soft ground shadow */}
       <ellipse cx="80" cy="142" rx="42" ry="8" fill="#C94C67" opacity="0.12" />

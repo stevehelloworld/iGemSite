@@ -24,7 +24,7 @@ export const journalPosts: JournalPost[] = [
       "The authors fused human metallothionein II (hMT-II) to β-galactosidase and induced massive cytoplasmic expression — the 122-kDa fusion protein exceeded 24% of total protein extract (≈2 g/L).",
       "Performance: Cd removal reached 10.5 μg/mg dry cell weight versus 3.11 μg/mg without MT. Affinity ranked Cd > Zn > Cu. EDX showed ~60% of Cd in the cytoplasm and ~40% on the outer membrane.",
       "The choke point: cytoplasmic MT alone usually underperforms periplasmic or outer-membrane display unless a heavy-metal transporter is co-expressed. The membrane becomes the physical bottleneck.",
-      "Our takeaway: Lpp-OmpA surface display places the filter at the inlet. We skip unknown transporters and avoid pumping toxin into a living chassis — a cleaner systems architecture for CadArmor.",
+      "Our takeaway: Lpp-OmpA surface display places the filter at the inlet. We skip unknown transporters and avoid pumping toxin into a living chassis — a cleaner systems architecture for Cadture.",
     ],
   },
   {
@@ -89,7 +89,7 @@ export const journalPosts: JournalPost[] = [
     content: [
       "Two water-spinach cultivars use different defenses: QLQ fires IaMT2 in roots as a firewall; T308 leans on IaMT3 in shoots as high-load ROS cooling.",
       "When IaMT1/2/3 were ported into E. coli: IaMT1 was a dead module; IaMT2 gave strong tolerance + accumulation; IaMT3 also raised Cd load capacity.",
-      "Strategic value: plant-origin MTs fold and function in a bacterial chassis. We compare plant vs bacterial MT Kd values to pick the strongest capture domain for CadArmor.",
+      "Strategic value: plant-origin MTs fold and function in a bacterial chassis. We compare plant vs bacterial MT Kd values to pick the strongest capture domain for Cadture.",
     ],
   },
   {

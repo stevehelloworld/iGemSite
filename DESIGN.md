@@ -1,7 +1,7 @@
-# DESIGN.md — CadArmor Wiki
+# DESIGN.md — Cadture Team Wiki
 
 ## Theme
-**Claymorphic student wiki** — soft 3D, chunky radii, playful but readable science site. Visual cousin to award-winning HS iGEM wikis (GEMS-Taiwan energy: rose, cream, rounded, warm).
+**Claymorphic student wiki** — soft 3D, chunky radii, playful but readable science site. Visual cousin to award-winning HS iGEM wikis (GEMS-Taiwan energy: rose, cream, rounded, warm). Brand name on chrome: **Cadture** · VIS iGEM 2026.
 
 ## Color (committed brand)
 | Token | Hex | Role |
@@ -52,7 +52,7 @@ Prefer simple SVG (shield, flask, bacterium mascot). Emoji allowed sparingly as 
 **English only** across UI chrome and content.
 
 ## Anti-patterns
-- No purple AI gradients
+- No purple neon gradients
 - No gray-on-pastel unreadable text
 - No nested card-in-card
 - No side-stripe-only callouts as primary pattern

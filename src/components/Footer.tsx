@@ -6,18 +6,18 @@ const columns = [
     title: "Project",
     links: [
       { label: "Description", href: "/description" },
-      { label: "Design", href: "/design" },
       { label: "Engineering", href: "/engineering" },
       { label: "Results", href: "/results" },
+      { label: "Contribution", href: "/contribution" },
     ],
   },
   {
     title: "Labs",
     links: [
       { label: "Experiments", href: "/experiments" },
-      { label: "Parts", href: "/parts" },
+      { label: "Notebook", href: "/notebook" },
       { label: "Model", href: "/model" },
-      { label: "Hardware", href: "/hardware" },
+      { label: "Software", href: "/software" },
     ],
   },
   {
@@ -25,8 +25,8 @@ const columns = [
     links: [
       { label: "Members", href: "/team" },
       { label: "Attributions", href: "/attributions" },
-      { label: "Journal", href: "/journal" },
-      { label: "Safety", href: "/safety" },
+      { label: "Human Practices", href: "/human-practices" },
+      { label: "Safety", href: "/safety-and-security" },
     ],
   },
 ];
@@ -42,21 +42,40 @@ export default function Footer() {
                 <IconShield className="h-6 w-6" />
               </span>
               <div>
-                <div className="font-display text-lg font-bold text-primary-dark">CadArmor</div>
-                <div className="text-sm font-extrabold text-muted">VIS iGEM 2026</div>
+                <div className="font-display text-lg font-bold text-primary-dark">Cadture</div>
+                <div className="text-sm font-extrabold text-muted">VIS iGEM 2026 · Team 6423</div>
               </div>
             </div>
             <p className="mt-4 max-w-sm text-sm font-semibold leading-relaxed text-rose-text">
-              We are junior-high makers engineering bacteria with cadmium armor: detect first,
-              capture on the surface, then mineralize for recovery.
+              VIS iGEM 2026 team wiki for Cadture — Pb and Cd wastewater remediation with synthetic
+              biology.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
-              {["Detect", "Capture", "Mineralize"].map((t) => (
+              {["Detect", "Capture", "Sequestration", "Removal"].map((t) => (
                 <span key={t} className="pill-tag text-xs">
                   {t}
                 </span>
               ))}
             </div>
+            <p className="mt-4 text-xs font-bold text-muted">
+              <a
+                href="https://2026.igem.wiki/vis/"
+                className="text-primary underline decoration-wavy underline-offset-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                2026.igem.wiki/vis
+              </a>
+              {" · "}
+              <a
+                href="https://gitlab.igem.org/2026/vis"
+                className="text-primary underline decoration-wavy underline-offset-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitLab
+              </a>
+            </p>
           </div>
 
           {columns.map((col) => (
@@ -81,8 +100,26 @@ export default function Footer() {
         <div className="section-rule my-10" />
 
         <div className="flex flex-col gap-2 text-xs font-bold text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 VIS iGEM · CadArmor · Built by junior high makers</p>
-          <p>Design skills: Impeccable · UI/UX Pro Max</p>
+          <p>© 2026 VIS iGEM · Cadture · Licensed under CC BY 4.0</p>
+          <p>
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              className="hover:text-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Creative Commons Attribution 4.0
+            </a>
+            {" · "}
+            <a
+              href="https://gitlab.igem.org/2026/vis"
+              className="hover:text-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              gitlab.igem.org/2026/vis
+            </a>
+          </p>
         </div>
       </div>
     </footer>

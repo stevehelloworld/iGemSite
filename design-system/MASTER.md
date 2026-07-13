@@ -1,4 +1,4 @@
-# CadArmor Design System (Master)
+# Cadture Design System (Master)
 
 Source of truth for VIS iGEM 2026 wiki UI. Aligns **Impeccable** + **UI/UX Pro Max** guidance with the committed GEMS-inspired student brand.
 

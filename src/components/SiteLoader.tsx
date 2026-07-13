@@ -40,7 +40,7 @@ export default function SiteLoader() {
       <div className="animate-bounce-soft">
         <CadMascot size={100} mood="hero" />
       </div>
-      <p className="mt-4 font-display text-lg font-bold text-primary-dark">CadArmor loading…</p>
+      <p className="mt-4 font-display text-lg font-bold text-primary-dark">Cadture loading…</p>
       <div className="mt-3 h-2 w-40 overflow-hidden rounded-full bg-[#f0c4ce]">
         <div className="loader-bar h-full rounded-full bg-primary" />
       </div>

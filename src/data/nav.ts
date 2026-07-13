@@ -4,48 +4,43 @@ export type NavItem = {
   children?: { label: string; href: string; desc?: string }[];
 };
 
+/** Navigation aligned with current official wiki: https://2026.igem.wiki/vis/ */
 export const navItems: NavItem[] = [
+  {
+    label: "Team",
+    children: [
+      { label: "Members", href: "/team", desc: "Meet the team" },
+      { label: "Attributions", href: "/attributions", desc: "Official form + notes" },
+    ],
+  },
   {
     label: "Project",
     children: [
-      { label: "Description", href: "/description", desc: "The cadmium crisis & our solution" },
-      { label: "Design", href: "/design", desc: "Detect → Capture → Mineralize" },
-      { label: "Engineering", href: "/engineering", desc: "DBTL cycles & choke points" },
-      { label: "Results", href: "/results", desc: "Literature POC & targets" },
+      { label: "Description", href: "/description", desc: "Background & problem" },
+      { label: "Engineering", href: "/engineering", desc: "Design → Build → Test → Learn" },
+      { label: "Results", href: "/results", desc: "Experimental results" },
+      { label: "Contribution", href: "/contribution", desc: "Gift to future teams" },
     ],
   },
   {
     label: "Wet Lab",
     children: [
-      { label: "Experiments", href: "/experiments", desc: "Roadmap & protocols" },
-      { label: "Parts", href: "/parts", desc: "OmpA-MT, sensors & MICP" },
-      { label: "Notebook", href: "/notebook", desc: "Meetings & progress" },
+      { label: "Experiments", href: "/experiments", desc: "Workflow & protocols" },
+      { label: "Notebook", href: "/notebook", desc: "Daily research records" },
+      { label: "Measurement", href: "/measurement", desc: "Quantification" },
+      { label: "Alternative Platform", href: "/alternative-platform", desc: "Other strategy" },
+      { label: "Safety & Security", href: "/safety-and-security", desc: "Risk & biosafety" },
     ],
   },
   {
     label: "Dry Lab",
     children: [
-      { label: "Model", href: "/model", desc: "ODEs & MT affinity" },
-      { label: "Hardware", href: "/hardware", desc: "ESP32 bioreactor control" },
+      { label: "Model", href: "/model", desc: "Simulation" },
+      { label: "Software", href: "/software", desc: "Tools & visualization" },
     ],
   },
   {
     label: "Human Practices",
-    children: [
-      { label: "Integrated HP", href: "/human-practices", desc: "Stakeholders & impact" },
-      { label: "Education", href: "/education", desc: "Outreach & teaching" },
-      { label: "Safety", href: "/safety", desc: "Biosafety & containment" },
-    ],
-  },
-  {
-    label: "Team",
-    children: [
-      { label: "Members", href: "/team", desc: "Meet VIS iGEM 2026" },
-      { label: "Attributions", href: "/attributions", desc: "Who did what" },
-    ],
-  },
-  {
-    label: "Journal",
-    href: "/journal",
+    href: "/human-practices",
   },
 ];

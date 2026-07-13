@@ -15,7 +15,7 @@ export default function JournalPage() {
       <PageHero
         eyebrow="Research logs"
         title="Flight logs"
-        subtitle="Paper teardowns, architecture notes, and real project friction — the living notebook behind CadArmor."
+        subtitle="Paper teardowns, architecture notes, and real project friction — research logs that feed Cadture."
         tone="lavender"
         mascotMood="think"
       />

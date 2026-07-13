@@ -20,7 +20,7 @@ export default function PageHero({
   showMascot = true,
   mascotMood = "happy",
 }: PageHeroProps) {
-  const chapter = [eyebrow, badge].filter(Boolean).join(" · ") || "CadArmor";
+  const chapter = [eyebrow, badge].filter(Boolean).join(" · ") || "Cadture";
   return (
     <PageCover
       chapter={chapter}
