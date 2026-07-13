@@ -43,4 +43,8 @@ export const navItems: NavItem[] = [
     label: "Human Practices",
     href: "/human-practices",
   },
+  {
+    label: "Course",
+    href: "/class",
+  },
 ];

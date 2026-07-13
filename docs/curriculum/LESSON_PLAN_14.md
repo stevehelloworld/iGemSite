@@ -7,6 +7,7 @@
 | **時數** | 14 次課，每次 3 小時，共 **42 小時** |
 | **成品** | 能說明並實作本專案架構的 Team Wiki（Cadture / VIS iGEM 2026） |
 | **參考成品** | 本 repo；內容基準 https://2026.igem.wiki/vis/ |
+| **學生課堂網頁** | 本站 **`/class`**（課表）· **`/class/how-to-edit`** · **`/class/session-01`…`14`** |
 | **授課者** | 資訊老師 |
 | **課室需求** | 每人筆電、穩定網路、投影；教師機可示範 |
 
@@ -75,7 +76,8 @@
 
 | 網站區塊 | 主要路徑 | 課程單元 |
 |----------|----------|----------|
-| 首頁結構資料 | `content/home.md` | 第 4、9 次 |
+| 首頁結構資料（順序對齊官方） | `content/home.md` + `src/app/page.tsx` | 第 4、9 次 |
+| 學生課堂說明網頁 | `/class`、`content/class/*.md` | 每次課 |
 | 各章正文 | `content/pages/*.md` | 第 4、5、11、12 次 |
 | 路由頁面 | `src/app/**/page.tsx` | 第 6、7、11 次 |
 | 共用元件 | `src/components/*` | 第 7、8、10 次 |
@@ -123,8 +125,9 @@
 1. 準備本 repo 的「課程用分支」或乾淨 clone 教學包（避免學生改壞 main）。  
 2. 確認 Node.js LTS 安裝包與 VS Code（含 Markdown、ESLint 擴充建議清單）。  
 3. 投影：官網 https://2026.igem.wiki/vis/ 與本機 `localhost:3000` 對照。  
-4. 印或雲端發放：`docs/STUDENT_HANDBOOK.md`、本教案精簡學生版（第 16 節）。  
+4. 印或雲端發放：`docs/STUDENT_HANDBOOK.md`；課堂投影 **`/class`**。  
 5. 準備「英文句型卡」（問題／方法／結果／下一步）供科學組使用。  
+6. 首頁教學以官方順序為準：Problem → Solution → Highlights → Sustainable → HP → Engineering → Team。  
 
 ---
 
@@ -729,6 +732,7 @@ npm run build
 |------|------|------|
 | 1.0 | 2026-07-14 | 依 Cadture repo（Next + Markdown）初版 14×3h |
 | 1.1 | 2026-07-14 | 依學生「會一點程式、學過一點 JS」調整深度與第 1–3、6–9、11、13 次 |
+| 1.2 | 2026-07-14 | 首頁對齊官方結構；新增學生網頁 `/class` 與 `content/class` 各次說明 |
 
 ---
 

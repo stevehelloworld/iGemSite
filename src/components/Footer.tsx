@@ -29,6 +29,15 @@ const columns = [
       { label: "Safety", href: "/safety-and-security" },
     ],
   },
+  {
+    title: "Course",
+    links: [
+      { label: "Class home", href: "/class" },
+      { label: "How to edit", href: "/class/how-to-edit" },
+      { label: "Session 1", href: "/class/session-01" },
+      { label: "Session 9 · Home", href: "/class/session-09" },
+    ],
+  },
 ];
 
 export default function Footer() {

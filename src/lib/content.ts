@@ -71,3 +71,70 @@ export function getHomeContent(): HomeData {
     body: content.trim(),
   };
 }
+
+const CLASS_DIR = path.join(CONTENT_DIR, "class");
+
+export type ClassSessionMeta = {
+  slug: string;
+  session: number;
+  title: string;
+  subtitle?: string;
+  duration?: string;
+  goals?: string[];
+};
+
+export type ClassSessionData = {
+  slug: string;
+  frontmatter: {
+    session: number;
+    title: string;
+    subtitle?: string;
+    duration?: string;
+    goals?: string[];
+  };
+  body: string;
+};
+
+export function getClassSessionSlugs(): string[] {
+  if (!fs.existsSync(CLASS_DIR)) return [];
+  return fs
+    .readdirSync(CLASS_DIR)
+    .filter((f) => f.endsWith(".md") && f.toLowerCase() !== "readme.md")
+    .map((f) => f.replace(/\.md$/, ""))
+    .sort();
+}
+
+/** Numbered class sessions only (excludes utility pages like how-to-edit). */
+export function getNumberedClassSessionSlugs(): string[] {
+  return getClassSessionSlugs().filter((s) => s.startsWith("session-"));
+}
+
+export function getClassSession(slug: string): ClassSessionData {
+  const full = path.join(CLASS_DIR, `${slug}.md`);
+  if (!fs.existsSync(full)) {
+    throw new Error(`Missing class file: content/class/${slug}.md`);
+  }
+  const raw = fs.readFileSync(full, "utf8");
+  const { data, content } = matter(raw);
+  return {
+    slug,
+    frontmatter: data as ClassSessionData["frontmatter"],
+    body: content.trim(),
+  };
+}
+
+export function listClassSessions(): ClassSessionMeta[] {
+  return getNumberedClassSessionSlugs()
+    .map((slug) => {
+      const { frontmatter } = getClassSession(slug);
+      return {
+        slug,
+        session: frontmatter.session,
+        title: frontmatter.title,
+        subtitle: frontmatter.subtitle,
+        duration: frontmatter.duration,
+        goals: frontmatter.goals,
+      };
+    })
+    .sort((a, b) => a.session - b.session);
+}
