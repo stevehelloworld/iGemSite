@@ -178,14 +178,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
             menu.classList.remove("show");
 
+            /* 清除 JavaScript 加上的定位 */
+            menu.style.left = "";
+            menu.style.right = "";
+            menu.style.transform = "";
         });
-
     }
 
     function alignHpMenu(menu){
-      const rect = menu.getBoundingClientRect();
-      const offset = window.innerWidth - rect.right;
-      menu.style.left = `calc(50% + ${offset - 20}px)`;
+
+        /* 回到 CSS 原本的設定 */
+        menu.style.left = "";
+        menu.style.right = "";
+        menu.style.transform = "";
+
+        /* 等瀏覽器套用 CSS */
+        requestAnimationFrame(() => {
+
+            const rect = menu.getBoundingClientRect();
+
+            const overflow = rect.right - window.innerWidth;
+
+            if (overflow > 0) {
+
+                menu.style.left = `calc(50% - ${overflow + 20}px)`;
+
+            }
+        });
     }
 
 
@@ -206,13 +225,13 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!isOpen) {
 
                 menu.classList.add("show");
-                if(menu.classList.contains("hp-menu")){
-                  alignHpMenu(menu);
+                if (menu.classList.contains("hp-menu")) {
+                    requestAnimationFrame(() => {
+                        alignHpMenu(menu);
+                    });
                 }
             }
-
         });
-
     });
 
 
