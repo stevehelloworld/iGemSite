@@ -184,8 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function alignMenuRight(menu){
-
+    function alignMenu(menu){
         menu.style.left = "";
         menu.style.right = "";
         menu.style.transform = "";
@@ -193,15 +192,18 @@ document.addEventListener("DOMContentLoaded", function () {
         requestAnimationFrame(() => {
 
             const rect = menu.getBoundingClientRect();
-
             const padding = 20;
+            let shift = 0;
 
-            const overflow = rect.right - (window.innerWidth - padding);
+            if (rect.right > window.innerWidth - padding){
+                shift = rect.right - (window.innerWidth - padding);
+            }    
+            else if(rect.left < padding){
+                shift = rect.left - padding;
+            }
 
-            if (overflow > 0) {
-
-              menu.style.left = `calc(50% - ${overflow}px)`;
-
+            if(shift !== 0){
+                menu.style.left = `calc(50% - ${shift}px)`;
             }
         });
     }
@@ -224,10 +226,12 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!isOpen) {
 
                 menu.classList.add("show");
-                if (menu.classList.contains("hp-menu") ||
-                    menu.classList.contains("drylab-menu")){
+                if (menu.classList.contains("project-menu") ||
+                    menu.classList.contains("wetlab-menu") ||
+                    menu.classList.contains("drylab-menu") ||
+                    menu.classList.contains("hp-menu")){
                     requestAnimationFrame(() => {
-                      alignMenuRight(menu);
+                      alignMenu(menu);
                     });
                 }
             }

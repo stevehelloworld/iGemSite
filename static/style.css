@@ -1096,12 +1096,27 @@ footer a:hover{
 /* =========================================================
    MENU WIDTHS
    ========================================================= */
+.project-menu{
+
+    width:1200px;
+
+    grid-template-columns:repeat(4,minmax(0,1fr));
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}   
 
 .wetlab-menu{
 
     width:1000px;
 
     grid-template-columns:repeat(4,minmax(0,1fr));
+
+    left:50%;
+
+    transform:translateX(-50%);
 
 }
 
