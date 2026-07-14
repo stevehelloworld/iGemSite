@@ -1111,6 +1111,10 @@ footer a:hover{
 
     grid-template-columns:repeat(3,minmax(0,1fr));
 
+    left:50%;
+
+    transform:translateX(-50%);
+
 }
 
 .hp-menu{
