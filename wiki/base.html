@@ -182,6 +182,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    function alignHpMenu(menu){
+      const rect = menu.getBoundingClientRect();
+      const offset = window.innerWidth - rect.right;
+      menu.style.left = `calc(50% + ${offset - 20}px)`;
+    }
+
 
     toggles.forEach(toggle => {
 
@@ -200,7 +206,9 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!isOpen) {
 
                 menu.classList.add("show");
-
+                if(menu.classList.contains("hp-menu")){
+                  alignHpMenu(menu);
+                }
             }
 
         });
