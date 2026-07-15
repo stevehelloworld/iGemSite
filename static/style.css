@@ -445,6 +445,15 @@ a{
 
 }
 
+.city-title{
+
+    color:#57c26d;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+
+}
 
 .city-block{
 
@@ -460,6 +469,14 @@ a{
 .city-block:not(:last-child){
 
     border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.city-block p{
+
+    margin:0;
+
+    line-height:1.5;
 
 }
 
