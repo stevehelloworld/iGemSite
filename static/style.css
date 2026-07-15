@@ -437,20 +437,22 @@ a{
 
 .taiwan-text-column{
 
-    display:flex;
+    display:grid;
 
-    flex-direction:column;
+    row-gap:18px;
 
-    justify-content:flex-start;
+    align-content:start;
 
 }
 
 
 .city-block{
 
-    padding:14px 0;
+    padding:0;
 
-    line-height:1.7;
+    margin-bottom:18px;
+
+    line-height:1.45;
 
 }
 
@@ -463,11 +465,9 @@ a{
 
 .city-block strong{
 
-    color:#57c26d;
-
     display:block;
 
-    margin-bottom:4px;
+    margin-bottom:2px;
 
 }
 
