@@ -32,18 +32,24 @@
 
         <div class="taiwan-text-column">
             <div class="city-block">
-                <strong>Taoyuan</strong><br>
+                <div class="city-title">Taoyuan</div>
+                <p>
                 Industrial park effluents contribute to Pb and Cd contamination.
+                </p>
             </div>
 
             <div class="city-block">
-                <strong>Taichung</strong><br>
+                <div class="city-title">Taichung</div>
+                <p>
                 Heavy metal pollution in rivers affects agricultural safety.
+                </p>
             </div>
 
             <div class="city-block">
-                <strong>Kaohsiung</strong><br>
+                <div class="city-title">Kaohsiung</div>
+                <p>
                 Industrial wastewater and harbor activities increase metal load.
+                </p>
             </div>
         </div>
     </div>
