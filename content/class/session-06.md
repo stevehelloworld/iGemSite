@@ -1,159 +1,125 @@
 ---
 session: 6
-title: "從 JS 到 TSX：Next.js 路由"
-subtitle: "page.tsx 是什麼、網址怎麼來、如何讀懂 10 行程式"
+title: "結構層：路由系統如何做出網址"
+subtitle: "App Router、page.tsx、layout——網站地圖的實作原理"
 duration: "3 小時"
 goals:
-  - "能配對網址與 src/app 資料夾"
-  - "能指認 import、函式元件、export default、slug"
-  - "能說明「改文字通常改 md，不是改 page.tsx」"
+  - "能默寫『資料夾 → 網址』規則"
+  - "能精準拆解 page.tsx 每一行"
+  - "能解釋 layout 與 page 的關係"
+  - "能預測新增路由需要哪些檔案"
 ---
 
-## 1. 核心規則（先背）
+## 1. 建造問題
 
-在 Next.js App Router 裡：
+> 使用者輸入 `/engineering` 時，框架如何知道要顯示什麼？
+
+答案在 **檔案系統路由**。
+
+---
+
+## 2. 規則精熟
 
 ```text
-src/app/工程名/page.tsx  →  網址 /工程名
+src/app/<segment>/page.tsx  →  /<segment>
+src/app/page.tsx            →  /
+src/app/class/[slug]/page.tsx → /class/:slug （動態）
 ```
 
-例子：
+### 課堂遊戲（20 分）
 
-| 檔案 | 網址 |
-|------|------|
-| `src/app/page.tsx` | `/`（首頁） |
-| `src/app/team/page.tsx` | `/team` |
-| `src/app/human-practices/page.tsx` | `/human-practices` |
-| `src/app/class/session-06` 動態 | `/class/session-06` |
-
-**練習 5 分鐘：** 老師報網址，你指出資料夾；或反過來。
+老師報 8 個網址，學生指出檔案；再反向。
 
 ---
 
-## 2. 打開真實檔案：Description 的 page.tsx
-
-路徑：`src/app/description/page.tsx`
-
-完整內容大致是：
+## 3. 精讀：`src/app/engineering/page.tsx`
 
 ```tsx
 import type { Metadata } from "next";
 import WikiPage from "@/components/WikiPage";
 
 export const metadata: Metadata = {
-  title: "Description",
+  title: "Engineering",
 };
 
 export default function Page() {
-  return <WikiPage slug="description" />;
+  return <WikiPage slug="engineering" />;
 }
 ```
 
-### 逐行白話
+### 逐行建造意義
 
-| 程式 | 白話 |
-|------|------|
-| `import ... from "..."` | 使用別的檔案提供的功能（類似 JS 模組） |
-| `Metadata` | 分頁標題等資訊的型別（TS，先略過細節） |
-| `export const metadata` | 告訴 Next：分頁 title 顯示什麼 |
-| `export default function Page()` | 這個網址要顯示的「主函式」 |
-| `return <WikiPage slug="description" />` | 回傳畫面：請 WikiPage 去載入 `description` 這份內容 |
-| `slug="description"` | 參數，對應 `content/pages/description.md` |
+1. **import**：組裝依賴（像把零件拿進工作台）  
+2. **metadata**：分頁資訊（SEO／標籤列）  
+3. **default export Page**：這個路由的入口元件  
+4. **WikiPage + slug**：把「結構」接到「內容系統」  
 
-### 和你學過的 JS 對照
+### 實驗（必做）
 
-```js
-function Page() {
-  return greet("description"); // 想像成呼叫別的函式
-}
+| 實驗 | 操作 | 觀察 | 還原 |
+|------|------|------|------|
+| A | slug 改錯字 | 錯誤型態 | 改回 |
+| B | 暫時拿掉 WikiPage 改 return `<h1>Test</h1>` | 路由仍在、內容系統被旁路 | 改回 |
+| C | 複製整夾 `engineering` 為 `hello-route` 並改 slug 對應新 md | 理解「複製路由」 | 可留作練習 |
+
+實驗 B 的啟發：**路由層可以獨立存在；內容層是我們選擇接上的。**
+
+---
+
+## 4. 精讀：`layout.tsx`
+
+職責：
+
+- 全站字型  
+- `<Navbar />`  
+- `{children}` ← 各 page 插入處  
+- `<Footer />`  
+
+畫圖：
+
+```text
+layout
+├── Navbar
+├── children  →  目前的 page.tsx
+└── Footer
 ```
 
-差別只是 return 的是 **JSX**（長得像 HTML 的語法），不是字串。
+問：為什麼改一頁不必重寫選單？
 
 ---
 
-## 3. 完整步驟：在 page.tsx 上做「只讀註解」練習
+## 5. 特殊頁：首頁與課程頁
 
-### 步驟 1
-複製一份說明用註解（可直接寫在檔案裡，練習後可還原）：
+| 路由 | 為何特殊 |
+|------|----------|
+| `/` | `page.tsx` 自己組首頁，不只 WikiPage |
+| `/class/*` | 教學系統，讀 `content/class` |
+| `/safety` | redirect 到 `safety-and-security` |
 
-```tsx
-import type { Metadata } from "next";
-// 引入共用元件 WikiPage
-import WikiPage from "@/components/WikiPage";
-
-// 分頁標題
-export const metadata: Metadata = {
-  title: "Description",
-};
-
-// 預設匯出：這個路由的畫面
-export default function Page() {
-  // slug 必須對應 content/pages/ 的檔名
-  return <WikiPage slug="description" />;
-}
-```
-
-### 步驟 2
-若你把 `slug="description"` 改成 `slug="does-not-exist"` 會怎樣？
-
-1. 存檔  
-2. 開 `/description`  
-3. 記錄錯誤現象  
-4. **立刻改回** `description`  
-
-目的：理解 slug 與 md 檔名綁定。
+打開 `src/app/safety/page.tsx` 看 redirect 寫法。
 
 ---
 
-## 4. layout.tsx：為什麼每個頁都有選單？
+## 6. 設計題（建造思維）
 
-打開 `src/app/layout.tsx`（重點觀念即可）：
+若要新增 `/outreach` 且用 Markdown 正文，需要哪些檔？請列出完整路徑清單（先不要做，下下堂做）。
 
-- 全站共用：字型、Navbar、Footer  
-- 各頁的 `page.tsx` 會被塞進 `{children}`  
+參考答案方向：
 
-所以你**不必**每個頁自己重寫選單。
-
----
-
-## 5. 內容檔 vs 路由檔（易混，必考）
-
-| 問題 | 答案 |
-|------|------|
-| 改英文段落？ | `content/pages/xxx.md` |
-| 改分頁瀏覽器標題 metadata？ | 該頁 `page.tsx` 的 `title` |
-| 讓 `/hello` 存在？ | 要有 `src/app/hello/page.tsx` |
-| 讓 `/hello` 有文章？ | 還要有 `content/pages/hello.md`（本站設計） |
-
-本站的 `WikiPage` 約定：**page 只負責路由，文章在 md。**
-
----
-
-## 6. 課堂練習卷
-
-1. `/safety-and-security` 對應哪個資料夾？  
-2. `WikiPage` 從哪個路徑 import？  
-3. 若只有 md 沒有 page.tsx，訪客開網址會如何？  
-4. 若只有 page 沒有 md，可能如何？  
-
-（討論後由老師公佈：1 `src/app/safety-and-security/` 2 `@/components/WikiPage` 3 404 4 執行期缺檔錯誤）
+- `content/pages/outreach.md`  
+- `src/app/outreach/page.tsx`  
+- `nav.ts` 一筆  
 
 ---
 
 ## 7. 完成檢查表
 
-- [ ] 配對 5 組網址/資料夾  
-- [ ] 能指著 page.tsx 說出 4 個關鍵部分  
+- [ ] 8 組網址配對全對  
 - [ ] 做過 slug 錯誤實驗並還原  
-- [ ] 能向同學說明 md 與 page 的分工  
+- [ ] 能畫 layout 包 page  
+- [ ] 能列出新增頁所需檔案  
 
-## 8. 回家
+## 8. 作業
 
-- 手繪 8 個重要網址地圖  
-- 讀 `/class/how-to-edit` 複習  
-- （選做）在某一頁 page.tsx 留下 3 行有意義的註解  
-
-## 9. 下一堂
-
-改 `nav.ts`：真正動手寫物件進陣列。
+註解一頁 `page.tsx` 的每一關鍵行；交檔或截圖。  
+下一堂：用資料驅動導覽——結構層的資料面。

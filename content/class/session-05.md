@@ -1,179 +1,99 @@
 ---
 session: 5
-title: "Git 協作與內容誠信"
-subtitle: "會 commit、會說明改了什麼、守住 wiki 誠信"
+title: "工程協作：Git 與團隊建造流程"
+subtitle: "版本控制是『做出網站』的一部分，不是附加題"
 duration: "3 小時"
 goals:
-  - "能使用 status / add / commit 基本流程"
-  - "寫得出清楚的 commit message"
-  - "理解造假數據與 Attribution 的後果"
+  - "掌握 pull/add/commit/push 基本流"
+  - "能寫清楚 commit、會看 diff"
+  - "建立內容誠信與 code review 習慣"
 ---
 
-## 1. 為什麼 wiki 一定要用版本控制？
+## 1. 為什麼「做出網站」一定要 Git？
 
-多人同時改網站時：
+網站是**多人、多檔、長時間**的產物。沒有版本控制會：
 
-- 需要知道**誰改了什麼**  
-- 改壞了要能**回到上一版**  
-- 競賽後期改動很頻繁，沒有紀錄會失控  
+- 覆蓋別人的工作  
+- 無法回溯壞掉的版本  
+- 無法審查「這次改動是否安全」  
 
-Git 就是做這件事的工具。
-
----
-
-## 2. 課前：確認你在專案裡
-
-```bash
-cd 你的/iGemSite
-git status
-```
+本堂把 Git 當**建造流程**，不是點點滑鼠備份。
 
 ---
 
-## 3. 完整步驟：從改檔到 commit（跟做）
-
-### 步驟 1：先拉最新（若使用共用遠端）
-
-```bash
-git pull
-```
-
-若老師尚未設定遠端協作，可略過，只在本機練習 commit。
-
-### 步驟 2：改一個內容檔
-
-例如改 `content/pages/notebook.md` 加一行日期筆記（英文）。
-
-### 步驟 3：查看狀態
-
-```bash
-git status
-```
-
-你應看到該檔在 **modified** 或 **untracked**。
-
-### 步驟 4：查看差異（建議養成習慣）
-
-```bash
-git diff
-```
-
-確認沒有意外刪光整檔。
-
-### 步驟 5：加入暫存區
-
-```bash
-git add content/pages/notebook.md
-```
-
-或（小心）：
-
-```bash
-git add content/
-```
-
-### 步驟 6：提交
-
-```bash
-git commit -m "content: add notebook note for lab day"
-```
-
-### 步驟 7：再查一次
-
-```bash
-git status
-```
-
-應顯示 working tree clean（或只剩別人的檔）。
-
-### 步驟 8：若有 push 權限
-
-```bash
-git push
-```
-
----
-
-## 4. Commit message 怎麼寫才好？
-
-### 推薦格式
+## 2. 完整工作流（每次改站都照做）
 
 ```text
-類型: 簡短英文或中英說明
+1. git pull          # 先同步
+2. 改檔（content 或 src）
+3. git status        # 看改了啥
+4. git diff          # 看細節
+5. git add <檔案>
+6. git commit -m "..."
+7. git push          # 若有遠端權限
 ```
 
-| 類型 | 何時用 |
-|------|--------|
-| `content:` | 改 md 文案 |
-| `fix:` | 修錯字、修壞掉的連結 |
-| `nav:` | 改選單 |
-| `docs:` | 改課堂文件 |
+### 實作：完成一輪真實提交
 
-### 好例子
+1. 改 `content/pages/notebook.md` 加英文三行今日筆記  
+2. 
 
-- `content: draft description problem section`  
-- `fix: correct cadmium spelling on home`  
-- `content: add HP listen notes (no private data)`  
+```bash
+git status
+git diff
+git add content/pages/notebook.md
+git commit -m "content: add notebook entry for session 5"
+git status
+```
 
-### 壞例子
+3. 截圖 log：
 
-- `update`  
-- `asdf`  
-- `最終版真的最終版2`  
-
----
-
-## 5. 衝突概念（課堂演示）
-
-當两个人改同一段：
-
-1. 後 push 的人可能被拒絕或出現 conflict  
-2. 打開檔案找 `<<<<<<<` 標記  
-3. 手動保留正確內容  
-4. 再 `add` + `commit`  
-
-**預防：** 一頁同一時間主要一人改；改前先 `pull`。
+```bash
+git log -3 --oneline
+```
 
 ---
 
-## 6. 內容誠信工作坊（必做討論）
+## 3. Commit message 規範（工程文化）
 
-請小組討論並寫下結論（交一張紙或共筆）：
+```text
+content: ...   # 文案
+fix: ...       # 修錯
+feat: ...      # 新功能／新頁
+nav: ...       # 選單
+style: ...     # 純樣式
+```
 
-1. 若把文獻的 90% 寫成「我們測到 90%」會有什麼問題？  
-2. Attributions 為什麼不能只寫「大家一起做的」？  
-3. 照片上站前要問過誰？  
-
-教師重點：
-
-- 官方首頁數字目前與線上版一致；**改數字 = 正式宣稱**，需指導教師同意。  
-- 寧可寫 *planned*，不要假完整。  
-
----
-
-## 7. 里程碑 A 繳交物
-
-每組繳交：
-
-1. `git log -3 --oneline` 截圖（或老師指定的紀錄方式）  
-2. 表格：  
-
-| 頁面 | 負責人 | 本週改動摘要 |
-|------|--------|--------------|
-|  |  |  |
+好：`feat: add practice-lab page route and nav link`  
+壞：`update`、`最終`
 
 ---
 
-## 8. 本堂完成檢查表
+## 4. Review 清單（提交前自問）
 
-- [ ] 每人至少 1 次有效 commit  
-- [ ] message 寫得清楚  
-- [ ] 誠信討論有結論  
-- [ ] 里程碑 A 表格交齊  
+- [ ] 我有沒有不小心刪到整段別人的內容？  
+- [ ] 有沒有假數據？  
+- [ ] 有沒有把 `node_modules` 加進去？（不該）  
+- [ ] diff 是否只包含我打算改的檔？  
 
 ---
 
-## 9. 回家
+## 5. 誠信工作坊
 
-讀老師提供的 iGEM Wiki 規則摘要（或 `docs/DEPLOY_TO_IGEM.md` 的合規清單大意）。  
-下一堂開始讀 `page.tsx` 與路由。
+討論並寫下：
+
+1. 首頁 90% 與「我們測到」有何不同？  
+2. 程式可以很完整，但內容造假為什麼仍算失敗？  
+3. Attribution 與 git 紀錄如何互相補足？  
+
+---
+
+## 6. 里程碑 A
+
+- 每人 ≥1 有效 commit  
+- 組員責任表（頁面↔人）  
+- 誠信討論結論  
+
+## 7. 下一堂
+
+進入系統層核心：路由與 page.tsx——**網址如何被做出來**。

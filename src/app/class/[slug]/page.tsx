@@ -82,7 +82,7 @@ export default async function ClassSessionPage({ params }: Props) {
 
         <article className="prose-igem sticker mt-8 max-w-none p-6 sm:p-10">
           <div className="mb-6 rounded-2xl border-2 border-[#f0c4ce] bg-[#fff8f6] px-4 py-3 text-sm font-bold text-muted">
-            這是完整教材：請依「步驟」在電腦實際操作，不要只看過。建議左開本頁、右開 wiki 或編輯器。
+            完整教學過程：請依步驟實際操作並完成檢查表。目標是理解網站怎麼做的，而不只是改文字。建議左開教材、右開編輯器與預覽。
           </div>
           <MarkdownBody source={body} />
         </article>

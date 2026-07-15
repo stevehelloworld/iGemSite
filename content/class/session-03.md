@@ -1,179 +1,156 @@
 ---
 session: 3
-title: "CSS 與視覺語言"
-subtitle: "做出學生 wiki 風格卡片，並用 class 當狀態"
+title: "樣式系統入門：CSS 到 className"
+subtitle: "視覺規則如何成為可重用系統，並接到本站 Tailwind"
 duration: "3 小時"
 goals:
-  - "能用 CSS 控制顏色、間距、圓角、陰影"
-  - "做出接近本站的卡片感"
-  - "用 JS 切換 class 改變外觀"
+  - "用 CSS 完成可維護的卡片風格"
+  - "理解 class 作為狀態與設計 token 的入口"
+  - "能對照本站 globals 與元件 class"
 ---
 
-## 1. 設計目標（對齊本站，不是亂漂亮）
+## 1. 建造網站 = 結構 + 外觀 + 行為
 
-Cadture 站的視覺重點：
+| 層 | 上堂／本堂 |
+|----|------------|
+| 結構 | HTML/DOM |
+| 外觀 | 本堂 CSS |
+| 行為 | JS（上堂已做一點） |
 
-- 暖白背景  
-- 玫瑰主色 `#C94C67`  
-- 大圓角卡片  
-- 柔和粉紅邊框  
-- 清楚可讀的深色字  
-
-本堂在**練習頁**還原這種感覺，之後才看得懂 Tailwind 一長串 class 在幹嘛。
+Cadture 的「品牌感」來自一致的外觀規則，不是單頁亂美化。
 
 ---
 
-## 2. 完整步驟：加上 `styles.css`
+## 2. 完整實作：為 session-02 加上設計系統雛形
 
-### 步驟 1：同資料夾建立 `styles.css`
+### 2.1 `styles.css`（請建立完整檔）
 
 ```css
-/* 全頁基礎 */
-* {
-  box-sizing: border-box;
+:root {
+  --bg: #fff8f6;
+  --ink: #4a2f34;
+  --primary: #c94c67;
+  --primary-dark: #b43852;
+  --border: #f0c4ce;
+  --card: #ffffff;
 }
+
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
-  background: #fff8f6;
-  color: #4a2f34;
-  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
 }
 
-header,
-main,
-footer {
+header, nav, main, footer {
   max-width: 960px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 1rem 1.25rem;
 }
 
-h1 {
-  color: #b43852;
-  margin-bottom: 0.25rem;
-}
+h1 { color: var(--primary-dark); }
 
-/* 卡片列 */
-.cards {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 700px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.card {
-  background: #ffffff;
-  border: 2px solid #f0c4ce;
+#problem-list, #solution-list {
+  background: var(--card);
+  border: 2px solid var(--border);
   border-radius: 1.25rem;
-  padding: 1rem 1.1rem;
+  padding: 1rem 1.25rem;
   box-shadow: 3px 3px 0 rgba(201, 76, 103, 0.08);
 }
 
-.card h3 {
-  margin-top: 0;
-  color: #b43852;
-}
-
-/* 按鈕 */
-#btn-demo {
-  margin-top: 1rem;
-  border: 2px solid #b43852;
-  background: #c94c67;
-  color: #fff;
+button {
+  border: 2px solid var(--primary-dark);
+  background: var(--primary);
+  color: white;
   font-weight: 700;
   border-radius: 999px;
-  padding: 0.6rem 1.1rem;
+  padding: 0.55rem 1rem;
+  margin-right: 0.5rem;
   cursor: pointer;
 }
 
-#btn-demo:hover {
-  background: #b43852;
-}
+button:hover { filter: brightness(0.95); }
 
-/* 狀態 class：被選中的卡 */
-.card.is-active {
-  border-color: #c94c67;
+.is-active {
+  outline: 3px solid var(--primary);
   background: #fff5f8;
-  transform: translateY(-2px);
 }
 ```
 
-### 步驟 2：HTML 已有
+### 2.2 在 HTML head 引入
 
 ```html
 <link rel="stylesheet" href="styles.css" />
 ```
 
-### 步驟 3：重新整理瀏覽器
+### 2.3 為什麼用 `:root` 變數？
 
-三卡應有白底圓角與粉邊。
+這就是**設計 token** 的雛形：改一處主色，全站跟著變。  
+本站 `globals.css` 的 `--primary` 等是同一概念的加強版。
 
 ---
 
-## 3. 完整步驟：JS 切換 class（狀態）
+## 3. class 狀態：連接「元件 props」思維
 
-更新 `main.js`：
+更新 `main.js` 片段：
 
 ```js
-const btn = document.querySelector("#btn-demo");
-const cards = document.querySelectorAll(".card");
-const cdCard = document.querySelector("#card-cd");
+const problemItems = document.querySelectorAll("#problem-list li");
 
-btn.addEventListener("click", function () {
-  // 先清掉所有 active
-  cards.forEach(function (card) {
-    card.classList.remove("is-active");
+problemItems.forEach((li) => {
+  li.style.cursor = "pointer";
+  li.addEventListener("click", () => {
+    problemItems.forEach((x) => x.classList.remove("is-active"));
+    li.classList.add("is-active");
   });
-  // 只點亮鎘那一張
-  cdCard.classList.add("is-active");
 });
 ```
 
-### 觀念
-
-| 寫法 | 意思 |
-|------|------|
-| `classList.add("is-active")` | 加上狀態 |
-| `classList.remove(...)` | 移除狀態 |
-| CSS `.card.is-active` | 「同時有兩個 class」時的樣子 |
-
-**連到本站：** React 元件裡常見 `className="sticker ..."`，本質也是「用 class 字串控制外觀」。
+點擊問題項目會高亮——這與之後「依狀態套不同 className」相同。
 
 ---
 
-## 4. 對照本站色票
+## 4. 對照本站（系統層預告）
 
-| 名稱 | 色碼 | 用途 |
+打開（只讀、圈關鍵字）：
+
+1. `src/app/globals.css` — 找 `--primary`  
+2. `src/app/page.tsx` — 找 `className=`  
+3. `src/components/PageHero.tsx` — 找 tone 相關 class  
+
+填表：
+
+| 本站寫法 | 我的理解 |
+|----------|----------|
+| `text-primary` |  |
+| `sticker` |  |
+| `md:grid-cols-3` |  |
+
+---
+
+## 5. 討論：樣式要寫在哪？
+
+| 做法 | 優點 | 缺點 |
 |------|------|------|
-| primary | `#C94C67` | 重點、按鈕 |
-| primary-dark | `#B43852` | 標題 |
-| background | `#FFF8F6` | 頁面底 |
-| border | `#F0C4CE` | 卡片邊 |
+| 一個巨大 css | 簡單 | 難協作 |
+| 每個元件一段 class | 本站 Tailwind 路線 | 要學 utility 名稱 |
+| CSS 變數 token | 品牌一致 | 要有規範 |
 
-詳細見 repo `DESIGN.md`（給設計參考，課堂記住主色即可）。
-
----
-
-## 5. 本堂完成檢查表
-
-- [ ] 有 `styles.css` 且成功套用  
-- [ ] 桌機寬度三卡橫排（或至少美觀）  
-- [ ] 按鈕可讓鎘卡進入 `is-active`  
-- [ ] 能向同學解釋 class 與狀態  
+Cadture 選擇：**token + utility class + 少數自訂 class（如 sticker）**。
 
 ---
 
-## 6. 回家作業
+## 6. 完成檢查表
 
-1. 截圖：練習頁 vs `localhost:3000` 首頁，寫 3 點相似、3 點相異。  
-2. （選做）打開 `src/components/Card.tsx`，圈出 5 個你看得懂的 class 關鍵字（如 `rounded`、`border`）。  
+- [ ] 練習頁有卡片／圓角／主色  
+- [ ] 使用 `:root` 變數  
+- [ ] class 切換可演示  
+- [ ] 對照過 globals 與 page.tsx  
 
-## 7. 下一堂
+## 7. 回家
 
-正式進入 Cadture：用 Markdown 改 `content/`，一存檔網站就更新。
+截圖練習頁；列出 5 個你在本站看過的 class 並猜測意思。  
+下堂：內容層 Markdown——但仍會連回「誰讀取這些檔」。

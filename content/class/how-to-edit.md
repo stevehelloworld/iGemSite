@@ -1,380 +1,162 @@
 ---
 session: 0
-title: "如何改網站文字（完整操作教材）"
-subtitle: "從零打開專案到改完一頁並檢查——課堂與回家都能照做"
-duration: "隨時查閱"
+title: "課程總覽：我們要學會『做出這個網站』"
+subtitle: "不只改文字——理解架構、動手組裝、最後能維護與擴充 Cadture Wiki"
+duration: "整學期地圖"
 goals:
-  - "能獨立改 content 裡的 Markdown 並在本機看到結果"
-  - "不弄壞 front matter，不誤改競賽路徑"
-  - "知道首頁與內頁分別改哪個檔"
+  - "說出本課程的三層能力：內容／結構／系統"
+  - "知道 14 次課如何從『會用』走到『會做』"
+  - "能指出本站關鍵資料夾與責任"
 ---
 
-## 這份教材給誰用？
+## 這門課要培養什麼人？
 
-給 **VIS iGEM 隊員**：你可能會一點點程式、學過一點 JS，但**不必會 React** 也能改 wiki 文字。
+**不是**只會打開 Markdown 改幾個字的「填空員」。  
+**是**能理解 Cadture Team Wiki **怎麼做出來**，並能：
 
-請記住分工：
+1. **說明**網站各層在做什麼（給同學／評審／指導教師聽得懂）  
+2. **維護**內容與結構（md、路由、選單）  
+3. **擴充**新頁、小改元件與樣式  
+4. **除錯**常見錯誤（路徑不一致、build 失敗、選單壞掉）  
+5. **對齊** iGEM 規則與官方內容基準  
 
-| 你想做的事 | 改哪裡 |
-|------------|--------|
-| 改英文說明、段落、小標 | `content/` 的 `.md` |
-| 改選單文字／新增選單項目 | `src/data/nav.ts`（第 7、11 次課） |
-| 新增一整個新網址 | md + page.tsx + nav（第 11 次課） |
-
-**日常 90% 的工作只有第一列。**
+你會一點 JS——這門課會把那一點接上真正的網站工程。
 
 ---
 
-## 一、事前準備（第一次請完整做完）
+## 三層能力模型（整學期都圍繞這個）
 
-### 1.1 需要的軟體
-
-1. **VS Code**（或學校指定的編輯器）  
-2. **Node.js**（LTS 即可）  
-3. 本專案資料夾（從 GitHub clone 或老師發的壓縮檔）
-
-### 1.2 檢查 Node 有沒有裝好
-
-1. 打開「終端機」（Terminal）。  
-2. 輸入下面指令後按 Enter：
-
-```bash
-node -v
+```text
+┌─────────────────────────────────────────┐
+│  系統層 System                            │
+│  Next.js 路由、元件、資料流、build、部署概念   │
+├─────────────────────────────────────────┤
+│  結構層 Structure                         │
+│  網址設計、nav、新增頁三步驟、首頁資料綁定     │
+├─────────────────────────────────────────┤
+│  內容層 Content                           │
+│  Markdown / 英文 wiki / 誠信 / 官方對齊      │
+└─────────────────────────────────────────┘
 ```
 
-3. 若出現類似 `v20.x.x` 或 `v22.x.x` 的版本號 → 成功。  
-4. 若顯示「找不到指令」→ 先安裝 Node.js，再重開終端機。
+| 層級 | 你要能回答 | 主要檔案 |
+|------|------------|----------|
+| 內容 | 這段英文從哪個檔來的？ | `content/**/*.md` |
+| 結構 | 為什麼這個網址存在？選單為何出現？ | `src/app/**`、`nav.ts` |
+| 系統 | 點開網頁時程式如何把 md 變成 HTML？ | `lib/content.ts`、`WikiPage`、`MarkdownBody`、`layout` |
 
-### 1.3 進入專案並安裝依賴（每個電腦第一次）
+**Markdown 編輯是內容層技能，只佔課程一部分。**  
+若只會改 md、說不出資料流，本課程尚未過關。
 
-在終端機輸入（路徑請改成你電腦上的真實位置）：
+---
 
-```bash
-cd 你的路徑/iGemSite
-npm install
+## 本站是怎麼「做出來」的？（先建立全貌）
+
+### 1. 用什麼技術？
+
+| 技術 | 在本站的角色 |
+|------|----------------|
+| **Next.js（App Router）** | 網站框架：資料夾 = 網址 |
+| **React** | 用「元件函式」描述畫面 |
+| **TypeScript** | JS + 型別提示（先會看） |
+| **Tailwind CSS** | 用 class 字串控制樣式 |
+| **Markdown + gray-matter** | 內容與設定寫在 md 檔 |
+| **react-markdown** | 把 md 字串渲染成 HTML |
+
+### 2. 一次請求大致發生什麼？
+
+以開啟 `/engineering` 為例：
+
+```text
+瀏覽器請求 /engineering
+    → Next 找到 src/app/engineering/page.tsx
+    → Page() 執行 <WikiPage slug="engineering" />
+    → getPageBySlug("engineering") 讀 content/pages/engineering.md
+    → 拆成 frontmatter（標題等）+ body（正文）
+    → PageHero 顯示標題區
+    → MarkdownBody 把 body 渲染成文章 HTML
+    → layout.tsx 外層已有 Navbar / Footer
+    → 完整頁面送回瀏覽器
 ```
 
-說明：
+你必須能**自己講一遍**這段（第 6–8 次會練到會講）。
 
-- `cd`：進入專案資料夾  
-- `npm install`：下載網站需要的套件（第一次較久，請等它跑完）
+### 3. 首頁比較特別
 
-成功時最後通常不會有大片紅色錯誤。若失敗，把**完整紅字**截圖給老師。
+首頁不是只用一篇長 md 灌滿：
 
-### 1.4 啟動本機預覽
+- **資料**：`content/home.md` 的 YAML（problems、solution、highlights…）  
+- **排版**：`src/app/page.tsx` 用 `.map` 把陣列畫成區塊  
 
-仍在專案根目錄：
+順序對齊官方：https://2026.igem.wiki/vis/  
+Problem → Solution → Highlights → Sustainable → HP → Engineering → Team  
+
+---
+
+## 14 次完整學習路徑（從用到做）
+
+| 階段 | 次 | 你學會 |
+|------|----|--------|
+| **奠基** | 1 | 跑起專案、對照官方、資料夾地圖、JS 物件暖身 |
+| | 2 | HTML／DOM：畫面是樹；為「元件描述樹」打底 |
+| | 3 | CSS／class 狀態；為 Tailwind className 打底 |
+| **內容** | 4 | Markdown 管線實作（內容層） |
+| | 5 | Git 協作 + 誠信（工程文化） |
+| **系統** | 6 | 路由與 page.tsx：網址如何誕生 |
+| | 7 | nav.ts：用資料驅動選單 |
+| | 8 | 元件與完整資料流（系統層核心） |
+| | 9 | 首頁：資料檔 + 渲染程式如何分工 |
+| **打造** | 10 | 設計系統與 Tailwind（表現層） |
+| | 11 | **自己組一頁**：md + 路由 + nav（驗收） |
+| | 12 | 媒體、寫作、好讀（產品品質） |
+| | 13 | build、檢查、iGEM／上線概念 |
+| | 14 | 發表：證明你理解「網站怎麼做的」 |
+
+第 14 次發表**必須**包含：資料流口述 + 示範改內容 + 示範結構／系統其中一項。
+
+---
+
+## 過關標準（學期結束）
+
+你應能獨立完成：
+
+1. 啟動專案並解釋三個資料夾用途  
+2. 修改一頁 md 並驗證  
+3. 新增一頁（三步驟）並解釋為何需要三步  
+4. 在 `page.tsx` / `nav.ts` / `WikiPage` 指認關鍵程式  
+5. 口述 `/engineering` 從請求到畫面的流程  
+6. 說明首頁 YAML 與 `.map` 的關係  
+7. 跑 `npm run build` 並處理或回報錯誤  
+8. 遵守內容誠信與官方對齊  
+
+**只會改 md 而未達 4–6 → 未完整通過本課程。**
+
+---
+
+## 日常速查：改文字（內容層）
+
+仍很重要，但是「會做網站」的一環：
+
+| 網址 | 檔案 |
+|------|------|
+| `/` | `content/home.md` |
+| `/description` | `content/pages/description.md` |
+| 其他內頁 | `content/pages/<同名>.md` |
 
 ```bash
 npm run dev
+# 改檔 → 存檔 → 重新整理瀏覽器
 ```
 
-看到類似：
-
-```text
-✓ Ready in ...
-Local: http://localhost:3000
-```
-
-然後：
-
-1. 打開瀏覽器（Chrome / Edge / Safari 皆可）。  
-2. 網址列輸入：`http://localhost:3000`  
-3. 應看到 **Cadture** 首頁。
-
-**注意：**
-
-- 終端機視窗**不要關**，關掉就等於關掉預覽伺服器。  
-- 若提示 port 被占用，告訴老師，或用：
-
-```bash
-npm run dev -- -p 3001
-```
-
-然後開 `http://localhost:3001`。
+詳見各次課；需要逐步截圖級說明時以第 4 次教材為主。
 
 ---
 
-## 二、網站內容存在哪裡？
+## 給上課的你
 
-### 2.1 兩個世界
+1. 左開 `/class/session-XX` 教材  
+2. 右開編輯器 + 瀏覽器  
+3. **照步驟做**，不要只滑過  
+4. 每堂結束勾檢查表；說不出「為什麼」就再讀系統段  
 
-```text
-content/          ← 給「寫文字」的人（你平常在這裡）
-src/app/          ← 給「管網址／版面」的人
-src/components/   ← 畫面積木（進階）
-src/data/nav.ts   ← 上方選單資料
-```
-
-### 2.2 內頁對照表（請收藏）
-
-| 瀏覽器網址 | 要改的檔案 |
-|------------|------------|
-| `/` 首頁 | `content/home.md` |
-| `/description` | `content/pages/description.md` |
-| `/engineering` | `content/pages/engineering.md` |
-| `/results` | `content/pages/results.md` |
-| `/contribution` | `content/pages/contribution.md` |
-| `/experiments` | `content/pages/experiments.md` |
-| `/notebook` | `content/pages/notebook.md` |
-| `/measurement` | `content/pages/measurement.md` |
-| `/model` | `content/pages/model.md` |
-| `/software` | `content/pages/software.md` |
-| `/human-practices` | `content/pages/human-practices.md` |
-| `/team` | `content/pages/team.md` |
-| `/attributions` | `content/pages/attributions.md` |
-| `/safety-and-security` | `content/pages/safety-and-security.md` |
-
-規則：**網址最後一段 ≈ 檔名**（例如 `/engineering` → `engineering.md`）。
-
----
-
-## 三、完整步驟：改一個內頁（以 Description 為例）
-
-請照順序做一次，不要跳步。
-
-### 步驟 1：確認預覽伺服器有開
-
-終端機應正在跑 `npm run dev`。瀏覽器能開首頁。
-
-### 步驟 2：在 VS Code 打開檔案
-
-左側檔案樹：
-
-```text
-content
-  └── pages
-        └── description.md
-```
-
-雙擊 `description.md`。
-
-### 步驟 3：認識檔案結構
-
-檔案通常長這樣：
-
-```markdown
----
-title: Description
-eyebrow: Project
-subtitle: Describe how and why you chose your iGEM project.
-badge: Bronze · Wiki
-tone: rose
-toc:
-  - id: what-should-this-page-contain
-    label: What to include
----
-
-#### Bronze Medal Criterion #1: Wiki
-
-Describe how and why you chose your iGEM project.
-...
-```
-
-可分成兩部分：
-
-| 部分 | 位置 | 作用 |
-|------|------|------|
-| **Front matter** | 最上面兩組 `---` 之間 | 頁面標題、副標、側邊目錄設定 |
-| **正文** | 第二個 `---` 下面 | 訪客真正讀的英文內容 |
-
-### 步驟 4：改一個「看得到」的地方
-
-建議第一次只改 **subtitle**（安全、容易驗證）：
-
-把：
-
-```yaml
-subtitle: Describe how and why you chose your iGEM project.
-```
-
-暫時改成（練習用，之後可改回正式英文）：
-
-```yaml
-subtitle: Why we study Pb and Cd pollution.
-```
-
-### 步驟 5：存檔
-
-- macOS：`Command + S`  
-- Windows：`Ctrl + S`  
-
-檔名旁不應再有白點（表示未存檔）。
-
-### 步驟 6：重新整理瀏覽器
-
-1. 打開 `http://localhost:3000/description`  
-2. 按重新整理（或 `Command+R` / `Ctrl+R`）  
-3. 看大標題下方的副標是否變成你寫的句子  
-
-### 步驟 7：改正文段落
-
-在第二個 `---` 下方，找到：
-
-```markdown
-## What Should this Page Contain?
-```
-
-在該標題**下面**新增你自己的段落（英文），例如：
-
-```markdown
-## What Should this Page Contain?
-
-Our team is developing Cadture to address lead and cadmium in industrial wastewater.
-
-- Explain the problem your project addresses and its potential impact.
-- Provide a clear and concise summary of your project’s goals and objectives.
-```
-
-存檔 → 重新整理 → 確認網頁出現新句子。
-
-### 步驟 8：若沒變化，依序排查
-
-| 現象 | 可能原因 | 怎麼做 |
-|------|----------|--------|
-| 完全沒變 | 沒存檔 | 再存一次 |
-| 完全沒變 | 看錯網址 | 確認是 `/description` 不是首頁 |
-| 完全沒變 | dev 沒開 | 終端機再跑 `npm run dev` |
-| 整頁壞掉／錯誤畫面 | front matter 的 `---` 被刪或少一側 | 對照其他頁把 `---` 補回 |
-| YAML 格式錯 | 縮排、冒號、引號不對 | 看終端機紅字；或還原後重改 |
-
----
-
-## 四、Markdown 完整小抄（本站會用到的）
-
-### 4.1 標題
-
-```markdown
-## 二級標題（正文最常用）
-### 三級標題
-```
-
-注意：`## My Section Title` 會自動產生錨點 id（小寫、空白變 `-`），供左側「On this page」使用。
-
-### 4.2 段落與強調
-
-```markdown
-這是一段落。
-
-**粗體** 很適合關鍵詞。
-*斜體* 偶爾使用。
-```
-
-### 4.3 清單
-
-```markdown
-- 無順序項目 A
-- 無順序項目 B
-
-1. 第一步
-2. 第二步
-```
-
-### 4.4 連結
-
-```markdown
-[iGEM VIS wiki](https://2026.igem.wiki/vis/)
-```
-
-### 4.5 表格
-
-```markdown
-| Item | Note |
-|------|------|
-| Pb | Lead |
-| Cd | Cadmium |
-```
-
-### 4.6 引用／提示框感
-
-```markdown
-> Important: Do not invent experimental numbers.
-```
-
-### 4.7 圖片（進階）
-
-練習階段可把圖放在 `public/`，例如 `public/images/demo.png`，然後：
-
-```markdown
-![Short description of the image](/images/demo.png)
-```
-
-`![...]` 裡的文字是 **alt**（無障礙與圖片說明），請用英文簡述圖是什麼。
-
----
-
-## 五、改首頁（`content/home.md`）
-
-### 5.1 首頁不是一般段落為主
-
-首頁資料主要在 **YAML 清單**裡，順序與官方站一致：
-
-1. **The Problem** — `problems` + `locations`  
-2. **Our Solution** — `solution`  
-3. **Project Highlights** — `highlights`  
-4. **Towards a Sustainable Future** — `sustainable`  
-5. **Human Practices** — `humanPractices`  
-6. **Engineering Cycle** — `engineering`  
-7. **Meet Our Team** — `teamNote`  
-
-### 5.2 改一筆 solution 的完整例子
-
-找到：
-
-```yaml
-solution:
-  - title: Detection
-    body: Identify Pb²⁺ and Cd²⁺ contamination in wastewater.
-```
-
-可改 `body` 的英文（需隊上同意）。**不要**隨便改 `highlights` 的 90%、75% 等數字，除非實驗組／指導教師確認——這些數字與目前官方首頁一致，屬正式宣稱。
-
-### 5.3 YAML 注意事項
-
-- `title:` / `body:` 前面空格數量要對齊（同一層清單一致）。  
-- 文字裡若有 `:` 可能害 YAML 壞掉，整句用引號包起來較安全：  
-
-```yaml
-body: "Detect: identify Pb and Cd in wastewater."
-```
-
-- 多行文字可用 `>`（專案裡 `sustainable`、`teamNote` 已有範例）。
-
----
-
-## 六、內容誠信（比技術更重要）
-
-1. **英文上站**（本區課堂說明可用中文，wiki 正文用英文）。  
-2. **沒做過的實驗不要寫成已完成。**  
-3. 可用：`We plan to…` / `Literature shows…` / `To be measured.`  
-4. 照片需本人同意；不要放電話、住址等個資。  
-5. 內容基準：https://2026.igem.wiki/vis/  
-
----
-
-## 七、自測清單（每次改完勾一次）
-
-- [ ] 正確檔案（網址與檔名對得上）  
-- [ ] 已存檔  
-- [ ] 瀏覽器有重新整理  
-- [ ] 英文通順或已請同學看過  
-- [ ] 沒有未確認的數據  
-- [ ] front matter 的 `---` 還在  
-
----
-
-## 八、還要新增一整頁時
-
-請上 **第 11 次課** 教材：`/class/session-11`  
-三步驟：`md` + `page.tsx` + `nav.ts`。
-
----
-
-## 九、求助時請附上這些資訊
-
-1. 你改的**完整檔案路徑**  
-2. 你開的**網址**  
-3. 終端機**紅字**截圖（若有）  
-4. 「預期看到什麼／實際看到什麼」  
-
-這樣老師或同學才能快速幫你。
+老師備課細節：`docs/curriculum/LESSON_PLAN_14.md`

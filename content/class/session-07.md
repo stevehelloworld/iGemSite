@@ -1,171 +1,97 @@
 ---
 session: 7
-title: "選單與 nav.ts（物件陣列實作）"
-subtitle: "讀懂選單資料結構，安全地新增或修改一筆"
+title: "結構層：資料驅動的導覽"
+subtitle: "nav.ts 如何把物件陣列變成全站選單"
 duration: "3 小時"
 goals:
-  - "能讀懂 NavItem 與 children 陣列"
-  - "能新增或修改一筆選單並在畫面驗證"
-  - "知道哪些路徑名不能亂改"
+  - "能畫出 Navbar 讀取 navItems 的關係"
+  - "能新增／修改選單物件"
+  - "理解『UI 由資料生成』的建造模式"
 ---
 
-## 1. 檔案位置
+## 1. 建造模式：資料驅動 UI
+
+壞做法：在 Navbar 裡手寫 20 個 `<a>`。  
+好做法：資料放 `nav.ts`，元件負責渲染。
 
 ```text
-src/data/nav.ts
+navItems (資料)
+    → Navbar.tsx (.map 渲染)
+    → 使用者看到選單
 ```
 
-這個檔**不是 Markdown**，是 TypeScript，但內容幾乎就是 JS 物件。
+這與首頁 `home.md` 陣列 + `.map` **是同一建造思想**。
 
 ---
 
-## 2. 資料結構拆解
+## 2. 精讀 `src/data/nav.ts`
 
-檔案開頭有型別（先會看即可）：
+1. 型別 `NavItem`  
+2. 匯出 `navItems` 陣列  
+3. 有 `children` 的項目 = 下拉  
 
-```ts
-export type NavItem = {
-  label: string;
-  href?: string;
-  children?: { label: string; href: string; desc?: string }[];
-};
-```
+### 練習：標註
 
-白話：
+在檔案中用註解標出：
 
-- `label`：選單上顯示的字  
-- `href`：點下去去哪（可選；有子選單時父層可能沒有 href）  
-- `children`：子選單，是**陣列**，裡面每個元素又是物件  
-
-範例（概念）：
-
-```ts
-{
-  label: "Project",
-  children: [
-    { label: "Description", href: "/description", desc: "Background & problem" },
-    { label: "Engineering", href: "/engineering", desc: "Design → Build → Test → Learn" },
-  ],
-}
-```
-
-這和你 JS 學的「陣列包物件」完全一樣。
+- 哪個是 Project 區  
+- 哪個物件對應 Engineering  
+- Course 連到哪  
 
 ---
 
-## 3. 完整步驟：修改既有 desc（必做）
+## 3. 精讀 `src/components/Navbar.tsx`（重點段落）
 
-### 步驟 1
-確認 `npm run dev` 執行中。
+搜尋 `navItems`：
 
-### 步驟 2
-打開 `src/data/nav.ts`，找到你負責頁的那一行，例如：
+- import 從 `@/data/nav`  
+- `navItems.map` 產生選單  
+- 有 children 時渲染子連結  
 
-```ts
-{ label: "Description", href: "/description", desc: "Background & problem" },
-```
+你不需重寫 Navbar，但要能說：
 
-### 步驟 3
-只改 `desc` 字串（英文）：
-
-```ts
-{ label: "Description", href: "/description", desc: "Why Pb and Cd matter" },
-```
-
-### 步驟 4
-存檔 → 重新整理網站 → 把滑鼠移到 **Project** 選單，看描述是否更新。
-
-### 步驟 5
-`git diff src/data/nav.ts` 確認只改到預期那一行。
+> 「我改 nav 資料，Navbar 自動重畫選單。」
 
 ---
 
-## 4. 完整步驟：新增一筆子選單（必做進階）
+## 4. 完整實作 A：改 desc
 
-假設要在 Project 下加「Results」旁再強調（若已存在就改其他區，例如 Team 下加 Course 相關——**Course 已在主選單**，可改加到 Team 的 desc 練習）。
+改一筆 `desc` → 存檔 → hover 選單驗證 → `git diff`。
 
-以在 **Team** 的 children 末尾加一筆連到 `/class` 為例：
+## 5. 完整實作 B：新增一筆
 
-### 步驟 1
-找到：
-
-```ts
-{
-  label: "Team",
-  children: [
-    { label: "Members", href: "/team", desc: "Meet the team" },
-    { label: "Attributions", href: "/attributions", desc: "Official form + notes" },
-  ],
-},
-```
-
-### 步驟 2
-在 Attributions 那一物件後面加**逗號**，再貼新物件：
+在合理分組下新增：
 
 ```ts
-{
-  label: "Team",
-  children: [
-    { label: "Members", href: "/team", desc: "Meet the team" },
-    { label: "Attributions", href: "/attributions", desc: "Official form + notes" },
-    { label: "Course materials", href: "/class", desc: "Class sessions and how to edit" },
-  ],
-},
+{ label: "Course", href: "/class", desc: "Build-the-wiki curriculum" },
 ```
 
-### 步驟 3
-存檔。若終端機或畫面報錯，多半是：
+（若主選單已有 Course，改加到 Team children 或更新既有 desc。）
 
-- 上一行少逗號  
-- 多一個逗號在不該放的位置  
-- 括號 `{}` `[]` 沒閉合  
+## 6. 完整實作 C：故意弄錯再修
 
-### 步驟 4
-重新整理，打開 Team 選單，點 **Course materials** 應到 `/class`。
-
-### 步驟 5（可選還原）
-若只是練習，可在 commit 前還原；若老師希望保留入口，可留下。
+1. 少逗號 → 讀錯誤訊息  
+2. href 少 `/` → 觀察行為  
+3. 全部修好  
 
 ---
 
-## 5. 絕對不要做的事
+## 7. Standard Paths 與結構穩定
 
-### 5.1 亂改 href 路徑名
+競賽要求路徑穩定。結構層的「自由」有界線：
 
-競賽 Standard Pages 例如：
-
-- `/engineering`  
-- `/human-practices`  
-- `/contribution`  
-- `/attributions`  
-
-可以改 **label 顯示文字**，但不要把 `href: "/engineering"` 改成 `"/dbtl"`，除非全站所有連結與檔案一起改且指導教師同意。
-
-### 5.2 刪光整個 nav 陣列
-
-選單會消失。改壞請 `git checkout -- src/data/nav.ts`（問老師再執行）。
+- 可改顯示文字 label  
+- 不可隨便改競賽關鍵 href  
 
 ---
 
-## 6. 除錯清單
+## 8. 完成檢查表
 
-| 症狀 | 原因 |
-|------|------|
-| 編譯失敗 | 語法錯（逗號、括號） |
-| 選單沒出現新項目 | 加錯父層 children |
-| 點了 404 | href 打錯或該頁不存在 |
-| 樣式怪 | 通常不是 nav 問題 |
+- [ ] 能畫 資料 → Navbar → DOM  
+- [ ] 完成修改與新增  
+- [ ] 完成除錯練習  
+- [ ] 說得出資料驅動的好處  
 
----
+## 9. 下一堂
 
-## 7. 完成檢查表
-
-- [ ] 成功修改至少一筆 `desc`  
-- [ ] 成功新增一筆 children（或老師指定的同等練習）  
-- [ ] 能解釋 label / href / desc  
-- [ ] 知道 4 個不能亂改的路徑  
-
-## 8. 回家（個人作業 #2）
-
-為你負責頁寫一句**給訪客看的英文 desc**（適合放在 nav）。  
-下一堂：元件與資料流。
+系統層核心：元件與 Markdown 管線——**網站引擎如何運轉**。

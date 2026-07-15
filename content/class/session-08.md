@@ -1,172 +1,115 @@
 ---
 session: 8
-title: "元件與 Markdown 管線（核心）"
-subtitle: "從點開 md 到畫面顯示——完整追蹤一次"
+title: "系統層：元件與內容引擎"
+subtitle: "完整拆解 WikiPage 管線——這就是網站『怎麼做的』核心"
 duration: "3 小時"
 goals:
-  - "能完整口述 md 到畫面的資料流"
-  - "能指出 slug 與 props 的角色"
-  - "能在 md 使用表格與連結並看到渲染結果"
+  - "不看稿口述完整請求處理流程"
+  - "能說明 props、元件組合、md 渲染各自職責"
+  - "能追 code 指出三個關鍵檔的關鍵函式"
 ---
 
-## 1. 今天要建立的心智模型
+## 1. 本堂是整學期理論高點
 
-把下面流程抄在筆記本（發表會會用到）：
+若第 14 次只能講一件技術：**講這條管線**。
+
+---
+
+## 2. 端到端流程（請抄寫並編號）
+
+以 `/human-practices` 為例：
+
+1. 使用者請求路徑  
+2. Next 匹配 `src/app/human-practices/page.tsx`  
+3. 執行 `Page` 元件  
+4. 渲染 `<WikiPage slug="human-practices" />`  
+5. `getPageBySlug` 讀 `content/pages/human-practices.md`  
+6. `matter` 分解 frontmatter / body  
+7. `PageHero` 使用 title/subtitle/tone…  
+8. `ContentLayout` 處理 toc 與版面  
+9. `MarkdownBody` 將 body Markdown 轉 HTML  
+10. 外層 `layout` 已提供 Navbar/Footer  
+11. 完整 HTML/CSS/JS 交付瀏覽器  
+
+### 過關口試題
+
+- 若第 5 步檔案不存在？  
+- 若第 4 步 slug 打錯但檔案在？  
+- 若沒有 layout？  
+
+---
+
+## 3. 分站精讀（每站 15 分 + 互教）
+
+### 站 A：`src/lib/content.ts`
+
+關注重點：
+
+- 路徑如何拼出 `content/pages/${slug}.md`  
+- `matter` 的輸出  
+- 錯誤時 `throw new Error`  
+
+### 站 B：`WikiPage.tsx`
+
+- props 解構  
+- 如何把資料分給子元件  
+
+### 站 C：`MarkdownBody.tsx`
+
+- `ReactMarkdown`  
+- 自訂 `h2` 產生 id（給 toc）  
+
+### 站 D：`PageHero.tsx` / `ContentLayout.tsx`
+
+- 展示型元件：主要負責排版  
+
+每站產出：「這個檔案若刪除，網站會怎樣？」一句話。
+
+---
+
+## 4. 實作：在管線上做可觀察實驗
+
+### 實驗 1：只改 body
+
+md 加一段 `## Pipeline check` → 畫面應出現。  
+**結論：** 渲染器有吃到 body。
+
+### 實驗 2：只改 frontmatter title
+
+大標應變。  
+**結論：** PageHero 有吃到 frontmatter。
+
+### 實驗 3：暫時改 MarkdownBody 讓所有連結顯示底線更粗（或還原前的小改）
+
+**結論：** 表現層集中在元件，可一處影響多頁。
+
+改完實驗 3 請還原或另開 branch，避免污染正式樣式。
+
+---
+
+## 5. 元件組合圖（必畫）
 
 ```text
-你編輯 content/pages/engineering.md
-        ↓
-getPageBySlug("engineering")     // src/lib/content.ts
-        ↓
-得到物件 { frontmatter, body }
-        ↓
-WikiPage 把 frontmatter 丟給 PageHero
-        把 body 丟給 MarkdownBody
-        ↓
-MarkdownBody 用函式庫把 Markdown 字串變成 HTML
-        ↓
-瀏覽器顯示 /engineering
+layout
+  Navbar (navItems)
+  Page
+    WikiPage(slug)
+      PageHero(frontmatter)
+      ContentLayout(toc)
+        MarkdownBody(body)
+  Footer
 ```
-
-路由檔 `src/app/engineering/page.tsx` 只做一件事：  
-**告訴系統「這個網址用 slug=engineering 的 WikiPage」。**
 
 ---
 
-## 2. 完整導讀 A：`src/lib/content.ts`
+## 6. 完成檢查表
 
-打開檔案，找到 `getPageBySlug`。
+- [ ] 11 步流程能口述  
+- [ ] 四站互教完成  
+- [ ] 三個實驗有紀錄  
+- [ ] 元件組合圖完成  
 
-觀念對照：
+## 7. 作業
 
-| 程式概念 | 你的理解 |
-|----------|----------|
-| 函式參數 `slug` | 要讀哪一頁 |
-| 讀檔 `fs.readFileSync` | 把 md 檔讀成字串 |
-| `matter(raw)` | 拆成「上方 YAML」和「下方正文」 |
-| `return { frontmatter, body }` | 回傳一個物件給別人用 |
-
-你不需要會寫 Node.js，但要能說：  
-**「這是一個輸入檔名、輸出標題與正文的函式。」**
-
----
-
-## 3. 完整導讀 B：`src/components/WikiPage.tsx`
-
-重點結構：
-
-```tsx
-export default function WikiPage({ slug }: { slug: string }) {
-  const { frontmatter, body } = getPageBySlug(slug);
-  return (
-    <>
-      <PageHero title={...} subtitle={...} />
-      <ContentLayout toc={...}>
-        <MarkdownBody source={body} />
-      </ContentLayout>
-    </>
-  );
-}
-```
-
-### Props 是什麼？
-
-```tsx
-<WikiPage slug="engineering" />
-```
-
-這裡的 `slug="engineering"` 就是傳入參數。  
-等同 JS：
-
-```js
-WikiPage({ slug: "engineering" });
-```
-
-### 元件分工
-
-| 元件 | 負責 |
-|------|------|
-| `PageHero` | 頂部大標、副標、色調 |
-| `ContentLayout` | 文章區 + 側邊 toc |
-| `MarkdownBody` | 把 md 正文渲染出來 |
-
----
-
-## 4. 完整導讀 C：`MarkdownBody.tsx`
-
-它使用 `react-markdown`：輸入字串，輸出標題、清單、表格等。
-
-你在 md 寫：
-
-```markdown
-## Hello
-
-| A | B |
-|---|---|
-| 1 | 2 |
-```
-
-它就負責變成真正的 HTML 標題與表格。
-
----
-
-## 5. 完整實作：在自己的頁加表格與連結
-
-### 步驟 1
-打開你的 `content/pages/某頁.md`。
-
-### 步驟 2
-在正文加入：
-
-```markdown
-## Quick reference
-
-| Topic | Link |
-|-------|------|
-| Official wiki | [2026.igem.wiki/vis](https://2026.igem.wiki/vis/) |
-| How to edit | [Course guide](/class/how-to-edit) |
-```
-
-### 步驟 3
-若有 toc，加入：
-
-```yaml
-  - id: quick-reference
-    label: Quick reference
-```
-
-### 步驟 4
-存檔，開對應網址，確認表格與連結可點。
-
----
-
-## 6. 分站閱讀任務（小組 25 分鐘）
-
-每人負責一站，然後輪流教別人 2 分鐘：
-
-| 站 | 檔案 | 要講清楚的一句話 |
-|----|------|------------------|
-| 1 | `content.ts` | 輸入 slug，輸出 frontmatter+body |
-| 2 | `WikiPage.tsx` | 組版面 |
-| 3 | `page.tsx` | 綁網址 |
-| 4 | 任一個 `.md` | 人寫的內容 |
-
----
-
-## 7. 進階挑戰（選做）
-
-暫時把 `PageHero` 的某個 class 或預設字改掉看效果，**改完用 git 還原**，並寫下你觀察到的。
-
----
-
-## 8. 完成檢查表
-
-- [ ] 能不看稿口述資料流（允許看自己筆記）  
-- [ ] 指出 slug 在 page.tsx 與 getPageBySlug 各出現一次的意義  
-- [ ] md 表格渲染成功  
-- [ ] 小組互教完成  
-
-## 9. 回家
-
-重畫資料流，標上**完整檔案路徑**。  
-下一堂：首頁 YAML 與官方順序、對照 `.map`。
+錄 1 分鐘語音或書面：說明 `/engineering` 如何出現在螢幕上。  
+下一堂：首頁——另一種「資料→畫面」組裝。
