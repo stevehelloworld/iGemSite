@@ -1,115 +1,123 @@
 ---
 session: 8
 title: "系統層：元件與內容引擎"
-subtitle: "完整拆解 WikiPage 管線——這就是網站『怎麼做的』核心"
+subtitle: "整學期理論高點——管線精讀與可觀察實驗（放慢版）"
 duration: "3 小時"
 goals:
-  - "不看稿口述完整請求處理流程"
-  - "能說明 props、元件組合、md 渲染各自職責"
-  - "能追 code 指出三個關鍵檔的關鍵函式"
+  - "不看稿口述 11 步請求流程"
+  - "四站精讀並互教"
+  - "完成三個可觀察實驗並記錄結論"
 ---
 
-## 1. 本堂是整學期理論高點
+## 給老師：本堂寧可少講後面
 
-若第 14 次只能講一件技術：**講這條管線**。
+這是「網站怎麼做的」核心。  
+建議：互教 + 實驗佔 **60% 時間**，講解佔 40%。  
+第 14 次會回來考這堂。
 
----
+## 0. 分鐘表
 
-## 2. 端到端流程（請抄寫並編號）
+| 分鐘 | 活動 |
+|------|------|
+| 0–20 | 11 步流程板書（學生抄） |
+| 20–30 | 抽問前 5 步 |
+| 30–90 | 四站精讀（輪站） |
+| 90–100 | 休息 |
+| 100–150 | 三實驗 |
+| 150–170 | 組合圖 + 口試 |
+| 170–180 | 作業 |
 
-以 `/human-practices` 為例：
+## 1. 11 步流程（抄寫，兩次）
 
-1. 使用者請求路徑  
+以 `/human-practices`：
+
+1. 瀏覽器請求路徑  
 2. Next 匹配 `src/app/human-practices/page.tsx`  
-3. 執行 `Page` 元件  
-4. 渲染 `<WikiPage slug="human-practices" />`  
-5. `getPageBySlug` 讀 `content/pages/human-practices.md`  
-6. `matter` 分解 frontmatter / body  
-7. `PageHero` 使用 title/subtitle/tone…  
-8. `ContentLayout` 處理 toc 與版面  
-9. `MarkdownBody` 將 body Markdown 轉 HTML  
-10. 外層 `layout` 已提供 Navbar/Footer  
-11. 完整 HTML/CSS/JS 交付瀏覽器  
+3. 執行 `Page`  
+4. 渲染 `WikiPage` 並傳入 slug  
+5. `getPageBySlug` 讀 md 檔  
+6. gray-matter 拆 frontmatter / body  
+7. PageHero 用 frontmatter  
+8. ContentLayout 處理版面與 toc  
+9. MarkdownBody 渲染 body  
+10. layout 提供 Navbar/Footer  
+11. 完整頁交付  
 
-### 過關口試題
+### 口訣
 
-- 若第 5 步檔案不存在？  
-- 若第 4 步 slug 打錯但檔案在？  
-- 若沒有 layout？  
+**路找 page → page 叫 WikiPage → WikiPage 讀 md → 拆兩包 → 英雄區+正文 → 外殼選單**
 
----
+### 抽問題庫
 
-## 3. 分站精讀（每站 15 分 + 互教）
+- 第 5 步檔案不在？  
+- slug 錯但 page 在？  
+- 沒有 MarkdownBody？  
+- 沒有 layout？  
 
-### 站 A：`src/lib/content.ts`
+## 2. 四站精讀（每站 12–15 分）
 
-關注重點：
+每站任務卡：
 
-- 路徑如何拼出 `content/pages/${slug}.md`  
-- `matter` 的輸出  
-- 錯誤時 `throw new Error`  
+### 站 A content.ts
 
-### 站 B：`WikiPage.tsx`
+- 找出拼路徑那一行  
+- 找出 throw Error  
+- 一句話：本檔職責  
 
-- props 解構  
-- 如何把資料分給子元件  
+### 站 B WikiPage.tsx
 
-### 站 C：`MarkdownBody.tsx`
+- props 是什麼  
+- frontmatter 給誰  
+- body 給誰  
 
-- `ReactMarkdown`  
-- 自訂 `h2` 產生 id（給 toc）  
+### 站 C MarkdownBody.tsx
 
-### 站 D：`PageHero.tsx` / `ContentLayout.tsx`
+- 哪個套件在轉 md  
+- h2 為何要自訂  
 
-- 展示型元件：主要負責排版  
+### 站 D PageHero / ContentLayout
 
-每站產出：「這個檔案若刪除，網站會怎樣？」一句話。
+- 有狀態嗎還是純展示  
+- toc 從哪來  
 
----
+每站結束：換人當小老師講 90 秒。
 
-## 4. 實作：在管線上做可觀察實驗
+## 3. 三個實驗（慢做）
 
-### 實驗 1：只改 body
+### 實驗 1 只改 body
 
-md 加一段 `## Pipeline check` → 畫面應出現。  
-**結論：** 渲染器有吃到 body。
+md 加 `## Pipeline lab` 一段 → 驗證出現。  
+結論寫：________
 
-### 實驗 2：只改 frontmatter title
+### 實驗 2 只改 title frontmatter
 
-大標應變。  
-**結論：** PageHero 有吃到 frontmatter。
+大標變。結論：________
 
-### 實驗 3：暫時改 MarkdownBody 讓所有連結顯示底線更粗（或還原前的小改）
+### 實驗 3 暫時錯 slug 於 page（再修）
 
-**結論：** 表現層集中在元件，可一處影響多頁。
+對應錯誤。結論：________
 
-改完實驗 3 請還原或另開 branch，避免污染正式樣式。
-
----
-
-## 5. 元件組合圖（必畫）
+## 4. 元件組合圖（必畫，10 分）
 
 ```text
 layout
-  Navbar (navItems)
+  Navbar
   Page
-    WikiPage(slug)
-      PageHero(frontmatter)
-      ContentLayout(toc)
-        MarkdownBody(body)
+    WikiPage
+      PageHero
+      ContentLayout
+        MarkdownBody
   Footer
 ```
 
----
+## 5. 完成檢查表
 
-## 6. 完成檢查表
+- [ ] 11 步能講  
+- [ ] 四站互教  
+- [ ] 三實驗紀錄  
+- [ ] 組合圖  
 
-- [ ] 11 步流程能口述  
-- [ ] 四站互教完成  
-- [ ] 三個實驗有紀錄  
-- [ ] 元件組合圖完成  
+## 6. 作業
 
-## 7. 作業
-
-錄 1 分鐘語音或書面：說明 `/engineering` 如何出現在螢幕上。  
-下一堂：首頁——另一種「資料→畫面」組裝。
+1 分鐘說明 `/engineering` 如何上屏（語音或文字）。  
+下一堂：首頁另一種組裝法。

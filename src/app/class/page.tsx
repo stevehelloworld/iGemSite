@@ -25,7 +25,7 @@ export default function ClassIndexPage() {
           只是內容層；你還要學會路由、選單資料、元件管線、首頁組裝、build 與交付。
         </p>
         <p className="mt-3 text-sm font-semibold text-muted">
-          14 次 × 約 3 小時 · 適合會一點程式、學過一點 JS 的隊員 · 每堂皆有完整步驟與檢查表
+          14 次 × 約 3 小時 · 會一點 JS 即可 · 每堂含分鐘表、講解、逐步操作、停看聽確認、除錯表、檢查表——請放慢跟著做，不要只掃標題。
         </p>
         <div className="mt-6 flex flex-wrap gap-3 text-sm font-extrabold">
           <Link

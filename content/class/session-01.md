@@ -1,221 +1,287 @@
 ---
 session: 1
 title: "專案啟動與網站全貌"
-subtitle: "跑起來、看懂目錄、建立『這個站怎麼組成』的心智模型"
+subtitle: "跑起來、看懂目錄、建立三層心智模型（放慢版）"
 duration: "3 小時"
 goals:
-  - "成功啟動本專案並對照官方站"
-  - "畫出三層模型：內容／結構／系統"
-  - "用物件描述選單資料（銜接 JS）"
+  - "成功啟動專案並排除至少一種常見錯誤"
+  - "畫出內容／結構／系統三層圖"
+  - "對照官方站完成七段首頁檢查表"
+  - "用 JS 物件描述一筆選單資料"
 ---
 
-## 本堂在整學期的位置
+## 給老師：本堂容易講太快的地方
 
-本堂結束後，你不是「會開網頁的人」，而是開始成為「**能說出這個網站由哪些零件組成**」的人。
+- 「npm install 等它跑完」期間請安排：看官方站、填對照表，不要乾等。  
+- 資料夾地圖請**逐層點開**，每層問「這層壞了會怎樣？」  
+- JS 暖身至少 20 分，讓慢的學生也打出物件。  
 
 ---
 
-## 0. 時間配置（3 小時）
+## 0. 分鐘表（請投影）
 
-| 時間 | 活動 |
+| 分鐘 | 做什麼 | 產出 |
+|------|--------|------|
+| 0–15 | 破冰：你心目中「會做網站」是什麼 | 便利貼 1 張 |
+| 15–35 | 課程目標與三層模型導讀 | 筆記本中央圖 |
+| 35–75 | 安裝與啟動（巡堂） | localhost 截圖 |
+| 75–85 | 休息 |  |
+| 85–120 | 官方站 vs 本站首頁七段 | 對照表填完 |
+| 120–150 | 資料夾地圖導覽 + 問答 | 樹狀圖 |
+| 150–170 | JS 物件練習 | 小程式可跑 |
+| 170–180 | 檢查表、作業 | 勾完 |
+
+---
+
+## 1. 開場討論（15 分）— 老師引導語
+
+> 問題 1：做一個「會改文字的網頁」和「理解網站怎麼做」差在哪？  
+> 問題 2：如果只有一個人會改 code，iGEM 衝刺期會發生什麼事？
+
+請 2–3 組分享。老師總結：本課要培養**可交接的建造能力**。
+
+---
+
+## 2. 我們要做的網站是什麼？（10 分）
+
+### 2.1 專案事實（請學生抄）
+
+| 項目 | 內容 |
 |------|------|
-| 0:00–0:25 | 課程目標：做出／理解網站，不是只會改字 |
-| 0:25–1:05 | 環境架設與啟動 |
-| 1:05–1:15 | 休息 |
-| 1:15–2:00 | 官方站 vs 本站、首頁七段結構 |
-| 2:00–2:35 | 資料夾地圖 + 三層模型 |
-| 2:35–2:55 | JS 物件暖身 |
-| 2:55–3:00 | 檢查表與作業 |
+| 隊伍 | VIS iGEM 2026 · 6423 |
+| 專案名 | Cadture |
+| 主題 | Pb、Cd 與廢水 |
+| 官方站 | https://2026.igem.wiki/vis/ |
+| 本專案 | 可教學、可維護的實作站 |
+
+### 2.2 兩個網址
+
+| | 官方站 | 本機站 |
+|--|--------|--------|
+| 網址 | 2026.igem.wiki/vis | localhost:3000 |
+| 角色 | 內容基準、線上版 | 學習建造與日常改稿 |
+| 今天 | 對照 | 必須跑起來 |
+
+**停下來確認：** 抽問「內容要以誰為準？」→ 官方 + 隊上確認。
 
 ---
 
-## 1. 我們到底要學會什麼？
+## 3. 完整步驟：啟動專案（放慢，逐步勾）
 
-### 1.1 錯誤期待 vs 正確期待
-
-| 不夠 | 本課程要的 |
-|------|------------|
-| 只會改 Markdown | 知道 md 如何被讀進頁面 |
-| 只會複製貼上 | 能解釋路由、元件、資料流 |
-| 怕看 code | 能讀 10–30 行關鍵檔並小改 |
-
-### 1.2 成品定義（VIS Cadture Wiki）
-
-- 技術棧：Next.js App Router + React + Markdown 內容  
-- 專案：Cadture（Pb / Cd）  
-- 官方內容基準：https://2026.igem.wiki/vis/  
-- 本 repo：可教學、可維護、可擴充的實作站  
-
----
-
-## 2. 完整步驟：啟動專案
-
-### 2.1 檢查 Node
+### 步驟 1｜檢查 Node（每人）
 
 ```bash
 node -v
 npm -v
 ```
 
-兩者都要有版本號。
+- 成功：出現 `v18`/`v20`/`v22` 之類  
+- 失敗：安裝 Node LTS → **關掉終端機重開** → 再打一次  
 
-### 2.2 進入專案
+老師巡堂：看到紅字先別急著幫打指令，讓學生念出錯誤第一行。
+
+### 步驟 2｜進入專案根目錄
 
 ```bash
-cd 路徑/iGemSite
+pwd
+ls
 ```
 
-確認此目錄有 `package.json`。
+必須看得到 `package.json`、`src`、`content`。  
+若沒有：`cd` 進錯層了。
 
-### 2.3 安裝依賴（每台電腦第一次）
+### 步驟 3｜安裝依賴
 
 ```bash
 npm install
 ```
 
-### 2.4 開發模式啟動
+**期間任務（寫在黑板上）：**  
+打開官方站，開始填第 4 節對照表前半。
+
+### 步驟 4｜啟動開發伺服器
 
 ```bash
 npm run dev
 ```
 
-瀏覽器開啟：`http://localhost:3000`
+看到 `Local: http://localhost:3000` 之類訊息。
 
-### 2.5 成功標準
+### 步驟 5｜瀏覽器驗證清單
 
-- 看到標題 Cadture  
-- 上方有選單（含 **Course**）  
-- 終端機顯示 Ready  
+請學生逐項打勾：
 
-### 2.6 失敗排查
+- [ ] 標題有 Cadture  
+- [ ] 有 The Problem 區塊  
+- [ ] 有 Our Solution 五步  
+- [ ] 上方選單有 Project / Wet Lab 等  
+- [ ] 有 Course 可進教材  
 
-| 現象 | 處理 |
-|------|------|
-| 找不到 npm | 重裝 Node、重開終端機 |
-| 找不到 package.json | cd 錯目錄 |
-| 3000 被占用 | `npm run dev -- -p 3001` |
-| install 紅字 | 截圖全文給老師 |
+### 步驟 6｜失敗劇本演練（全班一起看一種）
+
+老師可示範或口述：
+
+| 錯誤訊息關鍵字 | 原因 | 學生動作 |
+|----------------|------|----------|
+| `command not found` | 沒裝 Node／PATH | 重裝、重開終端 |
+| `ENOENT package.json` | 目錄錯 | `cd` 到有 package.json |
+| `EADDRINUSE 3000` | port 占用 | 換 3001 或關掉舊 process |
+| install 權限 | 環境限制 | 換路徑、問老師 |
 
 ---
 
-## 3. 對照官方站：內容基準
+## 4. 官方站對照（放慢 35 分）
 
-打開 https://2026.igem.wiki/vis/ ，與本機首頁並排。
+### 4.1 並排視窗
 
-### 首頁七段（必須能背順序）
+左：官方 https://2026.igem.wiki/vis/  
+右：localhost:3000  
 
-1. The Problem（Pb / Cd / Wastewater + 桃園／台中／高雄）  
-2. Our Solution（Detection → Capture → Sequestration → Removal → Clean Water）  
-3. Project Highlights（90% / 75% / 500+ / 12）  
+### 4.2 七段順序（一起念兩次）
+
+1. The Problem  
+2. Our Solution  
+3. Project Highlights  
 4. Towards a Sustainable Future  
-5. Human Practices（Listen / Integrate / Impact）  
-6. Engineering Cycle（Design → Build → Test → Learn）  
+5. Human Practices  
+6. Engineering Cycle  
 7. Meet Our Team  
 
-**設計可以不同，故事順序與宣稱應對齊官方。**
+### 4.3 填表（每人）
 
-### 課堂記錄表
+| # | 區塊 | 官方有無 | 本機有無 | 一句英文關鍵句（抄） |
+|---|------|----------|----------|----------------------|
+| 1 | Problem |  |  |  |
+| 2 | Solution |  |  |  |
+| 3 | Highlights |  |  |  |
+| 4 | Sustainable |  |  |  |
+| 5 | HP |  |  |  |
+| 6 | Engineering |  |  |  |
+| 7 | Team |  |  |  |
 
-| 區塊 | 官方有？ | 本機有？ | 文案是否一致？ |
-|------|----------|----------|----------------|
-| The Problem |  |  |  |
-| Our Solution |  |  |  |
-| Highlights |  |  |  |
-| HP |  |  |  |
-| Engineering |  |  |  |
-| Team |  |  |  |
+### 4.4 討論題（5 分）
+
+「本機視覺比較可愛，能不能改掉官方的 Solution 五步名稱？」  
+引導：可以討論 UI，但**故事骨架與宣稱**要對齊／經確認。
 
 ---
 
-## 4. 資料夾 = 建築圖（系統思維）
+## 5. 資料夾地圖（逐層，25 分）
 
-請在 VS Code 點開並在筆記畫樹狀圖：
+老師每開一層就問：
+
+### 5.1 `content/`
+
+> 這裡全刪會怎樣？→ 頁面沒字或爆錯，但路由殼可能還在。
+
+### 5.2 `src/app/`
+
+> 這裡的資料夾名跟網址什麼關係？→ 幾乎一一對應。
+
+### 5.3 `src/components/`
+
+> 像樂高積木；Navbar 壞了會怎樣？→ 可能全站沒選單。
+
+### 5.4 `src/data/nav.ts`
+
+> 這是資料不是畫面；改這裡選單文字會變。
+
+### 5.5 `src/lib/content.ts`
+
+> 讀 md 的橋樑——第 8 次會拆。
+
+### 5.6 學生作業：畫樹
+
+限時 8 分，畫出至少：
 
 ```text
-iGemSite/
-├── content/          ← 內容層：人寫的字
-│   ├── home.md
-│   ├── pages/        ← 每個內頁一篇 md
-│   └── class/        ← 你正在讀的教材
-├── src/
-│   ├── app/          ← 結構層：網址
-│   ├── components/   ← 系統層：UI 積木
-│   ├── data/nav.ts   ← 結構層：選單資料
-│   └── lib/content.ts← 系統層：讀 md 的橋
-├── public/           ← 靜態檔（圖等）
-└── package.json      ← 指令與依賴
+iGemSite
+├── content
+├── src/app
+├── src/components
+└── src/data
 ```
 
-### 三層模型（畫在筆記本中央）
-
-```text
-內容 Content  →  content/*.md
-結構 Structure→  app 路由 + nav
-系統 System   →  元件 + 讀檔 + 建置
-```
-
-課堂口頭檢查：隨機抽問「改選單文字碰哪一層？」
+並在旁邊標：內容 / 結構 / 系統。
 
 ---
 
-## 5. 點開幾個真實頁，建立「檔案↔網址」直覺
+## 6. JS 暖身：選單物件（20–25 分）
 
-| 你點的網址 | 猜對應資料夾 | 猜對應 md（若有） |
-|------------|--------------|-------------------|
-| /description | src/app/description | content/pages/description.md |
-| /engineering | | |
-| /class | src/app/class | content/class/... |
-| / | src/app/page.tsx | content/home.md |
+### 6.1 為什麼現在練？
 
----
+因為第 7 次要改真的 `nav.ts`，結構一模一樣。
 
-## 6. JS 暖身：選單就是資料
+### 6.2 完整程式（請學生手打）
 
-建立 `practice/s01-nav.js`：
+`practice/session01-nav.js`：
 
 ```js
-const navItem = {
-  label: "Engineering",
-  href: "/engineering",
-  desc: "Design → Build → Test → Learn",
+// 一筆選單 = 一個物件
+const descriptionItem = {
+  label: "Description",
+  href: "/description",
+  desc: "Background and problem",
 };
 
+// 多筆 = 陣列
 const projectChildren = [
-  navItem,
-  { label: "Results", href: "/results", desc: "Experimental results" },
+  descriptionItem,
+  {
+    label: "Engineering",
+    href: "/engineering",
+    desc: "Design → Build → Test → Learn",
+  },
+  {
+    label: "Results",
+    href: "/results",
+    desc: "Experimental results",
+  },
 ];
 
-function printMenu(items) {
-  for (const item of items) {
-    console.log(item.label, "=>", item.href);
-  }
+// 掃過每一筆（之後 React 的 map 很像這個）
+for (let i = 0; i < projectChildren.length; i++) {
+  const item = projectChildren[i];
+  console.log(i + 1, item.label, "→", item.href);
 }
 
-printMenu(projectChildren);
+// 進階一點：用 for...of
+console.log("---");
+for (const item of projectChildren) {
+  console.log(item.label + ": " + item.desc);
+}
 ```
 
 ```bash
-node practice/s01-nav.js
+node practice/session01-nav.js
 ```
 
-**連結：** 第 7 次會改真正的 `src/data/nav.ts`，結構相同。
+### 6.3 延伸（進度快的人）
+
+把 `projectChildren` 改成函式 `printMenu(items)` 包起來再呼叫。
+
+### 6.4 停下來確認
+
+抽問：`href` 是什麼？少了會怎樣？`desc` 給誰看？
 
 ---
 
-## 7. 本堂完成檢查表
+## 7. 本堂完成檢查表（下課前 10 分互查）
 
-- [ ] 本機首頁可開  
-- [ ] 填完官方對照表  
-- [ ] 筆記本有三層模型圖  
-- [ ] 能說出 content / app / components 各負責什麼  
-- [ ] 跑過 nav 物件小程式  
+- [ ] node/npm 有版本  
+- [ ] 首頁截圖已交  
+- [ ] 七段對照表填完  
+- [ ] 三層圖有畫  
+- [ ] nav 小程式有跑出輸出  
+- [ ] 能用一句話說 content 與 app 差別  
 
-## 8. 回家作業
+## 8. 回家作業（寫清楚截止）
 
-1. 用自己的話寫 150 字：「這個網站不是一個 HTML 檔，而是……」  
-2. 背首頁七段順序  
-3. 閱讀 `/class/how-to-edit` 的「課程總覽」  
+1. **必做：** 150 字：「這個網站不是單一 HTML 檔，而是……」  
+2. **必做：** 背七段首頁順序（下堂抽背）  
+3. **必做：** 讀 `/class/how-to-edit` 課程總覽  
+4. **選做：** 為 5 個內頁寫「網址 ↔ 你猜的資料夾」  
 
-## 9. 下一堂
+## 9. 下一堂預告（留 2 分）
 
-HTML/DOM：理解「畫面是樹」，為元件打底——這是**建造**網站的基礎，不是倒退。
+我們會做出「會動的 HTML 樹」，因為 React 元件本質是在描述那棵樹。

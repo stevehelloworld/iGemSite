@@ -1,97 +1,117 @@
 ---
 session: 7
 title: "結構層：資料驅動的導覽"
-subtitle: "nav.ts 如何把物件陣列變成全站選單"
+subtitle: "nav.ts + Navbar 渲染——把物件變成選單（放慢版）"
 duration: "3 小時"
 goals:
-  - "能畫出 Navbar 讀取 navItems 的關係"
-  - "能新增／修改選單物件"
-  - "理解『UI 由資料生成』的建造模式"
+  - "能畫出 navItems → Navbar → 選單 DOM 的關係"
+  - "完成修改 desc、新增 children、除錯三關"
+  - "能解釋資料驅動 UI 的優點"
 ---
 
-## 1. 建造模式：資料驅動 UI
+## 給老師
 
-壞做法：在 Navbar 裡手寫 20 個 `<a>`。  
-好做法：資料放 `nav.ts`，元件負責渲染。
+- 新增物件時「逗號」會殺人——投影 3 種錯誤訊息。  
+- 完成後請學生 `git diff` 只應有 nav.ts。  
+- 連到第 9 次：首頁 map 同一思想。  
+
+## 0. 分鐘表
+
+| 分鐘 | 活動 |
+|------|------|
+| 0–15 | 資料驅動概念 |
+| 15–40 | 精讀 nav.ts 標註 |
+| 40–55 | 精讀 Navbar 如何 map |
+| 55–65 | 休息 |
+| 65–100 | 實作改 desc |
+| 100–140 | 實作新增 + 除錯關 |
+| 140–165 | Standard path 討論 |
+| 165–180 | 檢查表 |
+
+## 1. 概念：不要手寫 20 個連結
+
+壞：Navbar 裡複製 20 次 `<a>`。  
+好：資料在 `nav.ts`，UI 掃資料生成。
 
 ```text
-navItems (資料)
-    → Navbar.tsx (.map 渲染)
-    → 使用者看到選單
+navItems ──map──► Navbar ──► 使用者看到的選單
 ```
 
-這與首頁 `home.md` 陣列 + `.map` **是同一建造思想**。
+## 2. 精讀 nav.ts（25 分）
 
----
+### 步驟
 
-## 2. 精讀 `src/data/nav.ts`
+1. 打開 `src/data/nav.ts`  
+2. 用註解標出：Team / Project / Wet Lab / Dry Lab / HP / Course  
+3. 抄一筆 children 物件到筆記本，標 label/href/desc  
 
-1. 型別 `NavItem`  
-2. 匯出 `navItems` 陣列  
-3. 有 `children` 的項目 = 下拉  
-
-### 練習：標註
-
-在檔案中用註解標出：
-
-- 哪個是 Project 區  
-- 哪個物件對應 Engineering  
-- Course 連到哪  
-
----
-
-## 3. 精讀 `src/components/Navbar.tsx`（重點段落）
-
-搜尋 `navItems`：
-
-- import 從 `@/data/nav`  
-- `navItems.map` 產生選單  
-- 有 children 時渲染子連結  
-
-你不需重寫 Navbar，但要能說：
-
-> 「我改 nav 資料，Navbar 自動重畫選單。」
-
----
-
-## 4. 完整實作 A：改 desc
-
-改一筆 `desc` → 存檔 → hover 選單驗證 → `git diff`。
-
-## 5. 完整實作 B：新增一筆
-
-在合理分組下新增：
+### 型別（會看即可）
 
 ```ts
-{ label: "Course", href: "/class", desc: "Build-the-wiki curriculum" },
+children?: { label: string; href: string; desc?: string }[]
 ```
 
-（若主選單已有 Course，改加到 Team children 或更新既有 desc。）
+意思：可選的陣列，元素是物件。
 
-## 6. 完整實作 C：故意弄錯再修
+## 3. 精讀 Navbar（15 分）
 
-1. 少逗號 → 讀錯誤訊息  
-2. href 少 `/` → 觀察行為  
-3. 全部修好  
+打開 `src/components/Navbar.tsx`，搜尋 `navItems`。
 
----
+回答：
 
-## 7. Standard Paths 與結構穩定
+1. 從哪 import？  
+2. 哪裡 `.map`？  
+3. 有 children 時多做了什麼？  
 
-競賽要求路徑穩定。結構層的「自由」有界線：
+## 4. 實作 A：改 desc（完整）
 
-- 可改顯示文字 label  
-- 不可隨便改競賽關鍵 href  
+1. 選你負責頁  
+2. 只改 `desc` 英文  
+3. 存檔  
+4. 重新整理，打開對應下拉  
+5. `git diff src/data/nav.ts` 確認無意外  
 
----
+## 5. 實作 B：新增一筆（完整）
+
+範例（可依現況調整）：
+
+```ts
+{ label: "Course home", href: "/class", desc: "Full build-the-wiki lessons" },
+```
+
+注意：
+
+- 上一行結尾逗號  
+- 字串引號成對  
+- `href` 以 `/` 開頭  
+
+## 6. 除錯三關（每人輪流）
+
+| 關 | 破壞 | 修復關鍵 |
+|----|------|----------|
+| 1 | 刪逗號 | 讀編譯錯誤 |
+| 2 | href 少 `/` | 觀察導向 |
+| 3 | 加在錯誤的 children | 選單位置不對 |
+
+每關寫：「我看到的錯誤 → 我怎麼修」
+
+## 7. Standard Paths（10 分）
+
+可改 label，慎改 href：
+
+- /attributions  
+- /contribution  
+- /engineering  
+- /human-practices  
 
 ## 8. 完成檢查表
 
-- [ ] 能畫 資料 → Navbar → DOM  
-- [ ] 完成修改與新增  
-- [ ] 完成除錯練習  
-- [ ] 說得出資料驅動的好處  
+- [ ] 圖：資料→Navbar→選單  
+- [ ] 改 desc 成功  
+- [ ] 新增成功  
+- [ ] 三關除錯紀錄  
 
-## 9. 下一堂
+## 9. 作業 #2
 
-系統層核心：元件與 Markdown 管線——**網站引擎如何運轉**。
+一句英文 desc；選做：紙上設計三層選單資料。  
+下一堂：系統引擎 WikiPage。

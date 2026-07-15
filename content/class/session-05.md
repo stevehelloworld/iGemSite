@@ -1,99 +1,163 @@
 ---
 session: 5
 title: "工程協作：Git 與團隊建造流程"
-subtitle: "版本控制是『做出網站』的一部分，不是附加題"
+subtitle: "每次改站都走完整流程——放慢到會看 diff、會寫 message"
 duration: "3 小時"
 goals:
-  - "掌握 pull/add/commit/push 基本流"
-  - "能寫清楚 commit、會看 diff"
-  - "建立內容誠信與 code review 習慣"
+  - "獨立完成 pull→改→status→diff→add→commit"
+  - "寫出可讀的 commit message"
+  - "能說明衝突如何避免"
+  - "完成誠信情境判斷"
 ---
 
-## 1. 為什麼「做出網站」一定要 Git？
+## 給老師
 
-網站是**多人、多檔、長時間**的產物。沒有版本控制會：
+- 每人螢幕都要看到自己的 `git log`，不要只看老師 demo。  
+- diff 一定要教：很多學生 commit 了自己不知道的檔。  
+- 誠信討論至少 20 分。  
 
-- 覆蓋別人的工作  
-- 無法回溯壞掉的版本  
-- 無法審查「這次改動是否安全」  
+## 0. 分鐘表
 
-本堂把 Git 當**建造流程**，不是點點滑鼠備份。
+| 分鐘 | 活動 |
+|------|------|
+| 0–15 | 為什麼建造需要版本控制 |
+| 15–70 | 完整 commit 流程（兩輪） |
+| 70–80 | 休息 |
+| 80–110 | message 工作坊 + 壞例子 |
+| 110–140 | 衝突概念與角色扮演 |
+| 140–165 | 誠信情境 |
+| 165–180 | 里程碑 A |
 
----
+## 1. 開場故事（放慢）
 
-## 2. 完整工作流（每次改站都照做）
+想像兩人同時改 `description.md`：  
+A 寫 Problem，B 刪掉整段改成自己的。沒有 Git 會怎樣？有 Git 可以怎樣？
 
-```text
-1. git pull          # 先同步
-2. 改檔（content 或 src）
-3. git status        # 看改了啥
-4. git diff          # 看細節
-5. git add <檔案>
-6. git commit -m "..."
-7. git push          # 若有遠端權限
+## 2. 完整流程（第一輪：跟著做）
+
+### 2.1 確認目錄
+
+```bash
+cd 你的/iGemSite
+git status
 ```
 
-### 實作：完成一輪真實提交
+### 2.2 若有遠端
 
-1. 改 `content/pages/notebook.md` 加英文三行今日筆記  
-2. 
+```bash
+git pull
+```
+
+說明：先同步再改，減少衝突。
+
+### 2.3 改一個小內容
+
+打開 `content/pages/notebook.md`，在文末加：
+
+```markdown
+## Session 5 note
+
+Date: (today)
+We practiced Git workflow for team wiki building.
+Next: document real lab notes in English after experiments.
+```
+
+### 2.4 status
 
 ```bash
 git status
+```
+
+請學生圈出檔名，確認只有預期檔案。
+
+### 2.5 diff（關鍵，多留時間）
+
+```bash
 git diff
+```
+
+老師問：
+
+- `+` 是什麼？  
+- 若看到大量刪除，該不該 commit？  
+
+### 2.6 add
+
+```bash
 git add content/pages/notebook.md
-git commit -m "content: add notebook entry for session 5"
+```
+
+再 `git status`，檔案應在 staged。
+
+### 2.7 commit
+
+```bash
+git commit -m "content: add session 5 git practice note to notebook"
+```
+
+### 2.8 驗證
+
+```bash
+git log -1 --oneline
 git status
 ```
 
-3. 截圖 log：
+## 3. 第二輪：自己做（20 分）
 
-```bash
-git log -3 --oneline
-```
+再改另一個自己負責的 md 一小段，完整走一次，message 自己想。
 
----
+## 4. Commit message 工作坊
 
-## 3. Commit message 規範（工程文化）
+### 好
 
-```text
-content: ...   # 文案
-fix: ...       # 修錯
-feat: ...      # 新功能／新頁
-nav: ...       # 選單
-style: ...     # 純樣式
-```
+- `content: draft HP listen section without private data`  
+- `fix: correct spelling of sequestration on home`  
+- `feat: add practice-lab page files`  
 
-好：`feat: add practice-lab page route and nav link`  
-壞：`update`、`最終`
+### 壞 → 改寫練習
 
----
+把下列改成好 message：
 
-## 4. Review 清單（提交前自問）
+1. `update`  
+2. ` assa`  
+3. `改了很多東西`  
+4. `final final 2`  
 
-- [ ] 我有沒有不小心刪到整段別人的內容？  
-- [ ] 有沒有假數據？  
-- [ ] 有沒有把 `node_modules` 加進去？（不該）  
-- [ ] diff 是否只包含我打算改的檔？  
+## 5. 衝突角色扮演（25 分）
 
----
+情境卡：
 
-## 5. 誠信工作坊
+- 兩人改同一段 subtitle  
+- 一人 force 心態「以我的為準」  
 
-討論並寫下：
+討論：正確流程是什麼？（pull、溝通、合併、誰確認科學內容）
 
-1. 首頁 90% 與「我們測到」有何不同？  
-2. 程式可以很完整，但內容造假為什麼仍算失敗？  
-3. Attribution 與 git 紀錄如何互相補足？  
+預防規則（寫在黑板）：
 
----
+1. 一頁同一時段單一主編  
+2. 改前 pull  
+3. 小步 commit  
+4. 大改前通知  
 
-## 6. 里程碑 A
+## 6. 誠信情境題（每人寫答案）
 
-- 每人 ≥1 有效 commit  
-- 組員責任表（頁面↔人）  
-- 誠信討論結論  
+1. 官方首頁 90%，文獻也有類似數字，能否寫「我們達成 90%」？為什麼？  
+2. 指導教師幫改了程式，wiki 要不要寫進 Attributions？  
+3. 同學照片未經同意能否上 Team 頁？  
 
-## 7. 下一堂
+## 7. 里程碑 A 繳交
 
-進入系統層核心：路由與 page.tsx——**網址如何被做出來**。
+- `git log -5 --oneline` 截圖  
+- 責任表：頁面 | 人 | 本週摘要  
+- 誠信三題答案  
+
+## 8. 完成檢查表
+
+- [ ] 兩輪 commit  
+- [ ] 會看 diff  
+- [ ] message 合格  
+- [ ] 誠信題完成  
+
+## 9. 下一堂
+
+結構層：網址如何被「做出來」。

@@ -1,102 +1,128 @@
 ---
 session: 9
 title: "系統層：首頁如何組裝"
-subtitle: "home.md 資料 + page.tsx 渲染邏輯 + 官方結構對齊"
+subtitle: "home.md 資料 + page.tsx 視圖 + 官方七段——放慢對照"
 duration: "3 小時"
 goals:
-  - "解釋首頁為何不用 WikiPage 單篇模式"
-  - "能修改 YAML 並指認對應 map 區塊"
-  - "維護與官方一致的七段資訊架構"
+  - "能對照官方與本機逐段檢查"
+  - "能改 YAML 並指到對應 map"
+  - "能比較 WikiPage 模式與首頁模式"
+  - "完成里程碑 B"
 ---
 
-## 1. 兩種頁面建造策略
+## 給老師
 
-| 策略 | 使用處 | 做法 |
-|------|--------|------|
-| 文件頁 | description 等 | WikiPage + 一篇 md |
-| 行銷／總覽頁 | 首頁 | 結構化資料 + 自訂排版 |
+- 先對官方再改檔，避免學生亂改 highlights。  
+- 每位學生都要 `Cmd+F` 找到 map，不要只看你投影。  
+- 里程碑 B 強調「誰確認內容」。  
 
-首頁資訊密度高、區塊固定，用 YAML 清單更適合程式迭代 UI。
+## 0. 分鐘表
 
----
+| 分鐘 | 活動 |
+|------|------|
+| 0–20 | 兩種頁面策略 |
+| 20–55 | 官方七段逐段對照 |
+| 55–65 | 休息 |
+| 65–110 | 改 home.md（允許範圍） |
+| 110–150 | page.tsx map 導讀與標註 |
+| 150–170 | 里程碑 B 整理 |
+| 170–180 | 分享 2 組 |
 
-## 2. 官方對齊（再次確認）
+## 1. 兩種建造策略（15 分講清楚）
 
-https://2026.igem.wiki/vis/ 與本機 `/`：
+| | 文件頁 | 首頁 |
+|--|--------|------|
+| 資料 | 一篇 pages/*.md | home.md YAML 多段清單 |
+| 組裝 | WikiPage 通用引擎 | page.tsx 專用排版 |
+| 適合 | 長文、套版結構 | 固定行銷區塊 |
 
-1. The Problem  
-2. Our Solution  
-3. Project Highlights  
-4. Towards a Sustainable Future  
-5. Human Practices  
-6. Engineering Cycle  
-7. Meet Our Team  
+**問題：** 能不能把首頁也改成只有一篇超長 md？可以，但改 UI 區塊順序會變痛。本站選擇資料與視圖分離。
 
-打開 `src/app/page.tsx`，用註解在每個 section 標上 1–7。
+## 2. 官方對照（放慢 35 分）
 
----
+左官方右本機，**一段一段**勾：
 
-## 3. 精讀資料：`content/home.md`
+| 段 | 官方關鍵文字（抄 5–10 字） | 本機一致？ |
+|----|---------------------------|------------|
+| Problem 三卡 |  |  |
+| 三個城市 |  |  |
+| Solution 五步名 |  |  |
+| Highlights 四數字 |  |  |
+| Sustainable 段 |  |  |
+| Listen/Integrate/Impact |  |  |
+| Design/Build/Test/Learn |  |  |
+| Team placeholder |  |  |
 
-關鍵鍵名：
+不一致就記下來，課堂討論是否應改回。
 
-- `problems` / `locations`  
-- `solution`  
-- `highlights`  
-- `sustainable`  
-- `humanPractices`  
-- `engineering`  
-- `teamNote`  
+## 3. 改 home.md（完整步驟）
 
-### 實作
+### 3.1 打開
 
-在允許下更新一則 `locations` 或 `solution.body`（真實、經確認）。  
-**預設不要改 highlights 數字。**
+`content/home.md`
 
----
+### 3.2 允許練習的改動
 
-## 4. 精讀渲染：`src/app/page.tsx`
+- `locations` 的 body 潤飾（不改事實）  
+- `solution` 的 body 潤飾（title 建議維持官方五詞）  
+- `teamNote` 在隊上同意下更新  
 
-搜尋並理解：
+### 3.3 預設禁止
 
-```tsx
-h.problems.map(...)
-h.solution.map(...)
-h.highlights.map(...)
-h.humanPractices.map(...)
-h.engineering.map(...)
-```
+- 擅自改 `90%` `75%` `500+` `12`  
+- 刪除整段 solution  
 
-### 練習題
+### 3.4 驗證
 
-| 問題 | 答案寫在筆記 |
-|------|----------------|
-| 五個 solution 步驟的 title 存在哪？ |  |
-| 若 YAML 少一筆 solution 會怎樣？ |  |
-| Team 區為何幾乎沒有 map？ |  |
+存檔 → 重新整理 `/` → 指到變更區塊給鄰座看。
 
----
+### 3.5 YAML 除錯
 
-## 5. 概念：資料與視圖分離
+| 症狀 | 原因 |
+|------|------|
+| 首頁空白/錯誤 | 縮排壞了、`---` 不對 |
+| 某列表少一張卡 | 少了一個 `- title:` 區塊 |
+| 奇怪字元 | 冒號未加引號 |
 
-```text
-home.md  = 資料 (model)
-page.tsx = 視圖 (view)
-```
+## 4. page.tsx 導讀（40 分）
 
-好處：內容編輯少碰排版 code；設計師改排版少碰文案檔。
+### 步驟 1
+打開 `src/app/page.tsx`
 
----
+### 步驟 2
+搜尋並在行旁註解：
+
+- `h.problems.map` → The Problem  
+- `h.locations.map` → 城市  
+- `h.solution.map` → Our Solution  
+- `h.highlights.map` → Highlights  
+- `h.humanPractices.map` → HP  
+- `h.engineering.map` → Engineering  
+
+### 步驟 3
+老師講 `.map` 與 for 迴圈對照（用第 1 次 JS 例子）。
+
+### 步驟 4
+書面：若 `solution` 只剩 4 筆，畫面會怎樣？
+
+## 5. 比較題（10 分）
+
+用 80–120 字：WikiPage 文件頁 vs 首頁組裝，差在哪？為何首頁要特殊？
 
 ## 6. 里程碑 B
 
-繳交：
+1. 更新了哪兩區 + 確認人姓名  
+2. 截圖  
+3. map 標註截圖  
+4. 比較題答案  
 
-1. 更新區塊說明 + 確認人  
-2. 首頁截圖  
-3. page.tsx 中對應 map 的行號或截圖  
-4. 簡述：首頁策略 vs WikiPage 策略差異（≥80 字）  
+## 7. 完成檢查表
 
-## 7. 下一堂
+- [ ] 七段對照完成  
+- [ ] YAML 有合法更新  
+- [ ] 六個 map 都找到  
+- [ ] 里程碑 B 交  
 
-表現層：Tailwind 與設計系統——如何讓「做出來的站」有一致品牌。
+## 8. 下一堂
+
+表現層 Tailwind 與設計紀律。

@@ -1,81 +1,128 @@
 ---
 session: 13
 title: "工程交付：Build、檢查與上線概念"
-subtitle: "像工程師一樣交付，而不是『我本機可以』"
+subtitle: "本機可以還不夠——完整檢查與 build 放慢教學"
 duration: "3 小時"
 goals:
-  - "會跑 npm run build 並解讀基本錯誤"
-  - "完成全站檢查表"
-  - "能說明 dev / build / freeze 差異"
+  - "逐項完成品質檢查並實點連結"
+  - "獨立跑 npm run build 並記錄"
+  - "能說明 dev/build/freeze 差異"
+  - "交出里程碑 C"
 ---
+
+## 給老師
+
+- 檢查表必須「實點」，禁止空勾。  
+- build 失敗是教學機會：帶讀第一個 error 15 分。  
+- 部署細節不要求學生當天做完，但概念要考。  
+
+## 0. 分鐘表
+
+| 分鐘 | 活動 |
+|------|------|
+| 0–15 | 交付金字塔 |
+| 15–70 | 品質檢查實點 |
+| 70–80 | 休息 |
+| 80–130 | build 教學與修復 |
+| 130–160 | iGEM/freeze 概念 |
+| 160–180 | 里程碑 C 彙整 |
 
 ## 1. 交付金字塔
 
 ```text
-可以展示
-  ↑
-build 通過 + 連結正確 + 內容誠實
-  ↑
-功能做得出來
+      可展示給外人
+           ↑
+   build 過 + 連結對 + 內容實
+           ↑
+        功能做得出
 ```
 
-本堂處理中層。
+## 2. 品質檢查（詳細流程）
 
----
+使用 `docs/curriculum/handouts/13-quality-checklist.md`。
 
-## 2. 完整：品質檢查
+### 2.1 內容（每項寫證據）
 
-使用 `docs/curriculum/handouts/13-quality-checklist.md`  
-逐點開瀏覽器實點，不要憑印象勾。
+不是只勾，要寫「我看到的網址/句子」。
 
----
+### 2.2 連結實點清單
 
-## 3. 完整：build 流程
+至少點：
+
+- 首頁  
+- description / engineering / human-practices / contribution / team / attributions  
+- class 課表  
+- 自己新增頁  
+
+壞掉的寫進待修。
+
+### 2.3 路徑穩定
+
+確認未把 engineering 等改名。
+
+## 3. build 完整教學
+
+### 3.1 指令
 
 ```bash
+cd 你的/iGemSite
 npm run build
 ```
 
-### 成功
+### 3.2 成功長怎樣
 
-截圖保存。
+出現編譯成功、靜態頁生成，最後無 Failed。截圖。
 
-### 失敗
+### 3.3 失敗怎麼讀
 
-1. 複製第一個 Error  
-2. 定位檔案行號  
-3. 修復  
-4. 重跑  
+1. 找到第一個 `Error`  
+2. 檔案路徑  
+3. 行號  
+4. 訊息關鍵字  
 
-常見與課程相關錯誤：
+### 3.4 常見錯誤對照
 
-- slug / md 檔名不一致  
-- nav 語法錯  
-- TS 型別（問老師）  
+| 關鍵字 | 可能原因 | 先查 |
+|--------|----------|------|
+| Missing content file | slug/md | page 與 md |
+| Unexpected token | nav 語法 | 逗號括號 |
+| Type error | TS | 問老師 |
+| Module not found | import 路徑 | @/ 路徑 |
 
----
+### 3.5 修復循環
 
-## 4. 上線與 iGEM 概念（完整說明）
+修 → 再 build → 直到過或寫卡關報告。
 
-| 環境 | 用途 |
-|------|------|
-| localhost dev | 開發 |
-| GitHub 等預覽 | 分享進度 |
-| 2026.igem.wiki/vis | 官方線上基準／競賽相關 |
+## 4. 環境差異（講慢）
 
-閱讀 `docs/DEPLOY_TO_IGEM.md`：字型、外連、static 圖、CC BY、Freeze。
+| 環境 | 用途 | 限制 |
+|------|------|------|
+| dev | 開發 | 較寬鬆 |
+| build | 交付檢查 | 較嚴 |
+| 官方 wiki | 競賽基準/freeze | 規則最多 |
 
-學生應能回答：
+讀 `docs/DEPLOY_TO_IGEM.md` 重點：外連、字型、圖、CC BY、Freeze。
 
-- 為什麼本機可以仍不算交卷？  
-- 什麼是 Wiki Freeze？  
+### 口頭題
 
----
+1. 本機可以為何還要 build？  
+2. Freeze 後還能大改 UI 嗎？  
+3. 外連 Google 字型可能有何問題？  
 
 ## 5. 里程碑 C
 
-檢查表 + build 結果 + 待修清單（負責人+期限）  
+1. 檢查表（含證據）  
+2. build 截圖  
+3. 待修 ≥3（人+期限）  
+4. 一句話風險  
 
-## 6. 下一堂
+## 6. 完成檢查表
 
-發表：證明你理解網站怎麼做的。
+- [ ] 實點連結  
+- [ ] build 有跑  
+- [ ] 概念三題能答  
+- [ ] 里程碑 C 交  
+
+## 7. 下一堂
+
+發表：用架構證明你會做這個站。

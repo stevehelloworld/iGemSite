@@ -81,8 +81,11 @@ export default async function ClassSessionPage({ params }: Props) {
         )}
 
         <article className="prose-igem sticker mt-8 max-w-none p-6 sm:p-10">
-          <div className="mb-6 rounded-2xl border-2 border-[#f0c4ce] bg-[#fff8f6] px-4 py-3 text-sm font-bold text-muted">
-            完整教學過程：請依步驟實際操作並完成檢查表。目標是理解網站怎麼做的，而不只是改文字。建議左開教材、右開編輯器與預覽。
+          <div className="mb-6 space-y-2 rounded-2xl border-2 border-[#f0c4ce] bg-[#fff8f6] px-4 py-3 text-sm font-bold text-muted">
+            <p>
+              完整教材（放慢版）：請依「分鐘表」與「步驟」實際操作，遇到「停下來確認」就真的停。目標是理解網站怎麼做的，而不只是改文字。
+            </p>
+            <p>建議：左開本頁、右開編輯器與 http://localhost:3000 預覽。</p>
           </div>
           <MarkdownBody source={body} />
         </article>
