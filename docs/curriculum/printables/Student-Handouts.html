@@ -1,0 +1,3558 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<title>學生講義</title>
+<style>
+  @page { size: A4; margin: 15mm 14mm 16mm 14mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "PingFang TC", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.5pt; line-height: 1.55; color: #1a1a1a;
+    max-width: 182mm; margin: 0 auto; padding: 4mm 0 8mm;
+    word-wrap: break-word; overflow-wrap: anywhere;
+  }
+  /* Major parts only (一、二、三…); avoid page break on every fake H1 */
+  h1 {
+    color: #9F1239; font-size: 16pt; border-bottom: 2px solid #9F1239;
+    padding-bottom: 0.2em; margin: 1.2em 0 0.5em;
+    page-break-after: avoid; break-after: avoid;
+  }
+  h1.part { break-before: page; page-break-before: always; margin-top: 0; }
+  .doc-body > h1.part:first-child { break-before: auto; page-break-before: auto; }
+  h2 {
+    font-size: 12.5pt; color: #1a1a1a; margin: 1em 0 0.4em;
+    page-break-after: avoid; break-after: avoid;
+  }
+  h2.session { break-before: page; page-break-before: always; color: #9F1239; }
+  h3 { font-size: 11pt; margin: 0.85em 0 0.35em; page-break-after: avoid; }
+  h4 { font-size: 10.5pt; margin: 0.7em 0 0.3em; page-break-after: avoid; }
+  p { margin: 0.4em 0; }
+  a { color: #0563C1; text-decoration: none; word-break: break-all; }
+  blockquote {
+    margin: 0.55em 0; padding: 0.35em 0 0.35em 0.85em;
+    border-left: 3px solid #9F1239; color: #333; font-style: italic;
+    background: #fdf2f8; page-break-inside: avoid;
+  }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 8.8pt; background: #f3f4f6; padding: 0.08em 0.28em; border-radius: 3px;
+  }
+  pre {
+    background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 5px;
+    padding: 0.55em 0.75em; overflow-x: auto; page-break-inside: avoid;
+    font-size: 8pt; line-height: 1.4; white-space: pre-wrap; word-break: break-all;
+  }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  table {
+    border-collapse: collapse; width: 100%; margin: 0.55em 0;
+    font-size: 9pt; page-break-inside: avoid; table-layout: fixed;
+  }
+  th, td {
+    border: 1px solid #d1d5db; padding: 0.3em 0.4em;
+    text-align: left; vertical-align: top; word-break: break-word;
+  }
+  th { background: #fce7f3; font-weight: 600; }
+  tr:nth-child(even) td { background: #fafafa; }
+  ul, ol { margin: 0.35em 0; padding-left: 1.35em; }
+  li { margin: 0.15em 0; page-break-inside: avoid; }
+  li input[type="checkbox"] { margin-right: 0.35em; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 1em 0; }
+  .cover {
+    text-align: center; padding: 32mm 8mm 18mm;
+    page-break-after: always; break-after: page;
+  }
+  .cover h1 {
+    border: none; font-size: 24pt; break-before: auto; page-break-before: auto;
+    color: #9F1239; margin: 0.3em 0;
+  }
+  .cover .badge { color: #9F1239; font-weight: 700; letter-spacing: 0.06em; font-size: 11pt; }
+  .cover .sub { font-size: 12.5pt; margin: 0.5em 0 1em; }
+  .cover .meta { color: #666; font-size: 10pt; margin: 0.25em 0; }
+  .doc-body h1:first-child { break-before: auto; page-break-before: auto; }
+</style>
+</head>
+<body>
+  <div class="cover">
+    <p class="meta">VIS iGEM 2026 · Team 6423 · Cadture</p>
+    <p class="badge">FOR STUDENTS</p>
+    <h1>學生講義</h1>
+    <p class="sub">14 次 × 3 小時 · Wiki 製作課程</p>
+    <hr style="width:40%;margin:1.2em auto;border-top:2px solid #9F1239" />
+    <p class="meta">內容基準：https://2026.igem.wiki/vis/</p>
+    <p class="meta">線上課堂：/class</p>
+    <p class="meta" style="margin-top:1.5em">A4 · 建議雙面列印</p>
+  </div>
+  <div class="doc-body">
+  <h1 class="part">一、課表與常用檢查</h1>
+<h2>1. 一頁課表</h2>
+<p><strong>課程名稱：</strong> 做我們的 iGEM Team Wiki（Cadture）<br><strong>時間：</strong> 14 次 × 3 小時  </p>
+<ol>
+<li>架環境、認識 wiki  </li>
+<li>HTML  </li>
+<li>CSS 與風格  </li>
+<li>Markdown 改內容  </li>
+<li>Git 與誠信  </li>
+<li>網址與 Next 資料夾  </li>
+<li>選單與頁尾  </li>
+<li>元件與內容怎麼變成網頁  </li>
+<li>首頁資料  </li>
+<li>設計與手機版  </li>
+<li>自己加一頁  </li>
+<li>圖、英文、好讀  </li>
+<li>檢查表與上線概念  </li>
+<li>發表會</li>
+</ol>
+<p><strong>你會一點 JS：</strong> 物件／陣列會在選單與列表裡一直出現；元件≈會 return 畫面的 function。  </p>
+<p><strong>你每天最少會的技能：</strong> 改 <code>content</code> 裡的檔 → 存檔 → 重新整理瀏覽器。  </p>
+<p><strong>鐵律：</strong> 英文上站、不造假、路徑不亂改、照片要同意。  </p>
+<hr>
+<h2>2. 品質／iGEM 檢查表（第 13 次與期末用）</h2>
+<h3>A. 內容</h3>
+<ul>
+<li>☐ 英文為主，專有名詞一致（Cadture、Pb、Cd）  </li>
+<li>☐ 無未經確認的實驗數據  </li>
+<li>☐ Description / Engineering / HP / Contribution / Team 有人負責  </li>
+<li>☐ 圖片有說明與來源</li>
+</ul>
+<h3>B. 結構</h3>
+<ul>
+<li>☐ 導覽連結皆可點  </li>
+<li>☐ 重要路徑未隨意改名  </li>
+<li>☐ 新增頁有 md + page + nav</li>
+</ul>
+<h3>C. 技術</h3>
+<ul>
+<li>☐ <code>npm run dev</code> 正常  </li>
+<li>☐ <code>npm run build</code> 通過（或已知錯誤有紀錄）  </li>
+<li>☐ 無明顯破版（手機寬度粗查）</li>
+</ul>
+<h3>D. 競賽意識</h3>
+<ul>
+<li>☐ 知道 freeze 後不能大改  </li>
+<li>☐ 知道正式托管與本機預覽不同  </li>
+<li>☐ 知道 Attributions 要用官方格式</li>
+</ul>
+<hr>
+<h2>3. JS 與本站對照</h2>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>在 Cadture 專案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>物件 <code>{ a: 1 }</code></td>
+<td><code>nav.ts</code> 一筆選單、md front matter</td>
+</tr>
+<tr>
+<td>陣列 <code>[...]</code></td>
+<td><code>children</code>、home 的 problems/solution</td>
+</tr>
+<tr>
+<td><code>.map</code></td>
+<td>首頁列表渲染</td>
+</tr>
+<tr>
+<td><code>function</code> + <code>return</code></td>
+<td><code>page.tsx</code>、各 Component</td>
+</tr>
+<tr>
+<td>參數</td>
+<td>props（如 <code>slug=&quot;description&quot;</code>）</td>
+</tr>
+<tr>
+<td><code>import</code> / <code>export</code></td>
+<td>跨檔使用 WikiPage、圖示</td>
+</tr>
+<tr>
+<td>字串</td>
+<td>網址 path、title、錯誤訊息</td>
+</tr>
+<tr>
+<td>除錯</td>
+<td>終端機紅字、漏逗號、路徑不一致</td>
+</tr>
+</tbody></table>
+<hr>
+<hr>
+<h1 class="part">二、學習地圖與操作基礎</h1>
+<p><em>課程總覽：我們要學會『做出這個網站』</em></p>
+<hr>
+<h2>1. 這門課到底在訓練什麼？</h2>
+<h3>1.1 請老師先對學生說（建議照念或改寫）</h3>
+<blockquote>
+<p>我們不是只學「怎麼改幾個英文字」。<br>我們要搞懂：<strong>這個 Cadture Wiki 是怎麼做出來的</strong>。<br>結束時你要能：啟動專案、改內容、加一頁、解釋程式怎麼把 Markdown 變成網頁，而且不造假數據。</p>
+</blockquote>
+<h3>1.2 錯誤期待 vs 正確期待（投影討論 10 分）</h3>
+<p>請學生兩兩討論後分享：</p>
+<table>
+<thead>
+<tr>
+<th>不夠的狀態</th>
+<th>本課程要的狀態</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>會打開 md 改一行</td>
+<td>知道 md 被哪個程式讀走</td>
+</tr>
+<tr>
+<td>會複製別人的 page.tsx</td>
+<td>能解釋每一行在幹嘛</td>
+</tr>
+<tr>
+<td>本機好看就好</td>
+<td>會跑 build、會檢查連結</td>
+</tr>
+<tr>
+<td>頁面很多就好</td>
+<td>路徑穩定、內容誠實</td>
+</tr>
+</tbody></table>
+<p><strong>停下來確認（老師問全班）：</strong><br>「如果只會改 md，算不算這門課及格？」→ 引導到：不夠，還要結構與系統。</p>
+<hr>
+<h2>2. 三層能力模型（請學生畫在筆記本正中央）</h2>
+<pre><code class="language-text">┌──────────────────────────────────────────────┐
+│  系統層 System                                 │
+│  元件、讀檔、渲染、樣式引擎、build、部署概念        │
+├──────────────────────────────────────────────┤
+│  結構層 Structure                              │
+│  網址（路由）、page.tsx、nav 選單資料              │
+├──────────────────────────────────────────────┤
+│  內容層 Content                                │
+│  Markdown、英文、誠信、對齊官方站                  │
+└──────────────────────────────────────────────┘
+</code></pre>
+<h3>2.1 對照練習（15 分，務必做）</h3>
+<p>老師報任務，學生舉牌或口頭答「碰哪一層」：</p>
+<table>
+<thead>
+<tr>
+<th>任務</th>
+<th>答案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>改 Description 某段英文</td>
+<td>內容</td>
+</tr>
+<tr>
+<td>讓 /hello 這個網址存在</td>
+<td>結構</td>
+</tr>
+<tr>
+<td>解釋 WikiPage 做什麼</td>
+<td>系統</td>
+</tr>
+<tr>
+<td>選單多一個項目</td>
+<td>結構（nav 資料）</td>
+</tr>
+<tr>
+<td>改首頁三張 Problem 卡文案</td>
+<td>內容（home.md）</td>
+</tr>
+<tr>
+<td>改卡片圓角</td>
+<td>系統／表現（class）</td>
+</tr>
+<tr>
+<td>git commit</td>
+<td>工程流程（跨層）</td>
+</tr>
+</tbody></table>
+<h3>2.2 對應檔案（請學生抄表）</h3>
+<table>
+<thead>
+<tr>
+<th>層</th>
+<th>主要路徑</th>
+<th>第幾次會深挖</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>內容</td>
+<td><code>content/home.md</code>、<code>content/pages/*.md</code></td>
+<td>4、9、12</td>
+</tr>
+<tr>
+<td>結構</td>
+<td><code>src/app/**/page.tsx</code>、<code>src/data/nav.ts</code></td>
+<td>6、7、11</td>
+</tr>
+<tr>
+<td>系統</td>
+<td><code>src/lib/content.ts</code>、<code>WikiPage</code>、<code>MarkdownBody</code>、<code>layout</code></td>
+<td>8、9、10、13</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>3. 本站是怎麼做出來的？（全貌講解 15–20 分）</h2>
+<h3>3.1 技術零件表</h3>
+<table>
+<thead>
+<tr>
+<th>技術</th>
+<th>角色</th>
+<th>學生要會到什麼程度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Next.js App Router</td>
+<td>資料夾對應網址</td>
+<td>會對、會新增 page</td>
+</tr>
+<tr>
+<td>React 元件</td>
+<td>函式回傳畫面</td>
+<td>會讀、會改 props 小字</td>
+</tr>
+<tr>
+<td>TypeScript</td>
+<td>型別提示</td>
+<td>會看、不要求寫複雜 type</td>
+</tr>
+<tr>
+<td>Tailwind</td>
+<td>class 控樣式</td>
+<td>會猜、會改間距顏色</td>
+</tr>
+<tr>
+<td>Markdown + gray-matter</td>
+<td>內容與 front matter</td>
+<td>會編、會修壞掉的 ---</td>
+</tr>
+<tr>
+<td>react-markdown</td>
+<td>md→HTML</td>
+<td>知道它在管線裡</td>
+</tr>
+</tbody></table>
+<h3>3.2 一次請求完整故事（請慢講、可講兩遍）</h3>
+<p>以使用者開啟 <code>/engineering</code>：</p>
+<ol>
+<li>瀏覽器向本機伺服器要 <code>/engineering</code>  </li>
+<li>Next 找到 <code>src/app/engineering/page.tsx</code>  </li>
+<li>執行裡面的 <code>Page</code> 函式元件  </li>
+<li>它 return：<code>&lt;WikiPage slug=&quot;engineering&quot; /&gt;</code>  </li>
+<li><code>WikiPage</code> 呼叫 <code>getPageBySlug(&quot;engineering&quot;)</code>  </li>
+<li>程式讀取檔案 <code>content/pages/engineering.md</code>  </li>
+<li>用 gray-matter 拆成：  <ul>
+<li><code>frontmatter</code>（title、subtitle…）  </li>
+<li><code>body</code>（正文 Markdown 字串）</li>
+</ul>
+</li>
+<li><code>PageHero</code> 用 frontmatter 畫大標區  </li>
+<li><code>MarkdownBody</code> 把 body 變成真正的標題、段落、表格  </li>
+<li>外層 <code>layout.tsx</code> 早已包好 Navbar、Footer  </li>
+<li>完整頁面出現在瀏覽器</li>
+</ol>
+<p><strong>停下來確認：</strong> 抽 3 位學生，一人講 1–4 步、一人 5–8、一人 9–11。</p>
+<h3>3.3 首頁為什麼不一樣？（5–8 分）</h3>
+<table>
+<thead>
+<tr>
+<th>頁種類</th>
+<th>內容從哪來</th>
+<th>畫面誰排</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文件頁（如 /team）</td>
+<td>一篇 <code>pages/*.md</code></td>
+<td><code>WikiPage</code></td>
+</tr>
+<tr>
+<td>首頁 <code>/</code></td>
+<td><code>home.md</code> 的 YAML 清單</td>
+<td><code>src/app/page.tsx</code> 自己 <code>.map</code></td>
+</tr>
+</tbody></table>
+<p>首頁順序（對齊官方 <a href="https://2026.igem.wiki/vis/%EF%BC%89%EF%BC%9A">https://2026.igem.wiki/vis/）：</a></p>
+<ol>
+<li>The Problem  </li>
+<li>Our Solution  </li>
+<li>Project Highlights  </li>
+<li>Towards a Sustainable Future  </li>
+<li>Human Practices  </li>
+<li>Engineering Cycle  </li>
+<li>Meet Our Team</li>
+</ol>
+<hr>
+<h2>4. 14 次學習路徑（帶讀 10 分）</h2>
+<table>
+<thead>
+<tr>
+<th>階段</th>
+<th>次</th>
+<th>你要帶走的能力</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>奠基</td>
+<td>1</td>
+<td>跑起專案、三層模型、官方對照</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>HTML/DOM 樹、JS 改節點</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>CSS token、class 狀態→接 Tailwind</td>
+</tr>
+<tr>
+<td>內容</td>
+<td>4</td>
+<td>md 管線 + 追到程式</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>Git 工作流 + 誠信</td>
+</tr>
+<tr>
+<td>系統</td>
+<td>6</td>
+<td>路由與 page.tsx</td>
+</tr>
+<tr>
+<td></td>
+<td>7</td>
+<td>nav 資料驅動</td>
+</tr>
+<tr>
+<td></td>
+<td>8</td>
+<td>元件引擎精讀（高點）</td>
+</tr>
+<tr>
+<td></td>
+<td>9</td>
+<td>首頁組裝</td>
+</tr>
+<tr>
+<td>打造</td>
+<td>10</td>
+<td>設計系統</td>
+</tr>
+<tr>
+<td></td>
+<td>11</td>
+<td>總裝一頁（硬驗收）</td>
+</tr>
+<tr>
+<td></td>
+<td>12</td>
+<td>產品品質</td>
+</tr>
+<tr>
+<td></td>
+<td>13</td>
+<td>build 與交付</td>
+</tr>
+<tr>
+<td></td>
+<td>14</td>
+<td>發表：證明會做</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>5. 學期過關標準（印給學生）</h2>
+<p>結束時你必須<strong>獨立</strong>做到：</p>
+<ol>
+<li>啟動 <code>npm run dev</code> 並說明三個資料夾  </li>
+<li>修改一頁 md 並驗證  </li>
+<li>新增一頁（md + page + nav）並解釋為何三步  </li>
+<li>在程式裡指認：<code>page.tsx</code>、<code>nav.ts</code>、<code>getPageBySlug</code>、<code>WikiPage</code>  </li>
+<li>口述 <code>/engineering</code> 請求流程（可看自己畫的圖）  </li>
+<li>說明首頁 YAML 與 <code>.map</code>  </li>
+<li>跑過 <code>npm run build</code>  </li>
+<li>遵守誠信與官方對齊</li>
+</ol>
+<p><strong>只會第 2 項 → 未過關。</strong></p>
+<hr>
+<h2>6. 內容層速查（改文字時用）</h2>
+<table>
+<thead>
+<tr>
+<th>網址</th>
+<th>檔案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/</code></td>
+<td><code>content/home.md</code></td>
+</tr>
+<tr>
+<td><code>/description</code></td>
+<td><code>content/pages/description.md</code></td>
+</tr>
+<tr>
+<td>其他內頁</td>
+<td><code>content/pages/&lt;同名&gt;.md</code></td>
+</tr>
+</tbody></table>
+<pre><code class="language-bash">npm run dev
+# 改檔 → 存檔 → 重新整理
+</code></pre>
+<p>逐步細節見 <strong>第 4 次</strong> 教材。</p>
+<hr>
+<h2>7. 老師如何避免「講太快」</h2>
+<ol>
+<li>每個「停下來確認」真的停 1–2 分鐘。  </li>
+<li>每個完整步驟至少抽 2 組螢幕給全班看。  </li>
+<li>寧可少講下一單元，也要讓 80% 學生做完檢查表。  </li>
+<li>進度快的人做「加分／除錯劇本」，不要直接往下趕課。  </li>
+<li>第 6、8、11 次預設會超時——後面各留彈性，或壓縮第 3 次展示時間。</li>
+</ol>
+<hr>
+<h2>8. 相關連結</h2>
+<ul>
+<li>課表：<code>/class</code>  </li>
+<li>第 1 次：<code>/class/session-01</code>  </li>
+<li>老師詳細備課：<code>docs/curriculum/LESSON_PLAN_14.md</code></li>
+</ul>
+<hr>
+<h1 class="part">三、第 1–14 次課堂講義</h1>
+<p>每堂含：學習目標、分鐘表、完整步驟、完成檢查表、作業。</p>
+<h2 class="session">第 1 次｜專案啟動與網站全貌</h2>
+<p><em>跑起來、看懂目錄、建立三層心智模型（放慢版）</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>成功啟動專案並排除至少一種常見錯誤</li>
+<li>畫出內容／結構／系統三層圖</li>
+<li>對照官方站完成七段首頁檢查表</li>
+<li>用 JS 物件描述一筆選單資料</li>
+</ul>
+<hr>
+<h2>0. 分鐘表（請投影）</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>做什麼</th>
+<th>產出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–15</td>
+<td>破冰：你心目中「會做網站」是什麼</td>
+<td>便利貼 1 張</td>
+</tr>
+<tr>
+<td>15–35</td>
+<td>課程目標與三層模型導讀</td>
+<td>筆記本中央圖</td>
+</tr>
+<tr>
+<td>35–75</td>
+<td>安裝與啟動（巡堂）</td>
+<td>localhost 截圖</td>
+</tr>
+<tr>
+<td>75–85</td>
+<td>休息</td>
+<td></td>
+</tr>
+<tr>
+<td>85–120</td>
+<td>官方站 vs 本站首頁七段</td>
+<td>對照表填完</td>
+</tr>
+<tr>
+<td>120–150</td>
+<td>資料夾地圖導覽 + 問答</td>
+<td>樹狀圖</td>
+</tr>
+<tr>
+<td>150–170</td>
+<td>JS 物件練習</td>
+<td>小程式可跑</td>
+</tr>
+<tr>
+<td>170–180</td>
+<td>檢查表、作業</td>
+<td>勾完</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>1. 開場討論（15 分）— 老師引導語</h2>
+<blockquote>
+<p>問題 1：做一個「會改文字的網頁」和「理解網站怎麼做」差在哪？<br>問題 2：如果只有一個人會改 code，iGEM 衝刺期會發生什麼事？</p>
+</blockquote>
+<p>請 2–3 組分享。老師總結：本課要培養<strong>可交接的建造能力</strong>。</p>
+<hr>
+<h2>2. 我們要做的網站是什麼？（10 分）</h2>
+<h3>2.1 專案事實（請學生抄）</h3>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>隊伍</td>
+<td>VIS iGEM 2026 · 6423</td>
+</tr>
+<tr>
+<td>專案名</td>
+<td>Cadture</td>
+</tr>
+<tr>
+<td>主題</td>
+<td>Pb、Cd 與廢水</td>
+</tr>
+<tr>
+<td>官方站</td>
+<td><a href="https://2026.igem.wiki/vis/">https://2026.igem.wiki/vis/</a></td>
+</tr>
+<tr>
+<td>本專案</td>
+<td>可教學、可維護的實作站</td>
+</tr>
+</tbody></table>
+<h3>2.2 兩個網址</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>官方站</th>
+<th>本機站</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>網址</td>
+<td>2026.igem.wiki/vis</td>
+<td>localhost:3000</td>
+</tr>
+<tr>
+<td>角色</td>
+<td>內容基準、線上版</td>
+<td>學習建造與日常改稿</td>
+</tr>
+<tr>
+<td>今天</td>
+<td>對照</td>
+<td>必須跑起來</td>
+</tr>
+</tbody></table>
+<p><strong>停下來確認：</strong> 抽問「內容要以誰為準？」→ 官方 + 隊上確認。</p>
+<hr>
+<h2>3. 完整步驟：啟動專案（放慢，逐步勾）</h2>
+<h3>步驟 1｜檢查 Node（每人）</h3>
+<pre><code class="language-bash">node -v
+npm -v
+</code></pre>
+<ul>
+<li>成功：出現 <code>v18</code>/<code>v20</code>/<code>v22</code> 之類  </li>
+<li>失敗：安裝 Node LTS → <strong>關掉終端機重開</strong> → 再打一次</li>
+</ul>
+<p>老師巡堂：看到紅字先別急著幫打指令，讓學生念出錯誤第一行。</p>
+<h3>步驟 2｜進入專案根目錄</h3>
+<pre><code class="language-bash">pwd
+ls
+</code></pre>
+<p>必須看得到 <code>package.json</code>、<code>src</code>、<code>content</code>。<br>若沒有：<code>cd</code> 進錯層了。</p>
+<h3>步驟 3｜安裝依賴</h3>
+<pre><code class="language-bash">npm install
+</code></pre>
+<p><strong>期間任務（寫在黑板上）：</strong><br>打開官方站，開始填第 4 節對照表前半。</p>
+<h3>步驟 4｜啟動開發伺服器</h3>
+<pre><code class="language-bash">npm run dev
+</code></pre>
+<p>看到 <code>Local: http://localhost:3000</code> 之類訊息。</p>
+<h3>步驟 5｜瀏覽器驗證清單</h3>
+<p>請學生逐項打勾：</p>
+<ul>
+<li>☐ 標題有 Cadture  </li>
+<li>☐ 有 The Problem 區塊  </li>
+<li>☐ 有 Our Solution 五步  </li>
+<li>☐ 上方選單有 Project / Wet Lab 等  </li>
+<li>☐ 有 Course 可進教材</li>
+</ul>
+<h3>步驟 6｜失敗劇本演練（全班一起看一種）</h3>
+<p>老師可示範或口述：</p>
+<table>
+<thead>
+<tr>
+<th>錯誤訊息關鍵字</th>
+<th>原因</th>
+<th>學生動作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>command not found</code></td>
+<td>沒裝 Node／PATH</td>
+<td>重裝、重開終端</td>
+</tr>
+<tr>
+<td><code>ENOENT package.json</code></td>
+<td>目錄錯</td>
+<td><code>cd</code> 到有 package.json</td>
+</tr>
+<tr>
+<td><code>EADDRINUSE 3000</code></td>
+<td>port 占用</td>
+<td>換 3001 或關掉舊 process</td>
+</tr>
+<tr>
+<td>install 權限</td>
+<td>環境限制</td>
+<td>換路徑、問老師</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>4. 官方站對照（放慢 35 分）</h2>
+<h3>4.1 並排視窗</h3>
+<p>左：官方 <a href="https://2026.igem.wiki/vis/">https://2026.igem.wiki/vis/</a><br>右：localhost:3000  </p>
+<h3>4.2 七段順序（一起念兩次）</h3>
+<ol>
+<li>The Problem  </li>
+<li>Our Solution  </li>
+<li>Project Highlights  </li>
+<li>Towards a Sustainable Future  </li>
+<li>Human Practices  </li>
+<li>Engineering Cycle  </li>
+<li>Meet Our Team</li>
+</ol>
+<h3>4.3 填表（每人）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>區塊</th>
+<th>官方有無</th>
+<th>本機有無</th>
+<th>一句英文關鍵句（抄）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Problem</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Solution</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Highlights</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sustainable</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>HP</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Engineering</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Team</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>4.4 討論題（5 分）</h3>
+<p>「本機視覺比較可愛，能不能改掉官方的 Solution 五步名稱？」<br>引導：可以討論 UI，但<strong>故事骨架與宣稱</strong>要對齊／經確認。</p>
+<hr>
+<h2>5. 資料夾地圖（逐層，25 分）</h2>
+<p>老師每開一層就問：</p>
+<h3>5.1 <code>content/</code></h3>
+<blockquote>
+<p>這裡全刪會怎樣？→ 頁面沒字或爆錯，但路由殼可能還在。</p>
+</blockquote>
+<h3>5.2 <code>src/app/</code></h3>
+<blockquote>
+<p>這裡的資料夾名跟網址什麼關係？→ 幾乎一一對應。</p>
+</blockquote>
+<h3>5.3 <code>src/components/</code></h3>
+<blockquote>
+<p>像樂高積木；Navbar 壞了會怎樣？→ 可能全站沒選單。</p>
+</blockquote>
+<h3>5.4 <code>src/data/nav.ts</code></h3>
+<blockquote>
+<p>這是資料不是畫面；改這裡選單文字會變。</p>
+</blockquote>
+<h3>5.5 <code>src/lib/content.ts</code></h3>
+<blockquote>
+<p>讀 md 的橋樑——第 8 次會拆。</p>
+</blockquote>
+<h3>5.6 學生作業：畫樹</h3>
+<p>限時 8 分，畫出至少：</p>
+<pre><code class="language-text">iGemSite
+├── content
+├── src/app
+├── src/components
+└── src/data
+</code></pre>
+<p>並在旁邊標：內容 / 結構 / 系統。</p>
+<hr>
+<h2>6. JS 暖身：選單物件（20–25 分）</h2>
+<h3>6.1 為什麼現在練？</h3>
+<p>因為第 7 次要改真的 <code>nav.ts</code>，結構一模一樣。</p>
+<h3>6.2 完整程式（請學生手打）</h3>
+<p><code>practice/session01-nav.js</code>：</p>
+<pre><code class="language-js">// 一筆選單 = 一個物件
+const descriptionItem = {
+  label: &quot;Description&quot;,
+  href: &quot;/description&quot;,
+  desc: &quot;Background and problem&quot;,
+};
+
+// 多筆 = 陣列
+const projectChildren = [
+  descriptionItem,
+  {
+    label: &quot;Engineering&quot;,
+    href: &quot;/engineering&quot;,
+    desc: &quot;Design → Build → Test → Learn&quot;,
+  },
+  {
+    label: &quot;Results&quot;,
+    href: &quot;/results&quot;,
+    desc: &quot;Experimental results&quot;,
+  },
+];
+
+// 掃過每一筆（之後 React 的 map 很像這個）
+for (let i = 0; i &lt; projectChildren.length; i++) {
+  const item = projectChildren[i];
+  console.log(i + 1, item.label, &quot;→&quot;, item.href);
+}
+
+// 進階一點：用 for...of
+console.log(&quot;---&quot;);
+for (const item of projectChildren) {
+  console.log(item.label + &quot;: &quot; + item.desc);
+}
+</code></pre>
+<pre><code class="language-bash">node practice/session01-nav.js
+</code></pre>
+<h3>6.3 延伸（進度快的人）</h3>
+<p>把 <code>projectChildren</code> 改成函式 <code>printMenu(items)</code> 包起來再呼叫。</p>
+<h3>6.4 停下來確認</h3>
+<p>抽問：<code>href</code> 是什麼？少了會怎樣？<code>desc</code> 給誰看？</p>
+<hr>
+<h2>7. 本堂完成檢查表（下課前 10 分互查）</h2>
+<ul>
+<li>☐ node/npm 有版本  </li>
+<li>☐ 首頁截圖已交  </li>
+<li>☐ 七段對照表填完  </li>
+<li>☐ 三層圖有畫  </li>
+<li>☐ nav 小程式有跑出輸出  </li>
+<li>☐ 能用一句話說 content 與 app 差別</li>
+</ul>
+<h2>8. 回家作業（寫清楚截止）</h2>
+<ol>
+<li><strong>必做：</strong> 150 字：「這個網站不是單一 HTML 檔，而是……」  </li>
+<li><strong>必做：</strong> 背七段首頁順序（下堂抽背）  </li>
+<li><strong>必做：</strong> 讀 <code>/class/how-to-edit</code> 課程總覽  </li>
+<li><strong>選做：</strong> 為 5 個內頁寫「網址 ↔ 你猜的資料夾」</li>
+</ol>
+<h2>9. 下一堂預告（留 2 分）</h2>
+<p>我們會做出「會動的 HTML 樹」，因為 React 元件本質是在描述那棵樹。</p>
+<h2 class="session">第 2 次｜網頁的結構：HTML 與 DOM</h2>
+<p><em>畫面是一棵樹——為理解 React／Next 打底（放慢版）</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>手刻完整 HTML 並解釋每個主要標籤</li>
+<li>畫出 DOM 樹並指出父子關係</li>
+<li>用 JS 完成改文字、新增節點、讀取列表</li>
+<li>對照正式站：為何不把長文寫死在 HTML</li>
+</ul>
+<hr>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–10</td>
+<td>抽背首頁七段 + 本堂目標</td>
+</tr>
+<tr>
+<td>10–50</td>
+<td>手刻 HTML（分段檢查）</td>
+</tr>
+<tr>
+<td>50–60</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>60–90</td>
+<td>畫 DOM 樹 + 互批</td>
+</tr>
+<tr>
+<td>90–140</td>
+<td>JS 三段操作</td>
+</tr>
+<tr>
+<td>140–165</td>
+<td>對照 Cadture 正式站討論</td>
+</tr>
+<tr>
+<td>165–180</td>
+<td>檢查表與作業</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>1. 連結上堂（5 分）</h2>
+<p>問：<code>content/</code> 是哪一層？<code>src/app/</code> 呢？<br>再問：今天的 HTML 練習主要對應「瀏覽器裡的什麼？」→ <strong>DOM 樹／結構</strong>。</p>
+<hr>
+<h2>2. 建立練習資料夾（完整步驟）</h2>
+<h3>步驟 1</h3>
+<p>在磁碟建立：</p>
+<pre><code class="language-text">practice/session-02/
+</code></pre>
+<h3>步驟 2</h3>
+<p>稍後會有三個檔：</p>
+<pre><code class="language-text">index.html
+main.js
+styles.css   ← 可下堂再補，本堂可不做 css
+</code></pre>
+<h3>步驟 3</h3>
+<p>用 VS Code「打開資料夾」指到 <code>session-02</code>，避免存錯地方。</p>
+<hr>
+<h2>3. HTML 分段建造（40 分）</h2>
+<h3>階段 A｜最小可開檔（10 分）</h3>
+<p>先只做到 body 有 h1，就用瀏覽器打開確認：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;Cadture Structure Practice&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 id=&quot;site-title&quot;&gt;Cadture&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>檢查點 A：</strong> 雙擊開得起來、看得到 Cadture。</p>
+<h3>階段 B｜補齊骨架（15 分）</h3>
+<p>加入 <code>header</code>、<code>nav</code>、<code>main</code>、<code>footer</code>。老師說明語意：不是為了好看，是為了<strong>結構可讀、之後好對應元件名稱</strong>。</p>
+<h3>階段 C｜放入官方故事的小樣本（15 分）</h3>
+<p>Problem 三點、Solution 五步（英文用官方句，加深印象）。</p>
+<p>完整參考（學生可對照，但鼓勵先自己打）：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Cadture Structure Practice&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1 id=&quot;site-title&quot;&gt;Cadture&lt;/h1&gt;
+      &lt;p id=&quot;tagline&quot;&gt;Structure practice for building the real wiki&lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;nav aria-label=&quot;Practice&quot;&gt;
+      &lt;a href=&quot;#problem&quot;&gt;Problem&lt;/a&gt; |
+      &lt;a href=&quot;#solution&quot;&gt;Solution&lt;/a&gt;
+    &lt;/nav&gt;
+
+    &lt;main&gt;
+      &lt;section id=&quot;problem&quot;&gt;
+        &lt;h2&gt;The Problem&lt;/h2&gt;
+        &lt;ul id=&quot;problem-list&quot;&gt;
+          &lt;li data-key=&quot;pb&quot;&gt;Lead Pollution&lt;/li&gt;
+          &lt;li data-key=&quot;cd&quot;&gt;Cadmium Threat&lt;/li&gt;
+          &lt;li data-key=&quot;water&quot;&gt;Wastewater Challenge&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/section&gt;
+
+      &lt;section id=&quot;solution&quot;&gt;
+        &lt;h2&gt;Our Solution&lt;/h2&gt;
+        &lt;ol id=&quot;solution-list&quot;&gt;
+          &lt;li&gt;Detection&lt;/li&gt;
+          &lt;li&gt;Capture&lt;/li&gt;
+          &lt;li&gt;Sequestration&lt;/li&gt;
+          &lt;li&gt;Removal&lt;/li&gt;
+          &lt;li&gt;Clean Water&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/section&gt;
+
+      &lt;button type=&quot;button&quot; id=&quot;btn-title&quot;&gt;Rename title&lt;/button&gt;
+      &lt;button type=&quot;button&quot; id=&quot;btn-add&quot;&gt;Add note node&lt;/button&gt;
+      &lt;button type=&quot;button&quot; id=&quot;btn-read&quot;&gt;Read solution steps to console&lt;/button&gt;
+      &lt;div id=&quot;note-area&quot;&gt;&lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+      &lt;small&gt;Practice DOM — foundation for understanding React components.&lt;/small&gt;
+    &lt;/footer&gt;
+
+    &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>檢查點 C：</strong> 不靠 JS 也能完整閱讀問題與解法列表。</p>
+<hr>
+<h2>4. DOM 樹作業（30 分，可放慢）</h2>
+<h3>4.1 示範畫法</h3>
+<p>老師在白板上從 <code>body</code> 往下畫 3 層。</p>
+<h3>4.2 學生必交</h3>
+<p>畫出包含：<code>header</code>、<code>main</code>、<code>#solution-list</code> 與其下 5 個 <code>li</code>。</p>
+<h3>4.3 互批問題（两人一组）</h3>
+<ol>
+<li><code>#btn-add</code> 的父節點是？  </li>
+<li>第一個 <code>section</code> 的前一個兄弟大致是？  </li>
+<li>若把 <code>script</code> 放到 <code>head</code> 且不延遲，可能有什麼問題？</li>
+</ol>
+<hr>
+<h2>5. JS 三段式（分段做，每段驗收）</h2>
+<p>建立 <code>main.js</code>。</p>
+<h3>練習 1｜改文字（10 分）</h3>
+<pre><code class="language-js">const titleEl = document.querySelector(&quot;#site-title&quot;);
+const btnTitle = document.querySelector(&quot;#btn-title&quot;);
+
+console.log(&quot;titleEl =&quot;, titleEl);
+
+btnTitle.addEventListener(&quot;click&quot;, function () {
+  titleEl.textContent = &quot;Cadture (edited via DOM)&quot;;
+});
+</code></pre>
+<p><strong>驗收：</strong> Console 不是 null；按鈕可改標題。</p>
+<h3>練習 2｜新增節點（10 分）</h3>
+<pre><code class="language-js">const btnAdd = document.querySelector(&quot;#btn-add&quot;);
+const noteArea = document.querySelector(&quot;#note-area&quot;);
+
+btnAdd.addEventListener(&quot;click&quot;, function () {
+  const p = document.createElement(&quot;p&quot;);
+  p.textContent =
+    &quot;In the real Cadture site, long text usually lives in Markdown files under content/.&quot;;
+  noteArea.appendChild(p);
+});
+</code></pre>
+<p><strong>驗收：</strong> 每按一次多一段（可討論要不要先清空）。</p>
+<h3>練習 3｜讀列表到陣列（15 分）</h3>
+<pre><code class="language-js">const btnRead = document.querySelector(&quot;#btn-read&quot;);
+const solutionList = document.querySelector(&quot;#solution-list&quot;);
+
+btnRead.addEventListener(&quot;click&quot;, function () {
+  const steps = [];
+  const items = solutionList.querySelectorAll(&quot;li&quot;);
+  items.forEach(function (li) {
+    steps.push(li.textContent.trim());
+  });
+  console.log(&quot;Solution steps array:&quot;, steps);
+  console.log(&quot;Length =&quot;, steps.length);
+  alert(&quot;Read &quot; + steps.length + &quot; steps. Check console.&quot;);
+});
+</code></pre>
+<p><strong>驗收：</strong> Console 有 5 個字串。<br><strong>連結下下堂：</strong> 這就像把資料拿出來；正式站是資料先存在 md，再被 map 成畫面。</p>
+<hr>
+<h2>6. 對照正式站（20 分討論＋筆記）</h2>
+<p>打開 localhost Cadture 首頁。</p>
+<table>
+<thead>
+<tr>
+<th>練習頁</th>
+<th>正式站</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>步驟寫死在 HTML</td>
+<td>步驟在 <code>content/home.md</code> 的 <code>solution</code></td>
+</tr>
+<tr>
+<td>自己 appendChild</td>
+<td>React 依資料重新渲染</td>
+</tr>
+<tr>
+<td>單檔</td>
+<td>多檔分層協作</td>
+</tr>
+</tbody></table>
+<p><strong>書面題（交）：</strong> 用 80–120 字說明「為什麼正式站不把全部英文寫死在一個 HTML？」</p>
+<hr>
+<h2>7. 完成檢查表</h2>
+<ul>
+<li>☐ HTML 三階段都通過  </li>
+<li>☐ DOM 樹有畫且互批  </li>
+<li>☐ JS 三練習都成功  </li>
+<li>☐ 書面對照題完成</li>
+</ul>
+<h2>8. 回家</h2>
+<ol>
+<li>補畫「你猜的」<code>/description</code> 頁結構樹  </li>
+<li>下堂會對到 <code>PageHero</code>、文章區等真實元件名稱</li>
+</ol>
+<h2>9. 下一堂</h2>
+<p>CSS 變數與 class 狀態——設計系統的最小版，接到 Tailwind。</p>
+<h2 class="session">第 3 次｜樣式系統入門：CSS 到 className</h2>
+<p><em>從設計 token、class 狀態，接到本站 Tailwind（放慢版）</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>用 CSS 變數做出可維護的主色與卡片</li>
+<li>用 class 表達狀態（is-active）</li>
+<li>對照 globals.css 與 page.tsx 的 class 寫法</li>
+<li>完成 RWD 粗檢查</li>
+</ul>
+<hr>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–10</td>
+<td>回顧 DOM；本堂在三層模型的位置（表現／系統）</td>
+</tr>
+<tr>
+<td>10–55</td>
+<td>寫 styles.css + 套到 session-02</td>
+</tr>
+<tr>
+<td>55–65</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>65–100</td>
+<td>class 狀態 + JS</td>
+</tr>
+<tr>
+<td>100–135</td>
+<td>對照本站 globals / page.tsx 拆 class</td>
+</tr>
+<tr>
+<td>135–165</td>
+<td>窄螢幕檢查 + 小挑戰</td>
+</tr>
+<tr>
+<td>165–180</td>
+<td>檢查表、作業</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>1. 為什麼建造網站一定要有「樣式系統」？</h2>
+<h3>1.1 討論（8 分）</h3>
+<p>若 10 個人各自選顏色：</p>
+<ul>
+<li>首頁粉紅、Description 螢光綠、Team 深藍……訪客會覺得？  </li>
+<li>iGEM 評審快速掃站時，混亂風格會怎樣？</li>
+</ul>
+<p>結論：樣式是<strong>產品一致性</strong>，不是裝飾而已。</p>
+<h3>1.2 本站品牌（請抄）</h3>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>色碼</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>background</td>
+<td><code>#FFF8F6</code></td>
+<td>頁面底</td>
+</tr>
+<tr>
+<td>primary</td>
+<td><code>#C94C67</code></td>
+<td>重點、按鈕</td>
+</tr>
+<tr>
+<td>primary-dark</td>
+<td><code>#B43852</code></td>
+<td>標題</td>
+</tr>
+<tr>
+<td>border</td>
+<td><code>#F0C4CE</code></td>
+<td>卡片邊</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>2. 完整步驟：為 session-02 加上 styles.css</h2>
+<h3>步驟 1｜建立檔案</h3>
+<p>路徑：<code>practice/session-02/styles.css</code>（與 index.html 同層）</p>
+<h3>步驟 2｜貼上完整 CSS（分段理解）</h3>
+<p><strong>第一段：變數（token）</strong></p>
+<pre><code class="language-css">:root {
+  --bg: #fff8f6;
+  --ink: #4a2f34;
+  --primary: #c94c67;
+  --primary-dark: #b43852;
+  --border: #f0c4ce;
+  --card: #ffffff;
+}
+</code></pre>
+<p><strong>停下來確認：</strong> 問「若只改 <code>--primary</code>，哪些地方應跟著變？」</p>
+<p><strong>第二段：body 基礎</strong></p>
+<pre><code class="language-css">* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+</code></pre>
+<p><strong>第三段：版面寬度</strong></p>
+<pre><code class="language-css">header, nav, main, footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+}
+
+h1 { color: var(--primary-dark); }
+h2 { color: var(--primary-dark); }
+</code></pre>
+<p><strong>第四段：卡片感列表</strong></p>
+<pre><code class="language-css">#problem-list,
+#solution-list {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 1.25rem;
+  padding: 1rem 1.25rem;
+  box-shadow: 3px 3px 0 rgba(201, 76, 103, 0.08);
+}
+
+#problem-list li {
+  padding: 0.35rem 0.25rem;
+  border-radius: 0.5rem;
+}
+</code></pre>
+<p><strong>第五段：按鈕</strong></p>
+<pre><code class="language-css">button {
+  border: 2px solid var(--primary-dark);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  margin: 0.35rem 0.35rem 0.35rem 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+</code></pre>
+<p><strong>第六段：狀態</strong></p>
+<pre><code class="language-css">.is-active {
+  outline: 3px solid var(--primary);
+  background: #fff5f8;
+}
+</code></pre>
+<h3>步驟 3｜HTML 引入</h3>
+<p>在 <code>&lt;head&gt;</code> 加：</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+</code></pre>
+<h3>步驟 4｜重新整理驗證</h3>
+<ul>
+<li>☐ 背景暖白  </li>
+<li>☐ 列表像卡片  </li>
+<li>☐ 按鈕圓角粉色</li>
+</ul>
+<h3>步驟 5｜token 實驗（10 分）</h3>
+<p>把 <code>--primary</code> 暫時改成 <code>#2f6f4e</code>，重新整理，觀察哪些變了，<strong>再改回</strong>玫瑰主色。<br>寫一句話：<code>為什麼要用變數而不是到處寫死色碼？</code></p>
+<hr>
+<h2>3. 完整步驟：class 狀態 + JS</h2>
+<h3>步驟 1｜更新 main.js 片段</h3>
+<pre><code class="language-js">const problemItems = document.querySelectorAll(&quot;#problem-list li&quot;);
+
+problemItems.forEach(function (li) {
+  li.style.cursor = &quot;pointer&quot;;
+  li.addEventListener(&quot;click&quot;, function () {
+    problemItems.forEach(function (other) {
+      other.classList.remove(&quot;is-active&quot;);
+    });
+    li.classList.add(&quot;is-active&quot;);
+    console.log(&quot;Activated:&quot;, li.textContent.trim());
+  });
+});
+</code></pre>
+<h3>步驟 2｜操作驗證</h3>
+<p>點 Lead → 只有 Lead 高亮；再點 Cadmium → 高亮轉移。</p>
+<h3>步驟 3｜觀念對照（老師慢慢講）</h3>
+<table>
+<thead>
+<tr>
+<th>你做的</th>
+<th>本站以後</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>classList.add(&quot;is-active&quot;)</code></td>
+<td>依狀態拼 <code>className</code></td>
+</tr>
+<tr>
+<td>CSS <code>.is-active</code></td>
+<td>預先寫好狀態樣式</td>
+</tr>
+<tr>
+<td>一次只亮一個</td>
+<td>單一選取 UI 邏輯</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>4. 對照本站（放慢 35 分）</h2>
+<h3>4.1 打開 <code>src/app/globals.css</code></h3>
+<p>找到 <code>:root</code> 與 <code>--primary</code>。<br>與自己的 <code>styles.css</code> 並排，圈出相似處。</p>
+<h3>4.2 打開 <code>src/app/page.tsx</code></h3>
+<p>搜尋 <code>className=</code>，挑<strong>一行最長的</strong>抄下，拆成表格：</p>
+<table>
+<thead>
+<tr>
+<th>class</th>
+<th>我猜的意思</th>
+<th>問過同學/老師後</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>…至少 8 個</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>4.3 常見 Tailwind 速查（本堂夠用）</h3>
+<table>
+<thead>
+<tr>
+<th>class</th>
+<th>意思</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>mt-4</code></td>
+<td>上外距</td>
+</tr>
+<tr>
+<td><code>p-6</code></td>
+<td>內距</td>
+</tr>
+<tr>
+<td><code>flex</code></td>
+<td>flex 配置</td>
+</tr>
+<tr>
+<td><code>grid</code></td>
+<td>網格</td>
+</tr>
+<tr>
+<td><code>gap-4</code></td>
+<td>子元素間距</td>
+</tr>
+<tr>
+<td><code>text-center</code></td>
+<td>置中</td>
+</tr>
+<tr>
+<td><code>font-bold</code></td>
+<td>粗體</td>
+</tr>
+<tr>
+<td><code>rounded-2xl</code></td>
+<td>大圓角</td>
+</tr>
+<tr>
+<td><code>border-2</code></td>
+<td>邊框</td>
+</tr>
+<tr>
+<td><code>md:grid-cols-3</code></td>
+<td>中等寬度以上 3 欄</td>
+</tr>
+<tr>
+<td><code>text-primary</code></td>
+<td>使用主題主色（本站）</td>
+</tr>
+</tbody></table>
+<h3>4.4 停下來確認</h3>
+<p>抽問：<code>md:grid-cols-3</code> 在手機上通常是幾欄？為什麼？</p>
+<hr>
+<h2>5. 窄螢幕檢查（15 分）</h2>
+<ol>
+<li>打開 localhost 首頁  </li>
+<li>DevTools → 裝置工具列  </li>
+<li>選 iPhone 寬度  </li>
+<li>記錄：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>檢查</th>
+<th>OK？</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Problem 卡片可讀</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>選單可開</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>按鈕可點</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>文字會不會溢出</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>6. 完成檢查表</h2>
+<ul>
+<li>☐ CSS 六段都理解並套用  </li>
+<li>☐ token 實驗有做並改回  </li>
+<li>☐ is-active 可演示  </li>
+<li>☐ 拆過至少 8 個本站 class  </li>
+<li>☐ 窄螢幕表填完</li>
+</ul>
+<h2>7. 回家作業</h2>
+<ol>
+<li>練習頁 vs 本站截圖各 1，寫相似 3、相異 3  </li>
+<li>讀 <code>/class/how-to-edit</code> 的「一次請求故事」預習  </li>
+<li>（選做）在 Card.tsx 圈 5 個 class</li>
+</ol>
+<h2>8. 下一堂</h2>
+<p>內容層：Markdown 是系統的<strong>輸入</strong>；要追到誰讀它。</p>
+<h2 class="session">第 4 次｜內容層：Markdown 管線實作</h2>
+<p><em>改 md、驗證畫面、追到程式——放慢到每位同學都追得到</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>獨立完成 front matter 與正文修改</li>
+<li>能追蹤 md → content.ts → WikiPage → 畫面</li>
+<li>會更新 toc 與 ## 標題 id 對應</li>
+<li>能處理至少兩種『畫面沒變／頁面壞掉』狀況</li>
+</ul>
+<hr>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–10</td>
+<td>抽背首頁七段；本堂目標</td>
+</tr>
+<tr>
+<td>10–25</td>
+<td>管線圖導讀（先講再做）</td>
+</tr>
+<tr>
+<td>25–55</td>
+<td>熱身：改 subtitle</td>
+</tr>
+<tr>
+<td>55–65</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>65–110</td>
+<td>改正文 + toc</td>
+</tr>
+<tr>
+<td>110–145</td>
+<td>追 code 三站</td>
+</tr>
+<tr>
+<td>145–170</td>
+<td>除錯關卡 + 互查</td>
+</tr>
+<tr>
+<td>170–180</td>
+<td>作業</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>1. 先講清楚：你改的是「輸入」</h2>
+<pre><code class="language-text">作者編輯 md  ──(輸入)──►  讀檔函式  ──►  元件組裝  ──►  瀏覽器
+</code></pre>
+<p>Markdown <strong>不是</strong>整個網站；它是內容層資料格式。</p>
+<hr>
+<h2>2. 課前環境檢查（5 分）</h2>
+<pre><code class="language-bash">cd 你的/iGemSite
+npm run dev
+</code></pre>
+<ul>
+<li>☐ 終端機 Ready  </li>
+<li>☐ 能開 <code>/description</code></li>
+</ul>
+<hr>
+<h2>3. 完整步驟 A｜改 front matter（放慢）</h2>
+<p>以 <code>content/pages/description.md</code> 為例（其他頁同理）。</p>
+<h3>步驟 A1｜打開檔案</h3>
+<p>VS Code 檔案樹：<code>content</code> → <code>pages</code> → <code>description.md</code></p>
+<h3>步驟 A2｜認清兩段結構</h3>
+<ol>
+<li>第 1 個 <code>---</code> 到第 2 個 <code>---</code>：設定（YAML）  </li>
+<li>之後：正文（Markdown）</li>
+</ol>
+<h3>步驟 A3｜只改 subtitle</h3>
+<p>找到：</p>
+<pre><code class="language-yaml">subtitle:
+</code></pre>
+<p>改成你的英文（練習可暫用）：</p>
+<pre><code class="language-yaml">subtitle: Why our team cares about Pb and Cd in wastewater.
+</code></pre>
+<h3>步驟 A4｜存檔</h3>
+<p>確認編輯器沒有未存檔圓點。</p>
+<h3>步驟 A5｜驗證</h3>
+<ol>
+<li>開 <code>http://localhost:3000/description</code>  </li>
+<li>重新整理  </li>
+<li>看大標下方副標</li>
+</ol>
+<h3>步驟 A6｜鄰座互查（3 分）</h3>
+<p>對方必須用手指著螢幕上「新副標」的位置。</p>
+<h3>若沒變——逐步排查（投影這張表）</h3>
+<table>
+<thead>
+<tr>
+<th>順序</th>
+<th>檢查</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>存檔了嗎？</td>
+</tr>
+<tr>
+<td>2</td>
+<td>網址是 <code>/description</code> 嗎？</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>npm run dev</code> 還在嗎？</td>
+</tr>
+<tr>
+<td>4</td>
+<td>改的是 <code>description.md</code> 不是別頁？</td>
+</tr>
+<tr>
+<td>5</td>
+<td>YAML 的 <code>subtitle:</code> 縮排是否與其他鍵對齊？</td>
+</tr>
+<tr>
+<td>6</td>
+<td>是否少了 <code>---</code>？</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>4. 完整步驟 B｜改正文並加標題</h2>
+<h3>步驟 B1｜在第二個 <code>---</code> 下方找到</h3>
+<pre><code class="language-markdown">## What Should this Page Contain?
+</code></pre>
+<h3>步驟 B2｜在其下插入（示範，可改成你的真實計畫）</h3>
+<pre><code class="language-markdown">## Our drafting notes
+
+We are preparing the Description page for Cadture.
+
+- Problem focus: lead (Pb) and cadmium (Cd) in industrial wastewater.
+- We will expand scientific detail after team review.
+- We will not report experimental percentages without measured data.
+</code></pre>
+<h3>步驟 B3｜更新 toc（重要，慢慢做）</h3>
+<p>front matter 的 toc 增加：</p>
+<pre><code class="language-yaml">toc:
+  - id: what-should-this-page-contain
+    label: What to include
+  - id: our-drafting-notes
+    label: Drafting notes
+</code></pre>
+<h3>步驟 B4｜理解 id 規則（講 5 分）</h3>
+<p>標題：</p>
+<pre><code class="language-markdown">## Our drafting notes
+</code></pre>
+<p>自動 id 大致是：<code>our-drafting-notes</code><br>（小寫、空白變 <code>-</code>、符號常被去掉）</p>
+<p>若 toc 的 id 打成 <code>Our-Drafting-Notes</code> 可能跳轉失敗。</p>
+<h3>步驟 B5｜驗證</h3>
+<ul>
+<li>正文看得到新段落  </li>
+<li>側邊「On this page」點 Drafting notes 會跳轉</li>
+</ul>
+<hr>
+<h2>5. 完整步驟 C｜追 code（本堂高點，至少 35 分）</h2>
+<h3>C1｜路由檔</h3>
+<p>打開 <code>src/app/description/page.tsx</code></p>
+<p>找到：</p>
+<pre><code class="language-tsx">&lt;WikiPage slug=&quot;description&quot; /&gt;
+</code></pre>
+<p>在旁邊註解：</p>
+<pre><code class="language-tsx">// slug 必須對應 content/pages/description.md 的檔名
+</code></pre>
+<h3>C2｜WikiPage</h3>
+<p>打開 <code>src/components/WikiPage.tsx</code></p>
+<p>找到 <code>getPageBySlug(slug)</code> 與 <code>PageHero</code>、<code>MarkdownBody</code>。<br>用筆在紙上寫：</p>
+<ul>
+<li>frontmatter 進了哪個元件？  </li>
+<li>body 進了哪個元件？</li>
+</ul>
+<h3>C3｜content.ts</h3>
+<p>打開 <code>src/lib/content.ts</code><br>找到 <code>getPageBySlug</code>：</p>
+<ul>
+<li>它如何拼出路徑？  </li>
+<li>找不到檔案時會怎樣？</li>
+</ul>
+<h3>C4｜小組輪流講（每組 2 分鐘）</h3>
+<p>不投影答案，逼學生講。</p>
+<hr>
+<h2>6. 除錯關卡（20 分）</h2>
+<p>两人一组，一人出題一人修：</p>
+<ol>
+<li>故意刪掉一個 <code>---</code> → 修  </li>
+<li>toc id 打錯 → 修  </li>
+<li>在錯誤的 md 檔改字 → 發現並改對檔</li>
+</ol>
+<hr>
+<h2>7. 內容誠信（10 分，不可省）</h2>
+<p>全班一起念：</p>
+<ol>
+<li>英文上站  </li>
+<li>無數據不寫假結果  </li>
+<li>可寫 planned / literature  </li>
+<li>對齊官方與隊上確認</li>
+</ol>
+<hr>
+<h2>8. 完成檢查表</h2>
+<ul>
+<li>☐ subtitle 有改成功  </li>
+<li>☐ 正文有新增  </li>
+<li>☐ toc 跳轉成功  </li>
+<li>☐ 追 code 三站完成  </li>
+<li>☐ 通過一關除錯</li>
+</ul>
+<h2>9. 個人作業 #1</h2>
+<p>認領頁 150–300 字英文 + 手繪資料流（含檔名）。  </p>
+<h2>10. 下一堂</h2>
+<p>Git：團隊建造的版本基礎設施。</p>
+<h2 class="session">第 5 次｜工程協作：Git 與團隊建造流程</h2>
+<p><em>每次改站都走完整流程——放慢到會看 diff、會寫 message</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>獨立完成 pull→改→status→diff→add→commit</li>
+<li>寫出可讀的 commit message</li>
+<li>能說明衝突如何避免</li>
+<li>完成誠信情境判斷</li>
+</ul>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–15</td>
+<td>為什麼建造需要版本控制</td>
+</tr>
+<tr>
+<td>15–70</td>
+<td>完整 commit 流程（兩輪）</td>
+</tr>
+<tr>
+<td>70–80</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>80–110</td>
+<td>message 工作坊 + 壞例子</td>
+</tr>
+<tr>
+<td>110–140</td>
+<td>衝突概念與角色扮演</td>
+</tr>
+<tr>
+<td>140–165</td>
+<td>誠信情境</td>
+</tr>
+<tr>
+<td>165–180</td>
+<td>里程碑 A</td>
+</tr>
+</tbody></table>
+<h2>1. 開場故事（放慢）</h2>
+<p>想像兩人同時改 <code>description.md</code>：<br>A 寫 Problem，B 刪掉整段改成自己的。沒有 Git 會怎樣？有 Git 可以怎樣？</p>
+<h2>2. 完整流程（第一輪：跟著做）</h2>
+<h3>2.1 確認目錄</h3>
+<pre><code class="language-bash">cd 你的/iGemSite
+git status
+</code></pre>
+<h3>2.2 若有遠端</h3>
+<pre><code class="language-bash">git pull
+</code></pre>
+<p>說明：先同步再改，減少衝突。</p>
+<h3>2.3 改一個小內容</h3>
+<p>打開 <code>content/pages/notebook.md</code>，在文末加：</p>
+<pre><code class="language-markdown">## Session 5 note
+
+Date: (today)
+We practiced Git workflow for team wiki building.
+Next: document real lab notes in English after experiments.
+</code></pre>
+<h3>2.4 status</h3>
+<pre><code class="language-bash">git status
+</code></pre>
+<p>請學生圈出檔名，確認只有預期檔案。</p>
+<h3>2.5 diff（關鍵，多留時間）</h3>
+<pre><code class="language-bash">git diff
+</code></pre>
+<p>老師問：</p>
+<ul>
+<li><code>+</code> 是什麼？  </li>
+<li>若看到大量刪除，該不該 commit？</li>
+</ul>
+<h3>2.6 add</h3>
+<pre><code class="language-bash">git add content/pages/notebook.md
+</code></pre>
+<p>再 <code>git status</code>，檔案應在 staged。</p>
+<h3>2.7 commit</h3>
+<pre><code class="language-bash">git commit -m &quot;content: add session 5 git practice note to notebook&quot;
+</code></pre>
+<h3>2.8 驗證</h3>
+<pre><code class="language-bash">git log -1 --oneline
+git status
+</code></pre>
+<h2>3. 第二輪：自己做（20 分）</h2>
+<p>再改另一個自己負責的 md 一小段，完整走一次，message 自己想。</p>
+<h2>4. Commit message 工作坊</h2>
+<h3>好</h3>
+<ul>
+<li><code>content: draft HP listen section without private data</code>  </li>
+<li><code>fix: correct spelling of sequestration on home</code>  </li>
+<li><code>feat: add practice-lab page files</code></li>
+</ul>
+<h3>壞 → 改寫練習</h3>
+<p>把下列改成好 message：</p>
+<ol>
+<li><code>update</code>  </li>
+<li><code> assa</code>  </li>
+<li><code>改了很多東西</code>  </li>
+<li><code>final final 2</code></li>
+</ol>
+<h2>5. 衝突角色扮演（25 分）</h2>
+<p>情境卡：</p>
+<ul>
+<li>兩人改同一段 subtitle  </li>
+<li>一人 force 心態「以我的為準」</li>
+</ul>
+<p>討論：正確流程是什麼？（pull、溝通、合併、誰確認科學內容）</p>
+<p>預防規則（寫在黑板）：</p>
+<ol>
+<li>一頁同一時段單一主編  </li>
+<li>改前 pull  </li>
+<li>小步 commit  </li>
+<li>大改前通知</li>
+</ol>
+<h2>6. 誠信情境題（每人寫答案）</h2>
+<ol>
+<li>官方首頁 90%，文獻也有類似數字，能否寫「我們達成 90%」？為什麼？  </li>
+<li>指導教師幫改了程式，wiki 要不要寫進 Attributions？  </li>
+<li>同學照片未經同意能否上 Team 頁？</li>
+</ol>
+<h2>7. 里程碑 A 繳交</h2>
+<ul>
+<li><code>git log -5 --oneline</code> 截圖  </li>
+<li>責任表：頁面 | 人 | 本週摘要  </li>
+<li>誠信三題答案</li>
+</ul>
+<h2>8. 完成檢查表</h2>
+<ul>
+<li>☐ 兩輪 commit  </li>
+<li>☐ 會看 diff  </li>
+<li>☐ message 合格  </li>
+<li>☐ 誠信題完成</li>
+</ul>
+<h2>9. 下一堂</h2>
+<p>結構層：網址如何被「做出來」。</p>
+<h2 class="session">第 6 次｜結構層：路由系統如何做出網址</h2>
+<p><em>App Router 精讀與實驗——放慢到會預測、會破壞、會修復</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>默寫資料夾與網址規則</li>
+<li>逐行解釋 page.tsx</li>
+<li>完成三種安全實驗並還原</li>
+<li>列出新增路由所需檔案清單</li>
+</ul>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–15</td>
+<td>規則精熟遊戲</td>
+</tr>
+<tr>
+<td>15–45</td>
+<td>精讀 engineering/page.tsx</td>
+</tr>
+<tr>
+<td>45–55</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>55–110</td>
+<td>三個實驗</td>
+</tr>
+<tr>
+<td>110–140</td>
+<td>layout 精讀</td>
+</tr>
+<tr>
+<td>140–165</td>
+<td>設計題：要哪些檔</td>
+</tr>
+<tr>
+<td>165–180</td>
+<td>口試抽查</td>
+</tr>
+</tbody></table>
+<h2>1. 核心規則（背 + 默寫）</h2>
+<pre><code class="language-text">src/app/&lt;name&gt;/page.tsx  →  /&lt;name&gt;
+src/app/page.tsx         →  /
+</code></pre>
+<h3>遊戲 1（10 分）</h3>
+<p>老師報網址，學生寫路徑：</p>
+<ul>
+<li>/team  </li>
+<li>/human-practices  </li>
+<li>/safety-and-security  </li>
+<li>/class/session-06</li>
+</ul>
+<h3>遊戲 2（5 分）</h3>
+<p>老師報路徑，學生寫網址。</p>
+<h2>2. 精讀 page.tsx（30 分）</h2>
+<p>打開 <code>src/app/engineering/page.tsx</code>：</p>
+<pre><code class="language-tsx">import type { Metadata } from &quot;next&quot;;
+import WikiPage from &quot;@/components/WikiPage&quot;;
+
+export const metadata: Metadata = {
+  title: &quot;Engineering&quot;,
+};
+
+export default function Page() {
+  return &lt;WikiPage slug=&quot;engineering&quot; /&gt;;
+}
+</code></pre>
+<h3>逐行講解稿（老師可照念）</h3>
+<ol>
+<li><strong>第 1 行 import type</strong>：帶入型別，執行期可能被擦除，學生知道「TS 提示」即可。  </li>
+<li><strong>第 2 行 import WikiPage</strong>：把內容引擎元件拿進來。  </li>
+<li><strong>metadata</strong>：分頁標題，瀏覽器分頁上可能顯示。  </li>
+<li><strong>export default function Page</strong>：這個路由的入口。  </li>
+<li><strong>return &lt;WikiPage slug=... /&gt;</strong>：把結構接到系統。  </li>
+<li><strong>slug 字串</strong>：必須對應 md 檔名。</li>
+</ol>
+<h3>學生任務</h3>
+<p>在檔案加註解（可交截圖），四段都標到。</p>
+<h2>3. 三個實驗（務必還原）</h2>
+<h3>實驗 A｜slug 打錯（15 分）</h3>
+<ol>
+<li>改 <code>slug=&quot;engineeringg&quot;</code>  </li>
+<li>存檔、開 <code>/engineering</code>  </li>
+<li>記錄錯誤文字  </li>
+<li>改回  </li>
+<li>寫：「錯誤發生在管線第幾步？（讀檔）」</li>
+</ol>
+<h3>實驗 B｜旁路內容系統（15 分）</h3>
+<p>暫時改成：</p>
+<pre><code class="language-tsx">export default function Page() {
+  return &lt;h1&gt;Routing works without WikiPage&lt;/h1&gt;;
+}
+</code></pre>
+<p>觀察：路由還在，但 md 內容消失。<br><strong>結論：</strong> page 負責「這個網址有元件」；WikiPage 才接內容。<br>改回 WikiPage。</p>
+<h3>實驗 C｜metadata 標題（10 分）</h3>
+<p>改 <code>title: &quot;Engineering (class)&quot;</code> 看分頁標題，再改回正式名稱。</p>
+<h2>4. layout.tsx（25 分）</h2>
+<p>打開 <code>src/app/layout.tsx</code>。</p>
+<p>找：</p>
+<ul>
+<li>Navbar  </li>
+<li><code>{children}</code>  </li>
+<li>Footer</li>
+</ul>
+<p>畫圖：</p>
+<pre><code class="language-text">RootLayout
+├── SiteLoader（若有）
+├── Navbar
+├── main → children（page）
+└── Footer
+</code></pre>
+<h3>討論</h3>
+<p>若沒有 layout，每頁都要自己寫選單，壞處？</p>
+<h3>加分</h3>
+<p>打開 <code>src/app/safety/page.tsx</code> 看 <code>redirect</code>，說明別名路由。</p>
+<h2>5. 設計題（書面 15 分）</h2>
+<p>要新增文件頁 <code>/measurement-notes</code>，使用 WikiPage 模式，列出需要建立的<strong>完整路徑</strong>與一筆 nav 物件草稿。</p>
+<h2>6. 完成檢查表</h2>
+<ul>
+<li>☐ 默寫規則  </li>
+<li>☐ 三實驗完成並還原  </li>
+<li>☐ layout 圖完成  </li>
+<li>☐ 設計題交出</li>
+</ul>
+<h2>7. 作業</h2>
+<p>口頭 1 分鐘錄音或書面：page.tsx 四段是什麼。<br>下一堂：nav 資料驅動。</p>
+<h2 class="session">第 7 次｜結構層：資料驅動的導覽</h2>
+<p><em>nav.ts + Navbar 渲染——把物件變成選單（放慢版）</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>能畫出 navItems → Navbar → 選單 DOM 的關係</li>
+<li>完成修改 desc、新增 children、除錯三關</li>
+<li>能解釋資料驅動 UI 的優點</li>
+</ul>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–15</td>
+<td>資料驅動概念</td>
+</tr>
+<tr>
+<td>15–40</td>
+<td>精讀 nav.ts 標註</td>
+</tr>
+<tr>
+<td>40–55</td>
+<td>精讀 Navbar 如何 map</td>
+</tr>
+<tr>
+<td>55–65</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>65–100</td>
+<td>實作改 desc</td>
+</tr>
+<tr>
+<td>100–140</td>
+<td>實作新增 + 除錯關</td>
+</tr>
+<tr>
+<td>140–165</td>
+<td>Standard path 討論</td>
+</tr>
+<tr>
+<td>165–180</td>
+<td>檢查表</td>
+</tr>
+</tbody></table>
+<h2>1. 概念：不要手寫 20 個連結</h2>
+<p>壞：Navbar 裡複製 20 次 <code>&lt;a&gt;</code>。<br>好：資料在 <code>nav.ts</code>，UI 掃資料生成。</p>
+<pre><code class="language-text">navItems ──map──► Navbar ──► 使用者看到的選單
+</code></pre>
+<h2>2. 精讀 nav.ts（25 分）</h2>
+<h3>步驟</h3>
+<ol>
+<li>打開 <code>src/data/nav.ts</code>  </li>
+<li>用註解標出：Team / Project / Wet Lab / Dry Lab / HP / Course  </li>
+<li>抄一筆 children 物件到筆記本，標 label/href/desc</li>
+</ol>
+<h3>型別（會看即可）</h3>
+<pre><code class="language-ts">children?: { label: string; href: string; desc?: string }[]
+</code></pre>
+<p>意思：可選的陣列，元素是物件。</p>
+<h2>3. 精讀 Navbar（15 分）</h2>
+<p>打開 <code>src/components/Navbar.tsx</code>，搜尋 <code>navItems</code>。</p>
+<p>回答：</p>
+<ol>
+<li>從哪 import？  </li>
+<li>哪裡 <code>.map</code>？  </li>
+<li>有 children 時多做了什麼？</li>
+</ol>
+<h2>4. 實作 A：改 desc（完整）</h2>
+<ol>
+<li>選你負責頁  </li>
+<li>只改 <code>desc</code> 英文  </li>
+<li>存檔  </li>
+<li>重新整理，打開對應下拉  </li>
+<li><code>git diff src/data/nav.ts</code> 確認無意外</li>
+</ol>
+<h2>5. 實作 B：新增一筆（完整）</h2>
+<p>範例（可依現況調整）：</p>
+<pre><code class="language-ts">{ label: &quot;Course home&quot;, href: &quot;/class&quot;, desc: &quot;Full build-the-wiki lessons&quot; },
+</code></pre>
+<p>注意：</p>
+<ul>
+<li>上一行結尾逗號  </li>
+<li>字串引號成對  </li>
+<li><code>href</code> 以 <code>/</code> 開頭</li>
+</ul>
+<h2>6. 除錯三關（每人輪流）</h2>
+<table>
+<thead>
+<tr>
+<th>關</th>
+<th>破壞</th>
+<th>修復關鍵</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>刪逗號</td>
+<td>讀編譯錯誤</td>
+</tr>
+<tr>
+<td>2</td>
+<td>href 少 <code>/</code></td>
+<td>觀察導向</td>
+</tr>
+<tr>
+<td>3</td>
+<td>加在錯誤的 children</td>
+<td>選單位置不對</td>
+</tr>
+</tbody></table>
+<p>每關寫：「我看到的錯誤 → 我怎麼修」</p>
+<h2>7. Standard Paths（10 分）</h2>
+<p>可改 label，慎改 href：</p>
+<ul>
+<li>/attributions  </li>
+<li>/contribution  </li>
+<li>/engineering  </li>
+<li>/human-practices</li>
+</ul>
+<h2>8. 完成檢查表</h2>
+<ul>
+<li>☐ 圖：資料→Navbar→選單  </li>
+<li>☐ 改 desc 成功  </li>
+<li>☐ 新增成功  </li>
+<li>☐ 三關除錯紀錄</li>
+</ul>
+<h2>9. 放慢用的加練（若提前做完）</h2>
+<h3>加練 A｜重畫選單資料（紙上 10 分）</h3>
+<p>不看電腦，默寫 Project 底下應有的 4 個子項（label + href）。<br>再打開 nav.ts 對答案。</p>
+<h3>加練 B｜讀錯訊息（10 分）</h3>
+<p>老師投影一段錯誤的 nav 片段（少 <code>]</code>），學生指出第幾行、少了什麼。</p>
+<h3>加練 C｜口頭解釋（每组 2 分）</h3>
+<p>「為什麼選單要用資料檔，而不是寫死在 Navbar？」至少講兩個理由。</p>
+<h2>10. 作業 #2</h2>
+<p>一句英文 desc；選做：紙上設計三層選單資料。<br>下一堂：系統引擎 WikiPage——請先複習第 6 次 page.tsx。</p>
+<h2 class="session">第 8 次｜系統層：元件與內容引擎</h2>
+<p><em>整學期理論高點——管線精讀與可觀察實驗（放慢版）</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>不看稿口述 11 步請求流程</li>
+<li>四站精讀並互教</li>
+<li>完成三個可觀察實驗並記錄結論</li>
+</ul>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–20</td>
+<td>11 步流程板書（學生抄）</td>
+</tr>
+<tr>
+<td>20–30</td>
+<td>抽問前 5 步</td>
+</tr>
+<tr>
+<td>30–90</td>
+<td>四站精讀（輪站）</td>
+</tr>
+<tr>
+<td>90–100</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>100–150</td>
+<td>三實驗</td>
+</tr>
+<tr>
+<td>150–170</td>
+<td>組合圖 + 口試</td>
+</tr>
+<tr>
+<td>170–180</td>
+<td>作業</td>
+</tr>
+</tbody></table>
+<h2>1. 11 步流程（抄寫，兩次）</h2>
+<p>以 <code>/human-practices</code>：</p>
+<ol>
+<li>瀏覽器請求路徑  </li>
+<li>Next 匹配 <code>src/app/human-practices/page.tsx</code>  </li>
+<li>執行 <code>Page</code>  </li>
+<li>渲染 <code>WikiPage</code> 並傳入 slug  </li>
+<li><code>getPageBySlug</code> 讀 md 檔  </li>
+<li>gray-matter 拆 frontmatter / body  </li>
+<li>PageHero 用 frontmatter  </li>
+<li>ContentLayout 處理版面與 toc  </li>
+<li>MarkdownBody 渲染 body  </li>
+<li>layout 提供 Navbar/Footer  </li>
+<li>完整頁交付</li>
+</ol>
+<h3>口訣</h3>
+<p><strong>路找 page → page 叫 WikiPage → WikiPage 讀 md → 拆兩包 → 英雄區+正文 → 外殼選單</strong></p>
+<h3>抽問題庫</h3>
+<ul>
+<li>第 5 步檔案不在？  </li>
+<li>slug 錯但 page 在？  </li>
+<li>沒有 MarkdownBody？  </li>
+<li>沒有 layout？</li>
+</ul>
+<h2>2. 四站精讀（每站 12–15 分）</h2>
+<p>每站任務卡：</p>
+<h3>站 A content.ts</h3>
+<ul>
+<li>找出拼路徑那一行  </li>
+<li>找出 throw Error  </li>
+<li>一句話：本檔職責</li>
+</ul>
+<h3>站 B WikiPage.tsx</h3>
+<ul>
+<li>props 是什麼  </li>
+<li>frontmatter 給誰  </li>
+<li>body 給誰</li>
+</ul>
+<h3>站 C MarkdownBody.tsx</h3>
+<ul>
+<li>哪個套件在轉 md  </li>
+<li>h2 為何要自訂</li>
+</ul>
+<h3>站 D PageHero / ContentLayout</h3>
+<ul>
+<li>有狀態嗎還是純展示  </li>
+<li>toc 從哪來</li>
+</ul>
+<p>每站結束：換人當小老師講 90 秒。</p>
+<h2>3. 三個實驗（慢做）</h2>
+<h3>實驗 1 只改 body</h3>
+<p>md 加 <code>## Pipeline lab</code> 一段 → 驗證出現。<br>結論寫：________</p>
+<h3>實驗 2 只改 title frontmatter</h3>
+<p>大標變。結論：________</p>
+<h3>實驗 3 暫時錯 slug 於 page（再修）</h3>
+<p>對應錯誤。結論：________</p>
+<h2>4. 元件組合圖（必畫，10 分）</h2>
+<pre><code class="language-text">layout
+  Navbar
+  Page
+    WikiPage
+      PageHero
+      ContentLayout
+        MarkdownBody
+  Footer
+</code></pre>
+<h2>5. 完成檢查表</h2>
+<ul>
+<li>☐ 11 步能講  </li>
+<li>☐ 四站互教  </li>
+<li>☐ 三實驗紀錄  </li>
+<li>☐ 組合圖</li>
+</ul>
+<h2>6. 放慢用的「小白板題」（全班 15 分）</h2>
+<p>老師抽問，答不出就回站重讀 5 分再答：</p>
+<ol>
+<li><code>matter</code> 之後，title 大概在哪個變數裡？  </li>
+<li>使用者從沒開過 engineering.md，為什麼螢幕上會有字？  </li>
+<li>若 MarkdownBody 壞掉，PageHero 還會不會在？  </li>
+<li>Navbar 的資料是不是也走 getPageBySlug？</li>
+</ol>
+<h2>7. 作業</h2>
+<p>用語音或文字 <strong>1–2 分鐘</strong> 說明：<code>/engineering</code> 如何從點擊到上屏（需提到至少 5 個檔名）。<br>下一堂：首頁另一種組裝法——先打開官方首頁複習七段。</p>
+<h2 class="session">第 9 次｜系統層：首頁如何組裝</h2>
+<p><em>home.md 資料 + page.tsx 視圖 + 官方七段——放慢對照</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>能對照官方與本機逐段檢查</li>
+<li>能改 YAML 並指到對應 map</li>
+<li>能比較 WikiPage 模式與首頁模式</li>
+<li>完成里程碑 B</li>
+</ul>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–20</td>
+<td>兩種頁面策略</td>
+</tr>
+<tr>
+<td>20–55</td>
+<td>官方七段逐段對照</td>
+</tr>
+<tr>
+<td>55–65</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>65–110</td>
+<td>改 home.md（允許範圍）</td>
+</tr>
+<tr>
+<td>110–150</td>
+<td>page.tsx map 導讀與標註</td>
+</tr>
+<tr>
+<td>150–170</td>
+<td>里程碑 B 整理</td>
+</tr>
+<tr>
+<td>170–180</td>
+<td>分享 2 組</td>
+</tr>
+</tbody></table>
+<h2>1. 兩種建造策略（15 分講清楚）</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>文件頁</th>
+<th>首頁</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>資料</td>
+<td>一篇 pages/*.md</td>
+<td>home.md YAML 多段清單</td>
+</tr>
+<tr>
+<td>組裝</td>
+<td>WikiPage 通用引擎</td>
+<td>page.tsx 專用排版</td>
+</tr>
+<tr>
+<td>適合</td>
+<td>長文、套版結構</td>
+<td>固定行銷區塊</td>
+</tr>
+</tbody></table>
+<p><strong>問題：</strong> 能不能把首頁也改成只有一篇超長 md？可以，但改 UI 區塊順序會變痛。本站選擇資料與視圖分離。</p>
+<h2>2. 官方對照（放慢 35 分）</h2>
+<p>左官方右本機，<strong>一段一段</strong>勾：</p>
+<table>
+<thead>
+<tr>
+<th>段</th>
+<th>官方關鍵文字（抄 5–10 字）</th>
+<th>本機一致？</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Problem 三卡</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>三個城市</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Solution 五步名</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Highlights 四數字</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sustainable 段</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Listen/Integrate/Impact</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Design/Build/Test/Learn</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Team placeholder</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>不一致就記下來，課堂討論是否應改回。</p>
+<h2>3. 改 home.md（完整步驟）</h2>
+<h3>3.1 打開</h3>
+<p><code>content/home.md</code></p>
+<h3>3.2 允許練習的改動</h3>
+<ul>
+<li><code>locations</code> 的 body 潤飾（不改事實）  </li>
+<li><code>solution</code> 的 body 潤飾（title 建議維持官方五詞）  </li>
+<li><code>teamNote</code> 在隊上同意下更新</li>
+</ul>
+<h3>3.3 預設禁止</h3>
+<ul>
+<li>擅自改 <code>90%</code> <code>75%</code> <code>500+</code> <code>12</code>  </li>
+<li>刪除整段 solution</li>
+</ul>
+<h3>3.4 驗證</h3>
+<p>存檔 → 重新整理 <code>/</code> → 指到變更區塊給鄰座看。</p>
+<h3>3.5 YAML 除錯</h3>
+<table>
+<thead>
+<tr>
+<th>症狀</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>首頁空白/錯誤</td>
+<td>縮排壞了、<code>---</code> 不對</td>
+</tr>
+<tr>
+<td>某列表少一張卡</td>
+<td>少了一個 <code>- title:</code> 區塊</td>
+</tr>
+<tr>
+<td>奇怪字元</td>
+<td>冒號未加引號</td>
+</tr>
+</tbody></table>
+<h2>4. page.tsx 導讀（40 分）</h2>
+<h3>步驟 1</h3>
+<p>打開 <code>src/app/page.tsx</code></p>
+<h3>步驟 2</h3>
+<p>搜尋並在行旁註解：</p>
+<ul>
+<li><code>h.problems.map</code> → The Problem  </li>
+<li><code>h.locations.map</code> → 城市  </li>
+<li><code>h.solution.map</code> → Our Solution  </li>
+<li><code>h.highlights.map</code> → Highlights  </li>
+<li><code>h.humanPractices.map</code> → HP  </li>
+<li><code>h.engineering.map</code> → Engineering</li>
+</ul>
+<h3>步驟 3</h3>
+<p>老師講 <code>.map</code> 與 for 迴圈對照（用第 1 次 JS 例子）。</p>
+<h3>步驟 4</h3>
+<p>書面：若 <code>solution</code> 只剩 4 筆，畫面會怎樣？</p>
+<h2>5. 比較題（10 分）</h2>
+<p>用 80–120 字：WikiPage 文件頁 vs 首頁組裝，差在哪？為何首頁要特殊？</p>
+<h2>6. 里程碑 B</h2>
+<ol>
+<li>更新了哪兩區 + 確認人姓名  </li>
+<li>截圖  </li>
+<li>map 標註截圖  </li>
+<li>比較題答案</li>
+</ol>
+<h2>7. 完成檢查表</h2>
+<ul>
+<li>☐ 七段對照完成  </li>
+<li>☐ YAML 有合法更新  </li>
+<li>☐ 六個 map 都找到  </li>
+<li>☐ 里程碑 B 交</li>
+</ul>
+<h2>8. 下一堂</h2>
+<p>表現層 Tailwind 與設計紀律。</p>
+<h2 class="session">第 10 次｜表現層：設計系統與 Tailwind</h2>
+<p><em>可維護的外觀——放慢拆 class、安全改、RWD</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>拆解並解釋至少 12 個 class</li>
+<li>完成兩次安全視覺改動並截圖</li>
+<li>完成手機與桌機檢查表</li>
+<li>為負責頁選定 tone 並說明</li>
+</ul>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–15</td>
+<td>設計系統是什麼</td>
+</tr>
+<tr>
+<td>15–50</td>
+<td>拆 class 工作紙</td>
+</tr>
+<tr>
+<td>50–60</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>60–110</td>
+<td>安全改動實驗</td>
+</tr>
+<tr>
+<td>110–145</td>
+<td>RWD 檢查</td>
+</tr>
+<tr>
+<td>145–170</td>
+<td>tone 作業當堂草稿</td>
+</tr>
+<tr>
+<td>170–180</td>
+<td>分享</td>
+</tr>
+</tbody></table>
+<h2>1. 設計系統三層</h2>
+<ol>
+<li><strong>Token</strong>（色、圓角觀念）— globals  </li>
+<li><strong>元件</strong>（Button/Card/Hero）  </li>
+<li><strong>頁面組合</strong></li>
+</ol>
+<p>亂改第 3 層還修得回來；亂改第 1 層可能全站爆炸——本堂主攻讀與微調第 2–3 層。</p>
+<h2>2. 拆 class 工作紙（35 分）</h2>
+<p>從 <code>page.tsx</code> 或 <code>Card.tsx</code> 複製<strong>兩行</strong>長 className，填：</p>
+<table>
+<thead>
+<tr>
+<th>class</th>
+<th>猜測</th>
+<th>查證後</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>至少 12 格</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>必含至少一個 <code>sm:</code> 或 <code>md:</code> 或 <code>lg:</code>。</p>
+<h3>速查</h3>
+<p>mt/mb/p/px/py、flex、grid、gap、items-center、justify-between、text-sm、font-bold、rounded-<em>、border-</em>、shadow、max-w-*、mx-auto、hidden、sm:block、md:grid-cols-3、text-primary</p>
+<h2>3. 安全改動實驗</h2>
+<h3>實驗 1 間距</h3>
+<p>某 section <code>py-14</code> ↔ <code>py-10</code> 或 <code>py-16</code>，截圖前後，寫感受。</p>
+<h3>實驗 2 對齊</h3>
+<p>某標題 <code>text-center</code> 拿掉再加回，討論為何官方區塊常用置中。</p>
+<h3>還原策略</h3>
+<p>不喜歡就 git checkout 該檔；喜歡就留並 commit <code>style: ...</code></p>
+<h2>4. RWD 完整檢查表</h2>
+<p>裝置：iPhone 寬 + 桌機 1280</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>手機</th>
+<th>桌機</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>首頁 Problem</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Solution 五卡</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>選單</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>文件頁 toc</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>課程 /class 可讀</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>5. tone 作業當堂完成草稿</h2>
+<p>在負責頁 md：</p>
+<pre><code class="language-yaml">tone: sky
+</code></pre>
+<p>可選：rose / mint / sky / cream / lavender  </p>
+<p>寫 3 句中文：主題情緒、為何配色合適、有無對比問題。</p>
+<h2>6. 完成檢查表</h2>
+<ul>
+<li>☐ 12 個 class 表  </li>
+<li>☐ 兩次實驗截圖  </li>
+<li>☐ RWD 表  </li>
+<li>☐ tone 草稿</li>
+</ul>
+<h2>7. 放慢補充：讀一段真實 class（15 分）</h2>
+<p>從首頁挑一行，例如（以你檔案實際為準）：</p>
+<pre><code class="language-text">mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8
+</code></pre>
+<p>逐個解釋：</p>
+<table>
+<thead>
+<tr>
+<th>片段</th>
+<th>意思</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>mx-auto</code></td>
+<td>水平置中</td>
+</tr>
+<tr>
+<td><code>max-w-7xl</code></td>
+<td>最大寬度</td>
+</tr>
+<tr>
+<td><code>px-4</code></td>
+<td>左右內距</td>
+</tr>
+<tr>
+<td><code>py-14</code></td>
+<td>上下內距</td>
+</tr>
+<tr>
+<td><code>sm:px-6</code></td>
+<td>較寬螢幕左右內距加大</td>
+</tr>
+<tr>
+<td><code>lg:px-8</code></td>
+<td>更寬再加大</td>
+</tr>
+</tbody></table>
+<p><strong>練習：</strong> 學生自己再拆一行，寫進筆記本。</p>
+<h2>8. 下一堂</h2>
+<p>總裝新頁——學期建造驗收。請先複習 session-06 路由 + session-07 nav + session-04 md。</p>
+<h2 class="session">第 11 次｜總裝：從零組出完整頁面</h2>
+<p><em>內容+結構+系統串接——詳細步驟與除錯劇本</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>獨立完成 md + page.tsx + nav</li>
+<li>通過除錯三關</li>
+<li>書面解釋三步驟對應三層</li>
+</ul>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–15</td>
+<td>三層對照複習</td>
+</tr>
+<tr>
+<td>15–50</td>
+<td>步驟① md</td>
+</tr>
+<tr>
+<td>50–60</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>60–100</td>
+<td>步驟② page</td>
+</tr>
+<tr>
+<td>100–130</td>
+<td>步驟③ nav</td>
+</tr>
+<tr>
+<td>130–165</td>
+<td>除錯關</td>
+</tr>
+<tr>
+<td>165–180</td>
+<td>書面三層解釋</td>
+</tr>
+</tbody></table>
+<h2>1. 開始前口頭複習（10 分）</h2>
+<ol>
+<li>只有 md？  </li>
+<li>只有 page？  </li>
+<li>有 page+md 沒 nav？</li>
+</ol>
+<h2>2. 步驟① 內容層（詳細）</h2>
+<h3>2.1 建立檔案</h3>
+<p><code>content/pages/practice-lab.md</code></p>
+<h3>2.2 最小可用內容</h3>
+<pre><code class="language-markdown">---
+title: Practice Lab
+eyebrow: Course
+subtitle: Built in session 11 to prove we can assemble a page.
+tone: mint
+toc:
+  - id: why-this-page
+    label: Why
+  - id: how-it-is-built
+    label: How built
+---
+
+## Why this page
+
+This page is a coursework practice page for VIS team wiki training.
+
+## How it is built
+
+1. Markdown file in content/pages
+2. Route file in src/app/practice-lab/page.tsx
+3. Navigation entry in src/data/nav.ts
+
+The WikiPage component loads this Markdown by slug.
+</code></pre>
+<h3>2.3 驗證內容檔本身</h3>
+<p>此時可不開瀏覽器，但檔案必須存在且 YAML 合法。</p>
+<h2>3. 步驟② 路由（詳細）</h2>
+<h3>3.1 建資料夾</h3>
+<p><code>src/app/practice-lab/</code></p>
+<h3>3.2 建 page.tsx</h3>
+<pre><code class="language-tsx">import type { Metadata } from &quot;next&quot;;
+import WikiPage from &quot;@/components/WikiPage&quot;;
+
+export const metadata: Metadata = {
+  title: &quot;Practice Lab&quot;,
+};
+
+export default function Page() {
+  return &lt;WikiPage slug=&quot;practice-lab&quot; /&gt;;
+}
+</code></pre>
+<h3>3.3 驗證</h3>
+<p><code>http://localhost:3000/practice-lab</code></p>
+<h3>3.4 若失敗</h3>
+<table>
+<thead>
+<tr>
+<th>現象</th>
+<th>查</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Missing content file</td>
+<td>slug/檔名</td>
+</tr>
+<tr>
+<td>404</td>
+<td>資料夾名或 dev 未重載</td>
+</tr>
+<tr>
+<td>編譯錯</td>
+<td>import 路徑、括號</td>
+</tr>
+</tbody></table>
+<h2>4. 步驟③ nav（詳細）</h2>
+<p>在 <code>nav.ts</code> 合適 children 加：</p>
+<pre><code class="language-ts">{ label: &quot;Practice Lab&quot;, href: &quot;/practice-lab&quot;, desc: &quot;Session 11 assembly practice&quot; },
+</code></pre>
+<p>驗證：選單可點、手機選單也可。</p>
+<h2>5. 除錯關（必做）</h2>
+<p>交換電腦破壞：</p>
+<ol>
+<li>slug 少一個字母  </li>
+<li>檔名與資料夾不一致  </li>
+<li>nav href 錯</li>
+</ol>
+<p>修復者需向破壞者解說。</p>
+<h2>6. 書面題（交）</h2>
+<p>用表格：</p>
+<table>
+<thead>
+<tr>
+<th>步驟</th>
+<th>檔案路徑</th>
+<th>對應層</th>
+<th>若省略會怎樣</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td></td>
+<td>內容</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>7. 完成檢查表（硬性）</h2>
+<ul>
+<li>☐ 三步驟成功  </li>
+<li>☐ 除錯關通過  </li>
+<li>☐ 書面題完整  </li>
+<li>☐ 無假科學宣稱</li>
+</ul>
+<h2>8. 作業</h2>
+<p>英文精修 How it is built；選做 code review 他組。<br>下一堂：產品品質。</p>
+<h2 class="session">第 12 次｜產品品質：媒體、寫作與可信介面</h2>
+<p><em>做得出來之後，還要做得可信——放慢寫作與互改</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>完成圖片上頁流程</li>
+<li>完成兩段英文並經互改</li>
+<li>用品質量表自評到可給外人看</li>
+</ul>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–15</td>
+<td>可發布標準</td>
+</tr>
+<tr>
+<td>15–50</td>
+<td>圖片流程</td>
+</tr>
+<tr>
+<td>50–60</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>60–130</td>
+<td>英文工坊（寫+互改+上站）</td>
+</tr>
+<tr>
+<td>130–160</td>
+<td>品質量表</td>
+</tr>
+<tr>
+<td>160–180</td>
+<td>分享佳句</td>
+</tr>
+</tbody></table>
+<h2>1. 可發布標準（一起念）</h2>
+<ol>
+<li>結構清楚  </li>
+<li>英文可讀  </li>
+<li>圖/表有說明  </li>
+<li>有限制與下一步  </li>
+<li>無假數據  </li>
+<li>風格不跑版</li>
+</ol>
+<h2>2. 圖片完整步驟</h2>
+<ol>
+<li>選圖、壓縮  </li>
+<li>英文檔名  </li>
+<li>放到 <code>public/images/</code>  </li>
+<li>md：</li>
+</ol>
+<pre><code class="language-markdown">## Figure
+
+![Describe what the viewer should see](/images/your-file.png)
+
+**Figure 1.** Caption. Say if coursework-only.
+</code></pre>
+<ol start="5">
+<li>檢查 alt 是否有用  </li>
+<li>窄螢幕看圖是否過大</li>
+</ol>
+<h3>討論（5 分）</h3>
+<p>正式 iGEM 站圖片托管限制——為何不能隨便外連相簿？</p>
+<h2>3. 英文工坊（放慢）</h2>
+<h3>3.1 句型紙（印發）</h3>
+<p>Problem / Method / DBTL / HP / Uncertainty 各 2 句模板（見舊教材句型，本堂展開寫）。</p>
+<h3>3.2 個人寫作 20 分</h3>
+<p>選一：Description 問題段 <strong>或</strong> Engineering 半輪 DBTL <strong>或</strong> HP 一則 Listen-Integrate。</p>
+<p>字數 150–250。</p>
+<h3>3.3 互改表 20 分</h3>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>原句問題</th>
+<th>修改建議</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主詞不清</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>時態像已完成但其實沒做</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>太絕對</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>專有名詞不統一</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>3.4 上站 15 分</h3>
+<p>貼進 md，重新整理，給老師看「互改前/後」各一句。</p>
+<h2>4. 品質量表自評</h2>
+<table>
+<thead>
+<tr>
+<th>向度</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>我的分數</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>架構</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>技術</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>英文</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>誠實</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>風格</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>低於 3 的向度寫改進行動。</p>
+<h2>5. 作業 #4</h2>
+<p>定稿 200 字上站。  </p>
+<h2>6. 放慢：句型擴寫紙（可印）</h2>
+<h3>Problem</h3>
+<pre><code class="language-text">[Topic] is important because [impact on people/environment].
+Current methods often [limitation].
+Our project, Cadture, focuses on [Pb/Cd + approach in one line].
+</code></pre>
+<h3>DBTL</h3>
+<pre><code class="language-text">In this cycle we targeted [bottleneck].
+We designed [idea] because [reason].
+We built / plan to build [construct or protocol].
+We tested / will test [metric] with [control].
+We learned that [lesson], so next we will [change].
+</code></pre>
+<h3>HP</h3>
+<pre><code class="language-text">We spoke with [role], who said [point].
+We integrated this by [design/safety/education change].
+This matters because [impact].
+</code></pre>
+<p>每位學生至少完整填一張再上站。</p>
+<h2>7. 下一堂</h2>
+<p>build 與交付檢查——工程師怎麼交件。</p>
+<h2 class="session">第 13 次｜工程交付：Build、檢查與上線概念</h2>
+<p><em>本機可以還不夠——完整檢查與 build 放慢教學</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>逐項完成品質檢查並實點連結</li>
+<li>獨立跑 npm run build 並記錄</li>
+<li>能說明 dev/build/freeze 差異</li>
+<li>交出里程碑 C</li>
+</ul>
+<h2>0. 分鐘表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–15</td>
+<td>交付金字塔</td>
+</tr>
+<tr>
+<td>15–70</td>
+<td>品質檢查實點</td>
+</tr>
+<tr>
+<td>70–80</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>80–130</td>
+<td>build 教學與修復</td>
+</tr>
+<tr>
+<td>130–160</td>
+<td>iGEM/freeze 概念</td>
+</tr>
+<tr>
+<td>160–180</td>
+<td>里程碑 C 彙整</td>
+</tr>
+</tbody></table>
+<h2>1. 交付金字塔</h2>
+<pre><code class="language-text">      可展示給外人
+           ↑
+   build 過 + 連結對 + 內容實
+           ↑
+        功能做得出
+</code></pre>
+<h2>2. 品質檢查（詳細流程）</h2>
+<p>使用 <code>docs/curriculum/handouts/13-quality-checklist.md</code>。</p>
+<h3>2.1 內容（每項寫證據）</h3>
+<p>不是只勾，要寫「我看到的網址/句子」。</p>
+<h3>2.2 連結實點清單</h3>
+<p>至少點：</p>
+<ul>
+<li>首頁  </li>
+<li>description / engineering / human-practices / contribution / team / attributions  </li>
+<li>class 課表  </li>
+<li>自己新增頁</li>
+</ul>
+<p>壞掉的寫進待修。</p>
+<h3>2.3 路徑穩定</h3>
+<p>確認未把 engineering 等改名。</p>
+<h2>3. build 完整教學</h2>
+<h3>3.1 指令</h3>
+<pre><code class="language-bash">cd 你的/iGemSite
+npm run build
+</code></pre>
+<h3>3.2 成功長怎樣</h3>
+<p>出現編譯成功、靜態頁生成，最後無 Failed。截圖。</p>
+<h3>3.3 失敗怎麼讀</h3>
+<ol>
+<li>找到第一個 <code>Error</code>  </li>
+<li>檔案路徑  </li>
+<li>行號  </li>
+<li>訊息關鍵字</li>
+</ol>
+<h3>3.4 常見錯誤對照</h3>
+<table>
+<thead>
+<tr>
+<th>關鍵字</th>
+<th>可能原因</th>
+<th>先查</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Missing content file</td>
+<td>slug/md</td>
+<td>page 與 md</td>
+</tr>
+<tr>
+<td>Unexpected token</td>
+<td>nav 語法</td>
+<td>逗號括號</td>
+</tr>
+<tr>
+<td>Type error</td>
+<td>TS</td>
+<td>問老師</td>
+</tr>
+<tr>
+<td>Module not found</td>
+<td>import 路徑</td>
+<td>@/ 路徑</td>
+</tr>
+</tbody></table>
+<h3>3.5 修復循環</h3>
+<p>修 → 再 build → 直到過或寫卡關報告。</p>
+<h2>4. 環境差異（講慢）</h2>
+<table>
+<thead>
+<tr>
+<th>環境</th>
+<th>用途</th>
+<th>限制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dev</td>
+<td>開發</td>
+<td>較寬鬆</td>
+</tr>
+<tr>
+<td>build</td>
+<td>交付檢查</td>
+<td>較嚴</td>
+</tr>
+<tr>
+<td>官方 wiki</td>
+<td>競賽基準/freeze</td>
+<td>規則最多</td>
+</tr>
+</tbody></table>
+<p>讀 <code>docs/DEPLOY_TO_IGEM.md</code> 重點：外連、字型、圖、CC BY、Freeze。</p>
+<h3>口頭題</h3>
+<ol>
+<li>本機可以為何還要 build？  </li>
+<li>Freeze 後還能大改 UI 嗎？  </li>
+<li>外連 Google 字型可能有何問題？</li>
+</ol>
+<h2>5. 里程碑 C</h2>
+<ol>
+<li>檢查表（含證據）  </li>
+<li>build 截圖  </li>
+<li>待修 ≥3（人+期限）  </li>
+<li>一句話風險</li>
+</ol>
+<h2>6. 完成檢查表</h2>
+<ul>
+<li>☐ 實點連結  </li>
+<li>☐ build 有跑  </li>
+<li>☐ 概念三題能答  </li>
+<li>☐ 里程碑 C 交</li>
+</ul>
+<h2>7. 下一堂</h2>
+<p>發表：用架構證明你會做這個站。</p>
+<h2 class="session">第 14 次｜成果發表：證明你會做這個網站</h2>
+<p><em>完整發表流程、質問庫、維護公約——可直接照表執行</em></p>
+<p>時數：3 小時</p>
+<h3>本堂學習目標</h3>
+<ul>
+<li>依強制大綱完成發表</li>
+<li>回答架構質問</li>
+<li>簽維護公約</li>
+<li>完成個人反思</li>
+</ul>
+<h2>0. 當日時間表</h2>
+<table>
+<thead>
+<tr>
+<th>分鐘</th>
+<th>活動</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–20</td>
+<td>最終技術檢查</td>
+</tr>
+<tr>
+<td>20–100</td>
+<td>發表（含 Q&amp;A）</td>
+</tr>
+<tr>
+<td>100–110</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>110–140</td>
+<td>互評</td>
+</tr>
+<tr>
+<td>140–165</td>
+<td>教師回饋 + 維護公約</td>
+</tr>
+<tr>
+<td>165–180</td>
+<td>反思單</td>
+</tr>
+</tbody></table>
+<h2>1. 開場前技術檢查（詳細）</h2>
+<ul>
+<li>☐ <code>npm run dev</code> 或展示環境可開  </li>
+<li>☐ 首頁七段還在  </li>
+<li>☐ 核心頁無 404  </li>
+<li>☐ practice-lab 或新增頁可開  </li>
+<li>☐ build 結果已知  </li>
+<li>☐ 投影縮放 125% 可讀  </li>
+<li>☐ 無私人帳號畫面</li>
+</ul>
+<h2>2. 強制發表大綱（6–8 分）——請逐段計時</h2>
+<h3>0:00–0:30 開場</h3>
+<p>組員、分工  </p>
+<h3>0:30–1:30 產品</h3>
+<p>Cadture 是什麼；為何對齊官方站  </p>
+<h3>1:30–3:30 架構 ★</h3>
+<ul>
+<li>三層模型  </li>
+<li><strong>口述資料流</strong>（可看自己的圖，不可啞口）  </li>
+<li>首頁模式 vs WikiPage 模式</li>
+</ul>
+<h3>3:30–5:30 實作證據</h3>
+<ul>
+<li>現場或錄影：改 md  </li>
+<li>展示 nav 或新增頁  </li>
+<li>build 結果</li>
+</ul>
+<h3>5:30–6:30 誠信</h3>
+<p>一處 planned／未完成標示  </p>
+<h3>6:30–7:30 維護</h3>
+<p>誰繼續更新  </p>
+<h3>7:30–8:00 結語</h3>
+<h2>3. 質問庫（老師或同儕）</h2>
+<ol>
+<li>只有 md 沒 page？  </li>
+<li>slug 做什麼？  </li>
+<li>nav 如何變 DOM？  </li>
+<li>為何不隨便改 90%？  </li>
+<li>layout 的 children？  </li>
+<li>gray-matter 拆出什麼？  </li>
+<li><code>.map</code> 在首頁的作用？  </li>
+<li>Standard path 是什麼？</li>
+</ol>
+<h2>4. 互評</h2>
+<p>用 <code>docs/curriculum/handouts/14-presentation-rubric.md</code><br>建議：<strong>架構理解 &lt; 3 則總評不得 &gt; 3</strong></p>
+<h2>5. 維護公約（當場填）</h2>
+<table>
+<thead>
+<tr>
+<th>工作</th>
+<th>負責人</th>
+<th>頻率</th>
+<th>簽名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>首頁文案</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Engineering</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>HP</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Notebook</td>
+<td></td>
+<td>每週</td>
+<td></td>
+</tr>
+<tr>
+<td>Results</td>
+<td></td>
+<td>有數據</td>
+<td></td>
+</tr>
+<tr>
+<td>/class 教材</td>
+<td>老師/助教</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>6. 個人反思單</h2>
+<ol>
+<li>三個最有用技能  </li>
+<li>最怕的一步與為何  </li>
+<li>若重來第 8 堂會怎樣  </li>
+<li>誠信一例  </li>
+<li>我是否達到「會做站」而不只是「會改字」？為什麼？</li>
+</ol>
+<h2>7. 課程結束宣言（可齊念）</h2>
+<blockquote>
+<p>我們不只會改 Markdown。<br>我們理解內容、結構與系統。<br>我們用誠實的內容，維護 Cadture Team Wiki。  </p>
+</blockquote>
+<h2>8. 之後</h2>
+<p>繼續用 <code>/class</code> 當手冊；有數據再填 Results；大改前先 build。</p>
+<hr>
+<h1 class="part">四、講義（可撕下／單獨影印）</h1>
+<h2 class="session">第 1 次｜環境架設檢查表</h2>
+<p>姓名：____________  組別：____</p>
+<h3>安裝</h3>
+<ul>
+<li>☐ 已安裝 VS Code  </li>
+<li>☐ 已安裝 Node.js（終端機執行 <code>node -v</code> 有版本號）  </li>
+<li>☐ 已取得專案資料夾</li>
+</ul>
+<h3>啟動</h3>
+<p>在專案根目錄執行：</p>
+<pre><code class="language-bash">npm install
+npm run dev
+</code></pre>
+<ul>
+<li>☐ 終端機沒有紅色錯誤  </li>
+<li>☐ 瀏覽器打開 <a href="http://localhost:3000">http://localhost:3000</a> 看得到 Cadture</li>
+</ul>
+<h3>導覽確認（在網站上點過）</h3>
+<ul>
+<li>☐ Description  </li>
+<li>☐ Engineering  </li>
+<li>☐ Human Practices  </li>
+<li>☐ Team  </li>
+<li>☐ 任一 Wet Lab 頁</li>
+</ul>
+<h3>今日一句話</h3>
+<p>這個 wiki 最重要的讀者是：____________________________</p>
+<h2>Markdown 速查（第 4 次）</h2>
+<pre><code class="language-markdown"># 最大標題（頁面通常用 front matter 的 title）
+## 次標題
+### 小標題
+
+一般段落這樣寫。
+
+**粗體**  *斜體*
+
+- 項目一
+- 項目二
+
+1. 第一
+2. 第二
+
+[連結文字](https://2026.igem.wiki/vis/)
+
+![說明文字](/images/example.png)
+
+&gt; 重要提示或引用
+
+| 欄位 A | 欄位 B |
+|--------|--------|
+| 內容   | 內容   |
+</code></pre>
+<h3>本站頁面檔位置</h3>
+<p><code>content/pages/頁名.md</code></p>
+<h3>Front matter 範例</h3>
+<pre><code class="language-yaml">---
+title: Description
+eyebrow: Project
+subtitle: Short English line
+tone: rose
+toc:
+  - id: what-should-this-page-contain
+    label: What to include
+---
+</code></pre>
+<p><code>## What Should this Page Contain?</code> 的 id 會變成 <code>what-should-this-page-contain</code>。</p>
+<h2 class="session">第 6 次｜你會的 JS → 本站 TSX</h2>
+<h3>對照</h3>
+<pre><code class="language-js">// 你可能寫過
+function greet(name) {
+  return &quot;Hello &quot; + name;
+}
+</code></pre>
+<pre><code class="language-tsx">// 本站 page 很像「回傳畫面的 function」
+import WikiPage from &quot;@/components/WikiPage&quot;;
+
+export default function Page() {
+  return &lt;WikiPage slug=&quot;description&quot; /&gt;;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>JS</th>
+<th>這裡</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>function Page()</code></td>
+<td>元件</td>
+</tr>
+<tr>
+<td><code>return ...</code></td>
+<td>回傳 JSX（長得像 HTML）</td>
+</tr>
+<tr>
+<td><code>&quot;description&quot;</code></td>
+<td>傳給元件的資料（props）</td>
+</tr>
+<tr>
+<td><code>import ...</code></td>
+<td>使用別的檔案</td>
+</tr>
+</tbody></table>
+<h3>網址規則</h3>
+<p>資料夾 <code>src/app/engineering/</code> + 檔案 <code>page.tsx</code><br>→ 網址 <code>/engineering</code></p>
+<h3>小練習</h3>
+<ol>
+<li><code>/team</code> 對應哪個資料夾？  </li>
+<li><code>slug=&quot;team&quot;</code> 寫成 <code>slug=&quot;teams&quot;</code> 會怎樣？  </li>
+<li>長文通常改 <code>content/pages/....md</code> 還是 <code>page.tsx</code>？</li>
+</ol>
+<p>（1）<code>src/app/team/</code>（2）找不到對應 md 或內容錯誤（3）md</p>
+<h2 class="session">第 8 次｜內容如何變成網頁</h2>
+<p>把步驟背起來，考試／發表會用得上：</p>
+<pre><code>1. 你編輯  content/pages/engineering.md
+2. 函式    getPageBySlug(&quot;engineering&quot;)   （src/lib/content.ts）
+3. 元件    WikiPage                        （讀 front matter + 正文）
+4. 元件    MarkdownBody                    （Markdown → HTML）
+5. 版面    PageHero + ContentLayout
+6. 路由    src/app/engineering/page.tsx → 網址 /engineering
+</code></pre>
+<h3>用 JS  trace 一次</h3>
+<pre><code class="language-ts">// page.tsx 裡大致是：
+&lt;WikiPage slug=&quot;engineering&quot; /&gt;
+//            ↑ 像函式參數
+
+// WikiPage 裡會：
+getPageBySlug(slug)  // 像 call function(slug)
+// 得到 { frontmatter, body }  // 像得到一個物件
+</code></pre>
+<h3>小測驗</h3>
+<ol>
+<li>只改英文段落，應改哪個資料夾？  </li>
+<li>網址 <code>/team</code> 對應哪個資料夾？  </li>
+<li>全站上方選單主要改哪個檔？  </li>
+<li><code>slug</code> 比較像：迴圈 / 函式參數 / CSS 顏色？</li>
+</ol>
+<p>答：1) content/  2) src/app/team/  3) src/data/nav.ts  4) 函式參數</p>
+<h2 class="session">第 11 次｜新增一頁三步驟</h2>
+<h3>1. 內容</h3>
+<p>新增 <code>content/pages/my-page.md</code>：</p>
+<pre><code class="language-markdown">---
+title: My Page
+eyebrow: Project
+subtitle: One English sentence.
+tone: mint
+---
+
+## Overview
+
+Write English here.
+</code></pre>
+<h3>2. 路由</h3>
+<p>新增 <code>src/app/my-page/page.tsx</code>（可複製 description 那份）：</p>
+<pre><code class="language-tsx">import type { Metadata } from &quot;next&quot;;
+import WikiPage from &quot;@/components/WikiPage&quot;;
+
+export const metadata: Metadata = {
+  title: &quot;My Page&quot;,
+};
+
+export default function Page() {
+  return &lt;WikiPage slug=&quot;my-page&quot; /&gt;;
+}
+</code></pre>
+<p>注意：<code>slug</code> 必須和檔名 <code>my-page.md</code> 相同。</p>
+<h3>3. 導覽</h3>
+<p>在 <code>src/data/nav.ts</code> 合適的 <code>children</code> 裡加入：</p>
+<pre><code class="language-ts">{ label: &quot;My Page&quot;, href: &quot;/my-page&quot;, desc: &quot;Short English desc&quot; },
+</code></pre>
+<h3>檢查</h3>
+<ul>
+<li>☐ <a href="http://localhost:3000/my-page">http://localhost:3000/my-page</a> 打得開  </li>
+<li>☐ 選單點得到  </li>
+<li>☐ 英文沒有未確認的假數據</li>
+</ul>
+<h2 class="session">第 13 次｜品質與競賽意識檢查表</h2>
+<p>組別：______  成員：________________</p>
+<h3>內容</h3>
+<ul>
+<li>☐ 英文為主，專案名稱 Cadture 一致  </li>
+<li>☐ 沒有未確認的實驗數據  </li>
+<li>☐ 各核心頁有負責人姓名  </li>
+<li>☐ 圖片有說明</li>
+</ul>
+<p>負責人頁面登記：</p>
+<table>
+<thead>
+<tr>
+<th>頁面</th>
+<th>負責人</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description</td>
+<td></td>
+</tr>
+<tr>
+<td>Engineering</td>
+<td></td>
+</tr>
+<tr>
+<td>Human Practices</td>
+<td></td>
+</tr>
+<tr>
+<td>Contribution</td>
+<td></td>
+</tr>
+<tr>
+<td>Team</td>
+<td></td>
+</tr>
+<tr>
+<td>其他：</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>結構</h3>
+<ul>
+<li>☐ 導覽連結都有效  </li>
+<li>☐ 沒有亂改 Standard 路徑  </li>
+<li>☐ 新增頁具備 md + page + nav</li>
+</ul>
+<h3>技術</h3>
+<ul>
+<li>☐ <code>npm run dev</code> 正常  </li>
+<li>☐ 嘗試過 <code>npm run build</code>（結果：通過 / 有錯誤：______）  </li>
+<li>☐ 手機寬度粗看可讀</li>
+</ul>
+<h3>待修清單（至少 3 項）</h3>
+<ol>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<h2 class="session">第 14 次｜發表會互評表</h2>
+<p>評分組別：______  被評組別：______</p>
+<p>每項 1–4 分（4 最高）</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>分數</th>
+<th>一句話回饋</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>架構說明清楚</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>實作證據足夠</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>設計風格一致</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>內容誠實可信</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>分工合作</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>總分</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>我想學他們的一點：</p>
+<p>我建議他們下週優先改：</p>
+<hr>
+<h1 class="part">五、給同學的提醒</h1>
+<ol>
+<li>改 <code>content/</code> 裡的檔 → 存檔 → 瀏覽器重新整理  </li>
+<li>不會的先看錯誤訊息<strong>第一行</strong>，再舉手  </li>
+<li>Wiki 科學內容以隊上確認與官方站為準，<strong>不編造</strong>  </li>
+<li>完整說明也在網站 <strong><code>/class</code></strong>，本講義方便離線與勾選</li>
+</ol>
+
+  </div>
+</body>
+</html>

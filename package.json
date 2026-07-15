@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "printables": "node scripts/build-printables.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -21,8 +22,10 @@
     "@types/node": "^20.19.43",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "docx": "^9.7.1",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "marked": "^18.0.6",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

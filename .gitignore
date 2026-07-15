@@ -72,3 +72,8 @@ next-env.d.ts
 .impeccable/live/cache/
 .impeccable/live/*.png
 # impeccable-ignore-end
+
+
+CLAUDE.md
+DESIGN.md
+AGENTS.md
