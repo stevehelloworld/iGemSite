@@ -1,110 +1,115 @@
-# Deploy this wiki to iGEM (GitLab → 2026.igem.wiki/vis)
+# Deploy Cadture to the official 2026 iGEM wiki
 
-**Intent:** This repo is the **styled team wiki deliverable**. Content is student-edited Markdown under `content/`.  
-**Baseline:** https://2026.igem.wiki/vis/ (current official site).  
-**Target freeze host:** https://gitlab.igem.org/2026/vis → https://2026.igem.wiki/vis/
+This project has one delivery path: Next.js static export → the official iGEM GitLab repository → GitLab Pages at `https://2026.igem.wiki/vis/`.
 
-Requirements: https://teams.igem.org/6423/deliverables/wiki/requirements
+The 2026 official template builds only the default branch, publishes a `public/` artifact, recommends Node 22, and requires all loaded code and assets to come from iGEM infrastructure. This repository's `.gitlab-ci.yml` follows that contract while copying Next.js `out/` into `public/`.
 
----
+Current official references:
 
-## Content rules before deploy
+- Team Wiki requirements: `https://teams.igem.org/go/deliverables/wiki`
+- Official example: `https://gitlab.igem.org/2026/example`
+- Cadture source target: `https://gitlab.igem.org/2026/vis`
+- Published wiki: `https://2026.igem.wiki/vis/`
+- 2026 calendar: `https://competition.igem.org/calendar`
 
-1. Prefer **team-confirmed** text; do not invent science.  
-2. Template pages may ship as placeholders until students fill them.  
-3. English only on pages.  
-4. Home highlights in `content/home.md` must be **verified** before freeze if claimed as results.
+## Why the production build differs from local development
 
----
+Local lessons run at `/`. The official wiki lives under `/vis/`, so CI sets:
 
-## What students edit vs what you deploy
+```yaml
+IGEM_TEAM_SLUG: "vis"
+```
 
-| Layer | Location |
-|-------|----------|
-| Page text | `content/home.md`, `content/pages/*.md` |
-| UI chrome | `src/components/*`, `src/app/globals.css` |
-| Nav | `src/data/nav.ts` |
-| Freeze hosting | GitLab iGEM CI / Pages |
+`next.config.ts` converts that value into `basePath: "/vis"`. Next links and bundled assets then point to `/vis/...` instead of the domain root.
 
----
+## Local release checks
 
-## Compliance checklist (freeze)
-
-- [ ] No external CDNs (Google Fonts, jsDelivr, etc.) in freeze build  
-- [ ] Replace `next/font/google` with self-hosted fonts or `static.igem.wiki` fonts  
-- [ ] Images via uploads → `static.igem.wiki/teams/6423/...`  
-- [ ] Videos only from video.igem.org  
-- [ ] Footer: **CC BY 4.0** + **https://gitlab.igem.org/2026/vis**  
-- [ ] Standard URLs live: `/attributions`, `/contribution`, `/engineering`, `/human-practices`  
-- [ ] Official **Attributions Form** embedded/linked on `/attributions`  
-- [ ] External Content Check passes  
-- [ ] `npm run build` green before port  
-
----
-
-## Deploy strategies
-
-### A — Keep Markdown workflow here, port HTML periodically (recommended early)
-
-1. Students edit `content/*.md`.  
-2. Preview with `npm run dev`.  
-3. Wiki lead exports/ports pages into `gitlab.igem.org/2026/vis` template **or** static export.  
-4. Verify on `2026.igem.wiki/vis`.
-
-### B — Static export into GitLab Pages
-
-1. Self-host fonts (remove Google runtime).  
-2. Configure Next static export if/when routes allow.  
-3. CI builds and publishes to Pages under team path.  
-4. Confirm `basePath` / asset paths for `/vis/`.
-
-### C — Official iGEM template is source of deploy
-
-1. Use GitLab template for freeze.  
-2. Paste Markdown-rendered HTML from this site into template pages.  
-3. Still use this repo as the **student editing UX**.
-
-Pick one with the PI; write it in the notebook.
-
----
-
-## Local commands
+First verify the normal student build:
 
 ```bash
-npm install
-npm run dev
+npm ci
+npm run lint
 npm run build
 ```
 
----
+Then simulate the official path:
 
-## Page inventory
+```bash
+IGEM_TEAM_SLUG=vis npm run build
+```
 
-| Route | Markdown file |
-|-------|----------------|
-| `/` | `content/home.md` |
-| `/description` | `content/pages/description.md` |
-| `/engineering` | `content/pages/engineering.md` |
-| `/results` | `content/pages/results.md` |
-| `/contribution` | `content/pages/contribution.md` |
-| `/experiments` | `content/pages/experiments.md` |
-| `/notebook` | `content/pages/notebook.md` |
-| `/measurement` | `content/pages/measurement.md` |
-| `/alternative-platform` | `content/pages/alternative-platform.md` |
-| `/safety-and-security` | `content/pages/safety-and-security.md` |
-| `/model` | `content/pages/model.md` |
-| `/software` | `content/pages/software.md` |
-| `/human-practices` | `content/pages/human-practices.md` |
-| `/team` | `content/pages/team.md` |
-| `/attributions` | `content/pages/attributions.md` |
+Required evidence:
 
----
+```bash
+test -f out/index.html
+test -f out/description/index.html
+test -f out/contribution/index.html
+test -f out/engineering/index.html
+test -f out/human-practices/index.html
+rg '/vis/_next/' out/index.html
+```
 
-## Freeze week
+Do not commit `out/`; CI recreates it.
 
-- Freeze −14d: Bronze + Silver Standard Pages filled or honestly templated  
-- Freeze −7d: figures uploaded to static.igem.wiki  
-- Freeze −3d: External Content Check  
-- Freeze day: typos only  
+## Publish to the official repository
 
-Calendar: https://competition.igem.org/about/calendar
+Only do this after the teacher has verified access and the release commit.
+
+```bash
+git remote add igem https://gitlab.igem.org/2026/vis.git
+git remote -v
+git push igem main
+```
+
+If the `igem` remote already exists, do not add it again. Never force-push during class.
+
+The official pipeline performs:
+
+```text
+npm ci
+→ npm run lint
+→ IGEM_TEAM_SLUG=vis npm run build
+→ copy out/ into public/
+→ publish the public artifact
+```
+
+The pipeline runs only on the default branch, matching the official 2026 example.
+
+## Production smoke test
+
+Test the deployed host, not localhost:
+
+- `https://2026.igem.wiki/vis/`
+- `https://2026.igem.wiki/vis/description/`
+- `https://2026.igem.wiki/vis/contribution/`
+- `https://2026.igem.wiki/vis/engineering/`
+- `https://2026.igem.wiki/vis/human-practices/`
+- `https://2026.igem.wiki/vis/attributions/`
+
+For every URL record desktop, mobile, navigation, media, issue, and owner. Standard URL pages must be real pages, not redirects.
+
+## Content and infrastructure gate
+
+- All public page content is English and team-reviewed.
+- No invented data, experiments, people, interviews, or citations.
+- Footer links to CC BY 4.0 and `https://gitlab.igem.org/2026/vis`.
+- Images, photos, icons, and fonts use the iGEM uploads workflow and `static.igem.wiki`.
+- Video and audio follow the current official iGEM hosting guidance.
+- No Google Fonts, jsDelivr, cdnjs, or other third-party CDN requests.
+- Correct Standard URL spelling is preserved.
+- The official Wiki and Judging Form requirements are rechecked before freeze.
+
+## Rollback
+
+If a release breaks production:
+
+1. Identify the last verified release commit.
+2. Create a normal revert commit with `git revert <bad-commit>`.
+3. Push the revert to the official default branch.
+4. Wait for CI and repeat the production smoke test.
+
+Do not hand-edit generated files on the host and do not use a destructive reset as the class rollback method.
+
+## Freeze timeline
+
+Use the live 2026 calendar as the authority. The calendar currently lists Wiki Freeze for October 21, 2026 at 15:00 UTC; recheck it during the release lesson because official dates and instructions can be updated.

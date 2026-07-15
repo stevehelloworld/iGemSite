@@ -1,6 +1,8 @@
 # Wiki content
 
-Edit these Markdown files to update the team wiki. Normal text changes do not require editing React components.
+Edit these Markdown files to update the **team wiki** (public site). Normal text changes do not require editing React components.
+
+Course / teaching materials are **not** in this repo — see sibling folder `curriculum/cadture-wiki` under the Ray projects directory.
 
 ## Rules
 

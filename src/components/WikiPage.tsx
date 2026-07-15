@@ -1,6 +1,6 @@
-import PageHero from "@/components/PageHero";
 import ContentLayout from "@/components/ContentLayout";
 import MarkdownBody from "@/components/MarkdownBody";
+import PageHero from "@/components/PageHero";
 import { getPageBySlug } from "@/lib/content";
 
 export default function WikiPage({ slug }: { slug: string }) {
@@ -14,7 +14,6 @@ export default function WikiPage({ slug }: { slug: string }) {
         subtitle={frontmatter.subtitle}
         badge={frontmatter.badge}
         tone={frontmatter.tone}
-        mascotMood={frontmatter.mascotMood}
       />
       <ContentLayout toc={frontmatter.toc}>
         <MarkdownBody source={body} />

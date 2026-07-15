@@ -48,7 +48,7 @@ export default function CadMascot({
         opacity="0.5"
       />
       {/* helmet crest */}
-      <path d="M68 48 L80 28 L92 48 Z" fill="#EA580C" />
+      <path d="" fill="#EA580C" />
       <circle cx="80" cy="36" r="5" fill="#FEF6E8" />
       {/* eyes */}
       <circle cx="64" cy="90" r="8" fill="white" />

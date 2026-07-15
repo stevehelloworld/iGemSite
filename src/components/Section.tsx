@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type SectionProps = {
   id?: string;
@@ -8,22 +8,20 @@ type SectionProps = {
   className?: string;
 };
 
-export default function Section({ id, title, eyebrow, children, className = "" }: SectionProps) {
+export default function Section({
+  id,
+  title,
+  eyebrow,
+  children,
+  className = "",
+}: SectionProps) {
   return (
-    <section id={id} className={`scroll-mt-24 ${className}`}>
+    <section id={id} className={`content-section ${className}`.trim()}>
       {(eyebrow || title) && (
-        <div className="mb-5">
-          {eyebrow && (
-            <div className="mb-2 text-xs font-black uppercase tracking-[0.14em] text-primary">
-              {eyebrow}
-            </div>
-          )}
-          {title && (
-            <h2 className="font-display text-2xl font-bold tracking-tight text-primary-dark sm:text-3xl">
-              {title}
-            </h2>
-          )}
-        </div>
+        <header className="section-heading">
+          {eyebrow && <p className="eyebrow">{eyebrow}</p>}
+          {title && <h2>{title}</h2>}
+        </header>
       )}
       {children}
     </section>

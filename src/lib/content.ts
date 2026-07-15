@@ -1,11 +1,7 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-
-const CONTENT_DIR = path.join(process.cwd(), "content");
-const PAGES_DIR = path.join(CONTENT_DIR, "pages");
-
-export type TocItem = { id: string; label: string };
+export type TocItem = {
+  id: string;
+  label: string;
+};
 
 export type PageFrontmatter = {
   title: string;
@@ -23,25 +19,43 @@ export type WikiPageData = {
   body: string;
 };
 
-export function getPageSlugs(): string[] {
-  if (!fs.existsSync(PAGES_DIR)) return [];
-  return fs
-    .readdirSync(PAGES_DIR)
-    .filter((f) => f.endsWith(".md"))
-    .map((f) => f.replace(/\.md$/, ""));
+const starterPages: Record<string, WikiPageData> = {
+  description: {
+    slug: "description",
+    frontmatter: {
+      title: "Description",
+      eyebrow: "Starter pipeline",
+      subtitle: "This page is still using safe TypeScript fallback data.",
+      badge: "Lesson 8 will connect Markdown",
+      tone: "rose",
+    },
+    body:
+      "## The pipeline is alive\n\nThe route, WikiPage, page hero, layout, and body renderer already work. The next job is to replace this fallback with content/pages/description.md.",
+  },
+};
+
+function titleFromSlug(slug: string) {
+  return slug
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
 export function getPageBySlug(slug: string): WikiPageData {
-  const full = path.join(PAGES_DIR, `${slug}.md`);
-  if (!fs.existsSync(full)) {
-    throw new Error(`Missing content file: content/pages/${slug}.md`);
-  }
-  const raw = fs.readFileSync(full, "utf8");
-  const { data, content } = matter(raw);
+  const knownPage = starterPages[slug];
+  if (knownPage) return knownPage;
+
+  // TODO(S08-1): replace this fallback with fs/path file reading.
+  // TODO(S08-2): split YAML front matter and body with gray-matter.
   return {
     slug,
-    frontmatter: data as PageFrontmatter,
-    body: content.trim(),
+    frontmatter: {
+      title: titleFromSlug(slug),
+      eyebrow: "Buildable placeholder",
+      subtitle: "The route works; its Markdown file is not connected yet.",
+      tone: "sky",
+    },
+    body: `## ${titleFromSlug(slug)} is ready to connect\n\nOpen the lesson handout and replace the fallback one safe step at a time.`,
   };
 }
 
@@ -62,79 +76,30 @@ export type HomeData = {
   body: string;
 };
 
-export function getHomeContent(): HomeData {
-  const full = path.join(CONTENT_DIR, "home.md");
-  const raw = fs.readFileSync(full, "utf8");
-  const { data, content } = matter(raw);
-  return {
-    frontmatter: data as HomeData["frontmatter"],
-    body: content.trim(),
-  };
-}
-
-const CLASS_DIR = path.join(CONTENT_DIR, "class");
-
-export type ClassSessionMeta = {
-  slug: string;
-  session: number;
-  title: string;
-  subtitle?: string;
-  duration?: string;
-  goals?: string[];
-};
-
-export type ClassSessionData = {
-  slug: string;
+const starterHome: HomeData = {
   frontmatter: {
-    session: number;
-    title: string;
-    subtitle?: string;
-    duration?: string;
-    goals?: string[];
-  };
-  body: string;
+    title: "Cadture",
+    badge: "Starter data",
+    problems: [
+      {
+        title: "Heavy-metal pollution",
+        body: "This data is still in TypeScript.",
+        tag: "Pb + Cd",
+      },
+    ],
+    locations: [],
+    solution: [],
+    highlights: [],
+    sustainable: "Homepage Markdown is not connected yet.",
+    humanPractices: [],
+    engineering: [],
+    teamNote: "Team content will be added only after consent and review.",
+  },
+  body: "",
 };
 
-export function getClassSessionSlugs(): string[] {
-  if (!fs.existsSync(CLASS_DIR)) return [];
-  return fs
-    .readdirSync(CLASS_DIR)
-    .filter((f) => f.endsWith(".md") && f.toLowerCase() !== "readme.md")
-    .map((f) => f.replace(/\.md$/, ""))
-    .sort();
-}
-
-/** Numbered class sessions only (excludes utility pages like how-to-edit). */
-export function getNumberedClassSessionSlugs(): string[] {
-  return getClassSessionSlugs().filter((s) => s.startsWith("session-"));
-}
-
-export function getClassSession(slug: string): ClassSessionData {
-  const full = path.join(CLASS_DIR, `${slug}.md`);
-  if (!fs.existsSync(full)) {
-    throw new Error(`Missing class file: content/class/${slug}.md`);
-  }
-  const raw = fs.readFileSync(full, "utf8");
-  const { data, content } = matter(raw);
-  return {
-    slug,
-    frontmatter: data as ClassSessionData["frontmatter"],
-    body: content.trim(),
-  };
-}
-
-export function listClassSessions(): ClassSessionMeta[] {
-  return getNumberedClassSessionSlugs()
-    .map((slug) => {
-      const { frontmatter } = getClassSession(slug);
-      return {
-        slug,
-        session: frontmatter.session,
-        title: frontmatter.title,
-        subtitle: frontmatter.subtitle,
-        duration: frontmatter.duration,
-        goals: frontmatter.goals,
-      };
-    })
-    .sort((a, b) => a.session - b.session);
+export function getHomeContent(): HomeData {
+  // TODO(S11-1): replace starterHome with content/home.md file reading.
+  // TODO(S11-2): parse the YAML arrays with gray-matter.
+  return starterHome;
 }

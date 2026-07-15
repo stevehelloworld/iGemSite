@@ -1,48 +1,74 @@
-# Cadture · VIS iGEM 2026 Wiki
+# Cadture Wiki · Student Starter
 
-Student-friendly **team wiki deliverable** for **VIS (6423)** · project **Cadture**.
+This is the **student starting branch** for the VIS iGEM 2026 Cadture wiki course.
 
-| | |
-|--|--|
-| **Content baseline (current official)** | https://2026.igem.wiki/vis/ |
-| **GitLab** | https://gitlab.igem.org/2026/vis |
-| **Edit text** | Markdown in `content/` |
+- `main` — buildable starter with small, visible `TODO(Sxx-x)` tasks.
+- `complete` — archived complete reference site for the teacher. Students should not copy from it during the course.
+- Course materials — `../curriculum/cadture-wiki/` in the Ray workspace.
 
-**Policy:** Match official wiki facts; keep iGEM template pages until the team writes real content — **no invented results**. UI is claymorphic / student-styled; science text is owned by students via Markdown.
+The starter is intentionally incomplete, but it must always run and build. A missing lesson feature is represented by a visible placeholder, never invalid TypeScript or JSX.
 
-## Quick start
+## Start here
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000
+Open <http://localhost:3000>.
 
-## Students: how to update a page
+Before and after each lesson checkpoint:
 
-1. Open `content/pages/<name>.md` (or `content/home.md` for the homepage).  
-2. Edit English text.  
-3. Save → refresh the browser.  
+```bash
+npm run lint
+npm run build
+```
 
-Manual (中文): **`docs/STUDENT_HANDBOOK.md`**  
-Folder guide: **`content/README.md`**
+## What already works
 
-## Docs
+- Next.js App Router project structure.
+- A small Cadture homepage preview.
+- Buildable Standard URL route files.
+- A basic shared layout, navigation, footer, card, and page shell.
+- A demo content pipeline that returns safe fallback data.
+- Markdown packages are installed for the later content-engine lessons.
 
-| File | Audience |
-|------|----------|
-| `docs/curriculum/LESSON_PLAN_14.md` | **Teacher — 14×3h curriculum** |
-| `docs/STUDENT_HANDBOOK.md` | Students — how to edit content |
-| `docs/DEPLOY_TO_IGEM.md` | Wiki lead (freeze / GitLab) |
-| `docs/WIKI_MAP.md` | Medals / paths |
-| `docs/WRITING_TEMPLATES.md` | Optional long-form outlines |
-| `PRODUCT.md` | Product rules |
+## What students will build
 
-## Stack
+Search for the lesson markers:
 
-Next.js App Router · TypeScript · Tailwind CSS v4 · Markdown (`content/`)
+```bash
+rg 'TODO\(S[0-9]+'
+```
 
-## Deploy
+| Lessons | Main construction work |
+|---|---|
+| 1–3 | Project map, homepage JSX, Cadture styling, responsive layout |
+| 4–5 | Reusable components, props, arrays, and `.map()` |
+| 6–7 | Routes, global layout, data-driven and interactive navigation |
+| 8–10 | File reading, front matter, Markdown rendering, page hero, and TOC |
+| 11 | Move homepage data into `content/home.md` |
+| 12–14 | Real content, accessibility, QA, static export, and handoff |
 
-This UI/content must be shippable to iGEM infrastructure for Wiki Freeze. See `docs/DEPLOY_TO_IGEM.md` (fonts, static.igem.wiki, no external CDNs, CC BY + GitLab footer).
+## The buildable-TODO rule
+
+Do not replace code with syntax holes such as `<___>` or remove required braces. Keep a working fallback and replace one complete block at a time:
+
+```ts
+// TODO(S08-1): replace this fallback with Markdown file reading.
+return starterPage;
+```
+
+Every numbered step in the handout has an expected browser result and a recovery check.
+
+## Content integrity
+
+- Public wiki content is English.
+- Do not invent experiments, people, interviews, or results.
+- Keep required iGEM Standard URL names stable.
+- Images need permission, alt text, and an approved iGEM-hosted location before freeze.
+
+The final maintenance workflow is Markdown-only for normal content changes:
+
+- `content/home.md`
+- `content/pages/*.md`

@@ -1,5 +1,3 @@
-import PageCover from "./PageCover";
-
 type PageHeroProps = {
   eyebrow?: string;
   title: string;
@@ -10,25 +8,21 @@ type PageHeroProps = {
   mascotMood?: "happy" | "think" | "hero";
 };
 
-/** Thin wrapper so existing pages can keep PageHero API while using PageCover */
 export default function PageHero({
   eyebrow,
   title,
   subtitle,
   badge,
   tone = "rose",
-  showMascot = true,
-  mascotMood = "happy",
 }: PageHeroProps) {
-  const chapter = [eyebrow, badge].filter(Boolean).join(" · ") || "Cadture";
   return (
-    <PageCover
-      chapter={chapter}
-      title={title}
-      subtitle={subtitle}
-      tone={tone}
-      showMascot={showMascot}
-      mascotMood={mascotMood}
-    />
+    <header className={`starter-page-hero starter-page-hero--${tone}`}>
+      <div className="page-shell">
+        <p className="eyebrow">{[eyebrow, badge].filter(Boolean).join(" · ") || "Cadture"}</p>
+        <h1>{title}</h1>
+        {subtitle && <p>{subtitle}</p>}
+        {/* TODO(S10-1): add the provided mascot asset without changing content data. */}
+      </div>
+    </header>
   );
 }

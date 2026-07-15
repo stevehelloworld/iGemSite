@@ -1,6 +1,5 @@
-import { ReactNode } from "react";
-
-type TocItem = { id: string; label: string };
+import type { ReactNode } from "react";
+import type { TocItem } from "@/lib/content";
 
 type ContentLayoutProps = {
   children: ReactNode;
@@ -9,28 +8,16 @@ type ContentLayoutProps = {
 
 export default function ContentLayout({ children, toc }: ContentLayoutProps) {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <div className={`grid gap-10 ${toc?.length ? "lg:grid-cols-[1fr_230px]" : ""}`}>
-        <article className="prose-igem page-enter min-w-0 sticker p-6 sm:p-8">
-          {children}
-        </article>
-        {toc && toc.length > 0 && (
-          <aside className="hidden lg:block">
-            <div className="sticker sticky top-24 p-4">
-              <div className="mb-3 font-display text-xs font-bold uppercase tracking-[0.12em] text-primary">
-                On this page
-              </div>
-              <nav className="space-y-0.5" aria-label="Page sections">
-                {toc.map((item) => (
-                  <a key={item.id} href={`#${item.id}`} className="toc-link">
-                    {item.label}
-                  </a>
-                ))}
-              </nav>
-            </div>
-          </aside>
-        )}
-      </div>
+    <div className="page-shell content-layout">
+      <article className="article-card">{children}</article>
+
+      {toc && toc.length > 0 ? (
+        <aside className="toc-placeholder">
+          <strong>On this page</strong>
+          {/* TODO(S10-2): render each toc item as an anchor link. */}
+          <p>{toc.length} links are ready to render.</p>
+        </aside>
+      ) : null}
     </div>
   );
 }
