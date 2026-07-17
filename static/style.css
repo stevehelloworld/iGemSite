@@ -613,7 +613,17 @@ a{
 
     margin-top:auto;
 
-    background:#234b31;
+    background:
+
+    radial-gradient(circle at 82% 72%,
+        rgba(122,190,122,.18),
+        transparent 40%),
+
+    linear-gradient(
+        135deg,
+        #0d2438 0%,
+        #1d4f42 100%
+    );
 
     color:white;
 
@@ -625,13 +635,43 @@ a{
 
 }
 
+.future-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:-30px;
+
+    bottom:-20px;
+
+    width:260px;
+
+    height:260px;
+
+    background:url("https://static.igem.wiki/teams/6423/wiki/static/assests/images/sapling2.avif");
+
+    background-size:contain;
+
+    background-repeat:no-repeat;
+
+    opacity:.18;
+
+    filter:blur(12px);
+
+    z-index:1;
+
+}
+
 .future-text{
 
     position:relative;
 
-    z-index:2;
+    z-index:3;
 
-    max-width:70%;
+    width:100%;
+
+    padding-right:120px;
 
 }
 
@@ -681,17 +721,15 @@ a{
 
     position:absolute;
 
-    right:15px;
+    right:-5px;
 
-    bottom:0;
+    bottom:-10px;
 
-    width:170px;
+    width:240px;
 
     height:auto;
 
-    z-index:1;
-
-    opacity:.95;
+    z-index:2;
 
 }
 
