@@ -128,7 +128,7 @@ Produce safer water for environmental discharge.</p>
         </div>
 
         <img
-            src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/sapling.avif"
+            src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/sapling2.avif"
             class="future-image">
     </div>
 </div>
