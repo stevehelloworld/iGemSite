@@ -607,15 +607,11 @@ a{
 
 .future-box{
 
+    position:relative;
+
+    overflow:hidden;
+
     margin-top:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:24px;
 
     background:#234b31;
 
@@ -623,13 +619,19 @@ a{
 
     border-radius:18px;
 
-    padding:24px;
+    padding:28px;
+
+    min-height:180px;
 
 }
 
 .future-text{
 
-    flex:1;
+    position:relative;
+
+    z-index:2;
+
+    max-width:70%;
 
 }
 
@@ -641,7 +643,7 @@ a{
 
     gap:12px;
 
-    margin-bottom:14px;
+    margin-bottom:18px;
 
 }
 
@@ -669,13 +671,27 @@ a{
 
     margin:0;
 
+    max-width:90%;
+
+    line-height:1.8;
+
 }
 
 .future-image{
 
-    width:110px;
+    position:absolute;
 
-    flex-shrink:0;
+    right:15px;
+
+    bottom:0;
+
+    width:170px;
+
+    height:auto;
+
+    z-index:1;
+
+    opacity:.95;
 
 }
 
