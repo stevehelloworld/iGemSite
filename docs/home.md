@@ -120,10 +120,10 @@ Produce safer water for environmental discharge.</p>
                 <span>Towards a Sustainable Future</span>
             </div>
             <p>
-                Our project aims to provide an efficient,
-                safe, and cost-effective solution for
-                heavy metal remediation, protecting
-                both environmental and public health.
+                Developing efficient,
+                safe, and sustainable
+                solutions for heavy
+                metal remediation.
             </p>
         </div>
 

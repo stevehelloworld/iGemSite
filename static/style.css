@@ -614,7 +614,6 @@ a{
     margin-top:auto;
 
     background:
-
     radial-gradient(circle at 82% 72%,
         rgba(122,190,122,.18),
         transparent 40%),
@@ -629,7 +628,7 @@ a{
 
     border-radius:18px;
 
-    padding:28px;
+    padding:22px 24px;
 
     min-height:180px;
 
@@ -681,15 +680,15 @@ a{
 
     align-items:center;
 
-    gap:12px;
+    gap:10px;
 
-    margin-bottom:18px;
+    margin-bottom:12px;
 
 }
 
 .future-title i{
 
-    font-size:30px;
+    font-size:24px;
 
     color:#8fda67;
 
@@ -697,11 +696,13 @@ a{
 
 .future-title span{
 
-    font-size:1.3rem;
+    font-size:1.08rem;
 
     font-weight:700;
 
     color:#8fda67;
+
+    line-height:1.25;
 
 }
 
@@ -713,7 +714,9 @@ a{
 
     max-width:90%;
 
-    line-height:1.8;
+    font-size:.90rem;
+
+    line-height:1.5;
 
 }
 
