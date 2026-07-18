@@ -141,7 +141,7 @@ Produce safer water for environmental discharge.</p>
     <h2>HUMAN PRACTICES</h2>
     <div class="hp-layout">
         <div class="hp-image-wrapper">
-            <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/human-practices.avif" alt="Human Practices Diagram">
+            <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/human-practices2.avif" alt="Human Practices Diagram">
         </div>
 
         <div class="hp-text">
