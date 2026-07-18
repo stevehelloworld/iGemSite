@@ -785,9 +785,7 @@ a{
 
 .cycle-step{
 
-    margin-bottom:18px;
-
-    line-height:1.6;
+    margin-bottom:6px;
 
 }
 
@@ -799,8 +797,27 @@ a{
 
     font-size:1.05rem;
 
-    margin-bottom:4px;
+    font-weight:700;
 
+    margin-bottom:0;
+
+}
+
+.cycle-step p{
+
+    margin:0;
+
+    color:#555;
+
+    font-size:.85rem;
+
+    line-height:1.15;
+
+}
+
+.engineering-text .btn-cycle{
+
+    margin-top:8px;
 }
 
 .btn-cycle{

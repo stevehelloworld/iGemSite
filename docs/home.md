@@ -179,23 +179,23 @@ Produce safer water for environmental discharge.</p>
 
         <div class="engineering-text">
             <div class="cycle-step">
-                <strong>Design</strong><br>
-                Identify heavy metal challenges and design a biological solution.
+                <strong>Design</strong>
+                <p>Plan our biological solution.</p>
             </div>
 
             <div class="cycle-step">
-                <strong>Build</strong><br>
-                Construct and optimize the metal-removal system.
+                <strong>Build</strong>
+                <p>Construct and optimize.</p>
             </div>
 
             <div class="cycle-step">
-                <strong>Test</strong><br>
-                Evaluate removal efficiency and system performance.
+                <strong>Test</strong>
+                <p>Evaluate system performance.</p>
             </div>
 
             <div class="cycle-step">
-                <strong>Learn</strong><br>
-                Improve the design based on data and stakeholder feedback.
+                <strong>Learn</strong>
+                <p>Improve through iteration.</p>
             </div>
 
             <a href="engineering" class="btn-cycle">
