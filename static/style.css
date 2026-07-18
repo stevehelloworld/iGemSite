@@ -605,15 +605,16 @@ a{
    FUTURE BOX
    ========================================================= */
 
-.future-box{
+   .future-box{
 
     position:relative;
 
     overflow:hidden;
 
-    margin-top:auto;
+    margin-top:18px;
 
     background:
+
     radial-gradient(circle at 82% 72%,
         rgba(122,190,122,.18),
         transparent 40%),
@@ -640,7 +641,7 @@ a{
 
     position:absolute;
 
-    right:-30px;
+    right:-45px;
 
     bottom:-20px;
 
@@ -670,7 +671,8 @@ a{
 
     width:100%;
 
-    padding-right:120px;
+    /* 樹苗右移後，可增加文字寬度 */
+    padding-right:105px;
 
 }
 
@@ -706,17 +708,15 @@ a{
 
 }
 
-.future-text p{
+.future-text{
 
-    color:#e4efe4;
+    position:relative;
 
-    margin:0;
+    z-index:3;
 
-    max-width:90%;
+    width:100%;
 
-    font-size:.90rem;
-
-    line-height:1.5;
+    padding-right:105px;
 
 }
 
@@ -724,11 +724,11 @@ a{
 
     position:absolute;
 
-    right:-5px;
+    right:-28px;
 
     bottom:-10px;
 
-    width:240px;
+    width:235px;
 
     height:auto;
 
