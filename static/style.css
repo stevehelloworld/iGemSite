@@ -856,11 +856,11 @@ a{
 
     position:absolute;
 
-    left:0;
+    left:-12px;
 
-    bottom:45px;
+    top:48px;
 
-    width:190px;
+    width:178px;
 
 }
 
@@ -874,15 +874,15 @@ a{
 
 .hp-text{
 
-    margin-left:190px;
+    margin-left:200px;
 
-    padding-right:8px;
+    padding-right:12px;
 
 }
 
 .hp-section-block{
 
-    margin-bottom:10px;
+    margin-bottom:4px;
 
 }
 
@@ -894,7 +894,7 @@ a{
 
     font-weight:700;
 
-    margin-bottom:1px;
+    margin-bottom:0;
 
 }
 
@@ -904,17 +904,19 @@ a{
 
     font-size:.85rem;
 
-    line-height:1.25;
+    line-height:1.15;
 
 }
 
 .hp-text .btn-cycle{
 
-    margin-top:8px;
+    margin-top:6px;
 
     white-space:nowrap;
 
-    min-width:170px;
+    min-width:auto;
+
+    padding:10px 14px;
 
     text-align:center;
 
