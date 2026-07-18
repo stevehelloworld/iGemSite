@@ -910,7 +910,13 @@ a{
 
 .hp-text .btn-cycle{
 
-    margin-top:14px;
+    margin-top:8px;
+
+    white-space:nowrap;
+
+    min-width:170px;
+
+    text-align:center;
 
 }
 
