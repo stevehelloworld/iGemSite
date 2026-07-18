@@ -148,17 +148,17 @@ Produce safer water for environmental discharge.</p>
 
             <div class="hp-section-block">
                 <h3>Listen</h3>
-                <p>...</p>
+                <p>Understand stakeholder needs.</p>
             </div>
 
             <div class="hp-section-block">
                 <h3>Integrate</h3>
-                <p>...</p>
+                <p>Refine our design with feedback.</p>
             </div>
 
             <div class="hp-section-block">
                 <h3>Impact</h3>
-                <p>...</p>
+                <p>Create practical real-world solutions.</p>
             </div>
 
             <a href="human-practices" class="btn-cycle">

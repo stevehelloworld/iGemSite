@@ -882,15 +882,9 @@ a{
 
 }
 
-.hp-section-block:first-child{
-
-    margin-bottom:24px;
-
-}
-
 .hp-section-block{
 
-    margin-bottom:10px;
+    margin-bottom:8px;
 
 }
 
@@ -898,9 +892,11 @@ a{
 
     color:#2d7a46;
 
-    font-size:1rem;
+    font-size:1.05rem;
 
-    margin-bottom:2px;
+    font-weight:700;
+
+    margin-bottom:1px;
 
 }
 
@@ -908,15 +904,15 @@ a{
 
     color:#555;
 
-    font-size:.90rem;
+    font-size:.85rem;
 
-    line-height:1.35;
+    line-height:1.25;
 
 }
 
 .hp-text .btn-cycle{
 
-    margin-top:12px;
+    margin-top:8px;
 
 }
 
