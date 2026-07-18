@@ -840,7 +840,7 @@ a{
 
 .hp-card{
 
-    grid-column:span 2;
+    grid-column:span 1;
 
 }
 
@@ -880,7 +880,7 @@ a{
 
 .hp-section-block{
 
-    margin-bottom:20px;
+    margin-bottom:12px;
 
 }
 
@@ -888,9 +888,9 @@ a{
 
     color:#2d7a46;
 
-    font-size:1.15rem;
+    font-size:1.05rem;
 
-    margin-bottom:6px;
+    margin-bottom:2px;
 
 }
 
@@ -898,13 +898,15 @@ a{
 
     color:#555;
 
-    line-height:1.6;
+    line-height:1.4;
+
+    font-size:.94rem;
 
 }
 
 .hp-text .btn-cycle{
 
-    margin-top:8px;
+    margin-top:2px;
 
 }
 
