@@ -144,26 +144,24 @@ Produce safer water for environmental discharge.</p>
             <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/human-practices2.avif" alt="Human Practices Diagram">
         </div>
 
-        <div class="hp-text">
-            <div class="hp-section-block">
-                <h3>Listen</h3>
-                <p>We communicate with diverse stakeholders to understand real needs.</p>
-            </div>
-            
-            <div class="hp-section-block">
-                <h3>Integrate</h3>
-                <p>We incorporated their feedback into our design and experiments.</p>
-            </div>
-            
-            <div class="hp-section-block">
-                <h3>Impact</h3>
-                <p>We aim to create a solution that is practical, safe, and widely applicable.</p>
-            </div>
-            
-            <a href="human-practices" class="btn-cycle">
-                VIEW MORE ...
-            </a>
+        <div class="hp-section listen">
+            <h3>Listen</h3>
+            <p>We communicate with diverse stakeholders to understand real needs.</p>
         </div>
+
+        <div class="hp-section integrate">
+            <h3>Integrate</h3>
+            <p>We incorporated their feedback into our design and experiments.</p>
+        </div>
+
+        <div class="hp-section impact">
+            <h3>Impact</h3>
+            <p>We aim to create a solution that is practical, safe, and widely applicable.</p>
+        </div>
+
+        <a href="human-practices" class="btn-cycle hp-button">
+            VIEW MORE ...
+        </a>
     </div>
 </div>
 
