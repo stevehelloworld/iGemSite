@@ -209,7 +209,7 @@ Produce safer water for environmental discharge.</p>
 
 <h2>MEET OUR TEAM</h2>
 
-<p>[Insert team photo????]</p>
+<p>[Insert team photo]</p>
 
 <p>Introduce team members, roles, and areas of expertise.</p>
 
