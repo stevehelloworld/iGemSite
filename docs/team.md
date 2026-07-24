@@ -156,7 +156,7 @@ href="https://static.igem.wiki/teams/6423/wiki/team.css">
 
             <img
                 id="member-image"
-                src="images/team/team-photo.png"
+                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif"
                 alt="Member">
 
         </div>
