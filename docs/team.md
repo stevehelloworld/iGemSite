@@ -1,20 +1,200 @@
-## What Should this Page Contain?
+<link rel="stylesheet"
+      href="{{ url_for('static',
+      filename='team.css') }}">
 
-- Include pictures of your teammates, don't forget instructors and advisors!
-- You can add a small biography or a few words from each team member, to tell us
-  what you like, and what motivated you to participate in iGEM.
-- Present your lab environment, your institution, and perhaps glimpses of your
-  city or region.
-- Showcase the expertise and guidance of your instructors and advisors.
+<section class="team-hero">
 
-**Important:** Remember that your wiki will be archived and remain publicly
-accessible. Be mindful of the personal information you share. Avoid posting
-sensitive details. Be sure everyone shown in pictures agree to them being shown.
+    <div class="space-background">
 
-## Inspirations
+        <!-- Stars -->
+        <div class="stars"></div>
 
-- [2025 McGill](https://2025.igem.wiki/mcgill/team)
-- [2025 EPFL](https://2025.igem.wiki/epfl/team)
-- [2024 Waseda-Tokyo](https://2024.igem.wiki/waseda-tokyo/members)
-- [2024 Aachen](https://2024.igem.wiki/aachen/team)
-- [2024 Patras](https://2024.igem.wiki/patras/team)
+        <!-- Nebula -->
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+
+        <!-- Title -->
+        <div class="hero-title">
+
+            <h1>OUR TEAM</h1>
+
+            <p>
+                Explore Our Solar System
+            </p>
+
+        </div>
+
+        <!-- Solar System -->
+        <div class="solar-system">
+
+            <!-- Orbit -->
+	        <!-- Mercury -->
+		<div class="orbit mercury-orbit">
+		    <button
+		        class="planet mercury"
+		        data-member="mercury">
+		        <div class="planet-inner">
+		            <img
+		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/mercury.avif"
+		                alt="Mercury">	
+		        </div>
+		    </button>
+		</div>
+
+		<!-- Venus -->
+		<div class="orbit venus-orbit">
+		    <button
+		        class="planet venus"
+		        data-member="venus">
+		        <div class="planet-inner">
+		            <img
+		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/venus.avif"
+		                alt="Venus">
+		        </div>
+		    </button>
+		</div>
+
+		<!-- Earth -->
+		<div class="orbit earth-orbit">
+		    <button
+		        class="planet earth"
+		        data-member="earth">
+		        <div class="planet-inner">
+		            <img
+		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/earth.avif"
+		                alt="Earth">
+		        </div>
+		    </button>
+		</div>
+
+	        <!-- Mars -->
+		<div class="orbit mars-orbit">
+		    <button
+		        class="planet mars"
+		        data-member="Ray">
+		        <div class="planet-inner">
+		            <img
+		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/mars.avif"
+		                alt="Mars">
+		        </div>
+		    </button>
+		</div>
+
+		<!-- Jupiter -->
+		<div class="orbit jupiter-orbit">
+		    <button
+		        class="planet jupiter"
+		        data-member="jupiter">
+		        <div class="planet-inner">
+		            <img
+		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/jupiter.avif"
+		                alt="Jupiter">
+		        </div>
+		    </button>
+		</div>
+
+
+	        <!-- Saturn -->
+		<div class="orbit saturn-orbit">
+		    <button
+		        class="planet saturn"
+		        data-member="Ian">
+		        <div class="planet-inner">
+		            <img
+		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/saturn.avif"
+		                alt="Saturn">
+		        </div>
+		    </button>
+		</div>
+
+		<!-- Uranus -->
+		<div class="orbit uranus-orbit">
+		    <button
+		        class="planet uranus"
+		        data-member="uranus">
+		        <div class="planet-inner">
+		            <img
+		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/uranus.avif"
+		                alt="Uranus">
+		        </div>
+		    </button>
+		</div>
+
+		<!-- Neptune -->
+		<div class="orbit neptune-orbit">
+		    <button
+		        class="planet neptune"
+		        data-member="neptune">
+		        <div class="planet-inner">
+		            <img
+		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/neptune.avif"
+		                alt="Neptune">
+		        </div>
+		    </button>
+		</div>
+
+
+            <!-- Sun -->
+	   <button class="planet sun" data-member="sun">
+		    <div class="planet-inner">
+	        <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/neptune.avif">
+	    </div>
+	</button>               
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="member-section">
+
+    <div class="member-card">
+
+        <div class="member-photo">
+
+            <img
+                id="member-image"
+                src="images/team/team-photo.png"
+                alt="Member">
+
+        </div>
+
+        <div class="member-content">
+
+            <h2 id="member-name">
+                VIS iGEM Team
+            </h2>
+
+            <h3 id="member-role">
+                Click a planet to explore our team.
+            </h3>
+
+            <p id="member-intro">
+
+                Welcome to our solar system.
+
+                Each planet represents one member of our team.
+
+                Select a planet above to learn more about them.
+
+            </p>
+
+            <div id="member-skills"
+                class="member-skills">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for(
+'static',
+filename='js/team.js') }}">
+</script>
+
