@@ -6,7 +6,7 @@ const members = {
 
     sun: {
 
-        name: "Member 1",
+        name: "Ohanna Liu",
         role: "Team Leader",
 
         image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
@@ -24,7 +24,7 @@ const members = {
 
     mercury: {
 
-        name: "Member 2",
+        name: "Sunny Huang",
         role: "Wet Lab",
 
         image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
@@ -42,8 +42,8 @@ const members = {
 
     venus: {
 
-        name: "Member 3",
-        role: "Wet Lab",
+        name: "Chelsea Chang",
+        role: "Dry Lab",
 
         image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
 
@@ -60,7 +60,7 @@ const members = {
 
     earth: {
 
-        name: "Member 4",
+        name: "Francis Lin",
         role: "Dry Lab",
 
         image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
@@ -78,7 +78,7 @@ const members = {
 
     mars: {
 
-        name: "Ray",
+        name: "Ray Shang",
         role: "Dry Lab",
 
         image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
@@ -96,8 +96,8 @@ const members = {
 
     jupiter: {
 
-        name: "Member 6",
-        role: "Human Practices",
+        name: "Lucy Wang",
+        role: "Team Leader",
 
         image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
 
@@ -115,7 +115,7 @@ const members = {
     saturn: {
 
         name: "Ian Huang",
-        role: "Human Practices",
+        role: "Dry Lab",
 
         image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
 
@@ -132,8 +132,8 @@ const members = {
 
     uranus: {
 
-        name: "Member 8",
-        role: "Wiki",
+        name: "Eugenia Liu",
+        role: "Wet Lab",
 
         image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
 
@@ -150,8 +150,8 @@ const members = {
 
     neptune: {
 
-        name: "Member 9",
-        role: "Wiki",
+        name: "Nicholas Lu",
+        role: "Wet Lab",
 
         image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif  ",
 
