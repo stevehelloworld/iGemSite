@@ -30,7 +30,8 @@
 		<div class="orbit mercury-orbit">
 		    <button
 		        class="planet mercury"
-		        data-member="mercury">
+		        data-member="mercury"
+            data-label="Sunny">
 		        <div class="planet-inner">
 		            <img
 		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/mercury.avif"
@@ -43,7 +44,8 @@
 		<div class="orbit venus-orbit">
 		    <button
 		        class="planet venus"
-		        data-member="venus">
+		        data-member="venus"
+            data-label="Chelsea">
 		        <div class="planet-inner">
 		            <img
 		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/venus.avif"
@@ -56,7 +58,8 @@
 		<div class="orbit earth-orbit">
 		    <button
 		        class="planet earth"
-		        data-member="earth">
+		        data-member="earth"
+            data-label="Francis">
 		        <div class="planet-inner">
 		            <img
 		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/earth.avif"
@@ -69,7 +72,8 @@
 		<div class="orbit mars-orbit">
 		    <button
 		        class="planet mars"
-		        data-member="Ray">
+		        data-member="mars"
+            data-label="Ray">
 		        <div class="planet-inner">
 		            <img
 		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/mars.avif"
@@ -82,7 +86,8 @@
 		<div class="orbit jupiter-orbit">
 		    <button
 		        class="planet jupiter"
-		        data-member="jupiter">
+		        data-member="jupiter"
+            data-label="Lucy">
 		        <div class="planet-inner">
 		            <img
 		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/jupiter.avif"
@@ -96,7 +101,8 @@
 		<div class="orbit saturn-orbit">
 		    <button
 		        class="planet saturn"
-		        data-member="Ian">
+		        data-member="saturn"
+            data-label="Ian">
 		        <div class="planet-inner">
 		            <img
 		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/saturn.avif"
@@ -109,7 +115,8 @@
 		<div class="orbit uranus-orbit">
 		    <button
 		        class="planet uranus"
-		        data-member="uranus">
+		        data-member="uranus"
+            data-label="Eugenia">
 		        <div class="planet-inner">
 		            <img
 		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/uranus.avif"
@@ -122,7 +129,8 @@
 		<div class="orbit neptune-orbit">
 		    <button
 		        class="planet neptune"
-		        data-member="neptune">
+		        data-member="neptune"
+            data-label="Nicholas">
 		        <div class="planet-inner">
 		            <img
 		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/neptune.avif"
@@ -133,9 +141,9 @@
 
 
             <!-- Sun -->
-	   <button class="planet sun" data-member="sun">
+	   <button class="planet sun" data-member="sun" data-label="Ohanna">
 		    <div class="planet-inner">
-	        <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/neptune.avif">
+	        <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/sun.avif">
 	    </div>
 	</button>               
 

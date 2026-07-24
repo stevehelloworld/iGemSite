@@ -852,7 +852,7 @@
 
 .planet::after{
 
-    content:attr(data-member);
+    content:attr(data-label);
 
     position:absolute;
 

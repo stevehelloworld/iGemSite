@@ -153,7 +153,7 @@ const members = {
         name: "Member 9",
         role: "Wiki",
 
-        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
+        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif  ",
 
         intro:
             "Write a short introduction for Member 9 here.",
