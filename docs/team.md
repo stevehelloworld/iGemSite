@@ -1,5 +1,4 @@
-<link rel="stylesheet"
-href="https://static.igem.wiki/teams/6423/wiki/team.css">
+
 
 <section class="team-hero">
 
@@ -192,7 +191,5 @@ href="https://static.igem.wiki/teams/6423/wiki/team.css">
 
 </section>
 
-<script
-src="https://static.igem.wiki/teams/6423/wiki/js/team.js">
-</script>
+
 

@@ -53,6 +53,11 @@
     rel="stylesheet"
   />
 
+  <link
+    href="{{ url_for('static', filename='team.css') }}"
+    rel="stylesheet"
+/>
+
   <title>{{ title }} | Cadture - iGEM 2026</title>
 
 </head>
@@ -162,6 +167,9 @@
     src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"
   ></script>
 
+  <script
+    src="{{ url_for('static', filename='js/team.js') }}">
+</script>
 
 <script>
 
