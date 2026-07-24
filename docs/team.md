@@ -105,7 +105,7 @@
             data-label="Ian">
 		        <div class="planet-inner">
 		            <img
-		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/saturn.avif"
+		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/saturn2.avif"
 		                alt="Saturn">
 		        </div>
 		    </button>
