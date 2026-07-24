@@ -1,6 +1,5 @@
 <link rel="stylesheet"
-      href="{{ url_for('static',
-      filename='team.css') }}">
+href="https://static.igem.wiki/teams/6423/wiki/team.css">
 
 <section class="team-hero">
 
@@ -193,8 +192,7 @@
 
 </section>
 
-<script src="{{ url_for(
-'static',
-filename='js/team.js') }}">
+<script
+src="https://static.igem.wiki/teams/6423/wiki/js/team.js">
 </script>
 
