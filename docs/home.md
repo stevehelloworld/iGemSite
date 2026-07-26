@@ -11,11 +11,6 @@
             <p>Lead exposure causes serious health risks and accumulates in living organisms.</p>
         </div>
 
-        <div class="problem-item">
-            <div class="problem-circle cd">Cd</div>
-            <h5>Cadmium Threat</h5>
-            <p>Cadmium is toxic even at low concentrations and persists in the environment.</p>
-        </div>
 
         <div class="problem-item">
             <div class="problem-circle water">💧</div>
