@@ -55,7 +55,7 @@
 <h2>OUR SOLUTION</h2>
 
 <p>🔍 <strong>Detection</strong><br>
-Identify Pb²⁺ and Cd²⁺ contamination in wastewater.</p>
+Identify Cd²⁺ contamination in wastewater.</p>
 
 <p>🧲 <strong>Capture</strong><br>
 Engineered proteins selectively bind heavy metal ions.</p>
