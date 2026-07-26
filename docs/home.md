@@ -79,7 +79,7 @@ Produce safer water for environmental discharge.</p>
             <i class="bi bi-flask"></i>
             <div>
                 <h3>90%</h3>
-                <p>Pb Removal Efficiency</p>
+                <p>Cd Removal Efficiency</p>
             </div>
         </div>
 
