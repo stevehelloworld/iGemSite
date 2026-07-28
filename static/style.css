@@ -444,90 +444,36 @@ a{
    ========================================================= */
 
 .problem-card{
-
-    padding:20px 18px 24px 18px;
-
+    grid-column:1 / -1;
+    padding:clamp(28px, 5vw, 72px);
+    overflow:visible;
+    background:linear-gradient(145deg, #f8fbff 0%, #e7eff9 48%, #dce8f5 100%);
 }
 
-.problem-icons{
-
-  display:flex;
-
-  justify-content:space-evenly;
-
-  gap:10px;
-
-  margin-bottom:18px;
-
-}
-
-.problem-item{
-
-    flex:1;
-
-    text-align:center;
-
-}
-
-.problem-circle{
-
-    width:72px;
-
-    height:72px;
-
-    margin:0 auto 14px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:white;
-
-    font-size:1.45rem;
-
-    font-weight:700;
-
-}
-
-.pb{
-
-    background:#5d5d5d;
-
-}
-
-.cd{
-
-    background:#f39c12;
-
-}
-
-.water{
-
-    background:#3498db;
-
-}
-
-.problem-item h5{
-
-    margin-bottom:10px;
-
-    font-size:1.05rem;
-
-    font-weight:700;
-
-}
-
-.problem-item p{
-
-    font-size:.92rem;
-
-    color:#555;
-
-}
+.problem-story-intro{max-width:900px;min-height:68vh;margin:0 auto;text-align:center;display:grid;align-content:center;justify-items:center}
+.problem-story-intro h2{font-size:clamp(4.5rem,12vw,10rem);line-height:.82;margin:.6rem 0 1.6rem;letter-spacing:-.085em;color:#182b3e}
+.problem-story-intro>p:last-child{max-width:720px;font-size:clamp(1.15rem,2vw,1.45rem);color:#506176}
+.problem-eyebrow,.problem-step{display:block;color:#53748f;font-size:.76rem;font-weight:800;letter-spacing:.16em}
+.problem-story{height:300vh;position:relative}
+.problem-stage{position:sticky;top:0;height:100vh;overflow:hidden;z-index:1}
+.problem-scene{--problem:#697686;--problem-soft:#d8e1e9;--problem-deep:#26384b;--scene-opacity:0;--scene-offset:64px;--scene-scale:.88;position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.8fr);align-items:center;gap:clamp(36px,8vw,130px);padding:8vh clamp(12px,4vw,52px);pointer-events:none}
+.cadmium-scene{--problem:#d69424;--problem-soft:#f8dfaa;--problem-deep:#6d4813}
+.water-scene{--problem:#2f97ba;--problem-soft:#b8e5ef;--problem-deep:#155b75}
+.problem-scene-visual{width:min(38vw,460px);aspect-ratio:1;justify-self:center;position:relative;display:grid;place-items:center}
+.problem-pie{width:100%;height:100%;border-radius:50%;position:relative;background:conic-gradient(from 18deg,var(--problem) 0 31%,#fff 31.8% 33%,var(--problem-soft) 33% 65%,#fff 65.8% 67%,var(--problem-deep) 67% 98%,#fff 98.8% 100%);box-shadow:0 28px 55px color-mix(in srgb,var(--problem) 28%,transparent);transform:rotate(0) scale(var(--scene-scale)) translateY(calc(var(--scene-offset) * -.28));opacity:var(--scene-opacity);transition:transform .12s linear,opacity .12s linear}
+.pie-slice{position:absolute;inset:8%;border-radius:50%;clip-path:polygon(50% 50%,50% 0,100% 0,100% 50%);background:color-mix(in srgb,var(--problem) 82%,#fff);opacity:.28;transform-origin:50% 50%;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.slice-one{transform:rotate(5deg) scale(.1)}.slice-two{transform:rotate(124deg) scale(.1)}.slice-three{transform:rotate(243deg) scale(.1)}
+.pie-core{position:absolute;inset:22%;z-index:2;display:grid;place-items:center;background:#fdfefe;border:10px solid rgba(255,255,255,.72);border-radius:50%;box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--problem) 25%,#fff),0 10px 22px rgba(25,46,68,.16);overflow:hidden;transform:rotate(32deg)}
+.pie-core img{width:124%;max-width:none;object-fit:contain;filter:drop-shadow(0 8px 7px rgba(15,35,55,.18))}
+.orbit-dot{width:15px;aspect-ratio:1;border-radius:50%;position:absolute;background:var(--problem);box-shadow:0 0 0 7px rgba(255,255,255,.62);opacity:0;transition:opacity .35s ease,transform .6s cubic-bezier(.16,1,.3,1)}
+.dot-one{top:6%;right:18%;transform:translateY(25px)}.dot-two{bottom:17%;left:1%;transform:translateX(25px)}.dot-three{right:1%;bottom:18%;transform:translateX(-25px)}
+.problem-scene-copy{opacity:var(--scene-opacity);transform:translateY(var(--scene-offset));transition:opacity .12s linear,transform .12s linear}
+.problem-scene-copy h3{font-size:clamp(2.5rem,5vw,5rem);line-height:.96;letter-spacing:-.065em;color:var(--problem-deep);margin:.7rem 0 1.25rem}
+.problem-scene-copy p{font-size:1.15rem!important;max-width:520px;color:#46596d!important}
+.problem-facts{display:grid;justify-items:start;gap:.65rem;margin-top:1.5rem}.problem-facts span{padding:.55rem .75rem;border:1px solid color-mix(in srgb,var(--problem) 38%,#fff);border-radius:99px;background:rgba(255,255,255,.58);color:var(--problem-deep);font-size:.82rem;font-weight:700}
+.problem-scene.is-visible .slice-one{transform:rotate(5deg) scale(1)}.problem-scene.is-visible .slice-two{transform:rotate(124deg) scale(1)}.problem-scene.is-visible .slice-three{transform:rotate(243deg) scale(1)}.problem-scene.is-visible .orbit-dot{opacity:var(--scene-opacity);transform:none}
+.story-progress-button{--page-progress:0;position:fixed;right:24px;bottom:24px;width:58px;height:58px;border:0;border-radius:50%;display:grid;place-items:center;z-index:9998;background:linear-gradient(145deg,#7bc043,#2c7b75);color:#fff;box-shadow:0 12px 28px rgba(13,51,66,.3);cursor:pointer;opacity:0;transform:translateY(18px) scale(.85);pointer-events:none;transition:opacity .25s ease,transform .25s ease,box-shadow .25s ease}.story-progress-button.is-active{opacity:1;transform:none;pointer-events:auto}.story-progress-button:hover{box-shadow:0 16px 32px rgba(13,51,66,.42);transform:translateY(-3px) scale(1.04)}.story-progress-button span{font-size:1.55rem;font-weight:800;line-height:1;transform:translateY(1px)}.story-progress-ring{position:absolute;inset:-4px;width:calc(100% + 8px);height:calc(100% + 8px);transform:rotate(-90deg);pointer-events:none}.story-progress-ring circle{fill:none;stroke-width:3}.story-progress-track{stroke:rgba(20,52,65,.18)}.story-progress-value{stroke:#f5d86b;stroke-linecap:round;stroke-dasharray:150.8;stroke-dashoffset:calc(150.8 * (1 - var(--page-progress)));transition:stroke-dashoffset .12s linear}
+@media (max-width:767px){.problem-story-intro{min-height:58vh;margin-bottom:0}.problem-story-intro h2{font-size:clamp(3.8rem,19vw,6rem)}.problem-story{height:320vh}.problem-scene{grid-template-columns:1fr;gap:25px;padding:7vh 0}.problem-scene-visual{width:min(72vw,350px);order:0}.problem-scene-copy{text-align:center;order:1}.problem-scene-copy p{font-size:1rem!important}.problem-facts{justify-items:center}.problem-pie{box-shadow:0 18px 36px color-mix(in srgb,var(--problem) 25%,transparent)}.story-progress-button{right:16px;bottom:16px;width:52px;height:52px}}
 
 
 /* =========================================================
@@ -535,97 +481,17 @@ a{
    ========================================================= */
 
 
-.taiwan-section{
-
-    display:grid;
-
-    grid-template-columns:220px 1fr;
-
-    gap:24px;
-
-    align-items:start;
-
-    margin-top:20px;
-
-}
-
-.taiwan-map-column{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:flex-start;
-
-}
-
-
-.taiwan-map{
-
-    width:100%;
-
-    max-width:220px;
-
-    height:auto;
-
-    display:block;
-
-    object-fit:contain;
-
-}
-
-.taiwan-text-column{
-
-    display:grid;
-
-    row-gap:2px;
-
-    align-content:start;
-
-}
-
-.city-title{
-
-    color:#57c26d;
-
-    font-weight:700;
-
-    margin-bottom:4px;
-
-}
-
-.city-block{
-
-    padding:0;
-
-    margin-bottom:0;
-
-    line-height:1.45;
-
-}
-
-
-.city-block:not(:last-child){
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-.city-block p{
-
-    margin:0;
-
-    line-height:1.5;
-
-}
-
-.city-block strong{
-
-    display:block;
-
-    margin-bottom:2px;
-
-}
+.taiwan-story{height:440vh;position:relative;margin-top:0}
+.taiwan-stage{position:sticky;top:0;height:100vh;overflow:hidden;z-index:2;background:transparent}
+.taiwan-scene{--scene-opacity:0;--scene-offset:64px;--scene-scale:.88;position:absolute;inset:0;display:grid;grid-template-columns:minmax(280px,.9fr) minmax(260px,.72fr);align-items:center;gap:clamp(32px,7vw,110px);padding:clamp(28px,6vw,84px)}
+.taiwan-map-frame{width:min(36vw,440px);aspect-ratio:3 / 4;justify-self:center;position:relative;display:grid;place-items:center;opacity:var(--scene-opacity);transform:translateY(calc(var(--scene-offset) * -.22)) scale(var(--scene-scale));transition:opacity .22s ease,transform .36s cubic-bezier(.16,1,.3,1);will-change:opacity,transform}
+.taiwan-map-frame img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 24px 20px rgba(42,84,68,.18))}
+.taiwan-pulse{position:absolute;width:20px;aspect-ratio:1;border:4px solid #fff;border-radius:50%;background:var(--location);box-shadow:0 0 0 8px color-mix(in srgb,var(--location) 25%,transparent),0 0 30px var(--location);animation:location-pulse 2.4s ease-in-out infinite}
+.taoyuan-location{--location:#f08c35}.taoyuan-location .taiwan-pulse{top:17%;left:35%}.taichung-location{--location:#7862c9}.taichung-location .taiwan-pulse{top:31%;left:31%}.kaohsiung-location{--location:#168aa8}.kaohsiung-location .taiwan-pulse{top:75%;left:29%}
+.taiwan-location-copy{max-width:490px;opacity:var(--scene-opacity);transform:translateY(var(--scene-offset));transition:opacity .22s ease,transform .36s cubic-bezier(.16,1,.3,1);will-change:opacity,transform}
+.taiwan-kicker{display:block;color:#4f7b6c;font-size:.75rem;font-weight:800;letter-spacing:.16em}.taiwan-location-copy h3{color:#173a38;font-size:clamp(3rem,6vw,6rem);letter-spacing:-.075em;line-height:.9;margin:.8rem 0 1.4rem}.taiwan-location-copy p{color:#45625d!important;font-size:clamp(1.1rem,1.7vw,1.35rem)!important;line-height:1.65!important}.location-rule{display:block;width:86px;height:5px;border-radius:99px;background:var(--location);margin-top:2rem;box-shadow:0 6px 16px color-mix(in srgb,var(--location) 32%,transparent)}
+@keyframes location-pulse{0%,100%{transform:scale(.88);box-shadow:0 0 0 8px color-mix(in srgb,var(--location) 25%,transparent),0 0 20px var(--location)}50%{transform:scale(1.15);box-shadow:0 0 0 16px color-mix(in srgb,var(--location) 8%,transparent),0 0 34px var(--location)}}
+@media (max-width:767px){.taiwan-story{height:480vh;margin-top:0}.taiwan-scene{grid-template-columns:1fr;gap:20px;padding:7vh 7vw;text-align:center}.taiwan-map-frame{width:min(68vw,330px);order:0}.taiwan-location-copy{order:1;justify-self:center}.taiwan-location-copy h3{font-size:clamp(3.2rem,15vw,5rem)}.location-rule{margin:1.6rem auto 0}}
 
 
 /* =========================================================
@@ -1591,4 +1457,3 @@ footer .footer .container{
     }
 
 }
-
