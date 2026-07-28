@@ -73,26 +73,32 @@
 
   <header class="homepage-hero">
 
+    <div class="hero-overlay"></div>
 
-<div class="hero-overlay">
+    <div class="hero-container">
 
-  <div class="hero-container">
+      <div class="hero-banner">
+        <img
+          src="{{ url_for('static', filename='assets/images/full-hero-banner.jpg') }}"
+          class="hero-background img-fluid"
+          alt="MetalGuard Hero"
+        >
+      </div>
 
-    <div class="hero-banner">
+      <div class="hero-text">
+        <p class="hero-subtitle">Engineering a safer future for water and communities</p>
+        <h1>VIS: Bio-based remediation for lead and cadmium in wastewater</h1>
+        <p class="hero-description">
+          We design engineered proteins to capture heavy metals from industrial effluent,
+          protect ecosystems, and deliver cleaner water for people and nature.
+        </p>
+        <div class="hero-actions">
+          <a href="{{ url_for('pages', page='description') }}" class="btn btn-primary hero-btn">Our Project</a>
+          <a href="{{ url_for('pages', page='engineering') }}" class="btn btn-outline-light hero-btn">Engineering Cycle</a>
+        </div>
+      </div>
 
-      <img
-        src="{{ url_for('static',
-        filename='assets/images/full-hero-banner.jpg') }}"
-        class="hero-background img-fluid"
-        alt="MetalGuard Hero"
-      >
-    
     </div>
-
-  </div>
-
-</div>
-
 
   </header>
 
