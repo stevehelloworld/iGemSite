@@ -5,10 +5,11 @@
 <div class="homepage-card problem-card">
     <h2>THE PROBLEM</h2>
     <div class="problem-icons">
+       
         <div class="problem-item">
-            <div class="problem-circle pb">Pb</div>
-            <h5>Lead Pollution</h5>
-            <p>Lead exposure causes serious health risks and accumulates in living organisms.</p>
+            <div class="problem-circle cd">Cd</div>
+            <h5>Cadmium Threat</h5>
+            <p>Cadmium is toxic even at low concentrations and persists in the environment.</p>
         </div>
 
 
