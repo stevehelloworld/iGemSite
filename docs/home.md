@@ -9,7 +9,7 @@
         <p>Heavy-metal pollution is not one isolated issue. Scroll through the three connected pressures facing water, ecosystems, and communities.</p>
     </div>
 
-    <div class="problem-story">
+    <div class="problem-story" data-exit-fade="true">
         <div class="problem-stage">
         <article class="problem-scene lead-scene" data-problem-scene>
             <div class="problem-scene-visual" aria-hidden="true">
@@ -137,6 +137,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const story = document.querySelector(".problem-story");
     const taiwanScenes = document.querySelectorAll("[data-taiwan-scene]");
     const taiwanStory = document.querySelector(".taiwan-story");
+    const solutionScenes = document.querySelectorAll("[data-solution-scene]");
+    const solutionStory = document.querySelector(".solution-story");
+    const highlightScenes = document.querySelectorAll("[data-highlight-scene]");
+    const highlightStory = document.querySelector(".highlight-story");
     const progressButton = document.querySelector(".story-progress-button");
     let queued = false;
 
@@ -147,23 +151,35 @@ document.addEventListener("DOMContentLoaded", function () {
         const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
         const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
         const sceneSpan = 1 / sceneElements.length;
-        const activeIndex = Math.min(sceneElements.length - 1, Math.floor(storyProgress / sceneSpan));
-        const localProgress = Math.min(1, (storyProgress - activeIndex * sceneSpan) / sceneSpan);
+        const preFadeWindow = 0.18;
+        const introWindow = 0.14;
+        const exitStart = 0.72;
+        const shouldExitLast = storyElement.dataset.exitFade === "true";
+
+        function ease(value) {
+            const clamped = Math.min(1, Math.max(0, value));
+            return clamped * clamped * (3 - 2 * clamped);
+        }
 
         sceneElements.forEach((scene, index) => {
             let strength = 0;
+            const localProgress = (storyProgress - index * sceneSpan) / sceneSpan;
 
-            if (index === activeIndex) {
-                if ((index > 0 || storyElement.dataset.introFade === "true") && localProgress < 0.14) {
-                    strength = localProgress / 0.14;
-                } else if (index < sceneElements.length - 1 && localProgress > 0.76) {
-                    strength = (1 - localProgress) / 0.24;
+            if (localProgress >= -preFadeWindow && localProgress < 0 && index > 0) {
+                strength = ease((localProgress + preFadeWindow) / preFadeWindow);
+            } else if (localProgress >= 0 && localProgress <= 1) {
+                if (index === 0 && storyElement.dataset.introFade === "true" && localProgress < introWindow) {
+                    strength = ease(localProgress / introWindow);
                 } else {
                     strength = 1;
                 }
+
+                if ((index < sceneElements.length - 1 || shouldExitLast) && localProgress > exitStart) {
+                    strength = Math.min(strength, ease((1 - localProgress) / (1 - exitStart)));
+                }
             }
 
-            const opacity = strength * strength * (3 - 2 * strength);
+            const opacity = strength;
             const offset = (1 - strength) * 64;
             const scale = 0.88 + strength * 0.12;
 
@@ -174,9 +190,112 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    function updateSolutionStory() {
+        if (!solutionStory || !solutionScenes.length) return;
+
+        const storyRect = solutionStory.getBoundingClientRect();
+        const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
+        const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
+        const sceneSpan = 1 / solutionScenes.length;
+
+        function ease(value) {
+            const clamped = Math.min(1, Math.max(0, value));
+            return clamped * clamped * (3 - 2 * clamped);
+        }
+
+        solutionScenes.forEach((scene, index) => {
+            const localProgress = (storyProgress - index * sceneSpan) / sceneSpan;
+            let sceneStrength = 0;
+            let detailStrength = 0;
+
+            if (localProgress >= -0.16 && localProgress < 0 && index > 0) {
+                sceneStrength = ease((localProgress + 0.16) / 0.16);
+            } else if (localProgress >= 0 && localProgress <= 1) {
+                if (index === 0 && localProgress < 0.16) {
+                    sceneStrength = ease(localProgress / 0.16);
+                } else if (localProgress > 0.82 && index < solutionScenes.length - 1) {
+                    sceneStrength = ease((1 - localProgress) / 0.18);
+                } else {
+                    sceneStrength = 1;
+                }
+
+                if (scene.classList.contains("solution-step-scene")) {
+                    if (localProgress > 0.32 && localProgress < 0.78) {
+                        detailStrength = ease((localProgress - 0.32) / 0.18);
+                    } else if (localProgress >= 0.78) {
+                        detailStrength = 1;
+                    }
+                }
+            }
+
+            const offset = (1 - sceneStrength) * 64;
+            const scale = 0.9 + sceneStrength * 0.1;
+
+            scene.style.setProperty("--scene-opacity", sceneStrength.toFixed(3));
+            scene.style.setProperty("--scene-offset", offset.toFixed(1) + "px");
+            scene.style.setProperty("--scene-scale", scale.toFixed(3));
+            scene.style.setProperty("--detail-opacity", detailStrength.toFixed(3));
+            scene.style.setProperty("--detail-offset", ((1 - detailStrength) * 28).toFixed(1) + "px");
+            scene.classList.toggle("is-visible", sceneStrength > 0.08);
+        });
+    }
+
+    function updateHighlightStory() {
+        if (!highlightStory || !highlightScenes.length) return;
+
+        const storyRect = highlightStory.getBoundingClientRect();
+        const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
+        const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
+
+        function ease(value) {
+            const clamped = Math.min(1, Math.max(0, value));
+            return clamped * clamped * (3 - 2 * clamped);
+        }
+
+        highlightScenes.forEach((scene, index) => {
+            let strength = 0;
+
+            if (index === 0) {
+                if (storyProgress < 0.2) {
+                    strength = ease(storyProgress / 0.08);
+                } else if (storyProgress < 0.32) {
+                    strength = ease((0.32 - storyProgress) / 0.12);
+                }
+            } else if (index === 1) {
+                if (storyProgress >= 0.28 && storyProgress < 0.9) {
+                    strength = ease((storyProgress - 0.28) / 0.08);
+                } else if (storyProgress >= 0.9) {
+                    strength = ease((1 - storyProgress) / 0.1);
+                }
+            }
+
+            scene.style.setProperty("--scene-opacity", strength.toFixed(3));
+            scene.style.setProperty("--scene-offset", ((1 - strength) * 64).toFixed(1) + "px");
+            scene.style.setProperty("--scene-scale", (0.9 + strength * 0.1).toFixed(3));
+            scene.classList.toggle("is-visible", strength > 0.08);
+        });
+
+        const cards = highlightStory.querySelectorAll("[data-highlight-card]");
+        const cardStarts = [0.38, 0.48, 0.58, 0.68];
+        cards.forEach((card, index) => {
+            const cardStrength = storyProgress >= cardStarts[index] ? ease((storyProgress - cardStarts[index]) / 0.08) : 0;
+            card.style.setProperty("--card-opacity", cardStrength.toFixed(3));
+            card.style.setProperty("--card-offset", ((1 - cardStrength) * 34).toFixed(1) + "px");
+        });
+
+        const futurePanel = highlightStory.querySelector("[data-highlight-future]");
+        if (futurePanel) {
+            const futureStrength = storyProgress >= 0.78 ? ease((storyProgress - 0.78) / 0.08) : 0;
+            futurePanel.style.setProperty("--future-opacity", futureStrength.toFixed(3));
+            futurePanel.style.setProperty("--future-offset", ((1 - futureStrength) * 38).toFixed(1) + "px");
+        }
+    }
+
     function updateStoryMotion() {
         updateSceneGroup(story, scenes);
         updateSceneGroup(taiwanStory, taiwanScenes);
+        updateSolutionStory();
+        updateHighlightStory();
 
         const scrollable = document.documentElement.scrollHeight - window.innerHeight;
         const progress = scrollable > 0 ? Math.min(1, window.scrollY / scrollable) : 0;
@@ -202,81 +321,108 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<div class="homepage-card solution-card">
+<div class="homepage-card solution-card" aria-labelledby="solution-title">
+    <div class="solution-gradient-bridge" aria-hidden="true"></div>
+    <div class="solution-story" data-intro-fade="true">
+        <div class="solution-stage">
+            <article class="solution-scene solution-title-scene" data-solution-scene>
+                <span class="solution-eyebrow">FROM DETECTION TO CLEAN WATER</span>
+                <h2 id="solution-title">OUR SOLUTION</h2>
+            </article>
 
-<h2>OUR SOLUTION</h2>
+            <article class="solution-scene solution-step-scene detection-solution" data-solution-scene>
+                <div class="solution-icon-wrap"><img src="/static/assets/images/solution/detection.png" alt=""></div>
+                <div class="solution-copy"><span class="solution-step">01 / 05</span><h3>Detection</h3><p>Identify Pb²⁺ and Cd²⁺ contamination in wastewater.</p></div>
+            </article>
 
-<p>🔍 <strong>Detection</strong><br>
-Identify Pb²⁺ and Cd²⁺ contamination in wastewater.</p>
+            <article class="solution-scene solution-step-scene capture-solution" data-solution-scene>
+                <div class="solution-icon-wrap"><img src="/static/assets/images/solution/capture.png" alt=""></div>
+                <div class="solution-copy"><span class="solution-step">02 / 05</span><h3>Capture</h3><p>Engineered proteins selectively bind heavy metal ions.</p></div>
+            </article>
 
-<p>🧲 <strong>Capture</strong><br>
-Engineered proteins selectively bind heavy metal ions.</p>
+            <article class="solution-scene solution-step-scene sequestration-solution" data-solution-scene>
+                <div class="solution-icon-wrap"><img src="/static/assets/images/solution/sequestration.png" alt=""></div>
+                <div class="solution-copy"><span class="solution-step">03 / 05</span><h3>Sequestration</h3><p>Bound metals are safely retained within biological systems.</p></div>
+            </article>
 
-<p>📦 <strong>Sequestration</strong><br>
-Bound metals are safely retained within biological systems.</p>
+            <article class="solution-scene solution-step-scene removal-solution" data-solution-scene>
+                <div class="solution-icon-wrap"><img src="/static/assets/images/solution/removal.png" alt=""></div>
+                <div class="solution-copy"><span class="solution-step">04 / 05</span><h3>Removal</h3><p>Heavy metals are removed from wastewater streams.</p></div>
+            </article>
 
-<p>♻️ <strong>Removal</strong><br>
-Heavy metals are removed from wastewater streams.</p>
-
-<p>💧 <strong>Clean Water</strong><br>
-Produce safer water for environmental discharge.</p>
-
+            <article class="solution-scene solution-step-scene clean-water-solution" data-solution-scene>
+                <div class="solution-icon-wrap"><img src="/static/assets/images/solution/clean-water.png" alt=""></div>
+                <div class="solution-copy"><span class="solution-step">05 / 05</span><h3>Clean Water</h3><p>Produce safer water for environmental discharge.</p></div>
+            </article>
+        </div>
+    </div>
 </div>
 
 <!-- PROJECT HIGHLIGHTS -->
 <div class="homepage-card highlight-card">
-    <h2>PROJECT HIGHLIGHTS</h2>
-    <div class="highlight-grid">
-        <div class="highlight-box">
-            <i class="bi bi-flask"></i>
-            <div>
-                <h3>90%</h3>
-                <p>Pb Removal Efficiency</p>
-            </div>
-        </div>
+    <div class="highlight-gradient-bridge" aria-hidden="true"></div>
+    <div class="highlight-story" data-intro-fade="true">
+        <div class="highlight-stage">
+            <article class="highlight-scene highlight-title-scene" data-highlight-scene>
+                <h2>PROJECT HIGHLIGHTS</h2>
+            </article>
 
-        <div class="highlight-box">
-            <i class="bi bi-beaker"></i>
-            <div>
-                <h3>75%</h3>
-                <p>Cd Removal Efficiency</p>
-            </div>
-        </div>
+            <article class="highlight-scene" data-highlight-scene>
+                <h2 class="highlight-kicker-title">PROJECT HIGHLIGHTS</h2>
+                <div class="highlight-grid">
+                    <div class="highlight-box" data-highlight-card>
+                        <i class="bi bi-flask"></i>
+                        <div>
+                            <h3>90%</h3>
+                            <p>Pb Removal Efficiency</p>
+                        </div>
+                    </div>
 
-        <div class="highlight-box">
-            <i class="bi bi-people-fill"></i>
-            <div>
-                <h3>500+</h3>
-                <p>People Reached</p>
-            </div>
-        </div>
+                    <div class="highlight-box" data-highlight-card>
+                        <i class="bi bi-beaker"></i>
+                        <div>
+                            <h3>75%</h3>
+                            <p>Cd Removal Efficiency</p>
+                        </div>
+                    </div>
 
-        <div class="highlight-box">
-            <i class="bi bi-handshake"></i>
-            <div>
-                <h3>12</h3>
-                <p>Stakeholders Engaged</p>
-            </div>
-        </div>
-    </div>
+                    <div class="highlight-box" data-highlight-card>
+                        <i class="bi bi-people-fill"></i>
+                        <div>
+                            <h3>500+</h3>
+                            <p>People Reached</p>
+                        </div>
+                    </div>
 
-    <div class="future-box">
-        <div class="future-text">
-            <div class="future-title">
-                <i class="bi bi-leaf-fill"></i>
-                <span>Towards a Sustainable Future</span>
-            </div>
-            <p>
-                Developing efficient,
-                safe, and sustainable
-                solutions for heavy
-                metal remediation.
-            </p>
-        </div>
+                    <div class="highlight-box" data-highlight-card>
+                        <i class="bi bi-handshake"></i>
+                        <div>
+                            <h3>12</h3>
+                            <p>Stakeholders Engaged</p>
+                        </div>
+                    </div>
+                </div>
 
-        <img
-            src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/sapling2.avif"
-            class="future-image">
+                <div class="future-box" data-highlight-future>
+                    <div class="future-text">
+                        <div class="future-title">
+                            <i class="bi bi-leaf-fill"></i>
+                            <span>Towards a Sustainable Future</span>
+                        </div>
+                        <p>
+                            Developing efficient,
+                            safe, and sustainable
+                            solutions for heavy
+                            metal remediation.
+                        </p>
+                    </div>
+
+                    <img
+                        src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/sapling2.avif"
+                        class="future-image">
+                </div>
+            </article>
+        </div>
     </div>
 </div>
 </div>
