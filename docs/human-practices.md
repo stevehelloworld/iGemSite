@@ -117,48 +117,188 @@
 
     </p>
 
-    <div class="journey-placeholder">
+    <div class="journey-wrapper">
 
-        <div class="todo-box">
+        <!-- STEP 1 -->
+
+        <div class="journey-card">
+
+            <div class="journey-number">
+
+                01
+
+            </div>
 
             <h3>
-                TODO
+
+                Identify the Problem
+
             </h3>
 
+            <p class="journey-stakeholder">
+
+                Water Treatment Plant<br>
+                Farmers Association
+
+            </p>
+
             <p>
 
-                Insert an interactive timeline.
+                Understand the real environmental challenges,
+                drinking water safety,
+                and agricultural concerns.
+
+            </p>
+
+        </div>
+
+        <div class="journey-arrow">
+
+            <i class="bi bi-arrow-right"></i>
+
+        </div>
+
+        <!-- STEP 2 -->
+
+        <div class="journey-card">
+
+            <div class="journey-number">
+
+                02
+
+            </div>
+
+            <h3>
+
+                Understand Existing Solutions
+
+            </h3>
+
+            <p class="journey-stakeholder">
+
+                Wastewater Treatment Plant<br>
+                Zhao Lian Industry
 
             </p>
 
             <p>
 
-                Suggested milestones:
+                Investigate current treatment technologies,
+                operational limitations,
+                and industrial needs.
 
             </p>
 
-            <ul>
+        </div>
 
-                <li>Problem Identification</li>
+        <div class="journey-arrow">
 
-                <li>Water Treatment Plant Visit</li>
+            <i class="bi bi-arrow-right"></i>
 
-                <li>Wastewater Treatment Plant Visit</li>
+        </div>
 
-                <li>Zhao Lian Industry Visit</li>
+        <!-- STEP 3 -->
 
-                <li>Professor Hung-Yu Lai Interview</li>
+        <div class="journey-card">
 
-                <li>Farmers Association Visit</li>
+            <div class="journey-number">
 
-                <li>Integrated Project Design</li>
+                03
 
-            </ul>
+            </div>
+
+            <h3>
+
+                Optimize Engineering Design
+
+            </h3>
+
+            <p class="journey-stakeholder">
+
+                Professor Hung-Yu Lai
+
+            </p>
 
             <p>
 
-                Add dates, photos, organization logos, and key outcomes for each
-                milestone.
+                Improve experimental design,
+                compare MT strategies,
+                optimize Cd concentration,
+                and evaluate bacterial viability.
+
+            </p>
+
+        </div>
+
+        <div class="journey-arrow">
+
+            <i class="bi bi-arrow-right"></i>
+
+        </div>
+
+        <!-- STEP 4 -->
+
+        <div class="journey-card">
+
+            <div class="journey-number">
+
+                04
+
+            </div>
+
+            <h3>
+
+                Refine Our Project
+
+            </h3>
+
+            <p class="journey-stakeholder">
+
+                Integrated Design
+
+            </p>
+
+            <p>
+
+                Translate stakeholder feedback into engineering
+                improvements and implementation strategies.
+
+            </p>
+
+        </div>
+
+        <div class="journey-arrow">
+
+            <i class="bi bi-arrow-right"></i>
+
+        </div>
+
+        <!-- STEP 5 -->
+
+        <div class="journey-card final-card">
+
+            <div class="journey-number">
+
+                05
+
+            </div>
+
+            <h3>
+
+                Final iGEM Project
+
+            </h3>
+
+            <p class="journey-stakeholder">
+
+                Science × Society
+
+            </p>
+
+            <p>
+
+                An engineered heavy metal remediation platform
+                shaped through Integrated Human Practices.
 
             </p>
 
