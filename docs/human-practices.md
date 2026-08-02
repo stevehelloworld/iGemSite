@@ -100,34 +100,107 @@
 <!-- Journey -->
 <!-- ===================================================== -->
 
+<!-- ===================================================== -->
+<!-- Integrated Human Practices Journey -->
+<!-- ===================================================== -->
+
 <section class="ihp-section">
 
     <div class="section-title">
 
         <h2>
-            Our Human Practices Journey
+            Integrated Human Practices Journey
         </h2>
 
     </div>
 
     <p class="section-description">
 
-        Throughout the project, stakeholder engagement guided our decision-making
-        process from identifying the problem to improving our engineering design.
+        Every stakeholder interaction shaped our project. Instead of treating
+        Human Practices as independent activities, we continuously integrated
+        stakeholder feedback into our engineering decisions. Click each stage
+        below to explore how our project evolved.
 
     </p>
 
-    <div class="journey-wrapper">
+    <!-- ============================= -->
+    <!-- Timeline -->
+    <!-- ============================= -->
 
-        <!-- STEP 1 -->
+    <div class="journey-timeline">
 
-        <div class="journey-card">
+        <button class="journey-dot active"
+                data-panel="problem">
 
-            <div class="journey-number">
+            <span>01</span>
 
-                01
+            <small>Identify</small>
 
-            </div>
+        </button>
+
+        <div class="timeline-line"></div>
+
+        <button class="journey-dot"
+                data-panel="solution">
+
+            <span>02</span>
+
+            <small>Solutions</small>
+
+        </button>
+
+        <div class="timeline-line"></div>
+
+        <button class="journey-dot"
+                data-panel="design">
+
+            <span>03</span>
+
+            <small>Design</small>
+
+        </button>
+
+        <div class="timeline-line"></div>
+
+        <button class="journey-dot"
+                data-panel="refine">
+
+            <span>04</span>
+
+            <small>Refine</small>
+
+        </button>
+
+        <div class="timeline-line"></div>
+
+        <button class="journey-dot"
+                data-panel="final">
+
+            <span>05</span>
+
+            <small>Final</small>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- Journey Panels -->
+    <!-- ============================= -->
+
+    <div class="journey-panels">
+
+
+
+
+        <!-- ======================================== -->
+        <!-- PANEL 1 -->
+        <!-- ======================================== -->
+
+        <div id="problem"
+             class="journey-panel active">
 
             <h3>
 
@@ -135,38 +208,118 @@
 
             </h3>
 
-            <p class="journey-stakeholder">
+            <p class="journey-intro">
 
-                Water Treatment Plant<br>
-                Farmers Association
-
-            </p>
-
-            <p>
-
-                Understand the real environmental challenges,
-                drinking water safety,
-                and agricultural concerns.
+                Before proposing any solution, we first sought to understand
+                how heavy metal contamination affects different sectors of
+                society.
 
             </p>
 
-        </div>
+            <div class="journey-grid">
 
-        <div class="journey-arrow">
+                <div class="journey-block">
 
-            <i class="bi bi-arrow-right"></i>
+                    <h4>
 
-        </div>
+                        Stakeholders
 
-        <!-- STEP 2 -->
+                    </h4>
 
-        <div class="journey-card">
+                    <ul>
 
-            <div class="journey-number">
+                        <li>
+                            Water Treatment Plant
+                        </li>
 
-                02
+                        <li>
+                            Farmers Association
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        What We Learned
+
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Drinking water safety is a major public concern.
+
+                        </li>
+
+                        <li>
+
+                            Heavy metal contamination directly impacts food
+                            safety and agriculture.
+
+                        </li>
+
+                        <li>
+
+                            Environmental monitoring is essential for early
+                            detection.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        Project Impact
+
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Focused our project on wastewater remediation.
+
+                        </li>
+
+                        <li>
+
+                            Considered downstream agricultural impacts.
+
+                        </li>
+
+                        <li>
+
+                            Prioritized practical environmental applications.
+
+                        </li>
+
+                    </ul>
+
+                </div>
 
             </div>
+
+        </div>
+
+
+
+
+
+        <!-- ======================================== -->
+        <!-- PANEL 2 -->
+        <!-- ======================================== -->
+
+        <div id="solution"
+             class="journey-panel">
 
             <h3>
 
@@ -174,38 +327,114 @@
 
             </h3>
 
-            <p class="journey-stakeholder">
+            <p class="journey-intro">
 
-                Wastewater Treatment Plant<br>
-                Zhao Lian Industry
-
-            </p>
-
-            <p>
-
-                Investigate current treatment technologies,
-                operational limitations,
-                and industrial needs.
+                We visited treatment facilities and industrial partners to
+                understand how heavy metals are currently managed in practice.
 
             </p>
 
-        </div>
+            <div class="journey-grid">
 
-        <div class="journey-arrow">
+                <div class="journey-block">
 
-            <i class="bi bi-arrow-right"></i>
+                    <h4>
 
-        </div>
+                        Stakeholders
 
-        <!-- STEP 3 -->
+                    </h4>
 
-        <div class="journey-card">
+                    <ul>
 
-            <div class="journey-number">
+                        <li>
 
-                03
+                            Wastewater Treatment Plant
+
+                        </li>
+
+                        <li>
+
+                            Zhao Lian Industry
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        What We Learned
+
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Existing technologies are effective but often
+                            require considerable operational costs.
+
+                        </li>
+
+                        <li>
+
+                            Industrial implementation requires reliability
+                            and easy operation.
+
+                        </li>
+
+                        <li>
+
+                            New technologies should complement current
+                            treatment systems rather than completely replace
+                            them.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        Project Impact
+
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Positioned our engineered bacteria as a
+                            complementary remediation strategy.
+
+                        </li>
+
+                        <li>
+
+                            Began considering future implementation
+                            alongside existing treatment processes.
+
+                        </li>
+
+                    </ul>
+
+                </div>
 
             </div>
+
+        </div>
+        <!-- ======================================== -->
+        <!-- PANEL 3 -->
+        <!-- ======================================== -->
+
+        <div id="design"
+             class="journey-panel">
 
             <h3>
 
@@ -213,38 +442,118 @@
 
             </h3>
 
-            <p class="journey-stakeholder">
+            <p class="journey-intro">
 
-                Professor Hung-Yu Lai
-
-            </p>
-
-            <p>
-
-                Improve experimental design,
-                compare MT strategies,
-                optimize Cd concentration,
-                and evaluate bacterial viability.
+                After understanding real-world challenges, we consulted
+                Professor Hung-Yu Lai to improve our engineering strategy
+                and experimental design.
 
             </p>
 
-        </div>
+            <div class="journey-grid">
 
-        <div class="journey-arrow">
+                <div class="journey-block">
 
-            <i class="bi bi-arrow-right"></i>
+                    <h4>
 
-        </div>
+                        Stakeholder
 
-        <!-- STEP 4 -->
+                    </h4>
 
-        <div class="journey-card">
+                    <ul>
 
-            <div class="journey-number">
+                        <li>
 
-                04
+                            Professor Hung-Yu Lai
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        What We Learned
+
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Compare different metallothionein localization
+                            strategies experimentally.
+
+                        </li>
+
+                        <li>
+
+                            Optimize cadmium concentration before evaluating
+                            system performance.
+
+                        </li>
+
+                        <li>
+
+                            Monitor bacterial viability in addition to sensing
+                            performance.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        Project Impact
+
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Added comparative experiments for MT localization.
+
+                        </li>
+
+                        <li>
+
+                            Optimized experimental conditions.
+
+                        </li>
+
+                        <li>
+
+                            Included bacterial viability as an evaluation
+                            metric.
+
+                        </li>
+
+                    </ul>
+
+                </div>
 
             </div>
+
+        </div>
+
+
+
+
+
+        <!-- ======================================== -->
+        <!-- PANEL 4 -->
+        <!-- ======================================== -->
+
+        <div id="refine"
+             class="journey-panel">
 
             <h3>
 
@@ -252,55 +561,238 @@
 
             </h3>
 
-            <p class="journey-stakeholder">
+            <p class="journey-intro">
 
-                Integrated Design
-
-            </p>
-
-            <p>
-
-                Translate stakeholder feedback into engineering
-                improvements and implementation strategies.
+                We integrated feedback from all stakeholders into our
+                engineering strategy and future implementation plans.
 
             </p>
 
-        </div>
+            <div class="journey-grid">
 
-        <div class="journey-arrow">
+                <div class="journey-block">
 
-            <i class="bi bi-arrow-right"></i>
+                    <h4>
 
-        </div>
+                        Integrated Feedback
 
-        <!-- STEP 5 -->
+                    </h4>
 
-        <div class="journey-card final-card">
+                    <ul>
 
-            <div class="journey-number">
+                        <li>
 
-                05
+                            Academia
+
+                        </li>
+
+                        <li>
+
+                            Industry
+
+                        </li>
+
+                        <li>
+
+                            Water Management
+
+                        </li>
+
+                        <li>
+
+                            Agriculture
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        Key Improvements
+
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Improved experimental design.
+
+                        </li>
+
+                        <li>
+
+                            Increased practical applicability.
+
+                        </li>
+
+                        <li>
+
+                            Considered environmental safety.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        Future Direction
+
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Integrate with existing wastewater treatment
+                            systems.
+
+                        </li>
+
+                        <li>
+
+                            Evaluate scalability.
+
+                        </li>
+
+                        <li>
+
+                            Continue improving deployment strategies.
+
+                        </li>
+
+                    </ul>
+
+                </div>
 
             </div>
 
+        </div>
+
+
+
+
+
+        <!-- ======================================== -->
+        <!-- PANEL 5 -->
+        <!-- ======================================== -->
+
+        <div id="final"
+             class="journey-panel">
+
             <h3>
 
-                Final iGEM Project
+                Integrated Human Practices
 
             </h3>
 
-            <p class="journey-stakeholder">
+            <p class="journey-intro">
 
-                Science × Society
-
-            </p>
-
-            <p>
-
-                An engineered heavy metal remediation platform
-                shaped through Integrated Human Practices.
+                Human Practices was not a separate activity—it guided every
+                stage of our project. Continuous stakeholder engagement helped
+                transform an initial idea into a more practical, responsible,
+                and application-oriented synthetic biology solution.
 
             </p>
+
+            <div class="journey-grid">
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        Our Stakeholders
+
+                    </h4>
+
+                    <ul>
+
+                        <li>Academia</li>
+
+                        <li>Industry</li>
+
+                        <li>Water Management</li>
+
+                        <li>Agriculture</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        Our Philosophy
+
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            Listen before designing.
+
+                        </li>
+
+                        <li>
+
+                            Integrate instead of documenting.
+
+                        </li>
+
+                        <li>
+
+                            Develop solutions with society.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="journey-block">
+
+                    <h4>
+
+                        Final Outcome
+
+                    </h4>
+
+                    <ul>
+
+                        <li>
+
+                            A stakeholder-informed biosensing and
+                            bioremediation platform.
+
+                        </li>
+
+                        <li>
+
+                            Improved engineering design.
+
+                        </li>
+
+                        <li>
+
+                            Stronger real-world applicability.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -308,166 +800,6 @@
 
 </section>
 
-
-
-
-
-<!-- ===================================================== -->
-<!-- Stakeholders -->
-<!-- ===================================================== -->
-
-<section class="ihp-section">
-
-    <div class="section-title">
-
-        <h2>
-            Our Stakeholders
-        </h2>
-
-    </div>
-
-    <p class="section-description">
-
-        Heavy metal pollution affects multiple sectors of society.
-        To gain a comprehensive understanding of this issue, we engaged
-        stakeholders representing different stages of environmental management.
-
-    </p>
-
-
-
-    <div class="stakeholder-grid">
-
-        <div class="stakeholder-card">
-
-            <div class="stakeholder-icon">
-
-                <!-- TODO -->
-
-            </div>
-
-            <h3>
-
-                Academia
-
-            </h3>
-
-            <p>
-
-                Scientific guidance helped improve our experimental design,
-                engineering strategy, and understanding of environmental
-                remediation.
-
-            </p>
-
-            <p class="stakeholder-example">
-
-                Professor Hung-Yu Lai
-
-            </p>
-
-        </div>
-
-
-
-        <div class="stakeholder-card">
-
-            <div class="stakeholder-icon">
-
-                <!-- TODO -->
-
-            </div>
-
-            <h3>
-
-                Industry
-
-            </h3>
-
-            <p>
-
-                Industrial partners introduced practical challenges associated
-                with wastewater treatment, operational costs, and implementation
-                requirements.
-
-            </p>
-
-            <p class="stakeholder-example">
-
-                Zhao Lian Industry
-
-            </p>
-
-        </div>
-
-
-
-        <div class="stakeholder-card">
-
-            <div class="stakeholder-icon">
-
-                <!-- TODO -->
-
-            </div>
-
-            <h3>
-
-                Water Management
-
-            </h3>
-
-            <p>
-
-                Water treatment professionals shared current monitoring practices,
-                treatment technologies, and regulatory considerations.
-
-            </p>
-
-            <p class="stakeholder-example">
-
-                Water Treatment Plant<br>
-
-                Wastewater Treatment Plant
-
-            </p>
-
-        </div>
-
-
-
-        <div class="stakeholder-card">
-
-            <div class="stakeholder-icon">
-
-                <!-- TODO -->
-
-            </div>
-
-            <h3>
-
-                Agriculture
-
-            </h3>
-
-            <p>
-
-                Agricultural stakeholders helped us better understand food safety,
-                irrigation concerns, and the long-term impact of heavy metal
-                contamination on farming.
-
-            </p>
-
-            <p class="stakeholder-example">
-
-                Farmers Association
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
 
 
 
