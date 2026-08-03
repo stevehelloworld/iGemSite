@@ -59,3 +59,59 @@
 3. 待所有圖片與分枝都成功淡入後，再讓文字一行一行淡入。
 4. 最後淡入 `VIEW MORE...` 按鈕。
 5. 需檢查 Human Practices 與上一段 Project Highlights 的背景銜接，維持投影片式滑動感。
+
+## 2026-08-03 — Human Practices、Description 與 Problem Statement 調整
+
+### 今日完成
+
+- 重啟並延續 `animation` 分支的首頁修改內容。
+- 將 `PROJECT HIGHLIGHTS` 的文字內容更新為 VIS 官方網站目前使用的重點敘述，保留原先滑動淡入淡出的呈現方式。
+- 依前次工作日誌註記製作 `HUMAN PRACTICES` 滑動敘事：
+  - 先讓 TEAM 中心淡入。
+  - 再依序淡入 Government、Industry、Researchers、Public、Wastewater 五個分枝。
+  - 待左側圖像完整呈現後，再依序淡入右側 Listen、Integrate、Impact 文字。
+  - 最後淡入 `VIEW MORE ...` 按鈕。
+- 依使用者提供的原圖修正 Human Practices 左側圖像，保留原本 TEAM 中心與五個分枝的視覺樣式。
+- 移除 Human Practices 外層背卡，讓內容有更大的排版空間，並維持分段淡入效果。
+- 修正因 CSS 結構造成上方選單自動展開、遮住下方內容的問題。
+- 讀取 `Untitled_document.pdf` 內容，將 PDF 中的 Problem Statement 內容整理並覆蓋至網頁 Problem Statement 相關頁面。
+- 新增並整理 `docs/problem-statement.md`，建立正式 Problem Statement 內容與美化排版。
+- 調整 Description 選單：
+  - Background 連到 `/background`。
+  - Problem Statement 連到 `/problem-statement`。
+- 補上 `docs/background.md`，讓 `/background` 可正常開啟。
+- 為避免刪除 `docs/description.md` 後造成舊路由 Internal Server Error，已將 `docs/description.md` 還原。
+- 調整 Problem Statement / Description 內的數據排版：
+  - `2.5 mg/kg` 與 `5.0 mg/kg` 數據字體略微縮小並加粗。
+  - 數據說明文字加粗，讓整體更像重點數據卡。
+- 調整 `Cadmium contamination in Taiwan is a national problem` 區塊：
+  - 將城市與比例改為城市名稱在前、百分比在後。
+  - 使用約等於符號呈現為 `Changhua County ≈ 47%`、`Taoyuan City ≈ 46%`、`Taichung City ≈ 5%`。
+- 更新 CSS cache busting 版本至 `20260803-problem2`，避免瀏覽器繼續載入舊版樣式。
+
+### 新增 / 調整檔案
+
+- `docs/home.md`
+- `home.md`
+- `docs/problem-statement.md`
+- `docs/background.md`
+- `docs/description.md`
+- `static/style.css`
+- `wiki/base.html`
+- `wiki/menu.html`
+- `static/assets/images/hp-reference-diagram.png`
+
+### 驗證
+
+- 已通過 `git diff --check`。
+- 已使用 Flask test client 檢查以下路由皆可正常開啟：
+  - `/description`
+  - `/background`
+  - `/problem-statement`
+- 已確認選單中 Background 與 Problem Statement 會分別輸出 `/background` 與 `/problem-statement`。
+- 已確認 Problem Statement 頁面中城市比例與數據文字有成功更新。
+
+### 下次工作事項（注記）
+
+1. **ENGINEERING CYCLE**：完成與前面區塊一致的流暢式滑動切換效果。
+2. **MEET OUR TEAM**：完成流暢式滑動切換效果，並檢查與上一段 Engineering Cycle 的背景與淡入淡出銜接。

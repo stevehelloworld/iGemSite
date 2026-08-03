@@ -228,34 +228,34 @@ Produce safer water for environmental discharge.</p>
     <h2>PROJECT HIGHLIGHTS</h2>
     <div class="highlight-grid">
         <div class="highlight-box">
-            <i class="bi bi-flask"></i>
+            <i class="bi bi-diagram-3-fill"></i>
             <div>
-                <h3>90%</h3>
-                <p>Pb Removal Efficiency</p>
+                <h3>Dual-Function System</h3>
+                <p>One engineered E. coli for detection and remediation.</p>
             </div>
         </div>
 
         <div class="highlight-box">
-            <i class="bi bi-beaker"></i>
+            <i class="bi bi-broadcast-pin"></i>
             <div>
-                <h3>75%</h3>
-                <p>Cd Removal Efficiency</p>
+                <h3>Real-Time Biosensing</h3>
+                <p>Responsive detection of Cd²⁺.</p>
             </div>
         </div>
 
         <div class="highlight-box">
-            <i class="bi bi-people-fill"></i>
+            <i class="bi bi-magnet-fill"></i>
             <div>
-                <h3>500+</h3>
-                <p>People Reached</p>
+                <h3>Metal Sequestration</h3>
+                <p>Metallothionein captures toxic heavy metal ions.</p>
             </div>
         </div>
 
         <div class="highlight-box">
-            <i class="bi bi-handshake"></i>
+            <i class="bi bi-recycle"></i>
             <div>
-                <h3>12</h3>
-                <p>Stakeholders Engaged</p>
+                <h3>Sustainable Solution</h3>
+                <p>An eco-friendly approach toward cleaner wastewater.</p>
             </div>
         </div>
     </div>

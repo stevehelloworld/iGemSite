@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const solutionStory = document.querySelector(".solution-story");
     const highlightScenes = document.querySelectorAll("[data-highlight-scene]");
     const highlightStory = document.querySelector(".highlight-story");
+    const hpStory = document.querySelector(".hp-story");
     const progressButton = document.querySelector(".story-progress-button");
     let queued = false;
 
@@ -291,11 +292,69 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function updateHpStory() {
+        if (!hpStory) return;
+
+        const storyRect = hpStory.getBoundingClientRect();
+        const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
+        const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
+
+        function ease(value) {
+            const clamped = Math.min(1, Math.max(0, value));
+            return clamped * clamped * (3 - 2 * clamped);
+        }
+
+        const wholeScene = hpStory.querySelector("[data-hp-scene]");
+        let sceneStrength = 0;
+        if (storyProgress < 0.97) {
+            sceneStrength = ease(storyProgress / 0.08);
+        } else {
+            sceneStrength = ease((1 - storyProgress) / 0.03);
+        }
+
+        if (wholeScene) {
+            wholeScene.style.setProperty("--scene-opacity", sceneStrength.toFixed(3));
+            wholeScene.style.setProperty("--scene-offset", ((1 - sceneStrength) * 64).toFixed(1) + "px");
+            wholeScene.style.setProperty("--scene-scale", (0.9 + sceneStrength * 0.1).toFixed(3));
+            wholeScene.classList.toggle("is-visible", sceneStrength > 0.08);
+        }
+
+        const centerStrength = storyProgress >= 0.06 ? ease((storyProgress - 0.06) / 0.1) : 0;
+        hpStory.querySelectorAll("[data-hp-center]").forEach((center) => {
+            center.style.setProperty("--hp-center-opacity", centerStrength.toFixed(3));
+            center.style.setProperty("--hp-center-offset", ((1 - centerStrength) * 32).toFixed(1) + "px");
+        });
+
+        const branches = hpStory.querySelectorAll("[data-hp-branch]");
+        const branchStarts = [0.2, 0.3, 0.4, 0.5, 0.6];
+        branches.forEach((branch, index) => {
+            const branchStrength = storyProgress >= branchStarts[index] ? ease((storyProgress - branchStarts[index]) / 0.08) : 0;
+            branch.style.setProperty("--branch-opacity", branchStrength.toFixed(3));
+            branch.style.setProperty("--branch-offset", ((1 - branchStrength) * 24).toFixed(1) + "px");
+        });
+
+        const textLines = hpStory.querySelectorAll("[data-hp-line]");
+        const textStarts = [0.68, 0.75, 0.82];
+        textLines.forEach((line, index) => {
+            const lineStrength = storyProgress >= textStarts[index] ? ease((storyProgress - textStarts[index]) / 0.07) : 0;
+            line.style.setProperty("--line-opacity", lineStrength.toFixed(3));
+            line.style.setProperty("--line-offset", ((1 - lineStrength) * 28).toFixed(1) + "px");
+        });
+
+        const button = hpStory.querySelector("[data-hp-button]");
+        if (button) {
+            const buttonStrength = storyProgress >= 0.89 ? ease((storyProgress - 0.89) / 0.06) : 0;
+            button.style.setProperty("--button-opacity", buttonStrength.toFixed(3));
+            button.style.setProperty("--button-offset", ((1 - buttonStrength) * 24).toFixed(1) + "px");
+        }
+    }
+
     function updateStoryMotion() {
         updateSceneGroup(story, scenes);
         updateSceneGroup(taiwanStory, taiwanScenes);
         updateSolutionStory();
         updateHighlightStory();
+        updateHpStory();
 
         const scrollable = document.documentElement.scrollHeight - window.innerHeight;
         const progress = scrollable > 0 ? Math.min(1, window.scrollY / scrollable) : 0;
@@ -371,34 +430,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h2 class="highlight-kicker-title">PROJECT HIGHLIGHTS</h2>
                 <div class="highlight-grid">
                     <div class="highlight-box" data-highlight-card>
-                        <i class="bi bi-flask"></i>
+                        <i class="bi bi-diagram-3-fill"></i>
                         <div>
-                            <h3>90%</h3>
-                            <p>Pb Removal Efficiency</p>
+                            <h3>Dual-Function System</h3>
+                            <p>One engineered E. coli for detection and remediation.</p>
                         </div>
                     </div>
 
                     <div class="highlight-box" data-highlight-card>
-                        <i class="bi bi-beaker"></i>
+                        <i class="bi bi-broadcast-pin"></i>
                         <div>
-                            <h3>75%</h3>
-                            <p>Cd Removal Efficiency</p>
+                            <h3>Real-Time Biosensing</h3>
+                            <p>Responsive detection of Cd²⁺.</p>
                         </div>
                     </div>
 
                     <div class="highlight-box" data-highlight-card>
-                        <i class="bi bi-people-fill"></i>
+                        <i class="bi bi-magnet-fill"></i>
                         <div>
-                            <h3>500+</h3>
-                            <p>People Reached</p>
+                            <h3>Metal Sequestration</h3>
+                            <p>Metallothionein captures toxic heavy metal ions.</p>
                         </div>
                     </div>
 
                     <div class="highlight-box" data-highlight-card>
-                        <i class="bi bi-handshake"></i>
+                        <i class="bi bi-recycle"></i>
                         <div>
-                            <h3>12</h3>
-                            <p>Stakeholders Engaged</p>
+                            <h3>Sustainable Solution</h3>
+                            <p>An eco-friendly approach toward cleaner wastewater.</p>
                         </div>
                     </div>
                 </div>
@@ -430,34 +489,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="grid-row">
 
-<div class="homepage-card hp-card">
-    <h2>HUMAN PRACTICES</h2>
-    <div class="hp-layout">
-        <div class="hp-image-wrapper">
-            <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/human-practices2.avif" alt="Human Practices Diagram">
-        </div>
+<div class="homepage-card hp-card" aria-labelledby="hp-title">
+    <div class="hp-gradient-bridge" aria-hidden="true"></div>
+    <div class="hp-story" data-intro-fade="true">
+        <div class="hp-stage">
+            <article class="hp-scene" data-hp-scene>
+                <h2 id="hp-title">HUMAN PRACTICES</h2>
+                <div class="hp-layout">
+                    <div class="hp-visual">
+                        <div class="hp-image-wrapper" aria-label="Human Practices stakeholder map">
+                            <svg class="hp-layered-diagram" viewBox="0 0 1254 1254" role="img" aria-labelledby="hp-diagram-title">
+                                <title id="hp-diagram-title">TEAM connects with Government, Industry, Researchers, Public, and Wastewater stakeholders.</title>
+                                <defs>
+                                    <clipPath id="hp-clip-team-full"><circle cx="626" cy="628" r="200" /></clipPath>
+                                    <clipPath id="hp-clip-government-full"><circle cx="626" cy="203" r="197" /><rect x="616" y="385" width="20" height="92" /></clipPath>
+                                    <clipPath id="hp-clip-industry-full"><circle cx="207" cy="529" r="197" /><polygon points="384,552 470,584 458,618 370,584" /></clipPath>
+                                    <clipPath id="hp-clip-researchers-full"><circle cx="1032" cy="529" r="197" /><polygon points="784,584 870,552 884,584 796,618" /></clipPath>
+                                    <clipPath id="hp-clip-public-full"><circle cx="330" cy="1024" r="202" /><polygon points="410,792 508,834 492,872 396,830" /></clipPath>
+                                    <clipPath id="hp-clip-wastewater-full"><circle cx="925" cy="1024" r="202" /><polygon points="762,834 844,792 858,830 776,872" /></clipPath>
+                                </defs>
 
-        <div class="hp-text">
+                                <g class="hp-layer hp-layer-team" data-hp-center>
+                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-team-full)" />
+                                </g>
+                                <g class="hp-layer hp-layer-branch" data-hp-branch>
+                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-government-full)" />
+                                </g>
+                                <g class="hp-layer hp-layer-branch" data-hp-branch>
+                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-industry-full)" />
+                                </g>
+                                <g class="hp-layer hp-layer-branch" data-hp-branch>
+                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-researchers-full)" />
+                                </g>
+                                <g class="hp-layer hp-layer-branch" data-hp-branch>
+                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-public-full)" />
+                                </g>
+                                <g class="hp-layer hp-layer-branch" data-hp-branch>
+                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-wastewater-full)" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
 
-            <div class="hp-section-block">
-                <h3>Listen</h3>
-                <p>Understand stakeholder needs.</p>
-            </div>
+                    <div class="hp-text">
+                        <div class="hp-section-block" data-hp-line>
+                            <h3>Listen</h3>
+                            <p>Understand stakeholder needs.</p>
+                        </div>
 
-            <div class="hp-section-block">
-                <h3>Integrate</h3>
-                <p>Refine our design with feedback.</p>
-            </div>
+                        <div class="hp-section-block" data-hp-line>
+                            <h3>Integrate</h3>
+                            <p>Refine our design with feedback.</p>
+                        </div>
 
-            <div class="hp-section-block">
-                <h3>Impact</h3>
-                <p>Create practical real-world solutions.</p>
-            </div>
+                        <div class="hp-section-block" data-hp-line>
+                            <h3>Impact</h3>
+                            <p>Create practical real-world solutions.</p>
+                        </div>
 
-            <a href="human-practices" class="btn-cycle">
-                VIEW MORE ...
-            </a>
-
+                        <a href="human-practices" class="btn-cycle" data-hp-button>
+                            VIEW MORE ...
+                        </a>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
 </div>
