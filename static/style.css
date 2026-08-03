@@ -1287,30 +1287,69 @@ footer a:hover{
 }
 
 /* human practices */
+
+.timeline-line{
+
+    width:90px;
+
+    height:3px;
+
+    background:rgba(255,255,255,.22);
+
+    border-radius:999px;
+
+    flex-shrink:0;
+
+    transition:.35s;
+
+}
+
 .journey-timeline{
 
     display:flex;
-    
+
     align-items:center;
-    
+
     justify-content:center;
-    
-    margin:60px 0;
-    
+
+    gap:0;
+
+    width:100%;
+
+    margin:70px auto;
+
 }
 
 .journey-dot{
 
-    width:80px;
-    
-    height:80px;
-    
+    width:82px;
+
+    height:82px;
+
     border-radius:50%;
-    
+
+    border:2px solid rgba(255,255,255,.35);
+
+    background:#6f6f6f;
+
+    color:white;
+
     cursor:pointer;
-    
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:4px;
+
+    flex-shrink:0;
+
     transition:.3s;
-    
+
 }
 
 .journey-dot span{
@@ -1323,11 +1362,13 @@ footer a:hover{
 
 .journey-dot small{
 
-    margin-top:6px;
+    font-size:12px;
 
-    font-size:11px;
+    font-weight:600;
 
-    letter-spacing:1px;
+    line-height:1;
+
+    letter-spacing:.5px;
 
     text-transform:uppercase;
 
@@ -1505,4 +1546,9 @@ footer a:hover{
     
 }
 
+.timeline-line.active{
+
+    background:#3d8bfd;
+
+}
 
