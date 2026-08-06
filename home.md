@@ -317,37 +317,46 @@ Produce safer water for environmental discharge.</p>
 </div>
 
 <div class="homepage-card engineering-card">
-    <h2>ENGINEERING CYCLE</h2>
-    <div class="engineering-content">
-        <div class="engineering-image">
-            <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/engineering-cycle.avif"
-                 alt="Engineering Cycle">
-        </div>
+    <div class="engineering-gradient-bridge"></div>
+    <div class="engineering-story">
+        <div class="engineering-stage">
+            <article class="engineering-scene is-visible">
+                <h2>ENGINEERING CYCLE</h2>
+                <div class="engineering-layout">
+                    <div class="engineering-visual">
+                        <div class="engineering-image-wrapper">
+                            <img src="/static/assets/images/engineering-cycle-reference.png"
+                                 alt="Engineering cycle showing Design, Build, Test, and Learn around a central gear">
+                        </div>
+                    </div>
 
-        <div class="engineering-text">
-            <div class="cycle-step">
-                <strong>Design</strong>
-                <p>Plan our biological solution.</p>
-            </div>
+                    <div class="engineering-text">
+                        <div class="cycle-step" style="--line-opacity:1;--line-offset:0px;">
+                            <strong>Design</strong>
+                            <p>Plan our biological solution.</p>
+                        </div>
 
-            <div class="cycle-step">
-                <strong>Build</strong>
-                <p>Construct and optimize.</p>
-            </div>
+                        <div class="cycle-step" style="--line-opacity:1;--line-offset:0px;">
+                            <strong>Build</strong>
+                            <p>Construct and optimize.</p>
+                        </div>
 
-            <div class="cycle-step">
-                <strong>Test</strong>
-                <p>Evaluate system performance.</p>
-            </div>
+                        <div class="cycle-step" style="--line-opacity:1;--line-offset:0px;">
+                            <strong>Test</strong>
+                            <p>Evaluate system performance.</p>
+                        </div>
 
-            <div class="cycle-step">
-                <strong>Learn</strong>
-                <p>Improve through iteration.</p>
-            </div>
+                        <div class="cycle-step" style="--line-opacity:1;--line-offset:0px;">
+                            <strong>Learn</strong>
+                            <p>Improve through iteration.</p>
+                        </div>
 
-            <a href="engineering" class="btn-cycle">
-                SEE OUR ITERATIONS
-            </a>
+                        <a href="engineering" class="btn-cycle" style="--button-opacity:1;--button-offset:0px;">
+                            SEE OUR ITERATIONS
+                        </a>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
 </div>
