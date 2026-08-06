@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const highlightStory = document.querySelector(".highlight-story");
     const hpStory = document.querySelector(".hp-story");
     const engineeringStory = document.querySelector(".engineering-story");
+    const teamStory = document.querySelector(".team-story");
     const progressButton = document.querySelector(".story-progress-button");
     let queued = false;
 
@@ -419,6 +420,56 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function updateTeamStory() {
+        if (!teamStory) return;
+
+        const storyRect = teamStory.getBoundingClientRect();
+        const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
+        const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
+
+        function ease(value) {
+            const clamped = Math.min(1, Math.max(0, value));
+            return clamped * clamped * (3 - 2 * clamped);
+        }
+
+        const wholeScene = teamStory.querySelector("[data-team-scene]");
+        let sceneStrength = 0;
+        if (storyProgress < 0.97) {
+            sceneStrength = ease(storyProgress / 0.08);
+        } else {
+            sceneStrength = ease((1 - storyProgress) / 0.03);
+        }
+
+        if (wholeScene) {
+            wholeScene.style.setProperty("--scene-opacity", sceneStrength.toFixed(3));
+            wholeScene.style.setProperty("--scene-offset", ((1 - sceneStrength) * 64).toFixed(1) + "px");
+            wholeScene.style.setProperty("--scene-scale", (0.9 + sceneStrength * 0.1).toFixed(3));
+            wholeScene.classList.toggle("is-visible", sceneStrength > 0.08);
+        }
+
+        const photo = teamStory.querySelector("[data-team-photo]");
+        if (photo) {
+            const photoStrength = storyProgress >= 0.12 ? ease((storyProgress - 0.12) / 0.1) : 0;
+            photo.style.setProperty("--team-photo-opacity", photoStrength.toFixed(3));
+            photo.style.setProperty("--team-photo-offset", ((1 - photoStrength) * 28).toFixed(1) + "px");
+        }
+
+        const textLines = teamStory.querySelectorAll("[data-team-line]");
+        const textStarts = [0.32, 0.5];
+        textLines.forEach((line, index) => {
+            const lineStrength = storyProgress >= textStarts[index] ? ease((storyProgress - textStarts[index]) / 0.08) : 0;
+            line.style.setProperty("--line-opacity", lineStrength.toFixed(3));
+            line.style.setProperty("--line-offset", ((1 - lineStrength) * 26).toFixed(1) + "px");
+        });
+
+        const button = teamStory.querySelector("[data-team-button]");
+        if (button) {
+            const buttonStrength = storyProgress >= 0.74 ? ease((storyProgress - 0.74) / 0.07) : 0;
+            button.style.setProperty("--button-opacity", buttonStrength.toFixed(3));
+            button.style.setProperty("--button-offset", ((1 - buttonStrength) * 24).toFixed(1) + "px");
+        }
+    }
+
     function updateStoryMotion() {
         updateSceneGroup(story, scenes);
         updateSceneGroup(taiwanStory, taiwanScenes);
@@ -426,6 +477,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateHighlightStory();
         updateHpStory();
         updateEngineeringStory();
+        updateTeamStory();
 
         const scrollable = document.documentElement.scrollHeight - window.innerHeight;
         const progress = scrollable > 0 ? Math.min(1, window.scrollY / scrollable) : 0;
@@ -666,19 +718,19 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </clipPath>
                                 </defs>
                                 <g class="engineering-layer engineering-layer-center" data-engineering-center>
-                                    <image href="/static/assets/images/engineering-cycle-reference.png" width="1280" height="1280" clip-path="url(#engineering-clip-center)" />
+                                    <image href="/static/assets/images/engineering-cycle-center.png" width="1280" height="1280" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-reference.png" width="1280" height="1280" clip-path="url(#engineering-clip-design)" />
+                                    <image href="/static/assets/images/engineering-cycle-design.png" width="1280" height="1280" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-reference.png" width="1280" height="1280" clip-path="url(#engineering-clip-build)" />
+                                    <image href="/static/assets/images/engineering-cycle-build.png" width="1280" height="1280" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-reference.png" width="1280" height="1280" clip-path="url(#engineering-clip-test)" />
+                                    <image href="/static/assets/images/engineering-cycle-test.png" width="1280" height="1280" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-reference.png" width="1280" height="1280" clip-path="url(#engineering-clip-learn)" />
+                                    <image href="/static/assets/images/engineering-cycle-learn.png" width="1280" height="1280" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-full" data-engineering-full>
                                     <image href="/static/assets/images/engineering-cycle-reference.png" width="1280" height="1280" />
@@ -718,18 +770,42 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 </div>
 
-<div class="homepage-card team-card">
+<div class="homepage-card team-card" aria-labelledby="team-story-title">
+    <div class="team-gradient-bridge" aria-hidden="true"></div>
+    <div class="team-story" data-intro-fade="true">
+        <div class="team-stage">
+            <article class="team-scene" data-team-scene>
+                <h2 id="team-story-title">MEET OUR TEAM</h2>
+                <div class="team-layout">
+                    <div class="team-photo-slot" data-team-photo aria-label="Reserved team photo area">
+                        <div class="team-photo-frame">
+                            <div class="team-photo-placeholder">
+                                <span>TEAM PHOTO</span>
+                                <small>Reserved for your group photo</small>
+                            </div>
+                            <p class="team-photo-date">Photo date: to be added after upload</p>
+                        </div>
+                    </div>
 
-<h2>MEET OUR TEAM</h2>
+                    <div class="team-text">
+                        <div class="team-section-block" data-team-line>
+                            <h3>Interdisciplinary Collaboration</h3>
+                            <p>Wet lab, dry lab, design, and outreach members work together as one connected team.</p>
+                        </div>
 
-<p>[Insert team photo]</p>
+                        <div class="team-section-block" data-team-line>
+                            <h3>Meet Every Member</h3>
+                            <p>Explore the full team page to see members, roles, and areas of expertise in more detail.</p>
+                        </div>
 
-<p>Introduce team members, roles, and areas of expertise.</p>
-
-<p>
-<a href="/team">View All Members →</a>
-</p>
-
+                        <a href="/team" class="btn-cycle" data-team-button>
+                            VIEW ALL MEMBERS
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
 </div>
 
 </div>

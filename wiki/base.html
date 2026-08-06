@@ -53,6 +53,13 @@
     rel="stylesheet"
   />
 
+  {% if request.path == "/team" %}
+  <link
+    href="{{ url_for('static', filename='team.css', v='20260806-team1') }}"
+    rel="stylesheet"
+  />
+  {% endif %}
+
   <title>{{ title }} | Cadture - iGEM 2026</title>
 
 </head>
@@ -93,7 +100,7 @@
           protect ecosystems, and deliver cleaner water for people and nature.
         </p>
         <div class="hero-actions">
-          <a href="{{ url_for('pages', page='description') }}" class="btn btn-primary hero-btn">Our Project</a>
+          <a href="{{ url_for('pages', page='description') }}" class="btn btn-primary hero-btn">Background</a>
           <a href="{{ url_for('pages', page='engineering') }}" class="btn btn-outline-light hero-btn">Engineering Cycle</a>
         </div>
       </div>
@@ -167,6 +174,12 @@
   <script
     src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"
   ></script>
+
+  {% if request.path == "/team" %}
+  <script
+    src="{{ url_for('static', filename='js/team.js', v='20260806-team1') }}"
+  ></script>
+  {% endif %}
 
 
 <script>
