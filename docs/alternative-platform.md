@@ -1,18 +1,6 @@
-#### Best Alternative Platform
-
-This award is designed to celebrate exemplary work done in alternative
-platforms, and covers anything that is not _E. coli_, _S. cerevisiae_, and _B.
-subtilis_. This award may be given to a team working in plant biology chassis,
-mammalian cells, cell-free platform, or non-model organisms. Show us what you
-made and remember to adhere to iGEM Safety Policies and guidelines!
-
-Visit
-the [Special Awards page](https://competition.igem.org/judging/awards/special) for
-more information.
-
-## Inspirations
-
-- [2025 Brno Czech Republic](https://2025.igem.wiki/brno-czech-republic/plant)
-- [2025 NAIS](https://2025.igem.wiki/nais/plant)
-- [2024 Marburg](https://2024.igem.wiki/marburg/plant)
-- [2024 SCU-China](https://2024.igem.wiki/scu-china/plant)
+<section class="mock-page mock-platform" aria-labelledby="platform-preview-title">
+  <div class="mock-page-hero"><div><span class="mock-status">MOCK DATA · UI PREVIEW</span><p class="mock-eyebrow">WET LAB / ALTERNATIVE PLATFORM</p><h2 id="platform-preview-title">Compare the chassis before the next build</h2><p class="mock-lead">A working layout for tracking non-model platforms, compatibility, and the evidence needed to move a candidate forward.</p></div><div class="mock-filter-card"><span>CAMPAIGN</span><strong>Platform screen / Q3</strong><small>Owner · Wet lab team</small></div></div>
+  <div class="mock-toolbar"><span class="mock-toolbar-title">3 candidates in review</span><button class="mock-filter is-active" type="button">All platforms</button><button class="mock-filter" type="button">Cell-free</button><button class="mock-filter" type="button">Plant</button><button class="mock-button" type="button">＋ Add candidate</button></div>
+  <div class="platform-card-grid"><article class="platform-candidate is-featured"><div class="platform-candidate-top"><span class="platform-icon">CF</span><span class="mock-table-status is-good">Shortlisted</span></div><h3>Cell-free extract</h3><p>Fast iteration platform for testing binding and reporter behavior without a living chassis.</p><dl><div><dt>Compatibility</dt><dd>92%</dd></div><div><dt>Last test</dt><dd>18 Aug</dd></div><div><dt>Risk review</dt><dd>Low</dd></div></dl><div class="mock-progress"><i style="width:92%"></i></div><button class="mock-link" type="button">Open candidate →</button></article><article class="platform-candidate"><div class="platform-candidate-top"><span class="platform-icon platform-icon-green">PL</span><span class="mock-table-status is-review">Testing</span></div><h3>Duckweed host</h3><p>Plant-based route for exploring longer-term environmental deployment constraints.</p><dl><div><dt>Compatibility</dt><dd>68%</dd></div><div><dt>Last test</dt><dd>12 Aug</dd></div><div><dt>Risk review</dt><dd>Pending</dd></div></dl><div class="mock-progress"><i style="width:68%"></i></div><button class="mock-link" type="button">Open candidate →</button></article><article class="platform-candidate"><div class="platform-candidate-top"><span class="platform-icon platform-icon-violet">MC</span><span class="mock-table-status is-muted">On hold</span></div><h3>CHO cell line</h3><p>Reference mammalian platform reserved for a future specificity benchmark.</p><dl><div><dt>Compatibility</dt><dd>41%</dd></div><div><dt>Last test</dt><dd>02 Aug</dd></div><div><dt>Risk review</dt><dd>Not started</dd></div></dl><div class="mock-progress"><i style="width:41%"></i></div><button class="mock-link" type="button">Open candidate →</button></article></div>
+  <article class="mock-panel platform-next-step"><div><span class="mock-card-kicker">Next decision</span><h3>What should the team test next?</h3><p>Cell-free extract is the current lead because it clears the compatibility threshold and has the shortest feedback loop.</p></div><span class="mock-decision">Decision due<br><strong>Friday, 23 Aug</strong></span></article>
+</section>

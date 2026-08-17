@@ -3,14 +3,14 @@
 <div class="grid-row">
 
 <section class="homepage-card problem-card" aria-labelledby="problem-title">
-    <div class="problem-story-intro">
-        <p class="problem-eyebrow">THE WATER WE LIVE WITH</p>
-        <h2 id="problem-title">THE PROBLEM</h2>
-        <p>Heavy-metal pollution is not one isolated issue. Scroll through the three connected pressures facing water, ecosystems, and communities.</p>
-    </div>
-
-    <div class="problem-story">
+    <div class="problem-story" data-intro-fade="true">
         <div class="problem-stage">
+        <article class="problem-scene problem-title-scene" data-problem-scene>
+            <p class="problem-eyebrow">THE WATER WE LIVE WITH</p>
+            <h2 id="problem-title">THE PROBLEM</h2>
+            <p>Heavy-metal pollution is not one isolated issue. Scroll through the three connected pressures facing water, ecosystems, and communities.</p>
+        </article>
+
         <article class="problem-scene lead-scene" data-problem-scene>
             <div class="problem-scene-visual" aria-hidden="true">
                 <div class="problem-pie">
@@ -67,10 +67,12 @@
         </div>
     </div>
 
-    <section id="taiwan-locations" class="taiwan-story" data-intro-fade="true" aria-label="Pollution locations in Taiwan">
+    <section id="taiwan-locations" class="taiwan-story" data-intro-fade="true" aria-labelledby="taiwan-title">
         <div class="taiwan-stage">
-            <article class="taiwan-scene taiwan-blank-scene" data-taiwan-scene aria-hidden="true">
-                <div class="taiwan-map-frame"><img src="/static/assets/images/taiwan-scenes/taiwan-base-map.png" alt=""></div>
+            <article class="taiwan-scene taiwan-title-scene" data-taiwan-scene>
+                <span class="taiwan-eyebrow">FROM NORTH TO SOUTH</span>
+                <h2 id="taiwan-title">WHERE WATER IS AT RISK</h2>
+                <p>Trace the regions where industrial activity and heavy-metal pollution put water, ecosystems, and communities under pressure.</p>
             </article>
 
             <article class="taiwan-scene taoyuan-location" data-taiwan-scene>
@@ -86,10 +88,6 @@
                 </div>
             </article>
 
-            <article class="taiwan-scene taiwan-blank-scene" data-taiwan-scene aria-hidden="true">
-                <div class="taiwan-map-frame"><img src="/static/assets/images/taiwan-scenes/taiwan-base-map.png" alt=""></div>
-            </article>
-
             <article class="taiwan-scene taichung-location" data-taiwan-scene>
                 <div class="taiwan-map-frame" aria-hidden="true">
                     <img src="/static/assets/images/taiwan-scenes/taiwan-base-map.png" alt="">
@@ -101,10 +99,6 @@
                     <p>Heavy metal pollution in rivers affects agricultural safety.</p>
                     <span class="location-rule"></span>
                 </div>
-            </article>
-
-            <article class="taiwan-scene taiwan-blank-scene" data-taiwan-scene aria-hidden="true">
-                <div class="taiwan-map-frame"><img src="/static/assets/images/taiwan-scenes/taiwan-base-map.png" alt=""></div>
             </article>
 
             <article class="taiwan-scene kaohsiung-location" data-taiwan-scene>
