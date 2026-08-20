@@ -1,0 +1,410 @@
+{% set pages =
+{
+"/": "",
+"/background": "Background",
+"/problem-statement": "Problem Statement",
+"/project-goals": "Project Goals",
+"/design-overview": "Design Overview",
+"/biological-design": "Biological Design",
+"/metal-binding-mechanism": "Metal Binding Mechanism",
+"/experiments": "Laboratory protocols and workflow",
+"/model": "Mathematical simulation and prediction",
+"/engineering-cycle": "Engineering Cycle",
+"/design-iterations": "Design Iterations",
+"/real-world-application": "Real World Application",
+"/future-implementation": "Future Implementation"
+}
+%}
+
+{% set custom_hero_pages = [
+  "/background",
+  "/description",
+  "/problem-statement",
+  "/experiments",
+  "/notebook",
+  "/measurement",
+  "/alternative-platform",
+  "/safety-and-security",
+  "/model",
+  "/team",
+  "/industry",
+  "/human-practices"
+] %}
+
+{% set toc_pages = [
+  "/background",
+  "/description",
+  "/problem-statement",
+  "/experiments",
+  "/notebook",
+  "/measurement",
+  "/alternative-platform",
+  "/safety-and-security",
+  "/model",
+  "/human-practices",
+  "/industry"
+] %}
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link
+    rel="icon"
+    href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"
+  />
+
+  <link
+    rel="license"
+    href="https://creativecommons.org/licenses/by/4.0/"
+  />
+
+  <!-- Bootstrap -->
+
+  <link
+    href="{{ url_for('static', filename='bootstrap.min.css') }}"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+
+  <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+  <!-- Custom CSS -->
+
+  <link
+    href="{{ url_for('static', filename='style.css', v='20260820-flat-assets1') }}"
+    rel="stylesheet"
+  />
+
+  {% if request.path == "/" %}
+  <link
+    href="{{ url_for('static', filename='home.css', v='20260820-title-static1') }}"
+    rel="stylesheet"
+  />
+  {% endif %}
+
+  {% if request.path == "/industry" %}
+  <link
+    href="{{ url_for('static', filename='industry.css', v='20260820-journal3') }}"
+    rel="stylesheet"
+  />
+  {% endif %}
+
+  {% if request.path == "/human-practices" %}
+  <link
+    href="{{ url_for('static', filename='human-practices.css', v='20260820-flat-assets1') }}"
+    rel="stylesheet"
+  />
+  {% endif %}
+
+  {% if request.path == "/team" %}
+  <link
+    href="{{ url_for('static', filename='team.css', v='20260806-team1') }}"
+    rel="stylesheet"
+  />
+  {% endif %}
+
+  <link
+    href="{{ url_for('static', filename='textbook-nav.css', v='20260820-nav7') }}"
+    rel="stylesheet"
+  />
+
+  <link
+    href="{{ url_for('static', filename='textbook-theme.css', v='20260820-flat-assets1') }}"
+    rel="stylesheet"
+  />
+
+  <title>{{ title }} | Cadture - iGEM 2026</title>
+
+</head>
+
+<body class="textbook-nav-page page-{{ 'home' if request.path == '/' else request.path[1:]|replace('/', '-') }}{% if request.path == '/' %} home-page{% endif %}">
+
+  <!-- Navigation -->
+
+{% include 'menu.html' %}
+
+  <!-- ========================= -->
+
+  <!-- HOMEPAGE HERO -->
+
+  <!-- ========================= -->
+
+{% if request.path == "/" %}
+
+  <header class="homepage-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+
+      <div class="hero-banner">
+        <img
+          src="{{ url_for('static', filename='assets/images/full-hero-banner-handdrawn.jpg', v='20260820') }}"
+          class="hero-background img-fluid"
+          alt="Hand-drawn river scene showing an engineered bacterium capturing heavy-metal particles as polluted water becomes clean"
+        >
+        <div class="hero-motion-layer" aria-hidden="true">
+          <span style="--particle-x: 8%; --particle-y: 24%; --particle-size: 13px; --particle-delay: -.4s; --particle-travel: 34px"></span>
+          <span style="--particle-x: 18%; --particle-y: 68%; --particle-size: 8px; --particle-delay: -1.8s; --particle-travel: 52px"></span>
+          <span style="--particle-x: 33%; --particle-y: 16%; --particle-size: 17px; --particle-delay: -2.7s; --particle-travel: 28px"></span>
+          <span style="--particle-x: 45%; --particle-y: 78%; --particle-size: 10px; --particle-delay: -.9s; --particle-travel: 48px"></span>
+          <span style="--particle-x: 57%; --particle-y: 25%; --particle-size: 7px; --particle-delay: -3.4s; --particle-travel: 38px"></span>
+          <span style="--particle-x: 70%; --particle-y: 70%; --particle-size: 15px; --particle-delay: -2.1s; --particle-travel: 58px"></span>
+          <span style="--particle-x: 83%; --particle-y: 18%; --particle-size: 9px; --particle-delay: -1.2s; --particle-travel: 30px"></span>
+          <span style="--particle-x: 92%; --particle-y: 58%; --particle-size: 12px; --particle-delay: -3.8s; --particle-travel: 45px"></span>
+        </div>
+        <div class="hero-scroll-cue" aria-hidden="true">
+          <span>Scroll to explore</span>
+          <i></i>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="hero-subtitle">Engineering a safer future for water and communities</p>
+        <h1>VIS: Bio-based remediation for lead and cadmium in wastewater</h1>
+        <p class="hero-description">
+          We design engineered proteins to capture heavy metals from industrial effluent,
+          protect ecosystems, and deliver cleaner water for people and nature.
+        </p>
+        <div class="hero-actions">
+          <a href="{{ url_for('pages', page='description') }}" class="btn btn-primary hero-btn">Background</a>
+          <a href="{{ url_for('pages', page='engineering') }}" class="btn btn-outline-light hero-btn">Engineering Cycle</a>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+{% elif request.path not in custom_hero_pages %}
+
+  <!-- ========================= -->
+
+  <!-- NORMAL PAGE HEADER -->
+
+  <!-- ========================= -->
+
+  <header class="page-header">
+
+
+<div class="container">
+
+  <h1>{{ title }}</h1>
+
+  <p>
+
+    {{ pages.get(request.path, "") }}
+
+  </p>
+
+</div>
+
+
+  </header>
+
+{% endif %}
+
+  <!-- ========================= -->
+
+  <!-- PAGE CONTENT -->
+
+  <!-- ========================= -->
+
+  {% if request.path in toc_pages %}
+  <div class="page-layout-shell" data-page-layout>
+    <aside class="page-toc" aria-label="On this page" data-page-toc>
+      <p>On this page</p>
+      <nav aria-label="Page sections"></nav>
+    </aside>
+  {% endif %}
+
+  <div class="homepage-content {% if request.path == '/' or request.path in custom_hero_pages %}my-0{% else %}my-5{% endif %}">
+
+
+<div class="row">
+
+  <div class="col-12">
+
+    {% if md_content %}
+      {{ md_content | safe }}
+    {% endif %}
+
+  </div>
+
+  {% if request.path in toc_pages %}
+  </div>
+  {% endif %}
+
+</div>
+
+{% block page_content %}
+{% endblock %}
+
+
+  </div>
+
+  <!-- Footer -->
+
+{% include 'footer.html' %}
+
+  <!-- Bootstrap -->
+  <!-- Bootstrap -->
+
+  <script
+    src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"
+  ></script>
+
+  {% if request.path == "/team" %}
+  <script
+    src="{{ url_for('static', filename='js/team.js', v='20260806-team1') }}"
+  ></script>
+  {% endif %}
+
+  {% if request.path == "/human-practices" %}
+  <script
+    src="{{ url_for('static', filename='js/human-practices.js', v='20260820-journey1') }}"
+  ></script>
+  {% endif %}
+
+  {% if request.path == "/" %}
+  <script
+    src="{{ url_for('static', filename='js/home-motion.js', v='20260820-title-static1') }}"
+    defer
+  ></script>
+  {% endif %}
+
+  <script
+    src="{{ url_for('static', filename='js/site-theme.js', v='20260820-motion2') }}"
+    defer
+  ></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const toggles = document.querySelectorAll(".mega-toggle");
+
+    const menus = document.querySelectorAll(".mega-menu");
+
+
+    function closeAllMenus() {
+
+        menus.forEach(menu => {
+
+            menu.classList.remove("show");
+            menu.parentElement.classList.remove("show");
+            const toggle = menu.previousElementSibling;
+            if (toggle) toggle.setAttribute("aria-expanded", "false");
+
+            menu.style.left = "";
+            menu.style.right = "";
+            menu.style.transform = "";
+            menu.style.visibility="";
+        });
+    }
+
+    function alignMenu(menu){
+        menu.style.left = "";
+        menu.style.right = "";
+        menu.style.transform = "";
+
+        menu.getBoundingClientRect();
+        const rect = menu.getBoundingClientRect();
+        const padding = 20;
+        let shift = 0;
+
+        if(rect.right > window.innerWidth - padding){
+            shift = rect.right - (window.innerWidth - padding);
+        }
+        else if(rect.left < padding){
+            shift = rect.left - padding;
+        }
+
+        if(shift !== 0){
+            menu.style.left = `calc(50% - ${shift}px)`;
+        }
+    }
+
+
+    toggles.forEach(toggle => {
+
+        toggle.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            e.stopPropagation();
+
+            const menu = this.nextElementSibling;
+
+            const isOpen = menu.classList.contains("show");
+
+            closeAllMenus();
+
+            if (!isOpen) {                
+                if (menu.classList.contains("project-menu") ||
+                    menu.classList.contains("wetlab-menu") ||
+                    menu.classList.contains("drylab-menu") ||
+                    menu.classList.contains("hp-menu")){
+                      menu.style.visibility = "hidden";
+                      menu.classList.add("show");
+                      menu.parentElement.classList.add("show");
+                      this.setAttribute("aria-expanded", "true");
+                      alignMenu(menu);
+                      menu.style.visibility = "";
+                }
+                else{
+                    menu.classList.add("show");
+                    menu.parentElement.classList.add("show");
+                    this.setAttribute("aria-expanded", "true");
+                }
+            }
+        });
+    });
+
+
+    menus.forEach(menu => {
+
+        menu.addEventListener("click", function (e) {
+
+            e.stopPropagation();
+
+        });
+
+    });
+
+
+    document.addEventListener("click", function () {
+
+        closeAllMenus();
+
+    });
+
+
+    document.addEventListener("keydown", function (e) {
+
+        if (e.key === "Escape") {
+
+            closeAllMenus();
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+</body>
+
+</html>

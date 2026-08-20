@@ -1,0 +1,847 @@
+/* VIS shared textbook theme — one visual language across every wiki page. */
+:root {
+    --vis-display: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif;
+    --vis-body: "Trebuchet MS", Arial, sans-serif;
+    --vis-ink: #285772;
+    --vis-copy: #405d6c;
+    --vis-teal: #3b9295;
+    --vis-line: #9fcbd2;
+    --vis-blue-paper: #dceff4;
+    --vis-pale: #f7fbfc;
+    --vis-white: #ffffff;
+    --vis-yellow: #fff0a8;
+    --vis-green: #a9d7b5;
+}
+
+.textbook-nav-page {
+    color: var(--vis-copy);
+    background: #edf2f8;
+    font-family: var(--vis-body);
+}
+
+.textbook-nav-page:not(.home-page) .homepage-content {
+    width: min(1240px, calc(100% - 40px));
+    max-width: none;
+    padding: 34px 0 72px;
+}
+
+/* GreatBay-inspired chapter rail for long pages. */
+.page-layout-shell {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(22px, 3vw, 42px);
+    width: min(1460px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.page-layout-shell > .homepage-content {
+    width: min(1240px, 100%) !important;
+    min-width: 0;
+}
+
+.page-layout-shell.toc-empty {
+    display: block;
+}
+
+.page-toc {
+    position: sticky;
+    top: calc(var(--nav-offset) + 22px);
+    max-height: calc(100svh - var(--nav-offset) - 44px);
+    margin-top: 36px;
+    padding: 18px 14px;
+    overflow-y: auto;
+    border: 2px solid #9fcbd2;
+    background: #edf6f7;
+    box-shadow: 5px 6px 0 rgba(40, 87, 114, .1);
+}
+
+.page-toc > p {
+    display: inline-block;
+    margin: 0 0 14px;
+    padding: 6px 9px;
+    background: var(--vis-yellow);
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    font-size: .82rem;
+    font-weight: 700;
+    clip-path: polygon(1% 7%, 98% 0, 100% 90%, 4% 100%);
+}
+
+.page-toc nav {
+    display: grid;
+    gap: 3px;
+}
+
+.page-toc a {
+    position: relative;
+    display: block;
+    padding: 8px 8px 8px 18px;
+    color: #496877 !important;
+    font-size: .78rem;
+    font-weight: 700;
+    line-height: 1.35;
+    text-decoration: none;
+}
+
+.page-toc a::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 2px;
+    width: 7px;
+    height: 7px;
+    border: 2px solid #78b4bc;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.page-toc a:hover,
+.page-toc a:focus-visible,
+.page-toc a.is-active {
+    color: var(--vis-ink) !important;
+    background: var(--vis-yellow);
+    outline: none;
+    clip-path: polygon(1% 7%, 98% 0, 100% 90%, 4% 100%);
+}
+
+.page-toc a.is-active::before {
+    border-color: var(--vis-ink);
+    background: var(--vis-ink);
+}
+
+.textbook-nav-page:not(.home-page) .homepage-content > .row {
+    margin: 0;
+}
+
+.textbook-nav-page:not(.home-page) .homepage-content > .row > .col-12 {
+    padding: 0;
+}
+
+.page-human-practices .homepage-content,
+.page-industry .homepage-content,
+.page-team .homepage-content {
+    width: 100% !important;
+    padding-top: 0 !important;
+}
+
+.page-background .homepage-content,
+.page-description .homepage-content,
+.page-problem-statement .homepage-content,
+.page-experiments .homepage-content,
+.page-notebook .homepage-content,
+.page-measurement .homepage-content,
+.page-alternative-platform .homepage-content,
+.page-safety-and-security .homepage-content,
+.page-model .homepage-content {
+    padding-top: 0 !important;
+}
+
+.textbook-nav-page:not(.home-page) h1,
+.textbook-nav-page:not(.home-page) h2,
+.textbook-nav-page:not(.home-page) h3,
+.textbook-nav-page:not(.home-page) h4 {
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    letter-spacing: -.02em;
+    text-wrap: balance;
+}
+
+.textbook-nav-page:not(.home-page) p,
+.textbook-nav-page:not(.home-page) li {
+    text-wrap: pretty;
+}
+
+.textbook-nav-page:not(.home-page) a:not(.nav-link):not(.navbar-brand) {
+    color: #217785;
+    text-decoration-color: #79b9c0;
+    text-underline-offset: 3px;
+}
+
+/* Shared title page for simple Markdown routes. */
+.textbook-nav-page .page-header {
+    position: relative;
+    min-height: 265px;
+    margin: 0;
+    padding: clamp(54px, 7vw, 82px) 0 clamp(68px, 8vw, 96px);
+    background: var(--vis-blue-paper);
+    color: var(--vis-ink);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 87% 95%, 73% 91%, 58% 97%, 43% 92%, 28% 96%, 13% 91%, 0 95%);
+}
+
+.textbook-nav-page .page-header::after {
+    content: "";
+    position: absolute;
+    right: clamp(28px, 8vw, 120px);
+    bottom: 34px;
+    width: clamp(150px, 18vw, 235px);
+    aspect-ratio: 1;
+    background: url("/static/assets/images/problem/wastewater-mascot-flat.png") center / contain no-repeat;
+    filter: none;
+    pointer-events: none;
+}
+
+.textbook-nav-page .page-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.textbook-nav-page .page-header h1 {
+    max-width: 15ch;
+    margin: 0 0 14px;
+    font-size: clamp(3rem, 6vw, 5.6rem);
+    line-height: .98;
+    transform: rotate(-.35deg);
+}
+
+.textbook-nav-page .page-header p {
+    max-width: 66ch;
+    margin: 0;
+    color: var(--vis-copy);
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+/* Plain Markdown pages become readable textbook chapters. */
+.textbook-nav-page:not(.home-page) .homepage-content > .row > .col-12 > h2,
+.textbook-nav-page:not(.home-page) .homepage-content > .row > .col-12 > h3,
+.textbook-nav-page:not(.home-page) .homepage-content > .row > .col-12 > h4 {
+    max-width: 880px;
+    margin: clamp(36px, 6vw, 68px) auto 18px;
+}
+
+.textbook-nav-page:not(.home-page) .homepage-content > .row > .col-12 > h2 {
+    font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
+.textbook-nav-page:not(.home-page) .homepage-content > .row > .col-12 > h2::after {
+    content: "";
+    display: block;
+    width: 78px;
+    height: 7px;
+    margin-top: 10px;
+    background: #f3d56b;
+    border-radius: 48% 52% 42% 58%;
+    transform: rotate(-2deg);
+}
+
+.textbook-nav-page:not(.home-page) .homepage-content > .row > .col-12 > p,
+.textbook-nav-page:not(.home-page) .homepage-content > .row > .col-12 > ul,
+.textbook-nav-page:not(.home-page) .homepage-content > .row > .col-12 > ol,
+.textbook-nav-page:not(.home-page) .homepage-content > .row > .col-12 > blockquote {
+    max-width: 76ch;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--vis-copy);
+    font-size: 1.04rem;
+    line-height: 1.78;
+}
+
+.textbook-nav-page:not(.home-page) blockquote {
+    padding: 18px 22px;
+    background: var(--vis-yellow);
+    border: 0;
+    clip-path: polygon(.5% 5%, 99% 0, 100% 94%, 1% 100%);
+}
+
+/* Shared illustrated hero treatment. */
+.textbook-nav-page .problem-statement-hero,
+.textbook-nav-page .problem-hero-card,
+.textbook-nav-page .experiment-hero,
+.textbook-nav-page .model-hero,
+.textbook-nav-page .mock-page-hero {
+    margin: 0 0 34px;
+    padding: clamp(46px, 6vw, 78px) clamp(24px, 6vw, 72px) clamp(68px, 8vw, 96px);
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: var(--vis-blue-paper) !important;
+    box-shadow: none;
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 86% 94%, 71% 90%, 57% 96%, 42% 91%, 27% 95%, 12% 90%, 0 94%);
+    text-align: left;
+}
+
+.textbook-nav-page .problem-statement-hero,
+.textbook-nav-page .problem-hero-card,
+.textbook-nav-page .experiment-hero,
+.textbook-nav-page .model-hero {
+    position: relative;
+    padding-right: clamp(250px, 28vw, 360px);
+}
+
+.textbook-nav-page .problem-statement-hero::after,
+.textbook-nav-page .problem-hero-card::after,
+.textbook-nav-page .experiment-hero::after,
+.textbook-nav-page .model-hero::after {
+    content: "";
+    position: absolute;
+    right: clamp(30px, 7vw, 90px);
+    bottom: clamp(60px, 8vw, 100px);
+    width: clamp(155px, 20vw, 260px);
+    aspect-ratio: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: none;
+    pointer-events: none;
+}
+
+.page-background .problem-hero-card::after {
+    background-image: url("/static/assets/images/problem/wastewater-mascot-flat.png");
+}
+
+.page-description .problem-statement-hero::after,
+.page-problem-statement .problem-statement-hero::after {
+    background-image: url("/static/assets/images/problem/cadmium-mascot-flat.png");
+}
+
+.page-experiments .experiment-hero::after,
+.page-notebook .experiment-hero::after {
+    background-image: url("/static/assets/images/solution/capture-flat.png");
+}
+
+.page-model .model-hero::after {
+    background-image: url("/static/assets/images/engineering-cycle-center-flat.png");
+}
+
+.textbook-nav-page .problem-statement-hero h1,
+.textbook-nav-page .problem-hero-card h1,
+.textbook-nav-page .experiment-hero h2,
+.textbook-nav-page .model-hero h2,
+.textbook-nav-page .mock-page-hero h2 {
+    max-width: 18ch;
+    margin: 18px 0;
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    font-size: clamp(2.8rem, 5.5vw, 5.3rem);
+    line-height: .98;
+    letter-spacing: -.025em;
+    transform: rotate(-.35deg);
+}
+
+.textbook-nav-page .problem-eyebrow,
+.textbook-nav-page .problem-section-tag,
+.textbook-nav-page .experiment-eyebrow,
+.textbook-nav-page .model-eyebrow,
+.textbook-nav-page .mock-status,
+.textbook-nav-page .mock-eyebrow,
+.textbook-nav-page .experiment-card-kicker,
+.textbook-nav-page .model-card-kicker,
+.textbook-nav-page .mock-card-kicker {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 0;
+    background: var(--vis-yellow);
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+    text-transform: none;
+    clip-path: polygon(1% 7%, 98% 0, 100% 90%, 4% 100%);
+}
+
+.textbook-nav-page .problem-statement-hero p,
+.textbook-nav-page .problem-hero-card p,
+.textbook-nav-page .experiment-lead,
+.textbook-nav-page .model-lead,
+.textbook-nav-page .mock-lead {
+    max-width: 72ch;
+    margin-right: 0;
+    margin-left: 0;
+    color: var(--vis-copy);
+    line-height: 1.72;
+}
+
+.textbook-nav-page .experiment-tag-row,
+.textbook-nav-page .model-pill-row {
+    justify-content: flex-start;
+}
+
+.textbook-nav-page .experiment-tag-row span,
+.textbook-nav-page .model-pill-row span,
+.textbook-nav-page .mock-chip,
+.textbook-nav-page .mock-filter,
+.textbook-nav-page .mock-table-status,
+.textbook-nav-page .risk-level {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: var(--vis-display);
+    clip-path: polygon(1% 7%, 98% 0, 100% 90%, 4% 100%);
+}
+
+/* Chapter surfaces: flatter, fewer floating cards. */
+.textbook-nav-page .problem-statement-page,
+.textbook-nav-page .experiment-page,
+.textbook-nav-page .model-page,
+.textbook-nav-page .mock-page {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 36px 0 76px;
+}
+
+.textbook-nav-page .problem-section,
+.textbook-nav-page .experiment-flow-panel,
+.textbook-nav-page .experiment-section,
+.textbook-nav-page .experiment-figure-section,
+.textbook-nav-page .experiment-inspiration-panel,
+.textbook-nav-page .experiment-log-panel,
+.textbook-nav-page .model-flow-panel,
+.textbook-nav-page .model-inspiration-panel,
+.textbook-nav-page .mock-panel,
+.textbook-nav-page .platform-next-step {
+    border: 0;
+    border-bottom: 2px solid #cfe3e7;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.textbook-nav-page .problem-impact-grid article,
+.textbook-nav-page .remediation-grid article,
+.textbook-nav-page .standard-grid article,
+.textbook-nav-page .problem-standard-band > div,
+.textbook-nav-page .problem-text-card,
+.textbook-nav-page .problem-highlight-card,
+.textbook-nav-page .taiwan-case-grid article,
+.textbook-nav-page .experiment-flow-node,
+.textbook-nav-page .experiment-card,
+.textbook-nav-page .experiment-section-copy,
+.textbook-nav-page .model-flow-node,
+.textbook-nav-page .model-card,
+.textbook-nav-page .mock-metric,
+.textbook-nav-page .platform-candidate,
+.textbook-nav-page .mock-run-card,
+.textbook-nav-page .mock-filter-card,
+.textbook-nav-page .mock-safety-score {
+    border: 2px solid #cfe3e7;
+    border-radius: 8px;
+    background: var(--vis-white);
+    box-shadow: none;
+}
+
+.textbook-nav-page .experiment-flow-node::before,
+.textbook-nav-page .experiment-card::before,
+.textbook-nav-page .model-flow-node::before,
+.textbook-nav-page .model-card::before {
+    display: none;
+}
+
+.textbook-nav-page .experiment-flow-node span,
+.textbook-nav-page .model-flow-node span,
+.textbook-nav-page .problem-impact-grid article > span {
+    background: var(--vis-ink);
+    color: #fff;
+    box-shadow: none;
+    font-family: var(--vis-display);
+}
+
+.textbook-nav-page .experiment-flow-arrow,
+.textbook-nav-page .model-flow-arrow {
+    border: 0;
+    background: var(--vis-yellow);
+    color: var(--vis-ink);
+    box-shadow: none;
+}
+
+.textbook-nav-page .experiment-note,
+.textbook-nav-page .model-loop-note,
+.textbook-nav-page .mock-note,
+.textbook-nav-page .mock-decision {
+    border: 0;
+    border-radius: 0;
+    background: var(--vis-yellow);
+    color: var(--vis-ink);
+    box-shadow: none;
+    clip-path: polygon(.5% 5%, 99% 0, 100% 94%, 1% 100%);
+}
+
+.textbook-nav-page .experiment-figure-slot {
+    border: 2px dashed #8fc7cc;
+    border-radius: 8px;
+    background: #edf6f7;
+}
+
+.textbook-nav-page .experiment-figure-slot::before {
+    display: none;
+}
+
+.textbook-nav-page .experiment-progress-rail {
+    border: 2px solid #d6c25b;
+    border-radius: 8px;
+    background: var(--vis-yellow);
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.textbook-nav-page .experiment-progress-icon {
+    background: var(--vis-ink);
+    box-shadow: none;
+}
+
+.textbook-nav-page .experiment-progress-track,
+.textbook-nav-page .experiment-progress-fill {
+    background: var(--vis-teal);
+}
+
+/* Mock dashboards still read as data, but use the same notebook materials. */
+.textbook-nav-page .mock-page-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, .65fr);
+    align-items: center;
+}
+
+.textbook-nav-page .mock-metric-grid,
+.textbook-nav-page .mock-dashboard-grid,
+.textbook-nav-page .mock-safety-summary,
+.textbook-nav-page .mock-safety-grid,
+.textbook-nav-page .platform-card-grid {
+    gap: 12px;
+}
+
+.textbook-nav-page .mock-metric,
+.textbook-nav-page .mock-panel,
+.textbook-nav-page .platform-candidate {
+    font-family: var(--vis-body);
+}
+
+.textbook-nav-page .mock-metric strong,
+.textbook-nav-page .mock-panel h3,
+.textbook-nav-page .platform-candidate h3,
+.textbook-nav-page .mock-safety-summary strong {
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+}
+
+.textbook-nav-page .mock-button,
+.textbook-nav-page .mock-link {
+    border: 0;
+    border-radius: 0;
+    background: var(--vis-ink);
+    color: #fff;
+    font-family: var(--vis-display);
+    clip-path: polygon(1% 5%, 98% 0, 100% 91%, 4% 100%);
+}
+
+.textbook-nav-page .mock-button:hover,
+.textbook-nav-page .mock-link:hover {
+    background: #174b68;
+    color: #fff;
+}
+
+.textbook-nav-page .mock-safety-summary > div {
+    border-radius: 8px;
+    background: var(--vis-ink);
+}
+
+.textbook-nav-page .mock-table-wrap,
+.textbook-nav-page .problem-table-wrap {
+    border: 2px solid #bddce1;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.textbook-nav-page .mock-table th,
+.textbook-nav-page .problem-table th {
+    background: var(--vis-blue-paper);
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    text-transform: none;
+}
+
+.page-industry .industry-storybook .section-title h2 {
+    color: #fff;
+}
+
+/* Team keeps its solar-system interaction, re-framed as a science notebook. */
+.page-team .team-hero,
+.page-team .space-background {
+    background: var(--vis-blue-paper);
+}
+
+.page-team .team-hero {
+    min-height: calc(100svh - var(--nav-offset));
+}
+
+.page-team .space-background {
+    min-height: calc(100svh - var(--nav-offset));
+}
+
+.page-team .nebula {
+    display: none;
+}
+
+.page-team .space-background::before,
+.page-team .space-background::after {
+    display: none;
+}
+
+.page-team .stars {
+    opacity: .14;
+    filter: sepia(1) hue-rotate(145deg) saturate(1.6);
+}
+
+.page-team .hero-title h1,
+.page-team .hero-title p {
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    text-transform: none;
+}
+
+.page-team .hero-title {
+    left: 50%;
+    width: max-content;
+    max-width: calc(100% - 32px);
+    padding: 12px 22px;
+    background: var(--vis-yellow);
+    clip-path: polygon(1% 5%, 98% 0, 100% 92%, 3% 100%);
+    transform: translateX(-50%) rotate(-.4deg);
+}
+
+.page-team .hero-title h1 {
+    font-size: clamp(3rem, 6vw, 5.6rem);
+    letter-spacing: -.025em;
+    transform: rotate(-.5deg);
+}
+
+.page-team .orbit {
+    border-color: rgba(40, 87, 114, .24);
+    box-shadow: none;
+}
+
+.page-team .member-section {
+    background: #edf6f7;
+}
+
+.page-team .member-card {
+    border: 3px solid #8fc7cc;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 7px 8px 0 rgba(40, 87, 114, .12);
+    backdrop-filter: none;
+}
+
+.page-team .member-card::before,
+.page-team .member-card::after,
+.page-team .member-photo::before {
+    display: none;
+}
+
+.page-team .member-photo img {
+    border: 3px solid #bddce1;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.page-team #member-name,
+.page-team #member-role,
+.page-team #member-intro {
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+}
+
+.page-team #member-intro {
+    color: var(--vis-copy);
+    font-family: var(--vis-body);
+}
+
+.page-team .member-skills span {
+    border: 0;
+    border-radius: 0;
+    background: var(--vis-yellow);
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    clip-path: polygon(1% 7%, 98% 0, 100% 90%, 4% 100%);
+}
+
+/* Shared footer closes every chapter with the same ink color. */
+.textbook-nav-page footer.footer {
+    margin-top: 0 !important;
+    background: var(--vis-ink) !important;
+    color: #fff;
+    font-family: var(--vis-body);
+}
+
+.textbook-nav-page footer h4 {
+    color: var(--vis-yellow);
+    font-family: var(--vis-display);
+}
+
+.textbook-nav-page footer a {
+    color: #d7eef1;
+}
+
+/* Purposeful motion: paper entrance, illustration float, chapter reveal. */
+@keyframes vis-paper-enter {
+    from { opacity: .72; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes vis-heading-enter {
+    from { opacity: 0; transform: translateY(18px) rotate(-.8deg); }
+    to { opacity: 1; transform: translateY(0) rotate(-.35deg); }
+}
+
+@keyframes vis-section-enter {
+    from { opacity: .25; transform: translateY(26px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes vis-illustration-float {
+    0%, 100% { translate: 0 0; rotate: -1deg; }
+    50% { translate: 0 -8px; rotate: 1deg; }
+}
+
+@keyframes vis-menu-enter {
+    from { opacity: 0; translate: 0 -8px; }
+    to { opacity: 1; translate: 0 0; }
+}
+
+.textbook-nav-page:not(.home-page) .vis-hero-motion {
+    animation: vis-paper-enter .72s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.textbook-nav-page:not(.home-page) .vis-hero-motion h1,
+.textbook-nav-page:not(.home-page) .vis-hero-motion h2 {
+    animation: vis-heading-enter .72s .12s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.textbook-nav-page:not(.home-page) .vis-hero-motion::after {
+    animation: vis-illustration-float 4.8s ease-in-out infinite;
+}
+
+.textbook-nav-page:not(.home-page) .vis-animate-in {
+    animation: vis-section-enter .66s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.textbook-nav-page .mega-menu.show {
+    transform-origin: top center;
+    animation: vis-menu-enter .28s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.textbook-nav-page .mock-button,
+.textbook-nav-page .mock-link,
+.textbook-nav-page .hero-btn,
+.textbook-nav-page .continue-grid a {
+    transition: translate .22s cubic-bezier(.16, 1, .3, 1), rotate .22s cubic-bezier(.16, 1, .3, 1), background-color .2s ease;
+}
+
+.textbook-nav-page .mock-button:hover,
+.textbook-nav-page .mock-link:hover,
+.textbook-nav-page .hero-btn:hover,
+.textbook-nav-page .continue-grid a:hover {
+    translate: 0 -3px;
+    rotate: -.6deg;
+}
+
+@media (max-width: 820px) {
+    .page-layout-shell {
+        display: block;
+        width: 100%;
+    }
+
+    .page-toc {
+        display: none;
+    }
+    .textbook-nav-page:not(.home-page) .homepage-content {
+        width: min(100% - 24px, 1240px);
+        padding-top: 22px;
+    }
+
+    .page-human-practices .homepage-content,
+    .page-industry .homepage-content,
+    .page-team .homepage-content {
+        width: 100% !important;
+    }
+
+    .textbook-nav-page .page-header {
+        min-height: 220px;
+        padding: 42px 20px 68px;
+    }
+
+    .textbook-nav-page .page-header::after {
+        right: 14px;
+        bottom: 34px;
+        width: 105px;
+        opacity: .6;
+    }
+
+    .textbook-nav-page .problem-statement-page,
+    .textbook-nav-page .experiment-page,
+    .textbook-nav-page .model-page,
+    .textbook-nav-page .mock-page {
+        padding: 22px 0 56px;
+    }
+
+    .textbook-nav-page .problem-statement-hero,
+    .textbook-nav-page .problem-hero-card,
+    .textbook-nav-page .experiment-hero,
+    .textbook-nav-page .model-hero,
+    .textbook-nav-page .mock-page-hero {
+        display: block;
+        padding: 38px 22px 120px;
+    }
+
+    .textbook-nav-page .problem-statement-hero,
+    .textbook-nav-page .problem-hero-card,
+    .textbook-nav-page .experiment-hero,
+    .textbook-nav-page .model-hero {
+        padding-right: 22px;
+    }
+
+    .textbook-nav-page .problem-statement-hero::after,
+    .textbook-nav-page .problem-hero-card::after,
+    .textbook-nav-page .experiment-hero::after,
+    .textbook-nav-page .model-hero::after {
+        right: 16px;
+        bottom: 28px;
+        width: 104px;
+        opacity: .72;
+    }
+
+    .textbook-nav-page .problem-statement-hero h1,
+    .textbook-nav-page .problem-hero-card h1,
+    .textbook-nav-page .experiment-hero h2,
+    .textbook-nav-page .model-hero h2,
+    .textbook-nav-page .mock-page-hero h2 {
+        font-size: clamp(2.45rem, 12vw, 4rem);
+    }
+
+    .textbook-nav-page .mock-page-hero > * + * {
+        margin-top: 24px;
+    }
+
+    .textbook-nav-page .problem-impact-grid,
+    .textbook-nav-page .remediation-grid,
+    .textbook-nav-page .standard-grid,
+    .textbook-nav-page .problem-standard-band,
+    .textbook-nav-page .taiwan-case-grid,
+    .textbook-nav-page .experiment-grid,
+    .textbook-nav-page .model-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-team .member-card {
+        width: calc(100% - 24px);
+        padding: 24px;
+    }
+
+    .page-team .hero-title {
+        top: 28px;
+        padding: 9px 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .textbook-nav-page *,
+    .textbook-nav-page *::before,
+    .textbook-nav-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}

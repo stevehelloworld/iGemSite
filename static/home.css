@@ -1,0 +1,877 @@
+/* Home — illustrated student field-guide visual language. */
+.home-page {
+    --home-display: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif;
+    --home-ink: #285772;
+    background: #edf2f8;
+}
+
+.home-page .homepage-hero {
+    min-height: calc(100svh - var(--nav-offset));
+    background: #dceff4;
+}
+
+.home-page .hero-container {
+    display: grid;
+    grid-template-rows: auto clamp(420px, 43vw, 680px);
+    min-height: calc(100svh - var(--nav-offset));
+    padding: 0;
+}
+
+.home-page .hero-overlay {
+    display: none;
+}
+
+.home-page .hero-banner {
+    position: relative;
+    inset: auto;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #d9edf1;
+}
+
+.home-page .hero-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.88) saturate(1.02);
+    object-position: center 52%;
+}
+
+.home-page .hero-text {
+    position: relative;
+    inset: auto;
+    z-index: 3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
+    grid-template-rows: auto auto auto;
+    align-content: center;
+    column-gap: clamp(42px, 7vw, 120px);
+    width: 100%;
+    max-width: none;
+    padding: clamp(38px, 4vw, 62px) clamp(34px, 6vw, 96px) clamp(48px, 5vw, 76px);
+    background: #dceff4;
+    clip-path: polygon(0 0, 100% 0, 100% 93%, 88% 97%, 74% 94%, 60% 99%, 45% 94%, 30% 98%, 15% 94%, 0 98%);
+}
+
+.home-page .hero-subtitle {
+    grid-column: 1;
+    grid-row: 1;
+    display: inline-block;
+    align-self: flex-start;
+    width: fit-content;
+    margin: 0 0 18px;
+    padding: 7px 11px;
+    background: #fff0a8;
+    color: #285772;
+    font-family: var(--home-display);
+    font-size: .86rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+    text-transform: none;
+    clip-path: polygon(1% 7%, 98% 0, 100% 90%, 4% 100%);
+}
+
+.home-page .hero-text h1 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+    max-width: 15ch;
+    margin: 0;
+    color: var(--home-ink);
+    font-family: var(--home-display);
+    font-size: clamp(2.65rem, 4.4vw, 5rem);
+    font-weight: 700;
+    line-height: .98;
+    letter-spacing: -.025em;
+    text-wrap: balance;
+    transform: rotate(-.4deg);
+}
+
+.home-page .hero-description {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    max-width: 58ch;
+    margin: 0;
+    color: #385565;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.home-page .hero-actions {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+@media (max-width: 1080px) and (min-width: 821px) {
+    .home-page .hero-text {
+        grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+        column-gap: 34px;
+    }
+
+    .home-page .hero-text h1 {
+        font-size: clamp(2.5rem, 4.5vw, 4rem);
+    }
+}
+
+.home-page .hero-btn {
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 0;
+    background: #285772;
+    color: #fff;
+    font-family: var(--home-display);
+    clip-path: polygon(1% 5%, 98% 0, 100% 91%, 4% 100%);
+}
+
+.home-page .btn-outline-light.hero-btn {
+    background: #fff0a8;
+    color: #285772;
+}
+
+.home-page .homepage-content {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.home-page .homepage-content > .row,
+.home-page .homepage-content > .row > .col-12,
+.home-page .homepage-grid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.home-page .grid-row {
+    display: block;
+    margin: 0;
+}
+
+.home-page .homepage-card,
+.home-page .homepage-card:hover {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: #fbfdfc;
+    box-shadow: none;
+    transform: none;
+}
+
+.home-page .problem-card {
+    padding: 0;
+    background: #f8fbfc;
+}
+
+.home-page .problem-stage,
+.home-page .taiwan-stage,
+.home-page .solution-stage,
+.home-page .highlight-stage,
+.home-page .hp-stage,
+.home-page .engineering-stage,
+.home-page .team-stage {
+    background: inherit;
+}
+
+.home-page .problem-stage {
+    background: #f8fbfc;
+}
+
+.home-page .problem-title-scene h2,
+.home-page .taiwan-title-scene h2,
+.home-page .solution-title-scene h2,
+.home-page .highlight-title-scene h2,
+.home-page .highlight-kicker-title,
+.home-page .hp-scene h2,
+.home-page .engineering-scene h2,
+.home-page .team-scene h2 {
+    color: var(--home-ink);
+    font-family: var(--home-display);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -.02em;
+    text-wrap: balance;
+}
+
+.home-page .problem-title-scene h2,
+.home-page .taiwan-title-scene h2,
+.home-page .solution-title-scene h2,
+.home-page .highlight-title-scene h2 {
+    font-size: clamp(3rem, 6vw, 5.8rem);
+}
+
+.home-page .problem-title-scene::after,
+.home-page .taiwan-title-scene::after,
+.home-page .solution-title-scene::after,
+.home-page .highlight-title-scene::after {
+    content: "";
+    width: 120px;
+    height: 10px;
+    margin-top: 12px;
+    background: #f3d56b;
+    border-radius: 48% 52% 42% 58%;
+    transform: rotate(-2deg);
+}
+
+.home-page .problem-eyebrow,
+.home-page .problem-step,
+.home-page .taiwan-eyebrow,
+.home-page .taiwan-kicker,
+.home-page .solution-eyebrow,
+.home-page .solution-step {
+    font-family: var(--home-display);
+    letter-spacing: .02em;
+}
+
+.home-page .problem-scene-copy h3,
+.home-page .taiwan-location-copy h3,
+.home-page .solution-copy h3,
+.home-page .highlight-box h3,
+.home-page .hp-section-block h3,
+.home-page .cycle-step strong,
+.home-page .team-section-block h3 {
+    font-family: var(--home-display);
+    letter-spacing: -.015em;
+}
+
+.home-page .problem-scene-copy h3,
+.home-page .taiwan-location-copy h3,
+.home-page .solution-copy h3 {
+    font-size: clamp(2.8rem, 5vw, 5.4rem);
+    line-height: 1;
+}
+
+.home-page .problem-pie {
+    box-shadow: none;
+}
+
+.home-page .pie-core {
+    border-width: 5px;
+    box-shadow: none;
+}
+
+.home-page .problem-facts {
+    gap: .55rem;
+}
+
+.home-page .problem-facts span {
+    padding: .45rem .7rem;
+    border: 0;
+    border-radius: 0;
+    background: #fff0a8;
+    font-family: var(--home-display);
+    clip-path: polygon(1% 7%, 98% 0, 100% 90%, 4% 100%);
+}
+
+.home-page .taiwan-story,
+.home-page .taiwan-stage {
+    background: #eef6e9;
+}
+
+.home-page .taiwan-story {
+    position: relative;
+}
+
+.home-page .taiwan-story::before,
+.home-page .solution-card::before,
+.home-page .highlight-card::before,
+.home-page .hp-card::before,
+.home-page .engineering-card::before,
+.home-page .team-card::before {
+    content: "";
+    position: absolute;
+    top: -34px;
+    left: 0;
+    right: 0;
+    height: 58px;
+    z-index: 5;
+    background: inherit;
+    clip-path: polygon(0 48%, 10% 31%, 25% 50%, 42% 22%, 58% 46%, 73% 25%, 89% 54%, 100% 32%, 100% 100%, 0 100%);
+    pointer-events: none;
+}
+
+.home-page .taiwan-map-frame img {
+    filter: drop-shadow(0 12px 0 rgba(42, 84, 68, .09));
+}
+
+.home-page .taiwan-location-copy h3 {
+    letter-spacing: -.02em;
+}
+
+.home-page .location-rule {
+    border-radius: 48% 52% 42% 58%;
+    box-shadow: none;
+    transform: rotate(-2deg);
+}
+
+.home-page .solution-card,
+.home-page .solution-stage {
+    background: #e7f3f5;
+}
+
+.home-page .solution-gradient-bridge,
+.home-page .highlight-gradient-bridge,
+.home-page .hp-gradient-bridge,
+.home-page .engineering-gradient-bridge,
+.home-page .team-gradient-bridge {
+    display: none;
+}
+
+.home-page .solution-icon-wrap {
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.home-page .highlight-card,
+.home-page .highlight-stage {
+    background: #fbfdfc;
+}
+
+.home-page .highlight-grid {
+    gap: 0 clamp(30px, 5vw, 68px);
+}
+
+.home-page .highlight-box,
+.home-page .highlight-box:hover {
+    padding: 22px 0;
+    border-top: 3px solid #a9d1d9;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.home-page .highlight-box:nth-child(2n) {
+    border-color: #e2c75e;
+}
+
+.home-page .highlight-box i {
+    color: #2c7f86;
+}
+
+.home-page .highlight-box h3 {
+    color: var(--home-ink);
+}
+
+.home-page .future-box {
+    border-radius: 0;
+    background: #285772;
+    clip-path: polygon(1% 4%, 99% 0, 100% 94%, 2% 100%);
+}
+
+.home-page .future-box::before {
+    display: none;
+}
+
+.home-page .hp-card,
+.home-page .hp-stage {
+    background: #fff8d8;
+}
+
+.home-page .engineering-card,
+.home-page .engineering-stage {
+    background: #eef6e9;
+}
+
+.home-page .team-card,
+.home-page .team-stage {
+    background: #e7f3f5;
+}
+
+.home-page .hp-scene,
+.home-page .engineering-scene,
+.home-page .team-scene {
+    padding-top: 40px;
+}
+
+.home-page .hp-scene h2,
+.home-page .engineering-scene h2,
+.home-page .team-scene h2 {
+    font-size: clamp(2.8rem, 5.5vw, 5.3rem);
+}
+
+.home-page .hp-section-block,
+.home-page .cycle-step,
+.home-page .team-section-block {
+    padding: 14px 0;
+    border-top: 2px solid rgba(40, 87, 114, .2);
+}
+
+.home-page .hp-section-block:first-child,
+.home-page .cycle-step:first-child,
+.home-page .team-section-block:first-child {
+    border-top: 0;
+}
+
+.home-page .hp-section-block h3,
+.home-page .cycle-step strong,
+.home-page .team-section-block h3 {
+    color: var(--home-ink);
+}
+
+.home-page .btn-cycle,
+.home-page .hp-text .btn-cycle,
+.home-page .engineering-text .btn-cycle,
+.home-page .team-text .btn-cycle {
+    border: 0;
+    border-radius: 0;
+    background: #285772;
+    color: #fff;
+    font-family: var(--home-display);
+    clip-path: polygon(1% 5%, 98% 0, 100% 91%, 4% 100%);
+}
+
+.home-page .team-photo-placeholder {
+    border: 0;
+    border-radius: 0;
+    background: rgba(255, 255, 255, .58);
+    box-shadow: none;
+    clip-path: polygon(1% 3%, 98% 0, 100% 96%, 2% 100%);
+}
+
+.home-page .team-photo-placeholder span {
+    color: var(--home-ink);
+    font-family: var(--home-display);
+    letter-spacing: .01em;
+}
+
+.home-page .story-progress-button {
+    border-radius: 47% 53% 42% 58% / 58% 43% 57% 42%;
+    background: #285772;
+    box-shadow: none;
+}
+
+.home-page footer {
+    margin-top: 0;
+}
+
+@media (max-width: 820px) {
+    .home-page .homepage-hero,
+    .home-page .hero-container {
+        min-height: auto;
+    }
+
+    .home-page .hero-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-page .hero-banner {
+        position: relative;
+        inset: auto;
+        order: 0;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 10;
+    }
+
+    .home-page .hero-background {
+        object-position: center center;
+    }
+
+    .home-page .hero-text {
+        position: relative;
+        inset: auto;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 44px 24px 72px;
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 73% 96%, 49% 92%, 24% 97%, 0 93%);
+    }
+
+    .home-page .hero-text h1 {
+        max-width: 14ch;
+        font-size: clamp(2.8rem, 12vw, 4.6rem);
+    }
+
+    .home-page .hero-actions {
+        align-items: stretch;
+    }
+
+    .home-page .hero-btn {
+        text-align: center;
+    }
+
+    .home-page .problem-scene-copy h3,
+    .home-page .taiwan-location-copy h3,
+    .home-page .solution-copy h3 {
+        font-size: clamp(2.5rem, 13vw, 4.5rem);
+    }
+
+    .home-page .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page * {
+        scroll-behavior: auto;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* Home motion direction: pinned illustrated scenes with layered depth. */
+.home-page .homepage-hero {
+    --hero-progress: 0;
+    --hero-scale: 1.035;
+    --hero-cue-opacity: 1;
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+}
+
+.home-page .hero-text > *,
+.home-page .hero-banner,
+.home-page .hero-scroll-cue {
+    opacity: 1;
+}
+
+.home-page.home-motion-ready .hero-text {
+    transform: translate3d(0, calc(var(--hero-progress) * -34px), 0);
+}
+
+.home-page.home-motion-ready .hero-subtitle {
+    animation: home-label-in .62s .08s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.home-page.home-motion-ready .hero-text h1 {
+    animation: none;
+    opacity: 1;
+    clip-path: none;
+    transform: rotate(-.4deg);
+}
+
+.home-page.home-motion-ready .hero-description {
+    animation: home-copy-in .68s .34s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.home-page.home-motion-ready .hero-actions {
+    animation: home-copy-in .68s .46s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.home-page.home-motion-ready .hero-banner {
+    animation: home-landscape-in .9s .12s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.home-page.home-motion-ready .hero-background {
+    --hero-pan: 0px;
+    transform: translate3d(0, var(--hero-pan), 0) scale(var(--hero-scale));
+    transform-origin: 50% 58%;
+    will-change: transform;
+}
+
+.home-page .hero-motion-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.home-page .hero-motion-layer span {
+    --particle-parallax: 0px;
+    position: absolute;
+    left: var(--particle-x);
+    top: var(--particle-y);
+    width: var(--particle-size);
+    aspect-ratio: 1;
+    border: 2px solid rgba(255, 255, 255, .88);
+    border-radius: 50%;
+    background: rgba(98, 188, 205, .35);
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, .16);
+    transform: translate3d(0, var(--particle-parallax), 0);
+    animation: home-particle-drift 4.8s var(--particle-delay) ease-in-out infinite alternate;
+}
+
+.home-page .hero-scroll-cue {
+    position: absolute;
+    right: clamp(20px, 4vw, 58px);
+    bottom: 22px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #244f66;
+    font-family: var(--home-display);
+    font-size: .78rem;
+    font-weight: 700;
+    transition: opacity .2s linear;
+    opacity: var(--hero-cue-opacity);
+}
+
+.home-page .hero-scroll-cue i {
+    position: relative;
+    width: 24px;
+    height: 38px;
+    border: 2px solid currentColor;
+    border-radius: 14px;
+}
+
+.home-page .hero-scroll-cue i::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    width: 3px;
+    height: 8px;
+    border-radius: 2px;
+    background: currentColor;
+    animation: home-scroll-hint 1.5s ease-in-out infinite;
+}
+
+.home-page .problem-stage::after,
+.home-page .taiwan-stage::after,
+.home-page .solution-stage::after,
+.home-page .highlight-stage::after,
+.home-page .hp-stage::after,
+.home-page .engineering-stage::after,
+.home-page .team-stage::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -12vw;
+    bottom: -31vh;
+    width: 124vw;
+    height: 48vh;
+    border-radius: 50% 50% 0 0 / 22% 22% 0 0;
+    background: rgba(113, 184, 197, .11);
+    transform: translate3d(var(--stage-pan, 0), 0, 0) rotate(var(--stage-turn, 0deg));
+    transform-origin: center bottom;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.home-page.home-motion-ready .problem-scene:not(.motion-current),
+.home-page.home-motion-ready .taiwan-scene:not(.motion-current),
+.home-page.home-motion-ready .solution-scene:not(.motion-current),
+.home-page.home-motion-ready .highlight-scene:not(.motion-current),
+.home-page.home-motion-ready .hp-scene:not(.motion-current),
+.home-page.home-motion-ready .engineering-scene:not(.motion-current),
+.home-page.home-motion-ready .team-scene:not(.motion-current) {
+    visibility: hidden;
+}
+
+.home-page.home-motion-ready .motion-current.problem-title-scene,
+.home-page.home-motion-ready .motion-current.taiwan-title-scene,
+.home-page.home-motion-ready .motion-current .problem-pie,
+.home-page.home-motion-ready .motion-current .problem-scene-copy,
+.home-page.home-motion-ready .motion-current .taiwan-map-frame,
+.home-page.home-motion-ready .motion-current .taiwan-location-copy,
+.home-page.home-motion-ready .motion-current.solution-scene,
+.home-page.home-motion-ready .motion-current.highlight-scene,
+.home-page.home-motion-ready .motion-current.hp-scene,
+.home-page.home-motion-ready .motion-current.engineering-scene,
+.home-page.home-motion-ready .motion-current.team-scene {
+    transition-duration: .06s, .18s;
+}
+
+.home-page .problem-scene-visual,
+.home-page .taiwan-map-frame,
+.home-page .solution-icon-wrap,
+.home-page .hp-visual,
+.home-page .engineering-visual,
+.home-page .team-visual {
+    translate: var(--motion-x, 0) var(--motion-y, 0);
+    rotate: var(--motion-turn, 0deg);
+    will-change: translate, rotate;
+}
+
+.home-page .problem-scene-copy,
+.home-page .taiwan-location-copy,
+.home-page .solution-copy,
+.home-page .hp-text,
+.home-page .engineering-text,
+.home-page .team-text {
+    translate: var(--motion-copy-x, 0) 0;
+    will-change: translate;
+}
+
+.home-page .problem-title-scene h2,
+.home-page .taiwan-title-scene h2,
+.home-page .solution-title-scene h2,
+.home-page .highlight-title-scene h2 {
+    clip-path: none;
+    transition: none;
+}
+
+.home-page .problem-title-scene,
+.home-page .taiwan-title-scene,
+.home-page .solution-title-scene,
+.home-page .highlight-title-scene {
+    transition: none;
+}
+
+.home-page .problem-scene.is-visible .pie-core img {
+    animation: home-character-breathe 2.8s ease-in-out infinite alternate;
+}
+
+.home-page .problem-scene.is-visible .orbit-dot:nth-of-type(2) {
+    animation: home-dot-orbit-a 3.8s ease-in-out infinite alternate;
+}
+
+.home-page .problem-scene.is-visible .orbit-dot:nth-of-type(3) {
+    animation: home-dot-orbit-b 4.4s -.8s ease-in-out infinite alternate;
+}
+
+.home-page .problem-scene.is-visible .orbit-dot:nth-of-type(4) {
+    animation: home-dot-orbit-a 4.1s -1.6s ease-in-out infinite alternate-reverse;
+}
+
+.home-page .taiwan-scene.is-visible .taiwan-map-frame img {
+    animation: home-map-breathe 3.6s ease-in-out infinite alternate;
+}
+
+.home-page .solution-scene.is-visible .solution-icon-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 13%;
+    border: 3px solid color-mix(in srgb, var(--solution) 34%, transparent);
+    border-radius: 50%;
+    animation: home-solution-ring 2.7s ease-out infinite;
+}
+
+.home-page .solution-icon-wrap {
+    position: relative;
+}
+
+.home-page .highlight-box {
+    transform: translate3d(0, var(--card-offset), 0);
+}
+
+.home-page .future-image {
+    animation: home-sapling-sway 3.4s ease-in-out infinite alternate;
+    transform-origin: 50% 100%;
+}
+
+@keyframes home-label-in {
+    from { opacity: 0; transform: translate3d(-32px, -8px, 0) rotate(-3deg); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes home-title-in {
+    from { opacity: 0; clip-path: inset(0 0 100% 0); transform: translate3d(0, 36px, 0) rotate(-.4deg); }
+    to { opacity: 1; clip-path: inset(0); transform: rotate(-.4deg); }
+}
+
+@keyframes home-copy-in {
+    from { opacity: 0; transform: translate3d(26px, 18px, 0); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes home-landscape-in {
+    from { opacity: 0; clip-path: inset(0 0 100% 0); }
+    to { opacity: 1; clip-path: inset(0); }
+}
+
+@keyframes home-particle-drift {
+    from { translate: 0 -10px; scale: .82; opacity: .48; }
+    to { translate: 0 13px; scale: 1.13; opacity: .9; }
+}
+
+@keyframes home-scroll-hint {
+    0% { opacity: 0; transform: translateY(0); }
+    35% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(14px); }
+}
+
+@keyframes home-character-breathe {
+    from { transform: translate3d(0, 3px, 0) scale(.985) rotate(-1deg); }
+    to { transform: translate3d(0, -5px, 0) scale(1.02) rotate(1deg); }
+}
+
+@keyframes home-dot-orbit-a {
+    from { translate: -3px -5px; }
+    to { translate: 4px 8px; }
+}
+
+@keyframes home-dot-orbit-b {
+    from { translate: 0 5px; }
+    to { translate: -6px -9px; }
+}
+
+@keyframes home-map-breathe {
+    from { transform: translateY(4px) rotate(-.45deg); }
+    to { transform: translateY(-5px) rotate(.45deg); }
+}
+
+@keyframes home-solution-ring {
+    0% { opacity: .62; transform: scale(.78); }
+    75%, 100% { opacity: 0; transform: scale(1.25); }
+}
+
+@keyframes home-sapling-sway {
+    from { rotate: -1.5deg; }
+    to { rotate: 1.5deg; }
+}
+
+@media (max-width: 820px) {
+    .home-page .hero-scroll-cue {
+        display: none;
+    }
+
+    .home-page .hero-motion-layer span:nth-child(n + 6) {
+        display: none;
+    }
+
+    .home-page .problem-scene-visual,
+    .home-page .taiwan-map-frame,
+    .home-page .solution-icon-wrap,
+    .home-page .hp-visual,
+    .home-page .engineering-visual,
+    .home-page .team-visual,
+    .home-page .problem-scene-copy,
+    .home-page .taiwan-location-copy,
+    .home-page .solution-copy,
+    .home-page .hp-text,
+    .home-page .engineering-text,
+    .home-page .team-text {
+        translate: 0 var(--motion-y, 0);
+        rotate: 0deg;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page .hero-motion-layer,
+    .home-page .hero-scroll-cue,
+    .home-page .problem-stage::after,
+    .home-page .taiwan-stage::after,
+    .home-page .solution-stage::after,
+    .home-page .highlight-stage::after,
+    .home-page .hp-stage::after,
+    .home-page .engineering-stage::after,
+    .home-page .team-stage::after {
+        display: none;
+    }
+
+    .home-page .hero-background,
+    .home-page .hero-text,
+    .home-page .problem-scene-visual,
+    .home-page .taiwan-map-frame,
+    .home-page .solution-icon-wrap,
+    .home-page .hp-visual,
+    .home-page .engineering-visual,
+    .home-page .team-visual,
+    .home-page .problem-scene-copy,
+    .home-page .taiwan-location-copy,
+    .home-page .solution-copy,
+    .home-page .hp-text,
+    .home-page .engineering-text,
+    .home-page .team-text {
+        transform: none !important;
+        translate: none !important;
+        rotate: none !important;
+    }
+}

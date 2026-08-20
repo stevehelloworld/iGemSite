@@ -1,0 +1,327 @@
+/* Shared navigation for the illustrated textbook pages. */
+.textbook-nav-page {
+    --nav-offset: 68px;
+    --textbook-display: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif;
+    padding-top: 0;
+}
+
+.textbook-nav-page .navbar.fixed-top {
+    position: sticky !important;
+    top: 0;
+    z-index: 1050;
+    min-height: var(--nav-offset);
+    padding: 8px 0;
+    background: #dceff4 !important;
+    border: 0;
+    border-bottom: 3px solid #8fc7cc;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.textbook-nav-page .site-reading-progress {
+    --reading-progress: 0;
+    --reading-progress-percent: 0%;
+    --reading-progress-tilt: -1deg;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+    z-index: 4;
+    height: 5px;
+    overflow: visible;
+    background: #c8e3e5;
+    pointer-events: none;
+}
+
+.textbook-nav-page .site-reading-progress-value {
+    position: absolute;
+    inset: 0;
+    background: #f3d56b;
+    box-shadow: inset 0 -1px 0 #559ba0;
+    transform: scaleX(var(--reading-progress));
+    transform-origin: left center;
+    transition: transform 100ms linear;
+    will-change: transform;
+}
+
+.textbook-nav-page .site-reading-progress-marker {
+    position: absolute;
+    top: 50%;
+    left: clamp(35px, var(--reading-progress-percent), calc(100% - 35px));
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 62px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    translate: -50% -50%;
+    rotate: var(--reading-progress-tilt);
+    transition: left 100ms linear, rotate 180ms cubic-bezier(.25, 1, .5, 1);
+    will-change: left;
+}
+
+.textbook-nav-page .site-reading-progress-marker img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    filter: drop-shadow(0 3px 1px rgba(40, 87, 114, .18));
+    animation: progress-mascot-run 520ms ease-in-out infinite alternate;
+    transform-origin: 50% 76%;
+}
+
+@keyframes progress-mascot-run {
+    from { transform: translateY(1px) rotate(-1.6deg); }
+    to { transform: translateY(-2px) rotate(1.6deg); }
+}
+
+.textbook-nav-page .navbar .container {
+    width: min(100% - 32px, 1320px);
+}
+
+.textbook-nav-page .navbar-brand {
+    position: relative;
+    z-index: 1;
+    padding: 6px 12px;
+    color: #285772 !important;
+    font-family: var(--textbook-display);
+    font-size: 1.35rem;
+    letter-spacing: -.02em;
+    transform: rotate(-1deg);
+}
+
+.textbook-nav-page .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.textbook-nav-page .navbar-brand img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    filter: drop-shadow(0 3px 0 rgba(40, 87, 114, .1));
+}
+
+.textbook-nav-page .navbar-brand span {
+    display: inline-block;
+}
+
+.home-page .navbar-brand img {
+    margin-right: 5px;
+    transform: scale(1.34);
+    transform-origin: center;
+}
+
+.textbook-nav-page .navbar-brand::before {
+    content: "";
+    position: absolute;
+    inset: 3px 2px;
+    z-index: -1;
+    background: #fff0a8;
+    clip-path: polygon(2% 8%, 97% 0, 100% 91%, 5% 100%);
+}
+
+.textbook-nav-page .navbar-nav {
+    align-items: center;
+    gap: 3px;
+}
+
+.textbook-nav-page .navbar .nav-link {
+    padding: 9px 12px;
+    color: #285772 !important;
+    font-family: var(--textbook-display);
+    font-size: .92rem;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 0;
+}
+
+.textbook-nav-page .navbar .nav-link:hover,
+.textbook-nav-page .navbar .nav-link:focus-visible,
+.textbook-nav-page .navbar .nav-link.active {
+    color: #174b68 !important;
+    background: #fff0a8;
+    clip-path: polygon(2% 7%, 98% 0, 100% 91%, 4% 100%);
+    outline: none;
+}
+
+.textbook-nav-page .navbar-toggler {
+    padding: 6px 9px;
+    border: 2px solid #73aeb8;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.textbook-nav-page .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(40, 87, 114, .18);
+}
+
+.textbook-nav-page .navbar-toggler-icon {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(20%) saturate(1600%) hue-rotate(157deg) brightness(90%);
+}
+
+.textbook-nav-page .mega-menu {
+    width: min(680px, calc(100vw - 32px));
+    padding: 20px;
+    background: #f8fcfc;
+    border: 3px solid #8fc7cc;
+    border-radius: 8px;
+    box-shadow: 6px 7px 0 rgba(40, 87, 114, .14);
+    font-family: var(--textbook-display);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.textbook-nav-page .project-menu,
+.textbook-nav-page .wetlab-menu {
+    width: min(680px, calc(100vw - 32px));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.textbook-nav-page .drylab-menu,
+.textbook-nav-page .hp-menu {
+    width: min(580px, calc(100vw - 32px));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    transform: translateX(-65%);
+}
+
+.textbook-nav-page .mega-column h5 {
+    color: #507486;
+    font-family: var(--textbook-display);
+    font-size: .78rem;
+    letter-spacing: .04em;
+}
+
+.textbook-nav-page .mega-column small,
+.textbook-nav-page .mega-footer {
+    display: none;
+}
+
+.textbook-nav-page .mega-column a {
+    padding: 7px;
+    color: #285772;
+}
+
+.textbook-nav-page .mega-column a:hover,
+.textbook-nav-page .mega-column a:focus-visible {
+    background: #e3f2f2;
+    outline: 2px solid #8fc7cc;
+    transform: none;
+}
+
+.textbook-nav-page .mega-column strong,
+.textbook-nav-page .mega-column small {
+    color: #285772;
+}
+
+.textbook-nav-page .mega-column .icon {
+    color: #3b9295;
+}
+
+.textbook-nav-page .mega-footer {
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 0;
+    background: #fff0a8;
+    color: #285772;
+    clip-path: polygon(.5% 5%, 99% 0, 100% 93%, 1% 100%);
+}
+
+.textbook-nav-page .mega-footer i {
+    color: #3b9295;
+}
+
+@media (max-width: 1199px) {
+    .textbook-nav-page {
+        --nav-offset: 63px;
+    }
+
+    .textbook-nav-page .navbar.fixed-top {
+        min-height: var(--nav-offset);
+        padding: 7px 0;
+    }
+
+    .textbook-nav-page .navbar .container {
+        width: calc(100% - 24px);
+    }
+
+    .textbook-nav-page .navbar-brand img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .home-page .navbar-brand img {
+        transform: scale(1.24);
+    }
+
+    .textbook-nav-page .site-reading-progress-marker {
+        left: clamp(28px, var(--reading-progress-percent), calc(100% - 28px));
+        width: 56px;
+        height: 50px;
+    }
+
+    .textbook-nav-page .site-reading-progress-marker img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .textbook-nav-page .navbar-collapse {
+        max-height: calc(100svh - var(--nav-offset) - 16px);
+        margin-top: 8px;
+        padding: 12px;
+        overflow-y: auto;
+        background: #f8fcfc;
+        border: 2px solid #8fc7cc;
+        box-shadow: 4px 5px 0 rgba(40, 87, 114, .12);
+    }
+
+    .textbook-nav-page .navbar-nav {
+        align-items: stretch;
+    }
+
+    .textbook-nav-page .navbar .nav-link {
+        padding: 11px 10px;
+    }
+
+    .textbook-nav-page .mega-menu,
+    .textbook-nav-page .project-menu,
+    .textbook-nav-page .wetlab-menu,
+    .textbook-nav-page .drylab-menu,
+    .textbook-nav-page .hp-menu {
+        width: 100%;
+        max-height: none;
+        margin: 4px 0 12px;
+        padding: 16px;
+        border-width: 2px;
+        box-shadow: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .textbook-nav-page .mega-menu,
+    .textbook-nav-page .project-menu,
+    .textbook-nav-page .wetlab-menu,
+    .textbook-nav-page .drylab-menu,
+    .textbook-nav-page .hp-menu {
+        grid-template-columns: 1fr;
+    }
+
+    .textbook-nav-page .mega-footer {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .textbook-nav-page .site-reading-progress-value,
+    .textbook-nav-page .site-reading-progress-marker {
+        transition-duration: .01ms !important;
+    }
+
+    .textbook-nav-page .site-reading-progress-marker img {
+        animation: none !important;
+    }
+}

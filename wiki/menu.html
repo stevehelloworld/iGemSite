@@ -1,0 +1,410 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
+  <div
+    class="site-reading-progress"
+    role="progressbar"
+    aria-label="Page reading progress"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow="0"
+  >
+    <span class="site-reading-progress-value"></span>
+    <span class="site-reading-progress-marker" aria-hidden="true">
+      <img src="{{ url_for('static', filename='assets/images/progress-mascot-flat.png', v='20260820-flat1') }}" alt="">
+    </span>
+  </div>
+  <div class="container">
+
+    <!-- TEAM NAME -->
+    <a class="navbar-brand" href="{{ url_for('home') }}">
+      <img src="{{ url_for('static', filename='assets/images/problem/wastewater-mascot-flat.png', v='20260820-flat1') }}" alt="" aria-hidden="true">
+      <span>VIS</span>
+    </a>
+
+    <!-- MOBILE BUTTON -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <!-- HOME -->
+        <li class="nav-item">
+          <a class="nav-link"
+             href="{{ url_for('home') }}">
+             Home
+          </a>
+        </li>
+
+        <!-- TEAM -->
+        <li class="nav-item">
+          <a class="nav-link"
+             href="{{ url_for('pages', page='team') }}">
+             Team
+          </a>
+        </li>
+
+        <!-- PROJECT -->
+        <li class="nav-item mega-dropdown">
+          <a href="javascript:void(0);"
+             class="nav-link mega-toggle">
+             Project
+          </a>
+
+          <div class="mega-menu project-menu">
+            <div class="mega-column">
+              <h5>DESCRIPTION</h5>
+              <a href="{{ url_for('pages', page='background') }}">
+
+                <div class="icon">
+                  <i class="bi bi-book"></i>
+                </div>
+
+                <div>
+                  <strong>Background</strong>
+                  <small>
+                    Heavy metal contamination overview
+                  </small>
+                </div>
+              </a>
+
+              <a href="{{ url_for('pages', page='problem-statement') }}">
+                <div class="icon">
+                  <i class="bi bi-exclamation-octagon"></i>
+                </div>
+
+                <div>
+                  <strong>Problem Statement</strong>
+                  <small>
+                    Why Pb and Cd pollution matter
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>ENGINEERING</h5>
+              <a href="{{ url_for('pages', page='engineering') }}">
+                <div class="icon">
+                  <i class="bi bi-gear"></i>
+                </div>
+
+                <div>
+                  <strong>Engineering Cycle</strong>
+                  <small>
+                    Design → Build → Test → Learn
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>RESULTS</h5>
+              <a href="{{ url_for('pages', page='results') }}">
+                <div class="icon">
+                  <i class="bi bi-bar-chart"></i>
+                </div>
+
+                <div>
+                  <strong>Results Overview</strong>
+                  <small>
+                    Summary of experimental results
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>CONTRIBUTION</h5>
+              <a href="{{ url_for('pages', page='contribution') }}">
+                <div class="icon">
+                  <i class="bi bi-globe"></i>
+                </div>
+
+                <div>
+                  <strong>Real World Scenario</strong>
+                  <small>
+                    Where and how our system can be applied
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-footer">
+              <i class="bi bi-leaf-fill"></i>
+              <span>
+                Our project integrates synthetic biology and environmental engineering
+                to create a safer, cleaner future.
+              </span>
+            </div>
+          </div>
+        </li>
+
+        <!-- WET LAB -->
+        <li class="nav-item mega-dropdown">
+          <a href="javascript:void(0);"
+             class="nav-link mega-toggle">
+             Wet Lab
+          </a>
+
+          <div class="mega-menu wetlab-menu">
+            <div class="mega-column">
+              <h5>EXPERIMENTS</h5>
+              <a href="{{ url_for('pages', page='experiments') }}">
+                <div class="icon">
+                  <i class="bi bi-eyedropper"></i>
+                </div>
+
+                <div>
+                  <strong>Experiments</strong>
+                  <small>
+                    Laboratory workflow and protocols
+                  </small>
+                </div>
+              </a>
+
+              <a href="{{ url_for('pages', page='notebook') }}">
+                <div class="icon">
+                  <i class="bi bi-journal-text"></i>
+                </div>
+
+                <div>
+                  <strong>Notebook</strong>
+                  <small>
+                    Daily research records
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>ANALYSIS</h5>
+              <a href="{{ url_for('pages', page='measurement') }}">
+                <div class="icon">
+                  <i class="bi bi-bar-chart"></i>
+                </div>
+
+                <div>
+                  <strong>Measurement</strong>
+                  <small>
+                    Quantification and validation
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>PLATFORM</h5>
+              <a href="{{ url_for('pages', page='alternative-platform') }}">
+                <div class="icon">
+                  <i class="bi bi-diagram-3"></i>
+                </div>
+
+                <div>
+                  <strong>Alternative Platform</strong>
+                  <small>
+                    Additional implementation strategy
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>SAFETY</h5>
+              <a href="{{ url_for('pages', page='safety-and-security') }}">
+                <div class="icon">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+
+                <div>
+                  <strong>Safety & Security</strong>
+                  <small>
+                    Risk assessment and biosafety
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-footer">
+              <i class="bi bi-droplet-fill"></i>
+              <span>
+                Our wet lab validates the biological system through experiments and measurements.
+              </span>
+            </div>
+          </div>
+        </li>        
+
+        <!-- DRY LAB -->
+        <li class="nav-item mega-dropdown">
+          <a href="javascript:void(0);"
+             class="nav-link mega-toggle">
+             Dry Lab
+          </a>
+
+          <div class="mega-menu drylab-menu">
+            <div class="mega-column">
+              <h5>MODELING</h5>              
+              <a href="{{ url_for('pages', page='model') }}">
+                <div class="icon">
+                  <i class="bi bi-graph-up"></i>
+                </div>
+
+                <div>
+                  <strong>Model</strong>
+                  <small>
+                    Mathematical simulation of heavy metal removal
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>DATA ANALYSIS</h5>
+              <a href="{{ url_for('pages', page='software') }}">
+                <div class="icon">
+                  <i class="bi bi-bar-chart"></i>
+                </div>
+
+                <div>
+                  <strong>Data Analysis</strong>
+                  <small>
+                    Experimental data processing and prediction
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h5>SOFTWARE</h5>
+              <a href="{{ url_for('pages', page='software') }}">
+                <div class="icon">
+                  <i class="bi bi-code-square"></i>
+                </div>
+
+                <div>
+                  <strong>Simulation Tool</strong>
+                  <small>
+                    Interactive modeling and visualization platform
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-footer">
+              <i class="bi bi-cpu"></i>
+              <span>
+                Computational tools optimize Pb/Cd remediation and guide experimental design.
+              </span>
+            </div>
+          </div>
+        </li>        
+
+        <!-- HUMAN PRACTICES -->
+        <li class="nav-item mega-dropdown">
+          <a href="javascript:void(0);"
+             class="nav-link mega-toggle">
+             Human Practices
+          </a>
+
+          <div class="mega-menu hp-menu">
+            <!-- Column 1 -->
+            <div class="mega-column">
+              <h5>OVERVIEW</h5>
+              <a href="{{ url_for('pages', page='human-practices') }}">
+                <div class="icon">
+                  <i class="bi bi-people"></i>
+                </div>
+
+                <div>
+                  <strong>Stakeholder Engagement</strong>
+                  <small>
+                    Understanding stakeholder needs
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="mega-column">
+              <h5>INDUSTRY</h5>
+              <a href="{{ url_for('pages', page='industry') }}">
+                <div class="icon">
+                  <i class="bi bi-building"></i>
+                </div>
+
+                <div>
+                  <strong>Industry Partners</strong>
+                  <small>
+                    Wastewater treatment companies
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="mega-column">
+              <h5>ACADEMIA & GOVERNMENT</h5>
+              <a href="{{ url_for('pages', page='human-practices') }}">
+                <div class="icon">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+
+                <div>
+                  <strong>Professor Interviews</strong>
+                  <small>
+                    Expert feedback
+                  </small>
+                </div>
+              </a>
+
+              <br>
+              <a href="{{ url_for('pages', page='human-practices') }}">
+                <div class="icon">
+                  <i class="bi bi-bank"></i>
+                </div>
+
+                <div>
+                  <strong>Regulations & Policy</strong>
+                  <small>
+                    Government guidance
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="mega-column">
+              <h5>SDGs</h5>
+              <a href="{{ url_for('pages', page='human-practices') }}">
+                <div class="icon">
+                  <i class="bi bi-recycle"></i>
+                </div>
+
+                <div>
+                  <strong>SDG Connection</strong>
+                  <small>
+                    Relation to the Sustainable Development Goals
+                  </small>
+                </div>
+              </a>
+            </div>
+            <div class="mega-footer">
+              <i class="bi bi-diagram-3"></i>
+              <span>
+                Insights from industry, academia, and government guided the development of our Pb/Cd remediation system.
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

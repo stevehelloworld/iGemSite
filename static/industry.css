@@ -1,0 +1,549 @@
+/* Industry Partners — continuous illustrated field-journal layout. */
+.ihp-section.industry-storybook {
+    --journal-font: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif;
+    --journal-ink: #174b68;
+    width: min(1180px, calc(100% - 40px));
+    max-width: 1180px;
+    margin: 36px auto 70px;
+    padding: 0 0 56px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: #fbfdfc;
+    box-shadow: none;
+}
+
+.industry-storybook .section-title {
+    margin: 0;
+    padding: clamp(54px, 7vw, 84px) clamp(26px, 7vw, 84px) clamp(78px, 9vw, 108px);
+    background: #285772;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 91%, 74% 88%, 58% 93%, 42% 89%, 25% 94%, 9% 90%, 0 93%);
+}
+
+.industry-storybook .section-title::before {
+    content: "FIELD TRIP NOTES";
+    display: block;
+    margin-bottom: 14px;
+    color: #f3d56b;
+    font-family: var(--journal-font);
+    font-size: .84rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+.industry-storybook .section-title h2 {
+    max-width: 880px;
+    margin: 0;
+    color: #fff;
+    font-family: var(--journal-font);
+    font-size: clamp(2.9rem, 6.6vw, 5.8rem);
+    line-height: .98;
+    letter-spacing: -.025em;
+    text-wrap: balance;
+    transform: rotate(-.55deg);
+}
+
+.industry-storybook .section-title h2::after {
+    display: none;
+}
+
+.industry-storybook .industry-hero-visual {
+    display: grid;
+    grid-template-columns: minmax(260px, .8fr) minmax(320px, 1.2fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 70px);
+    width: 100%;
+    max-width: none;
+    min-height: 350px;
+    margin: -38px 0 0;
+    padding: 72px clamp(28px, 7vw, 84px) 54px;
+    border: 0;
+    border-radius: 0;
+    background: #dceff4;
+    clip-path: polygon(0 4%, 12% 1%, 28% 4%, 44% 1%, 61% 4%, 77% 1%, 91% 4%, 100% 1%, 100% 96%, 85% 99%, 68% 96%, 50% 100%, 31% 97%, 14% 100%, 0 96%);
+}
+
+.industry-storybook .industry-hero-visual img {
+    width: min(100%, 310px);
+    height: 280px;
+    justify-self: center;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 0 rgba(23, 75, 104, .08));
+}
+
+.industry-storybook .industry-hero-visual span,
+.industry-storybook .industry-explainer-image figcaption,
+.industry-storybook .industry-fact-card > span,
+.industry-storybook .industry-card-label {
+    font-family: var(--journal-font);
+    letter-spacing: .01em;
+}
+
+.industry-storybook .industry-hero-visual strong,
+.industry-storybook .industry-subheading h3,
+.industry-storybook .industry-fact-card h3,
+.industry-storybook .industry-compare-card h4,
+.industry-storybook .industry-challenge-grid h4,
+.industry-storybook .resource-flow strong {
+    font-family: var(--journal-font);
+    letter-spacing: -.015em;
+    text-wrap: balance;
+}
+
+.industry-storybook .industry-hero-visual strong {
+    display: block;
+    max-width: 520px;
+    margin: 8px 0 14px;
+    color: var(--journal-ink);
+    font-size: clamp(2rem, 3.8vw, 3.7rem);
+    line-height: 1.02;
+}
+
+.industry-storybook .industry-hero-visual small {
+    display: block;
+    max-width: 520px;
+    color: #3f6474;
+    font-size: 1.05rem;
+    line-height: 1.55;
+}
+
+.industry-storybook > .section-description {
+    max-width: 72ch;
+    margin: clamp(48px, 7vw, 78px) auto 30px;
+    padding: 0 28px;
+    color: #334f61;
+    font-size: clamp(1.08rem, 1.7vw, 1.3rem);
+    line-height: 1.75;
+    text-align: left;
+}
+
+.industry-storybook .industry-interview-note {
+    max-width: 760px;
+    margin: 0 auto 66px;
+    padding: 24px 32px;
+    border: 0;
+    border-radius: 0;
+    background: #fff0a8;
+    clip-path: polygon(1% 5%, 98% 1%, 100% 91%, 3% 100%);
+    transform: rotate(-.45deg);
+}
+
+.industry-storybook .industry-interview-note strong {
+    color: #285772;
+    font-family: var(--journal-font);
+    letter-spacing: 0;
+}
+
+.industry-storybook .industry-interview-note p {
+    margin: 6px 0 0;
+    color: #384d56;
+    font-size: 1.1rem;
+}
+
+/* The three findings are continuous illustrated rows, not cards. */
+.industry-storybook .industry-fact-grid {
+    display: block;
+    margin: 0;
+    padding: 0 clamp(24px, 7vw, 92px);
+}
+
+.industry-storybook .industry-fact-card,
+.industry-storybook .industry-fact-card:nth-child(2),
+.industry-storybook .industry-fact-card:nth-child(3) {
+    display: grid;
+    grid-template-columns: minmax(210px, 300px) minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    column-gap: clamp(34px, 7vw, 88px);
+    align-items: center;
+    margin: 0;
+    padding: clamp(42px, 6vw, 72px) 0;
+    border: 0;
+    border-bottom: 2px solid #b8d7df;
+    border-radius: 0;
+    background: transparent;
+}
+
+.industry-storybook .industry-fact-card:nth-child(2) {
+    grid-template-columns: minmax(0, 1fr) minmax(210px, 300px);
+}
+
+.industry-storybook .industry-fact-card:last-child {
+    border-bottom: 0;
+}
+
+.industry-storybook .industry-explainer-image {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    text-align: center;
+}
+
+.industry-storybook .industry-fact-card:nth-child(2) .industry-explainer-image {
+    grid-column: 2;
+}
+
+.industry-storybook .industry-fact-card:nth-child(2) > span,
+.industry-storybook .industry-fact-card:nth-child(2) > h3,
+.industry-storybook .industry-fact-card:nth-child(2) > p {
+    grid-column: 1;
+}
+
+.industry-storybook .industry-explainer-image img {
+    width: min(100%, 245px);
+    height: 220px;
+    object-fit: contain;
+}
+
+.industry-storybook .industry-explainer-image figcaption,
+.industry-storybook .industry-fact-card > span,
+.industry-storybook .industry-card-label {
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 11px;
+    color: #285772;
+    background: #fff0a8;
+    clip-path: polygon(1% 7%, 98% 0, 100% 90%, 4% 100%);
+}
+
+.industry-storybook .industry-explainer-image figcaption {
+    margin-top: 4px;
+    transform: rotate(-1deg);
+}
+
+.industry-storybook .industry-fact-card h3 {
+    margin: 9px 0 14px;
+    color: var(--journal-ink);
+    font-size: clamp(1.75rem, 3vw, 2.65rem);
+    line-height: 1.08;
+}
+
+.industry-storybook .industry-fact-card p,
+.industry-storybook .industry-compare-card li,
+.industry-storybook .industry-challenge-grid p {
+    margin: 0;
+    color: #405d6c;
+    font-size: 1rem;
+    line-height: 1.68;
+}
+
+.industry-storybook .industry-subheading {
+    max-width: 850px;
+    margin: 86px auto 30px;
+    padding: 0 28px;
+    text-align: center;
+}
+
+.industry-storybook .industry-subheading > span {
+    display: none;
+}
+
+.industry-storybook .industry-subheading h3 {
+    display: inline;
+    margin: 0;
+    color: var(--journal-ink);
+    font-size: clamp(2.15rem, 4.2vw, 4rem);
+    line-height: 1.13;
+    background: linear-gradient(transparent 76%, #f3d56b 76%, #f3d56b 91%, transparent 91%);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* One comparison board, rather than two framed cards. */
+.industry-storybook .industry-compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 54px 1fr;
+    gap: 18px;
+    align-items: center;
+    margin: 0 clamp(24px, 6vw, 74px);
+    padding: clamp(34px, 5vw, 54px);
+    background: #e7f3f5;
+    clip-path: polygon(1% 2%, 98% 0, 100% 96%, 2% 100%);
+}
+
+.industry-storybook .industry-compare-card,
+.industry-storybook .industry-compare-card.current-method,
+.industry-storybook .industry-compare-card.biological-method {
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.industry-storybook .industry-card-illustration {
+    display: block;
+    width: 180px;
+    height: 160px;
+    margin: 18px auto 12px;
+    object-fit: contain;
+}
+
+.industry-storybook .industry-compare-card h4 {
+    margin: 8px 0 16px;
+    color: var(--journal-ink);
+    font-size: 1.55rem;
+}
+
+.industry-storybook .industry-compare-arrow {
+    display: grid;
+    place-items: center;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #2c7180;
+    font-family: var(--journal-font);
+    font-size: 0;
+}
+
+.industry-storybook .industry-compare-arrow::after {
+    content: "↝";
+    font-size: 3.8rem;
+    transform: rotate(-5deg);
+}
+
+/* Challenges read as one list; separators never enter the text area. */
+.industry-storybook .industry-challenge-grid {
+    display: block;
+    margin: 0;
+    padding: 0 clamp(24px, 9vw, 112px);
+}
+
+.industry-storybook .industry-challenge-grid article {
+    display: grid;
+    grid-template-columns: 150px 52px minmax(140px, .35fr) minmax(240px, 1fr);
+    align-items: center;
+    gap: 24px;
+    min-height: 180px;
+    padding: 30px 0;
+    border: 0;
+    border-bottom: 2px solid #b8d7df;
+    border-radius: 0;
+    background: transparent;
+}
+
+.industry-storybook .industry-challenge-grid article:last-child {
+    border-bottom: 0;
+}
+
+.industry-storybook .industry-challenge-grid article:nth-child(2),
+.industry-storybook .industry-challenge-grid article:nth-child(3) {
+    background: transparent;
+}
+
+.industry-storybook .industry-challenge-grid article > img {
+    position: static;
+    width: 140px;
+    height: 135px;
+    margin: 0;
+    object-fit: contain;
+}
+
+.industry-storybook .industry-challenge-grid article > b {
+    position: static;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 47% 53% 42% 58% / 58% 43% 57% 42%;
+    background: #285772;
+    color: #fff;
+    font-family: var(--journal-font);
+    transform: rotate(-4deg);
+}
+
+.industry-storybook .industry-challenge-grid h4 {
+    margin: 0;
+    color: var(--journal-ink);
+    font-size: 1.45rem;
+}
+
+/* The circular-economy story is one illustrated strip. */
+.industry-storybook .resource-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 10px;
+    margin: 0 clamp(24px, 6vw, 74px);
+    padding: 34px 26px;
+    border: 0;
+    border-radius: 0;
+    background: #eef6e9;
+    clip-path: polygon(1% 3%, 99% 0, 100% 96%, 2% 100%);
+}
+
+.industry-storybook .resource-flow > div {
+    position: relative;
+    display: grid;
+    grid-template-rows: 125px auto auto;
+    align-content: start;
+    min-height: 245px;
+    padding: 8px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.industry-storybook .resource-flow > div:nth-of-type(2),
+.industry-storybook .resource-flow > div:nth-of-type(3),
+.industry-storybook .resource-flow > div:nth-of-type(4) {
+    background: transparent;
+}
+
+.industry-storybook .resource-flow .resource-flow-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 8px;
+    object-fit: contain;
+}
+
+.industry-storybook .resource-flow .resource-flow-image + span {
+    display: grid;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 31px;
+    height: 31px;
+    margin: 0;
+    border-radius: 47% 53% 42% 58% / 58% 43% 57% 42%;
+    background: #285772;
+    color: #fff;
+    font-family: var(--journal-font);
+}
+
+.industry-storybook .resource-flow strong,
+.industry-storybook .resource-flow small {
+    display: block;
+    text-align: center;
+}
+
+.industry-storybook .resource-flow strong {
+    color: var(--journal-ink);
+    font-size: 1.08rem;
+}
+
+.industry-storybook .resource-flow small {
+    margin-top: 7px;
+    color: #506b76;
+    font-size: .8rem;
+    line-height: 1.45;
+}
+
+.industry-storybook .resource-flow i {
+    display: block;
+    color: #4d8e87;
+    font-family: var(--journal-font);
+    font-size: 2rem;
+    font-style: normal;
+}
+
+.industry-storybook .industry-conclusion {
+    margin: 84px 0 -56px;
+    padding: clamp(62px, 8vw, 90px) clamp(30px, 10vw, 120px) clamp(44px, 7vw, 72px);
+    border: 0;
+    background: #285772;
+    clip-path: polygon(0 8%, 11% 3%, 25% 7%, 42% 2%, 58% 6%, 73% 2%, 89% 7%, 100% 3%, 100% 100%, 0 100%);
+}
+
+.industry-storybook .industry-conclusion > span {
+    color: #f3d56b;
+}
+
+.industry-storybook .industry-conclusion p {
+    max-width: 72ch;
+    margin: 10px 0 0;
+    color: #fff;
+    font-size: clamp(1.16rem, 2vw, 1.45rem);
+    line-height: 1.65;
+}
+
+@media (max-width: 820px) {
+    .ihp-section.industry-storybook {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .industry-storybook .industry-hero-visual,
+    .industry-storybook .industry-fact-card,
+    .industry-storybook .industry-fact-card:nth-child(2),
+    .industry-storybook .industry-compare-grid,
+    .industry-storybook .industry-challenge-grid article,
+    .industry-storybook .resource-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .industry-storybook .industry-hero-visual {
+        margin-top: -22px;
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .industry-storybook .industry-hero-visual img {
+        height: 215px;
+    }
+
+    .industry-storybook .industry-fact-card,
+    .industry-storybook .industry-fact-card:nth-child(2) {
+        grid-template-rows: auto;
+    }
+
+    .industry-storybook .industry-explainer-image,
+    .industry-storybook .industry-fact-card:nth-child(2) .industry-explainer-image,
+    .industry-storybook .industry-fact-card:nth-child(2) > span,
+    .industry-storybook .industry-fact-card:nth-child(2) > h3,
+    .industry-storybook .industry-fact-card:nth-child(2) > p {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .industry-storybook .industry-explainer-image {
+        margin-bottom: 22px;
+    }
+
+    .industry-storybook .industry-compare-grid {
+        gap: 34px;
+    }
+
+    .industry-storybook .industry-compare-arrow {
+        transform: rotate(90deg);
+    }
+
+    .industry-storybook .industry-challenge-grid article > img,
+    .industry-storybook .industry-challenge-grid article > b,
+    .industry-storybook .industry-challenge-grid h4,
+    .industry-storybook .industry-challenge-grid p {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .industry-storybook .resource-flow i {
+        justify-self: center;
+        transform: rotate(90deg);
+    }
+
+    .industry-storybook .resource-flow > div {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .industry-storybook .section-title h2 {
+        font-size: 2.65rem;
+    }
+
+    .industry-storybook .industry-hero-visual,
+    .industry-storybook .industry-fact-grid,
+    .industry-storybook .industry-compare-grid,
+    .industry-storybook .industry-challenge-grid {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .industry-storybook .industry-challenge-grid article {
+        gap: 12px;
+    }
+}
