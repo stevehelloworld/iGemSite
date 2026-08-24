@@ -11,6 +11,15 @@
     position: relative;
 }
 
+/* The new three-part story controller only owns Problem, Map, and Solution.
+   Keep the later legacy stories available to their own inline scroll controller. */
+.home-page.home-motion-ready .highlight-scene:not(.motion-current),
+.home-page.home-motion-ready .hp-scene:not(.motion-current),
+.home-page.home-motion-ready .engineering-scene:not(.motion-current),
+.home-page.home-motion-ready .team-scene:not(.motion-current) {
+    visibility: visible;
+}
+
 .home-page .water-story-v2 {
     --water-progress: 0;
     --water-index: 0;
