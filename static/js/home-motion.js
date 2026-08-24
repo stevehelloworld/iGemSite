@@ -3,27 +3,33 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!root) return;
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduceMotion) return;
-  root.classList.add("home-motion-ready");
-
   const hero = document.querySelector(".homepage-hero");
   const heroImage = document.querySelector(".hero-background");
   const heroParticles = [...document.querySelectorAll(".hero-motion-layer span")];
-  const storyGroups = [
-    [".problem-story", "[data-problem-scene]"],
-    [".taiwan-story", "[data-taiwan-scene]"],
-    [".solution-story", "[data-solution-scene]"],
-    [".highlight-story", "[data-highlight-scene]"],
-    [".hp-story", "[data-hp-scene]"],
-    [".engineering-story", "[data-engineering-scene]"],
-    [".team-story", "[data-team-scene]"]
-  ].map(([storySelector, sceneSelector]) => {
-    const story = document.querySelector(storySelector);
-    return story ? { story, stage: story.firstElementChild, scenes: [...story.querySelectorAll(sceneSelector)] } : null;
-  }).filter(Boolean);
-
+  const waterStory = document.querySelector("[data-water-story]");
+  const mapStory = document.querySelector("[data-map-story]");
+  const treatmentStory = document.querySelector("[data-treatment-story]");
   const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
+  const ease = (value) => {
+    const x = clamp(value);
+    return 1 - Math.pow(1 - x, 4);
+  };
   let queued = false;
+
+  function storyProgress(element) {
+    if (!element) return 0;
+    const rect = element.getBoundingClientRect();
+    const travel = Math.max(1, rect.height - window.innerHeight);
+    return clamp(-rect.top / travel);
+  }
+
+  function activateByProgress(container, selector, progress) {
+    const items = [...container.querySelectorAll(selector)];
+    if (!items.length) return 0;
+    const index = Math.min(items.length - 1, Math.floor(progress * items.length));
+    items.forEach((item, itemIndex) => item.classList.toggle("is-active", itemIndex === index));
+    return index;
+  }
 
   function updateHero() {
     if (!hero || !heroImage) return;
@@ -35,71 +41,73 @@ document.addEventListener("DOMContentLoaded", () => {
     heroImage.style.setProperty("--hero-pan", `${(progress * 68).toFixed(1)}px`);
     heroParticles.forEach((particle, index) => {
       const travel = Number.parseFloat(particle.style.getPropertyValue("--particle-travel")) || 36;
-      const direction = index % 2 ? -1 : 1;
-      particle.style.setProperty("--particle-parallax", `${(progress * travel * direction).toFixed(1)}px`);
+      particle.style.setProperty("--particle-parallax", `${(progress * travel * (index % 2 ? -1 : 1)).toFixed(1)}px`);
     });
   }
 
-  function updateStories() {
-    storyGroups.forEach(({ story, stage, scenes }, groupIndex) => {
-      const rect = story.getBoundingClientRect();
-      const travel = Math.max(1, rect.height - window.innerHeight);
-      const entryLead = window.innerHeight * 0.9;
-      const progress = clamp((entryLead - rect.top) / (travel + entryLead));
-      story.style.setProperty("--story-progress", progress.toFixed(4));
-      if (stage) {
-        stage.style.setProperty("--stage-pan", `${((progress - 0.5) * 90).toFixed(1)}px`);
-        stage.style.setProperty("--stage-turn", `${((progress - 0.5) * (groupIndex % 2 ? -1.4 : 1.4)).toFixed(2)}deg`);
-      }
-
-      const span = 1 / Math.max(1, scenes.length);
-      scenes.forEach((scene, index) => {
-        const local = clamp((progress - index * span) / span);
-        const arc = Math.sin(local * Math.PI);
-        const direction = index % 2 ? -1 : 1;
-        scene.style.setProperty("--motion-progress", local.toFixed(4));
-        scene.style.setProperty("--motion-arc", arc.toFixed(4));
-        scene.style.setProperty("--motion-x", `${(arc * 26 * direction).toFixed(1)}px`);
-        scene.style.setProperty("--motion-copy-x", `${(arc * -10.9 * direction).toFixed(1)}px`);
-        scene.style.setProperty("--motion-y", `${((0.5 - local) * 28).toFixed(1)}px`);
-        scene.style.setProperty("--motion-turn", `${((local - 0.5) * 3.2 * direction).toFixed(2)}deg`);
-        scene.style.setProperty("--motion-mask", `${((1 - arc) * 48).toFixed(2)}%`);
-      });
-
-      let currentScene = null;
-      let currentStrength = 0.02;
-      scenes.forEach((scene) => {
-        const strength = Number.parseFloat(getComputedStyle(scene).getPropertyValue("--scene-opacity")) || 0;
-        if (strength > currentStrength) {
-          currentStrength = strength;
-          currentScene = scene;
-        }
-      });
-      if (!currentScene && scenes.length) {
-        currentScene = scenes[Math.min(scenes.length - 1, Math.floor(progress * scenes.length))];
-      }
-      scenes.forEach((scene) => scene.classList.toggle("motion-current", scene === currentScene));
-      if (currentScene) {
-        currentScene.style.setProperty("--scene-opacity", "1");
-        currentScene.style.setProperty("--scene-offset", "0px");
-        currentScene.style.setProperty("--scene-scale", "1");
-      }
-    });
+  function updateWaterStory() {
+    if (!waterStory) return;
+    const progress = storyProgress(waterStory);
+    const index = activateByProgress(waterStory, "[data-water-step]", progress);
+    const local = ease((progress * 4) - index);
+    waterStory.style.setProperty("--water-progress", progress.toFixed(4));
+    waterStory.style.setProperty("--water-index", index);
+    waterStory.style.setProperty("--water-local", local.toFixed(4));
   }
 
-  function updateMotion() {
+  function setMapIndex(index) {
+    if (!mapStory) return;
+    mapStory.querySelectorAll("[data-map-step]").forEach((item, itemIndex) => item.classList.toggle("is-active", itemIndex === index));
+    mapStory.querySelectorAll("[data-map-pin]").forEach((item, itemIndex) => item.classList.toggle("is-active", itemIndex === index));
+    mapStory.style.setProperty("--map-index", index);
+  }
+
+  function updateMapStory() {
+    if (!mapStory) return;
+    const progress = storyProgress(mapStory);
+    const index = Math.min(2, Math.floor(progress * 3));
+    setMapIndex(index);
+    mapStory.style.setProperty("--map-progress", progress.toFixed(4));
+  }
+
+  function updateTreatmentStory() {
+    if (!treatmentStory) return;
+    const progress = storyProgress(treatmentStory);
+    const index = activateByProgress(treatmentStory, "[data-treatment-step]", progress);
+    treatmentStory.style.setProperty("--treatment-progress", progress.toFixed(4));
+    treatmentStory.style.setProperty("--treatment-index", index);
+  }
+
+  function update() {
     updateHero();
-    updateStories();
+    updateWaterStory();
+    updateMapStory();
+    updateTreatmentStory();
     queued = false;
   }
 
   function requestUpdate() {
     if (queued) return;
     queued = true;
-    window.requestAnimationFrame(updateMotion);
+    window.requestAnimationFrame(update);
   }
 
+  mapStory?.querySelectorAll("[data-map-pin]").forEach((pin) => {
+    pin.addEventListener("click", () => {
+      const index = Number(pin.dataset.mapPin || 0);
+      const travel = Math.max(1, mapStory.offsetHeight - window.innerHeight);
+      window.scrollTo({ top: mapStory.offsetTop + travel * ((index + 0.5) / 3), behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  });
+
+  if (reduceMotion) {
+    root.classList.add("home-reduced-motion");
+    setMapIndex(0);
+    return;
+  }
+
+  root.classList.add("home-motion-ready");
   window.addEventListener("scroll", requestUpdate, { passive: true });
   window.addEventListener("resize", requestUpdate);
-  updateMotion();
+  update();
 });

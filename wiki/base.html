@@ -89,6 +89,17 @@
     href="{{ url_for('static', filename='home.css', v='20260820-title-static1') }}"
     rel="stylesheet"
   />
+  <link
+    href="{{ url_for('static', filename='home-story-v2.css', v='20260824-story1') }}"
+    rel="stylesheet"
+  />
+  {% endif %}
+
+  {% if request.path in ["/measurement", "/alternative-platform", "/safety-and-security"] %}
+  <link
+    href="{{ url_for('static', filename='student-lab.css', v='20260824-textbook1') }}"
+    rel="stylesheet"
+  />
   {% endif %}
 
   {% if request.path == "/industry" %}
@@ -101,6 +112,10 @@
   {% if request.path == "/human-practices" %}
   <link
     href="{{ url_for('static', filename='human-practices.css', v='20260820-flat-assets1') }}"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ url_for('static', filename='human-practices-v2.css', v='20260824-journey2') }}"
     rel="stylesheet"
   />
   {% endif %}
@@ -118,7 +133,7 @@
   />
 
   <link
-    href="{{ url_for('static', filename='textbook-theme.css', v='20260820-flat-assets1') }}"
+    href="{{ url_for('static', filename='textbook-theme.css', v='20260824-static-titles1') }}"
     rel="stylesheet"
   />
 

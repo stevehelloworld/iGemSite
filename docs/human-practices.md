@@ -945,7 +945,7 @@
 
             <div class="todo-box">
 
-                <h3>TODO</h3>
+                <h3>PHOTO LOG PLACEHOLDER</h3>
 
                 <p>
 
@@ -1011,7 +1011,7 @@
 
             <div class="todo-box">
 
-                <h3>TODO</h3>
+                <h3>PHOTO LOG PLACEHOLDER</h3>
 
                 <p>
 
@@ -1712,67 +1712,16 @@
 
 
 
-    <div class="todo-box">
-
-        <h3>
-
-            TODO
-
-        </h3>
-
-        <p>
-
-            Insert an Integrated Human Practices flowchart.
-
-        </p>
-
-        <p>
-
-            Suggested flow:
-
-        </p>
-
-<pre>
-
-Understanding
-the Problem
-
-        │
-
-        ▼
-
-Understanding
-Current Solutions
-
-        │
-
-        ▼
-
-Optimizing
-Engineering Design
-
-        │
-
-        ▼
-
-Considering
-Future Applications
-
-        │
-
-        ▼
-
-Integrated
-Human Practices
-
-        │
-
-        ▼
-
-Final Project
-
-</pre>
-
+    <div class="ihp-learning-river" aria-label="Integrated Human Practices flow">
+        <div><span>Ask</span><strong>Understanding the Problem</strong><p>Listen to the people who live with water pollution.</p></div>
+        <i aria-hidden="true">→</i>
+        <div><span>Compare</span><strong>Understanding Current Solutions</strong><p>Learn where existing treatment works and where it struggles.</p></div>
+        <i aria-hidden="true">→</i>
+        <div><span>Change</span><strong>Optimizing Engineering Design</strong><p>Turn stakeholder concerns into design requirements.</p></div>
+        <i aria-hidden="true">→</i>
+        <div><span>Check</span><strong>Considering Future Applications</strong><p>Test whether the revised idea fits real environments.</p></div>
+        <i aria-hidden="true">→</i>
+        <div class="is-final"><span>Integrate</span><strong>Final Project</strong><p>A project shaped by evidence, feedback, and iteration.</p></div>
     </div>
 
 </section>
@@ -1807,45 +1756,10 @@ Final Project
 
 
 
-    <div class="todo-box">
-
-        <h3>
-
-            TODO
-
-        </h3>
-
-        <p>
-
-            Insert a stakeholder network diagram.
-
-        </p>
-
-<pre>
-
-                     Final Project
-
-                           ▲
-
-                           │
-
-      ┌──────────┬──────────┬──────────┬──────────┐
-
-      │          │          │          │
-
- Academia    Industry   Government  Agriculture
-
-      │          │          │          │
-
-      └──────────┴──────────┴──────────┘
-
-                           │
-
-          Integrated Human Practices
-
-</pre>
-
-    </div>
+    <figure class="stakeholder-map-figure">
+        <img src="/static/assets/images/hp-reference-diagram-flat.png" alt="Hand-drawn stakeholder network linking the team with government, industry, researchers, the public, and wastewater perspectives">
+        <figcaption>Each perspective enters the same design conversation and changes what the team tests next.</figcaption>
+    </figure>
 
 </section>
 
