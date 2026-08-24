@@ -13,7 +13,6 @@
 
             <figure class="pollution-panorama-v2">
                 <img src="/static/assets/images/problem/pollution-path-panorama-optimized.jpg" alt="A colored-pencil panorama showing heavy metals moving from industrial wastewater through a river and rice fields to a nearby community">
-                <div class="pollution-window-v2" aria-hidden="true"></div>
                 <figcaption class="metal-legend-v2"><span class="metal-pb"></span> Lead (Pb) <span class="metal-cd"></span> Cadmium (Cd)</figcaption>
             </figure>
 
@@ -448,7 +447,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <figure class="treatment-panorama-v2">
                 <img src="/static/assets/images/solution/bioremediation-process-panorama-optimized.jpg" alt="A colored-pencil treatment channel showing polluted water, engineered bacteria binding metals, membrane separation, metal recovery, and clean water">
-                <div class="treatment-focus-v2" aria-hidden="true"></div>
             </figure>
 
             <ol class="treatment-steps-v2" aria-label="Biological heavy-metal treatment steps">
