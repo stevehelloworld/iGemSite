@@ -127,15 +127,40 @@
 .home-page .pollution-window-v2,
 .home-page .treatment-focus-v2 {
     position: absolute;
-    top: 8%;
+    top: 14%;
     left: 7%;
-    width: clamp(120px, 18vw, 260px);
-    height: 82%;
-    border: 4px solid rgba(243, 213, 107, .94);
-    box-shadow: 0 0 0 999px rgba(31, 70, 88, .08);
+    width: clamp(150px, 20vw, 290px);
+    height: 70%;
+    border: 0;
+    border-radius: 48% 52% 46% 54% / 52% 45% 55% 48%;
+    box-shadow: 0 0 0 999px rgba(31, 70, 88, .1);
     pointer-events: none;
     transform: translate3d(calc(var(--water-index) * 23vw), 0, 0) rotate(calc((var(--water-index) - 1.5) * .35deg));
     transition: transform 420ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.home-page .pollution-window-v2::before,
+.home-page .pollution-window-v2::after,
+.home-page .treatment-focus-v2::before,
+.home-page .treatment-focus-v2::after {
+    content: "";
+    position: absolute;
+    border-radius: 50% 46% 53% 47% / 48% 54% 46% 52%;
+    pointer-events: none;
+}
+
+.home-page .pollution-window-v2::before,
+.home-page .treatment-focus-v2::before {
+    inset: -3% -4%;
+    border: 6px solid rgba(243, 213, 107, .9);
+    transform: rotate(-2.2deg);
+}
+
+.home-page .pollution-window-v2::after,
+.home-page .treatment-focus-v2::after {
+    inset: 2% -6% -2% 1%;
+    border: 3px solid rgba(226, 188, 50, .58);
+    transform: rotate(2.8deg);
 }
 
 .home-page .metal-legend-v2 {
@@ -175,6 +200,7 @@
 }
 
 .home-page .story-notes-v2 li {
+    position: relative;
     min-width: 0;
     padding: 10px 14px 4px;
     border-top: 4px solid rgba(40, 87, 114, .2);
@@ -183,11 +209,31 @@
     transition: opacity 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
 
+.home-page .story-notes-v2 li::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 14px;
+    width: 13px;
+    height: 13px;
+    border: 3px solid #f8fcf9;
+    border-radius: 50%;
+    background: #e2bc32;
+    opacity: 0;
+    transform: scale(.45);
+    transition: opacity 180ms ease, transform 280ms cubic-bezier(.16, 1, .3, 1);
+}
+
 .home-page .story-notes-v2 li.is-active {
     border-color: #e2bc32;
-    background: rgba(255, 240, 168, .58);
+    background: transparent;
     color: #285772;
     opacity: 1;
+}
+
+.home-page .story-notes-v2 li.is-active::before {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .home-page .story-notes-v2 span,
@@ -358,10 +404,17 @@
 
 .home-page .treatment-focus-v2 {
     left: 4%;
-    width: clamp(110px, 15vw, 220px);
-    border-color: #65b9a0;
+    width: clamp(135px, 17vw, 250px);
     box-shadow: 0 0 0 999px rgba(31, 70, 88, .06);
     transform: translate3d(calc(var(--treatment-index) * 17vw), 0, 0) rotate(calc((var(--treatment-index) - 2) * .25deg));
+}
+
+.home-page .treatment-focus-v2::before {
+    border-color: rgba(83, 164, 138, .9);
+}
+
+.home-page .treatment-focus-v2::after {
+    border-color: rgba(47, 136, 112, .52);
 }
 
 .home-page .treatment-steps-v2 {
@@ -382,9 +435,14 @@
 
 .home-page .treatment-steps-v2 li.is-active {
     border-color: #53a48a;
-    background: rgba(220, 244, 234, .72);
+    background: transparent;
     color: #285772;
     opacity: 1;
+}
+
+.home-page .treatment-steps-v2 li.is-active span {
+    background: #d8efe5;
+    box-shadow: 0 0 0 4px rgba(83, 164, 138, .14);
 }
 
 .home-page .treatment-steps-v2 span {
