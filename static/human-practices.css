@@ -12,7 +12,7 @@
     border: 0;
     border-radius: 0;
     background-color: #dceff4;
-    background-image: url("/static/assets/images/problem/wastewater-mascot-flat.png");
+    background-image: url("assets/images/problem/wastewater-mascot-flat.png");
     background-repeat: no-repeat;
     background-position: right 7% bottom 42px;
     background-size: min(31vw, 330px) auto;

@@ -12,7 +12,7 @@
             </header>
 
             <figure class="pollution-panorama-v2">
-                <img src="/static/assets/images/problem/pollution-path-panorama-optimized.jpg" alt="A colored-pencil panorama showing heavy metals moving from industrial wastewater through a river and rice fields to a nearby community">
+                <img src="static/assets/images/problem/pollution-path-panorama-optimized.jpg" alt="A colored-pencil panorama showing heavy metals moving from industrial wastewater through a river and rice fields to a nearby community">
                 <figcaption class="metal-legend-v2"><span class="metal-pb"></span> Lead (Pb) <span class="metal-cd"></span> Cadmium (Cd)</figcaption>
             </figure>
 
@@ -35,7 +35,7 @@
 
             <div class="map-composition-v2">
                 <figure class="persistent-map-v2">
-                    <img src="/static/assets/images/taiwan-scenes/taiwan-base-map-flat.png" alt="Hand-drawn physical map of Taiwan">
+                    <img src="static/assets/images/taiwan-scenes/taiwan-base-map-flat.png" alt="Hand-drawn physical map of Taiwan">
                     <button class="map-pin-v2 pin-taoyuan is-active" type="button" data-map-pin="0" aria-label="Show Taoyuan"><span></span></button>
                     <button class="map-pin-v2 pin-taichung" type="button" data-map-pin="1" aria-label="Show Taichung"><span></span></button>
                     <button class="map-pin-v2 pin-kaohsiung" type="button" data-map-pin="2" aria-label="Show Kaohsiung"><span></span></button>
@@ -43,7 +43,7 @@
                 </figure>
 
                 <div class="location-window-v2">
-                    <img src="/static/assets/images/taiwan-scenes/taiwan-city-vignettes-optimized.jpg" alt="Three colored-pencil scenes showing industrial river discharge, agricultural irrigation, and harbor pollution in Taiwan">
+                    <img src="static/assets/images/taiwan-scenes/taiwan-city-vignettes-optimized.jpg" alt="Three colored-pencil scenes showing industrial river discharge, agricultural irrigation, and harbor pollution in Taiwan">
                     <div class="location-copy-v2 is-active" data-map-step="0"><span>Taoyuan</span><h3>Industrial parks meet the river</h3><p>Electronics and metal-processing effluent can introduce Pb and Cd into northern waterways.</p></div>
                     <div class="location-copy-v2" data-map-step="1"><span>Taichung</span><h3>River pollution reaches farmland</h3><p>Irrigation creates a direct path from contaminated water to soil, crops, and food safety.</p></div>
                     <div class="location-copy-v2" data-map-step="2"><span>Kaohsiung</span><h3>Industry meets the harbor</h3><p>Industrial discharge and busy port activity increase the metal load faced by coastal ecosystems.</p></div>
@@ -446,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </header>
 
             <figure class="treatment-panorama-v2">
-                <img src="/static/assets/images/solution/bioremediation-process-panorama-optimized.jpg" alt="A colored-pencil treatment channel showing polluted water, engineered bacteria binding metals, membrane separation, metal recovery, and clean water">
+                <img src="static/assets/images/solution/bioremediation-process-panorama-optimized.jpg" alt="A colored-pencil treatment channel showing polluted water, engineered bacteria binding metals, membrane separation, metal recovery, and clean water">
             </figure>
 
             <ol class="treatment-steps-v2" aria-label="Biological heavy-metal treatment steps">
@@ -520,7 +520,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
 
                     <img
-                        src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/sapling2.avif"
+                        src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/sapling2.avif"
                         class="future-image">
                 </div>
             </article>
@@ -553,25 +553,25 @@ document.addEventListener("DOMContentLoaded", function () {
                                 </defs>
 
                                 <g class="hp-layer hp-layer-team" data-hp-center>
-                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-team-full)" />
+                                    <image href="static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-team-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-branch" data-hp-branch>
-                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-government-full)" />
+                                    <image href="static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-government-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-branch" data-hp-branch>
-                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-industry-full)" />
+                                    <image href="static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-industry-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-branch" data-hp-branch>
-                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-researchers-full)" />
+                                    <image href="static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-researchers-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-branch" data-hp-branch>
-                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-public-full)" />
+                                    <image href="static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-public-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-branch" data-hp-branch>
-                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-wastewater-full)" />
+                                    <image href="static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-wastewater-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-full" data-hp-full>
-                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" />
+                                    <image href="static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" />
                                 </g>
                             </svg>
                         </div>
@@ -638,22 +638,22 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </clipPath>
                                 </defs>
                                 <g class="engineering-layer engineering-layer-center" data-engineering-center>
-                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-center)" />
+                                    <image href="static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-center)" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-design)" />
+                                    <image href="static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-design)" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-build)" />
+                                    <image href="static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-build)" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-test)" />
+                                    <image href="static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-test)" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-learn)" />
+                                    <image href="static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-learn)" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-full" data-engineering-full>
-                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" />
+                                    <image href="static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" />
                                 </g>
                             </svg>
                         </div>
@@ -699,7 +699,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="team-layout">
                     <div class="team-photo-slot" data-team-photo>
                         <div class="team-photo-frame">
-                            <img class="team-collaboration-illustration" src="/static/assets/images/team-collaboration-optimized.jpg" alt="Colored-pencil illustration of high-school students combining wet lab, data analysis, design, and outreach around one water-treatment project">
+                            <img class="team-collaboration-illustration" src="static/assets/images/team-collaboration-optimized.jpg" alt="Colored-pencil illustration of high-school students combining wet lab, data analysis, design, and outreach around one water-treatment project">
                             <p class="team-photo-date">One project, many kinds of work</p>
                         </div>
                     </div>

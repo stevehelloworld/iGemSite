@@ -176,7 +176,7 @@
     bottom: 34px;
     width: clamp(150px, 18vw, 235px);
     aspect-ratio: 1;
-    background: url("/static/assets/images/problem/wastewater-mascot-flat.png") center / contain no-repeat;
+    background: url("assets/images/problem/wastewater-mascot-flat.png") center / contain no-repeat;
     filter: none;
     pointer-events: none;
 }
@@ -287,21 +287,21 @@
 }
 
 .page-background .problem-hero-card::after {
-    background-image: url("/static/assets/images/problem/wastewater-mascot-flat.png");
+    background-image: url("assets/images/problem/wastewater-mascot-flat.png");
 }
 
 .page-description .problem-statement-hero::after,
 .page-problem-statement .problem-statement-hero::after {
-    background-image: url("/static/assets/images/problem/cadmium-mascot-flat.png");
+    background-image: url("assets/images/problem/cadmium-mascot-flat.png");
 }
 
 .page-experiments .experiment-hero::after,
 .page-notebook .experiment-hero::after {
-    background-image: url("/static/assets/images/solution/capture-flat.png");
+    background-image: url("assets/images/solution/capture-flat.png");
 }
 
 .page-model .model-hero::after {
-    background-image: url("/static/assets/images/engineering-cycle-center-flat.png");
+    background-image: url("assets/images/engineering-cycle-center-flat.png");
 }
 
 .textbook-nav-page .problem-statement-hero h1,

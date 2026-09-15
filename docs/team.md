@@ -2,16 +2,16 @@
 (() => {
     const head = document.head || document.getElementsByTagName("head")[0];
 
-    if (head && !document.querySelector('link[href*="/static/team.css"]')) {
+    if (head && !document.querySelector('link[href*="static/team.css"]')) {
         const link = document.createElement("link");
         link.rel = "stylesheet";
-        link.href = "/static/team.css?v=20260806-team1";
+        link.href = "static/team.css?v=20260806-team1";
         head.appendChild(link);
     }
 
-    if (!document.querySelector('script[src*="/static/js/team.js"]')) {
+    if (!document.querySelector('script[src*="static/js/team.js"]')) {
         const script = document.createElement("script");
-        script.src = "/static/js/team.js?v=20260806-team1";
+        script.src = "static/js/team.js?v=20260806-team1";
         script.defer = true;
         document.body.appendChild(script);
     }
@@ -52,7 +52,7 @@
             data-label="Sunny">
 		        <div class="planet-inner">
 		            <img
-		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/mercury.avif"
+		                src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/planets/mercury.avif"
 		                alt="Mercury">	
 		        </div>
 		    </button>
@@ -66,7 +66,7 @@
             data-label="Chelsea">
 		        <div class="planet-inner">
 		            <img
-		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/venus.avif"
+		                src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/planets/venus.avif"
 		                alt="Venus">
 		        </div>
 		    </button>
@@ -80,7 +80,7 @@
             data-label="Francis">
 		        <div class="planet-inner">
 		            <img
-		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/earth.avif"
+		                src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/planets/earth.avif"
 		                alt="Earth">
 		        </div>
 		    </button>
@@ -95,7 +95,7 @@
             data-label="Ray">
 		        <div class="planet-inner">
 		            <img
-		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/mars.avif"
+		                src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/planets/mars.avif"
 		                alt="Mars">
 		        </div>
 		    </button>
@@ -109,7 +109,7 @@
             data-label="Lucy">
 		        <div class="planet-inner">
 		            <img
-		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/jupiter.avif"
+		                src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/planets/jupiter.avif"
 		                alt="Jupiter">
 		        </div>
 		    </button>
@@ -124,7 +124,7 @@
             data-label="Ian">
 		        <div class="planet-inner">
 		            <img
-		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/saturn2.avif"
+		                src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/planets/saturn2.avif"
 		                alt="Saturn">
 		        </div>
 		    </button>
@@ -138,7 +138,7 @@
             data-label="Eugenia">
 		        <div class="planet-inner">
 		            <img
-		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/uranus.avif"
+		                src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/planets/uranus.avif"
 		                alt="Uranus">
 		        </div>
 		    </button>
@@ -152,14 +152,14 @@
             data-label="Nicholas">
 		        <div class="planet-inner">
 		            <img
-		                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/neptune.avif"
+		                src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/planets/neptune.avif"
 		                alt="Neptune">
 		        </div>
 		    </button>
 		</div>            <!-- Sun -->
 	   <button class="planet sun" data-member="sun" data-label="Ohanna">
 		    <div class="planet-inner">
-	        <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/sun.avif">
+	        <img src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/planets/sun.avif">
 	    </div>
 	</button>               
 
@@ -179,7 +179,7 @@
 
             <img
                 id="member-image"
-                src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif"
+                src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif"
                 alt="Member">
 
         </div>

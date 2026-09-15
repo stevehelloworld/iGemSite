@@ -17,7 +17,7 @@
                     <span class="pie-slice slice-one"></span>
                     <span class="pie-slice slice-two"></span>
                     <span class="pie-slice slice-three"></span>
-                    <div class="pie-core"><img src="/static/assets/images/problem/lead-mascot.png" alt=""></div>
+                    <div class="pie-core"><img src="static/assets/images/problem/lead-mascot.png" alt=""></div>
                 </div>
                 <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span>
             </div>
@@ -35,7 +35,7 @@
                     <span class="pie-slice slice-one"></span>
                     <span class="pie-slice slice-two"></span>
                     <span class="pie-slice slice-three"></span>
-                    <div class="pie-core"><img src="/static/assets/images/problem/cadmium-mascot.png" alt=""></div>
+                    <div class="pie-core"><img src="static/assets/images/problem/cadmium-mascot.png" alt=""></div>
                 </div>
                 <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span>
             </div>
@@ -53,7 +53,7 @@
                     <span class="pie-slice slice-one"></span>
                     <span class="pie-slice slice-two"></span>
                     <span class="pie-slice slice-three"></span>
-                    <div class="pie-core"><img src="/static/assets/images/problem/wastewater-mascot.png" alt=""></div>
+                    <div class="pie-core"><img src="static/assets/images/problem/wastewater-mascot.png" alt=""></div>
                 </div>
                 <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span>
             </div>
@@ -77,7 +77,7 @@
 
             <article class="taiwan-scene taoyuan-location" data-taiwan-scene>
                 <div class="taiwan-map-frame" aria-hidden="true">
-                    <img src="/static/assets/images/taiwan-scenes/taiwan-base-map.png" alt="">
+                    <img src="static/assets/images/taiwan-scenes/taiwan-base-map.png" alt="">
                     <span class="taiwan-pulse"></span>
                 </div>
                 <div class="taiwan-location-copy">
@@ -90,7 +90,7 @@
 
             <article class="taiwan-scene taichung-location" data-taiwan-scene>
                 <div class="taiwan-map-frame" aria-hidden="true">
-                    <img src="/static/assets/images/taiwan-scenes/taiwan-base-map.png" alt="">
+                    <img src="static/assets/images/taiwan-scenes/taiwan-base-map.png" alt="">
                     <span class="taiwan-pulse"></span>
                 </div>
                 <div class="taiwan-location-copy">
@@ -103,7 +103,7 @@
 
             <article class="taiwan-scene kaohsiung-location" data-taiwan-scene>
                 <div class="taiwan-map-frame" aria-hidden="true">
-                    <img src="/static/assets/images/taiwan-scenes/taiwan-base-map.png" alt="">
+                    <img src="static/assets/images/taiwan-scenes/taiwan-base-map.png" alt="">
                     <span class="taiwan-pulse"></span>
                 </div>
                 <div class="taiwan-location-copy">
@@ -269,7 +269,7 @@ Produce safer water for environmental discharge.</p>
         </div>
 
         <img
-            src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/sapling2.avif"
+            src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/sapling2.avif"
             class="future-image">
     </div>
 </div>
@@ -282,7 +282,7 @@ Produce safer water for environmental discharge.</p>
     <h2>HUMAN PRACTICES</h2>
     <div class="hp-layout">
         <div class="hp-image-wrapper">
-            <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/human-practices2.avif" alt="Human Practices Diagram">
+            <img src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/human-practices2.avif" alt="Human Practices Diagram">
         </div>
 
         <div class="hp-text">
@@ -319,7 +319,7 @@ Produce safer water for environmental discharge.</p>
                 <div class="engineering-layout">
                     <div class="engineering-visual">
                         <div class="engineering-image-wrapper">
-                            <img src="/static/assets/images/engineering-cycle-reference.png"
+                            <img src="static/assets/images/engineering-cycle-reference.png"
                                  alt="Engineering cycle showing Design, Build, Test, and Learn around a central gear">
                         </div>
                     </div>

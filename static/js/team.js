@@ -9,7 +9,7 @@ const members = {
         name: "Ohanna Liu",
         role: "Team Leader",
 
-        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
+        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
 
         intro:
             "Write a short introduction for Member 1 here.",
@@ -27,7 +27,7 @@ const members = {
         name: "Sunny Huang",
         role: "Wet Lab",
 
-        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
+        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
 
         intro:
             "Write a short introduction for Member 2 here.",
@@ -45,7 +45,7 @@ const members = {
         name: "Chelsea Chang",
         role: "Dry Lab",
 
-        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
+        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
 
         intro:
             "Write a short introduction for Member 3 here.",
@@ -63,7 +63,7 @@ const members = {
         name: "Francis Lin",
         role: "Dry Lab",
 
-        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
+        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
 
         intro:
             "Write a short introduction for Member 4 here.",
@@ -81,7 +81,7 @@ const members = {
         name: "Ray Shang",
         role: "Dry Lab",
 
-        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
+        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
 
         intro:
             "Write a short introduction for Member 5 here.",
@@ -99,7 +99,7 @@ const members = {
         name: "Lucy Wang",
         role: "Team Leader",
 
-        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
+        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
 
         intro:
             "Write a short introduction for Member 6 here.",
@@ -117,7 +117,7 @@ const members = {
         name: "Ian Huang",
         role: "Dry Lab",
 
-        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
+        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
 
         intro:
             "Write a short introduction for Member 7 here.",
@@ -135,7 +135,7 @@ const members = {
         name: "Eugenia Liu",
         role: "Wet Lab",
 
-        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif",
+        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
 
         intro:
             "Write a short introduction for Member 8 here.",
@@ -153,7 +153,7 @@ const members = {
         name: "Nicholas Lu",
         role: "Wet Lab",
 
-        image: "https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/team-photo.avif  ",
+        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif  ",
 
         intro:
             "Write a short introduction for Member 9 here.",

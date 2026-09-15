@@ -1757,7 +1757,7 @@
 
 
     <figure class="stakeholder-map-figure">
-        <img src="/static/assets/images/hp-reference-diagram-flat.png" alt="Hand-drawn stakeholder network linking the team with government, industry, researchers, the public, and wastewater perspectives">
+        <img src="static/assets/images/hp-reference-diagram-flat.png" alt="Hand-drawn stakeholder network linking the team with government, industry, researchers, the public, and wastewater perspectives">
         <figcaption>Each perspective enters the same design conversation and changes what the team tests next.</figcaption>
     </figure>
 
