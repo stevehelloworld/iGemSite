@@ -1111,6 +1111,12 @@ a {
 
 .navbar-brand {
 
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
     color: #ffffff !important;
 
     font-weight: 800;
@@ -1118,6 +1124,16 @@ a {
     font-size: 1.35rem;
 
     letter-spacing: 0.8px;
+
+}
+
+.navbar-brand .site-logo {
+
+    width: 42px;
+
+    height: 42px;
+
+    object-fit: contain;
 
 }
 
