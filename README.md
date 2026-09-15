@@ -18,11 +18,6 @@ instead.
 For up-to-date requirements, resources, help and guidance, visit
 [teams.igem.org/go/deliverables/wiki](https://teams.igem.org/go/deliverables/wiki).
 
-> **Using an AI assistant (e.g. Claude Code)?** Please read
-> [.claude/RESPONSIBLE_AI_USE.md](.claude/RESPONSIBLE_AI_USE.md) first. You remain
-> fully responsible for everything you publish: never fabricate scientific
-> results, data, or citations.
-
 ## Getting started
 
 You should probably only edit the files inside folders `static`, `wiki` and
