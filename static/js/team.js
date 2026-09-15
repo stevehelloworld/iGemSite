@@ -610,13 +610,51 @@ function randomMeteor(){
   START
 ==================================================*/
 
-window.addEventListener("DOMContentLoaded",()=>{
+let meteorTimerStarted = false;
+
+function initTeamPage(){
+
+    if(window.__teamPageInitialized) return;
+
+    window.__teamPageInitialized = true;
 
     createStars();
 
-    setInterval(randomMeteor,7000);
+    if(!meteorTimerStarted){
 
-});
+        setInterval(randomMeteor,7000);
+        meteorTimerStarted = true;
+
+    }
+
+    const firstPlanet =
+        document.querySelector(".sun");
+
+    if(firstPlanet){
+
+        firstPlanet.classList.add("active");
+
+        if(solarSystem){
+            solarSystem.classList.add("has-active");
+        }
+
+        activatePlanet(firstPlanet);
+
+        loadMember("sun");
+
+    }
+
+}
+
+if(document.readyState === "loading"){
+
+    window.addEventListener("DOMContentLoaded", initTeamPage);
+
+}else{
+
+    initTeamPage();
+
+}
 
 document.addEventListener(
 
@@ -753,39 +791,5 @@ document.addEventListener(
         ticking=true;
 
     }
-
-});
-
-
-/*==================================================
-  INITIAL ACTIVE
-==================================================*/
-/*
-document.addEventListener(
-
-"DOMContentLoaded",
-
-()=>{
-
-    const firstPlanet=
-
-        document.querySelector(".sun");
-
-    if(firstPlanet){
-
-        firstPlanet.classList.add(
-
-            "active"
-
-        );
-
-    }
-
-});
-*/
-
-window.addEventListener("DOMContentLoaded", () => {
-
-    hideMember();
 
 });

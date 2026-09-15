@@ -1,4 +1,22 @@
+<script>
+(() => {
+    const head = document.head || document.getElementsByTagName("head")[0];
 
+    if (head && !document.querySelector('link[href*="/static/team.css"]')) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "/static/team.css?v=20260806-team1";
+        head.appendChild(link);
+    }
+
+    if (!document.querySelector('script[src*="/static/js/team.js"]')) {
+        const script = document.createElement("script");
+        script.src = "/static/js/team.js?v=20260806-team1";
+        script.defer = true;
+        document.body.appendChild(script);
+    }
+})();
+</script>
 
 <section class="team-hero">
 
@@ -67,6 +85,7 @@
 		        </div>
 		    </button>
 		</div>
+
 
 	        <!-- Mars -->
 		<div class="orbit mars-orbit">
@@ -137,10 +156,7 @@
 		                alt="Neptune">
 		        </div>
 		    </button>
-		</div>
-
-
-            <!-- Sun -->
+		</div>            <!-- Sun -->
 	   <button class="planet sun" data-member="sun" data-label="Ohanna">
 		    <div class="planet-inner">
 	        <img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/planets/sun.avif">
@@ -198,6 +214,5 @@
     </div>
 
 </section>
-
 
 
