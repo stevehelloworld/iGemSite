@@ -1,795 +1,228 @@
-/*==================================================
-  TEAM DATA
-==================================================*/
+document.addEventListener("DOMContentLoaded", () => {
+  const page = document.querySelector("[data-team-page]");
+  const story = document.querySelector("[data-team-story]");
+  const board = document.querySelector("[data-team-board]");
+  const nucleus = document.querySelector("[data-team-nucleus]");
+  const links = document.querySelector("[data-team-links]");
+  if (!page || !story || !board) return;
 
-const members = {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const queryAt = Number(new URLSearchParams(window.location.search).get("at"));
+  const nodes = [...page.querySelectorAll(".team-node")];
+  const cards = [...page.querySelectorAll(".team-card")];
+  const dots = [...page.querySelectorAll(".team-dot")];
+  const jumps = [...page.querySelectorAll("[data-jump]")];
+  const keys = nodes.map((node) => node.dataset.member);
+  const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
+  const ease = (value) => {
+    const x = clamp(value);
+    return 1 - Math.pow(1 - x, 4);
+  };
 
-    sun: {
+  let current = keys[0];
+  let queued = false;
+  let linkPaths = [];
 
-        name: "Ohanna Liu",
-        role: "Team Leader",
+  page.classList.add("is-ready");
+  if (reduceMotion) page.classList.add("is-static");
 
-        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
+  function layoutNodes() {
+    const width = board.clientWidth;
+    const height = board.clientHeight;
+    const cx = width / 2;
+    const cy = height / 2;
 
-        intro:
-            "Write a short introduction for Member 1 here.",
+    nodes.forEach((node) => {
+      const x = (Number(node.dataset.x) / 100) * width;
+      const y = (Number(node.dataset.y) / 100) * height;
+      node.style.setProperty("--x", `${x}px`);
+      node.style.setProperty("--y", `${y}px`);
+      node.style.setProperty("--from-x", `${cx - x}px`);
+      node.style.setProperty("--from-y", `${cy - y}px`);
+    });
 
-        skills: [
-            "Leadership",
-            "Project Management",
-            "Presentation"
-        ]
+    drawLinks();
+  }
 
-    },
+  function drawLinks() {
+    if (!links || !nucleus) return;
+    const boardBox = board.getBoundingClientRect();
+    const nucleusBox = nucleus.getBoundingClientRect();
+    const nx = ((nucleusBox.left + nucleusBox.width / 2 - boardBox.left) / boardBox.width) * 100;
+    const ny = ((nucleusBox.top + nucleusBox.height / 2 - boardBox.top) / boardBox.height) * 100;
 
-    mercury: {
+    links.innerHTML = nodes
+      .map((node, index) => {
+        const x = Number(node.dataset.x);
+        const y = Number(node.dataset.y);
+        return `<path data-link="${node.dataset.member}" d="M ${nx.toFixed(2)} ${ny.toFixed(2)} Q ${(nx + x) / 2} ${(ny + y) / 2 - 8} ${x} ${y}" pathLength="1" style="--i:${index}" />`;
+      })
+      .join("");
+    linkPaths = [...links.querySelectorAll("path")];
+  }
 
-        name: "Sunny Huang",
-        role: "Wet Lab",
+  function storyProgress() {
+    if (queryAt > 0 && queryAt <= 1) return queryAt;
+    const rect = story.getBoundingClientRect();
+    const travel = Math.max(1, story.offsetHeight - window.innerHeight);
+    return clamp(-rect.top / travel);
+  }
 
-        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
+  function memberProgress(progress) {
+    const assembleStart = 0.06;
+    const assembleEnd = 0.36;
+    const focusStart = 0.4;
+    const focusEnd = 0.94;
+    const assemble = ease((progress - assembleStart) / (assembleEnd - assembleStart));
+    const focusMix = clamp((progress - focusStart) / (focusEnd - focusStart));
+    const focusExact = focusMix * (keys.length - 0.001);
+    const focusIndex = Math.min(keys.length - 1, Math.floor(focusExact));
+    const focusLocal = focusExact - focusIndex;
+    return { assemble, focusIndex, focusLocal, progress };
+  }
 
-        intro:
-            "Write a short introduction for Member 2 here.",
+  function setCurrent(key, { fromUser = false } = {}) {
+    current = key;
+    const index = keys.indexOf(key);
 
-        skills: [
-            "PCR",
-            "Molecular Biology",
-            "Experiment"
-        ]
+    nodes.forEach((node) => {
+      const on = node.dataset.member === key;
+      node.classList.toggle("is-current", on);
+      node.setAttribute("aria-pressed", String(on));
+    });
 
-    },
+    cards.forEach((card) => {
+      const on = card.dataset.card === key;
+      card.classList.toggle("is-active", on);
+      card.setAttribute("aria-hidden", String(!on));
+      if (reduceMotion) card.toggleAttribute("hidden", !on);
+    });
 
-    venus: {
+    dots.forEach((dot) => {
+      const on = dot.dataset.member === key;
+      dot.classList.toggle("is-active", on);
+      dot.setAttribute("aria-selected", String(on));
+      dot.tabIndex = on ? 0 : -1;
+    });
 
-        name: "Chelsea Chang",
-        role: "Dry Lab",
+    linkPaths.forEach((path) => {
+      path.classList.toggle("is-current", path.dataset.link === key);
+    });
 
-        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
+    const node = nodes[index];
+    if (node) page.style.setProperty("--group-tint", `var(--tint-${node.dataset.group})`);
+    page.style.setProperty("--focus-index", String(index));
 
-        intro:
-            "Write a short introduction for Member 3 here.",
+    if (fromUser) {
+      page.classList.add("is-holding");
+      window.setTimeout(() => page.classList.remove("is-holding"), 900);
+    }
+  }
 
-        skills: [
-            "Cloning",
-            "DNA",
-            "Lab"
-        ]
+  function scrollToMember(key) {
+    const index = Math.max(0, keys.indexOf(key));
+    const focusStart = 0.44;
+    const focusEnd = 0.92;
+    const t = focusStart + ((index + 0.45) / keys.length) * (focusEnd - focusStart);
+    const top = story.getBoundingClientRect().top + window.scrollY + t * (story.offsetHeight - window.innerHeight);
+    window.scrollTo({ top, behavior: reduceMotion ? "auto" : "smooth" });
+    setCurrent(key, { fromUser: true });
+  }
 
-    },
+  function update() {
+    const progress = reduceMotion ? 1 : storyProgress();
+    const { assemble, focusIndex, focusLocal } = memberProgress(progress);
+    const heroCompact = ease(progress / 0.12);
+    const spotlightIn = ease((progress - 0.3) / 0.1);
+    const stripIn = ease((progress - 0.28) / 0.1);
 
-    earth: {
+    page.style.setProperty("--story-progress", progress.toFixed(4));
+    page.style.setProperty("--hero-compact", heroCompact.toFixed(4));
+    page.style.setProperty("--spotlight-in", spotlightIn.toFixed(4));
+    page.style.setProperty("--strip-in", stripIn.toFixed(4));
+    page.style.setProperty("--assemble", assemble.toFixed(4));
+    page.style.setProperty("--focus-local", focusLocal.toFixed(4));
+    page.style.setProperty("--nucleus-scale", (1.02 + progress * 0.05).toFixed(4));
+    page.classList.toggle("is-assembled", reduceMotion || assemble > 0.96);
 
-        name: "Francis Lin",
-        role: "Dry Lab",
+    nodes.forEach((node, index) => {
+      const arrive = reduceMotion ? 1 : clamp(assemble * nodes.length - index * 0.72);
+      const arrived = ease(arrive);
+      node.style.setProperty("--arrive", arrived.toFixed(4));
+      node.classList.toggle("is-in", arrived > 0.72);
+    });
 
-        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
+    linkPaths.forEach((path, index) => {
+      const arrive = reduceMotion ? 1 : clamp(assemble * nodes.length - index * 0.72);
+      path.style.setProperty("--arrive", ease(arrive).toFixed(4));
+    });
 
-        intro:
-            "Write a short introduction for Member 4 here.",
-
-        skills: [
-            "Python",
-            "Modeling",
-            "Machine Learning"
-        ]
-
-    },
-
-    mars: {
-
-        name: "Ray Shang",
-        role: "Dry Lab",
-
-        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
-
-        intro:
-            "Write a short introduction for Member 5 here.",
-
-        skills: [
-            "Python",
-            "Simulation",
-            "Data Analysis"
-        ]
-
-    },
-
-    jupiter: {
-
-        name: "Lucy Wang",
-        role: "Team Leader",
-
-        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
-
-        intro:
-            "Write a short introduction for Member 6 here.",
-
-        skills: [
-            "Interview",
-            "Communication",
-            "Research"
-        ]
-
-    },
-
-    saturn: {
-
-        name: "Ian Huang",
-        role: "Dry Lab",
-
-        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
-
-        intro:
-            "Write a short introduction for Member 7 here.",
-
-        skills: [
-            "Survey",
-            "Presentation",
-            "Education"
-        ]
-
-    },
-
-    uranus: {
-
-        name: "Eugenia Liu",
-        role: "Wet Lab",
-
-        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif",
-
-        intro:
-            "Write a short introduction for Member 8 here.",
-
-        skills: [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ]
-
-    },
-
-    neptune: {
-
-        name: "Nicholas Lu",
-        role: "Wet Lab",
-
-        image: "https://static.igem.wiki/teams/6423/wikistatic/assests/images/members/team-photo.avif  ",
-
-        intro:
-            "Write a short introduction for Member 9 here.",
-
-        skills: [
-            "UI Design",
-            "Animation",
-            "Illustration"
-        ]
-
+    if (!page.classList.contains("is-holding") && assemble > 0.92) {
+      const next = keys[focusIndex];
+      if (next && next !== current) setCurrent(next);
     }
 
-};
+    queued = false;
+  }
 
+  function requestUpdate() {
+    if (queued) return;
+    queued = true;
+    window.requestAnimationFrame(update);
+  }
 
-/*==================================================
-  DOM
-==================================================*/
+  nodes.forEach((node) => {
+    node.addEventListener("click", () => scrollToMember(node.dataset.member));
+  });
 
-const planets =
-    document.querySelectorAll(".planet");
+  dots.forEach((dot, index) => {
+    dot.setAttribute("role", "tab");
+    dot.addEventListener("click", () => scrollToMember(dot.dataset.member));
+    dot.addEventListener("keydown", (event) => {
+      let next = null;
+      if (event.key === "ArrowRight") next = (index + 1) % dots.length;
+      if (event.key === "ArrowLeft") next = (index - 1 + dots.length) % dots.length;
+      if (event.key === "Home") next = 0;
+      if (event.key === "End") next = dots.length - 1;
+      if (next === null) return;
+      event.preventDefault();
+      scrollToMember(keys[next]);
+      dots[next].focus();
+    });
+  });
 
-/*=========================================
-ELLIPSE ORBITS
-=========================================*/
+  jumps.forEach((button) => {
+    button.addEventListener("click", () => scrollToMember(button.dataset.jump));
+  });
 
-const orbitData = [
-	
-    {
-	selector: ".mercury",
-	orbit: ".mercury-orbit",
-	speed:10,
-	offset: 22
-    },
-
-    {
-        selector: ".venus",
-        orbit: ".venus-orbit",
-        speed:16,
-        offset: 26
-    },
-
-    {
-        selector: ".earth",
-        orbit: ".earth-orbit",
-        speed:24,
-	offset: 26
-    },
-
-    {
-        selector: ".mars",
-        orbit: ".mars-orbit",
-        speed:32,
-        offset: 26
-    },
-
-    {
-        selector: ".jupiter",
-        orbit: ".jupiter-orbit",
-        speed:55,
-        offset: 44
-    },
-
-    {
-        selector: ".saturn",
-        orbit: ".saturn-orbit",
-        speed:80,
-        offset: 44
-    },
-
-    {
-        selector: ".uranus",
-        orbit: ".uranus-orbit",
-        speed:110,
-        offset: 44
-    },
-
-    {
-        selector: ".neptune",
-        orbit: ".neptune-orbit",
-        speed:150,
-        offset: 36
-    }
-];
-
-let lastTime = performance.now();
-
-const angles = new Map();
-
-orbitData.forEach((planet,index)=>{
-
-    angles.set(
-        planet.selector,
-        index*Math.PI/4
+  const rosterItems = [...page.querySelectorAll(".team-roster-grid button, .team-roster-copy, .team-advisors")];
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.28 }
     );
-
-});
-
-function animateOrbits(time){
-
-    const delta = (time - lastTime) / 1000;
-    lastTime = time;
-
-    orbitData.forEach(item => {
-
-        const planet = document.querySelector(item.selector);
-        const orbit = document.querySelector(item.orbit);
-
-        if (!planet || !orbit) return;
-
-        let angle = angles.get(item.selector);
-
-        angle += delta * (2 * Math.PI / item.speed);
-
-        angles.set(item.selector, angle);
-
-        const a = orbit.clientWidth / 2;
-        const b = orbit.clientHeight / 2;
-
-
-        const offset = item.offset;
-
-        const rx = a - planet.offsetWidth / 2 + offset;
-        const ry = b - planet.offsetHeight / 2 + offset;
-
-        const x = rx * Math.cos(angle);
-        const y = ry * Math.sin(angle);
-
-        planet.style.left = `${a + x}px`;
-        planet.style.top = `${b + y}px`;
-	planet.style.zIndex = 300;
-
+    rosterItems.forEach((item, index) => {
+      item.style.setProperty("--i", String(index));
+      observer.observe(item);
     });
-
-    requestAnimationFrame(animateOrbits);
-
-}
-
-requestAnimationFrame(
-    animateOrbits
-);
-
-const solarSystem =
-    document.querySelector(".solar-system");
-
-const memberImage =
-    document.getElementById("member-image");
-
-const memberName =
-    document.getElementById("member-name");
-
-const memberRole =
-    document.getElementById("member-role");
-
-const memberIntro =
-    document.getElementById("member-intro");
-
-const memberSkills =
-    document.getElementById("member-skills");
-
-const memberSection =
-    document.querySelector(".member-section");
-
-/*==================================================
-  INITIALIZATION
-==================================================*/
-/*
-window.addEventListener("DOMContentLoaded", () => {
-
-    loadMember("sun");
-
-});
-*/
-
-/*==================================================
-  LOAD MEMBER
-==================================================*/
-
-function loadMember(memberKey) {
-
-    memberSection.classList.add("show");
-
-    const member = members[memberKey];
-
-    if (!member) return;
-
-    /* Fade Out */
-
-    memberImage.style.opacity = "0";
-    memberName.style.opacity = "0";
-    memberRole.style.opacity = "0";
-    memberIntro.style.opacity = "0";
-    memberSkills.style.opacity = "0";
-
-    setTimeout(() => {
-
-        /* Update Content */
-
-        memberImage.src = member.image;
-
-        memberImage.alt = member.name;
-
-        memberName.textContent = member.name;
-
-        memberRole.textContent = member.role;
-
-        memberIntro.textContent = member.intro;
-
-        /* Skills */
-
-        memberSkills.innerHTML = "";
-
-        member.skills.forEach((skill, index) => {
-
-            const tag = document.createElement("span");
-
-            tag.textContent = skill;
-
-            tag.style.opacity = "0";
-
-            tag.style.transform = "translateY(12px)";
-
-            memberSkills.appendChild(tag);
-
-            setTimeout(() => {
-
-                tag.style.transition =
-                    "all .4s ease";
-
-                tag.style.opacity = "1";
-
-                tag.style.transform =
-                    "translateY(0)";
-
-            }, index * 100);
-
-        });
-
-        /* Fade In */
-
-        memberImage.style.opacity = "1";
-
-        memberName.style.opacity = "1";
-
-        memberRole.style.opacity = "1";
-
-        memberIntro.style.opacity = "1";
-
-        memberSkills.style.opacity = "1";
-
-    }, 250);
-
-}
-
-
-function hideMember(){
-
-    memberSection.classList.remove("show");
-
-    setTimeout(()=>{
-
-        memberImage.src = "";
-        memberImage.alt = "";
-
-        memberName.textContent = "";
-        memberRole.textContent = "";
-        memberIntro.textContent = "";
-        memberSkills.innerHTML = "";
-
-    },450);
-
-}
-/*==================================================
-  PLANET CLICK
-==================================================*/
-
-planets.forEach((planet) => {
-
-    planet.addEventListener("click", (e) => {
-	/*
-	if (planet.classList.contains("sun")) {
-   	    const rect = planet.getBoundingClientRect();
-	    const dx = e.clientX - (rect.left + rect.width / );
-	    const dy = e.clientY - (rect.top + rect.height / 2);
-	    const radius = 15;
-	    if (Math.hypot(dx, dy) > radius) {
-	        e.stopPropagation();
-	        planet.style.pointerEvents = "none";
-    	        const target = document.elementFromPoint(
-                    e.clientX,
-                    e.clientY
-                );
-                planet.style.pointerEvents = "auto";
-                if (target && target !== planet) {
-                    target.click();
-                }   
-                return;
-            }
-	}
-	*/
-
-
-	if (planet.classList.contains("active")) {
-	    planet.classList.remove("active");
-	    planet.classList.remove("planet-focus");
-	    currentPlanet = null;
-	    solarSystem.classList.remove("has-active");
-	    hideMember();
-	    return;
-	}
-
-	const key = planet.dataset.member;
-
-        planets.forEach((p) => {
-	        p.classList.remove("active")
-	        p.classList.remove("planet-focus");
-        });
-
-        planet.classList.add("active");
-
-        solarSystem.classList.add("has-active");
-
-        activatePlanet(planet);
-
-        loadMember(key);
-  
-    });
-
-});
-
-/*==================================================
-  ACTIVE PLANET ANIMATION
-==================================================*/
-
-let currentPlanet = null;
-
-function activatePlanet(planet){
-
-    /* Restore previous */
-
-    if(currentPlanet){
-
-        currentPlanet.classList.remove("planet-focus");
-
-    }
-
-    currentPlanet = planet;
-
-    planet.classList.add("planet-focus");
-
-}
-
-
-
-/*==================================================
-  DYNAMIC STAR FIELD
-==================================================*/
-
-function createStars(number = 220){
-
-    const container = document.querySelector(".stars");
-
-    if(!container) return;
-
-    container.innerHTML = "";
-
-    for(let i = 0; i < number; i++){
-
-        const star = document.createElement("span");
-
-        star.className = "star";
-
-        const size = Math.random() * 3 + 1;
-
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-
-        star.style.opacity = Math.random() * 0.8 + 0.2;
-
-        star.style.animationDuration =
-            `${Math.random() * 4 + 3}s`;
-
-        star.style.animationDelay =
-            `${Math.random() * 5}s`;
-
-        container.appendChild(star);
-
-    }
-
-}
-
-
-/*==================================================
-  STAR PARALLAX
-==================================================*/
-
-function starParallax(event){
-
-    const stars = document.querySelector(".stars");
-
-    if(!stars) return;
-
-    const x =
-        (event.clientX / window.innerWidth - 0.5) * 18;
-
-    const y =
-        (event.clientY / window.innerHeight - 0.5) * 18;
-
-    stars.style.transform =
-        `translate(${x}px, ${y}px)`;
-
-}
-
-
-/*==================================================
-  SHOOTING STAR
-==================================================*/
-
-function randomMeteor(){
-
-    const hero =
-        document.querySelector(".space-background");
-
-    if(!hero) return;
-
-    const meteor =
-        document.createElement("div");
-
-    meteor.className = "shooting-star";
-
-    meteor.style.top =
-        Math.random() * 50 + "%";
-
-    meteor.style.left = "-250px";
-
-    meteor.style.transform =
-        `rotate(${-25 + Math.random() * 12}deg)`;
-
-    hero.appendChild(meteor);
-
-    setTimeout(()=>{
-
-        meteor.remove();
-
-    },2500);
-
-}
-
-
-/*==================================================
-  START
-==================================================*/
-
-let meteorTimerStarted = false;
-
-function initTeamPage(){
-
-    if(window.__teamPageInitialized) return;
-
-    window.__teamPageInitialized = true;
-
-    createStars();
-
-    if(!meteorTimerStarted){
-
-        setInterval(randomMeteor,7000);
-        meteorTimerStarted = true;
-
-    }
-
-    const firstPlanet =
-        document.querySelector(".sun");
-
-    if(firstPlanet){
-
-        firstPlanet.classList.add("active");
-
-        if(solarSystem){
-            solarSystem.classList.add("has-active");
-        }
-
-        activatePlanet(firstPlanet);
-
-        loadMember("sun");
-
-    }
-
-}
-
-if(document.readyState === "loading"){
-
-    window.addEventListener("DOMContentLoaded", initTeamPage);
-
-}else{
-
-    initTeamPage();
-
-}
-
-document.addEventListener(
-
-    "mousemove",
-
-    starParallax
-
-);
-
-/*==================================================
-  MOUSE PARALLAX
-==================================================*/
-
-const hero =
-    document.querySelector(".team-hero");
-
-const title =
-    document.querySelector(".hero-title");
-
-/* 保留標題的視差，不讓太陽系移動 */
-
-hero.addEventListener("mousemove",(e)=>{
-
-    const x =
-        (e.clientX / window.innerWidth - 0.5);
-
-    const y =
-        (e.clientY / window.innerHeight - 0.5);
-
-    title.style.translate =
-        `translate(${x * 20}px, ${y * 15}px)`;
-
-});
-
-
-hero.addEventListener("mouseleave",()=>{
-
-    title.style.translate = "";
-
-});
-
-
-/*==================================================
-  SCROLL REVEAL
-==================================================*/
-
-const revealItems =
-    document.querySelectorAll(".member-card");
-
-const observer =
-    new IntersectionObserver(
-
-(entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add(
-
-                "member-show"
-
-            );
-
-        }
-
-    });
-
-},
-
-{
-
-    threshold:.25
-
-}
-
-);
-
-revealItems.forEach(item=>{
-
-    item.classList.add("member-hidden");
-
-    observer.observe(item);
-
-});
-
-
-/*==================================================
-  IMAGE PRELOAD
-==================================================*/
-
-Object.values(members).forEach(member=>{
-
-    const img=new Image();
-
-    img.src=member.image;
-
-});
-
-
-/*==================================================
-  RESIZE
-==================================================*/
-
-window.addEventListener("resize",()=>{
-
-    createStars();
-
-});
-
-
-/*==================================================
-  PERFORMANCE
-==================================================*/
-
-let ticking=false;
-
-document.addEventListener(
-
-"mousemove",
-
-(e)=>{
-
-    if(!ticking){
-
-        window.requestAnimationFrame(()=>{
-
-            starParallax(e);
-
-            ticking=false;
-
-        });
-
-        ticking=true;
-
-    }
-
+  } else {
+    rosterItems.forEach((item) => item.classList.add("is-in"));
+  }
+
+  layoutNodes();
+  setCurrent(keys[0]);
+  update();
+
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", () => {
+    layoutNodes();
+    requestUpdate();
+  });
 });

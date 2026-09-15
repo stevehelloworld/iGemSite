@@ -556,105 +556,9 @@
     color: #fff;
 }
 
-/* Team keeps its solar-system interaction, re-framed as a science notebook. */
-.page-team .team-hero,
-.page-team .space-background {
-    background: var(--vis-blue-paper);
-}
-
-.page-team .team-hero {
-    min-height: calc(100svh - var(--nav-offset));
-}
-
-.page-team .space-background {
-    min-height: calc(100svh - var(--nav-offset));
-}
-
-.page-team .nebula {
-    display: none;
-}
-
-.page-team .space-background::before,
-.page-team .space-background::after {
-    display: none;
-}
-
-.page-team .stars {
-    opacity: .14;
-    filter: sepia(1) hue-rotate(145deg) saturate(1.6);
-}
-
-.page-team .hero-title h1,
-.page-team .hero-title p {
-    color: var(--vis-ink);
-    font-family: var(--vis-display);
-    text-transform: none;
-}
-
-.page-team .hero-title {
-    left: 50%;
-    width: max-content;
-    max-width: calc(100% - 32px);
-    padding: 12px 22px;
-    background: var(--vis-yellow);
-    clip-path: polygon(1% 5%, 98% 0, 100% 92%, 3% 100%);
-    transform: translateX(-50%) rotate(-.4deg);
-}
-
-.page-team .hero-title h1 {
-    font-size: clamp(3rem, 6vw, 5.6rem);
-    letter-spacing: -.025em;
-    transform: rotate(-.5deg);
-}
-
-.page-team .orbit {
-    border-color: rgba(40, 87, 114, .24);
-    box-shadow: none;
-}
-
-.page-team .member-section {
+.page-team {
+    overflow-x: clip;
     background: #edf6f7;
-}
-
-.page-team .member-card {
-    border: 3px solid #8fc7cc;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 7px 8px 0 rgba(40, 87, 114, .12);
-    backdrop-filter: none;
-}
-
-.page-team .member-card::before,
-.page-team .member-card::after,
-.page-team .member-photo::before {
-    display: none;
-}
-
-.page-team .member-photo img {
-    border: 3px solid #bddce1;
-    border-radius: 8px;
-    box-shadow: none;
-}
-
-.page-team #member-name,
-.page-team #member-role,
-.page-team #member-intro {
-    color: var(--vis-ink);
-    font-family: var(--vis-display);
-}
-
-.page-team #member-intro {
-    color: var(--vis-copy);
-    font-family: var(--vis-body);
-}
-
-.page-team .member-skills span {
-    border: 0;
-    border-radius: 0;
-    background: var(--vis-yellow);
-    color: var(--vis-ink);
-    font-family: var(--vis-display);
-    clip-path: polygon(1% 7%, 98% 0, 100% 90%, 4% 100%);
 }
 
 /* Shared footer closes every chapter with the same ink color. */
@@ -827,14 +731,9 @@
         grid-template-columns: 1fr;
     }
 
-    .page-team .member-card {
+    .page-team .team-roster,
+    .page-team .team-advisors {
         width: calc(100% - 24px);
-        padding: 24px;
-    }
-
-    .page-team .hero-title {
-        top: 28px;
-        padding: 9px 15px;
     }
 }
 
