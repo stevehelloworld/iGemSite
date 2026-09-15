@@ -1,7 +1,7 @@
 /* Shared navigation for the illustrated textbook pages. */
 .textbook-nav-page {
     --nav-offset: 68px;
-    --textbook-display: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif;
+    --textbook-display: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
     padding-top: 0;
 }
 
@@ -76,7 +76,10 @@
 }
 
 .textbook-nav-page .navbar .container {
-    width: min(100% - 32px, 1320px);
+    width: calc(100% - 32px);
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .textbook-nav-page .navbar-brand {
@@ -104,7 +107,21 @@
 }
 
 .textbook-nav-page .navbar-brand span {
-    display: inline-block;
+    display: none;
+}
+
+.textbook-nav-page .navbar-brand {
+    padding: 0;
+    background: transparent !important;
+    transform: none;
+}
+
+.textbook-nav-page .navbar-brand img,
+.textbook-nav-page .navbar-brand .site-logo {
+    width: 88px;
+    height: 88px;
+    margin: 0;
+    background: transparent !important;
 }
 
 .home-page .navbar-brand img {
@@ -114,7 +131,7 @@
 }
 
 .textbook-nav-page .navbar-brand::before {
-    content: "";
+    content: none;
     position: absolute;
     inset: 3px 2px;
     z-index: -1;
