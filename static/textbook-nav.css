@@ -118,6 +118,7 @@
     background: transparent !important;
     transform: none;
     overflow: visible;
+    z-index: 2001;
 }
 
 .textbook-nav-page .navbar-brand img,
