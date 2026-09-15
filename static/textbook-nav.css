@@ -111,17 +111,26 @@
 }
 
 .textbook-nav-page .navbar-brand {
+    position: relative;
+    width: 88px;
+    height: 52px;
     padding: 0;
     background: transparent !important;
     transform: none;
+    overflow: visible;
 }
 
 .textbook-nav-page .navbar-brand img,
 .textbook-nav-page .navbar-brand .site-logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2000;
     width: 88px;
     height: 88px;
     margin: 0;
     background: transparent !important;
+    transform: translateY(-50%);
 }
 
 .home-page .navbar-brand img {
