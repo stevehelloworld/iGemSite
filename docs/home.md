@@ -2,117 +2,53 @@
 
 <div class="grid-row">
 
-<section class="homepage-card problem-card" aria-labelledby="problem-title">
-    <div class="problem-story" data-intro-fade="true">
-        <div class="problem-stage">
-        <article class="problem-scene problem-title-scene" data-problem-scene>
-            <p class="problem-eyebrow">THE WATER WE LIVE WITH</p>
-            <h2 id="problem-title">THE PROBLEM</h2>
-            <p>Heavy-metal pollution is not one isolated issue. Scroll through the three connected pressures facing water, ecosystems, and communities.</p>
-        </article>
+<section class="homepage-card problem-card story-v2-card" aria-labelledby="problem-title">
+    <div class="water-story-v2" data-water-story>
+        <div class="water-story-stage-v2">
+            <header class="story-heading-v2">
+                <p class="story-chapter-name">THE WATER WE LIVE WITH</p>
+                <h2 id="problem-title">THE PROBLEM</h2>
+                <p>Follow one drop of industrial wastewater as heavy metals move through a river, food, and the people who depend on that water.</p>
+            </header>
 
-        <article class="problem-scene lead-scene" data-problem-scene>
-            <div class="problem-scene-visual" aria-hidden="true">
-                <div class="problem-pie">
-                    <span class="pie-slice slice-one"></span>
-                    <span class="pie-slice slice-two"></span>
-                    <span class="pie-slice slice-three"></span>
-                    <div class="pie-core"><img src="/static/assets/images/problem/lead-mascot.png" alt=""></div>
-                </div>
-                <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span>
-            </div>
-            <div class="problem-scene-copy">
-                <span class="problem-step">01 / 03</span>
-                <h3>Lead Pollution</h3>
-                <p>Lead exposure causes serious health risks and accumulates in living organisms.</p>
-                <div class="problem-facts"><span>Industrial discharge</span><span>Bioaccumulation</span><span>Health risk</span></div>
-            </div>
-        </article>
+            <figure class="pollution-panorama-v2">
+                <img src="/static/assets/images/problem/pollution-path-panorama-optimized.jpg" alt="A colored-pencil panorama showing heavy metals moving from industrial wastewater through a river and rice fields to a nearby community">
+                <figcaption class="metal-legend-v2"><span class="metal-pb"></span> Lead (Pb) <span class="metal-cd"></span> Cadmium (Cd)</figcaption>
+            </figure>
 
-        <article class="problem-scene cadmium-scene" data-problem-scene>
-            <div class="problem-scene-visual" aria-hidden="true">
-                <div class="problem-pie">
-                    <span class="pie-slice slice-one"></span>
-                    <span class="pie-slice slice-two"></span>
-                    <span class="pie-slice slice-three"></span>
-                    <div class="pie-core"><img src="/static/assets/images/problem/cadmium-mascot.png" alt=""></div>
-                </div>
-                <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span>
-            </div>
-            <div class="problem-scene-copy">
-                <span class="problem-step">02 / 03</span>
-                <h3>Cadmium Threat</h3>
-                <p>Cadmium is toxic even at low concentrations and persists in the environment.</p>
-                <div class="problem-facts"><span>Persistent metal</span><span>Soil transfer</span><span>Low-dose toxicity</span></div>
-            </div>
-        </article>
-
-        <article class="problem-scene water-scene" data-problem-scene>
-            <div class="problem-scene-visual" aria-hidden="true">
-                <div class="problem-pie">
-                    <span class="pie-slice slice-one"></span>
-                    <span class="pie-slice slice-two"></span>
-                    <span class="pie-slice slice-three"></span>
-                    <div class="pie-core"><img src="/static/assets/images/problem/wastewater-mascot.png" alt=""></div>
-                </div>
-                <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span>
-            </div>
-            <div class="problem-scene-copy">
-                <span class="problem-step">03 / 03</span>
-                <h3>Wastewater Challenge</h3>
-                <p>Industrial wastewater releases heavy metals that are difficult to remove effectively.</p>
-                <div class="problem-facts"><span>Mixed effluent</span><span>Complex treatment</span><span>Cleaner water needed</span></div>
-            </div>
-        </article>
+            <ol class="story-notes-v2" aria-label="Heavy-metal pollution pathway">
+                <li class="is-active" data-water-step="0"><span>At the pipe</span><strong>Mixed industrial effluent enters the river.</strong></li>
+                <li data-water-step="1"><span>In the ecosystem</span><strong>Persistent metals collect in water and living organisms.</strong></li>
+                <li data-water-step="2"><span>Through irrigation</span><strong>Contaminated water carries metals into soil and crops.</strong></li>
+                <li data-water-step="3"><span>At home</span><strong>Communities meet the same pollution through water and food.</strong></li>
+            </ol>
         </div>
     </div>
 
-    <section id="taiwan-locations" class="taiwan-story" data-intro-fade="true" aria-labelledby="taiwan-title">
-        <div class="taiwan-stage">
-            <article class="taiwan-scene taiwan-title-scene" data-taiwan-scene>
-                <span class="taiwan-eyebrow">FROM NORTH TO SOUTH</span>
+    <section id="taiwan-locations" class="map-journey-v2" data-map-story aria-labelledby="taiwan-title">
+        <div class="map-stage-v2">
+            <header class="story-heading-v2 map-heading-v2">
+                <p class="story-chapter-name">FROM NORTH TO SOUTH</p>
                 <h2 id="taiwan-title">WHERE WATER IS AT RISK</h2>
-                <p>Trace the regions where industrial activity and heavy-metal pollution put water, ecosystems, and communities under pressure.</p>
-            </article>
+                <p>One map stays in view while each location reveals a different route from industry to water.</p>
+            </header>
 
-            <article class="taiwan-scene taoyuan-location" data-taiwan-scene>
-                <div class="taiwan-map-frame" aria-hidden="true">
-                    <img src="/static/assets/images/taiwan-scenes/taiwan-base-map.png" alt="">
-                    <span class="taiwan-pulse"></span>
-                </div>
-                <div class="taiwan-location-copy">
-                    <span class="taiwan-kicker">LOCATION 01 / 03</span>
-                    <h3>Taoyuan</h3>
-                    <p>Industrial park effluents contribute to Pb and Cd contamination.</p>
-                    <span class="location-rule"></span>
-                </div>
-            </article>
+            <div class="map-composition-v2">
+                <figure class="persistent-map-v2">
+                    <img src="/static/assets/images/taiwan-scenes/taiwan-base-map-flat.png" alt="Hand-drawn physical map of Taiwan">
+                    <button class="map-pin-v2 pin-taoyuan is-active" type="button" data-map-pin="0" aria-label="Show Taoyuan"><span></span></button>
+                    <button class="map-pin-v2 pin-taichung" type="button" data-map-pin="1" aria-label="Show Taichung"><span></span></button>
+                    <button class="map-pin-v2 pin-kaohsiung" type="button" data-map-pin="2" aria-label="Show Kaohsiung"><span></span></button>
+                    <svg class="map-route-v2" viewBox="0 0 100 150" aria-hidden="true"><path d="M59 22 C52 39 50 50 46 62 S38 94 30 111"/></svg>
+                </figure>
 
-            <article class="taiwan-scene taichung-location" data-taiwan-scene>
-                <div class="taiwan-map-frame" aria-hidden="true">
-                    <img src="/static/assets/images/taiwan-scenes/taiwan-base-map.png" alt="">
-                    <span class="taiwan-pulse"></span>
+                <div class="location-window-v2">
+                    <img src="/static/assets/images/taiwan-scenes/taiwan-city-vignettes-optimized.jpg" alt="Three colored-pencil scenes showing industrial river discharge, agricultural irrigation, and harbor pollution in Taiwan">
+                    <div class="location-copy-v2 is-active" data-map-step="0"><span>Taoyuan</span><h3>Industrial parks meet the river</h3><p>Electronics and metal-processing effluent can introduce Pb and Cd into northern waterways.</p></div>
+                    <div class="location-copy-v2" data-map-step="1"><span>Taichung</span><h3>River pollution reaches farmland</h3><p>Irrigation creates a direct path from contaminated water to soil, crops, and food safety.</p></div>
+                    <div class="location-copy-v2" data-map-step="2"><span>Kaohsiung</span><h3>Industry meets the harbor</h3><p>Industrial discharge and busy port activity increase the metal load faced by coastal ecosystems.</p></div>
                 </div>
-                <div class="taiwan-location-copy">
-                    <span class="taiwan-kicker">LOCATION 02 / 03</span>
-                    <h3>Taichung</h3>
-                    <p>Heavy metal pollution in rivers affects agricultural safety.</p>
-                    <span class="location-rule"></span>
-                </div>
-            </article>
-
-            <article class="taiwan-scene kaohsiung-location" data-taiwan-scene>
-                <div class="taiwan-map-frame" aria-hidden="true">
-                    <img src="/static/assets/images/taiwan-scenes/taiwan-base-map.png" alt="">
-                    <span class="taiwan-pulse"></span>
-                </div>
-                <div class="taiwan-location-copy">
-                    <span class="taiwan-kicker">LOCATION 03 / 03</span>
-                    <h3>Kaohsiung</h3>
-                    <p>Industrial wastewater and harbor activities increase metal load.</p>
-                    <span class="location-rule"></span>
-                </div>
-            </article>
+            </div>
         </div>
     </section>
 </section>
@@ -146,7 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const storyRect = storyElement.getBoundingClientRect();
         const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
-        const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
+        const entryLead = window.innerHeight * 0.9;
+        const storyProgress = Math.min(1, Math.max(0, (entryLead - storyRect.top) / (storyTravel + entryLead)));
         const sceneSpan = 1 / sceneElements.length;
         const introWindow = 0.14;
         const exitStart = 0.72;
@@ -189,7 +126,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const storyRect = solutionStory.getBoundingClientRect();
         const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
-        const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
+        const entryLead = window.innerHeight * 0.9;
+        const storyProgress = Math.min(1, Math.max(0, (entryLead - storyRect.top) / (storyTravel + entryLead)));
         const sceneSpan = 1 / solutionScenes.length;
 
         function ease(value) {
@@ -239,7 +177,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const storyRect = highlightStory.getBoundingClientRect();
         const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
-        const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
+        const entryLead = window.innerHeight * 0.9;
+        const storyProgress = Math.min(1, Math.max(0, (entryLead - storyRect.top) / (storyTravel + entryLead)));
 
         function ease(value) {
             const clamped = Math.min(1, Math.max(0, value));
@@ -290,7 +229,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const storyRect = hpStory.getBoundingClientRect();
         const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
-        const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
+        const entryLead = window.innerHeight * 0.9;
+        const storyProgress = Math.min(1, Math.max(0, (entryLead - storyRect.top) / (storyTravel + entryLead)));
 
         function ease(value) {
             const clamped = Math.min(1, Math.max(0, value));
@@ -353,7 +293,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const storyRect = engineeringStory.getBoundingClientRect();
         const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
-        const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
+        const entryLead = window.innerHeight * 0.9;
+        const storyProgress = Math.min(1, Math.max(0, (entryLead - storyRect.top) / (storyTravel + entryLead)));
 
         function ease(value) {
             const clamped = Math.min(1, Math.max(0, value));
@@ -416,7 +357,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const storyRect = teamStory.getBoundingClientRect();
         const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
-        const storyProgress = Math.min(1, Math.max(0, -storyRect.top / storyTravel));
+        const entryLead = window.innerHeight * 0.9;
+        const storyProgress = Math.min(1, Math.max(0, (entryLead - storyRect.top) / (storyTravel + entryLead)));
 
         function ease(value) {
             const clamped = Math.min(1, Math.max(0, value));
@@ -494,39 +436,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<div class="homepage-card solution-card" aria-labelledby="solution-title">
-    <div class="solution-gradient-bridge" aria-hidden="true"></div>
-    <div class="solution-story" data-intro-fade="true">
-        <div class="solution-stage">
-            <article class="solution-scene solution-title-scene" data-solution-scene>
-                <span class="solution-eyebrow">FROM DETECTION TO CLEAN WATER</span>
+<div class="homepage-card solution-card story-v2-card" aria-labelledby="solution-title">
+    <div class="treatment-story-v2" data-treatment-story>
+        <div class="treatment-stage-v2">
+            <header class="story-heading-v2 treatment-heading-v2">
+                <p class="story-chapter-name">FROM DETECTION TO RECOVERY</p>
                 <h2 id="solution-title">OUR SOLUTION</h2>
-            </article>
+                <p>Instead of five disconnected cards, follow the same water through one complete treatment channel.</p>
+            </header>
 
-            <article class="solution-scene solution-step-scene detection-solution" data-solution-scene>
-                <div class="solution-icon-wrap"><img src="/static/assets/images/solution/detection.png" alt=""></div>
-                <div class="solution-copy"><span class="solution-step">01 / 05</span><h3>Detection</h3><p>Identify Pb²⁺ and Cd²⁺ contamination in wastewater.</p></div>
-            </article>
+            <figure class="treatment-panorama-v2">
+                <img src="/static/assets/images/solution/bioremediation-process-panorama-optimized.jpg" alt="A colored-pencil treatment channel showing polluted water, engineered bacteria binding metals, membrane separation, metal recovery, and clean water">
+            </figure>
 
-            <article class="solution-scene solution-step-scene capture-solution" data-solution-scene>
-                <div class="solution-icon-wrap"><img src="/static/assets/images/solution/capture.png" alt=""></div>
-                <div class="solution-copy"><span class="solution-step">02 / 05</span><h3>Capture</h3><p>Engineered proteins selectively bind heavy metal ions.</p></div>
-            </article>
-
-            <article class="solution-scene solution-step-scene sequestration-solution" data-solution-scene>
-                <div class="solution-icon-wrap"><img src="/static/assets/images/solution/sequestration.png" alt=""></div>
-                <div class="solution-copy"><span class="solution-step">03 / 05</span><h3>Sequestration</h3><p>Bound metals are safely retained within biological systems.</p></div>
-            </article>
-
-            <article class="solution-scene solution-step-scene removal-solution" data-solution-scene>
-                <div class="solution-icon-wrap"><img src="/static/assets/images/solution/removal.png" alt=""></div>
-                <div class="solution-copy"><span class="solution-step">04 / 05</span><h3>Removal</h3><p>Heavy metals are removed from wastewater streams.</p></div>
-            </article>
-
-            <article class="solution-scene solution-step-scene clean-water-solution" data-solution-scene>
-                <div class="solution-icon-wrap"><img src="/static/assets/images/solution/clean-water.png" alt=""></div>
-                <div class="solution-copy"><span class="solution-step">05 / 05</span><h3>Clean Water</h3><p>Produce safer water for environmental discharge.</p></div>
-            </article>
+            <ol class="treatment-steps-v2" aria-label="Biological heavy-metal treatment steps">
+                <li class="is-active" data-treatment-step="0"><span>1</span><strong>Detect</strong><small>Identify Pb²⁺ and Cd²⁺ in the incoming water.</small></li>
+                <li data-treatment-step="1"><span>2</span><strong>Capture</strong><small>Metallothionein domains hold the target ions.</small></li>
+                <li data-treatment-step="2"><span>3</span><strong>Separate</strong><small>A membrane keeps engineered bacteria inside the system.</small></li>
+                <li data-treatment-step="3"><span>4</span><strong>Recover</strong><small>Bound metals are collected instead of becoming sludge.</small></li>
+                <li data-treatment-step="4"><span>5</span><strong>Release</strong><small>Cleaner water returns to the environment.</small></li>
+            </ol>
         </div>
     </div>
 </div>
@@ -624,25 +553,25 @@ document.addEventListener("DOMContentLoaded", function () {
                                 </defs>
 
                                 <g class="hp-layer hp-layer-team" data-hp-center>
-                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-team-full)" />
+                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-team-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-branch" data-hp-branch>
-                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-government-full)" />
+                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-government-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-branch" data-hp-branch>
-                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-industry-full)" />
+                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-industry-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-branch" data-hp-branch>
-                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-researchers-full)" />
+                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-researchers-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-branch" data-hp-branch>
-                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-public-full)" />
+                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-public-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-branch" data-hp-branch>
-                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" clip-path="url(#hp-clip-wastewater-full)" />
+                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" clip-path="url(#hp-clip-wastewater-full)" />
                                 </g>
                                 <g class="hp-layer hp-layer-full" data-hp-full>
-                                    <image href="/static/assets/images/hp-reference-diagram.png" width="1254" height="1254" />
+                                    <image href="/static/assets/images/hp-reference-diagram-flat.png" width="1254" height="1254" />
                                 </g>
                             </svg>
                         </div>
@@ -709,22 +638,22 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </clipPath>
                                 </defs>
                                 <g class="engineering-layer engineering-layer-center" data-engineering-center>
-                                    <image href="/static/assets/images/engineering-cycle-center.png" width="1280" height="1280" />
+                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-center)" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-design.png" width="1280" height="1280" />
+                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-design)" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-build.png" width="1280" height="1280" />
+                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-build)" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-test.png" width="1280" height="1280" />
+                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-test)" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-node" data-engineering-node>
-                                    <image href="/static/assets/images/engineering-cycle-learn.png" width="1280" height="1280" />
+                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" clip-path="url(#engineering-clip-learn)" />
                                 </g>
                                 <g class="engineering-layer engineering-layer-full" data-engineering-full>
-                                    <image href="/static/assets/images/engineering-cycle-reference.png" width="1280" height="1280" />
+                                    <image href="/static/assets/images/engineering-cycle-flat.png" width="1280" height="1280" />
                                 </g>
                             </svg>
                         </div>
@@ -768,13 +697,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <article class="team-scene" data-team-scene>
                 <h2 id="team-story-title">MEET OUR TEAM</h2>
                 <div class="team-layout">
-                    <div class="team-photo-slot" data-team-photo aria-label="Reserved team photo area">
+                    <div class="team-photo-slot" data-team-photo>
                         <div class="team-photo-frame">
-                            <div class="team-photo-placeholder">
-                                <span>TEAM PHOTO</span>
-                                <small>Reserved for your group photo</small>
-                            </div>
-                            <p class="team-photo-date">Photo date: to be added after upload</p>
+                            <img class="team-collaboration-illustration" src="/static/assets/images/team-collaboration-optimized.jpg" alt="Colored-pencil illustration of high-school students combining wet lab, data analysis, design, and outreach around one water-treatment project">
+                            <p class="team-photo-date">One project, many kinds of work</p>
                         </div>
                     </div>
 

@@ -1,6 +1,65 @@
-<section class="mock-page mock-measurement" aria-labelledby="measurement-preview-title">
-  <div class="mock-page-hero"><div><span class="mock-status">MOCK DATA · UI PREVIEW</span><p class="mock-eyebrow">WET LAB / MEASUREMENT</p><h2 id="measurement-preview-title">A measurement system you can trust</h2><p class="mock-lead">A preview of how assay runs, calibration quality, and sensor response could be read at a glance.</p></div><div class="mock-run-card"><span>ACTIVE RUN</span><strong>PB-CD-024</strong><small>Last updated 14:32 · <b>In progress</b></small></div></div>
-  <div class="mock-metric-grid"><article class="mock-metric"><span>Cd²⁺ response</span><strong>0.84 <small>AU</small></strong><em class="mock-positive">↑ 12.4%</em></article><article class="mock-metric"><span>Detection limit</span><strong>0.18 <small>μM</small></strong><em>Target ≤ 0.25</em></article><article class="mock-metric"><span>Replicates passed</span><strong>18 / 20</strong><em class="mock-positive">90% complete</em></article><article class="mock-metric"><span>Calibration R²</span><strong>0.987</strong><em class="mock-positive">Within range</em></article></div>
-  <div class="mock-dashboard-grid"><article class="mock-panel mock-chart-panel"><div class="mock-panel-heading"><div><span class="mock-card-kicker">Signal response</span><h3>Cadmium concentration curve</h3></div><span class="mock-chip">n = 20</span></div><div class="mock-chart"><span class="mock-axis-label">Signal (AU)</span><svg viewBox="0 0 560 220" role="img" aria-label="Mock line chart"><polyline points="36,188 120,166 205,143 290,112 375,82 460,54 530,28" fill="none" stroke="#2388a8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></polyline><g fill="#fff" stroke="#2388a8" stroke-width="4"><circle cx="36" cy="188" r="6"/><circle cx="120" cy="166" r="6"/><circle cx="205" cy="143" r="6"/><circle cx="290" cy="112" r="6"/><circle cx="375" cy="82" r="6"/><circle cx="460" cy="54" r="6"/><circle cx="530" cy="28" r="6"/></g></svg><div class="mock-chart-xlabels"><span>0.00</span><span>0.05</span><span>0.10</span><span>0.25</span><span>0.50</span><span>1.00 μM</span></div></div></article><article class="mock-panel"><div class="mock-panel-heading"><div><span class="mock-card-kicker">Run progress</span><h3>Today's assay queue</h3></div><span class="mock-chip mock-chip-green">3 / 5 done</span></div><div class="mock-progress-row"><div><span>Calibration</span><b>100%</b></div><div class="mock-progress"><i style="width:100%"></i></div></div><div class="mock-progress-row"><div><span>Lead panel</span><b>80%</b></div><div class="mock-progress"><i style="width:80%"></i></div></div><div class="mock-progress-row"><div><span>Cadmium panel</span><b>60%</b></div><div class="mock-progress"><i style="width:60%"></i></div></div><div class="mock-note">All values shown here are placeholders for interface review.</div></article></div>
-  <article class="mock-panel mock-table-panel"><div class="mock-panel-heading"><div><span class="mock-card-kicker">Recent samples</span><h3>Measurement log</h3></div><button class="mock-button" type="button">Export CSV</button></div><div class="mock-table-wrap"><table class="mock-table"><thead><tr><th>Sample</th><th>Condition</th><th>Signal</th><th>QC status</th></tr></thead><tbody><tr><td>CD-024-A</td><td>0.25 μM Cd²⁺</td><td>0.62 AU</td><td><span class="mock-table-status is-good">Passed</span></td></tr><tr><td>CD-024-B</td><td>0.50 μM Cd²⁺</td><td>0.84 AU</td><td><span class="mock-table-status is-good">Passed</span></td></tr><tr><td>BLANK-07</td><td>Negative control</td><td>0.04 AU</td><td><span class="mock-table-status is-review">Review</span></td></tr></tbody></table></div></article>
-</section>
+<article class="student-lab-page measurement-textbook" aria-labelledby="measurement-preview-title">
+  <header class="lab-page-intro">
+    <div>
+      <span class="mock-data-stamp">MOCK DATA · UI PREVIEW</span>
+      <p class="lab-book-label">Wet Lab Field Guide · Chapter 04</p>
+      <h2 id="measurement-preview-title">How do we know the sensor works?</h2>
+      <p class="lab-page-lead">Read the experiment like a textbook: begin with the color change, build a calibration curve, then decide whether an unknown sample can be trusted.</p>
+    </div>
+    <aside class="lab-margin-note"><strong>Question for this page</strong><span>Does the signal rise when Cd²⁺ concentration increases?</span></aside>
+  </header>
+
+  <section class="lesson-spread" aria-labelledby="measurement-principle">
+    <div class="lesson-copy">
+      <span class="pencil-label">The principle</span>
+      <h3 id="measurement-principle">Concentration becomes a visible signal</h3>
+      <p>Known cadmium concentrations give us reference points. After the reaction, the plate reader turns each color intensity into an absorbance value. Those points become a standard curve for estimating an unknown sample.</p>
+      <p class="lab-question">If the blank is not near zero, what might have contaminated the run?</p>
+    </div>
+    <figure class="measurement-process" aria-label="Diagram of the measurement principle">
+      <div class="sample-tubes"><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="process-arrow" aria-hidden="true">→</span>
+      <div class="well-plate" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <span class="process-arrow" aria-hidden="true">→</span>
+      <div class="mini-curve" aria-hidden="true"><span></span></div>
+      <figcaption>Known samples → measured color → calibration curve</figcaption>
+    </figure>
+  </section>
+
+  <section class="experiment-walkthrough" aria-labelledby="measurement-walkthrough">
+    <div class="section-hand-title"><span>Try the experiment</span><h3 id="measurement-walkthrough">One run, four checkpoints</h3></div>
+    <ol>
+      <li><span>1</span><div><strong>Prepare standards</strong><p>Make a concentration series from 0.00 to 1.00 μM Cd²⁺.</p></div></li>
+      <li><span>2</span><div><strong>Add the reporter</strong><p>Use the same volume and reaction time for every well.</p></div></li>
+      <li><span>3</span><div><strong>Read absorbance</strong><p>Measure each concentration in replicate and record the mean.</p></div></li>
+      <li><span>4</span><div><strong>Check the curve</strong><p>Confirm the trend, blank, replicates, and R² before using it.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="result-spread" aria-labelledby="measurement-result">
+    <figure class="textbook-graph">
+      <div class="graph-heading"><span>Mock result</span><strong>Cadmium response curve</strong></div>
+      <svg viewBox="0 0 620 300" role="img" aria-label="Mock calibration curve increasing with cadmium concentration">
+        <path class="graph-axis" d="M64 28V248H590"/>
+        <path class="graph-guide" d="M64 198H590M64 148H590M64 98H590M164 28V248M264 28V248M364 28V248M464 28V248M564 28V248"/>
+        <path class="graph-line" d="M72 230L164 211L264 183L364 143L464 96L564 48"/>
+        <g class="graph-points"><circle cx="72" cy="230" r="7"/><circle cx="164" cy="211" r="7"/><circle cx="264" cy="183" r="7"/><circle cx="364" cy="143" r="7"/><circle cx="464" cy="96" r="7"/><circle cx="564" cy="48" r="7"/></g>
+        <g class="graph-labels"><text x="60" y="275">0.00</text><text x="151" y="275">0.05</text><text x="251" y="275">0.10</text><text x="351" y="275">0.25</text><text x="451" y="275">0.50</text><text x="548" y="275">1.00 μM</text></g>
+      </svg>
+      <figcaption>Illustrative values only. Final figures will use measured data, error bars, sample size, and a fitted equation.</figcaption>
+    </figure>
+
+    <aside class="result-checks">
+      <span class="pencil-label">Can we trust it?</span>
+      <h3 id="measurement-result">Read the evidence, not one big number</h3>
+      <dl>
+        <div><dt>Blank</dt><dd>0.04 AU <small>close to baseline</small></dd></div>
+        <div><dt>Replicates</dt><dd>18 / 20 <small>two need review</small></dd></div>
+        <div><dt>Calibration</dt><dd>R² = 0.987 <small>mock fit</small></dd></div>
+        <div><dt>Next check</dt><dd>Repeat 0.50 μM <small>confirm consistency</small></dd></div>
+      </dl>
+    </aside>
+  </section>
+</article>

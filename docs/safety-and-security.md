@@ -1,6 +1,43 @@
-<section class="mock-page mock-safety" aria-labelledby="safety-preview-title">
-  <div class="mock-page-hero"><div><span class="mock-status">MOCK DATA · UI PREVIEW</span><p class="mock-eyebrow">WET LAB / SAFETY &amp; SECURITY</p><h2 id="safety-preview-title">Make every risk visible before work begins</h2><p class="mock-lead">A preview of a risk register for biological, chemical, physical, and environmental safeguards.</p></div><div class="mock-safety-score"><span>READINESS SCORE</span><strong>82<small>/100</small></strong><em>Mock review · 6 of 8 controls active</em></div></div>
-  <div class="mock-safety-summary"><div><span>Open risks</span><strong>04</strong></div><div><span>High priority</span><strong class="text-coral">01</strong></div><div><span>Controls verified</span><strong class="text-green">06</strong></div><div><span>Next review</span><strong>22 Aug</strong></div></div>
-  <article class="mock-panel mock-table-panel"><div class="mock-panel-heading"><div><span class="mock-card-kicker">Risk register</span><h3>Active items requiring attention</h3></div><button class="mock-button" type="button">＋ Add risk</button></div><div class="mock-table-wrap"><table class="mock-table mock-risk-table"><thead><tr><th>Risk / area</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th><th>Owner</th><th>Status</th></tr></thead><tbody><tr><td><strong>Heavy-metal stock handling</strong><small>Chemical</small></td><td><span class="risk-level is-medium">Medium</span></td><td><span class="risk-level is-high">High</span></td><td>Secondary containment + labeled waste stream</td><td>Y. Chen</td><td><span class="mock-table-status is-review">Review</span></td></tr><tr><td><strong>Engineered strain escape</strong><small>Biological</small></td><td><span class="risk-level is-low">Low</span></td><td><span class="risk-level is-high">High</span></td><td>Non-pathogenic chassis + decontamination log</td><td>J. Lin</td><td><span class="mock-table-status is-good">Controlled</span></td></tr><tr><td><strong>UV transilluminator use</strong><small>Physical</small></td><td><span class="risk-level is-medium">Medium</span></td><td><span class="risk-level is-medium">Medium</span></td><td>Interlock check + face shield signage</td><td>M. Wu</td><td><span class="mock-table-status is-good">Controlled</span></td></tr></tbody></table></div></article>
-  <div class="mock-safety-grid"><article class="mock-panel"><span class="mock-card-kicker">Control checklist</span><h3>Before the next experiment</h3><label class="mock-check is-done"><i>✓</i><span>Chassis and plasmid records verified</span><b>Done</b></label><label class="mock-check is-done"><i>✓</i><span>Waste containers labeled and available</span><b>Done</b></label><label class="mock-check"><i></i><span>Review spill response drill</span><b>Due</b></label></article><article class="mock-panel"><span class="mock-card-kicker">Incident log</span><h3>Latest updates</h3><div class="mock-timeline"><div><span>14:10</span><p><strong>Control added</strong><br>Kill-step documentation linked to strain record.</p></div><div><span>Yesterday</span><p><strong>Training completed</strong><br>Three team members signed the chemical handling SOP.</p></div></div></article></div>
-</section>
+<article class="student-lab-page safety-textbook" aria-labelledby="safety-preview-title">
+  <header class="lab-page-intro">
+    <div>
+      <span class="mock-data-stamp">MOCK DATA · UI PREVIEW</span>
+      <p class="lab-book-label">Wet Lab Field Guide · Chapter 06</p>
+      <h2 id="safety-preview-title">Spot the risk before the experiment starts</h2>
+      <p class="lab-page-lead">Safety is easier to remember when it is connected to a place and an action. Walk through this illustrated bench from sample arrival to waste disposal.</p>
+    </div>
+    <aside class="lab-margin-note"><strong>Pause before work</strong><span>If a control is missing, the experiment does not begin.</span></aside>
+  </header>
+
+  <section class="safety-bench-spread" aria-labelledby="safety-bench-title">
+    <div class="section-hand-title"><span>Lab walk-through</span><h3 id="safety-bench-title">Three places where attention matters</h3></div>
+    <div class="lab-bench-map">
+      <div class="bench-sink" aria-hidden="true"><span></span></div>
+      <div class="bench-worktop" aria-hidden="true"><span class="tube-rack"></span><span class="pipette"></span><span class="plate"></span></div>
+      <div class="bench-waste" aria-hidden="true"><span></span></div>
+      <button class="safety-hotspot hotspot-sample" type="button"><span>1</span><strong>Heavy-metal stock</strong><small>Secondary containment and clear labels</small></button>
+      <button class="safety-hotspot hotspot-culture" type="button"><span>2</span><strong>Engineered culture</strong><small>Closed handling and decontamination log</small></button>
+      <button class="safety-hotspot hotspot-waste" type="button"><span>3</span><strong>Waste stream</strong><small>Separate metal and biological waste</small></button>
+    </div>
+  </section>
+
+  <section class="risk-thinking" aria-labelledby="risk-thinking-title">
+    <div class="lesson-copy">
+      <span class="pencil-label">Think like a safety officer</span>
+      <h3 id="risk-thinking-title">Risk = what could happen × how we stop it</h3>
+      <p>A hazard is not just a colored label. Every row should connect a specific action to a control that the team can actually check.</p>
+    </div>
+    <div class="risk-equation" aria-label="Risk control flow"><span>Hazard</span><i>→</i><span>Exposure route</span><i>→</i><span>Control</span><i>→</i><span>Evidence</span></div>
+  </section>
+
+  <section class="safety-check-sheet" aria-labelledby="check-sheet-title">
+    <div class="section-hand-title"><span>Mock pre-run sheet</span><h3 id="check-sheet-title">The experiment may start when…</h3></div>
+    <ul>
+      <li class="is-checked"><span></span><div><strong>Samples are labeled</strong><small>Metal, concentration, date, and owner are readable.</small></div></li>
+      <li class="is-checked"><span></span><div><strong>Waste containers are ready</strong><small>Metal-containing liquid never enters the sink.</small></div></li>
+      <li class="is-checked"><span></span><div><strong>The chassis record is linked</strong><small>Strain, plasmid, and decontamination steps are known.</small></div></li>
+      <li><span></span><div><strong>Spill response is rehearsed</strong><small>Mock status: review before the next run.</small></div></li>
+    </ul>
+    <p class="safety-stop-note"><strong>STOP</strong><span>One unchecked control means the run waits. This is placeholder content for interface review.</span></p>
+  </section>
+</article>

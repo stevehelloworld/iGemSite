@@ -1,6 +1,52 @@
-<section class="mock-page mock-platform" aria-labelledby="platform-preview-title">
-  <div class="mock-page-hero"><div><span class="mock-status">MOCK DATA · UI PREVIEW</span><p class="mock-eyebrow">WET LAB / ALTERNATIVE PLATFORM</p><h2 id="platform-preview-title">Compare the chassis before the next build</h2><p class="mock-lead">A working layout for tracking non-model platforms, compatibility, and the evidence needed to move a candidate forward.</p></div><div class="mock-filter-card"><span>CAMPAIGN</span><strong>Platform screen / Q3</strong><small>Owner · Wet lab team</small></div></div>
-  <div class="mock-toolbar"><span class="mock-toolbar-title">3 candidates in review</span><button class="mock-filter is-active" type="button">All platforms</button><button class="mock-filter" type="button">Cell-free</button><button class="mock-filter" type="button">Plant</button><button class="mock-button" type="button">＋ Add candidate</button></div>
-  <div class="platform-card-grid"><article class="platform-candidate is-featured"><div class="platform-candidate-top"><span class="platform-icon">CF</span><span class="mock-table-status is-good">Shortlisted</span></div><h3>Cell-free extract</h3><p>Fast iteration platform for testing binding and reporter behavior without a living chassis.</p><dl><div><dt>Compatibility</dt><dd>92%</dd></div><div><dt>Last test</dt><dd>18 Aug</dd></div><div><dt>Risk review</dt><dd>Low</dd></div></dl><div class="mock-progress"><i style="width:92%"></i></div><button class="mock-link" type="button">Open candidate →</button></article><article class="platform-candidate"><div class="platform-candidate-top"><span class="platform-icon platform-icon-green">PL</span><span class="mock-table-status is-review">Testing</span></div><h3>Duckweed host</h3><p>Plant-based route for exploring longer-term environmental deployment constraints.</p><dl><div><dt>Compatibility</dt><dd>68%</dd></div><div><dt>Last test</dt><dd>12 Aug</dd></div><div><dt>Risk review</dt><dd>Pending</dd></div></dl><div class="mock-progress"><i style="width:68%"></i></div><button class="mock-link" type="button">Open candidate →</button></article><article class="platform-candidate"><div class="platform-candidate-top"><span class="platform-icon platform-icon-violet">MC</span><span class="mock-table-status is-muted">On hold</span></div><h3>CHO cell line</h3><p>Reference mammalian platform reserved for a future specificity benchmark.</p><dl><div><dt>Compatibility</dt><dd>41%</dd></div><div><dt>Last test</dt><dd>02 Aug</dd></div><div><dt>Risk review</dt><dd>Not started</dd></div></dl><div class="mock-progress"><i style="width:41%"></i></div><button class="mock-link" type="button">Open candidate →</button></article></div>
-  <article class="mock-panel platform-next-step"><div><span class="mock-card-kicker">Next decision</span><h3>What should the team test next?</h3><p>Cell-free extract is the current lead because it clears the compatibility threshold and has the shortest feedback loop.</p></div><span class="mock-decision">Decision due<br><strong>Friday, 23 Aug</strong></span></article>
-</section>
+<article class="student-lab-page platform-textbook" aria-labelledby="platform-preview-title">
+  <header class="lab-page-intro">
+    <div>
+      <span class="mock-data-stamp">MOCK DATA · UI PREVIEW</span>
+      <p class="lab-book-label">Wet Lab Field Guide · Chapter 05</p>
+      <h2 id="platform-preview-title">Which platform should carry our design?</h2>
+      <p class="lab-page-lead">A platform is not chosen because it looks exciting. We compare what it can express, how quickly it can be tested, and what new safety questions it creates.</p>
+    </div>
+    <aside class="lab-margin-note"><strong>Decision rule</strong><span>Choose the shortest safe route to a trustworthy answer.</span></aside>
+  </header>
+
+  <section class="platform-lineup" aria-labelledby="platform-lineup-title">
+    <div class="section-hand-title"><span>Compare the candidates</span><h3 id="platform-lineup-title">Same design question, three possible homes</h3></div>
+    <div class="platform-specimens">
+      <article class="platform-specimen is-leading">
+        <div class="platform-drawing cellfree-drawing" aria-hidden="true"><span></span><i></i></div>
+        <p class="specimen-name">Cell-free extract</p>
+        <h4>Fast answers without a living chassis</h4>
+        <p>Useful for checking whether a binding or reporter module works before solving growth and containment.</p>
+        <dl><div><dt>Iteration</dt><dd>Hours</dd></div><div><dt>Containment</dt><dd>Simpler</dd></div><div><dt>Mock readiness</dt><dd>92%</dd></div></dl>
+        <span class="specimen-note">Current lead</span>
+      </article>
+      <article class="platform-specimen">
+        <div class="platform-drawing plant-drawing" aria-hidden="true"><span></span><i></i><b></b></div>
+        <p class="specimen-name">Duckweed host</p>
+        <h4>A plant route for environmental questions</h4>
+        <p>Helpful for long-term water studies, but slower growth and environmental release require careful planning.</p>
+        <dl><div><dt>Iteration</dt><dd>Days</dd></div><div><dt>Containment</dt><dd>Moderate</dd></div><div><dt>Mock readiness</dt><dd>68%</dd></div></dl>
+      </article>
+      <article class="platform-specimen">
+        <div class="platform-drawing flask-drawing" aria-hidden="true"><span></span><i></i></div>
+        <p class="specimen-name">CHO cell line</p>
+        <h4>A precise but resource-heavy benchmark</h4>
+        <p>Offers a mammalian comparison, but equipment, training, cost, and biosafety exceed the needs of the first test.</p>
+        <dl><div><dt>Iteration</dt><dd>Weeks</dd></div><div><dt>Containment</dt><dd>Complex</dd></div><div><dt>Mock readiness</dt><dd>41%</dd></div></dl>
+      </article>
+    </div>
+  </section>
+
+  <section class="decision-trail" aria-labelledby="decision-trail-title">
+    <div>
+      <span class="pencil-label">How the team decides</span>
+      <h3 id="decision-trail-title">Evidence narrows the path</h3>
+    </div>
+    <ol>
+      <li><strong>Can the platform answer our current question?</strong><span>Remove candidates that test a different problem.</span></li>
+      <li><strong>Can our school lab run it safely?</strong><span>Check equipment, training, waste, and containment.</span></li>
+      <li><strong>Will the result arrive in time to improve the next design?</strong><span>Prefer a short feedback loop for early iterations.</span></li>
+    </ol>
+    <p class="decision-conclusion"><span>Mock decision</span><strong>Test cell-free extract first, then revisit living platforms only if the result requires them.</strong></p>
+  </section>
+</article>
