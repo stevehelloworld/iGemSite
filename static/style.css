@@ -1141,13 +1141,17 @@ a {
 
     letter-spacing: 0.8px;
 
+    background: transparent !important;
+
 }
 
 .navbar-brand .site-logo {
 
-    width: 68px;
+    width: 88px;
 
-    height: 68px;
+    height: 88px;
+
+    background: transparent !important;
 
     object-fit: contain;
 
