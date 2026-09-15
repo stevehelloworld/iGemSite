@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const percent = progress * 100;
       readingProgress.style.setProperty("--reading-progress", progress.toFixed(5));
       readingProgress.style.setProperty("--reading-progress-percent", `${percent.toFixed(3)}%`);
-      readingProgress.style.setProperty("--reading-progress-tilt", `${(progress * 2 - 1).toFixed(2)}deg`);
       readingProgress.setAttribute("aria-valuenow", String(Math.round(percent)));
       progressQueued = false;
     };

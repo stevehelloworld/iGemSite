@@ -21,14 +21,13 @@
 .textbook-nav-page .site-reading-progress {
     --reading-progress: 0;
     --reading-progress-percent: 0%;
-    --reading-progress-tilt: -1deg;
     position: absolute;
     right: 0;
     bottom: -5px;
     left: 0;
     z-index: 4;
     height: 5px;
-    overflow: visible;
+    overflow: hidden;
     background: #c8e3e5;
     pointer-events: none;
 }
@@ -42,37 +41,6 @@
     transform-origin: left center;
     transition: transform 100ms linear;
     will-change: transform;
-}
-
-.textbook-nav-page .site-reading-progress-marker {
-    position: absolute;
-    top: 50%;
-    left: clamp(35px, var(--reading-progress-percent), calc(100% - 35px));
-    display: grid;
-    place-items: center;
-    width: 70px;
-    height: 62px;
-    padding: 0;
-    background: transparent;
-    border: 0;
-    translate: -50% -50%;
-    rotate: var(--reading-progress-tilt);
-    transition: left 100ms linear, rotate 180ms cubic-bezier(.25, 1, .5, 1);
-    will-change: left;
-}
-
-.textbook-nav-page .site-reading-progress-marker img {
-    width: 68px;
-    height: 68px;
-    object-fit: contain;
-    filter: drop-shadow(0 3px 1px rgba(40, 87, 114, .18));
-    animation: progress-mascot-run 520ms ease-in-out infinite alternate;
-    transform-origin: 50% 76%;
-}
-
-@keyframes progress-mascot-run {
-    from { transform: translateY(1px) rotate(-1.6deg); }
-    to { transform: translateY(-2px) rotate(1.6deg); }
 }
 
 .textbook-nav-page .navbar .container {
@@ -282,17 +250,6 @@
         transform: scale(1.24);
     }
 
-    .textbook-nav-page .site-reading-progress-marker {
-        left: clamp(28px, var(--reading-progress-percent), calc(100% - 28px));
-        width: 56px;
-        height: 50px;
-    }
-
-    .textbook-nav-page .site-reading-progress-marker img {
-        width: 54px;
-        height: 54px;
-    }
-
     .textbook-nav-page .navbar-collapse {
         max-height: calc(100svh - var(--nav-offset) - 16px);
         margin-top: 8px;
@@ -343,12 +300,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .textbook-nav-page .site-reading-progress-value,
-    .textbook-nav-page .site-reading-progress-marker {
+    .textbook-nav-page .site-reading-progress-value {
         transition-duration: .01ms !important;
-    }
-
-    .textbook-nav-page .site-reading-progress-marker img {
-        animation: none !important;
     }
 }
