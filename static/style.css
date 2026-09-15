@@ -2517,7 +2517,7 @@ a {
 
 .experiment-figure-slot::after {
 
-    content: "Reserved for future media";
+    content: "";
     position: absolute;
     bottom: 18px;
     left: 50%;
