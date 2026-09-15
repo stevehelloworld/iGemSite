@@ -699,7 +699,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="team-layout">
                     <div class="team-photo-slot" data-team-photo>
                         <div class="team-photo-frame">
-                            <img class="team-collaboration-illustration" src="static/assets/images/team-collaboration-optimized.jpg" alt="Colored-pencil illustration of high-school students combining wet lab, data analysis, design, and outreach around one water-treatment project">
+                            <img class="team-collaboration-illustration" src="static/assets/images/team-collaboration-taiwan.jpg" alt="Colored-pencil illustration of Taiwanese high-school students combining wet lab, data analysis, design, and outreach around one water-treatment project">
                             <p class="team-photo-date">One project, many kinds of work</p>
                         </div>
                     </div>
