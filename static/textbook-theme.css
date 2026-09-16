@@ -552,6 +552,70 @@
     text-transform: none;
 }
 
+/* Notebook table, list, and note enhancements */
+.textbook-nav-page .experiment-section-copy .problem-table-wrap {
+    margin: 14px 0 18px;
+}
+
+.textbook-nav-page .experiment-section-copy .problem-table {
+    min-width: 100%;
+    width: 100%;
+}
+
+.textbook-nav-page .experiment-section-copy .problem-table th,
+.textbook-nav-page .experiment-section-copy .problem-table td {
+    padding: 9px 12px;
+    font-size: .92rem;
+}
+
+.textbook-nav-page .experiment-section-copy .problem-table td:first-child {
+    white-space: normal;
+}
+
+.textbook-nav-page .experiment-section-copy ol,
+.textbook-nav-page .experiment-section-copy ul {
+    margin: 10px 0 16px;
+    padding-left: 22px;
+    color: #4c5f72;
+    line-height: 1.7;
+}
+
+.textbook-nav-page .experiment-section-copy ol li,
+.textbook-nav-page .experiment-section-copy ul li {
+    margin-bottom: 8px;
+}
+
+.textbook-nav-page .experiment-section-copy h4 {
+    margin: 22px 0 10px;
+    font-size: 1.18rem;
+    font-weight: 800;
+    color: #14365a;
+    letter-spacing: -.02em;
+}
+
+.textbook-nav-page .experiment-section-copy h5 {
+    margin: 16px 0 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2b4863;
+}
+
+.textbook-nav-page .experiment-note-card {
+    margin: 14px 0;
+    padding: 12px 16px;
+    border-left: 4px solid var(--vis-teal);
+    background: #f0f7f8;
+    border-radius: 6px;
+    font-size: .94rem;
+    color: #2c4456;
+}
+
+.textbook-nav-page .experiment-note-bug {
+    border-left-color: #d9534f;
+    background: #fff5f5;
+    color: #842029;
+}
+
 .page-industry .industry-storybook .section-title h2 {
     color: #fff;
 }
