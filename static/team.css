@@ -212,14 +212,14 @@
     z-index: 2;
     grid-row: 2;
     min-height: 0;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .team-nucleus {
     position: absolute;
-    left: 50%;
-    top: 46%;
-    width: min(28%, 210px);
+    left: 36%;
+    top: 48%;
+    width: min(24%, 180px);
     margin: 0;
     overflow: visible;
     background: transparent;
@@ -668,6 +668,7 @@
     }
 
     .team-nucleus {
+        left: 50%;
         width: min(38%, 140px);
         top: 46%;
     }

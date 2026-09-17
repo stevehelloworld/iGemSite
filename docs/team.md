@@ -27,47 +27,47 @@
                 </figure>
                 <svg class="team-links" data-team-links viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
                 <div class="team-nodes">
-                    <button type="button" class="team-node" data-member="ohanna" data-group="leadership" data-x="20" data-y="12" style="--i:0">
+                    <button type="button" class="team-node" data-member="ohanna" data-group="leadership" data-x="18" data-y="18" data-mobile-x="22" data-mobile-y="18" style="--i:0">
                         <span class="team-node-mark">OL</span>
                         <span class="team-node-name">Ohanna</span>
                         <span class="team-node-role">Team Leader</span>
                     </button>
-                    <button type="button" class="team-node" data-member="lucy" data-group="leadership" data-x="80" data-y="12" style="--i:1">
+                    <button type="button" class="team-node" data-member="lucy" data-group="leadership" data-x="54" data-y="18" data-mobile-x="78" data-mobile-y="18" style="--i:1">
                         <span class="team-node-mark">LW</span>
                         <span class="team-node-name">Lucy</span>
                         <span class="team-node-role">Team Leader</span>
                     </button>
-                    <button type="button" class="team-node" data-member="sunny" data-group="wet" data-x="8" data-y="34" style="--i:2">
+                    <button type="button" class="team-node" data-member="sunny" data-group="wet" data-x="8" data-y="38" data-mobile-x="10" data-mobile-y="38" style="--i:2">
                         <span class="team-node-mark">SH</span>
                         <span class="team-node-name">Sunny</span>
                         <span class="team-node-role">Wet Lab</span>
                     </button>
-                    <button type="button" class="team-node" data-member="eugenia" data-group="wet" data-x="7" data-y="58" style="--i:3">
+                    <button type="button" class="team-node" data-member="eugenia" data-group="wet" data-x="7" data-y="62" data-mobile-x="9" data-mobile-y="60" style="--i:3">
                         <span class="team-node-mark">EL</span>
                         <span class="team-node-name">Eugenia</span>
                         <span class="team-node-role">Wet Lab</span>
                     </button>
-                    <button type="button" class="team-node" data-member="nicholas" data-group="wet" data-x="18" data-y="86" style="--i:4">
+                    <button type="button" class="team-node" data-member="nicholas" data-group="wet" data-x="17" data-y="84" data-mobile-x="22" data-mobile-y="82" style="--i:4">
                         <span class="team-node-mark">NL</span>
                         <span class="team-node-name">Nicholas</span>
                         <span class="team-node-role">Wet Lab</span>
                     </button>
-                    <button type="button" class="team-node" data-member="chelsea" data-group="dry" data-x="88" data-y="20" style="--i:5">
+                    <button type="button" class="team-node" data-member="chelsea" data-group="dry" data-x="58" data-y="44" data-mobile-x="88" data-mobile-y="38" style="--i:5">
                         <span class="team-node-mark">CC</span>
                         <span class="team-node-name">Chelsea</span>
                         <span class="team-node-role">Dry Lab</span>
                     </button>
-                    <button type="button" class="team-node" data-member="francis" data-group="dry" data-x="58" data-y="88" style="--i:6">
+                    <button type="button" class="team-node" data-member="francis" data-group="dry" data-x="43" data-y="86" data-mobile-x="64" data-mobile-y="82" style="--i:6">
                         <span class="team-node-mark">FL</span>
                         <span class="team-node-name">Francis</span>
                         <span class="team-node-role">Dry Lab</span>
                     </button>
-                    <button type="button" class="team-node" data-member="ray" data-group="dry" data-x="78" data-y="86" style="--i:7">
+                    <button type="button" class="team-node" data-member="ray" data-group="dry" data-x="56" data-y="84" data-mobile-x="84" data-mobile-y="60" style="--i:7">
                         <span class="team-node-mark">RS</span>
                         <span class="team-node-name">Ray</span>
                         <span class="team-node-role">Dry Lab</span>
                     </button>
-                    <button type="button" class="team-node" data-member="ian" data-group="dry" data-x="40" data-y="88" style="--i:8">
+                    <button type="button" class="team-node" data-member="ian" data-group="dry" data-x="30" data-y="86" data-mobile-x="43" data-mobile-y="84" style="--i:8">
                         <span class="team-node-mark">IH</span>
                         <span class="team-node-name">Ian</span>
                         <span class="team-node-role">Dry Lab</span>

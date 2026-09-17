@@ -27,14 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
   if (reduceMotion) page.classList.add("is-static");
 
   function layoutNodes() {
+    const isMobile = window.innerWidth <= 980;
     const width = board.clientWidth;
     const height = board.clientHeight;
-    const cx = width / 2;
-    const cy = height / 2;
+    const boardBox = board.getBoundingClientRect();
+    const nucleusBox = nucleus ? nucleus.getBoundingClientRect() : null;
+    const cx = nucleusBox && boardBox.width ? nucleusBox.left + nucleusBox.width / 2 - boardBox.left : width / 2;
+    const cy = nucleusBox && boardBox.height ? nucleusBox.top + nucleusBox.height / 2 - boardBox.top : height / 2;
 
     nodes.forEach((node) => {
-      const x = (Number(node.dataset.x) / 100) * width;
-      const y = (Number(node.dataset.y) / 100) * height;
+      const rawX = isMobile && node.dataset.mobileX ? Number(node.dataset.mobileX) : Number(node.dataset.x);
+      const rawY = isMobile && node.dataset.mobileY ? Number(node.dataset.mobileY) : Number(node.dataset.y);
+      const x = (rawX / 100) * width;
+      const y = (rawY / 100) * height;
       node.style.setProperty("--x", `${x}px`);
       node.style.setProperty("--y", `${y}px`);
       node.style.setProperty("--from-x", `${cx - x}px`);
@@ -46,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function drawLinks() {
     if (!links || !nucleus) return;
+    const isMobile = window.innerWidth <= 980;
     const boardBox = board.getBoundingClientRect();
     const nucleusBox = nucleus.getBoundingClientRect();
     const nx = ((nucleusBox.left + nucleusBox.width / 2 - boardBox.left) / boardBox.width) * 100;
@@ -53,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     links.innerHTML = nodes
       .map((node, index) => {
-        const x = Number(node.dataset.x);
-        const y = Number(node.dataset.y);
+        const x = isMobile && node.dataset.mobileX ? Number(node.dataset.mobileX) : Number(node.dataset.x);
+        const y = isMobile && node.dataset.mobileY ? Number(node.dataset.mobileY) : Number(node.dataset.y);
         return `<path data-link="${node.dataset.member}" d="M ${nx.toFixed(2)} ${ny.toFixed(2)} Q ${(nx + x) / 2} ${(ny + y) / 2 - 8} ${x} ${y}" pathLength="1" style="--i:${index}" />`;
       })
       .join("");
