@@ -229,7 +229,10 @@
 
     <section class="team-advisors" aria-labelledby="team-advisors-title">
         <h2 id="team-advisors-title">Instructors and advisors</h2>
-        <p>This notebook page is waiting for PI, instructor, and advisor portraits. They will sit here — quieter than the student story, still part of the same bench.</p>
+        <p>Portraits are on the way — we're taking them together in September. For now, here's who guides the bench.</p>
+        <p><strong>Primary PI</strong> — Richard Huang</p>
+        <p><strong>Secondary PIs</strong> — Chau-Ti Ting, Shun-Chern Tsaur, Hsin-Hung David Chou</p>
+        <p><strong>Instructors</strong> — Curtis Chen, Kelly Liao</p>
     </section>
 
 </section>
