@@ -221,6 +221,7 @@
 .home-page .map-composition-v2 {
     display: grid;
     grid-template-columns: minmax(230px, .38fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
     gap: clamp(18px, 4vw, 64px);
     min-height: 0;
 }
