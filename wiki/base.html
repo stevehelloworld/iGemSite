@@ -42,7 +42,8 @@
 "/safety-and-security",
 "/model",
 "/human-practices",
-"/industry"
+"/industry",
+"/team"
 ] %}
 
 <!doctype html>
@@ -259,10 +260,6 @@
   <!-- Bootstrap -->
 
   <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
-
-  {% if request.path == "/team" %}
-  <script src="{{ url_for('static', filename='js/team.js', v='20260917') }}"></script>
-  {% endif %}
 
   {% if request.path == "/human-practices" %}
   <script src="{{ url_for('static', filename='js/human-practices.js', v='20260820-journey1') }}"></script>

@@ -300,6 +300,10 @@
     background-image: url("assets/images/solution/capture-flat.png");
 }
 
+.page-team .experiment-hero::after {
+    background-image: url("assets/images/vis-logo-heart.png");
+}
+
 .page-model .model-hero::after {
     background-image: url("assets/images/engineering-cycle-center-flat.png");
 }
@@ -618,11 +622,6 @@
 
 .page-industry .industry-storybook .section-title h2 {
     color: #fff;
-}
-
-.page-team {
-    overflow-x: clip;
-    background: #edf6f7;
 }
 
 /* Shared footer closes every chapter with the same ink color. */
