@@ -1,28 +1,26 @@
-/* Team directory page: role sections of member cards, notebook-page format. */
+/* Team directory page: role sections of member entries, notebook-page format. */
+/* Each member is laid out sideways: text on the left, photo on the right. */
 
-.team-member-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 22px;
+.team-member-list {
     margin-top: 6px;
 }
 
-.team-member-card {
-    display: flex;
-    flex-direction: column;
+.team-member-entry + .team-member-entry {
+    margin-top: 26px;
+    padding-top: 26px;
+    border-top: 2px solid #dcebee;
 }
 
-.team-member-photo {
-    min-height: 190px;
-    margin-bottom: 16px;
-}
-
-.team-member-card h4 {
-    margin: 0 0 10px;
+.team-member-copy h4 {
+    margin: 0 0 8px;
     color: #14365a;
     font-family: var(--vis-display);
     font-size: 1.2rem;
     letter-spacing: -.03em;
+}
+
+.team-member-photo {
+    min-height: 190px;
 }
 
 .team-bio-pending {
@@ -30,8 +28,8 @@
     color: #8199a6;
 }
 
-@media (max-width: 620px) {
-    .team-member-grid {
+@media (max-width: 820px) {
+    .team-member-entry .experiment-section-layout {
         grid-template-columns: 1fr;
     }
 }
