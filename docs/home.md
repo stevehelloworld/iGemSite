@@ -13,7 +13,7 @@
 
             <figure class="pollution-panorama-v2">
                 <img src="static/assets/images/problem/pollution-path-panorama-optimized.jpg" alt="A colored-pencil panorama showing heavy metals moving from industrial wastewater through a river and rice fields to a nearby community">
-                <figcaption class="metal-legend-v2"><span class="metal-pb"></span> Lead (Pb) <span class="metal-cd"></span> Cadmium (Cd)</figcaption>
+                <figcaption class="metal-legend-v2"> <span class="metal-cd"></span> Cadmium (Cd)</figcaption>
             </figure>
 
             <ol class="story-notes-v2" aria-label="Heavy-metal pollution pathway">
