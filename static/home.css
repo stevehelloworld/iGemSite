@@ -1,6 +1,6 @@
 /* Home — illustrated student field-guide visual language. */
 .home-page {
-    --home-display: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif;
+    --home-display: Verdana, Geneva, sans-serif;
     --home-ink: #285772;
     background: #edf2f8;
 }

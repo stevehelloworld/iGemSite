@@ -995,7 +995,7 @@ body {
 
     padding-top: 76px;
     --nav-offset: 76px;
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     color: #1f2937;
     background: linear-gradient(180deg, #eef2f7 0%, #dfe7f3 100%);
 }
@@ -1007,7 +1007,7 @@ body {
 .engineering-scene h2,
 .hp-scene h2,
 .team-scene h2 {
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     font-weight: 800;
     line-height: .9;
     letter-spacing: .06em;
@@ -1021,7 +1021,7 @@ body {
 .cycle-step strong,
 .hp-section-block h3,
 .team-section-block h3 {
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     font-weight: 700;
     line-height: 1;
     letter-spacing: -.065em;
@@ -1034,7 +1034,7 @@ body {
 .cycle-step p,
 .hp-section-block p,
 .team-section-block p {
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     font-weight: 500;
 }
 

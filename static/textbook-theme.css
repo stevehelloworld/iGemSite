@@ -1,7 +1,7 @@
 /* VIS shared textbook theme — one visual language across every wiki page. */
 :root {
-    --vis-display: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --vis-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --vis-display: Verdana, Geneva, sans-serif;
+    --vis-body: Verdana, Geneva, sans-serif;
     --vis-ink: #285772;
     --vis-copy: #405d6c;
     --vis-teal: #3b9295;
