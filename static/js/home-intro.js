@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const running = [];
   let finished = false;
   const easeOut = "cubic-bezier(.16, 1, .3, 1)";
-  const chaseEase = "cubic-bezier(.45, .05, .24, 1)";
+  const chaseEase = "cubic-bezier(.37, 0, .63, 1)";
 
   function play(element, keyframes, options) {
     const animation = element.animate(keyframes, { fill: "forwards", ...options });
@@ -38,19 +38,24 @@ document.addEventListener("DOMContentLoaded", () => {
   async function runIntro() {
     const width = window.innerWidth;
     const catchX = width * (width < 576 ? .2 : .23);
+    const curve = Math.min(76, window.innerHeight * .09);
 
     const germChase = play(germ, [
-      { opacity: 0, transform: `translate3d(calc(-50% - ${width * .72}px), -50%, 0)` },
+      { opacity: 0, transform: `translate3d(calc(-50% - ${width * .72}px), calc(-50% + ${curve * .7}px), 0) rotate(2deg)` },
       { opacity: 1, offset: .08 },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${catchX - 68}px), -50%, 0)` }
-    ], { duration: 1900, easing: chaseEase });
+      { opacity: 1, transform: `translate3d(calc(-50% - ${width * .48}px), calc(-50% - ${curve * .55}px), 0) rotate(-2deg)`, offset: .28 },
+      { opacity: 1, transform: `translate3d(calc(-50% - ${width * .18}px), calc(-50% + ${curve * .28}px), 0) rotate(1deg)`, offset: .58 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${catchX - 68}px), -50%, 0) rotate(0deg)` }
+    ], { duration: 3000, easing: chaseEase });
 
     const ionChase = play(ion, [
-      { opacity: 0, transform: `translate3d(calc(-50% - ${width * .42}px), -50%, 0)` },
+      { opacity: 0, transform: `translate3d(calc(-50% - ${width * .42}px), calc(-50% - ${curve * .18}px), 0) rotate(-3deg)` },
       { opacity: 1, offset: .08 },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${catchX + 70}px), -50%, 0)` },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${catchX + 42}px), -50%, 0)` }
-    ], { duration: 1900, easing: chaseEase });
+      { opacity: 1, transform: `translate3d(calc(-50% - ${width * .23}px), calc(-50% - ${curve}px), 0) rotate(-7deg)`, offset: .27 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${width * .02}px), calc(-50% - ${curve * .2}px), 0) rotate(4deg)`, offset: .52 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${catchX + 92}px), calc(-50% + ${curve * .62}px), 0) rotate(7deg)`, offset: .78 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${catchX + 42}px), -50%, 0) rotate(0deg)` }
+    ], { duration: 3000, easing: chaseEase });
 
     await Promise.all([germChase, ionChase]);
     if (finished) return;
@@ -77,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ]);
     if (finished) return;
 
-    await new Promise((resolve) => window.setTimeout(resolve, 180));
+    await new Promise((resolve) => window.setTimeout(resolve, 260));
     if (finished) return;
 
     const target = navbarLogo.getBoundingClientRect();
@@ -89,11 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
       play(logo, [
         { opacity: 1, transform: "translate3d(0, 0, 0) scale(1)" },
         { opacity: 1, transform: `translate3d(${deltaX}px, ${deltaY}px, 0) scale(${targetScale})` }
-      ], { duration: 820, easing: easeOut }),
+      ], { duration: 980, easing: easeOut }),
       play(intro, [
         { opacity: 1, offset: .58 },
         { opacity: 0 }
-      ], { duration: 820, easing: easeOut })
+      ], { duration: 980, easing: easeOut })
     ]);
 
     finishIntro();

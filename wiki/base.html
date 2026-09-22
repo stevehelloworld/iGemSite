@@ -80,7 +80,7 @@
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/vis-logo-heart.png', v='20260915-heart1') }}">
   <link href="{{ url_for('static', filename='home.css', v='20260820-title-static1') }}" rel="stylesheet" />
   <link href="{{ url_for('static', filename='home-story-v2.css', v='20260824-story4') }}" rel="stylesheet" />
-  <link href="{{ url_for('static', filename='home-intro.css', v='20260922-capture1') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='home-intro.css', v='20260922-capture2') }}" rel="stylesheet" />
   {% endif %}
 
   {% if request.path in ["/measurement", "/alternative-platform", "/safety-and-security"] %}
@@ -283,7 +283,7 @@
   {% endif %}
 
   {% if request.path == "/" %}
-  <script src="{{ url_for('static', filename='js/home-intro.js', v='20260922-capture1') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/home-intro.js', v='20260922-capture2') }}" defer></script>
   <script src="{{ url_for('static', filename='js/home-motion.js', v='20260820-title-static1') }}" defer></script>
   {% endif %}
 
