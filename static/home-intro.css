@@ -1,0 +1,138 @@
+.home-intro {
+  --intro-sky: #dceff4;
+  --intro-ink: #285772;
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  overflow: hidden;
+  background: var(--intro-sky);
+  opacity: 1;
+  touch-action: none;
+}
+
+.home-intro::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: clamp(32px, 7vh, 72px);
+  left: 0;
+  height: 3px;
+  background: rgba(143, 199, 204, .65);
+  transform: scaleX(.92);
+}
+
+.home-intro-chase {
+  position: absolute;
+  inset: 0;
+}
+
+.home-intro-germ,
+.home-intro-ion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform, opacity;
+}
+
+.home-intro-germ {
+  width: clamp(190px, 24vw, 330px);
+}
+
+.home-intro-ion {
+  width: clamp(88px, 11vw, 150px);
+}
+
+.home-intro-germ img,
+.home-intro-ion img,
+.home-intro-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.home-intro-germ img {
+  animation: intro-germ-stride 420ms ease-in-out infinite alternate;
+}
+
+.home-intro-ion img {
+  animation: intro-ion-flee 360ms ease-in-out infinite alternate;
+}
+
+.home-intro-logo {
+  position: fixed;
+  z-index: 2;
+  width: clamp(210px, 27vw, 340px);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.home-intro-skip {
+  position: absolute;
+  right: clamp(18px, 3vw, 40px);
+  bottom: clamp(18px, 3vw, 34px);
+  z-index: 3;
+  padding: 8px 4px;
+  color: var(--intro-ink);
+  font: 700 .78rem/1 Inter, Arial, sans-serif;
+  letter-spacing: .02em;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid rgba(40, 87, 114, .35);
+}
+
+.home-intro-skip:hover,
+.home-intro-skip:focus-visible {
+  border-bottom-color: var(--intro-ink);
+  outline: none;
+}
+
+.home-intro-active {
+  overflow: hidden;
+}
+
+.home-intro-active .navbar-brand .site-logo {
+  opacity: 0;
+}
+
+@keyframes intro-germ-stride {
+  from { transform: translateY(-5px) rotate(-1.5deg); }
+  to { transform: translateY(5px) rotate(1deg); }
+}
+
+@keyframes intro-ion-flee {
+  from { transform: translateY(-8px) rotate(-4deg); }
+  to { transform: translateY(8px) rotate(5deg); }
+}
+
+@media (max-width: 575.98px) {
+  .home-intro-germ {
+    width: clamp(160px, 48vw, 225px);
+  }
+
+  .home-intro-ion {
+    width: clamp(76px, 23vw, 106px);
+  }
+
+  .home-intro-logo {
+    width: clamp(190px, 58vw, 260px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-intro {
+    display: none;
+  }
+
+  .home-intro-active {
+    overflow: auto;
+  }
+
+  .home-intro-active .navbar-brand .site-logo {
+    opacity: 1;
+  }
+}
