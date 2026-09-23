@@ -17,10 +17,10 @@
             </figure>
 
             <ol class="story-notes-v2" aria-label="Heavy-metal pollution pathway">
-                <li class="is-active" data-water-step="0"><span>At the pipe</span><strong>Mixed industrial effluent enters the river.</strong></li>
-                <li data-water-step="1"><span>In the ecosystem</span><strong>Persistent metals collect in water and living organisms.</strong></li>
-                <li data-water-step="2"><span>Through irrigation</span><strong>Contaminated water carries metals into soil and crops.</strong></li>
-                <li data-water-step="3"><span>At home</span><strong>Communities meet the same pollution through water and food.</strong></li>
+                <li class="is-active" data-water-step="0"><button type="button" aria-pressed="true"><span>At the pipe</span><strong>Mixed industrial effluent enters the river.</strong></button></li>
+                <li data-water-step="1"><button type="button" aria-pressed="false"><span>In the ecosystem</span><strong>Persistent metals collect in water and living organisms.</strong></button></li>
+                <li data-water-step="2"><button type="button" aria-pressed="false"><span>Through irrigation</span><strong>Contaminated water carries metals into soil and crops.</strong></button></li>
+                <li data-water-step="3"><button type="button" aria-pressed="false"><span>At home</span><strong>Communities meet the same pollution through water and food.</strong></button></li>
             </ol>
         </div>
     </div>

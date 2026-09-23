@@ -10,10 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const mapStory = document.querySelector("[data-map-story]");
   const treatmentStory = document.querySelector("[data-treatment-story]");
   const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
-  const ease = (value) => {
-    const x = clamp(value);
-    return 1 - Math.pow(1 - x, 4);
-  };
   let queued = false;
 
   function storyProgress(element) {
@@ -45,14 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function updateWaterStory() {
+  function setWaterIndex(index) {
     if (!waterStory) return;
-    const progress = storyProgress(waterStory);
-    const index = activateByProgress(waterStory, "[data-water-step]", progress);
-    const local = ease((progress * 4) - index);
-    waterStory.style.setProperty("--water-progress", progress.toFixed(4));
+    waterStory.querySelectorAll("[data-water-step]").forEach((item, itemIndex) => {
+      const isActive = itemIndex === index;
+      item.classList.toggle("is-active", isActive);
+      item.querySelector("button")?.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
     waterStory.style.setProperty("--water-index", index);
-    waterStory.style.setProperty("--water-local", local.toFixed(4));
   }
 
   function setMapIndex(index) {
@@ -80,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function update() {
     updateHero();
-    updateWaterStory();
     updateMapStory();
     updateTreatmentStory();
     queued = false;
@@ -98,6 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const travel = Math.max(1, mapStory.offsetHeight - window.innerHeight);
       window.scrollTo({ top: mapStory.offsetTop + travel * ((index + 0.5) / 3), behavior: reduceMotion ? "auto" : "smooth" });
     });
+  });
+
+  waterStory?.querySelectorAll("[data-water-step] button").forEach((button, index) => {
+    button.addEventListener("click", () => setWaterIndex(index));
   });
 
   if (reduceMotion) {
