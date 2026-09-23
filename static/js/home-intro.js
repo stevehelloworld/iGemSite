@@ -64,14 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
       { opacity: 1, offset: .12 },
       { opacity: 1, transform: `translate3d(calc(-50% + ${germMeet - 14}px), -50%, 0)`, offset: .82 },
       { opacity: 1, transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0)` }
-    ], { duration: 680, easing: easeOut });
+    ], { duration: 440, easing: easeOut });
 
     const ionSlide = play(ion, [
       { opacity: 0, transform: `translate3d(calc(-50% + ${ionOffscreen}px), -50%, 0)` },
       { opacity: 1, offset: .12 },
       { opacity: 1, transform: `translate3d(calc(-50% + ${ionMeet + 14}px), -50%, 0)`, offset: .82 },
       { opacity: 1, transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0)` }
-    ], { duration: 600, easing: easeOut });
+    ], { duration: 380, easing: easeOut });
 
     await Promise.all([germSlide, ionSlide]);
     if (finished) return;
@@ -83,12 +83,12 @@ document.addEventListener("DOMContentLoaded", () => {
         { transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0) scale(1, 1)` },
         { transform: `translate3d(calc(-50% + ${germMeet + 5}px), -50%, 0) scale(1.08, .92)`, offset: .45 },
         { transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0) scale(1, 1)` }
-      ], { duration: 180, easing: "ease-out" }),
+      ], { duration: 120, easing: "ease-out" }),
       play(ion, [
         { transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0) scale(1, 1)` },
         { transform: `translate3d(calc(-50% + ${ionMeet - 5}px), -50%, 0) scale(1.08, .92)`, offset: .45 },
         { transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0) scale(1, 1)` }
-      ], { duration: 180, easing: "ease-out" })
+      ], { duration: 120, easing: "ease-out" })
     ]);
     if (finished) return;
 
