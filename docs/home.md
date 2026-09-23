@@ -453,11 +453,11 @@ document.addEventListener("DOMContentLoaded", function () {
             </figure>
 
             <ol class="treatment-steps-v2" aria-label="Biological heavy-metal treatment steps">
-                <li class="is-active" data-treatment-step="0"><span>1</span><strong>Detect</strong><small>Identify Pb²⁺ and Cd²⁺ in the incoming water.</small></li>
-                <li data-treatment-step="1"><span>2</span><strong>Capture</strong><small>Metallothionein domains hold the target ions.</small></li>
-                <li data-treatment-step="2"><span>3</span><strong>Separate</strong><small>A membrane keeps engineered bacteria inside the system.</small></li>
-                <li data-treatment-step="3"><span>4</span><strong>Recover</strong><small>Bound metals are collected instead of becoming sludge.</small></li>
-                <li data-treatment-step="4"><span>5</span><strong>Release</strong><small>Cleaner water returns to the environment.</small></li>
+                <li class="is-active" data-treatment-step="0"><button type="button" aria-pressed="true"><span>1</span><strong>Detect</strong><small>Identify Pb²⁺ and Cd²⁺ in the incoming water.</small></button></li>
+                <li data-treatment-step="1"><button type="button" aria-pressed="false"><span>2</span><strong>Capture</strong><small>Metallothionein domains hold the target ions.</small></button></li>
+                <li data-treatment-step="2"><button type="button" aria-pressed="false"><span>3</span><strong>Separate</strong><small>A membrane keeps engineered bacteria inside the system.</small></button></li>
+                <li data-treatment-step="3"><button type="button" aria-pressed="false"><span>4</span><strong>Recover</strong><small>Bound metals are collected instead of becoming sludge.</small></button></li>
+                <li data-treatment-step="4"><button type="button" aria-pressed="false"><span>5</span><strong>Release</strong><small>Cleaner water returns to the environment.</small></button></li>
             </ol>
         </div>
     </div>

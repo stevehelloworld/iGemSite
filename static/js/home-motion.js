@@ -12,21 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
   let queued = false;
 
-  function storyProgress(element) {
-    if (!element) return 0;
-    const rect = element.getBoundingClientRect();
-    const travel = Math.max(1, rect.height - window.innerHeight);
-    return clamp(-rect.top / travel);
-  }
-
-  function activateByProgress(container, selector, progress) {
-    const items = [...container.querySelectorAll(selector)];
-    if (!items.length) return 0;
-    const index = Math.min(items.length - 1, Math.floor(progress * items.length));
-    items.forEach((item, itemIndex) => item.classList.toggle("is-active", itemIndex === index));
-    return index;
-  }
-
   function updateHero() {
     if (!hero || !heroImage) return;
     const rect = hero.getBoundingClientRect();
@@ -65,17 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
     mapStory.style.setProperty("--map-index", index);
   }
 
-  function updateTreatmentStory() {
+  function setTreatmentIndex(index) {
     if (!treatmentStory) return;
-    const progress = storyProgress(treatmentStory);
-    const index = activateByProgress(treatmentStory, "[data-treatment-step]", progress);
-    treatmentStory.style.setProperty("--treatment-progress", progress.toFixed(4));
+    treatmentStory.querySelectorAll("[data-treatment-step]").forEach((item, itemIndex) => {
+      const isActive = itemIndex === index;
+      item.classList.toggle("is-active", isActive);
+      item.querySelector("button")?.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
     treatmentStory.style.setProperty("--treatment-index", index);
   }
 
   function update() {
     updateHero();
-    updateTreatmentStory();
     queued = false;
   }
 
@@ -98,6 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   waterStory?.querySelectorAll("[data-water-step] button").forEach((button, index) => {
     button.addEventListener("click", () => setWaterIndex(index));
+  });
+
+  treatmentStory?.querySelectorAll("[data-treatment-step] button").forEach((button, index) => {
+    button.addEventListener("click", () => setTreatmentIndex(index));
   });
 
   if (reduceMotion) {
