@@ -17,8 +17,8 @@
                 <div class="experiment-section-layout">
                     <article class="experiment-section-copy team-member-copy">
                         <p class="experiment-card-kicker">Project Lead</p>
-                        <h4>Lucy Wang</h4>
-                        <p class="team-bio-pending">Self-introduction coming soon.</p>
+                        <h4>Ohanna Liu</h4>
+                        <p>Hi, I am Ohanna and currently in my senior year of high school. Academically, my interests fall in biology, public health, and medicine, with a strong addiction in exploring life expectancy. Outside of academics, I love sleeping, swimming, and taking photos of the clouds.</p>
                     </article>
                     <div class="experiment-figure-slot team-member-photo">
                         <span>Photo</span>
@@ -30,8 +30,8 @@
                 <div class="experiment-section-layout">
                     <article class="experiment-section-copy team-member-copy">
                         <p class="experiment-card-kicker">Project Lead</p>
-                        <h4>Ohanna Liu</h4>
-                        <p>Hi, I am Ohanna and currently in my senior year of high school. Academically, my interests fall in biology, public health, and medicine, with a strong addiction in exploring life expectancy. Outside of academics, I love sleeping, swimming, and taking photos of the clouds.</p>
+                        <h4>Lucy Wang</h4>
+                        <p class="team-bio-pending">Self-introduction coming soon.</p>
                     </article>
                     <div class="experiment-figure-slot team-member-photo">
                         <span>Photo</span>
@@ -150,6 +150,19 @@
             <div class="team-member-entry">
                 <div class="experiment-section-layout">
                     <article class="experiment-section-copy team-member-copy">
+                        <p class="experiment-card-kicker">Secondary PI</p>
+                        <h4>Hsin-Hung David Chou</h4>
+                        <p class="team-bio-pending">Self-introduction coming soon.</p>
+                    </article>
+                    <div class="experiment-figure-slot team-member-photo">
+                        <span>Photo</span>
+                        <small>Portrait coming in September</small>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member-entry">
+                <div class="experiment-section-layout">
+                    <article class="experiment-section-copy team-member-copy">
                         <p class="experiment-card-kicker">Primary PI</p>
                         <h4>Richard Huang</h4>
                         <p class="team-bio-pending">Self-introduction coming soon.</p>
@@ -178,19 +191,6 @@
                     <article class="experiment-section-copy team-member-copy">
                         <p class="experiment-card-kicker">Secondary PI</p>
                         <h4>Shun-Chern Tsaur</h4>
-                        <p class="team-bio-pending">Self-introduction coming soon.</p>
-                    </article>
-                    <div class="experiment-figure-slot team-member-photo">
-                        <span>Photo</span>
-                        <small>Portrait coming in September</small>
-                    </div>
-                </div>
-            </div>
-            <div class="team-member-entry">
-                <div class="experiment-section-layout">
-                    <article class="experiment-section-copy team-member-copy">
-                        <p class="experiment-card-kicker">Secondary PI</p>
-                        <h4>Hsin-Hung David Chou</h4>
                         <p class="team-bio-pending">Self-introduction coming soon.</p>
                     </article>
                     <div class="experiment-figure-slot team-member-photo">
