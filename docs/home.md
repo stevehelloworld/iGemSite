@@ -36,9 +36,9 @@
             <div class="map-composition-v2">
                 <figure class="persistent-map-v2">
                     <img src="static/assets/images/taiwan-scenes/taiwan-base-map-flat.png" alt="Hand-drawn physical map of Taiwan">
-                    <button class="map-pin-v2 pin-taoyuan is-active" type="button" data-map-pin="0" aria-label="Show Taoyuan"><span></span></button>
-                    <button class="map-pin-v2 pin-taichung" type="button" data-map-pin="1" aria-label="Show Taichung"><span></span></button>
-                    <button class="map-pin-v2 pin-kaohsiung" type="button" data-map-pin="2" aria-label="Show Kaohsiung"><span></span></button>
+                    <button class="map-pin-v2 pin-taoyuan is-active" type="button" data-map-pin="0" aria-label="Show Taoyuan" aria-pressed="true"><span></span></button>
+                    <button class="map-pin-v2 pin-taichung" type="button" data-map-pin="1" aria-label="Show Taichung" aria-pressed="false"><span></span></button>
+                    <button class="map-pin-v2 pin-kaohsiung" type="button" data-map-pin="2" aria-label="Show Kaohsiung" aria-pressed="false"><span></span></button>
                     <svg class="map-route-v2" viewBox="0 0 100 150" aria-hidden="true"><path d="M59 22 C52 39 50 50 46 62 S38 94 30 111"/></svg>
                 </figure>
 
@@ -47,6 +47,9 @@
                     <div class="location-copy-v2 is-active" data-map-step="0"><span>Taoyuan</span><h3>Industrial parks meet the river</h3><p>Electronics and metal-processing effluent can introduce Pb and Cd into northern waterways.</p></div>
                     <div class="location-copy-v2" data-map-step="1"><span>Taichung</span><h3>River pollution reaches farmland</h3><p>Irrigation creates a direct path from contaminated water to soil, crops, and food safety.</p></div>
                     <div class="location-copy-v2" data-map-step="2"><span>Kaohsiung</span><h3>Industry meets the harbor</h3><p>Industrial discharge and busy port activity increase the metal load faced by coastal ecosystems.</p></div>
+                    <button class="map-next-v2" type="button" data-map-next aria-label="Show next location">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
                 </div>
             </div>
         </div>

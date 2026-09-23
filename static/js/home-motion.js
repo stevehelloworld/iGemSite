@@ -51,19 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
     waterStory.style.setProperty("--water-index", index);
   }
 
+  let mapIndex = 0;
+
   function setMapIndex(index) {
     if (!mapStory) return;
+    mapIndex = index;
     mapStory.querySelectorAll("[data-map-step]").forEach((item, itemIndex) => item.classList.toggle("is-active", itemIndex === index));
-    mapStory.querySelectorAll("[data-map-pin]").forEach((item, itemIndex) => item.classList.toggle("is-active", itemIndex === index));
+    mapStory.querySelectorAll("[data-map-pin]").forEach((item, itemIndex) => {
+      const isActive = itemIndex === index;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
     mapStory.style.setProperty("--map-index", index);
-  }
-
-  function updateMapStory() {
-    if (!mapStory) return;
-    const progress = storyProgress(mapStory);
-    const index = Math.min(2, Math.floor(progress * 3));
-    setMapIndex(index);
-    mapStory.style.setProperty("--map-progress", progress.toFixed(4));
   }
 
   function updateTreatmentStory() {
@@ -76,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function update() {
     updateHero();
-    updateMapStory();
     updateTreatmentStory();
     queued = false;
   }
@@ -88,10 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   mapStory?.querySelectorAll("[data-map-pin]").forEach((pin) => {
-    pin.addEventListener("click", () => {
-      const index = Number(pin.dataset.mapPin || 0);
-      const travel = Math.max(1, mapStory.offsetHeight - window.innerHeight);
-      window.scrollTo({ top: mapStory.offsetTop + travel * ((index + 0.5) / 3), behavior: reduceMotion ? "auto" : "smooth" });
+    pin.addEventListener("click", () => setMapIndex(Number(pin.dataset.mapPin || 0)));
+  });
+
+  mapStory?.querySelectorAll("[data-map-next]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const stepCount = mapStory.querySelectorAll("[data-map-step]").length || 1;
+      setMapIndex((mapIndex + 1) % stepCount);
     });
   });
 
