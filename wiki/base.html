@@ -63,18 +63,24 @@
 
   <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" />
 
-  <!-- Bootstrap Icons -->
+  <link href="{{ url_for('static', filename='fonts.css', v='20260922') }}" rel="stylesheet" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="{{ url_for('static', filename='icons.css', v='20260922') }}" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
 
 
   <!-- Custom CSS -->
 
-  <link href="{{ url_for('static', filename='style.css', v='20260820-flat-assets1') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='style.css', v='20260922') }}" rel="stylesheet" />
 
   {% if request.path == "/" %}
+  <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cadture-germ-capture.png', v='20260922') }}">
+  <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cd2-ion.png', v='20260922') }}">
+  <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/vis-logo-heart.png', v='20260915-heart1') }}">
   <link href="{{ url_for('static', filename='home.css', v='20260820-title-static1') }}" rel="stylesheet" />
   <link href="{{ url_for('static', filename='home-story-v2.css', v='20260824-story4') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='home-intro.css', v='20260922-capture2') }}" rel="stylesheet" />
   {% endif %}
 
   {% if request.path in ["/measurement", "/alternative-platform", "/safety-and-security"] %}
@@ -94,9 +100,9 @@
   <link href="{{ url_for('static', filename='team.css', v='20260917') }}" rel="stylesheet" />
   {% endif %}
 
-  <link href="{{ url_for('static', filename='textbook-nav.css', v='20260820-nav7') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='textbook-nav.css', v='20260922') }}" rel="stylesheet" />
 
-  <link href="{{ url_for('static', filename='textbook-theme.css', v='20260915') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='textbook-theme.css', v='20260922') }}" rel="stylesheet" />
 
   <title>{{ title }} | Cadture - iGEM 2026</title>
 
@@ -104,6 +110,33 @@
 
 <body
   class="textbook-nav-page page-{{ 'home' if request.path == '/' else request.path[1:]|replace('/', '-') }}{% if request.path == '/' %} home-page{% endif %}">
+
+  {% if request.path == "/" %}
+  <div class="home-intro" data-home-intro>
+    <div class="home-intro-chase" data-intro-chase aria-hidden="true">
+      <div class="home-intro-germ" data-intro-germ>
+        <img
+          src="{{ url_for('static', filename='assets/images/cadture-germ-capture.png', v='20260922') }}"
+          alt=""
+          draggable="false">
+      </div>
+      <div class="home-intro-ion" data-intro-ion>
+        <img
+          src="{{ url_for('static', filename='assets/images/cd2-ion.png', v='20260922') }}"
+          alt=""
+          draggable="false">
+      </div>
+    </div>
+    <img
+      class="home-intro-logo"
+      data-intro-logo
+      src="{{ url_for('static', filename='assets/images/vis-logo-heart.png', v='20260915-heart1') }}"
+      alt=""
+      aria-hidden="true"
+      draggable="false">
+    <button class="home-intro-skip" type="button" data-intro-skip>Skip intro</button>
+  </div>
+  {% endif %}
 
   <!-- Navigation -->
 
@@ -250,6 +283,7 @@
   {% endif %}
 
   {% if request.path == "/" %}
+  <script src="{{ url_for('static', filename='js/home-intro.js', v='20260922-capture2') }}" defer></script>
   <script src="{{ url_for('static', filename='js/home-motion.js', v='20260820-title-static1') }}" defer></script>
   {% endif %}
 

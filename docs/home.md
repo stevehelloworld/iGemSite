@@ -520,7 +520,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
 
                     <img
-                        src="https://static.igem.wiki/teams/6423/wikistatic/assests/images/sapling2.avif"
+                        src="static/assets/images/vis-logo-heart.png"
                         class="future-image">
                 </div>
             </article>
