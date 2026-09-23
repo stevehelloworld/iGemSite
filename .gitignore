@@ -2,6 +2,7 @@ env
 venv
 .vscode
 .idea
+.claude
 .DS_Store
 __pycache__
 public
