@@ -18,12 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const running = [];
   let finished = false;
   const easeOut = "cubic-bezier(.16, 1, .3, 1)";
-  const chaseEase = "cubic-bezier(.37, 0, .63, 1)";
 
   function play(element, keyframes, options) {
     const animation = element.animate(keyframes, { fill: "forwards", ...options });
     running.push(animation);
     return animation.finished.catch(() => undefined);
+  }
+
+  function spark() {
+    const flash = document.createElement("div");
+    flash.className = "home-intro-spark";
+    intro.appendChild(flash);
+    const animation = flash.animate(
+      [
+        { transform: "translate3d(-50%, -50%, 0) scale(.4)", opacity: 1 },
+        { transform: "translate3d(-50%, -50%, 0) scale(7)", opacity: 0 }
+      ],
+      { duration: 320, easing: "ease-out" }
+    );
+    animation.finished.catch(() => undefined).then(() => flash.remove());
   }
 
   function finishIntro() {
@@ -37,68 +50,85 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function runIntro() {
     const width = window.innerWidth;
-    const catchX = width * (width < 576 ? .2 : .23);
-    const curve = Math.min(76, window.innerHeight * .09);
+    const germWidth = germ.getBoundingClientRect().width;
+    const ionWidth = ion.getBoundingClientRect().width;
+    const halfGap = Math.min(34, Math.max(16, width * .022));
+    const germOffscreen = -(width / 2 + germWidth / 2 + 60);
+    const ionOffscreen = width / 2 + ionWidth / 2 + 60;
+    const germMeet = -halfGap;
+    const ionMeet = halfGap;
 
-    const germChase = play(germ, [
-      { opacity: 0, transform: `translate3d(calc(-50% - ${width * .72}px), calc(-50% + ${curve * .7}px), 0) rotate(2deg)` },
-      { opacity: 1, offset: .08 },
-      { opacity: 1, transform: `translate3d(calc(-50% - ${width * .48}px), calc(-50% - ${curve * .55}px), 0) rotate(-2deg)`, offset: .28 },
-      { opacity: 1, transform: `translate3d(calc(-50% - ${width * .18}px), calc(-50% + ${curve * .28}px), 0) rotate(1deg)`, offset: .58 },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${catchX - 68}px), -50%, 0) rotate(0deg)` }
-    ], { duration: 3000, easing: chaseEase });
+    // Slide straight toward each other from opposite edges, like Joy-Cons docking in.
+    const germSlide = play(germ, [
+      { opacity: 0, transform: `translate3d(calc(-50% + ${germOffscreen}px), -50%, 0)` },
+      { opacity: 1, offset: .12 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${germMeet - 14}px), -50%, 0)`, offset: .82 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0)` }
+    ], { duration: 680, easing: easeOut });
 
-    const ionChase = play(ion, [
-      { opacity: 0, transform: `translate3d(calc(-50% - ${width * .42}px), calc(-50% - ${curve * .18}px), 0) rotate(-3deg)` },
-      { opacity: 1, offset: .08 },
-      { opacity: 1, transform: `translate3d(calc(-50% - ${width * .23}px), calc(-50% - ${curve}px), 0) rotate(-7deg)`, offset: .27 },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${width * .02}px), calc(-50% - ${curve * .2}px), 0) rotate(4deg)`, offset: .52 },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${catchX + 92}px), calc(-50% + ${curve * .62}px), 0) rotate(7deg)`, offset: .78 },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${catchX + 42}px), -50%, 0) rotate(0deg)` }
-    ], { duration: 3000, easing: chaseEase });
+    const ionSlide = play(ion, [
+      { opacity: 0, transform: `translate3d(calc(-50% + ${ionOffscreen}px), -50%, 0)` },
+      { opacity: 1, offset: .12 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${ionMeet + 14}px), -50%, 0)`, offset: .82 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0)` }
+    ], { duration: 600, easing: easeOut });
 
-    await Promise.all([germChase, ionChase]);
+    await Promise.all([germSlide, ionSlide]);
     if (finished) return;
 
-    const logoSize = logo.getBoundingClientRect().width;
-    const startLeft = (width / 2) + catchX - (logoSize / 2);
-    const startTop = (window.innerHeight / 2) - (logoSize / 2);
-    logo.style.left = `${startLeft}px`;
-    logo.style.top = `${startTop}px`;
-
+    // Click: a quick snap on contact.
+    spark();
     await Promise.all([
       play(germ, [
-        { opacity: 1, filter: "blur(0)", transform: `translate3d(calc(-50% + ${catchX - 68}px), -50%, 0) scale(1)` },
-        { opacity: 0, filter: "blur(5px)", transform: `translate3d(calc(-50% + ${catchX}px), -50%, 0) scale(.72)` }
-      ], { duration: 280, easing: easeOut }),
+        { transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0) scale(1, 1)` },
+        { transform: `translate3d(calc(-50% + ${germMeet + 5}px), -50%, 0) scale(1.08, .92)`, offset: .45 },
+        { transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0) scale(1, 1)` }
+      ], { duration: 180, easing: "ease-out" }),
       play(ion, [
-        { opacity: 1, filter: "blur(0)", transform: `translate3d(calc(-50% + ${catchX + 42}px), -50%, 0) scale(1)` },
-        { opacity: 0, filter: "blur(5px)", transform: `translate3d(calc(-50% + ${catchX}px), -50%, 0) scale(.35)` }
-      ], { duration: 240, easing: easeOut }),
-      play(logo, [
-        { opacity: 0, transform: "scale(.62) rotate(-4deg)" },
-        { opacity: 1, transform: "scale(1) rotate(0deg)" }
-      ], { duration: 340, easing: easeOut })
+        { transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0) scale(1, 1)` },
+        { transform: `translate3d(calc(-50% + ${ionMeet - 5}px), -50%, 0) scale(1.08, .92)`, offset: .45 },
+        { transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0) scale(1, 1)` }
+      ], { duration: 180, easing: "ease-out" })
     ]);
     if (finished) return;
 
-    await new Promise((resolve) => window.setTimeout(resolve, 260));
-    if (finished) return;
-
-    const target = navbarLogo.getBoundingClientRect();
-    const targetScale = target.width / logoSize;
-    const deltaX = target.left - startLeft;
-    const deltaY = target.top - startTop;
+    // They click together and transition into our icon, centered on screen.
+    logo.style.left = "50%";
+    logo.style.top = "50%";
 
     await Promise.all([
+      play(germ, [
+        { opacity: 1, filter: "blur(0)", transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0) scale(1)` },
+        { opacity: 0, filter: "blur(4px)", transform: "translate3d(-50%, -50%, 0) scale(.4)" }
+      ], { duration: 220, easing: easeOut }),
+      play(ion, [
+        { opacity: 1, filter: "blur(0)", transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0) scale(1)` },
+        { opacity: 0, filter: "blur(4px)", transform: "translate3d(-50%, -50%, 0) scale(.4)" }
+      ], { duration: 220, easing: easeOut }),
       play(logo, [
-        { opacity: 1, transform: "translate3d(0, 0, 0) scale(1)" },
-        { opacity: 1, transform: `translate3d(${deltaX}px, ${deltaY}px, 0) scale(${targetScale})` }
-      ], { duration: 980, easing: easeOut }),
+        { opacity: 0, transform: "translate3d(-50%, -50%, 0) scale(.5) rotate(-6deg)" },
+        { opacity: 1, transform: "translate3d(-50%, -50%, 0) scale(1) rotate(0deg)" }
+      ], { duration: 320, easing: easeOut })
+    ]);
+    if (finished) return;
+
+    await new Promise((resolve) => window.setTimeout(resolve, 180));
+    if (finished) return;
+
+    // Reveal the real navbar logo underneath before the overlay fades away.
+    navbarLogo.style.opacity = "1";
+
+    // Enlarge the icon from the center and fade the whole intro out to reveal the page.
+    await Promise.all([
+      play(logo, [
+        { opacity: 1, transform: "translate3d(-50%, -50%, 0) scale(1)" },
+        { opacity: 1, transform: "translate3d(-50%, -50%, 0) scale(1.55)", offset: .7 },
+        { opacity: 0, transform: "translate3d(-50%, -50%, 0) scale(1.9)" }
+      ], { duration: 720, easing: easeOut }),
       play(intro, [
-        { opacity: 1, offset: .58 },
+        { opacity: 1, offset: .3 },
         { opacity: 0 }
-      ], { duration: 980, easing: easeOut })
+      ], { duration: 720, easing: easeOut })
     ]);
 
     finishIntro();
