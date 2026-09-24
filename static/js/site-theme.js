@@ -78,7 +78,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const link = document.createElement("a");
         link.href = `#${heading.id}`;
-        link.textContent = heading.textContent.trim();
+        const kicker = document.body.classList.contains("page-notebook")
+          ? heading.closest(".experiment-section-header")?.querySelector(".experiment-card-kicker")
+          : null;
+
+        if (kicker) {
+          const date = document.createElement("span");
+          date.className = "page-toc-date";
+          date.textContent = kicker.textContent.trim();
+          const title = document.createElement("span");
+          title.className = "page-toc-title";
+          title.textContent = heading.textContent.trim();
+          link.append(date, title);
+        } else {
+          link.textContent = heading.textContent.trim();
+        }
         nav.appendChild(link);
         links.push(link);
       });
