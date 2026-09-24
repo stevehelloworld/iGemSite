@@ -304,3 +304,54 @@
         transition-duration: .01ms !important;
     }
 }
+
+/* Adaptive navbar: takes on the colour beneath it and flips text light/dark. */
+.textbook-nav-page .navbar.fixed-top {
+    background: var(--nav-bg, #dceff4) !important;
+    transition: background-color 260ms ease, border-color 260ms ease;
+}
+
+.textbook-nav-page .navbar .nav-link {
+    transition: color 260ms ease;
+}
+
+.textbook-nav-page .navbar.nav-on-image.fixed-top {
+    border-bottom-color: transparent;
+}
+
+.textbook-nav-page .navbar.nav-on-dark.fixed-top {
+    border-bottom-color: rgba(255, 255, 255, .22);
+}
+
+.textbook-nav-page .navbar.nav-on-dark .nav-link:not(:hover):not(:focus-visible):not(.active) {
+    color: #f2fafc !important;
+}
+
+.textbook-nav-page .navbar.nav-on-dark .navbar-toggler {
+    border-color: rgba(255, 255, 255, .7);
+}
+
+.textbook-nav-page .navbar.nav-on-dark .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 1199px) {
+    .textbook-nav-page .navbar.nav-on-dark .navbar-collapse .nav-link:not(:hover):not(:focus-visible):not(.active) {
+        color: #285772 !important;
+    }
+}
+
+/* Home: the navbar floats over the hero image instead of sitting above it. */
+.home-page .homepage-hero {
+    margin-top: calc(-1 * var(--nav-offset));
+    min-height: 100svh;
+}
+
+.home-page .hero-container {
+    min-height: 100svh;
+    padding-top: var(--nav-offset);
+}
+
+.textbook-nav-page .navbar.nav-on-image.nav-on-dark.fixed-top {
+    border-bottom-color: transparent;
+}
