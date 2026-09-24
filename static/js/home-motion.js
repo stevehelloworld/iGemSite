@@ -72,6 +72,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   mapStory?.querySelectorAll("[data-map-pin]").forEach((pin) => {
+    const copy = mapStory.querySelector(`[data-map-step="${pin.dataset.mapPin}"]`);
+    if (copy) {
+      const preview = document.createElement("div");
+      preview.className = `map-pin-preview ${[...pin.classList].find((c) => c.startsWith("pin-")) || ""}`;
+      preview.setAttribute("aria-hidden", "true");
+      const title = document.createElement("strong");
+      title.textContent = copy.querySelector("span")?.textContent || "";
+      const text = document.createElement("span");
+      text.textContent = copy.querySelector("p")?.textContent || "";
+      preview.append(title, text);
+      pin.after(preview);
+    }
     pin.addEventListener("click", () => setMapIndex(Number(pin.dataset.mapPin || 0)));
   });
 
