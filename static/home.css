@@ -934,7 +934,11 @@
 }
 
 .home-page .hero-btn {
-    border: 2px solid rgba(255, 255, 255, .85);
+    border: 0;
+}
+
+.home-page .hero-motion-layer {
+    display: none;
 }
 
 .home-page .hero-scroll-cue {
