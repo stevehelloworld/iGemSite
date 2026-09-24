@@ -19,8 +19,27 @@ document.addEventListener("DOMContentLoaded", () => {
   let finished = false;
   const easeOut = "cubic-bezier(.16, 1, .3, 1)";
 
+  const FAST_RATE = 8;
+  let fast = false;
+  let wake = null;
+
+  function speedUp() {
+    if (fast || finished) return;
+    fast = true;
+    running.forEach((animation) => { animation.playbackRate = FAST_RATE; });
+    wake?.();
+  }
+
+  function pause(ms) {
+    return new Promise((resolve) => {
+      wake = resolve;
+      window.setTimeout(resolve, ms);
+    });
+  }
+
   function play(element, keyframes, options) {
     const animation = element.animate(keyframes, { fill: "forwards", ...options });
+    if (fast) animation.playbackRate = FAST_RATE;
     running.push(animation);
     return animation.finished.catch(() => undefined);
   }
@@ -112,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ]);
     if (finished) return;
 
-    await new Promise((resolve) => window.setTimeout(resolve, 550));
+    await pause(550);
     if (finished) return;
 
     // Fly the icon to the navbar logo in the top-left corner while the overlay fades out.
@@ -138,6 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     finishIntro();
   }
 
+  intro.addEventListener("pointerdown", speedUp);
   skip.addEventListener("click", finishIntro);
   window.addEventListener("pagehide", finishIntro, { once: true });
   runIntro().catch(finishIntro);
