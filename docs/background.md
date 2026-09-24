@@ -13,8 +13,8 @@
     <article class="problem-text-card">
       <h2>Why heavy metals matter</h2>
       <p>
-        Lead and cadmium pollution are especially concerning because both metals can persist in the
-        environment and cause harm even at low concentrations. Their movement through wastewater,
+        Cadmium pollution is especially concerning because it can persist in the
+        environment and cause harm even at low concentrations. Its movement through wastewater,
         soil, crops, and ecosystems makes early detection and effective remediation essential.
       </p>
     </article>

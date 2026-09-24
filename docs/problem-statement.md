@@ -43,7 +43,7 @@
     <p>
       Taiwan's cadmium rice-related incidents were first discovered in the 1980s. Since then,
       long-term national surveys have investigated farmland polluted by cadmium and other
-      heavy metals, including lead, copper, zinc, nickel, arsenic, chromium, and mercury.
+      heavy metals, including copper, zinc, nickel, arsenic, chromium, and mercury.
     </p>
     <p>
       Officially reported contaminated farmland is highly concentrated in three counties and
