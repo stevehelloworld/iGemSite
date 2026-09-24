@@ -3,20 +3,20 @@
     <div class="experiment-hero">
         <p class="experiment-eyebrow">VIS iGEM 2026</p>
         <h2>Meet the Team</h2>
-        <p class="experiment-lead">Cadture is built by our project leads, wet lab, and dry lab members, alongside the PIs, instructors, and supporting crew who guide us. Portraits are coming once we take them together in September — until then, here's everyone in their own words.</p>
+        <p class="experiment-lead">Cadture is built by our student leaders, wet lab, and dry lab members, alongside the PIs, instructors, and supporting crew who guide us. Portraits are coming once we take them together in September — until then, here's everyone in their own words.</p>
     </div>
 
-    <!-- Project Lead -->
+    <!-- Student Leader -->
     <section class="experiment-section">
         <div class="experiment-section-header">
             <p class="experiment-card-kicker">Leadership</p>
-            <h3>Project Lead</h3>
+            <h3>Student Leader</h3>
         </div>
         <div class="team-member-list">
             <div class="team-member-entry">
                 <div class="experiment-section-layout">
                     <article class="experiment-section-copy team-member-copy">
-                        <p class="experiment-card-kicker">Project Lead</p>
+                        <p class="experiment-card-kicker">Student Leader</p>
                         <h4>Ohanna Liu</h4>
                         <p>Hi, I am Ohanna and currently in my senior year of high school. Academically, my interests fall in biology, public health, and medicine, with a strong addiction in exploring life expectancy. Outside of academics, I love sleeping, swimming, and taking photos of the clouds.</p>
                     </article>
@@ -29,7 +29,7 @@
             <div class="team-member-entry">
                 <div class="experiment-section-layout">
                     <article class="experiment-section-copy team-member-copy">
-                        <p class="experiment-card-kicker">Project Lead</p>
+                        <p class="experiment-card-kicker">Student Leader</p>
                         <h4>Lucy Wang</h4>
                         <p class="team-bio-pending">Self-introduction coming soon.</p>
                     </article>
@@ -140,18 +140,18 @@
         </div>
     </section>
 
-    <!-- PIs -->
+    <!-- Primary PI -->
     <section class="experiment-section">
         <div class="experiment-section-header">
-            <p class="experiment-card-kicker">PIs</p>
-            <h3>PIs</h3>
+            <p class="experiment-card-kicker">Primary PI</p>
+            <h3>Primary PI</h3>
         </div>
         <div class="team-member-list">
             <div class="team-member-entry">
                 <div class="experiment-section-layout">
                     <article class="experiment-section-copy team-member-copy">
-                        <p class="experiment-card-kicker">Secondary PI</p>
-                        <h4>Hsin-Hung David Chou</h4>
+                        <p class="experiment-card-kicker">Primary PI</p>
+                        <h4>Li-Chi Huang</h4>
                         <p class="team-bio-pending">Self-introduction coming soon.</p>
                     </article>
                     <div class="experiment-figure-slot team-member-photo">
@@ -160,12 +160,22 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Secondary PI -->
+    <section class="experiment-section">
+        <div class="experiment-section-header">
+            <p class="experiment-card-kicker">Secondary PI</p>
+            <h3>Secondary PI</h3>
+        </div>
+        <div class="team-member-list">
             <div class="team-member-entry">
                 <div class="experiment-section-layout">
                     <article class="experiment-section-copy team-member-copy">
-                        <p class="experiment-card-kicker">Primary PI</p>
-                        <h4>Richard Huang</h4>
-                        <p class="team-bio-pending">Self-introduction coming soon.</p>
+                        <p class="experiment-card-kicker">Secondary PI</p>
+                        <h4>Hsin-Hung David Chou</h4>
+                        <p>I am a principle investigator in National Taiwan University. I take systems approaches to bridge molecular biology and evolution. The central goal has been to quantitatively decode gene expression, elucidate the functional diversity of regulatory elements, and unravel the principles of gene regulation across the domain Bacteria.</p>
                     </article>
                     <div class="experiment-figure-slot team-member-photo">
                         <span>Photo</span>
