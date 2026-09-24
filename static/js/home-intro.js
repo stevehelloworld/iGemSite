@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navbarLogo.style.opacity = "1";
     document.body.classList.remove("home-intro-active");
     intro.remove();
+    window.dispatchEvent(new Event("scroll"));
   }
 
   async function runIntro() {

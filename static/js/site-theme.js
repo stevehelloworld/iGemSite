@@ -218,7 +218,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const update = () => {
     queued = false;
-    const result = sample();
+    let result = sample();
+    if (!result && document.body.classList.contains("home-page") && window.scrollY < 80) {
+      result = { image: true, light: false };
+    }
     if (!result) {
       nav.style.removeProperty("--nav-bg");
       nav.classList.remove("nav-on-dark", "nav-on-image");

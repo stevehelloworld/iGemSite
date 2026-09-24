@@ -355,3 +355,7 @@
 .textbook-nav-page .navbar.nav-on-image.nav-on-dark.fixed-top {
     border-bottom-color: transparent;
 }
+
+.textbook-nav-page .navbar.nav-on-image.fixed-top {
+    --nav-bg: transparent;
+}
