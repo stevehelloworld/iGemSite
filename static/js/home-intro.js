@@ -64,14 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
       { opacity: 1, offset: .12 },
       { opacity: 1, transform: `translate3d(calc(-50% + ${germMeet - 14}px), -50%, 0)`, offset: .82 },
       { opacity: 1, transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0)` }
-    ], { duration: 440, easing: easeOut });
+    ], { duration: 950, easing: easeOut });
 
     const ionSlide = play(ion, [
       { opacity: 0, transform: `translate3d(calc(-50% + ${ionOffscreen}px), -50%, 0)` },
       { opacity: 1, offset: .12 },
       { opacity: 1, transform: `translate3d(calc(-50% + ${ionMeet + 14}px), -50%, 0)`, offset: .82 },
       { opacity: 1, transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0)` }
-    ], { duration: 380, easing: easeOut });
+    ], { duration: 850, easing: easeOut });
 
     await Promise.all([germSlide, ionSlide]);
     if (finished) return;
@@ -83,12 +83,12 @@ document.addEventListener("DOMContentLoaded", () => {
         { transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0) scale(1, 1)` },
         { transform: `translate3d(calc(-50% + ${germMeet + 5}px), -50%, 0) scale(1.08, .92)`, offset: .45 },
         { transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0) scale(1, 1)` }
-      ], { duration: 120, easing: "ease-out" }),
+      ], { duration: 240, easing: "ease-out" }),
       play(ion, [
         { transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0) scale(1, 1)` },
         { transform: `translate3d(calc(-50% + ${ionMeet - 5}px), -50%, 0) scale(1.08, .92)`, offset: .45 },
         { transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0) scale(1, 1)` }
-      ], { duration: 120, easing: "ease-out" })
+      ], { duration: 240, easing: "ease-out" })
     ]);
     if (finished) return;
 
@@ -100,35 +100,39 @@ document.addEventListener("DOMContentLoaded", () => {
       play(germ, [
         { opacity: 1, filter: "blur(0)", transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0) scale(1)` },
         { opacity: 0, filter: "blur(4px)", transform: "translate3d(-50%, -50%, 0) scale(.4)" }
-      ], { duration: 220, easing: easeOut }),
+      ], { duration: 480, easing: easeOut }),
       play(ion, [
         { opacity: 1, filter: "blur(0)", transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0) scale(1)` },
         { opacity: 0, filter: "blur(4px)", transform: "translate3d(-50%, -50%, 0) scale(.4)" }
-      ], { duration: 220, easing: easeOut }),
+      ], { duration: 480, easing: easeOut }),
       play(logo, [
         { opacity: 0, transform: "translate3d(-50%, -50%, 0) scale(.5) rotate(-6deg)" },
         { opacity: 1, transform: "translate3d(-50%, -50%, 0) scale(1) rotate(0deg)" }
-      ], { duration: 320, easing: easeOut })
+      ], { duration: 620, easing: easeOut })
     ]);
     if (finished) return;
 
-    await new Promise((resolve) => window.setTimeout(resolve, 180));
+    await new Promise((resolve) => window.setTimeout(resolve, 550));
     if (finished) return;
 
-    // Reveal the real navbar logo underneath before the overlay fades away.
-    navbarLogo.style.opacity = "1";
+    // Fly the icon to the navbar logo in the top-left corner while the overlay fades out.
+    const logoSize = logo.getBoundingClientRect().width;
+    const target = navbarLogo.getBoundingClientRect();
+    const deltaX = target.left + target.width / 2 - window.innerWidth / 2;
+    const deltaY = target.top + target.height / 2 - window.innerHeight / 2;
+    const targetScale = target.width / logoSize;
 
-    // Enlarge the icon from the center and fade the whole intro out to reveal the page.
+    window.setTimeout(() => { if (!finished) navbarLogo.style.opacity = "1"; }, 1150);
+
     await Promise.all([
       play(logo, [
         { opacity: 1, transform: "translate3d(-50%, -50%, 0) scale(1)" },
-        { opacity: 1, transform: "translate3d(-50%, -50%, 0) scale(1.55)", offset: .7 },
-        { opacity: 0, transform: "translate3d(-50%, -50%, 0) scale(1.9)" }
-      ], { duration: 720, easing: easeOut }),
+        { opacity: 1, transform: `translate3d(calc(-50% + ${deltaX}px), calc(-50% + ${deltaY}px), 0) scale(${targetScale})` }
+      ], { duration: 1400, easing: "cubic-bezier(.65, 0, .2, 1)" }),
       play(intro, [
-        { opacity: 1, offset: .3 },
+        { opacity: 1, offset: .6 },
         { opacity: 0 }
-      ], { duration: 720, easing: easeOut })
+      ], { duration: 1400, easing: "linear" })
     ]);
 
     finishIntro();
