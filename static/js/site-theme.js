@@ -122,6 +122,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  const notebookEntries = [...document.querySelectorAll("details.notebook-entry")];
+  if (notebookEntries.length) {
+    const openEntryForHash = () => {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      if (!id) return;
+      const entry = document.getElementById(id)?.closest("details.notebook-entry");
+      if (entry) entry.open = true;
+    };
+
+    openEntryForHash();
+    window.addEventListener("hashchange", openEntryForHash);
+    document.querySelectorAll(".page-toc a").forEach((link) => {
+      link.addEventListener("click", () => {
+        const entry = document.querySelector(link.getAttribute("href"))?.closest("details.notebook-entry");
+        if (entry) entry.open = true;
+      });
+    });
+
+    document.querySelectorAll("[data-notebook-toggle]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const open = button.dataset.notebookToggle === "open";
+        notebookEntries.forEach((entry) => { entry.open = open; });
+      });
+    });
+  }
+
   if (!reduceMotion) {
     const revealSelectors = [
       ".problem-content-grid",
