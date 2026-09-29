@@ -55,9 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
       ".platform-candidate h3"
     ].join(",");
 
+    const headingLimit = document.body.classList.contains("page-notebook") ? Infinity : 12;
     const headings = [...pageContent.querySelectorAll(headingSelectors)]
       .filter((heading) => heading.textContent.trim())
-      .slice(0, 12);
+      .slice(0, headingLimit);
 
     if (headings.length < 2) {
       toc.hidden = true;
