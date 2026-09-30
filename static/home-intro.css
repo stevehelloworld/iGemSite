@@ -83,6 +83,18 @@
   will-change: transform, opacity;
 }
 
+.home-intro-ring {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(40, 87, 114, .16);
+  border-top-color: var(--intro-ink);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
 .home-intro-skip {
   position: absolute;
   right: clamp(18px, 3vw, 40px);

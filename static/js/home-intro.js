@@ -44,6 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
     return animation.finished.catch(() => undefined);
   }
 
+  function spinRing(size, duration) {
+    const el = document.createElement("div");
+    el.className = "home-intro-ring";
+    el.style.width = `${size}px`;
+    el.style.height = `${size}px`;
+    intro.appendChild(el);
+    const done = play(el, [
+      { transform: "translate3d(-50%, -50%, 0) rotate(0deg)", opacity: 0 },
+      { opacity: 1, offset: .1 },
+      { opacity: 1, offset: .85 },
+      { transform: "translate3d(-50%, -50%, 0) rotate(900deg)", opacity: 0 }
+    ], { duration, easing: "linear" });
+    return done.then(() => el.remove());
+  }
+
   function spark() {
     const flash = document.createElement("div");
     flash.className = "home-intro-spark";
@@ -132,7 +147,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ]);
     if (finished) return;
 
-    await pause(550);
+    // A loading-style ring spins around the freshly-formed icon.
+    await spinRing(logo.getBoundingClientRect().width * 1.32, 900);
+    if (finished) return;
+
+    await pause(250);
     if (finished) return;
 
     // Fly the icon to the navbar logo in the top-left corner while the overlay fades out.
