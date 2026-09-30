@@ -720,24 +720,6 @@
     display: none;
 }
 
-.textbook-nav-page .experiment-progress-rail {
-    border: 2px solid #d6c25b;
-    border-radius: 8px;
-    background: var(--vis-yellow);
-    box-shadow: none;
-    backdrop-filter: none;
-}
-
-.textbook-nav-page .experiment-progress-icon {
-    background: var(--vis-ink);
-    box-shadow: none;
-}
-
-.textbook-nav-page .experiment-progress-track,
-.textbook-nav-page .experiment-progress-fill {
-    background: var(--vis-teal);
-}
-
 /* Mock dashboards still read as data, but use the same notebook materials. */
 .textbook-nav-page .mock-page-hero {
     display: grid;

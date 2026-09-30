@@ -6,12 +6,6 @@
     <div class="experiment-tag-row" aria-label="Experimental workflow"><span>DNA extraction</span><span>Inverse PCR</span><span>XbaI / SalI digestion</span><span>T4 ligation</span><span>Colony PCR</span></div>
   </div>
 
-  <aside class="experiment-progress-rail" aria-label="Experiments page progress">
-    <button class="experiment-progress-icon" type="button" aria-label="Back to top"><i class="bi bi-flask"></i></button>
-    <div class="experiment-progress-track" aria-hidden="true"><span class="experiment-progress-fill"></span><span class="experiment-progress-thumb"></span></div>
-    <div class="experiment-progress-current">Overview</div>
-  </aside>
-
   <section class="experiment-flow-panel" aria-labelledby="experiment-flow-title">
     <div class="experiment-flow-header"><p class="experiment-card-kicker">Workflow</p><h3 id="experiment-flow-title">From template plasmid to screened colonies</h3><p>The same workflow was applied across MT1, MT2, MT3, and MT4, with repeated ligation and colony-PCR rounds when screening did not produce a usable result.</p></div>
     <div class="experiment-flow-diagram">
