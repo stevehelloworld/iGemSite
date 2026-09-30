@@ -2,15 +2,20 @@
   <div class="experiment-hero">
     <p class="experiment-eyebrow">LABORATORY NOTEBOOK</p>
     <h2>Wet Lab Chronological Record</h2>
-    <p class="experiment-lead">This notebook records the procedures, calculations, observations, and troubleshooting steps documented between June 23 and July 21, 2026.</p>
+    <p class="experiment-lead">This notebook records the procedures, calculations, observations, and troubleshooting steps documented between June 23 and August 4, 2026. Each entry is collapsed by default — click a date to expand its full protocol.</p>
+  </div>
+
+  <div class="notebook-toolbar">
+    <button type="button" data-notebook-toggle="open">Expand all</button>
+    <button type="button" data-notebook-toggle="close">Collapse all</button>
   </div>
 
   <!-- June 23, 2026 -->
-  <section class="experiment-section">
-    <div class="experiment-section-header">
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
       <p class="experiment-card-kicker">June 23, 2026</p>
       <h3>DNA Extraction and Inverse Phusion PCR</h3>
-    </div>
+    </summary>
     <div class="experiment-section-layout">
       <article class="experiment-section-copy">
         <h4>DNA Extraction Protocol</h4>
@@ -86,14 +91,14 @@
         <small>Plasmid MH45 MiniPrep isolation and linearized vector amplicon</small>
       </div>
     </div>
-  </section>
+  </details>
 
   <!-- June 25, 2026 -->
-  <section class="experiment-section experiment-section-reverse">
-    <div class="experiment-section-header">
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
       <p class="experiment-card-kicker">June 25, 2026</p>
       <h3>DNA Cleaning, Digestion, and Primer Reconstitution</h3>
-    </div>
+    </summary>
     <div class="experiment-section-layout">
       <div class="experiment-figure-slot experiment-figure-slot-wide">
         <span>Cleanup & Digestion</span>
@@ -214,14 +219,14 @@
         <p><strong>Thermocycle:</strong> 37 °C for 2 hr; 4 °C for ∞.</p>
       </article>
     </div>
-  </section>
+  </details>
 
   <!-- June 29, 2026 -->
-  <section class="experiment-section">
-    <div class="experiment-section-header">
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
       <p class="experiment-card-kicker">June 29, 2026</p>
       <h3>Ligation and Bacterial Cultivation</h3>
-    </div>
+    </summary>
     <div class="experiment-section-layout">
       <article class="experiment-section-copy">
         <h4>DNA Cleaning Update</h4>
@@ -291,14 +296,14 @@
         <small>T4 ligation formulation and E. coli Ek317 liquid culture</small>
       </div>
     </div>
-  </section>
+  </details>
 
   <!-- June 30, 2026 -->
-  <section class="experiment-section experiment-section-reverse">
-    <div class="experiment-section-header">
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
       <p class="experiment-card-kicker">June 30, 2026</p>
       <h3>MT2 PCR, Competent Cells, and Electroporation</h3>
-    </div>
+    </summary>
     <div class="experiment-section-layout">
       <div class="experiment-figure-slot experiment-figure-slot-wide">
         <span>Electroporation & Gel</span>
@@ -348,14 +353,14 @@
         <p><strong>MT2 Composition:</strong> 22 ml TAE, 0.22 g Agarose (1%).</p>
       </article>
     </div>
-  </section>
+  </details>
 
   <!-- July 2, 2026 -->
-  <section class="experiment-section">
-    <div class="experiment-section-header">
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
       <p class="experiment-card-kicker">July 2, 2026</p>
       <h3>Colony PCR (MT1) and Digestion (MT2)</h3>
-    </div>
+    </summary>
     <div class="experiment-section-layout">
       <article class="experiment-section-copy">
         <h4>Colony PCR Protocol</h4>
@@ -402,14 +407,14 @@
         <small>16-grid master plate and MT1 colony PCR amplicon</small>
       </div>
     </div>
-  </section>
+  </details>
 
   <!-- July 6, 2026 -->
-  <section class="experiment-section experiment-section-reverse">
-    <div class="experiment-section-header">
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
       <p class="experiment-card-kicker">July 6, 2026</p>
       <h3>MT2 Ligation and Unsuccessful Colony PCR</h3>
-    </div>
+    </summary>
     <div class="experiment-section-layout">
       <div class="experiment-figure-slot experiment-figure-slot-wide">
         <span>Screening Assessment</span>
@@ -425,21 +430,27 @@
         </ul>
 
         <h4>Colony PCR (MT3 & MT4)</h4>
-        <p>Master Mix (36x) prepared using Taq Reaction Mixture components for a total volume of 504 µl.</p>
+        <p>Picked 16 colonies each from the MT3 and MT4 transformant plates onto mapped 16-grid plates (LB+Km). Template prep: touch each colony with a pipette tip, resuspend in 10 µl ddH<sub>2</sub>O, heat at 96 °C for 12 min. Master Mix (36x) prepared using Taq Reaction Mixture components for a total volume of 504 µl; 1 µl sample + 14 µl master mix, then gel electrophoresis.</p>
 
         <div class="experiment-note-card">
           <p class="mb-0"><strong>Experimental Result Note:</strong> "Because the result came out unsuccessfully, we’re choosing more samples and reducing Colony PCR for MT3 & 4."</p>
         </div>
+
+        <h4>Bacterial Cultivation</h4>
+        <p>Strain <em>E. coli</em> Ek317 (without plasmid): 5,000 µl LB inoculated with a small amount of Ek317, shaker at 37 °C, 225 rpm.</p>
+
+        <h4>16-Colony Grid for MT3 & MT4</h4>
+        <p>Picked 16 colonies from the original plate onto a gridded plate and incubated at 37 °C.</p>
       </article>
     </div>
-  </section>
+  </details>
 
   <!-- July 7, 2026 -->
-  <section class="experiment-section">
-    <div class="experiment-section-header">
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
       <p class="experiment-card-kicker">July 7, 2026</p>
       <h3>MT2 Transformation Redo</h3>
-    </div>
+    </summary>
     <div class="experiment-section-layout">
       <article class="experiment-section-copy">
         <h4>Electro-Competent Cell Prep</h4>
@@ -472,14 +483,14 @@
         <small>Electroporation pulse conditions and MT2 transformant colonies</small>
       </div>
     </div>
-  </section>
+  </details>
 
   <!-- July 8 ~ July 16, 2026 -->
-  <section class="experiment-section experiment-section-reverse">
-    <div class="experiment-section-header">
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
       <p class="experiment-card-kicker">July 8 ~ July 16, 2026</p>
       <h3>Troubleshooting and Colony PCR Series</h3>
-    </div>
+    </summary>
     <div class="experiment-section-layout">
       <div class="experiment-figure-slot experiment-figure-slot-wide">
         <span>Troubleshooting Gels</span>
@@ -522,14 +533,14 @@
         </div>
       </article>
     </div>
-  </section>
+  </details>
 
   <!-- July 20, 2026 -->
-  <section class="experiment-section">
-    <div class="experiment-section-header">
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
       <p class="experiment-card-kicker">July 20, 2026</p>
       <h3>Ligation Redo for MT2, 3, and 4</h3>
-    </div>
+    </summary>
     <div class="experiment-section-layout">
       <article class="experiment-section-copy">
         <h4>Revised Ligation Protocol</h4>
@@ -572,18 +583,18 @@
         <small>T4 reaction adjustments and buffer troubleshooting records</small>
       </div>
     </div>
-  </section>
+  </details>
 
   <!-- July 21, 2026 -->
-  <section class="experiment-section experiment-section-reverse">
-    <div class="experiment-section-header">
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
       <p class="experiment-card-kicker">July 21, 2026</p>
       <h3>Final Transformation and Sequencing Prep</h3>
-    </div>
+    </summary>
     <div class="experiment-section-layout">
       <div class="experiment-figure-slot experiment-figure-slot-wide">
         <span>Sequencing Plates</span>
-        <small>Streaked clones and 1/3-plate glycerol/streak stocks of PV1S1</small>
+        <small>Streaked clones and 1/3-plate glycerol/streak stocks of PVIS1</small>
       </div>
 
       <article class="experiment-section-copy">
@@ -596,7 +607,7 @@
 
         <h4>Sequence Plating + Stock</h4>
         <ul>
-          <li><strong>Colonies Picked:</strong> Selected transformant colonies PV1S1 #2, #9, and #15 for sequencing.</li>
+          <li><strong>Colonies Picked:</strong> Selected transformant colonies PVIS1 #2, #9, and #15 for sequencing.</li>
           <li><strong>Procedure:</strong> Used an inoculating loop to pick from the original plate.</li>
         </ul>
         <ul style="list-style-type: circle; margin-left: 20px;">
@@ -606,5 +617,564 @@
         <p><strong>Incubation:</strong> Incubated at 37 °C.</p>
       </article>
     </div>
-  </section>
+  </details>
+
+  <!-- July 22, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">July 22, 2026</p>
+      <h3>Empty Plates, Fresh LB+Km Medium, and a Six-Sample Ligation</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>Plating Check for MT2, MT3, and MT4</h4>
+        <div class="experiment-note-card experiment-note-bug">
+          <p class="mb-0"><strong>Observation:</strong> The plates from the July 21 transformation were expected to show colonies, but no colonies grew on any plate.</p>
+        </div>
+
+        <h4>Cell Culture Medium (LB + Kanamycin)</h4>
+        <p>Fresh plates were prepared so the bacteria have a selective medium to grow on.</p>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Sodium chloride</td><td>10 g</td></tr>
+              <tr><td>Bacterial tryptone</td><td>10 g</td></tr>
+              <tr><td>Yeast extract</td><td>5 g</td></tr>
+              <tr><td>Water</td><td>Up to 1 L</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Send the mixture for sterilization, add kanamycin after sterilization, then pour the medium into plates.</p>
+
+        <h4>Ligation for MT2, MT3, and MT4 (Six Samples)</h4>
+        <p>Covalently join the digested vector (plasmid) and MT inserts using T4 ligase. This round tests both the HF-buffer and GC-buffer plasmid preparations against every insert.</p>
+        <h5>Reaction Mixture</h5>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Components</th>
+                <th>Volume/Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Vector DNA</td><td>100 ng</td></tr>
+              <tr><td>Insert DNA</td><td>3:1 molar ratio</td></tr>
+              <tr><td>T4 DNA Ligase Buffer</td><td>2.0 µl</td></tr>
+              <tr><td>T4 DNA Ligase</td><td>0.3 µl</td></tr>
+              <tr><td>ddH<sub>2</sub>O</td><td>Up to 20 µl</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td><strong>20 µl</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h5>Samples (6 in total)</h5>
+        <ol>
+          <li>HF plasmid + MT2</li>
+          <li>HF plasmid + MT3</li>
+          <li>HF plasmid + MT4</li>
+          <li>GC plasmid + MT2</li>
+          <li>GC plasmid + MT3</li>
+          <li>GC plasmid + MT4</li>
+        </ol>
+        <h5>Vector / Insert and Water Volumes</h5>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Volume</th>
+                <th>ddH<sub>2</sub>O</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>MT2 insert</td><td>2.02 µl</td><td>13.45 µl</td></tr>
+              <tr><td>MT3 insert</td><td>2.11 µl</td><td>13.36 µl</td></tr>
+              <tr><td>MT4 insert</td><td>0.82 µl</td><td>14.65 µl</td></tr>
+              <tr><td>Vector plasmid (HF/GC)</td><td>2.33 µl</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Thermocycle:</strong> 22 °C for 1 hr; 4 °C for ∞.</p>
+
+        <h4>DNA Clean</h4>
+        <p>Same Zymo-Spin protocol as June 25, except: ligation product : binding buffer = 1:5 for all 6 samples, and 10 µl ddH<sub>2</sub>O is added at the last step instead of 20 µl.</p>
+
+        <h4>Transformation via Electroporation (All 6 Samples)</h4>
+        <ol>
+          <li>Combine 4 µl target DNA (MT2, 3, 4) with 40 µl prepared electro-competent cells.</li>
+          <li><strong>System Setup:</strong> 1800 V, 25 µF, 200 Ω, 1 mm cuvette.</li>
+          <li>Immediately add 800 µl warm SOC medium (pre-heated at 37 °C) to the cuvette. No pipetting.</li>
+          <li>Transfer the entire suspension to a 25 mL culture tube.</li>
+          <li>Incubate at 37 °C with shaking (225 rpm) for 1 hour.</li>
+        </ol>
+
+        <h4>Dilution & Plating (Three Concentrations)</h4>
+        <ul>
+          <li><strong>10<sup>−2</sup>:</strong> 0.4 µl bacterial suspension + 39.6 µl 0.9% saline.</li>
+          <li><strong>10<sup>−1</sup>:</strong> 4 µl bacterial suspension + 36 µl 0.9% saline.</li>
+          <li><strong>Whole cell:</strong> centrifuge the suspension at 6,900 rpm for 8 min, take 40 µl of the suspension on top, discard the flow-through, then pipette the remaining cells in the tube with those 40 µl.</li>
+        </ul>
+        <p>6 samples in total, each with 2 plates: one plate for whole cell, and a second plate with 10<sup>−1</sup> and 10<sup>−2</sup> on each half. Cell-spreader technique as on June 30.</p>
+      </article>
+
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Six-Sample Ligation</span>
+        <small>HF vs GC plasmid preparations paired with MT2, MT3, and MT4 inserts</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- July 23, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">July 23, 2026</p>
+      <h3>Colony PCR of the Six-Sample Transformants</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Colony Screening</span>
+        <small>2% agarose gel of the first six colonies from PVIS2, PVIS3, and PVIS4</small>
+      </div>
+
+      <article class="experiment-section-copy">
+        <h4>Colony PCR (MT2, MT3, MT4; MT1 = Control)</h4>
+        <ol>
+          <li><strong>Grid Plate:</strong> Selected 13 colonies from PVIS2, 15 from PVIS3, and 15 from PVIS4.</li>
+          <li><strong>Template Prep:</strong> Touched the first six colonies of each with a pipette tip and resuspended in 10 µl sterile ddH<sub>2</sub>O.</li>
+          <li>Heat sample at 96 °C for 12 min. Samples: PVIS2 ×6, PVIS3 ×6, PVIS4 ×6, PVIS1 ×2.</li>
+        </ol>
+
+        <h5>Taq Reaction Mixture (Master Mix)</h5>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Components</th>
+                <th>1x</th>
+                <th>22x</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>ddH<sub>2</sub>O</td><td>11.35 µl</td><td>249.7 µl</td></tr>
+              <tr><td>10x Buffer</td><td>1.5 µl</td><td>33 µl</td></tr>
+              <tr><td>DMSO</td><td>0.6 µl</td><td>13.2 µl</td></tr>
+              <tr><td>10 mM dNTP</td><td>0.3 µl</td><td>6.6 µl</td></tr>
+              <tr><td>50 mM Primer 1 (TK07 P1)</td><td>0.09 µl</td><td>1.98 µl</td></tr>
+              <tr><td>50 mM Primer 2 (PU12 P2)</td><td>0.09 µl</td><td>1.98 µl</td></tr>
+              <tr><td>Taq Polymerase</td><td>0.07 µl</td><td>1.54 µl</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td><strong>14 µl</strong></td><td><strong>308 µl</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Thermocycle:</strong> 94 °C (2 min); [94 °C (30 s), 57.6 °C (10 s), 72 °C (2 min)] × 35 cycles; 72 °C (3 min 30 s); 4 °C (∞).</p>
+        <p>Take 14 µl master mix and 1 µl sample. Remember to centrifuge the sample for 1 minute first.</p>
+
+        <h4>Gel Electrophoresis</h4>
+        <ul>
+          <li>100 bp ladder</li>
+          <li>2% agarose gel: 44 mL TAE + 0.88 g agarose</li>
+        </ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- July 24, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">July 24, 2026</p>
+      <h3>Colony PCR of the Remaining Colonies</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>Colony PCR (MT2, MT3, MT4; MT1 = Control)</h4>
+        <ol>
+          <li><strong>Grid Plate:</strong> Selected the rest of the colonies from yesterday (PVIS2 #7–13; PVIS3 and PVIS4 #7–15).</li>
+          <li><strong>Template Prep:</strong> Touched each selected colony with a pipette tip and resuspended in 10 µl sterile ddH<sub>2</sub>O.</li>
+          <li>Heat sample at 96 °C for 12 min. Samples: PVIS2 ×7, PVIS3 ×9, PVIS4 ×9, PVIS1 ×2.</li>
+        </ol>
+
+        <h5>Taq Reaction Mixture (Master Mix)</h5>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Components</th>
+                <th>1x</th>
+                <th>30x</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>ddH<sub>2</sub>O</td><td>11.35 µl</td><td>340.5 µl</td></tr>
+              <tr><td>10x Buffer</td><td>1.5 µl</td><td>45 µl</td></tr>
+              <tr><td>DMSO</td><td>0.6 µl</td><td>18 µl</td></tr>
+              <tr><td>10 mM dNTP</td><td>0.3 µl</td><td>9 µl</td></tr>
+              <tr><td>50 mM Primer 1 (TK07 P1)</td><td>0.09 µl</td><td>2.7 µl</td></tr>
+              <tr><td>50 mM Primer 2 (PU12 P2)</td><td>0.09 µl</td><td>2.7 µl</td></tr>
+              <tr><td>Taq Polymerase</td><td>0.07 µl</td><td>2.1 µl</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td><strong>14 µl</strong></td><td><strong>420 µl</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Thermocycle:</strong> 94 °C (2 min); [94 °C (30 s), 57.6 °C (10 s), 72 °C (2 min)] × 35 cycles; 72 °C (3 min 30 s); 4 °C (∞).</p>
+        <p>Take 14 µl master mix and 1 µl sample. The sample needs to be centrifuged for 1 minute first.</p>
+
+        <h4>Gel Electrophoresis</h4>
+        <ul>
+          <li>100 bp ladder</li>
+          <li>2% agarose gel: 60 mL TAE + 1.2 g agarose</li>
+        </ul>
+      </article>
+
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Second Screening Gel</span>
+        <small>Remaining PVIS2–4 colonies against the PVIS1 control</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- July 28, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">July 28, 2026</p>
+      <h3>Restart from the Plasmid: Inverse PCR, MT PCR, DpnI, and Stocks</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Rebuilt Starting Material</span>
+        <small>Linearized plasmid, fresh MT2–MT4 amplicons, and PVIS1 glycerol stocks</small>
+      </div>
+
+      <article class="experiment-section-copy">
+        <h4>Inverse Phusion PCR (Plasmid)</h4>
+        <p>Amplify the entire plasmid vector outward to linearize the plasmid and add the restriction enzyme cutting sites. Two samples were run with exactly the same mixture.</p>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Components</th>
+                <th>Volumes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>DNA Template</td><td>20 ng</td></tr>
+              <tr><td>5x Phusion HF Buffer</td><td>6 µl</td></tr>
+              <tr><td>10 mM dNTP</td><td>0.6 µl</td></tr>
+              <tr><td>Primer 1 (VISP1)</td><td>0.3 µl</td></tr>
+              <tr><td>Primer 2 (VISP2)</td><td>0.3 µl</td></tr>
+              <tr><td>Phusion Polymerase</td><td>0.3 µl</td></tr>
+              <tr><td>ddH<sub>2</sub>O</td><td>22.01 µl</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td><strong>30 µl</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li><strong>Template Volume:</strong> Target Mass / Stock Concentration = 20 / 40.67 ≈ 0.49 µl.</li>
+          <li><strong>Thermocycle:</strong> 98 °C (30 s); [98 °C (10 s), 61 °C (20 s), 72 °C (1:45)] × 30 cycles; 72 °C (3 min); 4 °C (∞).</li>
+          <li><strong>Gel:</strong> 1% gel, 1 kb ladder, 22 mL TAE + 0.22 g agarose.</li>
+        </ul>
+
+        <h4>Phusion PCR for MT2, MT3, and MT4</h4>
+        <p><strong>Primer Combinations:</strong> MT2 = Primer 3 & 5; MT3 = Primer 3 & 6; MT4 = Primer 3 & 7.</p>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Components</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>DNA Template</td><td>2 µl</td></tr>
+              <tr><td>5x Phusion HF Buffer</td><td>6 µl</td></tr>
+              <tr><td>10 mM dNTP</td><td>0.6 µl</td></tr>
+              <tr><td>Primer 1</td><td>0.3 µl</td></tr>
+              <tr><td>Primer 2</td><td>0.3 µl</td></tr>
+              <tr><td>Phusion Polymerase</td><td>0.3 µl</td></tr>
+              <tr><td>ddH<sub>2</sub>O</td><td>20.5 µl</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td><strong>30 µl</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li><strong>Thermocycle:</strong> 98 °C (30 s); [98 °C (10 s), 60.8 °C (20 s), 72 °C (30 s)] × 30 cycles; 72 °C (3 min); 4 °C (∞).</li>
+          <li><strong>Gel:</strong> 100 bp ladder, 2% gel, 22 mL TAE + 0.44 g agarose.</li>
+        </ul>
+
+        <h4>DNA Clean (Plasmid)</h4>
+        <p>Same protocol as June 25, except for the binding buffer amount and the last centrifuge step. Plasmid : binding buffer = 1:2 (25 µl : 50 µl). Last step: after adding sterile water, centrifuge into the same 1.5 mL tube.</p>
+
+        <h4>DpnI Digestion (Plasmid)</h4>
+        <p>Digest the methylated template DNA (parental plasmid isolated from <em>E. coli</em>).</p>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Components</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Plasmid (DNA Template)</td><td>20 µl</td></tr>
+              <tr><td>Buffer</td><td>2 µl</td></tr>
+              <tr><td>DpnI</td><td>0.5 µl</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td><strong>22.5 µl</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Thermocycle:</strong> 37 °C for 2 hr; 4 °C for ∞.</p>
+
+        <h4>DNA Clean (MT2, MT3, MT4)</h4>
+        <p>MT constructs : binding buffer = 1:5 (25 µl : 125 µl). Last step: centrifuge into the same 1.5 mL tube for the same MT construct.</p>
+
+        <h4>Making 0.9% Saline</h4>
+        <p>0.45 g NaCl + ddH<sub>2</sub>O up to 50 mL.</p>
+
+        <h4>Making Glycerol Stock for PVIS1 #2, #9, #15</h4>
+        <ul>
+          <li><strong>Material:</strong> 1 mL 0.9% saline + 87 µl DMSO + bacteria, in a bacteria stock tube (glycerol stock vial).</li>
+          <li>Use an inoculating loop to pick up the bacteria from each plate. For each strain, keep 2 stocks (6 vials in total).</li>
+          <li>After picking up the bacteria, vortex the vial until the bacteria are fully dissolved.</li>
+        </ul>
+
+        <h4>DNA Clean (Plasmid after DpnI)</h4>
+        <p>Same protocol as June 25 except for the binding buffer amount: plasmid : binding buffer = 1:2 (22.5 µl : 45 µl).</p>
+      </article>
+    </div>
+  </details>
+
+  <!-- July 30, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">July 30, 2026</p>
+      <h3>Third Transformation of MT2, MT3, and MT4</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>DNA Clean (MT2, MT3, MT4)</h4>
+        <p>Same protocol as June 25, except: ligation product : binding buffer = 1:2 (20 µl : 40 µl), and 10 µl ddH<sub>2</sub>O is added at the last step instead of 20 µl.</p>
+
+        <h4>Transformation via Electroporation</h4>
+        <ol>
+          <li>Combine 4 µl target DNA (MT2 / 3 / 4) with 40 µl prepared electro-competent cells.</li>
+          <li><strong>System Setup:</strong> 1800 V, 25 µF, 200 Ω, 1 mm cuvette.</li>
+          <li>Immediately add 800 µl warmed SOC medium to the cuvette. No pipetting.</li>
+          <li>Transfer the entire suspension to a culture tube.</li>
+          <li>Incubate at 37 °C with shaking (225 rpm) for 1.5 hours.</li>
+        </ol>
+
+        <h4>Dilution & Plating (Three Concentrations)</h4>
+        <ul>
+          <li><strong>10<sup>−2</sup>:</strong> 0.4 µl bacterial suspension + 39.6 µl 0.9% saline.</li>
+          <li><strong>10<sup>−1</sup>:</strong> 4 µl bacterial suspension + 36 µl 0.9% saline.</li>
+          <li><strong>Whole cell:</strong> centrifuge at 6,900 rpm for 8 min, take 40 µl of the suspension on top, discard the flow-through, then pipette the remaining cells with those 40 µl.</li>
+        </ul>
+        <p>3 samples in total, each with 2 plates: one with whole cell, the second with 10<sup>−1</sup> and 10<sup>−2</sup> on each half. Cell-spreader technique as on June 30.</p>
+      </article>
+
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Third-Round Plates</span>
+        <small>Whole-cell and diluted platings for MT2, MT3, and MT4</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- July 31, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">July 31, 2026</p>
+      <h3>Colony PCR of the Third-Round Transformants</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Third Screening Gel</span>
+        <small>First eight colonies each from PVIS2, PVIS3, and PVIS4</small>
+      </div>
+
+      <article class="experiment-section-copy">
+        <h4>Colony PCR (MT2, MT3, MT4; MT1 = Control)</h4>
+        <ol>
+          <li><strong>Grid Plate:</strong> Selected 20 colonies each from PVIS2, PVIS3, and PVIS4.</li>
+          <li><strong>Template Prep:</strong> Touched the first eight colonies of each with a pipette tip and resuspended in 10 µl sterile ddH<sub>2</sub>O.</li>
+          <li>Heat sample at 96 °C for 12 min. Samples: PVIS2 ×8, PVIS3 ×8, PVIS4 ×8, PVIS1 ×2.</li>
+        </ol>
+
+        <h5>Taq Reaction Mixture (Master Mix)</h5>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Components</th>
+                <th>1x</th>
+                <th>28x</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>ddH<sub>2</sub>O</td><td>11.35 µl</td><td>317.8 µl</td></tr>
+              <tr><td>10x Buffer</td><td>1.5 µl</td><td>42 µl</td></tr>
+              <tr><td>DMSO</td><td>0.6 µl</td><td>16.8 µl</td></tr>
+              <tr><td>10 mM dNTP</td><td>0.3 µl</td><td>8.4 µl</td></tr>
+              <tr><td>50 mM Primer 1 (TK07 P1)</td><td>0.09 µl</td><td>2.52 µl</td></tr>
+              <tr><td>50 mM Primer 2 (PU12 P2)</td><td>0.09 µl</td><td>2.52 µl</td></tr>
+              <tr><td>Taq Polymerase</td><td>0.07 µl</td><td>1.96 µl</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td><strong>14 µl</strong></td><td><strong>392 µl</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Thermocycle:</strong> 94 °C (2 min); [94 °C (30 s), 57.6 °C (10 s), 72 °C (2 min)] × 35 cycles; 72 °C (3 min 30 s); 4 °C (∞).</p>
+        <p>Take 1 µl sample + 14 µl master mix. Remember to centrifuge the sample for 1 minute first.</p>
+
+        <h4>Gel Electrophoresis</h4>
+        <ul>
+          <li>60 mL TAE</li>
+          <li>2% gel, 1.2 g agarose</li>
+        </ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- August 3, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">August 3, 2026</p>
+      <h3>Rebuilding the Constructs: PCR, Digestion, and Ligation</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>Phusion PCR for MT2, MT3, and MT4 (Two Samples per MT)</h4>
+        <p><strong>Primer Combinations:</strong> MT2 = Primer 3 & 5; MT3 = Primer 3 & 6; MT4 = Primer 3 & 7.</p>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Components</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>DNA Template</td><td>2 µl</td></tr>
+              <tr><td>5x Phusion HF Buffer</td><td>6 µl</td></tr>
+              <tr><td>10 mM dNTP</td><td>0.6 µl</td></tr>
+              <tr><td>Primer 1</td><td>0.3 µl</td></tr>
+              <tr><td>Primer 2</td><td>0.3 µl</td></tr>
+              <tr><td>Phusion Polymerase</td><td>0.3 µl</td></tr>
+              <tr><td>ddH<sub>2</sub>O</td><td>20.5 µl</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td><strong>30 µl</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Thermocycle:</strong> 98 °C (30 s); [98 °C (10 s), 60.8 °C (20 s), 72 °C (30 s)] × 30 cycles; 72 °C (3 min); 4 °C (∞).</p>
+
+        <h4>Gel Electrophoresis</h4>
+        <ul>
+          <li>22 mL TAE + 0.44 g agarose (2% gel)</li>
+          <li>1 kb ladder</li>
+        </ul>
+
+        <h4>DNA Clean (Binding Buffer : Sample = 5:1)</h4>
+        <p>Same protocol as June 25, except that the last step combines the 2 samples from the same MT.</p>
+
+        <h4>Concentration Tests</h4>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Sample</th>
+                <th>Concentration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>MT2</td><td>30</td></tr>
+              <tr><td>MT3</td><td>37.5</td></tr>
+              <tr><td>MT4</td><td>18.9</td></tr>
+              <tr><td>Plasmid extractions (×3)</td><td>109.3, 117.2, 110.1</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Plasmid Extraction</h4>
+        <p>Same QIA Spin MiniPrep protocol as June 23.</p>
+
+        <h4>Restriction Enzyme Digestion (MT + Plasmid)</h4>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Components</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>DNA fragments</td><td>~1000</td></tr>
+              <tr><td>10x Buffer (Green)</td><td>3 µl</td></tr>
+              <tr><td>Restriction Enzyme (SalI)</td><td>1 µl</td></tr>
+              <tr><td>Restriction Enzyme (XbaI)</td><td>1 µl</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li><strong>Thermocycle:</strong> 37 °C for 2 hr; 4 °C for ∞.</li>
+          <li><strong>Gel:</strong> 1% gel, 1 kb ladder, 130 V, 18 min.</li>
+        </ul>
+
+        <h4>DNA Clean</h4>
+        <p>Same protocol as June 25 for the MT constructs.</p>
+
+        <h4>Ligation</h4>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr>
+                <th>Components</th>
+                <th>Volume/Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Vector DNA</td><td>100 ng (8 µl)</td></tr>
+              <tr><td>Insert DNA</td><td>3:1 molar ratio (8 µl)</td></tr>
+              <tr><td>T4 DNA Ligase Buffer</td><td>2 µl</td></tr>
+              <tr><td>T4 DNA Ligase</td><td>0.2 µl</td></tr>
+              <tr><td>ddH<sub>2</sub>O</td><td>Up to 20 µl (1.8 µl)</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td><strong>20 µl</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Digestion Gel</span>
+        <small>MT2–MT4 amplicons and freshly extracted plasmid after SalI/XbaI digestion</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- August 4, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">August 4, 2026</p>
+      <h3>Sequencing, Cleanup, and Transformation</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Sequencing Submission</span>
+        <small>Samples sent for sequencing before the next transformation round</small>
+      </div>
+
+      <article class="experiment-section-copy">
+        <h4>Sequencing</h4>
+        <p>Samples were sent for sequencing.</p>
+
+        <h4>DNA Clean</h4>
+        <p>Same protocol as June 25; plasmid : binding buffer = 1:2.</p>
+
+        <h4>Transformation via Electroporation</h4>
+        <p>Transformation carried out following the electroporation protocol above.</p>
+      </article>
+    </div>
+  </details>
 </section>

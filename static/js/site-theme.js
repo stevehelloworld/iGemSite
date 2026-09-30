@@ -55,9 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
       ".platform-candidate h3"
     ].join(",");
 
+    const headingLimit = document.body.classList.contains("page-notebook") ? Infinity : 12;
     const headings = [...pageContent.querySelectorAll(headingSelectors)]
       .filter((heading) => heading.textContent.trim())
-      .slice(0, 12);
+      .slice(0, headingLimit);
 
     if (headings.length < 2) {
       toc.hidden = true;
@@ -120,6 +121,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
       headings.forEach((heading) => tocObserver.observe(heading));
     }
+  }
+
+  const notebookEntries = [...document.querySelectorAll("details.notebook-entry")];
+  if (notebookEntries.length) {
+    const openEntryForHash = () => {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      if (!id) return;
+      const entry = document.getElementById(id)?.closest("details.notebook-entry");
+      if (entry) entry.open = true;
+    };
+
+    openEntryForHash();
+    window.addEventListener("hashchange", openEntryForHash);
+    document.querySelectorAll(".page-toc a").forEach((link) => {
+      link.addEventListener("click", () => {
+        const entry = document.querySelector(link.getAttribute("href"))?.closest("details.notebook-entry");
+        if (entry) entry.open = true;
+      });
+    });
+
+    document.querySelectorAll("[data-notebook-toggle]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const open = button.dataset.notebookToggle === "open";
+        notebookEntries.forEach((entry) => { entry.open = open; });
+      });
+    });
   }
 
   if (!reduceMotion) {

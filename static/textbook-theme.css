@@ -178,6 +178,104 @@
     }
 }
 
+/* Notebook: every dated entry is a collapsible details/summary. */
+.page-notebook .notebook-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 8px;
+}
+
+.page-notebook .notebook-toolbar button {
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 0;
+    background: var(--vis-ink);
+    color: #fff;
+    font-family: var(--vis-display);
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+    clip-path: polygon(1% 5%, 98% 0, 100% 91%, 4% 100%);
+}
+
+.page-notebook .notebook-toolbar button:hover,
+.page-notebook .notebook-toolbar button:focus-visible {
+    background: #174b68;
+    outline: none;
+}
+
+.page-notebook .notebook-entry > summary {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-right: 44px;
+    cursor: pointer;
+    list-style: none;
+    scroll-margin-top: calc(var(--nav-offset) + 20px);
+}
+
+.page-notebook .notebook-entry > summary::-webkit-details-marker {
+    display: none;
+}
+
+.page-notebook .notebook-entry > summary .experiment-card-kicker {
+    align-self: flex-start;
+    margin: 0;
+}
+
+.page-notebook .notebook-entry > summary h3 {
+    scroll-margin-top: calc(var(--nav-offset) + 20px);
+    transition: color 160ms ease;
+}
+
+.page-notebook .notebook-entry > summary::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border-right: 3px solid var(--vis-ink);
+    border-bottom: 3px solid var(--vis-ink);
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 200ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.page-notebook .notebook-entry[open] > summary::after {
+    transform: translateY(-30%) rotate(-135deg);
+}
+
+.page-notebook .notebook-entry > summary:hover h3,
+.page-notebook .notebook-entry > summary:focus-visible h3 {
+    color: var(--vis-teal);
+}
+
+.page-notebook .notebook-entry > summary:focus-visible {
+    outline: 2px solid var(--vis-teal);
+    outline-offset: 4px;
+}
+
+.page-notebook .notebook-entry:not([open]) > summary {
+    margin-bottom: 0;
+}
+
+.page-notebook .notebook-entry[open] > .experiment-section-layout {
+    animation: vis-section-enter .4s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-notebook .notebook-entry > summary::after,
+    .page-notebook .notebook-entry > summary h3 {
+        transition: none;
+    }
+
+    .page-notebook .notebook-entry[open] > .experiment-section-layout {
+        animation: none;
+    }
+}
+
 .textbook-nav-page:not(.home-page) .homepage-content > .row {
     margin: 0;
 }

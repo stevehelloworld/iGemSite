@@ -44,7 +44,7 @@
 
                 <div class="location-window-v2">
                     <img src="static/assets/images/taiwan-scenes/taiwan-city-vignettes-optimized.jpg" alt="Three colored-pencil scenes showing industrial river discharge, agricultural irrigation, and harbor pollution in Taiwan">
-                    <div class="location-copy-v2 is-active" data-map-step="0"><span>Taoyuan</span><h3>Industrial parks meet the river</h3><p>Electronics and metal-processing effluent can introduce Pb and Cd into northern waterways.</p></div>
+                    <div class="location-copy-v2 is-active" data-map-step="0"><span>Taoyuan</span><h3>Industrial parks meet the river</h3><p>Electronics and metal-processing effluent can introduce Cd into northern waterways.</p></div>
                     <div class="location-copy-v2" data-map-step="1"><span>Taichung</span><h3>River pollution reaches farmland</h3><p>Irrigation creates a direct path from contaminated water to soil, crops, and food safety.</p></div>
                     <div class="location-copy-v2" data-map-step="2"><span>Kaohsiung</span><h3>Industry meets the harbor</h3><p>Industrial discharge and busy port activity increase the metal load faced by coastal ecosystems.</p></div>
                     <button class="map-next-v2" type="button" data-map-next aria-label="Show next location">
@@ -453,7 +453,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </figure>
 
             <ol class="treatment-steps-v2" aria-label="Biological heavy-metal treatment steps">
-                <li class="is-active" data-treatment-step="0"><button type="button" aria-pressed="true"><span>1</span><strong>Detect</strong><small>Identify Pb²⁺ and Cd²⁺ in the incoming water.</small></button></li>
+                <li class="is-active" data-treatment-step="0"><button type="button" aria-pressed="true"><span>1</span><strong>Detect</strong><small>Identify Cd²⁺ in the incoming water.</small></button></li>
                 <li data-treatment-step="1"><button type="button" aria-pressed="false"><span>2</span><strong>Capture</strong><small>Metallothionein domains hold the target ions.</small></button></li>
                 <li data-treatment-step="2"><button type="button" aria-pressed="false"><span>3</span><strong>Separate</strong><small>A membrane keeps engineered bacteria inside the system.</small></button></li>
                 <li data-treatment-step="3"><button type="button" aria-pressed="false"><span>4</span><strong>Recover</strong><small>Bound metals are collected instead of becoming sludge.</small></button></li>
