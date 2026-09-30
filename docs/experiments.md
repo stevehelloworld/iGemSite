@@ -37,43 +37,43 @@
     <div class="experiment-flow-header"><p class="experiment-card-kicker">Predicted structures</p><h3 id="mt-structure-title">AlphaFold predictions of the four MT constructs</h3><p>Each panel pairs the predicted 3D model (left) with its Predicted Aligned Error plot (right). A tight green diagonal means the model is confident about how each part of the sequence sits relative to the rest. Expand any card for four more rotations of the same prediction.</p></div>
     <div class="experiment-grid mt-structure-grid">
       <figure class="mt-structure-card">
-        <img src="static/assets/images/mt-structures/mt1-iamt2/view-1.png" alt="Predicted 3D model of the MT1 (IaMT2) construct beside its predicted aligned error plot" loading="lazy">
+        <img src="static/assets/images/mt-structures/mt1-iamt2/view-1.webp" alt="Predicted 3D model of the MT1 (IaMT2) construct beside its predicted aligned error plot" loading="lazy">
         <figcaption><strong>MT1 · IaMT2</strong><span>Primer 3 + Primer 4</span></figcaption>
         <details class="mt-structure-more"><summary>More views</summary><div class="mt-structure-views">
-          <img src="static/assets/images/mt-structures/mt1-iamt2/view-2.png" alt="MT1 (IaMT2) prediction, rotation 2" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt1-iamt2/view-3.png" alt="MT1 (IaMT2) prediction, rotation 3" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt1-iamt2/view-4.png" alt="MT1 (IaMT2) prediction, rotation 4" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt1-iamt2/view-5.png" alt="MT1 (IaMT2) prediction, rotation 5" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt1-iamt2/view-2.webp" alt="MT1 (IaMT2) prediction, rotation 2" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt1-iamt2/view-3.webp" alt="MT1 (IaMT2) prediction, rotation 3" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt1-iamt2/view-4.webp" alt="MT1 (IaMT2) prediction, rotation 4" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt1-iamt2/view-5.webp" alt="MT1 (IaMT2) prediction, rotation 5" loading="lazy">
         </div></details>
       </figure>
       <figure class="mt-structure-card">
-        <img src="static/assets/images/mt-structures/mt2-smta/view-1.png" alt="Predicted 3D model of the MT2 (SmtA) construct beside its predicted aligned error plot" loading="lazy">
+        <img src="static/assets/images/mt-structures/mt2-smta/view-1.webp" alt="Predicted 3D model of the MT2 (SmtA) construct beside its predicted aligned error plot" loading="lazy">
         <figcaption><strong>MT2 · SmtA</strong><span>Primer 3 + Primer 5</span></figcaption>
         <details class="mt-structure-more"><summary>More views</summary><div class="mt-structure-views">
-          <img src="static/assets/images/mt-structures/mt2-smta/view-2.png" alt="MT2 (SmtA) prediction, rotation 2" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt2-smta/view-3.png" alt="MT2 (SmtA) prediction, rotation 3" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt2-smta/view-4.png" alt="MT2 (SmtA) prediction, rotation 4" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt2-smta/view-5.png" alt="MT2 (SmtA) prediction, rotation 5" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt2-smta/view-2.webp" alt="MT2 (SmtA) prediction, rotation 2" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt2-smta/view-3.webp" alt="MT2 (SmtA) prediction, rotation 3" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt2-smta/view-4.webp" alt="MT2 (SmtA) prediction, rotation 4" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt2-smta/view-5.webp" alt="MT2 (SmtA) prediction, rotation 5" loading="lazy">
         </div></details>
       </figure>
       <figure class="mt-structure-card">
-        <img src="static/assets/images/mt-structures/mt3-egr-09832/view-1.png" alt="Predicted 3D model of the MT3 (EGR_09832) construct beside its predicted aligned error plot" loading="lazy">
+        <img src="static/assets/images/mt-structures/mt3-egr-09832/view-1.webp" alt="Predicted 3D model of the MT3 (EGR_09832) construct beside its predicted aligned error plot" loading="lazy">
         <figcaption><strong>MT3 · EGR_09832</strong><span>Primer 3 + Primer 6</span></figcaption>
         <details class="mt-structure-more"><summary>More views</summary><div class="mt-structure-views">
-          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-2.png" alt="MT3 (EGR_09832) prediction, rotation 2" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-3.png" alt="MT3 (EGR_09832) prediction, rotation 3" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-4.png" alt="MT3 (EGR_09832) prediction, rotation 4" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-5.png" alt="MT3 (EGR_09832) prediction, rotation 5" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-2.webp" alt="MT3 (EGR_09832) prediction, rotation 2" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-3.webp" alt="MT3 (EGR_09832) prediction, rotation 3" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-4.webp" alt="MT3 (EGR_09832) prediction, rotation 4" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-5.webp" alt="MT3 (EGR_09832) prediction, rotation 5" loading="lazy">
         </div></details>
       </figure>
       <figure class="mt-structure-card">
-        <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-1.png" alt="Predicted 3D model of the MT4 (OsMTI-1b) construct beside its predicted aligned error plot" loading="lazy">
+        <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-1.webp" alt="Predicted 3D model of the MT4 (OsMTI-1b) construct beside its predicted aligned error plot" loading="lazy">
         <figcaption><strong>MT4 · OsMTI-1b</strong><span>Primer 3 + Primer 7</span></figcaption>
         <details class="mt-structure-more"><summary>More views</summary><div class="mt-structure-views">
-          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-2.png" alt="MT4 (OsMTI-1b) prediction, rotation 2" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-3.png" alt="MT4 (OsMTI-1b) prediction, rotation 3" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-4.png" alt="MT4 (OsMTI-1b) prediction, rotation 4" loading="lazy">
-          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-5.png" alt="MT4 (OsMTI-1b) prediction, rotation 5" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-2.webp" alt="MT4 (OsMTI-1b) prediction, rotation 2" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-3.webp" alt="MT4 (OsMTI-1b) prediction, rotation 3" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-4.webp" alt="MT4 (OsMTI-1b) prediction, rotation 4" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-5.webp" alt="MT4 (OsMTI-1b) prediction, rotation 5" loading="lazy">
         </div></details>
       </figure>
     </div>
