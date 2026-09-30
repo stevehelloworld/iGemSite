@@ -179,6 +179,11 @@
 }
 
 /* Experiments: predicted-structure gallery for the four MT constructs. */
+/* Size each card to its own content so opening one card's views doesn't stretch its row-mate. */
+.page-experiments .mt-structure-grid {
+    align-items: start;
+}
+
 .page-experiments .mt-structure-card {
     margin: 0;
     padding: 14px;
