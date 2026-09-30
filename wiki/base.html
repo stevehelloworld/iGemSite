@@ -74,13 +74,14 @@
 
   <link href="{{ url_for('static', filename='style.css', v='20260922') }}" rel="stylesheet" />
 
-  {% if request.path == "/" %}
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cadture-germ-capture.png', v='20260922') }}">
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cd2-ion.png', v='20260922') }}">
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/vis-logo-heart.png', v='20260915-heart1') }}">
+  <link href="{{ url_for('static', filename='home-intro.css', v='20260930') }}" rel="stylesheet" />
+
+  {% if request.path == "/" %}
   <link href="{{ url_for('static', filename='home.css', v='20260924b') }}" rel="stylesheet" />
   <link href="{{ url_for('static', filename='home-story-v2.css', v='20260924') }}" rel="stylesheet" />
-  <link href="{{ url_for('static', filename='home-intro.css', v='20260930') }}" rel="stylesheet" />
   {% endif %}
 
   {% if request.path in ["/measurement", "/alternative-platform", "/safety-and-security"] %}
@@ -111,7 +112,6 @@
 <body
   class="textbook-nav-page page-{{ 'home' if request.path == '/' else request.path[1:]|replace('/', '-') }}{% if request.path == '/' %} home-page{% endif %}">
 
-  {% if request.path == "/" %}
   <div class="home-intro" data-home-intro>
     <div class="home-intro-chase" data-intro-chase aria-hidden="true">
       <div class="home-intro-germ" data-intro-germ>
@@ -136,7 +136,6 @@
       draggable="false">
     <button class="home-intro-skip" type="button" data-intro-skip>Skip intro</button>
   </div>
-  {% endif %}
 
   <!-- Navigation -->
 
@@ -282,8 +281,9 @@
   <script src="{{ url_for('static', filename='js/human-practices.js', v='20260820-journey1') }}"></script>
   {% endif %}
 
-  {% if request.path == "/" %}
   <script src="{{ url_for('static', filename='js/home-intro.js', v='20260930') }}" defer></script>
+
+  {% if request.path == "/" %}
   <script src="{{ url_for('static', filename='js/home-motion.js', v='20260924') }}" defer></script>
   {% endif %}
 
