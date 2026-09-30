@@ -178,6 +178,82 @@
     }
 }
 
+/* Experiments: predicted-structure gallery for the four MT constructs. */
+.page-experiments .mt-structure-card {
+    margin: 0;
+    padding: 14px;
+    border: 2px solid #cfe3e7;
+    border-radius: 8px;
+    background: var(--vis-white);
+}
+
+.page-experiments .mt-structure-card > img,
+.page-experiments .mt-structure-views img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background: #0b0b0b;
+}
+
+.page-experiments .mt-structure-card figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 12px;
+    margin: 12px 0 0;
+}
+
+.page-experiments .mt-structure-card figcaption strong {
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    font-size: 1.05rem;
+}
+
+.page-experiments .mt-structure-card figcaption span {
+    color: var(--vis-copy);
+    font-size: .88rem;
+}
+
+.page-experiments .mt-structure-more {
+    margin-top: 10px;
+}
+
+.page-experiments .mt-structure-more > summary {
+    display: inline-block;
+    padding: 6px 10px;
+    background: var(--vis-yellow);
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    font-size: .78rem;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    clip-path: polygon(1% 7%, 98% 0, 100% 90%, 4% 100%);
+}
+
+.page-experiments .mt-structure-more > summary::-webkit-details-marker {
+    display: none;
+}
+
+.page-experiments .mt-structure-more[open] > summary {
+    background: var(--vis-ink);
+    color: #fff;
+}
+
+.page-experiments .mt-structure-views {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 820px) {
+    .page-experiments .mt-structure-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Notebook: every dated entry is a collapsible details/summary. */
 .page-notebook .notebook-toolbar {
     display: flex;

@@ -25,12 +25,58 @@
 
   <section class="experiment-figure-section" aria-labelledby="construct-table-title">
     <div class="experiment-flow-header"><p class="experiment-card-kicker">Construct set</p><h3 id="construct-table-title">Primer combinations used for MT amplification</h3></div>
-    <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Variant</th><th>Primer pair</th><th>Annealing temperature</th><th>Initial ligation status</th></tr></thead><tbody>
-      <tr><td>MT1</td><td>Primer 3 + Primer 4</td><td>59.8 °C</td><td>Ligated June 29</td></tr>
-      <tr><td>MT2</td><td>Primer 3 + Primer 5</td><td>60.8 °C</td><td>Deferred and repeated</td></tr>
-      <tr><td>MT3</td><td>Primer 3 + Primer 6</td><td>60.8 °C</td><td>Ligated June 29</td></tr>
-      <tr><td>MT4</td><td>Primer 3 + Primer 7</td><td>60.8 °C</td><td>Ligated June 29</td></tr>
+    <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Variant</th><th>Gene</th><th>Primer pair</th><th>Annealing temperature</th><th>Initial ligation status</th></tr></thead><tbody>
+      <tr><td>MT1</td><td>IaMT2</td><td>Primer 3 + Primer 4</td><td>59.8 °C</td><td>Ligated June 29</td></tr>
+      <tr><td>MT2</td><td>SmtA</td><td>Primer 3 + Primer 5</td><td>60.8 °C</td><td>Deferred and repeated</td></tr>
+      <tr><td>MT3</td><td>EGR_09832</td><td>Primer 3 + Primer 6</td><td>60.8 °C</td><td>Ligated June 29</td></tr>
+      <tr><td>MT4</td><td>OsMTI-1b</td><td>Primer 3 + Primer 7</td><td>60.8 °C</td><td>Ligated June 29</td></tr>
     </tbody></table></div>
+  </section>
+
+  <section class="experiment-figure-section" aria-labelledby="mt-structure-title">
+    <div class="experiment-flow-header"><p class="experiment-card-kicker">Predicted structures</p><h3 id="mt-structure-title">AlphaFold predictions of the four MT constructs</h3><p>Each panel pairs the predicted 3D model (left) with its Predicted Aligned Error plot (right). A tight green diagonal means the model is confident about how each part of the sequence sits relative to the rest. Expand any card for four more rotations of the same prediction.</p></div>
+    <div class="experiment-grid mt-structure-grid">
+      <figure class="mt-structure-card">
+        <img src="static/assets/images/mt-structures/mt1-iamt2/view-1.png" alt="Predicted 3D model of the MT1 (IaMT2) construct beside its predicted aligned error plot" loading="lazy">
+        <figcaption><strong>MT1 · IaMT2</strong><span>Primer 3 + Primer 4</span></figcaption>
+        <details class="mt-structure-more"><summary>More views</summary><div class="mt-structure-views">
+          <img src="static/assets/images/mt-structures/mt1-iamt2/view-2.png" alt="MT1 (IaMT2) prediction, rotation 2" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt1-iamt2/view-3.png" alt="MT1 (IaMT2) prediction, rotation 3" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt1-iamt2/view-4.png" alt="MT1 (IaMT2) prediction, rotation 4" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt1-iamt2/view-5.png" alt="MT1 (IaMT2) prediction, rotation 5" loading="lazy">
+        </div></details>
+      </figure>
+      <figure class="mt-structure-card">
+        <img src="static/assets/images/mt-structures/mt2-smta/view-1.png" alt="Predicted 3D model of the MT2 (SmtA) construct beside its predicted aligned error plot" loading="lazy">
+        <figcaption><strong>MT2 · SmtA</strong><span>Primer 3 + Primer 5</span></figcaption>
+        <details class="mt-structure-more"><summary>More views</summary><div class="mt-structure-views">
+          <img src="static/assets/images/mt-structures/mt2-smta/view-2.png" alt="MT2 (SmtA) prediction, rotation 2" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt2-smta/view-3.png" alt="MT2 (SmtA) prediction, rotation 3" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt2-smta/view-4.png" alt="MT2 (SmtA) prediction, rotation 4" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt2-smta/view-5.png" alt="MT2 (SmtA) prediction, rotation 5" loading="lazy">
+        </div></details>
+      </figure>
+      <figure class="mt-structure-card">
+        <img src="static/assets/images/mt-structures/mt3-egr-09832/view-1.png" alt="Predicted 3D model of the MT3 (EGR_09832) construct beside its predicted aligned error plot" loading="lazy">
+        <figcaption><strong>MT3 · EGR_09832</strong><span>Primer 3 + Primer 6</span></figcaption>
+        <details class="mt-structure-more"><summary>More views</summary><div class="mt-structure-views">
+          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-2.png" alt="MT3 (EGR_09832) prediction, rotation 2" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-3.png" alt="MT3 (EGR_09832) prediction, rotation 3" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-4.png" alt="MT3 (EGR_09832) prediction, rotation 4" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt3-egr-09832/view-5.png" alt="MT3 (EGR_09832) prediction, rotation 5" loading="lazy">
+        </div></details>
+      </figure>
+      <figure class="mt-structure-card">
+        <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-1.png" alt="Predicted 3D model of the MT4 (OsMTI-1b) construct beside its predicted aligned error plot" loading="lazy">
+        <figcaption><strong>MT4 · OsMTI-1b</strong><span>Primer 3 + Primer 7</span></figcaption>
+        <details class="mt-structure-more"><summary>More views</summary><div class="mt-structure-views">
+          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-2.png" alt="MT4 (OsMTI-1b) prediction, rotation 2" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-3.png" alt="MT4 (OsMTI-1b) prediction, rotation 3" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-4.png" alt="MT4 (OsMTI-1b) prediction, rotation 4" loading="lazy">
+          <img src="static/assets/images/mt-structures/mt4-osmti-1b/view-5.png" alt="MT4 (OsMTI-1b) prediction, rotation 5" loading="lazy">
+        </div></details>
+      </figure>
+    </div>
   </section>
 
   <section class="experiment-section">
@@ -63,7 +109,7 @@
       <details class="experiment-log-entry" open><summary><span class="experiment-log-date">July 9–16</span><strong>Repeated colony-PCR screening</strong></summary><p>MT2, MT3, and MT4 were screened across several rounds. MT1 controls succeeded on July 14, while MT2 failed and no result was observed for the MT3 and MT4 screens.</p></details>
       <details class="experiment-log-entry"><summary><span class="experiment-log-date">Root cause</span><strong>Template preparation</strong></summary><p>The July 13 review identified excessive biomass transfer during colony template preparation as one likely source of poor amplification.</p></details>
       <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 20</span><strong>Ligation repeated</strong></summary><p>MT2, MT3, and MT4 ligations were repeated. The team also noted that GC-buffer and HF-buffer plasmid preparations could have different concentrations, invalidating an earlier volume assumption.</p></details>
-      <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 21</span><strong>Sequencing preparation</strong></summary><p>Following another transformation, colonies PV1S1 #2, #9, and #15 were selected and plated for sequencing preparation.</p></details>
+      <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 21</span><strong>Sequencing preparation</strong></summary><p>Following another transformation, colonies PVIS1 #2, #9, and #15 were selected and plated for sequencing preparation.</p></details>
     </div>
   </section>
 </section>
