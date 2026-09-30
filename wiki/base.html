@@ -80,7 +80,7 @@
   <link href="{{ url_for('static', filename='home-intro.css', v='20260930') }}" rel="stylesheet" />
 
   {% if request.path == "/" %}
-  <link href="{{ url_for('static', filename='home.css', v='20260924b') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='home.css', v='20260930b') }}" rel="stylesheet" />
   <link href="{{ url_for('static', filename='home-story-v2.css', v='20260924') }}" rel="stylesheet" />
   {% endif %}
 
@@ -159,24 +159,6 @@
         <img src="{{ url_for('static', filename='assets/images/full-hero-banner-handdrawn.jpg', v='20260820') }}"
           class="hero-background img-fluid"
           alt="Hand-drawn river scene showing an engineered bacterium capturing heavy-metal particles as polluted water becomes clean">
-        <div class="hero-motion-layer" aria-hidden="true">
-          <span
-            style="--particle-x: 8%; --particle-y: 24%; --particle-size: 13px; --particle-delay: -.4s; --particle-travel: 34px"></span>
-          <span
-            style="--particle-x: 18%; --particle-y: 68%; --particle-size: 8px; --particle-delay: -1.8s; --particle-travel: 52px"></span>
-          <span
-            style="--particle-x: 33%; --particle-y: 16%; --particle-size: 17px; --particle-delay: -2.7s; --particle-travel: 28px"></span>
-          <span
-            style="--particle-x: 45%; --particle-y: 78%; --particle-size: 10px; --particle-delay: -.9s; --particle-travel: 48px"></span>
-          <span
-            style="--particle-x: 57%; --particle-y: 25%; --particle-size: 7px; --particle-delay: -3.4s; --particle-travel: 38px"></span>
-          <span
-            style="--particle-x: 70%; --particle-y: 70%; --particle-size: 15px; --particle-delay: -2.1s; --particle-travel: 58px"></span>
-          <span
-            style="--particle-x: 83%; --particle-y: 18%; --particle-size: 9px; --particle-delay: -1.2s; --particle-travel: 30px"></span>
-          <span
-            style="--particle-x: 92%; --particle-y: 58%; --particle-size: 12px; --particle-delay: -3.8s; --particle-travel: 45px"></span>
-        </div>
         <div class="hero-scroll-cue" aria-hidden="true">
           <span>Scroll to explore</span>
           <i></i>
@@ -284,7 +266,7 @@
   <script src="{{ url_for('static', filename='js/home-intro.js', v='20260930') }}" defer></script>
 
   {% if request.path == "/" %}
-  <script src="{{ url_for('static', filename='js/home-motion.js', v='20260924') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/home-motion.js', v='20260930') }}" defer></script>
   {% endif %}
 
   <script src="{{ url_for('static', filename='js/site-theme.js', v='20260929b') }}" defer></script>

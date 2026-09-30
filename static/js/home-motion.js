@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const hero = document.querySelector(".homepage-hero");
   const heroImage = document.querySelector(".hero-background");
-  const heroParticles = [...document.querySelectorAll(".hero-motion-layer span")];
   const waterStory = document.querySelector("[data-water-story]");
   const mapStory = document.querySelector("[data-map-story]");
   const treatmentStory = document.querySelector("[data-treatment-story]");
@@ -20,10 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     hero.style.setProperty("--hero-scale", (1.035 + progress * 0.08).toFixed(4));
     hero.style.setProperty("--hero-cue-opacity", clamp(1 - progress * 2.4).toFixed(4));
     heroImage.style.setProperty("--hero-pan", `${(progress * 68).toFixed(1)}px`);
-    heroParticles.forEach((particle, index) => {
-      const travel = Number.parseFloat(particle.style.getPropertyValue("--particle-travel")) || 36;
-      particle.style.setProperty("--particle-parallax", `${(progress * travel * (index % 2 ? -1 : 1)).toFixed(1)}px`);
-    });
   }
 
   function setWaterIndex(index) {
@@ -103,7 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   if (reduceMotion) {
-    root.classList.add("home-reduced-motion");
     setMapIndex(0);
     return;
   }
