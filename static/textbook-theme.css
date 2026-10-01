@@ -1039,3 +1039,18 @@
         transition-duration: .01ms !important;
     }
 }
+
+/* Attributions: frame iGEM's embedded Project Attribution form like the other cards. */
+.page-attributions .attribution-form-note {
+    max-width: 62ch;
+    margin: 4px 0 0;
+    color: var(--vis-copy);
+}
+
+.page-attributions #igem-attribution-form {
+    display: block;
+    min-height: 640px;
+    padding: 10px;
+    border: 2px solid #cfe3e7;
+    background: var(--vis-white);
+}

@@ -27,6 +27,7 @@
 "/safety-and-security",
 "/model",
 "/team",
+"/attributions",
 "/industry",
 "/human-practices",
 "/education"
@@ -45,7 +46,7 @@
 "/human-practices",
 "/education",
 "/industry",
-"/team"
+"/attributions"
 ] %}
 
 {% set hp_family_pages = ["/human-practices", "/education"] %}
@@ -102,12 +103,12 @@
   {% endif %}
 
   {% if request.path == "/team" %}
-  <link href="{{ url_for('static', filename='team.css', v='20260917') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='team.css', v='20261001b') }}" rel="stylesheet" />
   {% endif %}
 
   <link href="{{ url_for('static', filename='textbook-nav.css', v='20261001b') }}" rel="stylesheet" />
 
-  <link href="{{ url_for('static', filename='textbook-theme.css', v='20260930c') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='textbook-theme.css', v='20261001') }}" rel="stylesheet" />
 
   <title>{{ title }} | Cadture - iGEM 2026</title>
 
@@ -273,7 +274,7 @@
   <script src="{{ url_for('static', filename='js/home-motion.js', v='20260930') }}" defer></script>
   {% endif %}
 
-  <script src="{{ url_for('static', filename='js/site-theme.js', v='20260929b') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/site-theme.js', v='20261001b') }}" defer></script>
 
 
   <script>

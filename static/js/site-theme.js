@@ -149,6 +149,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const teamTabs = [...document.querySelectorAll("[data-team-tab]")];
+  if (teamTabs.length) {
+    const panels = [...document.querySelectorAll("[data-team-panel]")];
+    const showGroup = (id) => {
+      teamTabs.forEach((tab) => tab.setAttribute("aria-selected", String(tab.dataset.teamTab === id)));
+      panels.forEach((panel) => { panel.hidden = panel.id !== id; });
+    };
+    const groupForHash = () => {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      return panels.some((panel) => panel.id === id) ? id : null;
+    };
+
+    showGroup(groupForHash() || teamTabs[0].dataset.teamTab);
+    teamTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        showGroup(tab.dataset.teamTab);
+        history.replaceState(null, "", `#${tab.dataset.teamTab}`);
+      });
+    });
+    window.addEventListener("hashchange", () => {
+      const id = groupForHash();
+      if (id) showGroup(id);
+    });
+
+    // Hover flips cards for mouse users; touch has no hover, so a tap flips instead.
+    document.querySelectorAll(".member-card").forEach((card) => {
+      card.addEventListener("pointerup", (event) => {
+        if (event.pointerType !== "mouse") card.classList.toggle("is-flipped");
+      });
+    });
+  }
+
   if (!reduceMotion) {
     const revealSelectors = [
       ".problem-content-grid",
