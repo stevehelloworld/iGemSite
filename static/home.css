@@ -162,9 +162,13 @@
     overflow: visible;
     border: 0;
     border-radius: 0;
-    background: #fbfdfc;
     box-shadow: none;
     transform: none;
+}
+
+/* Not on :hover, so it can't override each card's own colour (and the wave edge that inherits it). */
+.home-page .homepage-card {
+    background: #fbfdfc;
 }
 
 .home-page .problem-card {
