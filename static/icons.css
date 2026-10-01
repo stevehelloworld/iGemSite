@@ -16,3 +16,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Glyphs actually used on this site (nav dropdowns + a few doc pages).
+   This file self-hosts bootstrap-icons but never shipped the glyph-content
+   table, so every <i class="bi bi-*"> rendered as an empty box. */
+.bi-arrow-right::before { content: "\f138"; }
+.bi-award::before { content: "\f154"; }
+.bi-bar-chart::before { content: "\f17e"; }
+.bi-book::before { content: "\f194"; }
+.bi-broadcast-pin::before { content: "\f1d5"; }
+.bi-diagram-3-fill::before { content: "\f2ed"; }
+.bi-eyedropper::before { content: "\f342"; }
+.bi-gear::before { content: "\f3e5"; }
+.bi-globe::before { content: "\f3ee"; }
+.bi-graph-up::before { content: "\f3f2"; }
+.bi-journal-text::before { content: "\f444"; }
+.bi-magnet-fill::before { content: "\f778"; }
+.bi-mortarboard::before { content: "\f6fe"; }
+.bi-people::before { content: "\f4d0"; }
+.bi-puzzle::before { content: "\f503"; }
+.bi-recycle::before { content: "\f64f"; }
+.bi-rulers::before { content: "\f523"; }
+.bi-shield-check::before { content: "\f52f"; }
