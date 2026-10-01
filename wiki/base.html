@@ -27,7 +27,6 @@
 "/safety-and-security",
 "/model",
 "/team",
-"/attributions",
 "/industry",
 "/human-practices"
 ] %}
@@ -44,8 +43,7 @@
 "/model",
 "/human-practices",
 "/industry",
-"/team",
-"/attributions"
+"/team"
 ] %}
 
 <!doctype html>
@@ -99,11 +97,11 @@
   <link href="{{ url_for('static', filename='human-practices-v2.css', v='20260824-journey2') }}" rel="stylesheet" />
   {% endif %}
 
-  {% if request.path in ["/team", "/attributions"] %}
+  {% if request.path == "/team" %}
   <link href="{{ url_for('static', filename='team.css', v='20260917') }}" rel="stylesheet" />
   {% endif %}
 
-  <link href="{{ url_for('static', filename='textbook-nav.css', v='20261001') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='textbook-nav.css', v='20260924c') }}" rel="stylesheet" />
 
   <link href="{{ url_for('static', filename='textbook-theme.css', v='20260930c') }}" rel="stylesheet" />
 
@@ -337,8 +335,7 @@
           closeAllMenus();
 
           if (!isOpen) {
-            if (menu.classList.contains("team-menu") ||
-              menu.classList.contains("project-menu") ||
+            if (menu.classList.contains("project-menu") ||
               menu.classList.contains("wetlab-menu") ||
               menu.classList.contains("drylab-menu") ||
               menu.classList.contains("hp-menu")) {

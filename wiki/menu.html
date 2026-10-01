@@ -41,45 +41,11 @@
         </li>
 
         <!-- TEAM -->
-        <li class="nav-item mega-dropdown">
-          <a href="javascript:void(0);"
-             class="nav-link mega-toggle">
+        <li class="nav-item">
+          <a class="nav-link"
+             href="{{ url_for('pages', page='team') }}">
              Team
           </a>
-
-          <div class="mega-menu team-menu">
-            <div class="mega-column">
-              <h5>MEMBERS</h5>
-              <a href="{{ url_for('pages', page='team') }}">
-                <div class="icon">
-                  <i class="bi bi-people"></i>
-                </div>
-
-                <div>
-                  <strong>Members</strong>
-                  <small>
-                    The students, PIs, and instructors behind Cadture
-                  </small>
-                </div>
-              </a>
-            </div>
-
-            <div class="mega-column">
-              <h5>ATTRIBUTIONS</h5>
-              <a href="{{ url_for('pages', page='attributions') }}">
-                <div class="icon">
-                  <i class="bi bi-award"></i>
-                </div>
-
-                <div>
-                  <strong>Attributions</strong>
-                  <small>
-                    Who did what, and who helped us along the way
-                  </small>
-                </div>
-              </a>
-            </div>
-          </div>
         </li>
 
         <!-- PROJECT -->
