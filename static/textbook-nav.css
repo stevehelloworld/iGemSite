@@ -157,39 +157,15 @@
 }
 
 .textbook-nav-page .mega-menu {
-    width: min(680px, calc(100vw - 32px));
+    width: min(300px, calc(100vw - 32px));
     padding: 20px;
     background: #f8fcfc;
     border: 3px solid #8fc7cc;
     border-radius: 8px;
     box-shadow: 6px 7px 0 rgba(40, 87, 114, .14);
     font-family: var(--textbook-display);
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-}
-
-.textbook-nav-page .project-menu,
-.textbook-nav-page .wetlab-menu {
-    width: min(680px, calc(100vw - 32px));
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.textbook-nav-page .drylab-menu,
-.textbook-nav-page .hp-menu {
-    width: min(580px, calc(100vw - 32px));
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    transform: translateX(-65%);
-}
-
-.textbook-nav-page .team-menu {
-    width: min(460px, calc(100vw - 32px));
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.textbook-nav-page .drylab-menu {
-    width: min(260px, calc(100vw - 32px));
     grid-template-columns: 1fr;
-    transform: translateX(-50%);
+    gap: 10px;
 }
 
 .textbook-nav-page .mega-column h5 {
@@ -280,6 +256,7 @@
     }
 
     .textbook-nav-page .mega-menu,
+    .textbook-nav-page .team-menu,
     .textbook-nav-page .project-menu,
     .textbook-nav-page .wetlab-menu,
     .textbook-nav-page .drylab-menu,
@@ -290,21 +267,13 @@
         padding: 16px;
         border-width: 2px;
         box-shadow: none;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
+        grid-template-columns: 1fr;
+        gap: 10px;
         transform: none !important;
     }
 }
 
 @media (max-width: 700px) {
-    .textbook-nav-page .mega-menu,
-    .textbook-nav-page .project-menu,
-    .textbook-nav-page .wetlab-menu,
-    .textbook-nav-page .drylab-menu,
-    .textbook-nav-page .hp-menu {
-        grid-template-columns: 1fr;
-    }
-
     .textbook-nav-page .mega-footer {
         display: none;
     }
