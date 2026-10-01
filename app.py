@@ -25,6 +25,14 @@ def render_markdown(page):
         return markdown.markdown(md_file.read(), extensions=MARKDOWN_EXTENSIONS)
 
 
+@freezer.register_generator
+def unlinked_pages():
+    """Keep freezing pages that are no longer linked from the navbar."""
+    for page in ['background', 'problem-statement', 'alternative-platform',
+                 'industry', 'software']:
+        yield 'pages', {'page': page}
+
+
 @app.cli.command()
 def freeze():
     freezer.freeze()
