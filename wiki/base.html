@@ -28,7 +28,8 @@
 "/model",
 "/team",
 "/industry",
-"/human-practices"
+"/human-practices",
+"/education"
 ] %}
 
 {% set toc_pages = [
@@ -42,9 +43,12 @@
 "/safety-and-security",
 "/model",
 "/human-practices",
+"/education",
 "/industry",
 "/team"
 ] %}
+
+{% set hp_family_pages = ["/human-practices", "/education"] %}
 
 <!doctype html>
 
@@ -92,7 +96,7 @@
   <link href="{{ url_for('static', filename='industry.css', v='20260820-journal3') }}" rel="stylesheet" />
   {% endif %}
 
-  {% if request.path == "/human-practices" %}
+  {% if request.path in hp_family_pages %}
   <link href="{{ url_for('static', filename='human-practices.css', v='20260820-flat-assets1') }}" rel="stylesheet" />
   <link href="{{ url_for('static', filename='human-practices-v2.css', v='20260824-journey2') }}" rel="stylesheet" />
   {% endif %}
@@ -110,7 +114,7 @@
 </head>
 
 <body
-  class="textbook-nav-page page-{{ 'home' if request.path == '/' else request.path[1:]|replace('/', '-') }}{% if request.path == '/' %} home-page{% endif %}">
+  class="textbook-nav-page page-{{ 'home' if request.path == '/' else request.path[1:]|replace('/', '-') }}{% if request.path == '/' %} home-page{% endif %}{% if request.path == '/education' %} page-human-practices{% endif %}">
 
   <div class="home-intro" data-home-intro>
     <div class="home-intro-chase" data-intro-chase aria-hidden="true">

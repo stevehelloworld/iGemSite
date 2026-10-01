@@ -261,11 +261,43 @@
         </li>
 
         <!-- HUMAN PRACTICES -->
-        <li class="nav-item">
-          <a class="nav-link"
-             href="{{ url_for('pages', page='human-practices') }}">
+        <li class="nav-item mega-dropdown">
+          <a href="javascript:void(0);"
+             class="nav-link mega-toggle">
              Human Practices
           </a>
+
+          <div class="mega-menu hp-menu">
+            <div class="mega-column">
+              <a href="{{ url_for('pages', page='human-practices') }}">
+                <div class="icon">
+                  <i class="bi bi-people"></i>
+                </div>
+
+                <div>
+                  <strong>Human Practices</strong>
+                  <small>
+                    How stakeholders shaped our project
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <a href="{{ url_for('pages', page='education') }}">
+                <div class="icon">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+
+                <div>
+                  <strong>Education &amp; Outreach</strong>
+                  <small>
+                    Teaching and learning with our community
+                  </small>
+                </div>
+              </a>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
