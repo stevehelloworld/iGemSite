@@ -17,6 +17,7 @@
 %}
 
 {% set custom_hero_pages = [
+"/results",
 "/background",
 "/description",
 "/problem-statement",
@@ -34,6 +35,7 @@
 ] %}
 
 {% set toc_pages = [
+"/results",
 "/background",
 "/description",
 "/problem-statement",
@@ -109,6 +111,9 @@
   <link href="{{ url_for('static', filename='textbook-nav.css', v='20261001b') }}" rel="stylesheet" />
 
   <link href="{{ url_for('static', filename='textbook-theme.css', v='20261001') }}" rel="stylesheet" />
+  {% if request.path == "/results" %}
+  <link href="{{ url_for('static', filename='results.css', v='20261006') }}" rel="stylesheet" />
+  {% endif %}
 
   <title>{{ title }} | Cadture - iGEM 2026</title>
 
@@ -274,7 +279,7 @@
   <script src="{{ url_for('static', filename='js/home-motion.js', v='20260930') }}" defer></script>
   {% endif %}
 
-  <script src="{{ url_for('static', filename='js/site-theme.js', v='20261001b') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/site-theme.js', v='20261006') }}" defer></script>
 
 
   <script>

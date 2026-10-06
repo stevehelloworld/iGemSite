@@ -1,0 +1,89 @@
+.page-results .results-report {
+    max-width: 100%;
+    color: #244b5e;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.page-results .results-report > p {
+    max-width: 76ch;
+    margin: 0 0 1.3rem;
+}
+.page-results .results-report h1 {
+    max-width: 24ch;
+    margin: 0 0 1rem;
+    color: #285772;
+    font-size: clamp(1.8rem, 3.2vw, 3rem);
+    line-height: 1.2;
+    text-wrap: balance;
+}
+.page-results .results-report h2 {
+    margin: 3rem 0 1.1rem;
+    color: #285772;
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    line-height: 1.35;
+    scroll-margin-top: 100px;
+    text-wrap: balance;
+}
+.page-results .results-report h3 {
+    margin: 2rem 0 .85rem;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    scroll-margin-top: 100px;
+}
+.page-results .results-date {
+    font-size: .9rem;
+    color: #496b7b;
+}
+.page-results .results-chart {
+    margin: 2rem 0;
+    padding: 16px;
+    background: #f8fcfc;
+    border: 1px solid #8fc7cc;
+    border-radius: 8px;
+}
+.page-results .results-chart img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.page-results .results-chart figcaption {
+    padding: 12px 8px 4px;
+    font-size: .88rem;
+    line-height: 1.65;
+}
+.page-results .results-table-wrap {
+    width: 100%;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+.page-results .results-table-wrap table {
+    width: 100%;
+    min-width: 660px;
+    border-collapse: collapse;
+    font-size: .88rem;
+    line-height: 1.55;
+}
+.page-results .results-table-wrap th,
+.page-results .results-table-wrap td {
+    padding: 12px;
+    border-bottom: 1px solid #9cc6cc;
+    text-align: left;
+    vertical-align: top;
+}
+.page-results .results-table-wrap th {
+    background: #c8e3e5;
+    color: #244b5e;
+}
+.page-results .results-table-wrap td {
+    background: #f8fcfc;
+}
+.page-results .results-table-wrap tr:nth-child(even) td {
+    background: #edf5f6;
+}
+@media (max-width: 575.98px) {
+    .page-results .results-chart { padding: 8px; }
+    .page-results .results-chart img { min-width: 640px; }
+    .page-results .results-chart { overflow-x: auto; }
+    .page-results .results-chart figcaption { min-width: 0; }
+}

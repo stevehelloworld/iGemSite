@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (toc && layout && pageContent) {
     const headingSelectors = [
+      ".results-report h2",
       ".ihp-section .section-title h2",
       ".industry-subheading h3",
       ".problem-section h2",
