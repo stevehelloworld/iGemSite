@@ -17,6 +17,7 @@
 %}
 
 {% set custom_hero_pages = [
+"/404.html",
 "/results",
 "/background",
 "/description",
@@ -70,7 +71,7 @@
 
   <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" />
 
-  <link href="{{ url_for('static', filename='fonts.css', v='20260922') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='fonts.css', v='20261006b') }}" rel="stylesheet" />
 
   <link href="{{ url_for('static', filename='icons.css', v='20261001') }}" rel="stylesheet" />
 
@@ -79,15 +80,17 @@
 
   <!-- Custom CSS -->
 
-  <link href="{{ url_for('static', filename='style.css', v='20260930') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='style.css', v='20261006b') }}" rel="stylesheet" />
 
+  {% if request.path == "/" %}
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cadture-germ-capture.png', v='20260922') }}">
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cd2-ion.png', v='20260922') }}">
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/vis-logo-heart.png', v='20260915-heart1') }}">
-  <link href="{{ url_for('static', filename='home-intro.css', v='20260930') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='home-intro.css', v='20261006') }}" rel="stylesheet" />
+  {% endif %}
 
   {% if request.path == "/" %}
-  <link href="{{ url_for('static', filename='home.css', v='20261001') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='home.css', v='20261006b') }}" rel="stylesheet" />
   <link href="{{ url_for('static', filename='home-story-v2.css', v='20260924') }}" rel="stylesheet" />
   {% endif %}
 
@@ -96,11 +99,11 @@
   {% endif %}
 
   {% if request.path == "/industry" %}
-  <link href="{{ url_for('static', filename='industry.css', v='20260820-journal3') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='industry.css', v='20261006b') }}" rel="stylesheet" />
   {% endif %}
 
   {% if request.path in hp_family_pages %}
-  <link href="{{ url_for('static', filename='human-practices.css', v='20260820-flat-assets1') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='human-practices.css', v='20261006b') }}" rel="stylesheet" />
   <link href="{{ url_for('static', filename='human-practices-v2.css', v='20260824-journey2') }}" rel="stylesheet" />
   {% endif %}
 
@@ -108,11 +111,11 @@
   <link href="{{ url_for('static', filename='team.css', v='20261001b') }}" rel="stylesheet" />
   {% endif %}
 
-  <link href="{{ url_for('static', filename='textbook-nav.css', v='20261001b') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='textbook-nav.css', v='20261006b') }}" rel="stylesheet" />
 
-  <link href="{{ url_for('static', filename='textbook-theme.css', v='20261001') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='textbook-theme.css', v='20261006b') }}" rel="stylesheet" />
   {% if request.path == "/results" %}
-  <link href="{{ url_for('static', filename='results.css', v='20261006') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='results.css', v='20261006b') }}" rel="stylesheet" />
   {% endif %}
 
   <title>{{ title }} | Cadture - iGEM 2026</title>
@@ -122,6 +125,7 @@
 <body
   class="textbook-nav-page page-{{ 'home' if request.path == '/' else request.path[1:]|replace('/', '-') }}{% if request.path == '/' %} home-page{% endif %}{% if request.path == '/education' %} page-human-practices{% endif %}">
 
+  {% if request.path == "/" %}
   <div class="home-intro" data-home-intro>
     <div class="home-intro-chase" data-intro-chase aria-hidden="true">
       <div class="home-intro-germ" data-intro-germ>
@@ -146,6 +150,8 @@
       draggable="false">
     <button class="home-intro-skip" type="button" data-intro-skip>Skip intro</button>
   </div>
+
+  {% endif %}
 
   <!-- Navigation -->
 
@@ -193,7 +199,7 @@
 
   </header>
 
-  {% elif request.path not in custom_hero_pages %}
+  {% elif not is_not_found and request.path not in custom_hero_pages %}
 
   <!-- ========================= -->
 
@@ -273,7 +279,9 @@
   <script src="{{ url_for('static', filename='js/human-practices.js', v='20260820-journey1') }}"></script>
   {% endif %}
 
-  <script src="{{ url_for('static', filename='js/home-intro.js', v='20260930') }}" defer></script>
+  {% if request.path == "/" %}
+  <script src="{{ url_for('static', filename='js/home-intro.js', v='20261006') }}" defer></script>
+  {% endif %}
 
   {% if request.path == "/" %}
   <script src="{{ url_for('static', filename='js/home-motion.js', v='20260930') }}" defer></script>

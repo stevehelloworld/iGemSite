@@ -1,4 +1,5 @@
 .home-intro {
+  display: none;
   --intro-sky: #dceff4;
   --intro-ink: #285772;
   position: fixed;
@@ -119,6 +120,10 @@
   overflow: hidden;
 }
 
+.home-intro-active .home-intro {
+  display: block;
+}
+
 .home-intro-active .navbar-brand .site-logo {
   opacity: 0;
 }
@@ -148,7 +153,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-intro {
+  .home-intro,
+  .home-intro-active .home-intro {
     display: none;
   }
 

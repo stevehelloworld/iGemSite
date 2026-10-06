@@ -1,7 +1,7 @@
 /* VIS shared textbook theme — one visual language across every wiki page. */
 :root {
-    --vis-display: Verdana, Geneva, sans-serif;
-    --vis-body: Verdana, Geneva, sans-serif;
+    --vis-display: var(--site-font);
+    --vis-body: var(--site-font);
     --vis-ink: #285772;
     --vis-copy: #405d6c;
     --vis-teal: #3b9295;
@@ -11,6 +11,18 @@
     --vis-white: #ffffff;
     --vis-yellow: #fff0a8;
     --vis-green: #a9d7b5;
+}
+
+.not-found-page {
+    max-width: 65ch;
+    margin: clamp(40px, 10vh, 100px) auto;
+    padding: 0 20px;
+}
+
+.not-found-page h1 {
+    margin-bottom: 24px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--vis-ink);
 }
 
 .textbook-nav-page {

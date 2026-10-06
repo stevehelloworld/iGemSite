@@ -1,7 +1,7 @@
 from os import path
 
 import markdown
-from flask import Flask, render_template
+from flask import Flask, abort, render_template
 from flask_frozen import Freezer
 
 template_folder = path.abspath('./wiki')
@@ -53,10 +53,24 @@ def home():
 
 @app.route('/<page>')
 def pages(page):
+    if not path.isfile(path.join('docs', f'{page.lower()}.md')):
+        abort(404)
     md_content = render_markdown(page.lower())
     return render_template('base.html',
                            title=page.title().replace('-', ' '),
                            md_content=md_content)
+
+
+@app.route('/404.html')
+def not_found_page():
+    return render_template('base.html', title='Page not found',
+                           is_not_found=True,
+                           md_content=render_template('not-found.html'))
+
+
+@app.errorhandler(404)
+def not_found(error):
+    return not_found_page(), 404
 
 
 # Main Function, Runs at http://0.0.0.0:8080

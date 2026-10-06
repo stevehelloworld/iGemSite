@@ -1,7 +1,7 @@
 /* Human Practices — 2024-inspired illustrated textbook flow. */
 .ihp-hero,
 .ihp-section {
-    --hp-display: Verdana, Geneva, sans-serif;
+    --hp-display: var(--site-font);
 }
 
 .ihp-hero {

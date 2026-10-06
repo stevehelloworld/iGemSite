@@ -1,7 +1,7 @@
 .page-results .results-report {
     max-width: 100%;
     color: #244b5e;
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: var(--site-font);
     font-size: 1rem;
     line-height: 1.8;
 }

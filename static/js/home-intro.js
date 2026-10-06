@@ -6,14 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const skip = document.querySelector("[data-intro-skip]");
   const navbarLogo = document.querySelector(".navbar-brand .site-logo");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const seenKey = "cadture-intro-seen";
+  let alreadySeen = false;
+  try {
+    alreadySeen = sessionStorage.getItem(seenKey) === "1";
+  } catch (_) {
+    // Continue normally when session storage is unavailable.
+  }
 
-  if (!intro || !germ || !ion || !logo || !navbarLogo || reduceMotion) {
+  if (!intro || !germ || !ion || !logo || !navbarLogo || reduceMotion || alreadySeen) {
     intro?.remove();
     document.body.classList.remove("home-intro-active");
     return;
   }
 
   document.body.classList.add("home-intro-active");
+  try {
+    sessionStorage.setItem(seenKey, "1");
+  } catch (_) {
+    // The animation does not depend on storage access.
+  }
 
   const running = [];
   let finished = false;
@@ -88,25 +100,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const germWidth = germ.getBoundingClientRect().width;
     const ionWidth = ion.getBoundingClientRect().width;
     const halfGap = Math.min(34, Math.max(16, width * .022));
-    const germOffscreen = -(width / 2 + germWidth / 2 + 60);
-    const ionOffscreen = width / 2 + ionWidth / 2 + 60;
-    const germMeet = -halfGap;
-    const ionMeet = halfGap;
+    const germOffscreen = -(width / 2 + germWidth / 2 + 40);
+    const ionOffscreen = -(width / 2 + ionWidth / 2 + 20);
+    const germMeet = width * .18 - halfGap;
+    const ionMeet = width * .18 + halfGap;
+    const bend = Math.min(80, window.innerHeight * .1);
+    const position = (x, y) => `translate3d(calc(-50% + ${x}px), calc(-50% + ${y}px), 0)`;
 
-    // Slide straight toward each other from opposite edges, like Joy-Cons docking in.
+    // The ion enters first; the germ follows its curved path and closes the gap.
     const germSlide = play(germ, [
-      { opacity: 0, transform: `translate3d(calc(-50% + ${germOffscreen}px), -50%, 0)` },
-      { opacity: 1, offset: .12 },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${germMeet - 14}px), -50%, 0)`, offset: .82 },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0)` }
-    ], { duration: 950, easing: easeOut });
+      { opacity: 0, transform: position(germOffscreen, bend * .45) },
+      { opacity: 1, transform: position(-width * .32, -bend * .55), offset: .22 },
+      { opacity: 1, transform: position(-width * .18, bend), offset: .48 },
+      { opacity: 1, transform: position(-width * .08, -bend * .4), offset: .72 },
+      { opacity: 1, transform: position(germMeet, 0) }
+    ], { duration: 3200, easing: "ease-in-out" });
 
     const ionSlide = play(ion, [
-      { opacity: 0, transform: `translate3d(calc(-50% + ${ionOffscreen}px), -50%, 0)` },
-      { opacity: 1, offset: .12 },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${ionMeet + 14}px), -50%, 0)`, offset: .82 },
-      { opacity: 1, transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0)` }
-    ], { duration: 850, easing: easeOut });
+      { opacity: 0, transform: position(ionOffscreen, 0) },
+      { opacity: 1, transform: position(-width * .17, -bend * .75), offset: .22 },
+      { opacity: 1, transform: position(width * .03, bend * .6), offset: .48 },
+      { opacity: 1, transform: position(width * .12, -bend * .55), offset: .72 },
+      { opacity: 1, transform: position(ionMeet, 0) }
+    ], { duration: 3200, easing: "ease-in-out" });
 
     await Promise.all([germSlide, ionSlide]);
     if (finished) return;

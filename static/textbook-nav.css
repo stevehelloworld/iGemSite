@@ -1,7 +1,7 @@
 /* Shared navigation for the illustrated textbook pages. */
 .textbook-nav-page {
     --nav-offset: 68px;
-    --textbook-display: Verdana, Geneva, sans-serif;
+    --textbook-display: var(--site-font);
     padding-top: 0;
 }
 

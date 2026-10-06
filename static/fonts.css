@@ -1,3 +1,7 @@
+:root {
+  --site-font: "Inter", Arial, sans-serif;
+}
+
 @font-face {
   font-family: "Inter";
   font-style: normal;
