@@ -53,6 +53,7 @@
 ] %}
 
 {% set hp_family_pages = ["/human-practices", "/education"] %}
+{% set show_intro = true %}
 
 <!doctype html>
 
@@ -74,7 +75,7 @@
 
   <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" />
 
-  <link href="{{ url_for('static', filename='fonts.css', v='20261006b') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='fonts.css', v='20261006c') }}" rel="stylesheet" />
 
   <link href="{{ url_for('static', filename='icons.css', v='20261001') }}" rel="stylesheet" />
 
@@ -83,13 +84,13 @@
 
   <!-- Custom CSS -->
 
-  <link href="{{ url_for('static', filename='style.css', v='20261006b') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='style.css', v='20261006c') }}" rel="stylesheet" />
 
-  {% if request.path == "/" %}
+  {% if show_intro %}
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cadture-germ-capture.png', v='20260922') }}">
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cd2-ion.png', v='20260922') }}">
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/vis-logo-heart.png', v='20260915-heart1') }}">
-  <link href="{{ url_for('static', filename='home-intro.css', v='20261006') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='home-intro.css', v='20261006c') }}" rel="stylesheet" />
   {% endif %}
 
   {% if request.path == "/" %}
@@ -98,7 +99,7 @@
   {% endif %}
 
   {% if request.path in ["/measurement", "/alternative-platform", "/safety-and-security"] %}
-  <link href="{{ url_for('static', filename='student-lab.css', v='20260824-textbook1') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='student-lab.css', v='20261006c') }}" rel="stylesheet" />
   {% endif %}
 
   {% if request.path == "/industry" %}
@@ -128,7 +129,7 @@
 <body
   class="textbook-nav-page page-{{ 'home' if request.path == '/' else request.path[1:]|replace('/', '-') }}{% if request.path == '/' %} home-page{% endif %}{% if request.path == '/education' %} page-human-practices{% endif %}">
 
-  {% if request.path == "/" %}
+  {% if show_intro %}
   <div class="home-intro" data-home-intro>
     <div class="home-intro-chase" data-intro-chase aria-hidden="true">
       <div class="home-intro-germ" data-intro-germ>
@@ -282,8 +283,8 @@
   <script src="{{ url_for('static', filename='js/human-practices.js', v='20260820-journey1') }}"></script>
   {% endif %}
 
-  {% if request.path == "/" %}
-  <script src="{{ url_for('static', filename='js/home-intro.js', v='20261006') }}" defer></script>
+  {% if show_intro %}
+  <script src="{{ url_for('static', filename='js/home-intro.js', v='20261006c') }}" defer></script>
   {% endif %}
 
   {% if request.path == "/" %}

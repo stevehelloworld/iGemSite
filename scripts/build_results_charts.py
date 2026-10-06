@@ -65,4 +65,12 @@ def chart(data, name, log=False):
 
 chart(GFP,'pvis-gfp-dose-response',True)
 chart(GROWTH,'pvis-relative-growth')
+for svg_path in OUT.glob('*.svg'):
+    svg = svg_path.read_text()
+    svg = svg.replace(
+        'version="1.1">',
+        'version="1.1">\n <style>text{font-family:Verdana,Geneva,sans-serif !important}</style>',
+        1,
+    )
+    svg_path.write_text(svg)
 (OUT/'pvis-chart-data.json').write_text(json.dumps({'cadmium_nM':DOSES,'gfp_od600':GFP,'growth_relative_to_pMH45':GROWTH,'provenance':'Values transcribed from the supplied report chart labels on 2026-10-06; not independently recalculated from raw workbooks.','display_note':'Concentrations are evenly spaced. GFP values below 10 are displayed at 10 to preserve the original chart convention.'},indent=2)+'\n')

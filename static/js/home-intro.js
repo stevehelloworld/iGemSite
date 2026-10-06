@@ -6,26 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const skip = document.querySelector("[data-intro-skip]");
   const navbarLogo = document.querySelector(".navbar-brand .site-logo");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const seenKey = "cadture-intro-seen";
-  let alreadySeen = false;
-  try {
-    alreadySeen = sessionStorage.getItem(seenKey) === "1";
-  } catch (_) {
-    // Continue normally when session storage is unavailable.
-  }
-
-  if (!intro || !germ || !ion || !logo || !navbarLogo || reduceMotion || alreadySeen) {
+  if (!intro || !germ || !ion || !logo || !navbarLogo || reduceMotion) {
     intro?.remove();
     document.body.classList.remove("home-intro-active");
     return;
   }
 
   document.body.classList.add("home-intro-active");
-  try {
-    sessionStorage.setItem(seenKey, "1");
-  } catch (_) {
-    // The animation does not depend on storage access.
-  }
 
   const running = [];
   let finished = false;

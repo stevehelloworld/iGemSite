@@ -16,7 +16,7 @@
 .student-lab-page h4,
 .student-lab-page strong {
     color: var(--lab-ink);
-    font-family: var(--vis-display, "Chalkboard SE", "Comic Sans MS", sans-serif);
+    font-family: var(--site-font);
 }
 
 .lab-page-intro {
@@ -34,7 +34,7 @@
     padding: 7px 10px;
     background: var(--lab-yellow);
     color: var(--lab-ink);
-    font-family: var(--vis-display, sans-serif);
+    font-family: var(--site-font);
     font-size: .76rem;
     font-weight: 800;
     transform: rotate(-1.2deg);
@@ -43,7 +43,7 @@
 .lab-book-label {
     margin: 20px 0 6px;
     color: #4d7586;
-    font-family: var(--vis-display, sans-serif);
+    font-family: var(--site-font);
     font-weight: 700;
 }
 
@@ -105,7 +105,7 @@
 .specimen-name {
     display: inline-block;
     color: #3f7c83;
-    font-family: var(--vis-display, sans-serif);
+    font-family: var(--site-font);
     font-size: .8rem;
     font-weight: 800;
 }
@@ -132,7 +132,7 @@
 .lab-question {
     padding: 14px 16px;
     background: #fff8d8;
-    font-family: var(--vis-display, sans-serif);
+    font-family: var(--site-font);
     font-weight: 700;
     transform: rotate(-.5deg);
 }
@@ -153,7 +153,7 @@
     grid-column: 1 / -1;
     margin-top: 14px;
     text-align: center;
-    font-family: var(--vis-display, sans-serif);
+    font-family: var(--site-font);
     font-weight: 700;
 }
 
@@ -255,7 +255,7 @@
     border: 3px solid var(--lab-ink);
     border-radius: 50%;
     color: var(--lab-ink);
-    font-family: var(--vis-display, sans-serif);
+    font-family: var(--site-font);
     font-weight: 900;
 }
 
@@ -274,7 +274,7 @@
 
 .graph-heading span,
 .graph-heading strong { display: block; }
-.graph-heading span { font-family: var(--vis-display, sans-serif); color: #4c7b89; }
+.graph-heading span { font-family: var(--site-font); color: #4c7b89; }
 .graph-heading strong { margin-top: 4px; font-size: 1.3rem; }
 .textbook-graph svg { width: 100%; margin-top: 16px; overflow: visible; }
 .graph-axis { fill: none; stroke: var(--lab-ink); stroke-width: 4; }
@@ -287,8 +287,8 @@
 .result-checks dl { margin: 24px 0 0; }
 .result-checks dl div { display: grid; grid-template-columns: .75fr 1fr; gap: 12px; padding: 15px 0; border-top: 2px solid rgba(40, 87, 114, .17); }
 .result-checks dt { color: #527281; }
-.result-checks dd { margin: 0; color: var(--lab-ink); font-family: var(--vis-display, sans-serif); font-size: 1.05rem; font-weight: 800; }
-.result-checks dd small { display: block; margin-top: 3px; font-family: sans-serif; font-size: .72rem; font-weight: 400; }
+.result-checks dd { margin: 0; color: var(--lab-ink); font-family: var(--site-font); font-size: 1.05rem; font-weight: 800; }
+.result-checks dd small { display: block; margin-top: 3px; font-family: var(--site-font); font-size: .72rem; font-weight: 400; }
 
 .platform-specimens {
     display: grid;
@@ -310,7 +310,7 @@
 .platform-specimen dl { margin: 24px 0 0; }
 .platform-specimen dl div { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid rgba(40, 87, 114, .18); }
 .platform-specimen dd { margin: 0; color: var(--lab-ink); font-weight: 800; }
-.specimen-note { position: absolute; top: 14px; right: 14px; padding: 5px 8px; background: var(--lab-yellow); font-family: var(--vis-display, sans-serif); font-size: .7rem; font-weight: 800; transform: rotate(2deg); }
+.specimen-note { position: absolute; top: 14px; right: 14px; padding: 5px 8px; background: var(--lab-yellow); font-family: var(--site-font); font-size: .7rem; font-weight: 800; transform: rotate(2deg); }
 
 .platform-drawing {
     position: relative;
@@ -333,7 +333,7 @@
 .decision-trail li { padding: 20px 24px; border-top: 4px solid #6fa6b0; }
 .decision-trail li span { display: block; margin-top: 8px; line-height: 1.55; }
 .decision-conclusion { display: flex; gap: 20px; align-items: center; margin: 34px 0 0; padding: 18px 22px; background: #fff8d8; transform: rotate(-.4deg); }
-.decision-conclusion span { font-family: var(--vis-display, sans-serif); font-weight: 800; white-space: nowrap; }
+.decision-conclusion span { font-family: var(--site-font); font-weight: 800; white-space: nowrap; }
 
 .lab-bench-map {
     position: relative;
@@ -367,7 +367,7 @@
     box-shadow: 5px 5px 0 rgba(40, 87, 114, .12);
 }
 
-.safety-hotspot > span { grid-row: 1 / span 2; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--lab-coral); color: #fff; font-family: var(--vis-display, sans-serif); font-weight: 900; }
+.safety-hotspot > span { grid-row: 1 / span 2; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--lab-coral); color: #fff; font-family: var(--site-font); font-weight: 900; }
 .safety-hotspot strong,.safety-hotspot small { display: block; }
 .safety-hotspot small { margin-top: 3px; line-height: 1.3; }
 .hotspot-sample { left: 7%; top: 9%; transform: rotate(-1deg); }
@@ -376,7 +376,7 @@
 
 .risk-thinking { background: #eef6e9; }
 .risk-equation { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-.risk-equation span { padding: 14px 16px; border: 3px solid var(--lab-ink); background: #fff; font-family: var(--vis-display, sans-serif); font-weight: 800; }
+.risk-equation span { padding: 14px 16px; border: 3px solid var(--lab-ink); background: #fff; font-family: var(--site-font); font-weight: 800; }
 .risk-equation i { color: var(--lab-ink); font-size: 1.5rem; font-style: normal; font-weight: 900; }
 
 .safety-check-sheet ul { margin: 0; padding: 0; list-style: none; }
