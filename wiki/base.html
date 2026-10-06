@@ -53,7 +53,7 @@
 ] %}
 
 {% set hp_family_pages = ["/human-practices", "/education"] %}
-{% set show_intro = true %}
+{% set show_intro = request.path == "/" %}
 
 <!doctype html>
 
