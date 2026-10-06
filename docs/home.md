@@ -718,7 +718,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <p>Explore the full team page to see members, roles, and areas of expertise in more detail.</p>
                         </div>
 
-                        <a href="/team" class="btn-cycle" data-team-button>
+                        <a href="team" class="btn-cycle" data-team-button>
                             VIEW ALL MEMBERS
                         </a>
                     </div>
