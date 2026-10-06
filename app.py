@@ -1,4 +1,4 @@
-from os import path
+from os import environ, path
 
 import markdown
 from flask import Flask, abort, render_template
@@ -11,6 +11,7 @@ app = Flask(__name__, template_folder=template_folder)
 app.config['FREEZER_DESTINATION'] = 'public'
 app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
+app.config['PUBLIC_SITE_ROOT'] = environ.get('CI_PAGES_URL', '').rstrip('/') + '/'
 freezer = Freezer(app)
 
 # Markdown extensions enabled when converting docs/*.md to HTML.

@@ -62,6 +62,9 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% if is_not_found %}
+  <base href="{{ config.PUBLIC_SITE_ROOT }}" />
+  {% endif %}
 
   <link rel="icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg" />
 
