@@ -19,6 +19,10 @@ freezer = Freezer(app)
 # See https://python-markdown.github.io/extensions/
 MARKDOWN_EXTENSIONS = ['extra', 'sane_lists', 'smarty', 'toc']
 
+# Pages whose displayed name differs from their file name, so a page can be
+# renamed without moving the file and breaking its existing URL.
+PAGE_TITLES = {'measurement': 'Results'}
+
 
 def render_markdown(page):
     """Read docs/<page>.md and convert it to an HTML fragment."""
@@ -30,7 +34,7 @@ def render_markdown(page):
 def unlinked_pages():
     """Keep freezing pages that are no longer linked from the navbar."""
     for page in ['background', 'problem-statement', 'alternative-platform',
-                 'industry', 'software', 'measurement']:
+                 'industry', 'software']:
         yield 'pages', {'page': page}
 
 
@@ -57,8 +61,9 @@ def pages(page):
     if not path.isfile(path.join('docs', f'{page.lower()}.md')):
         abort(404)
     md_content = render_markdown(page.lower())
+    default_title = page.title().replace('-', ' ')
     return render_template('base.html',
-                           title=page.title().replace('-', ' '),
+                           title=PAGE_TITLES.get(page.lower(), default_title),
                            md_content=md_content)
 
 

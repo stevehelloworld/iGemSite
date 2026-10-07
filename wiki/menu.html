@@ -119,6 +119,21 @@
             </div>
 
             <div class="mega-column">
+              <a href="{{ url_for('pages', page='results') }}">
+                <div class="icon">
+                  <i class="bi bi-bar-chart"></i>
+                </div>
+
+                <div>
+                  <strong>Results</strong>
+                  <small>
+                    What our experiments showed
+                  </small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
               <a href="{{ url_for('pages', page='contribution') }}">
                 <div class="icon">
                   <i class="bi bi-globe"></i>
@@ -174,7 +189,7 @@
             </div>
 
             <div class="mega-column">
-              <a href="{{ url_for('pages', page='results') }}">
+              <a href="{{ url_for('pages', page='measurement') }}">
                 <div class="icon">
                   <i class="bi bi-bar-chart"></i>
                 </div>
@@ -182,7 +197,7 @@
                 <div>
                   <strong>Results</strong>
                   <small>
-                    Growth and GFP data for pVIS1–8
+                    Quantification and validation
                   </small>
                 </div>
               </a>
