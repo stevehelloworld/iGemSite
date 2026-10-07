@@ -30,7 +30,7 @@ def render_markdown(page):
 def unlinked_pages():
     """Keep freezing pages that are no longer linked from the navbar."""
     for page in ['background', 'problem-statement', 'alternative-platform',
-                 'industry', 'software']:
+                 'industry', 'software', 'measurement']:
         yield 'pages', {'page': page}
 
 

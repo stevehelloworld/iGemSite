@@ -1,6 +1,6 @@
 <section class="experiment-page">
   <div class="experiment-hero">
-    <p class="experiment-eyebrow">WET LAB / EXPERIMENTS</p>
+    <p class="experiment-eyebrow">WET LAB / METHODS</p>
     <h2>Construction of four metallothionein plasmids</h2>
     <p class="experiment-lead">Our wet-lab work follows four MT variants through plasmid extraction, inverse PCR, insert amplification, restriction digestion, ligation, electroporation, colony PCR, and sequencing preparation. This page reflects the procedures and outcomes documented from June 23 to July 21, 2026.</p>
     <div class="experiment-tag-row" aria-label="Experimental workflow"><span>DNA extraction</span><span>Inverse PCR</span><span>XbaI / SalI digestion</span><span>T4 ligation</span><span>Colony PCR</span></div>
@@ -14,6 +14,66 @@
       <div class="experiment-flow-node"><span>3</span><h4>Digest</h4><p>Digest vector and inserts with XbaI and SalI to produce compatible ends.</p></div><div class="experiment-flow-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
       <div class="experiment-flow-node"><span>4</span><h4>Transform</h4><p>Ligate at a 3:1 insert-to-vector molar ratio and electroporate competent cells.</p></div><div class="experiment-flow-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
       <div class="experiment-flow-node experiment-flow-node-iterate"><span>5</span><h4>Screen</h4><p>Pick colonies, run colony PCR, troubleshoot, and prepare selected colonies for sequencing.</p></div>
+    </div>
+  </section>
+
+  <section class="experiment-figure-section" aria-labelledby="protocol-sequence-title">
+    <div class="experiment-flow-header"><p class="experiment-card-kicker">Build sequence</p><h3 id="protocol-sequence-title">Procedure for each plasmid generation</h3><p>The constructs were built in three rounds, each reusing the same cloning cycle. pVIS1 is assembled on the pMH45 backbone, pVIS2–4 are assembled on pVIS1, and pVIS5–8 are derived from the first four plasmids by amplifying around the lpp-OmpA anchor so that it is left out.</p></div>
+    <div class="experiment-grid protocol-grid">
+      <article class="protocol-card">
+        <div class="protocol-card-head"><h4>pVIS1</h4><p>From the pMH45 template</p></div>
+        <ol>
+          <li>Extract pMH45 plasmid</li>
+          <li>Inverse Phusion PCR for pMH45 plasmid</li>
+          <li>DpnI digestion</li>
+          <li>Phusion PCR for MT1 constructs</li>
+          <li>Restriction enzyme digestion</li>
+          <li>Ligation</li>
+          <li>Transformation via electroporation</li>
+          <li>Plating</li>
+          <li>Colony PCR</li>
+          <li>Send sequence</li>
+        </ol>
+      </article>
+      <article class="protocol-card">
+        <div class="protocol-card-head"><h4>pVIS2, 3, 4</h4><p>From the pVIS1 template</p></div>
+        <ol>
+          <li>Extract pVIS1 plasmid</li>
+          <li>Inverse Phusion PCR for pVIS1 plasmid</li>
+          <li>DpnI digestion for pVIS1 plasmid</li>
+          <li>Phusion PCR for MT2, 3, 4 construct</li>
+          <li>Restriction enzyme digestion</li>
+          <li>Ligation</li>
+          <li>Transformation via electroporation</li>
+          <li>Plating</li>
+          <li>Colony PCR</li>
+          <li>Send sequence</li>
+        </ol>
+      </article>
+      <article class="protocol-card">
+        <div class="protocol-card-head"><h4>pVIS5–8</h4><p>From the four finished plasmids, without lpp-OmpA</p></div>
+        <ol>
+          <li>Extract pVIS1, 2, 3, 4 plasmid
+            <ol class="protocol-substeps">
+              <li>pVIS1 #2</li>
+              <li>pVIS2 #8</li>
+              <li>pVIS3 #6</li>
+              <li>pVIS4 #1</li>
+            </ol>
+          </li>
+          <li>Phusion PCR for the 4 plasmids
+            <ol class="protocol-substeps">
+              <li>Excluding lpp-OmpA for all 4 strains</li>
+            </ol>
+          </li>
+          <li>DpnI digestion</li>
+          <li>Ligation</li>
+          <li>Transformation via electroporation</li>
+          <li>Plating</li>
+          <li>Colony PCR</li>
+          <li>Send sequence</li>
+        </ol>
+      </article>
     </div>
   </section>
 
