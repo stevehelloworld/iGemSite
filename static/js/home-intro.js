@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const halfGap = Math.min(34, Math.max(16, width * .022));
     const germOffscreen = -(width / 2 + germWidth / 2 + 40);
     const ionOffscreen = -(width / 2 + ionWidth / 2 + 20);
-    const germMeet = width * .18 - halfGap;
-    const ionMeet = width * .18 + halfGap;
+    const germMeet = -halfGap;
+    const ionMeet = halfGap;
     const bend = Math.min(80, window.innerHeight * .1);
     const position = (x, y) => `translate3d(calc(-50% + ${x}px), calc(-50% + ${y}px), 0)`;
 
