@@ -2,7 +2,7 @@
   <div class="experiment-hero">
     <p class="experiment-eyebrow">WET LAB / METHODS</p>
     <h2>Construction of four metallothionein plasmids</h2>
-    <p class="experiment-lead">Our wet-lab work follows four MT variants through plasmid extraction, inverse PCR, insert amplification, restriction digestion, ligation, electroporation, colony PCR, and sequencing preparation. This page reflects the procedures and outcomes documented from June 23 to July 21, 2026.</p>
+    <p class="experiment-lead">Our wet-lab work follows four MT variants through plasmid extraction, inverse PCR, insert amplification, restriction digestion, ligation, electroporation, colony PCR, and sequencing preparation. This page reflects the procedures documented from June 23 to August 4, 2026, together with the cadmium dose-response assays run that September.</p>
     <div class="experiment-tag-row" aria-label="Experimental workflow"><span>DNA extraction</span><span>Inverse PCR</span><span>XbaI / SalI digestion</span><span>T4 ligation</span><span>Colony PCR</span></div>
   </div>
 
@@ -157,6 +157,14 @@
     </article><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Selection workflow</span><small>Undiluted and 10<sup>−1</sup> samples were plated on kanamycin agar</small></div></div>
   </section>
 
+  <section class="experiment-section experiment-section-reverse">
+    <div class="experiment-section-header"><p class="experiment-card-kicker">Core protocol 04</p><h3>Cadmium dose-response assay</h3></div>
+    <div class="experiment-section-layout"><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Plate reader</span><small>GFP and OD<sub>600</sub> read together at 37 °C with orbital shaking between reads</small></div><article class="experiment-section-copy">
+      <p>Once the eight constructs were verified they were assayed in a plate reader against a cadmium gradient of 0, 40, 200, 300, and 400 nM, in both a standard medium and a sodium-free variant. Each construct was run in three replicate wells, with GFP fluorescence and OD<sub>600</sub> recorded from the same well so that signal could be expressed per unit of growth.</p>
+      <p>Every plate carried pMH45, the metallothionein-free sensor, as the isogenic control, plus pTK03 as the fluorescence-negative reference and pYC08 as the fluorescence-positive reference. Reported GFP/OD<sub>600</sub> is the pTK03-subtracted fluorescence divided by blank-subtracted OD<sub>600</sub>, averaged across the replicate wells. The pVIS1–4 and pVIS5–8 sets were run on separate days, so cross-set comparisons are scaled using the reference strains present on both plates. The full derivation and the resulting data are on the <a href="results">cadmium response</a> page.</p>
+    </article></div>
+  </section>
+
   <section class="experiment-log-panel">
     <div class="experiment-flow-header experiment-log-header"><p class="experiment-card-kicker">Outcome</p><h3>Troubleshooting guided the next iteration</h3><p>Colony PCR did not consistently yield visible products. The team recorded the failures and revised the workflow.</p></div>
     <div class="experiment-log-grid">
@@ -164,6 +172,12 @@
       <details class="experiment-log-entry"><summary><span class="experiment-log-date">Root cause</span><strong>Template preparation</strong></summary><p>The July 13 review identified excessive biomass transfer during colony template preparation as one likely source of poor amplification.</p></details>
       <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 20</span><strong>Ligation repeated</strong></summary><p>MT2, MT3, and MT4 ligations were repeated. The team also noted that GC-buffer and HF-buffer plasmid preparations could have different concentrations, invalidating an earlier volume assumption.</p></details>
       <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 21</span><strong>Sequencing preparation</strong></summary><p>Following another transformation, colonies PVIS1 #2, #9, and #15 were selected and plated for sequencing preparation.</p></details>
+      <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 22</span><strong>Empty plates, then a six-way ligation</strong></summary><p>The July 21 transformation produced no colonies on any plate. Fresh LB + kanamycin plates were poured, and six ligations were set up to test the HF-buffer and GC-buffer plasmid preparations against each of MT2, MT3, and MT4.</p></details>
+      <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 23–24</span><strong>Screening the six-way round</strong></summary><p>13 colonies from PVIS2 and 15 each from PVIS3 and PVIS4 were gridded, then screened by colony PCR over two days with PVIS1 as the control.</p></details>
+      <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 28</span><strong>Restart from the plasmid</strong></summary><p>The vector was linearised again by inverse PCR, MT2–MT4 were re-amplified, and the template was removed with DpnI. Glycerol stocks were banked for PVIS1 #2, #9, and #15.</p></details>
+      <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 30–31</span><strong>Third transformation round</strong></summary><p>MT2, MT3, and MT4 were transformed again and plated at whole-cell, 10⁻¹, and 10⁻². 20 colonies were gridded per construct and the first eight of each were screened.</p></details>
+      <details class="experiment-log-entry"><summary><span class="experiment-log-date">August 3</span><strong>Constructs rebuilt from fresh plasmid</strong></summary><p>Plasmid was extracted again at 109–117 ng/µl and the inserts re-amplified, giving 30.0 ng/µl for MT2, 37.5 for MT3, and 18.9 for MT4 before SalI/XbaI digestion and ligation.</p></details>
+      <details class="experiment-log-entry"><summary><span class="experiment-log-date">August 4</span><strong>Sent for sequencing</strong></summary><p>The rebuilt constructs were cleaned, submitted for sequencing, and transformed again. The reads that came back are reported on the <a href="measurement">construction results</a> page.</p></details>
     </div>
   </section>
 </section>
