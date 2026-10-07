@@ -119,10 +119,13 @@
 
   <link href="{{ url_for('static', filename='textbook-nav.css', v='20261006b') }}" rel="stylesheet" />
 
-  <link href="{{ url_for('static', filename='textbook-theme.css', v='20261007') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='textbook-theme.css', v='20261007c') }}" rel="stylesheet" />
   {% if request.path == "/results" %}
   <link href="{{ url_for('static', filename='results.css', v='20261006b') }}" rel="stylesheet" />
   {% endif %}
+
+  <!-- Type scale: loaded last so it overrides the per-page stylesheets. -->
+  <link href="{{ url_for('static', filename='type-scale.css', v='20261007d') }}" rel="stylesheet" />
 
   <title>{{ title }} | Cadture - iGEM 2026</title>
 
