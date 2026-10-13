@@ -1889,6 +1889,74 @@
 
 </section>
 
+<section class="ihp-section" id="expert-interview-ho">
+
+    <div class="section-title">
+
+        <h2>Expert Interview: Professor Ja-An Annie Ho</h2>
+
+    </div>
+
+    <p class="section-description">
+
+        We spoke with Professor Ja-An Annie Ho of National Taiwan University,
+        whose work focuses on biosensors and molecular detection. We wanted to
+        understand what evidence would make Cadture&rsquo;s cadmium-responsive
+        GFP signal reliable and useful outside a clean laboratory setup. This
+        account paraphrases the interview notes and contains no direct quotes.
+
+    </p>
+
+    <div class="impact-text">
+
+        <h3>What we learned</h3>
+
+        <details class="interview-part">
+            <summary>Test selectivity in stages</summary>
+            <p>A response to cadmium alone does not establish selectivity. The suggested sequence is to test cadmium first, challenge the sensor with individual interferents, then test mixtures. A particularly demanding case is low cadmium against a high level of an interferent.</p>
+        </details>
+
+        <details class="interview-part">
+            <summary>Separate a response from a concentration measurement</summary>
+            <p>Estimating an unknown concentration requires a dose-response calibration across the working range, with a defined region and a fitted relationship. The calibration should then be checked against known samples; GFP output by itself should not be presented as a validated concentration estimate.</p>
+        </details>
+
+        <details class="interview-part">
+            <summary>Compare clean buffer with real water</summary>
+            <p>Run matched cadmium spikes in buffer and in a real-water sample, then compare the response trends. A blinded sample can test whether the assay gives a useful estimate without the operator knowing its expected value. The same sample can be sent for ICP-MS as a reference, and disagreements should be reported.</p>
+        </details>
+
+        <details class="interview-part">
+            <summary>Diagnose the signal path before redesigning it</summary>
+            <p>A weak readout can come from the biological circuit producing too little GFP or from the detector failing to resolve small differences. Those causes need different fixes, so the signal and background should be assessed before changing the construct or the measurement setup.</p>
+        </details>
+
+        <details class="interview-part">
+            <summary>Design around users and the full life cycle</summary>
+            <p>Practical value depends on the intended user and setting. Sensitivity, selectivity, response time, reproducibility, cost, and ease of operation have to be weighed together. The interview also highlighted that engineered bacteria need containment, and that captured cadmium leaves the water in biomass that still needs a safe handling, recovery, or disposal route.</p>
+        </details>
+
+        <h3>Proposed validation roadmap</h3>
+
+        <p>The interview reordered our proposed validation work so selectivity and calibration come before testing complex water matrices. The steps below are a plan; this section does not report them as completed experiments.</p>
+
+        <ol>
+            <li>Calibrate the response with known cadmium standards in clean buffer and define the useful working range.</li>
+            <li>Test individual interferents, including zinc and mercury, at relevant levels.</li>
+            <li>Test contaminant mixtures, followed by low cadmium against a high interferent level.</li>
+            <li>Compare matched spikes in buffer and real water, focusing on whether the response trends agree.</li>
+            <li>Run blinded unknown samples and compare the same samples with ICP-MS.</li>
+        </ol>
+
+        <p>The interview notes identify blinded real-water samples and reference comparison as the strongest next evidence if time is limited. Containment and cadmium-loaded biomass handling need to be designed alongside this work.</p>
+
+        <p class="interview-aside"><strong>What remains to document:</strong> Our current record does not yet connect each recommendation to a completed design change or experiment. We will add those links when the team verifies the relevant project records.</p>
+
+    </div>
+
+</section>
+
+
 <section class="ihp-section">
 
     <div class="section-title">
