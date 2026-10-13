@@ -1152,3 +1152,65 @@
 .page-methods .protocol-steps li:last-child {
     margin-bottom: 0;
 }
+
+/* Wet lab results: the screening gels, and the single inline gel figure. */
+.page-measurement .gel-figure {
+    margin: 0;
+}
+
+.page-measurement .gel-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid #cfe3e7;
+    border-radius: 8px;
+    background: #0b0b0b;
+}
+
+.page-measurement .gel-figure figcaption,
+.page-measurement .gel-card figcaption small {
+    color: #6c8996;
+    font-size: .8rem;
+}
+
+.page-measurement .gel-figure figcaption {
+    margin-top: 8px;
+}
+
+.page-measurement .gel-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    align-items: start;
+}
+
+.page-measurement .gel-card {
+    margin: 0;
+    padding: 12px;
+    border: 2px solid #cfe3e7;
+    border-radius: 8px;
+    background: var(--vis-white);
+}
+
+.page-measurement .gel-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background: #0b0b0b;
+}
+
+.page-measurement .gel-card figcaption {
+    display: grid;
+    gap: 2px;
+    margin-top: 10px;
+}
+
+.page-measurement .gel-card figcaption strong {
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    font-size: .92rem;
+}
+
+.page-measurement .gel-card figcaption span {
+    color: var(--vis-copy);
+    font-size: .84rem;
+}

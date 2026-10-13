@@ -14,6 +14,32 @@
     </article><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Screening effort</span><small>Over 100 colonies gridded and picked across the four rounds</small></div></div>
   </section>
 
+  <section class="experiment-section experiment-section-reverse">
+    <div class="experiment-section-header"><p class="experiment-card-kicker">Starting material</p><h3>The vector linearised cleanly in both buffers</h3></div>
+    <div class="experiment-section-layout"><figure class="gel-figure"><img src="static/assets/images/gels/0623-inverse-pcr-pmh45.webp" alt="Agarose gel of the 23 June inverse PCR. A DNA ladder lane sits beside the VIS1 HF and VIS1 GC lanes, both showing a single strong band level with the 6,000 bp marker." loading="lazy"><figcaption>23 June &middot; inverse PCR of pMH45, with the 6,000 bp position marked on the gel</figcaption></figure><article class="experiment-section-copy">
+      <p>The first result of the project was the inverse PCR that opens the pMH45 backbone. The 23 June gel was run with the product from both the HF-buffer and the GC-buffer reaction, labelled VIS1 HF and VIS1 GC, against a DNA ladder.</p>
+      <p>Both lanes gave a single strong band at approximately 6,000 bp, which is the expected size for the linearised plasmid, and neither showed a smear or a second product. That confirmed the vector was usable from either buffer, and both preparations were carried forward &mdash; a choice that mattered later, because the two preparations turned out to be at different concentrations.</p>
+    </article></div>
+  </section>
+
+  <section class="experiment-figure-section" aria-labelledby="screen-log-title">
+    <div class="experiment-flow-header"><p class="experiment-card-kicker">Screening record</p><h3 id="screen-log-title">Colony PCR, day by day</h3><p>Each screen used primers TK07 P1 and PU12 P2, with MT1 colonies included as a positive control on every plate. The outcome column records what was read off the gel at the time.</p></div>
+    <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Date</th><th>Screened</th><th>Outcome</th></tr></thead><tbody>
+      <tr><td>2 July</td><td>MT1 &times; 16</td><td>Product obtained across most of the 16 colonies, giving the first usable construct</td></tr>
+      <tr><td>6 July</td><td>MT2</td><td>No amplicon. The team recorded the run as unsuccessful and decided to pick more colonies and cut back the MT3 and MT4 screens</td></tr>
+      <tr><td>9 July</td><td>MT2 &times; 16, MT3 &times; 16, MT4 &times; 16, MT1 &times; 2</td><td>Screened on one 52-reaction master mix; no usable product for MT2, MT3 or MT4</td></tr>
+      <tr><td>13 July</td><td>MT2 &times; 16, MT1 &times; 2</td><td>Failed again. Root-cause review identified excessive biomass carried into the template preparation</td></tr>
+      <tr><td>14 July</td><td>MT2 &times; 16, MT1 &times; 2</td><td>MT1 control succeeded; MT2 failed</td></tr>
+      <tr><td>15 July</td><td>MT3 &times; 16, MT1 &times; 2</td><td>No results observed</td></tr>
+      <tr><td>16 July</td><td>MT4 &times; 16, MT1 &times; 2</td><td>No usable product. Decision taken to redo the ligations for MT2, MT3 and MT4</td></tr>
+      <tr><td>23&ndash;24 July</td><td>43 colonies (PVIS2 &times; 13, PVIS3 &times; 15, PVIS4 &times; 15)</td><td>Screened over two days after the six-way HF/GC ligation round</td></tr>
+      <tr><td>31 July</td><td>24 colonies (8 each of PVIS2, PVIS3, PVIS4)</td><td>Screened from the third transformation round</td></tr>
+    </tbody></table></div>
+    <div class="experiment-section-layout"><article class="experiment-section-copy">
+      <p>The pattern across these nine screens is the useful result: the MT1 control amplified on essentially every plate while MT2, MT3 and MT4 did not, which separates a problem with the colony-PCR reaction from a problem with the constructs themselves. Because the control worked, the reaction conditions were sound, and attention moved to the ligation and transformation steps &mdash; which is what the 28 July restart and the 3 August rebuild addressed.</p>
+    </article></div>
+  </section>
+
   <section class="experiment-figure-section" aria-labelledby="round-table-title">
     <div class="experiment-flow-header"><p class="experiment-card-kicker">Build rounds</p><h3 id="round-table-title">What each round produced</h3><p>Every round followed the same cycle of ligation, electroporation, plating and colony PCR. The outcome column records what was observed at the screening gel, as logged in the <a href="notebook">notebook</a>.</p></div>
     <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Round</th><th>Ligation</th><th>Screened</th><th>Constructs</th><th>Outcome</th></tr></thead><tbody>
@@ -38,6 +64,56 @@
       <tr><td>pVIS3 #8</td><td>EGR_09832</td><td>EGR_09832</td><td>Correct</td></tr>
       <tr><td>pVIS4 #1</td><td>OsMTI-1b</td><td>OsMTI-1b</td><td>Correct — taken forward</td></tr>
     </tbody></table></div>
+  </section>
+
+  <section class="experiment-figure-section" aria-labelledby="gel-gallery-title">
+    <div class="experiment-flow-header"><p class="experiment-card-kicker">Gels</p><h3 id="gel-gallery-title">The screening gels</h3><p>Every screening gel from the construction work, in order. All were run against a DNA ladder, and the MT1 positive control appears on most plates. They are reproduced in greyscale because the originals were photographed under UV illumination, where the bands read more clearly without the orange cast.</p></div>
+    <div class="experiment-grid gel-grid">
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0630-mt2-pcr.webp" alt="Agarose gel from 30 June: MT2 insert PCR. Amplification of the MT2 insert before digestion." loading="lazy">
+        <figcaption><strong>30 June</strong><span>MT2 insert PCR</span><small>Amplification of the MT2 insert before digestion</small></figcaption>
+      </figure>
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0702-colony-pcr-mt1.webp" alt="Agarose gel from 2 July: Colony PCR, MT1 x 16. The screen that produced the first usable construct." loading="lazy">
+        <figcaption><strong>2 July</strong><span>Colony PCR, MT1 &times; 16</span><small>The screen that produced the first usable construct</small></figcaption>
+      </figure>
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0706-colony-pcr-mt3.webp" alt="Agarose gel from 6 July: Colony PCR, MT3. No amplicon at the expected size." loading="lazy">
+        <figcaption><strong>6 July</strong><span>Colony PCR, MT3</span><small>No amplicon at the expected size</small></figcaption>
+      </figure>
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0706-colony-pcr-mt4.webp" alt="Agarose gel from 6 July: Colony PCR, MT4. No amplicon at the expected size." loading="lazy">
+        <figcaption><strong>6 July</strong><span>Colony PCR, MT4</span><small>No amplicon at the expected size</small></figcaption>
+      </figure>
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0709-colony-pcr-mt2-mt3.webp" alt="Agarose gel from 9 July: Colony PCR, MT2 and MT3. Part of the 52-reaction screen across all three constructs." loading="lazy">
+        <figcaption><strong>9 July</strong><span>Colony PCR, MT2 and MT3</span><small>Part of the 52-reaction screen across all three constructs</small></figcaption>
+      </figure>
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0709-colony-pcr-mt3-mt4.webp" alt="Agarose gel from 9 July: Colony PCR, MT3 and MT4, MT1 control. Part of the 52-reaction screen across all three constructs." loading="lazy">
+        <figcaption><strong>9 July</strong><span>Colony PCR, MT3 and MT4, MT1 control</span><small>Part of the 52-reaction screen across all three constructs</small></figcaption>
+      </figure>
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0713-colony-pcr-mt2.webp" alt="Agarose gel from 13 July: Colony PCR, MT2, MT1 control. The run that prompted the template-preparation review." loading="lazy">
+        <figcaption><strong>13 July</strong><span>Colony PCR, MT2, MT1 control</span><small>The run that prompted the template-preparation review</small></figcaption>
+      </figure>
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0714-colony-pcr-mt2.webp" alt="Agarose gel from 14 July: Colony PCR, MT2, MT1 control. MT1 control amplified; MT2 did not." loading="lazy">
+        <figcaption><strong>14 July</strong><span>Colony PCR, MT2, MT1 control</span><small>MT1 control amplified; MT2 did not</small></figcaption>
+      </figure>
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0715-colony-pcr-mt3-mt4.webp" alt="Agarose gel from 15 July: Colony PCR, MT3 and MT4, MT1 control. No results observed." loading="lazy">
+        <figcaption><strong>15 July</strong><span>Colony PCR, MT3 and MT4, MT1 control</span><small>No results observed</small></figcaption>
+      </figure>
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0716-colony-pcr-mt3-mt4.webp" alt="Agarose gel from 16 July: Colony PCR, MT3 and MT4, MT1 control. The screen after which the ligations were redone." loading="lazy">
+        <figcaption><strong>16 July</strong><span>Colony PCR, MT3 and MT4, MT1 control</span><small>The screen after which the ligations were redone</small></figcaption>
+      </figure>
+      <figure class="gel-card">
+        <img src="static/assets/images/gels/0723-colony-pcr-mt2-mt3-mt4.webp" alt="Agarose gel from 23 July: Colony PCR, MT2, MT3 and MT4. First screen of the six-way HF/GC ligation round." loading="lazy">
+        <figcaption><strong>23 July</strong><span>Colony PCR, MT2, MT3 and MT4</span><small>First screen of the six-way HF/GC ligation round</small></figcaption>
+      </figure>
+    </div>
   </section>
 
   <section class="experiment-section experiment-section-reverse">
