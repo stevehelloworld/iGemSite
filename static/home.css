@@ -678,3 +678,37 @@
         margin-top: 18px;
     }
 }
+
+/* Project highlights is a plain static block, not a scroll-driven scene, so   */
+/* the stage stops being sticky and everything sits at its finished state.     */
+.home-page .highlight-story {
+    height: auto;
+}
+
+.home-page .highlight-stage {
+    position: static;
+    height: auto;
+    overflow: visible;
+}
+
+.home-page .highlight-scene {
+    --scene-opacity: 1;
+    --scene-offset: 0px;
+    --scene-scale: 1;
+    position: static;
+    inset: auto;
+    opacity: 1;
+    transform: none;
+    transition: none;
+    pointer-events: auto;
+}
+
+.home-page .highlight-scene .future-box {
+    --future-opacity: 1;
+    --future-offset: 0px;
+}
+
+.home-page .highlight-box {
+    --card-opacity: 1;
+    --card-offset: 0px;
+}

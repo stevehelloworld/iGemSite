@@ -1860,4 +1860,76 @@
     </div>
 
 </section>
+<section class="ihp-section">
 
+    <div class="section-title">
+
+        <h2>
+
+            Industry Stakeholder Report: Mega Union (兆聯)
+
+        </h2>
+
+    </div>
+
+    <p class="section-description">
+
+        This report summarizes the insights, technical evaluations, and industry
+        requirements gathered during the stakeholder consultation with Mega Union
+        (兆聯), a water treatment and resource recovery provider serving
+        high-tech semiconductor and panel manufacturers such as TSMC and Micron.
+        The primary objective of this interview was to evaluate the industrial
+        feasibility of utilizing engineered <em>E. coli</em> expressing
+        Metallothionein (MT) to capture heavy metals in wastewater.
+
+    </p>
+
+    <div class="impact-text">
+
+        <h3>1. Heavy Metal Wastewater Landscape &amp; Current Technologies</h3>
+
+        <ul>
+            <li><strong>Wastewater Classification &amp; Metal Sources:</strong> Industrial wastewater is defined as process water containing heavy metal concentrations in the range of hundreds of PPM up to 1,000&ndash;2,000 PPM, whereas solutions exceeding 1% (10,000 PPM) are classified as waste liquid and reprocessed directly by chemical suppliers. Lead (Pb) primarily originates from UPS battery systems and soldering processes, while Chromium (Cr) is used for anti-corrosive surface treatments.</li>
+            <li><strong>Physical-Chemical Treatment (物化法):</strong> Current industrial standards rely on chemical precipitation by adjusting wastewater pH to alkaline levels (pH 11&ndash;12 for Chromium, pH 10 for Lead) to form insoluble metal hydroxides. To reduce heavy metal concentrations below 1 PPM, factories add chemical chelating agents (such as EDTA or BTC), which use sulfur polymer chains to bind metals in a manner functionally equivalent to biological MT protein domains.</li>
+            <li><strong>Landfill Limitations &amp; Circular Economy Shift:</strong> Precipitation generates heavy metal sludge that has traditionally been sent to landfills. Disposal of hazardous industrial sludge containing Lead or Chromium costs over 20 NTD/kg, representing 60% to 70% of total operational treatment costs. Landfill space in Taiwan is rapidly decreasing. Consequently, major semiconductor clients prefer resource recovery methods&mdash;such as ion exchange resins combined with electrolysis&mdash;to recover metals into high-purity copper, lead, or chromium bars, allowing recovery systems to achieve financial payback within 2 to 3 years.</li>
+        </ul>
+
+        <h3>2. Evaluation of Synthetic Biology and Engineered Bacteria</h3>
+
+        <ul>
+            <li><strong>Solid-Liquid Separation via MBR:</strong> Separating engineered bacteria from treated effluent is technically mature using Membrane Biological Reactors (MBR). MBR filtration with PVDF or PS membranes (pore size around 0.1 &micro;m) achieves a 99.9% bacterial separation rate. Membranes are maintained via aeration/bubbling, periodic backwashing, and occasional chemical soaking in bleach or acid.</li>
+            <li><strong>Industrial Barriers for Biological Systems:</strong> High-tech manufacturers express three main reservations regarding biological systems:
+                <ol>
+                    <li><strong>Stability &amp; Reliability:</strong> Biological processes are viewed as unpredictable &ldquo;black boxes&rdquo; susceptible to sudden load shocks. Regulatory discharge violations that cause factory shutdowns result in catastrophic financial losses.</li>
+                    <li><strong>Land Footprint &amp; Processing Speed:</strong> Physical-chemical treatments take 5 to 30 minutes, whereas biological treatments require several hours to tens of hours. High-tech plants are located in high-cost science parks where land area is strictly constrained.</li>
+                    <li><strong>Low-Concentration Kinetics (&ldquo;Polishing&rdquo;):</strong> Science park discharge regulations require Lead &lt; 1 PPM and Chromium &lt; 0.03 PPM. Due to reduced collision rates between microbes and metal ions at single-digit PPM levels, biological systems struggle to reach these low thresholds compared to tightly packed ion exchange resin beds.</li>
+                </ol>
+            </li>
+            <li><strong>Selectivity in Metal Recovery:</strong> High binding selectivity is necessary if the goal is circular economy resource recovery, as mixed impurity ions (such as Sodium, Magnesium, or Calcium) prevent raw material buyers from purchasing the recovered metal. Conversely, if the objective is purely meeting environmental discharge limits, non-selective binding of all heavy metals is preferred.</li>
+        </ul>
+
+        <h3>3. Safety, Biocontainment, and Adoption Criteria</h3>
+
+        <ul>
+            <li><strong>Multi-Barrier Biocontainment Strategy:</strong> To prevent the escape of modified organisms into natural water bodies, a multi-barrier safety system was proposed: MBR membranes act as the primary filter (99.9% retention), followed by UV light disinfection on effluent water to eliminate any remaining 0.1% of microbes. Spent bacterial sludge can undergo ultrasonic cell wall disruption prior to disposal or reprocessing.</li>
+            <li><strong>Industrial Environment Resilience:</strong> Process wastewater exhibits high conductivity, high salinity, and extreme pH levels. Biological systems must either adjust influent water conditions or use bacterial strains adapted to high osmotic pressure.</li>
+            <li><strong>Decision Priorities for Industry Adoption:</strong> High-tech clients evaluate wastewater treatment technologies according to the following strict hierarchy:
+                <ol>
+                    <li>Treatment Cost (CAPEX and OPEX).</li>
+                    <li>Stability and Reliability.</li>
+                    <li>Processing Speed and Footprint Efficiency.</li>
+                </ol>
+            </li>
+        </ul>
+
+        <h3>4. Operational Insights from Semiconductor Water Management</h3>
+
+        <ul>
+            <li><strong>Enzyme Applications:</strong> The current primary application of enzymes in semiconductor wastewater is Catalase, which neutralizes hydrogen peroxide (H<sub>2</sub>O<sub>2</sub>) within 5 minutes. However, activated carbon remains more widely used due to enzyme release issues that cause downstream resin and reverse osmosis (RO) membrane scaling.</li>
+            <li><strong>Water Recycling Metrics:</strong> At leading semiconductor fabs like TSMC, a single drop of water is recycled and reused on average 3.5 to 3.7 times before final discharge.</li>
+            <li><strong>Provider Business Model:</strong> Water treatment companies like Mega Union derive 70%&ndash;80% of revenue from system engineering (CAPEX) and 20%&ndash;30% from long-term maintenance and services (OPEX), with post-installation service contracts providing the core source of profitability.</li>
+        </ul>
+
+    </div>
+
+</section>

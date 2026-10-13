@@ -72,8 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const taiwanStory = document.querySelector(".taiwan-story");
     const solutionScenes = document.querySelectorAll("[data-solution-scene]");
     const solutionStory = document.querySelector(".solution-story");
-    const highlightScenes = document.querySelectorAll("[data-highlight-scene]");
-    const highlightStory = document.querySelector(".highlight-story");
     const progressButton = document.querySelector(".story-progress-button");
     let queued = false;
 
@@ -172,64 +170,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function updateHighlightStory() {
-        if (!highlightStory || !highlightScenes.length) return;
-
-        const storyRect = highlightStory.getBoundingClientRect();
-        const storyTravel = Math.max(1, storyRect.height - window.innerHeight);
-        const entryLead = window.innerHeight * 0.9;
-        const storyProgress = Math.min(1, Math.max(0, (entryLead - storyRect.top) / (storyTravel + entryLead)));
-
-        function ease(value) {
-            const clamped = Math.min(1, Math.max(0, value));
-            return clamped * clamped * (3 - 2 * clamped);
-        }
-
-        highlightScenes.forEach((scene, index) => {
-            let strength = 0;
-
-            if (index === 0) {
-                if (storyProgress < 0.2) {
-                    strength = ease(storyProgress / 0.08);
-                } else if (storyProgress < 0.32) {
-                    strength = ease((0.32 - storyProgress) / 0.12);
-                }
-            } else if (index === 1) {
-                // Project highlights is the last section on the page, so this
-                // scene stays up to the end instead of fading out to hand over
-                // to a section that follows it.
-                if (storyProgress >= 0.28) {
-                    strength = ease((storyProgress - 0.28) / 0.08);
-                }
-            }
-
-            scene.style.setProperty("--scene-opacity", strength.toFixed(3));
-            scene.style.setProperty("--scene-offset", ((1 - strength) * 64).toFixed(1) + "px");
-            scene.style.setProperty("--scene-scale", (0.9 + strength * 0.1).toFixed(3));
-            scene.classList.toggle("is-visible", strength > 0.08);
-        });
-
-        const cards = highlightStory.querySelectorAll("[data-highlight-card]");
-        const cardStarts = [0.38, 0.48, 0.58, 0.68];
-        cards.forEach((card, index) => {
-            const cardStrength = storyProgress >= cardStarts[index] ? ease((storyProgress - cardStarts[index]) / 0.08) : 0;
-            card.style.setProperty("--card-opacity", cardStrength.toFixed(3));
-            card.style.setProperty("--card-offset", ((1 - cardStrength) * 34).toFixed(1) + "px");
-        });
-
-        const futurePanel = highlightStory.querySelector("[data-highlight-future]");
-        if (futurePanel) {
-            const futureStrength = storyProgress >= 0.78 ? ease((storyProgress - 0.78) / 0.08) : 0;
-            futurePanel.style.setProperty("--future-opacity", futureStrength.toFixed(3));
-            futurePanel.style.setProperty("--future-offset", ((1 - futureStrength) * 38).toFixed(1) + "px");
-        }
-    }
-
     function updateStoryMotion() {
         updateSceneGroup(story, scenes);
         updateSceneGroup(taiwanStory, taiwanScenes);
         updateSolutionStory();
-        updateHighlightStory();
 
         const scrollable = document.documentElement.scrollHeight - window.innerHeight;
         const progress = scrollable > 0 ? Math.min(1, window.scrollY / scrollable) : 0;
@@ -284,10 +228,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="highlight-gradient-bridge" aria-hidden="true"></div>
     <div class="highlight-story" data-intro-fade="true">
         <div class="highlight-stage">
-            <article class="highlight-scene highlight-title-scene" data-highlight-scene>
-                <h2>PROJECT HIGHLIGHTS</h2>
-            </article>
-
             <article class="highlight-scene" data-highlight-scene>
                 <h2 class="highlight-kicker-title">PROJECT HIGHLIGHTS</h2>
                 <div class="highlight-grid">
