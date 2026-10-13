@@ -25,6 +25,11 @@ For up-to-date requirements, resources, help and guidance, visit
 
 ## Getting started
 
+The website maintenance guide is available in
+[English](maintenance/website-maintenance.en.md) and
+[繁體中文](maintenance/website-maintenance.zh-TW.md). It covers Team introductions,
+build checks, and results chart generation.
+
 You should probably only edit the files inside folders `static`, `wiki` and
 `docs`.
 
