@@ -12,7 +12,7 @@
             </header>
 
             <figure class="pollution-panorama-v2">
-                <img src="static/assets/images/problem/pollution-path-panorama-optimized.jpg?v=20261013-pb1" alt="A colored-pencil panorama showing heavy metals moving from industrial wastewater through a river and rice fields to a nearby community">
+                <img src="static/assets/images/problem/pollution-path-panorama-optimized.webp?v=20261013-pb2" alt="A colored-pencil panorama showing heavy metals moving from industrial wastewater through a river and rice fields to a nearby community">
                 <figcaption class="metal-legend-v2"> <span class="metal-cd"></span> Cadmium (Cd)</figcaption>
             </figure>
 
@@ -43,7 +43,7 @@
                 </figure>
 
                 <div class="location-window-v2">
-                    <img src="static/assets/images/taiwan-scenes/taiwan-city-vignettes-optimized.jpg?v=20261013-pb1" alt="Three colored-pencil scenes showing industrial river discharge, agricultural irrigation, and harbor pollution in Taiwan">
+                    <img src="static/assets/images/taiwan-scenes/taiwan-city-vignettes-optimized.webp?v=20261013-pb2" alt="Three colored-pencil scenes showing industrial river discharge, agricultural irrigation, and harbor pollution in Taiwan">
                     <div class="location-copy-v2 is-active" data-map-step="0"><span>Taoyuan</span><h3>Industrial parks meet the river</h3><p>Electronics and metal-processing effluent can introduce Cd into northern waterways.</p></div>
                     <div class="location-copy-v2" data-map-step="1"><span>Taichung</span><h3>River pollution reaches farmland</h3><p>Irrigation creates a direct path from contaminated water to soil, crops, and food safety.</p></div>
                     <div class="location-copy-v2" data-map-step="2"><span>Kaohsiung</span><h3>Industry meets the harbor</h3><p>Industrial discharge and busy port activity increase the metal load faced by coastal ecosystems.</p></div>
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </header>
 
             <figure class="treatment-panorama-v2">
-                <img src="static/assets/images/solution/bioremediation-process-panorama-optimized.jpg?v=20261013-pb1" alt="A colored-pencil treatment channel showing polluted water, engineered bacteria binding metals, membrane separation, metal recovery, and clean water">
+                <img src="static/assets/images/solution/bioremediation-process-panorama-optimized.webp?v=20261013-pb2" alt="A colored-pencil treatment channel showing polluted water, engineered bacteria binding metals, membrane separation, metal recovery, and clean water">
             </figure>
 
             <ol class="treatment-steps-v2" aria-label="Biological heavy-metal treatment steps">
