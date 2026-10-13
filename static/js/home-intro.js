@@ -36,6 +36,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Wait for the intro's own artwork so nothing pops in mid-slide, and so the
+  // element widths measured below are the real ones. Capped so a missing or
+  // slow image can never trap the visitor behind the overlay.
+  function imagesReady(elements, timeout = 6000) {
+    const images = elements
+      .map((el) => (el.tagName === "IMG" ? el : el.querySelector("img")))
+      .filter(Boolean);
+    const waits = images.map((img) => (img.complete && img.naturalWidth
+      ? Promise.resolve()
+      : new Promise((resolve) => {
+        img.addEventListener("load", resolve, { once: true });
+        img.addEventListener("error", resolve, { once: true });
+      })));
+    return Promise.race([
+      Promise.all(waits),
+      new Promise((resolve) => { window.setTimeout(resolve, timeout); })
+    ]);
+  }
+
+  // Hold the overlay until the page behind it has finished loading, so it acts
+  // as a real loading screen rather than revealing a half-drawn page.
+  function pageLoaded(timeout = 8000) {
+    if (document.readyState === "complete") return Promise.resolve();
+    return Promise.race([
+      new Promise((resolve) => { window.addEventListener("load", resolve, { once: true }); }),
+      new Promise((resolve) => { window.setTimeout(resolve, timeout); })
+    ]);
+  }
+
   function play(element, keyframes, options) {
     const animation = element.animate(keyframes, { fill: "forwards", ...options });
     if (fast) animation.playbackRate = FAST_RATE;
@@ -83,33 +112,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function runIntro() {
+    await imagesReady([germ, ion, logo]);
+    if (finished) return;
+
     const width = window.innerWidth;
     const germWidth = germ.getBoundingClientRect().width;
     const ionWidth = ion.getBoundingClientRect().width;
     const halfGap = Math.min(34, Math.max(16, width * .022));
-    const germOffscreen = -(width / 2 + germWidth / 2 + 40);
-    const ionOffscreen = -(width / 2 + ionWidth / 2 + 20);
+    const germOffscreen = -(width / 2 + germWidth / 2 + 60);
+    const ionOffscreen = width / 2 + ionWidth / 2 + 60;
     const germMeet = -halfGap;
     const ionMeet = halfGap;
-    const bend = Math.min(80, window.innerHeight * .1);
-    const position = (x, y) => `translate3d(calc(-50% + ${x}px), calc(-50% + ${y}px), 0)`;
 
-    // The ion enters first; the germ follows its curved path and closes the gap.
+    // Slide straight toward each other from opposite edges, like Joy-Cons docking in.
     const germSlide = play(germ, [
-      { opacity: 0, transform: position(germOffscreen, bend * .45) },
-      { opacity: 1, transform: position(-width * .32, -bend * .55), offset: .22 },
-      { opacity: 1, transform: position(-width * .18, bend), offset: .48 },
-      { opacity: 1, transform: position(-width * .08, -bend * .4), offset: .72 },
-      { opacity: 1, transform: position(germMeet, 0) }
-    ], { duration: 3200, easing: "ease-in-out" });
+      { opacity: 0, transform: `translate3d(calc(-50% + ${germOffscreen}px), -50%, 0)` },
+      { opacity: 1, offset: .12 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${germMeet - 14}px), -50%, 0)`, offset: .82 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${germMeet}px), -50%, 0)` }
+    ], { duration: 950, easing: easeOut });
 
     const ionSlide = play(ion, [
-      { opacity: 0, transform: position(ionOffscreen, 0) },
-      { opacity: 1, transform: position(-width * .17, -bend * .75), offset: .22 },
-      { opacity: 1, transform: position(width * .03, bend * .6), offset: .48 },
-      { opacity: 1, transform: position(width * .12, -bend * .55), offset: .72 },
-      { opacity: 1, transform: position(ionMeet, 0) }
-    ], { duration: 3200, easing: "ease-in-out" });
+      { opacity: 0, transform: `translate3d(calc(-50% + ${ionOffscreen}px), -50%, 0)` },
+      { opacity: 1, offset: .12 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${ionMeet + 14}px), -50%, 0)`, offset: .82 },
+      { opacity: 1, transform: `translate3d(calc(-50% + ${ionMeet}px), -50%, 0)` }
+    ], { duration: 850, easing: easeOut });
 
     await Promise.all([germSlide, ionSlide]);
     if (finished) return;
@@ -155,6 +183,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (finished) return;
 
     await pause(250);
+    if (finished) return;
+
+    // Don't slide off until the page behind the overlay has actually loaded.
+    await pageLoaded();
     if (finished) return;
 
     // Fly the icon to the navbar logo in the top-left corner while the overlay fades out.

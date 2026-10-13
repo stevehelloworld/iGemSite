@@ -55,7 +55,7 @@
 ] %}
 
 {% set hp_family_pages = ["/human-practices", "/education"] %}
-{% set show_intro = request.path == "/" %}
+{% set show_intro = true %}
 
 <!doctype html>
 
@@ -92,7 +92,7 @@
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cadture-germ-capture.png', v='20260922') }}">
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cd2-ion.png', v='20260922') }}">
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/vis-logo-heart.png', v='20260915-heart1') }}">
-  <link href="{{ url_for('static', filename='home-intro.css', v='20261006c') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='home-intro.css', v='20261013') }}" rel="stylesheet" />
   {% endif %}
 
   {% if request.path == "/" %}
@@ -119,13 +119,11 @@
 
   <link href="{{ url_for('static', filename='textbook-nav.css', v='20261006b') }}" rel="stylesheet" />
 
-  <link href="{{ url_for('static', filename='textbook-theme.css', v='20261007c') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='textbook-theme.css', v='20261013') }}" rel="stylesheet" />
   {% if request.path == "/results" %}
   <link href="{{ url_for('static', filename='results.css', v='20261006b') }}" rel="stylesheet" />
   {% endif %}
 
-  <!-- Type scale: loaded last so it overrides the per-page stylesheets. -->
-  <link href="{{ url_for('static', filename='type-scale.css', v='20261007d') }}" rel="stylesheet" />
 
   <title>{{ title }} | Cadture - iGEM 2026</title>
 
@@ -289,7 +287,7 @@
   {% endif %}
 
   {% if show_intro %}
-  <script src="{{ url_for('static', filename='js/home-intro.js', v='20261007') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/home-intro.js', v='20261013') }}" defer></script>
   {% endif %}
 
   {% if request.path == "/" %}
