@@ -1,5 +1,4 @@
-/* Team members page: one tab per group, each a grid of flip cards. */
-/* Front: photo, name, role badge. Back: the member's self-introduction. */
+/* Team members page: one tab per group and expandable member introductions. */
 
 .team-tabs {
     display: flex;
@@ -58,51 +57,52 @@
 }
 
 .member-card {
-    /* Tall enough for the longest bio (Ian Huang needs 426px of back face at
-       the narrowest card width) so no introduction is cut off. */
-    height: 470px;
-    perspective: 1200px;
-    outline: none;
-    cursor: pointer;
-}
-
-.member-card-inner {
-    position: relative;
-    height: 100%;
-    transition: transform 520ms cubic-bezier(.2, .7, .2, 1);
-    transform-style: preserve-3d;
-}
-
-.member-card:hover .member-card-inner,
-.member-card:focus-visible .member-card-inner,
-.member-card.is-flipped .member-card-inner {
-    transform: rotateY(180deg);
-}
-
-.member-card-front,
-.member-card-back {
-    position: absolute;
-    inset: 0;
     display: flex;
-    flex-direction: column;
+    min-height: 390px;
     padding: 16px;
     border: 2px solid #cfe3e7;
     background: var(--vis-white);
     box-shadow: 5px 6px 0 rgba(40, 87, 114, .1);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
 }
 
-.member-card:focus-visible .member-card-front,
-.member-card:focus-visible .member-card-back {
-    border-color: var(--vis-ink);
+.member-card-inner {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 }
 
-.member-card-back {
-    justify-content: center;
-    overflow-y: auto;
-    background: var(--vis-pale);
-    transform: rotateY(180deg);
+.member-card-front {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.member-card-disclosure {
+    margin-top: 12px;
+    border-top: 1px solid #cfe3e7;
+}
+
+.member-card-hint {
+    display: list-item;
+    margin: 10px 0 0;
+    padding-top: 2px;
+    color: var(--vis-ink);
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.member-card-hint:focus-visible {
+    outline: 3px solid #174b68;
+    outline-offset: 4px;
+}
+
+.member-card-disclosure[open] .member-card-hint {
+    margin-bottom: 10px;
+}
+
+.member-card-bio {
+    padding: 0 0 4px;
 }
 
 .member-card-photo {
@@ -136,11 +136,7 @@
     letter-spacing: -.03em;
 }
 
-.member-card-back h4 {
-    margin-top: 0;
-}
-
-.member-card-back p {
+.member-card-bio p {
     margin: 0;
     color: var(--vis-copy);
     font-size: .88rem;
@@ -171,21 +167,9 @@
 .team-badge--instructor { background: var(--vis-teal); color: #fff; }
 .team-badge--support { background: #f2e2c4; }
 
-.member-card-hint {
-    margin: 10px 0 0;
-    color: #7f9aa7;
-    font-size: .74rem;
-}
-
 .team-bio-pending {
     font-style: italic;
     color: #8199a6;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .member-card-inner {
-        transition: none;
-    }
 }
 
 /* A filled photo slot drops the dashed placeholder treatment. */

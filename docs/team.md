@@ -24,32 +24,34 @@
             <p class="team-group-intro">Our student leaders coordinate the team, keep the project on schedule, and connect the wet lab, dry lab, and human practices work.</p>
         </div>
         <div class="member-card-grid">
-            <article class="member-card" tabindex="0" aria-label="Ohanna Liu, Student Leader">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Ohanna Liu</h4>
                         <p class="team-badges"><span class="team-badge team-badge--leader">Student Leader</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Ohanna Liu</h4>
-                        <p>Hi, I am Ohanna and currently in my senior year of high school. Academically, my interests fall in biology, public health, and medicine, with a strong addiction in exploring life expectancy. Outside of academics, I love sleeping, swimming, and taking photos of the clouds.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Ohanna Liu’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p>Hi, I am Ohanna and currently in my senior year of high school. Academically, my interests fall in biology, public health, and medicine, with a strong addiction in exploring life expectancy. Outside of academics, I love sleeping, swimming, and taking photos of the clouds.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
-            <article class="member-card" tabindex="0" aria-label="Lucy Wang, Student Leader">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Lucy Wang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--leader">Student Leader</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Lucy Wang</h4>
-                        <p class="team-bio-pending">Self-introduction coming soon.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Lucy Wang’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
         </div>
@@ -63,46 +65,49 @@
             <p class="team-group-intro">The wet lab team designs and runs the experiments that build and test our metallothionein constructs.</p>
         </div>
         <div class="member-card-grid">
-            <article class="member-card" tabindex="0" aria-label="Sunny Huang, Wet Lab">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Sunny Huang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--wet">Wet Lab</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Sunny Huang</h4>
-                        <p>Hey people! My name is Sunny, and I'm currently a senior in VIS Experimental Education. Outside of iGEM, you can find me reading about biology and materials engineering, crocheting, or vibing to indie rock playlists.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Sunny Huang’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p>Hey people! My name is Sunny, and I'm currently a senior in VIS Experimental Education. Outside of iGEM, you can find me reading about biology and materials engineering, crocheting, or vibing to indie rock playlists.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
-            <article class="member-card" tabindex="0" aria-label="Eugenia Liu, Wet Lab">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Eugenia Liu</h4>
                         <p class="team-badges"><span class="team-badge team-badge--wet">Wet Lab</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Eugenia Liu</h4>
-                        <p>Hi! My name is Eugenia, and I am a grade 12 student at VIS Experimental High School. I am interested in biology, psychology, and genetics. Outside of school, I like to watch musicals, read comics, and daydream.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Eugenia Liu’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p>Hi! My name is Eugenia, and I am a grade 12 student at VIS Experimental High School. I am interested in biology, psychology, and genetics. Outside of school, I like to watch musicals, read comics, and daydream.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
-            <article class="member-card" tabindex="0" aria-label="Nicholas Lu, Wet Lab">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Nicholas Lu</h4>
                         <p class="team-badges"><span class="team-badge team-badge--wet">Wet Lab</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Nicholas Lu</h4>
-                        <p>Hello! My name is Nicholas. I am a senior who is interested in biology, psychology, and anything "sciency." During my free time, I love to observe animals, hike, and take photos of nature.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Nicholas Lu’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p>Hello! My name is Nicholas. I am a senior who is interested in biology, psychology, and anything "sciency." During my free time, I love to observe animals, hike, and take photos of nature.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
         </div>
@@ -116,46 +121,49 @@
             <p class="team-group-intro">The dry lab team handles the modeling and computational work that supports our experiments.</p>
         </div>
         <div class="member-card-grid">
-            <article class="member-card" tabindex="0" aria-label="Chelsea Chang, Dry Lab">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Chelsea Chang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--dry">Dry Lab</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Chelsea Chang</h4>
-                        <p class="team-bio-pending">Self-introduction coming soon.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Chelsea Chang’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
-            <article class="member-card" tabindex="0" aria-label="Francis Lin, Dry Lab">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Francis Lin</h4>
                         <p class="team-badges"><span class="team-badge team-badge--dry">Dry Lab</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Francis Lin</h4>
-                        <p>Staring into a full refrigerator that has no green tea in it, I have concluded it is empty. I'm Francis, and I am a senior who spends an unreasonable amount of time on decisions like this one. In fact, I've started calling this a sort of existential shock therapy — administering a small chill in place of a larger one.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Francis Lin’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p>Staring into a full refrigerator that has no green tea in it, I have concluded it is empty. I'm Francis, and I am a senior who spends an unreasonable amount of time on decisions like this one. In fact, I've started calling this a sort of existential shock therapy — administering a small chill in place of a larger one.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
-            <article class="member-card" tabindex="0" aria-label="Ray Shang, Dry Lab">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Ray Shang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--dry">Dry Lab</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Ray Shang</h4>
-                        <p>Hi, I'm Ray. A 9th grade student at VIS and a member of the 2026 VIS iGems Team. I have an interest in academics like robotics, mechanical engineering, physics, and biology. Aside from academics, I like sleeping, playing video games, and going to robotics competitions. (FTC and FRC)</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Ray Shang’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p>Hi, I'm Ray. A 9th grade student at VIS and a member of the 2026 VIS iGems Team. I have an interest in academics like robotics, mechanical engineering, physics, and biology. Aside from academics, I like sleeping, playing video games, and going to robotics competitions. (FTC and FRC)</p>
+                        </div>
+                    </details>
                 </div>
             </article>
         </div>
@@ -169,18 +177,19 @@
             <p class="team-group-intro">Our primary PI oversees the project and supports the team throughout the competition.</p>
         </div>
         <div class="member-card-grid">
-            <article class="member-card" tabindex="0" aria-label="Li-Chi Huang, Primary PI">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Li-Chi Huang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Primary PI</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Li-Chi Huang</h4>
-                        <p class="team-bio-pending">Self-introduction coming soon.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Li-Chi Huang’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
         </div>
@@ -194,46 +203,49 @@
             <p class="team-group-intro">Our secondary PIs lend their research expertise and advice to the project.</p>
         </div>
         <div class="member-card-grid">
-            <article class="member-card" tabindex="0" aria-label="Hsin-Hung David Chou, Secondary PI">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Hsin-Hung David Chou</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Hsin-Hung David Chou</h4>
-                        <p>I am a principle investigator in National Taiwan University. I take systems approaches to bridge molecular biology and evolution. The central goal has been to quantitatively decode gene expression, elucidate the functional diversity of regulatory elements, and unravel the principles of gene regulation across the domain Bacteria.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Hsin-Hung David Chou’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p>I am a principle investigator in National Taiwan University. I take systems approaches to bridge molecular biology and evolution. The central goal has been to quantitatively decode gene expression, elucidate the functional diversity of regulatory elements, and unravel the principles of gene regulation across the domain Bacteria.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
-            <article class="member-card" tabindex="0" aria-label="Chau-Ti Ting, Secondary PI">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Chau-Ti Ting</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Chau-Ti Ting</h4>
-                        <p class="team-bio-pending">Self-introduction coming soon.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Chau-Ti Ting’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
-            <article class="member-card" tabindex="0" aria-label="Shun-Chern Tsaur, Secondary PI">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Shun-Chern Tsaur</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Shun-Chern Tsaur</h4>
-                        <p class="team-bio-pending">Self-introduction coming soon.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Shun-Chern Tsaur’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
         </div>
@@ -247,32 +259,34 @@
             <p class="team-group-intro">Our instructors guide us day to day, in the lab and beyond.</p>
         </div>
         <div class="member-card-grid">
-            <article class="member-card" tabindex="0" aria-label="Curtis Chen, Instructor">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Curtis Chen</h4>
                         <p class="team-badges"><span class="team-badge team-badge--instructor">Instructor</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Curtis Chen</h4>
-                        <p class="team-bio-pending">Self-introduction coming soon.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Curtis Chen’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
-            <article class="member-card" tabindex="0" aria-label="Kelly Liao, Instructor">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Kelly Liao</h4>
                         <p class="team-badges"><span class="team-badge team-badge--instructor">Instructor</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Kelly Liao</h4>
-                        <p class="team-bio-pending">Self-introduction coming soon.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Kelly Liao’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
         </div>
@@ -286,18 +300,19 @@
             <p class="team-group-intro">Supporting members help wherever they are needed across the project.</p>
         </div>
         <div class="member-card-grid">
-            <article class="member-card" tabindex="0" aria-label="Ian Huang, Supporting">
+            <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo member-card-photo--filled"><img src="static/assets/images/team/ian-huang.webp" alt="Portrait of Ian Huang" loading="lazy"></div>
                         <h4>Ian Huang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--support">Supporting</span></p>
-                        <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>
                     </div>
-                    <div class="member-card-back">
-                        <h4>Ian Huang</h4>
-                        <p>Hi, I'm Ian Huang, a 9th-grade student and a member of the 2026 VIS iGEM Team. I have a strong interest in exploring the principles and applications of computer science and engineering. Beyond academics, I enjoy reading, playing chess, playing the viola, and swimming in my free time. I'm always curious to learn new things, take on challenging problems, and discover how different fields can come together to create meaningful solutions.</p>
-                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Ian Huang’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p>Hi, I'm Ian Huang, a 9th-grade student and a member of the 2026 VIS iGEM Team. I have a strong interest in exploring the principles and applications of computer science and engineering. Beyond academics, I enjoy reading, playing chess, playing the viola, and swimming in my free time. I'm always curious to learn new things, take on challenging problems, and discover how different fields can come together to create meaningful solutions.</p>
+                        </div>
+                    </details>
                 </div>
             </article>
         </div>

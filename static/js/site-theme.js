@@ -194,12 +194,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (id) showGroup(id);
     });
 
-    // Hover flips cards for mouse users; touch has no hover, so a tap flips instead.
-    document.querySelectorAll(".member-card").forEach((card) => {
-      card.addEventListener("pointerup", (event) => {
-        if (event.pointerType !== "mouse") card.classList.toggle("is-flipped");
-      });
-    });
   }
 
   if (!reduceMotion) {
