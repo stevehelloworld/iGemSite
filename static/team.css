@@ -9,10 +9,13 @@
 }
 
 .team-tab {
+    /* No border: the clip-path would slice through it and leave the edge
+       broken at the cut corners. Clipped controls elsewhere on the site are
+       borderless with a solid fill, so the tint carries the shape instead. */
     padding: 9px 15px;
-    border: 2px solid var(--vis-line);
+    border: 0;
     border-radius: 0;
-    background: var(--vis-white);
+    background: var(--vis-blue-paper);
     color: var(--vis-ink);
     font-family: var(--vis-display);
     font-size: .84rem;
@@ -24,12 +27,11 @@
 
 .team-tab:hover,
 .team-tab:focus-visible {
-    background: var(--vis-blue-paper);
+    background: #bfe0ea;
     outline: none;
 }
 
 .team-tab[aria-selected="true"] {
-    border-color: var(--vis-ink);
     background: var(--vis-ink);
     color: #fff;
 }
