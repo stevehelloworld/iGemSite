@@ -289,7 +289,7 @@
             <article class="member-card" tabindex="0" aria-label="Ian Huang, Supporting">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="static/assets/images/team/ian-huang.webp" alt="Portrait of Ian Huang" loading="lazy"></div>
                         <h4>Ian Huang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--support">Supporting</span></p>
                         <p class="member-card-hint" aria-hidden="true">Hover or tap to read more</p>

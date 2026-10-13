@@ -52,7 +52,9 @@
 }
 
 .member-card {
-    height: 400px;
+    /* Tall enough for the longest bio (Ian Huang needs 426px of back face at
+       the narrowest card width) so no introduction is cut off. */
+    height: 470px;
     perspective: 1200px;
     outline: none;
     cursor: pointer;
@@ -180,8 +182,17 @@
     }
 }
 
-@media (max-width: 560px) {
-    .member-card {
-        height: 380px;
-    }
+/* A filled photo slot drops the dashed placeholder treatment. */
+.member-card-photo--filled {
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+.member-card-photo--filled img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
 }

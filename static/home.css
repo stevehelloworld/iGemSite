@@ -712,3 +712,14 @@
     --card-opacity: 1;
     --card-offset: 0px;
 }
+
+/* The mascot was 241px tall inside a 180px banner and bled 28px past its
+   right edge, so overflow:hidden and the clip-path cut it on three sides.
+   Size it to the banner and keep it clear of the clipped corners. Uses the
+   translate property so it does not fight the rotate-based sway above. */
+.home-page .future-image {
+    right: 26px;
+    bottom: 50%;
+    width: 132px;
+    translate: 0 50%;
+}
