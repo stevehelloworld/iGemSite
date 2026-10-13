@@ -941,32 +941,6 @@
 
 
 
-        <div class="impact-image">
-
-            <div class="todo-box">
-
-                <h3>PHOTO LOG PLACEHOLDER</h3>
-
-                <p>
-
-                    Insert photos from:
-
-                </p>
-
-                <ul>
-
-                    <li>Water Treatment Plant</li>
-
-                    <li>Farmers Association</li>
-
-                    <li>Environmental discussions</li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
     </div>
 
 </section>
@@ -1006,34 +980,6 @@
 
 
     <div class="impact-layout reverse-layout">
-
-        <div class="impact-image">
-
-            <div class="todo-box">
-
-                <h3>PHOTO LOG PLACEHOLDER</h3>
-
-                <p>
-
-                    Insert photos from:
-
-                </p>
-
-                <ul>
-
-                    <li>Zhao Lian Industry</li>
-
-                    <li>Wastewater Treatment Plant</li>
-
-                    <li>Treatment process</li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-
 
         <div class="impact-text">
 

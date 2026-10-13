@@ -376,3 +376,9 @@
 .page-human-practices .impact-text ol li + li {
     margin-top: 9px;
 }
+
+/* Both impact layouts now carry text only, so the copy spans the full width
+   instead of leaving the column where the photo placeholders used to sit. */
+.page-human-practices .impact-layout {
+    grid-template-columns: 1fr;
+}
