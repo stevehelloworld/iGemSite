@@ -1127,3 +1127,28 @@
     border: 2px solid #cfe3e7;
     background: var(--vis-white);
 }
+
+/* Methods: a full bench protocol written out as numbered steps. */
+.page-methods .protocol-steps {
+    margin-top: 18px;
+    padding: 18px 22px 20px;
+    border: 2px solid #cfe3e7;
+    border-radius: 8px;
+    background: var(--vis-white);
+}
+
+.page-methods .protocol-steps ol {
+    margin: 0;
+    padding-left: 1.4em;
+}
+
+.page-methods .protocol-steps li {
+    margin-bottom: 8px;
+    color: var(--vis-copy);
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+.page-methods .protocol-steps li:last-child {
+    margin-bottom: 0;
+}

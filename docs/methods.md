@@ -141,6 +141,30 @@
     </article><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Inverse PCR purpose</span><small>Amplify outward across the plasmid to create a linear vector and add restriction sites</small></div></div>
   </section>
 
+  <section class="experiment-figure-section" aria-labelledby="dna-extraction-title">
+    <div class="experiment-flow-header"><p class="experiment-card-kicker">Step-by-step</p><h3 id="dna-extraction-title">DNA extraction (QIAprep Spin Miniprep Kit)</h3><p>The full bench protocol as followed, from the kit's Quick-Start Protocol dated February 2015.</p></div>
+    <div class="protocol-steps">
+      <ol>
+          <li>Pellet 1–5 ml bacterial overnight culture by centrifugation at 9000 rpm for 10 minutes at 25 °C.</li>
+          <li>Resuspend pellet bacterial cells in 250 µl buffer P1 and transfer to a microcentrifuge tube.</li>
+          <li>Add 250 µl Buffer P2 and mix thoroughly by inverting the tube 4~6 times until the solution becomes clear. Do not allow the lysis reaction to proceed over 2 minutes.</li>
+          <li>Add 350 µl of Buffer N3 and mix immediately and thoroughly by inverting the tube 4~6 times.</li>
+          <li>Centrifuge for 10 minutes at 13,000 rpm.</li>
+          <li>Apply 800 µl supernatant from step 5 to the QIAprep 2.0 spin column by pipetting.</li>
+          <li>Centrifuge for 1 minute at 13,000 rpm. Discard the flow through.</li>
+          <li>Wash the QIA 2.0 spin column by adding 0.5 ml Buffer PB.</li>
+          <li>Centrifuge for 1 minute at 13,000 rpm. Discard the flow through.</li>
+          <li>Wash the QIA 2.0 spin column by adding 0.75 ml buffer PE.</li>
+          <li>Centrifuge for 1 minute at 13,000 rpm. Discard the flow through.</li>
+          <li>Centrifuge for 3 minutes at 13,000 rpm.</li>
+          <li>Heat for 3 minutes at 55 °C.</li>
+          <li>Place the QIAprep 2.0 spin column in a clean 1.5 ml microcentrifuge tube.</li>
+          <li>Add 30 µl of ddH<sub>2</sub>O. Stand for 1 minute at 55 °C.</li>
+          <li>Centrifuge for 1 minute at 13,000 rpm.</li>
+      </ol>
+    </div>
+  </section>
+
   <section class="experiment-section experiment-section-reverse">
     <div class="experiment-section-header"><p class="experiment-card-kicker">Core protocol 02</p><h3>Cleanup, digestion, and ligation</h3></div>
     <div class="experiment-section-layout"><div class="experiment-figure-slot experiment-figure-slot-wide"><span>XbaI + SalI</span><small>Vector and PCR products were double-digested for 2 hours at 37 °C</small></div><article class="experiment-section-copy">
