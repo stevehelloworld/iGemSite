@@ -280,7 +280,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <img
                         src="static/assets/images/vis-logo-heart.png"
-                        class="future-image">
+                        class="future-image"
+                        alt="VIS heart logo">
                 </div>
             </article>
         </div>

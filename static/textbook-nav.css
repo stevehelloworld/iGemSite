@@ -117,6 +117,28 @@
     clip-path: polygon(2% 8%, 97% 0, 100% 91%, 5% 100%);
 }
 
+.skip-to-content {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 4000;
+    padding: 10px 14px;
+    transform: translateY(calc(-100% - 16px));
+    background: #fff;
+    color: #174b68;
+    border: 2px solid #174b68;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
+}
+
+#main-content {
+    scroll-margin-top: 7rem;
+}
+
 .textbook-nav-page .navbar-nav {
     align-items: center;
     gap: 3px;
@@ -132,13 +154,24 @@
     border-radius: 0;
 }
 
+.textbook-nav-page .navbar button.nav-link {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
 .textbook-nav-page .navbar .nav-link:hover,
 .textbook-nav-page .navbar .nav-link:focus-visible,
 .textbook-nav-page .navbar .nav-link.active {
     color: #174b68 !important;
     background: #fff0a8;
     clip-path: polygon(2% 7%, 98% 0, 100% 91%, 4% 100%);
-    outline: none;
+}
+
+.textbook-nav-page .navbar .nav-link:focus-visible {
+    clip-path: none;
+    outline: 3px solid #174b68;
+    outline-offset: 3px;
 }
 
 .textbook-nav-page .navbar-toggler {

@@ -2,22 +2,22 @@
 
     <div class="experiment-hero">
         <p class="experiment-eyebrow">VIS iGEM 2026</p>
-        <h2>Meet the Team</h2>
+        <h1>Meet the Team</h1>
         <p class="experiment-lead">Cadture is built by our student leaders, wet lab, and dry lab members, alongside the PIs, instructors, and supporting crew who guide us. Pick a group below, then hover over or tap a card to read each member's introduction.</p>
     </div>
 
-    <div class="team-tabs" role="tablist" aria-label="Team groups" data-team-tabs>
-        <button class="team-tab" type="button" role="tab" id="tab-student-leader" aria-controls="student-leader" aria-selected="true" data-team-tab="student-leader">Student Leader</button>
-        <button class="team-tab" type="button" role="tab" id="tab-wet-lab" aria-controls="wet-lab" aria-selected="false" data-team-tab="wet-lab">Wet Lab</button>
-        <button class="team-tab" type="button" role="tab" id="tab-dry-lab" aria-controls="dry-lab" aria-selected="false" data-team-tab="dry-lab">Dry Lab</button>
-        <button class="team-tab" type="button" role="tab" id="tab-primary-pi" aria-controls="primary-pi" aria-selected="false" data-team-tab="primary-pi">Primary PI</button>
-        <button class="team-tab" type="button" role="tab" id="tab-secondary-pi" aria-controls="secondary-pi" aria-selected="false" data-team-tab="secondary-pi">Secondary PI</button>
-        <button class="team-tab" type="button" role="tab" id="tab-instructor" aria-controls="instructor" aria-selected="false" data-team-tab="instructor">Instructor</button>
-        <button class="team-tab" type="button" role="tab" id="tab-supporting" aria-controls="supporting" aria-selected="false" data-team-tab="supporting">Supporting</button>
+    <div class="team-tabs" role="tablist" aria-label="Team groups" aria-orientation="horizontal" data-team-tabs>
+        <button class="team-tab" type="button" role="tab" id="tab-student-leader" aria-controls="student-leader" aria-selected="true" tabindex="0" data-team-tab="student-leader">Student Leader</button>
+        <button class="team-tab" type="button" role="tab" id="tab-wet-lab" aria-controls="wet-lab" aria-selected="false" tabindex="-1" data-team-tab="wet-lab">Wet Lab</button>
+        <button class="team-tab" type="button" role="tab" id="tab-dry-lab" aria-controls="dry-lab" aria-selected="false" tabindex="-1" data-team-tab="dry-lab">Dry Lab</button>
+        <button class="team-tab" type="button" role="tab" id="tab-primary-pi" aria-controls="primary-pi" aria-selected="false" tabindex="-1" data-team-tab="primary-pi">Primary PI</button>
+        <button class="team-tab" type="button" role="tab" id="tab-secondary-pi" aria-controls="secondary-pi" aria-selected="false" tabindex="-1" data-team-tab="secondary-pi">Secondary PI</button>
+        <button class="team-tab" type="button" role="tab" id="tab-instructor" aria-controls="instructor" aria-selected="false" tabindex="-1" data-team-tab="instructor">Instructor</button>
+        <button class="team-tab" type="button" role="tab" id="tab-supporting" aria-controls="supporting" aria-selected="false" tabindex="-1" data-team-tab="supporting">Supporting</button>
     </div>
 
     <!-- Student Leader -->
-    <section class="experiment-section team-group" id="student-leader" role="tabpanel" aria-labelledby="tab-student-leader" data-team-panel>
+    <section class="experiment-section team-group" id="student-leader" role="tabpanel" aria-labelledby="tab-student-leader" tabindex="0" data-team-panel>
         <div class="experiment-section-header">
             <p class="experiment-card-kicker">Student Leader</p>
             <h3>Student Leader</h3>
@@ -56,7 +56,7 @@
     </section>
 
     <!-- Wet Lab -->
-    <section class="experiment-section team-group" id="wet-lab" role="tabpanel" aria-labelledby="tab-wet-lab" data-team-panel>
+    <section class="experiment-section team-group" id="wet-lab" role="tabpanel" aria-labelledby="tab-wet-lab" tabindex="0" data-team-panel>
         <div class="experiment-section-header">
             <p class="experiment-card-kicker">Wet Lab</p>
             <h3>Wet Lab</h3>
@@ -109,7 +109,7 @@
     </section>
 
     <!-- Dry Lab -->
-    <section class="experiment-section team-group" id="dry-lab" role="tabpanel" aria-labelledby="tab-dry-lab" data-team-panel>
+    <section class="experiment-section team-group" id="dry-lab" role="tabpanel" aria-labelledby="tab-dry-lab" tabindex="0" data-team-panel>
         <div class="experiment-section-header">
             <p class="experiment-card-kicker">Dry Lab</p>
             <h3>Dry Lab</h3>
@@ -162,7 +162,7 @@
     </section>
 
     <!-- Primary PI -->
-    <section class="experiment-section team-group" id="primary-pi" role="tabpanel" aria-labelledby="tab-primary-pi" data-team-panel>
+    <section class="experiment-section team-group" id="primary-pi" role="tabpanel" aria-labelledby="tab-primary-pi" tabindex="0" data-team-panel>
         <div class="experiment-section-header">
             <p class="experiment-card-kicker">Primary PI</p>
             <h3>Primary PI</h3>
@@ -187,7 +187,7 @@
     </section>
 
     <!-- Secondary PI -->
-    <section class="experiment-section team-group" id="secondary-pi" role="tabpanel" aria-labelledby="tab-secondary-pi" data-team-panel>
+    <section class="experiment-section team-group" id="secondary-pi" role="tabpanel" aria-labelledby="tab-secondary-pi" tabindex="0" data-team-panel>
         <div class="experiment-section-header">
             <p class="experiment-card-kicker">Secondary PI</p>
             <h3>Secondary PI</h3>
@@ -240,7 +240,7 @@
     </section>
 
     <!-- Instructor -->
-    <section class="experiment-section team-group" id="instructor" role="tabpanel" aria-labelledby="tab-instructor" data-team-panel>
+    <section class="experiment-section team-group" id="instructor" role="tabpanel" aria-labelledby="tab-instructor" tabindex="0" data-team-panel>
         <div class="experiment-section-header">
             <p class="experiment-card-kicker">Instructor</p>
             <h3>Instructor</h3>
@@ -279,7 +279,7 @@
     </section>
 
     <!-- Supporting -->
-    <section class="experiment-section team-group" id="supporting" role="tabpanel" aria-labelledby="tab-supporting" data-team-panel>
+    <section class="experiment-section team-group" id="supporting" role="tabpanel" aria-labelledby="tab-supporting" tabindex="0" data-team-panel>
         <div class="experiment-section-header">
             <p class="experiment-card-kicker">Supporting</p>
             <h3>Supporting</h3>

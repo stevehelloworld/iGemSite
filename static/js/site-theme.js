@@ -154,7 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (teamTabs.length) {
     const panels = [...document.querySelectorAll("[data-team-panel]")];
     const showGroup = (id) => {
-      teamTabs.forEach((tab) => tab.setAttribute("aria-selected", String(tab.dataset.teamTab === id)));
+      teamTabs.forEach((tab) => {
+        const isSelected = tab.dataset.teamTab === id;
+        tab.setAttribute("aria-selected", String(isSelected));
+        tab.tabIndex = isSelected ? 0 : -1;
+      });
       panels.forEach((panel) => { panel.hidden = panel.id !== id; });
     };
     const groupForHash = () => {
@@ -167,6 +171,22 @@ document.addEventListener("DOMContentLoaded", () => {
       tab.addEventListener("click", () => {
         showGroup(tab.dataset.teamTab);
         history.replaceState(null, "", `#${tab.dataset.teamTab}`);
+      });
+      tab.addEventListener("keydown", (event) => {
+        const currentIndex = teamTabs.indexOf(tab);
+        let nextIndex;
+
+        if (event.key === "ArrowRight") nextIndex = (currentIndex + 1) % teamTabs.length;
+        else if (event.key === "ArrowLeft") nextIndex = (currentIndex - 1 + teamTabs.length) % teamTabs.length;
+        else if (event.key === "Home") nextIndex = 0;
+        else if (event.key === "End") nextIndex = teamTabs.length - 1;
+        else return;
+
+        event.preventDefault();
+        const nextTab = teamTabs[nextIndex];
+        showGroup(nextTab.dataset.teamTab);
+        history.replaceState(null, "", `#${nextTab.dataset.teamTab}`);
+        nextTab.focus();
       });
     });
     window.addEventListener("hashchange", () => {

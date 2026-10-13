@@ -25,10 +25,14 @@
     transition: background-color 160ms ease, color 160ms ease;
 }
 
-.team-tab:hover,
-.team-tab:focus-visible {
+.team-tab:hover {
     background: #bfe0ea;
-    outline: none;
+}
+
+.team-tab:focus-visible {
+    clip-path: none;
+    outline: 3px solid #174b68;
+    outline-offset: 3px;
 }
 
 .team-tab[aria-selected="true"] {

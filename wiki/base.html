@@ -86,7 +86,7 @@
 
   <!-- Custom CSS -->
 
-  <link href="{{ url_for('static', filename='style.css', v='20261006c') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='style.css', v='20261013a11y') }}" rel="stylesheet" />
 
   {% if show_intro %}
   <link rel="preload" as="image" href="{{ url_for('static', filename='assets/images/cadture-germ-capture.webp', v='20261013-pb2') }}">
@@ -114,12 +114,12 @@
   {% endif %}
 
   {% if request.path == "/team" %}
-  <link href="{{ url_for('static', filename='team.css', v='20261013d') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='team.css', v='20261013a11y') }}" rel="stylesheet" />
   {% endif %}
 
-  <link href="{{ url_for('static', filename='textbook-nav.css', v='20261006b') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='textbook-nav.css', v='20261013a11y') }}" rel="stylesheet" />
 
-  <link href="{{ url_for('static', filename='textbook-theme.css', v='20261013c') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='textbook-theme.css', v='20261013a11y') }}" rel="stylesheet" />
   {% if request.path == "/results" %}
   <link href="{{ url_for('static', filename='results.css', v='20261006b') }}" rel="stylesheet" />
   {% endif %}
@@ -163,6 +163,10 @@
   <!-- Navigation -->
 
   {% include 'menu.html' %}
+
+  <a class="skip-to-content" href="#main-content">Skip to main content</a>
+
+  <main id="main-content" tabindex="-1">
 
   <!-- ========================= -->
 
@@ -274,6 +278,8 @@
 
   </div>
 
+  </main>
+
   <!-- Footer -->
 
   {% include 'footer.html' %}
@@ -312,7 +318,7 @@
 
           menu.classList.remove("show");
           menu.parentElement.classList.remove("show");
-          const toggle = menu.previousElementSibling;
+          const toggle = document.querySelector(`[aria-controls="${menu.id}"]`);
           if (toggle) toggle.setAttribute("aria-expanded", "false");
 
           menu.style.left = "";
@@ -348,12 +354,10 @@
       toggles.forEach(toggle => {
 
         toggle.addEventListener("click", function (e) {
-
-          e.preventDefault();
-
           e.stopPropagation();
 
-          const menu = this.nextElementSibling;
+          const menu = document.getElementById(this.getAttribute("aria-controls"));
+          if (!menu) return;
 
           const isOpen = menu.classList.contains("show");
 
@@ -403,8 +407,11 @@
       document.addEventListener("keydown", function (e) {
 
         if (e.key === "Escape") {
-
+          const openMenu = [...menus].find(menu => menu.classList.contains("show"));
+          const toggle = openMenu && document.querySelector(`[aria-controls="${openMenu.id}"]`);
+          if (openMenu) e.preventDefault();
           closeAllMenus();
+          toggle?.focus();
 
         }
 
