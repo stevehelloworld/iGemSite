@@ -459,3 +459,19 @@
 .page-human-practices .impact-text ol a {
     overflow-wrap: anywhere;
 }
+
+/* The same aside used outside a collapsible transcript: a standalone note
+   about what the record still has to catch up on. */
+.page-human-practices .impact-text > p.interview-aside {
+    margin: 22px 0 0;
+    padding: 14px 18px;
+    border-left: 4px solid #8fc7cc;
+    border-radius: 0 10px 10px 0;
+    background: #f7fbfc;
+    color: #5f7784;
+    font-style: italic;
+}
+
+.page-human-practices .impact-text > p.interview-aside strong {
+    font-style: normal;
+}
