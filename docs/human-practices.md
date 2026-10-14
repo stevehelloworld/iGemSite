@@ -1677,43 +1677,6 @@
 
 
 <!-- ===================================================== -->
-<!-- Stakeholder Influence Map -->
-<!-- ===================================================== -->
-
-<section class="ihp-section">
-
-    <div class="section-title">
-
-        <h2>
-
-            Stakeholder Influence Map
-
-        </h2>
-
-    </div>
-
-    <p class="section-description">
-
-        Our project was shaped through continuous interaction among experts from
-        different sectors. Each stakeholder contributed different perspectives,
-        collectively guiding the evolution of our project.
-
-    </p>
-
-
-
-    <figure class="stakeholder-map-figure">
-        <img src="static/assets/images/hp-reference-diagram-flat.png" alt="Hand-drawn stakeholder network linking the team with government, industry, researchers, the public, and wastewater perspectives">
-        <figcaption>Each perspective enters the same design conversation and changes what the team tests next.</figcaption>
-    </figure>
-
-</section>
-
-
-
-
-
-<!-- ===================================================== -->
 <!-- Key Takeaways -->
 <!-- ===================================================== -->
 
