@@ -1895,6 +1895,100 @@
 
         <h2>
 
+            Expert Interview: Professor Ja-An Annie Ho
+
+        </h2>
+
+    </div>
+
+    <p class="section-description">
+
+        Our consultation with Professor Ja-An Annie Ho at National Taiwan
+        University, whose research is in biosensors in bioanalytical chemistry.
+        We went to her for advice on how a cadmium biosensor should be
+        calibrated, how to test for interference, and what it would take to
+        validate the assay in real environmental water. Her answers set the
+        structure of the validation roadmap at the end of this section.
+
+    </p>
+
+    <div class="impact-text">
+
+        <h3>I. Why we contacted Professor Ho</h3>
+
+        <p>During the development of Cadture, we needed some advice on how to evaluate our proposed cadmium biosensor. Our design uses engineered <em>E. coli</em> to produce a GFP signal in response to cadmium and metallothionein to bind cadmium, and we wanted to understand how to test whether other substances could affect the fluorescence, whether the signal could estimate cadmium concentration, and whether the system could work with environmental water samples.</p>
+
+        <p>Thus, we contacted Professor Ja-An Annie Ho at National Taiwan University because of her research in biosensors in bioanalytical chemistry. To prepare, we read two studies from her research group: the first one is an HbA1c sensor tested in whole blood and compared with HPLC, and the second one is a cholera toxin sensor evaluated in tap water and domestic kitchen wastewater [1,2]. These studies help us come up with interview questions about calibration, interference, and validation in real samples.</p>
+
+        <h3>II. What we discussed</h3>
+
+        <h4>Selectivity and calibration</h4>
+
+        <p>Professor Ho recommended starting with cadmium alone to establish whether the sensor responds under controlled conditions. We should then test potential interferents, including zinc and mercury, individually before testing mixtures. She also suggested testing low cadmium concentrations in the presence of much higher interferent concentrations, which would help us assess whether background contaminants obscure or alter the response to cadmium.</p>
+
+        <p>For quantification, she recommended measuring the response to a series of known cadmium concentrations and fitting a calibration curve. An unknown sample could then be estimated from its fluorescence within the established working range. This gave us a clear requirement for reporting concentration such that we would first need to characterize the dose-response relationship and determine how reliably it predicts known samples.</p>
+
+        <h4>Validation in environmental water</h4>
+
+        <p>We also asked her how to assess performance outside a controlled buffer. Professor Ho suggested adding matched amounts of cadmium to buffer and to a real water sample, then comparing the responses. Differences would help identify effects caused by the sample matrix. For quantitative validation, a similar increasing trend would be only an initial check; we would also need to assess how accurately the assay recovers known additions [3].</p>
+
+        <p>When we asked which experiment would provide the strongest next evidence, she recommended a blind test using real water, with the same source sample also analyzed by ICP-MS. She suggested Drunken Moon Lake on the NTU campus as a possible sampling location. We also discussed blinded spiked samples as an option when instrument access is limited. These could test our estimates against known additions, while comparison with an independent method would remain a separate validation step.</p>
+
+        <h4>Biological response and fluorescence detection</h4>
+
+        <p>We asked whether a weak signal would indicate a problem with the biological circuit or with the detector. Professor Ho explained that we would need to investigate these separately. Low GFP production would call for examining the expression system. If the biological response were strong and reproducible but small fluorescence differences could not be resolved, we would need to examine the detection setup. Her advice was to establish the source of the limitation before choosing a redesign, with attention to both signal strength and background.</p>
+
+        <h4>Requirements for field use</h4>
+
+        <p>Professor Ho asked us to consider who would use Cadture and what decision the result would support. She identified sensitivity, selectivity, response time, reproducibility, cost, and ease of operation as factors whose importance depends on the application. For example, farmers assessing water for agricultural use may need a test they can operate without specialist equipment or training.</p>
+
+        <p>This helped us define a potential role for Cadture as an inexpensive, portable screening tool that could flag samples for further analysis. ICP-MS would remain useful for validation and confirmatory testing. We would still need to establish a relevant screening threshold and demonstrate that Cadture could distinguish samples around it before claiming this use.</p>
+
+        <h4>Containment and disposal</h4>
+
+        <p>Professor Ho also raised the implications of using genetically engineered <em>E. coli</em> outside the laboratory. She advised us to consider how the device would prevent cells from escaping and minimize the release of genetic material. These requirements would need to be addressed in the device design.</p>
+
+        <p>She then pointed out that cadmium capture creates a disposal problem, in which used cells and device components may contain the metal. Our implementation plan therefore needs to address both biological containment and cadmium-containing waste. The choice of containment measures and a suitable disposal or recovery route remains work to resolve with our laboratory supervisors before any field use.</p>
+
+        <h3>III. How the interview shaped our plan</h3>
+
+        <p>Following the interview, we revised our validation roadmap to separate the questions each experiment would answer. The work below is planned validation and design work; it does not establish that Cadture has already met these requirements.</p>
+
+        <div class="problem-table-wrap">
+            <table class="problem-table">
+                <thead>
+                    <tr><th scope="col">Question</th><th scope="col">Planned response</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Selectivity</td><td>Test cadmium alone, individual interferents, mixtures, and low cadmium against high interferent levels.</td></tr>
+                    <tr><td>Quantification</td><td>Establish a calibration curve and working range before reporting concentration estimates.</td></tr>
+                    <tr><td>Matrix effects</td><td>Compare matched cadmium additions in buffer and environmental water, including recovery of the additions.</td></tr>
+                    <tr><td>Independent validation</td><td>Test blinded samples and seek ICP-MS analysis of corresponding samples to assess agreement.</td></tr>
+                    <tr><td>Device development</td><td>Identify whether performance is limited by the circuit or detector, and assess operation, containment, and disposal alongside analytical performance.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>Calibration and selectivity testing would provide the basis for interpreting later environmental-water results. A blinded comparison with ICP-MS remains an important goal once the assay can produce interpretable estimates. Professor Ho agreed to receive further questions by email, and we plan to follow up with our calibration and selectivity results when available.</p>
+
+        <h3>IV. References</h3>
+
+        <ol>
+            <li>Thiruppathi M, Lee J-F, Chen CC, Ho J-A A. A disposable electrochemical sensor designed to estimate glycated hemoglobin (HbA1c) level in whole blood. <em>Sensors and Actuators B: Chemical.</em> 2021;329:129119. <a href="https://doi.org/10.1016/j.snb.2020.129119" target="_blank" rel="noopener">https://doi.org/10.1016/j.snb.2020.129119</a></li>
+            <li>Viswanathan S, Wu L-C, Huang M-R, Ho J-A A. Electrochemical immunosensor for cholera toxin using liposomes and poly(3,4-ethylenedioxythiophene)-coated carbon nanotubes. <em>Analytical Chemistry.</em> 2006;78(4):1115&ndash;1121. <a href="https://doi.org/10.1021/ac051435d" target="_blank" rel="noopener">https://doi.org/10.1021/ac051435d</a></li>
+            <li>US Environmental Protection Agency. Quality Assurance (QA) &ndash; Quality Control (QC). Guidance on laboratory control samples and matrix spikes. <a href="https://www.epa.gov/hw-sw846/quality-assurance-qa-quality-control-qc" target="_blank" rel="noopener">https://www.epa.gov/hw-sw846/quality-assurance-qa-quality-control-qc</a></li>
+        </ol>
+
+    </div>
+
+</section>
+
+<section class="ihp-section">
+
+    <div class="section-title">
+
+        <h2>
+
             Industry Stakeholder Report: Mega Union (兆聯)
 
         </h2>
@@ -1958,6 +2052,113 @@
             <li><strong>Water Recycling Metrics:</strong> At leading semiconductor fabs like TSMC, a single drop of water is recycled and reused on average 3.5 to 3.7 times before final discharge.</li>
             <li><strong>Provider Business Model:</strong> Water treatment companies like Mega Union derive 70%&ndash;80% of revenue from system engineering (CAPEX) and 20%&ndash;30% from long-term maintenance and services (OPEX), with post-installation service contracts providing the core source of profitability.</li>
         </ul>
+
+    </div>
+
+</section>
+
+<section class="ihp-section">
+
+    <div class="section-title">
+
+        <h2>
+
+            Literature Review: Local &amp; Global Impact
+
+        </h2>
+
+    </div>
+
+    <p class="section-description">
+
+        What the published evidence does and does not establish about cadmium in
+        farmland, food and people &mdash; globally, and in Taiwan specifically.
+        We wrote this review to work out where a cadmium sensor could actually be
+        useful, and to keep our own claims inside what the literature supports.
+
+    </p>
+
+    <div class="impact-text">
+
+        <h3>I. Scope and relevance</h3>
+
+        <p>Cadmium contamination is more than merely a type of environmental pollution; it connects to food production and long term human exposures that might lead to severe consequences. A contaminated irrigation channel can introduce cadmium into agricultural soil, but the consequences depend on how much reaches crops and also how much people consume. For Cadture, understanding these steps is necessary to identify where a cadmium sensor could be useful. Through this literature review, we want to bring together selected studies on global contamination, as well as Taiwan&rsquo;s agricultural environment, dietary exposure, and pollution management. It distinguishes evidence about environmental concentrations from evidence about human health and considers the implications for a biological detection and capture system. [1,6]</p>
+
+        <h3>II. Global extent and consequences</h3>
+
+        <p>Hou et al. (2025) compiled 796,084 soil measurements from 1,493 regional studies to model the global distribution of seven toxic metals. They estimated that 14-17% of cropland exceeded agricultural thresholds for at least one of the metals studied. Cadmium had the largest estimated extent, affecting approximately 9% of global cropland. [2] These numbers establish the international scale of the problem, but they require careful interpretation, such that the 14-17% estimate covers multiple metals, and mere modeled soil threshold exceedance does not establish food contamination or illness at every location. Uneven geographical sampling also limits the certainty of local predictions.</p>
+
+        <p>The World Health Organization (WHO) identifies the kidneys, skeletal systems, and respiratory system as targets of cadmium toxicity and classifies cadmium as a human carcinogen. Exposure occurs through food, tobacco smoke, and some occupational environments. Consequently, agricultural contamination is one component of a wider exposure problem. [1]</p>
+
+        <p>Historical evidence from Japan demonstrates the consequences of sustained exposure through contaminated food. Kobayashi et al. (2009) analyzed health examination records for 3,078 long term residents of the Jinzu River basin. High cadmium concentrations in rice were associated with abnormal urinary findings and the occurrence of itai-itai disease. [3] The study supports the importance of the food pathway, although its historical exposure setting and observational design don&rsquo;t provide a direct estimate of present day risk in Taiwan.</p>
+
+        <p>European evidence shows that dietary exposure also matters outside severe pollution incidents. EFSA&rsquo;s 2012 assessment estimated a lifetime weekly average of 2.04 micrograms of cadmium per kilogram of body weight and a potential 95th percentile exposure of 3.66 micrograms/kg, compared with its tolerable weekly intake of 2.5 micrograms/kg. Frequently consumed foods made substantial contributions even when their concentrations were relatively low. These are historical modeled estimates rather than a current European prevalence survey though, but they still illustrate why factors such as food concentration, human body weight, and consumption frequency must be considered together. [4]</p>
+
+        <p>Cadmium also affects crops other than rice. In Ecuador, Arg&uuml;ello et al. (2019) examined 560 paired sampling locations across 159 cacao farms. Mean soil cadmium was 0.44 mg/kg, whereas mean bean cadmium was 0.90 mg/kg. Bean concentrations were associated with soil cadmium and soil properties, including pH. The authors of the paper described the soils as generally consistent with young, nonpolluted soils, showing that problematic crop accumulation can occur without a major industrial pollution event. [5]</p>
+
+        <h3>III. Sources and management of contamination in Taiwan</h3>
+
+        <p>Taiwan provides a well documented example of industrial pollution entering agricultural land through irrigation. Lu et al. (2007) used material flow analysis and a regional case study to trace cadmium releases from industrial activities, including plastic stabilizer production and metal surface processing. Their findings identified wastewater entering irrigation systems as a major route to farmland. The study showed why evaluating individual factories alone can be insufficient when several facilities contribute to contamination in the same area. This evidence supports attention to connected drainage and irrigation networks, without excluding other cadmium sources in different settings. [6]</p>
+
+        <p>Official reporting continues to identify polluted irrigation water as the main source of farmland contamination. Taiwan&rsquo;s Ministry of Environment reports approximately 1,221.1 hectares cumulatively listed as contaminated farmland by the end of 2024. This is a historical total covering heavy-metal contamination generally; it is neither a cadmium-only estimate nor the area necessarily remaining contaminated at that date. The distinction matters because using the figure as current cadmium prevalence would exaggerate what the inventory establishes. The same reporting describes ongoing soil monitoring and irrigation-area early-warning activities, indicating that prevention continues alongside remediation. [7]</p>
+
+        <p>Recent research examines how contamination may recur after management. Chen et al. (2025) analyzed 1,555 records from managed farmland in Taoyuan collected between 2004 and 2022 to model potential re-contamination involving cadmium, copper, and zinc. This work supports directing monitoring toward areas with continuing risk. However, predictions developed from one regional dataset require testing on new observations before their performance can be assumed elsewhere. For Cadture, the relevant implication is a possible need for repeated local screening; the model alone does not establish how often farmers need tests or which device they would use. [8]</p>
+
+        <h3>IV. What Taiwan&rsquo;s exposure studies establish</h3>
+
+        <p>Lien, Pan, and Ling (2021) analyzed 1,581 rice samples collected during 2010&ndash;2018. They reported a mean cadmium concentration of 0.04 &plusmn; 0.04 mg/kg, with no sample exceeding the 0.4 mg/kg limit used in their assessment. Their probabilistic model nevertheless produced higher estimated risk at the upper end of the exposure distribution. These findings can coexist: compliance of individual samples does not by itself characterize long-term dietary intake. A hazard index above one indicates a potential concern under the model&rsquo;s assumptions; it is not a diagnosis or a probability of illness. The sampling period also limits claims about current rice production. [9]</p>
+
+        <p>The rice study also has an apparent reporting inconsistency: its stated quantification limit is 0.2 mg/kg, yet it reports detection in 89% of samples and a mean of 0.04 mg/kg. This needs clarification before the dataset is used for detailed comparisons or to set a sensor&rsquo;s performance target. [9]</p>
+
+        <p>Chiang, Chan, and Hsieh (2011) approached exposure from a different direction. Their Changhua study combined 2,743 topsoil measurements with biomarker information from 412 residents and identified spatial soil-cadmium hotspots. However, it did not find significant relationships between soil concentrations and cadmium measured in residents&rsquo; blood, urine, or hair. This does not establish an absence of health risk: residence, diet, occupation, and smoking can affect exposure, and the study had limitations in its comparison groups and exposure assessment. It does show why a map of contaminated soil should not be presented as a map of confirmed human cadmium burden. [10]</p>
+
+        <p>Read together, the Taiwan studies answer different questions. Source analysis identifies how cadmium reaches farmland; soil mapping identifies locations for investigation; food analysis measures a dietary exposure medium; and biomonitoring examines cadmium in people. None can replace all the others. An effective monitoring strategy would connect these measurements across locations and time. For a water-focused project, the most immediate contribution would be information about the irrigation pathway, followed by appropriate soil, crop, or laboratory investigation when indicated. [6, 9, 10]</p>
+
+        <h3>V. Management options and their limitations</h3>
+
+        <p>Pollution management must distinguish between stopping new inputs, reducing exposure, and removing cadmium already present. Lai et al. (2010a) describe risk-based management of contaminated soils in Taiwan, including turnover and dilution. Mixing contaminated topsoil with cleaner soil can reduce the measured concentration in the cultivated layer, but it redistributes the metal rather than destroying it. This makes subsequent monitoring and control of continuing inputs important. A reduction in concentration should be interpreted alongside the treatment mechanism and the outcome being measured. [11]</p>
+
+        <p>Water management illustrates a further difficulty: an intervention can improve one contaminant outcome while worsening another. Arao et al. (2009) found that flooding could suppress cadmium accumulation in rice while increasing arsenic accumulation, with outcomes depending on irrigation timing and arsenic species. Their results argue against recommending an irrigation regime on the basis of cadmium alone. Field decisions need to consider co-contaminants, local soil conditions, and the crop endpoint being assessed. [12]</p>
+
+        <p>Plant genetics offers another route to reducing transfer into food. Ishikawa et al. (2012) identified low-cadmium rice mutants produced through ion-beam irradiation and linked their reduced uptake to the transporter gene <em>OsNRAMP5</em>. This demonstrates that crop traits can influence grain contamination independently of the total cadmium already present in soil. However, reducing uptake into edible grain does not clean the soil or prevent new inputs. It addresses a different part of the problem from source control or metal removal. [13]</p>
+
+        <p>Evidence for phytoremediation also needs to match the target metal. The frequently cited 1.3-hectare Taiwan trial by Lai, Juang, and Chen (2010b) tested 12 plant species at a site contaminated with chromium, copper, nickel, and zinc. Although it demonstrated uptake of these metals, it should not be cited as direct proof of effective cadmium removal. More generally, an accumulation result must be translated into the mass removed per harvest and the time required to reach a defined endpoint. Harvesting and management of contaminated biomass remain part of the intervention. [14]</p>
+
+        <h3>VI. Monitoring needs and the proposed role of Cadture</h3>
+
+        <p>Published whole-cell biosensors provide a basis for investigating biological cadmium detection. Zhang, Hu, and Jia (2021) developed a fluorescent sensor in <em>Pseudomonas putida</em> and reported a laboratory detection limit of 0.1 nM. They also evaluated interference and cadmium-spiked river-water samples. However, their river-water procedure included filtration and preparation of growth medium from the sample. The study therefore demonstrates performance under specified assay conditions, rather than unrestricted operation in untreated field water. Its reported sensitivity cannot be transferred directly to Cadture&rsquo;s <em>E. coli</em> system. [15]</p>
+
+        <p>For Cadture, the literature suggests a focused initial application: screening irrigation-water samples to help identify those requiring further analysis. This is a proposed use that needs validation. The global studies establish why cadmium matters, while the Taiwan source studies identify a plausible local sampling point. Neither establishes that our device is already accurate, affordable, or practical for farmers. Those claims require analytical data and discussions with the people who would collect samples, interpret results, and arrange follow-up. [2, 6, 7, 15]</p>
+
+        <p>A key measurement question is what the fluorescence represents. Because a whole-cell response depends on cadmium interacting with the cells, it cannot automatically be equated with total cadmium measured after laboratory sample preparation. We therefore need to define the sample treatment and the quantity being estimated, then compare matched samples with a reference method such as ICP-MS. Tests in different water matrices, interference testing, and blinded samples would help establish whether the relationship is sufficiently consistent for screening. A water result would still require separate evidence before being used to infer soil contamination or rice safety. [9, 10, 15]</p>
+
+        <p>The capture function needs its own evidence. A fluorescent response would demonstrate neither the amount of cadmium removed from water nor how securely it remains in the cells. Evaluation should account for cadmium remaining in the water and cadmium retained in the collected biomass or device. As with plant-based accumulation, capture relocates the metal and creates material that must be managed. Containment, collection, and disposal or recovery therefore belong within the proposed system&rsquo;s performance assessment. These are requirements for evaluating Cadture, rather than outcomes established by this literature review. [14]</p>
+
+        <h3>VII. Research priorities</h3>
+
+        <p>Three gaps are particularly relevant to this project. First, environmental monitoring needs to capture changes over time and possible re-contamination, rather than relying only on historical hotspot maps. Second, measurements of water, soil, crops, and human exposure need to be interpreted as related but distinct evidence. Third, a biological sensor needs validation in its intended sample matrix and against a clearly defined reference measurement. These gaps support investigating a local screening tool while setting limits on the claims that an early prototype can make. [8&ndash;10, 15]</p>
+
+        <p>Cadture&rsquo;s wider relevance would depend on whether a validated approach could be adapted to other irrigation systems with comparable monitoring needs. The international literature shows that cadmium affects several crops and exposure settings, but it also shows that causes and solutions vary. A useful contribution would therefore be a well-characterized method for a defined setting, with evidence about where it works and where it requires modification. Demonstrating that contribution in Taiwan would provide a stronger basis for discussing global application than assuming that one device can address every form of cadmium contamination. [2, 5, 6]</p>
+
+        <h3>VIII. References</h3>
+
+        <ol>
+            <li>World Health Organization. (2019). Exposure to cadmium: a major public health concern. WHO/CED/PHE/EPE/19.4.3. <a href="https://www.who.int/publications/i/item/WHO-CED-PHE-EPE-19-4-3" target="_blank" rel="noopener">https://www.who.int/publications/i/item/WHO-CED-PHE-EPE-19-4-3</a></li>
+            <li>Hou, D., et al. (2025). Global soil pollution by toxic metals threatens agriculture and human health. <em>Science,</em> 388, 316&ndash;321. <a href="https://doi.org/10.1126/science.adr5214" target="_blank" rel="noopener">https://doi.org/10.1126/science.adr5214</a></li>
+            <li>Kobayashi, E., Suwazono, Y., Dochi, M., Honda, R., &amp; Kido, T. (2009). Influence of consumption of cadmium-polluted rice or Jinzu River water on occurrence of renal tubular dysfunction and/or Itai-itai disease. <em>Biological Trace Element Research,</em> 127, 257&ndash;268. <a href="https://doi.org/10.1007/s12011-008-8239-z" target="_blank" rel="noopener">https://doi.org/10.1007/s12011-008-8239-z</a></li>
+            <li>European Food Safety Authority. (2012). Cadmium dietary exposure in the European population. <em>EFSA Journal,</em> 10(1), 2551. <a href="https://doi.org/10.2903/j.efsa.2012.2551" target="_blank" rel="noopener">https://doi.org/10.2903/j.efsa.2012.2551</a></li>
+            <li>Arg&uuml;ello, D., Chavez, E., Lauryssen, F., Vanderschueren, R., Smolders, E., &amp; Montalvo, D. (2019). Soil properties and agronomic factors affecting cadmium concentrations in cacao beans: A nationwide survey in Ecuador. <em>Science of the Total Environment,</em> 649, 120&ndash;127. <a href="https://doi.org/10.1016/j.scitotenv.2018.08.292" target="_blank" rel="noopener">https://doi.org/10.1016/j.scitotenv.2018.08.292</a></li>
+            <li>Lu, L.-T., Chang, I.-C., Hsiao, T.-Y., Yu, Y.-H., &amp; Ma, H.-W. (2007). Identification of pollution source of cadmium in soil: Application of material flow analysis and a case study in Taiwan. <em>Environmental Science and Pollution Research,</em> 14, 49&ndash;59. <a href="https://doi.org/10.1065/espr2005.08.278" target="_blank" rel="noopener">https://doi.org/10.1065/espr2005.08.278</a></li>
+            <li>Ministry of Environment, Taiwan. Farmland Pollution Prevention. Soil and Groundwater Pollution Remediation Funds. Statistics through December 2024; accessed October 2026. <a href="https://sgw.moenv.gov.tw/En/affairs/preventive/farmland" target="_blank" rel="noopener">https://sgw.moenv.gov.tw/En/affairs/preventive/farmland</a></li>
+            <li>Chen, J.-H., Su, M.-C., Yeh, M.-F., Lin, W.-J., Yu, T., &amp; Yeh, M.-C. (2025). Predicting and regulating potential zone for heavy metal re-contaminated farmland: Case study in Taiwan. <em>Environmental Development,</em> 54, 101147. <a href="https://doi.org/10.1016/j.envdev.2025.101147" target="_blank" rel="noopener">https://doi.org/10.1016/j.envdev.2025.101147</a></li>
+            <li>Lien, K.-W., Pan, M.-H., &amp; Ling, M.-P. (2021). Levels of heavy metal cadmium in rice (<em>Oryza sativa</em> L.) produced in Taiwan and probabilistic risk assessment for the Taiwanese population. <em>Environmental Science and Pollution Research,</em> 28, 28381&ndash;28390. <a href="https://doi.org/10.1007/s11356-020-11902-w" target="_blank" rel="noopener">https://doi.org/10.1007/s11356-020-11902-w</a></li>
+            <li>Chiang, P.-H., Chan, T.-C., &amp; Hsieh, D. P. H. (2011). A GIS-aided assessment of the health hazards of cadmium in farm soils in central Taiwan. <em>International Journal of Environmental Research and Public Health,</em> 8, 3759&ndash;3763. <a href="https://doi.org/10.3390/ijerph8093759" target="_blank" rel="noopener">https://doi.org/10.3390/ijerph8093759</a></li>
+            <li>Lai, H.-Y., Hseu, Z.-Y., Chen, T.-C., Chen, B.-C., Guo, H.-Y., &amp; Chen, Z.-S. (2010a). Health risk-based assessment and management of heavy metals-contaminated soil sites in Taiwan. <em>International Journal of Environmental Research and Public Health,</em> 7, 3595&ndash;3614. <a href="https://doi.org/10.3390/ijerph7103596" target="_blank" rel="noopener">https://doi.org/10.3390/ijerph7103596</a></li>
+            <li>Arao, T., Kawasaki, A., Baba, K., Mori, S., &amp; Matsumoto, S. (2009). Effects of water management on cadmium and arsenic accumulation and dimethylarsinic acid concentrations in Japanese rice. <em>Environmental Science &amp; Technology,</em> 43, 9361&ndash;9367. <a href="https://doi.org/10.1021/es9022738" target="_blank" rel="noopener">https://doi.org/10.1021/es9022738</a></li>
+            <li>Ishikawa, S., et al. (2012). Ion-beam irradiation, gene identification, and marker-assisted breeding in the development of low-cadmium rice. <em>Proceedings of the National Academy of Sciences,</em> 109, 19166&ndash;19171. <a href="https://doi.org/10.1073/pnas.1211132109" target="_blank" rel="noopener">https://doi.org/10.1073/pnas.1211132109</a></li>
+            <li>Lai, H.-Y., Juang, K.-W., &amp; Chen, Z.-S. (2010b). Large-area experiment on uptake of metals by twelve plants growing in soils contaminated with multiple metals. <em>International Journal of Phytoremediation,</em> 12, 785&ndash;797. <a href="https://doi.org/10.1080/15226510903534554" target="_blank" rel="noopener">https://doi.org/10.1080/15226510903534554</a></li>
+            <li>Zhang, G., Hu, S., &amp; Jia, X. (2021). Highly sensitive whole-cell biosensor for cadmium detection based on a negative feedback circuit. <em>Frontiers in Bioengineering and Biotechnology,</em> 9, 799781. <a href="https://doi.org/10.3389/fbioe.2021.799781" target="_blank" rel="noopener">https://doi.org/10.3389/fbioe.2021.799781</a></li>
+        </ol>
 
     </div>
 

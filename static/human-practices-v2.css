@@ -436,3 +436,26 @@
     color: #5f7784;
     font-style: italic;
 }
+
+/* Write-ups that carry their own numbered subsections (the Ho interview, the
+   literature review): h4 topics need more air above them than the gap between
+   paragraphs, but stay tucked under the h3 they belong to. */
+.page-human-practices .impact-text h4 {
+    margin-bottom: 8px;
+    color: #2b7c8d;
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+}
+
+.page-human-practices .impact-text p + h4 {
+    margin-top: 24px;
+}
+
+/* The roadmap table sits between paragraphs, so it needs space on both sides. */
+.page-human-practices .impact-text .problem-table-wrap {
+    margin: 22px 0 24px;
+}
+
+/* Reference lists: long DOI links must wrap rather than widen the section. */
+.page-human-practices .impact-text ol a {
+    overflow-wrap: anywhere;
+}
