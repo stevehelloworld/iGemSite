@@ -340,25 +340,8 @@
     .page-human-practices .journey-dot span { transition: none; }
 }
 
-/* Nested numbered lists inside a report block, matching the bullet lists. */
-.page-human-practices .impact-text ol {
-    margin: 9px 0 0;
-    padding-left: 1.25rem;
-    color: #536a79;
-    line-height: 1.65;
-}
-
-.page-human-practices .impact-text ol li + li {
-    margin-top: 9px;
-}
-
 /* Both impact layouts now carry text only, so the copy spans the full width
    instead of leaving the column where the photo placeholders used to sit. */
 .page-human-practices .impact-layout {
     grid-template-columns: 1fr;
-}
-
-/* Reference lists: long DOI links must wrap rather than widen the section. */
-.page-human-practices .impact-text ol a {
-    overflow-wrap: anywhere;
 }
