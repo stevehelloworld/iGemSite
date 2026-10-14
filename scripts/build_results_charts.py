@@ -32,7 +32,7 @@ GROWTH = {
  'pVIS8':[.921,.947,1.027,1.008,1.007,.989],
 }
 COLORS = {'pMH45':'#57646c','pVIS1':'#2b62b5','pVIS2':'#bc5b12','pVIS3':'#167956','pVIS4':'#648ac4','pVIS5':'#ba4b5c','pVIS6':'#52892d','pVIS7':'#7850a6','pVIS8':'#a93480'}
-plt.rcParams.update({'font.family':'DejaVu Sans','font.size':11,'svg.fonttype':'none','axes.labelcolor':'#285772','text.color':'#285772','xtick.color':'#285772','ytick.color':'#285772','axes.spines.top':False,'axes.spines.right':False})
+plt.rcParams.update({'font.family':'DejaVu Sans','font.size':11,'svg.fonttype':'none','svg.hashsalt':'cadture-results-charts','axes.labelcolor':'#285772','text.color':'#285772','xtick.color':'#285772','ytick.color':'#285772','axes.spines.top':False,'axes.spines.right':False})
 
 def chart(data, name, log=False):
  fig,ax=plt.subplots(figsize=(11,6.4))
@@ -72,5 +72,5 @@ for svg_path in OUT.glob('*.svg'):
         'version="1.1">\n <style>text{font-family:Verdana,Geneva,sans-serif !important}</style>',
         1,
     )
-    svg_path.write_text(svg)
+    svg_path.write_text('\n'.join(line.rstrip() for line in svg.splitlines()) + '\n')
 (OUT/'pvis-chart-data.json').write_text(json.dumps({'cadmium_nM':DOSES,'gfp_od600':GFP,'growth_relative_to_pMH45':GROWTH,'provenance':'Values transcribed from the supplied report chart labels on 2026-10-06; not independently recalculated from raw workbooks.','display_note':'Concentrations are evenly spaced. GFP values below 10 are displayed at 10 to preserve the original chart convention.'},indent=2)+'\n')

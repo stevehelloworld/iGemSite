@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top{% if request.path == '/' %} nav-on-dark nav-on-image{% endif %}">
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top{% if request.path == '/' %} nav-on-dark nav-on-image{% endif %}" aria-label="Primary">
   <div
     class="site-reading-progress"
     role="progressbar"
@@ -42,12 +42,11 @@
 
         <!-- TEAM -->
         <li class="nav-item mega-dropdown">
-          <a href="javascript:void(0);"
-             class="nav-link mega-toggle">
+          <button type="button" class="nav-link mega-toggle" aria-expanded="false" aria-controls="team-nav-menu">
              Team
-          </a>
+          </button>
 
-          <div class="mega-menu team-menu">
+          <div class="mega-menu team-menu" id="team-nav-menu">
             <div class="mega-column">
               <a href="{{ url_for('pages', page='attributions') }}">
                 <div class="icon">
@@ -82,12 +81,11 @@
 
         <!-- PROJECT -->
         <li class="nav-item mega-dropdown">
-          <a href="javascript:void(0);"
-             class="nav-link mega-toggle">
+          <button type="button" class="nav-link mega-toggle" aria-expanded="false" aria-controls="project-nav-menu">
              Project
-          </a>
+          </button>
 
-          <div class="mega-menu project-menu">
+          <div class="mega-menu project-menu" id="project-nav-menu">
             <div class="mega-column">
               <a href="{{ url_for('pages', page='description') }}">
                 <div class="icon">
@@ -152,12 +150,11 @@
 
         <!-- WET LAB -->
         <li class="nav-item mega-dropdown">
-          <a href="javascript:void(0);"
-             class="nav-link mega-toggle">
+          <button type="button" class="nav-link mega-toggle" aria-expanded="false" aria-controls="wetlab-nav-menu">
              Wet Lab
-          </a>
+          </button>
 
-          <div class="mega-menu wetlab-menu">
+          <div class="mega-menu wetlab-menu" id="wetlab-nav-menu">
             <div class="mega-column">
               <a href="{{ url_for('pages', page='methods') }}">
                 <div class="icon">
@@ -237,12 +234,11 @@
 
         <!-- DRY LAB -->
         <li class="nav-item mega-dropdown">
-          <a href="javascript:void(0);"
-             class="nav-link mega-toggle">
+          <button type="button" class="nav-link mega-toggle" aria-expanded="false" aria-controls="drylab-nav-menu">
              Dry Lab
-          </a>
+          </button>
 
-          <div class="mega-menu drylab-menu">
+          <div class="mega-menu drylab-menu" id="drylab-nav-menu">
             <div class="mega-column">
               <a href="{{ url_for('pages', page='model') }}">
                 <div class="icon">
@@ -262,12 +258,11 @@
 
         <!-- HUMAN PRACTICES -->
         <li class="nav-item mega-dropdown">
-          <a href="javascript:void(0);"
-             class="nav-link mega-toggle">
+          <button type="button" class="nav-link mega-toggle" aria-expanded="false" aria-controls="hp-nav-menu">
              Human Practices
-          </a>
+          </button>
 
-          <div class="mega-menu hp-menu">
+          <div class="mega-menu hp-menu" id="hp-nav-menu">
             <div class="mega-column">
               <a href="{{ url_for('pages', page='human-practices') }}">
                 <div class="icon">

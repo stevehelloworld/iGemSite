@@ -108,6 +108,23 @@ pip install -r dependencies.txt
 python app.py
 ```
 
+#### Rebuild results charts
+
+Chart generation uses a separate, fully pinned dependency file so chart-only
+packages stay separate from the Flask runtime requirements. From the project
+virtual environment, install the chart tools and run the generator:
+
+```bash
+pip install -r chart-dependencies.txt
+python scripts/build_results_charts.py
+```
+
+The script writes the published SVG charts and their JSON data to
+`static/assets/charts/`. It draws the values recorded in the script; it does not
+recalculate results from the original instrument workbooks. The GitLab build
+runs the generator before freezing the site and checks local links, assets,
+known placeholder text, and the exported site's size.
+
 #### Format (optional)
 
 The repository ships with a Prettier setup that formats the Jinja templates,

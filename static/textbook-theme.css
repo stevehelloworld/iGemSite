@@ -630,6 +630,7 @@
 
 .textbook-nav-page .problem-statement-hero h1,
 .textbook-nav-page .problem-hero-card h1,
+.textbook-nav-page .experiment-hero h1,
 .textbook-nav-page .experiment-hero h2,
 .textbook-nav-page .model-hero h2,
 .textbook-nav-page .mock-page-hero h2 {
@@ -1076,6 +1077,7 @@
 
     .textbook-nav-page .problem-statement-hero h1,
     .textbook-nav-page .problem-hero-card h1,
+    .textbook-nav-page .experiment-hero h1,
     .textbook-nav-page .experiment-hero h2,
     .textbook-nav-page .model-hero h2,
     .textbook-nav-page .mock-page-hero h2 {
