@@ -314,30 +314,6 @@
     font-weight: 900;
 }
 
-.page-human-practices .stakeholder-map-figure {
-    display: grid;
-    grid-template-columns: minmax(280px, .7fr) minmax(240px, .3fr);
-    gap: clamp(28px, 5vw, 70px);
-    align-items: center;
-    margin: 0;
-    padding: clamp(24px, 4vw, 48px);
-    background: #eef6e9;
-    border: 4px solid #83ae75;
-    box-shadow: 8px 8px 0 rgba(40, 87, 114, .1);
-}
-
-.page-human-practices .stakeholder-map-figure img {
-    width: min(100%, 660px);
-    justify-self: center;
-}
-
-.page-human-practices .stakeholder-map-figure figcaption {
-    color: #385565;
-    font-family: var(--vis-display);
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
-    line-height: 1.45;
-}
-
 @keyframes hp-page-turn-v2 {
     from { opacity: .35; transform: translateX(18px) rotate(.2deg); }
     to { opacity: 1; transform: none; }
@@ -354,8 +330,7 @@
     .page-human-practices .impact-layout,
     .page-human-practices .design-content,
     .page-human-practices .future-grid,
-    .page-human-practices .takeaway-grid,
-    .page-human-practices .stakeholder-map-figure { grid-template-columns: 1fr; }
+    .page-human-practices .takeaway-grid { grid-template-columns: 1fr; }
     .page-human-practices .ihp-learning-river { display: block; }
     .page-human-practices .ihp-learning-river > i { display: block; text-align: center; transform: rotate(90deg); }
 }
