@@ -56,11 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ".platform-candidate h3"
     ].join(",");
 
-    // Human Practices carries the interview and report write-ups at the end of
-    // the page, so a 12-heading cap would silently drop them from the contents.
-    const uncappedToc = document.body.classList.contains("page-notebook")
-      || document.body.classList.contains("page-human-practices");
-    const headingLimit = uncappedToc ? Infinity : 12;
+    const headingLimit = document.body.classList.contains("page-notebook") ? Infinity : 12;
     const headings = [...pageContent.querySelectorAll(headingSelectors)]
       .filter((heading) => heading.textContent.trim())
       .slice(0, headingLimit);
