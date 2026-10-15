@@ -41,6 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const layout = document.querySelector("[data-page-layout]");
 
   if (toc && layout && pageContent) {
+    let tocHeightQueued = false;
+    const updateTocAvailableHeight = () => {
+      const tocStyle = window.getComputedStyle(toc);
+      const top = Number.parseFloat(tocStyle.top) || 0;
+      const bottomMargin = Number.parseFloat(tocStyle.marginBottom) || 0;
+      const available = Math.max(0, layout.getBoundingClientRect().bottom - top - bottomMargin);
+      toc.style.setProperty("--toc-available-height", `${available}px`);
+      tocHeightQueued = false;
+    };
+    const requestTocHeightUpdate = () => {
+      if (tocHeightQueued) return;
+      tocHeightQueued = true;
+      window.requestAnimationFrame(updateTocAvailableHeight);
+    };
+
     const headingSelectors = [
       ".results-report h2",
       ".ihp-section .section-title h2",
@@ -125,6 +140,16 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
       headings.forEach((heading) => tocObserver.observe(heading));
+    }
+
+    if (!toc.hidden) {
+      window.addEventListener("scroll", requestTocHeightUpdate, { passive: true });
+      window.addEventListener("resize", requestTocHeightUpdate);
+      window.addEventListener("load", requestTocHeightUpdate, { once: true });
+      if ("ResizeObserver" in window) {
+        new ResizeObserver(requestTocHeightUpdate).observe(layout);
+      }
+      updateTocAvailableHeight();
     }
   }
 

@@ -95,7 +95,7 @@
 }
 
 .industry-storybook .industry-hero-visual span {
-    color: #26788a;
+    color: var(--vis-copy);
     font-size: .8rem;
     letter-spacing: .08em;
 }
