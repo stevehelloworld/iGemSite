@@ -472,7 +472,7 @@
     text-wrap: pretty;
 }
 
-.textbook-nav-page:not(.home-page) a:not(.nav-link):not(.navbar-brand) {
+.textbook-nav-page:not(.home-page) a:not(.nav-link):not(.navbar-brand):not(footer a) {
     color: #217785;
     text-decoration-color: #79b9c0;
     text-underline-offset: 3px;
@@ -935,13 +935,37 @@
     font-family: var(--vis-body);
 }
 
-.textbook-nav-page footer h4 {
+.textbook-nav-page footer.footer h4 {
     color: var(--vis-yellow);
     font-family: var(--vis-display);
 }
 
-.textbook-nav-page footer a {
+.textbook-nav-page footer.footer p,
+.textbook-nav-page footer.footer li,
+.textbook-nav-page footer.footer small {
+    color: var(--vis-pale);
+}
+
+.textbook-nav-page footer.footer a {
     color: #d7eef1;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-underline-offset: 3px;
+}
+
+.textbook-nav-page footer.footer a:hover,
+.textbook-nav-page footer.footer a:focus-visible {
+    color: var(--vis-yellow);
+}
+
+.textbook-nav-page footer.footer a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+.textbook-nav-page footer.footer hr {
+    border-color: #d7eef1;
+    opacity: .5;
 }
 
 /* Purposeful motion: illustrations and chapter content may move, but titles stay put. */
