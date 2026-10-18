@@ -49,7 +49,7 @@
                     <details class="member-card-disclosure">
                         <summary class="member-card-hint">Read Lucy Wang’s introduction</summary>
                         <div class="member-card-bio">
-                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                            <p>Hello, I’m Lucy</p>
                         </div>
                     </details>
                 </div>
@@ -131,7 +131,7 @@
                     <details class="member-card-disclosure">
                         <summary class="member-card-hint">Read Chelsea Chang’s introduction</summary>
                         <div class="member-card-bio">
-                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                            <p>Hello, I'm Chelsea and I am a 10th grader, I'm interested in neuroscience, biology, chemistry and robotics. There's nothing interesting I do outside of school other than playing games and procrastinating when I actually have time. (Does anyone read these?)</p>
                         </div>
                     </details>
                 </div>
@@ -213,7 +213,7 @@
                     <details class="member-card-disclosure">
                         <summary class="member-card-hint">Read Hsin-Hung David Chou’s introduction</summary>
                         <div class="member-card-bio">
-                            <p>I am a principle investigator in National Taiwan University. I take systems approaches to bridge molecular biology and evolution. The central goal has been to quantitatively decode gene expression, elucidate the functional diversity of regulatory elements, and unravel the principles of gene regulation across the domain Bacteria.</p>
+                            <p>I am a principal investigator in National Taiwan University. I take systems approaches to bridge molecular biology and evolution. The central goal has been to quantitatively decode gene expression, elucidate the functional diversity of regulatory elements, and unravel the principles of gene regulation across the domain Bacteria.</p>
                         </div>
                     </details>
                 </div>
@@ -269,7 +269,7 @@
                     <details class="member-card-disclosure">
                         <summary class="member-card-hint">Read Curtis Chen’s introduction</summary>
                         <div class="member-card-bio">
-                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                            <p>I am a master's student in the Department of Life Science at National Taiwan University. My research focuses on bacterial transcriptional regulation, particularly how Gre factors and promoter architecture influence gene expression. I am passionate about molecular biology and enjoy exploring the mechanisms behind bacterial gene regulation.</p>
                         </div>
                     </details>
                 </div>
@@ -284,7 +284,7 @@
                     <details class="member-card-disclosure">
                         <summary class="member-card-hint">Read Kelly Liao’s introduction</summary>
                         <div class="member-card-bio">
-                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                            <p>Hi, I'm Kelly~ I like solving problems that sit between fields, and I'm drawn to using computational and engineering tools to answer biological questions!</p>
                         </div>
                     </details>
                 </div>

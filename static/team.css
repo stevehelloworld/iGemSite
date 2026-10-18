@@ -124,7 +124,7 @@
 }
 
 .member-card-photo small {
-    color: #6c8996;
+    color: var(--vis-copy);
     font-size: .76rem;
 }
 
@@ -169,7 +169,7 @@
 
 .team-bio-pending {
     font-style: italic;
-    color: #8199a6;
+    color: var(--vis-copy);
 }
 
 /* A filled photo slot drops the dashed placeholder treatment. */

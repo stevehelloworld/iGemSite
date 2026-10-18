@@ -287,7 +287,7 @@
 }
 
 .page-human-practices .ihp-learning-river span {
-    color: #3c7d84;
+    color: var(--vis-copy);
     font-family: var(--vis-display);
     font-size: .72rem;
     font-weight: 800;

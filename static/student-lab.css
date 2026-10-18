@@ -282,7 +282,7 @@
 .graph-line { fill: none; stroke: #2d91a8; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
 .graph-points circle { fill: #fff; stroke: #2d91a8; stroke-width: 4; }
 .graph-labels { fill: #486574; font-size: 14px; }
-.textbook-graph figcaption { color: #57707c; font-size: .84rem; line-height: 1.5; }
+.textbook-graph figcaption { color: var(--lab-ink); font-size: .84rem; line-height: 1.5; }
 
 .result-checks dl { margin: 24px 0 0; }
 .result-checks dl div { display: grid; grid-template-columns: .75fr 1fr; gap: 12px; padding: 15px 0; border-top: 2px solid rgba(40, 87, 114, .17); }

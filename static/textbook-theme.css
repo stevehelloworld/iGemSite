@@ -59,8 +59,12 @@
 .page-toc {
     position: sticky;
     top: calc(var(--nav-offset) + 22px);
-    max-height: calc(100svh - var(--nav-offset) - 44px);
+    max-height: min(
+        calc(100svh - var(--nav-offset) - 44px),
+        var(--toc-available-height, calc(100svh - var(--nav-offset) - 44px))
+    );
     margin-top: 36px;
+    margin-bottom: 12px;
     padding: 18px 14px;
     overflow-y: auto;
     border: 2px solid #9fcbd2;
@@ -167,7 +171,7 @@
 
 .page-notebook .page-toc-date {
     margin-bottom: 2px;
-    color: #2f7f8c;
+    color: var(--vis-copy);
     font-size: .68rem;
     letter-spacing: .03em;
 }
@@ -322,7 +326,7 @@
 }
 
 .page-methods .protocol-substeps li {
-    color: #6c8996;
+    color: var(--vis-copy);
     font-size: .84rem;
 }
 
@@ -472,7 +476,7 @@
     text-wrap: pretty;
 }
 
-.textbook-nav-page:not(.home-page) a:not(.nav-link):not(.navbar-brand) {
+.textbook-nav-page:not(.home-page) a:not(.nav-link):not(.navbar-brand):not(footer a) {
     color: #217785;
     text-decoration-color: #79b9c0;
     text-underline-offset: 3px;
@@ -935,13 +939,37 @@
     font-family: var(--vis-body);
 }
 
-.textbook-nav-page footer h4 {
+.textbook-nav-page footer.footer h4 {
     color: var(--vis-yellow);
     font-family: var(--vis-display);
 }
 
-.textbook-nav-page footer a {
+.textbook-nav-page footer.footer p,
+.textbook-nav-page footer.footer li,
+.textbook-nav-page footer.footer small {
+    color: var(--vis-pale);
+}
+
+.textbook-nav-page footer.footer a {
     color: #d7eef1;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-underline-offset: 3px;
+}
+
+.textbook-nav-page footer.footer a:hover,
+.textbook-nav-page footer.footer a:focus-visible {
+    color: var(--vis-yellow);
+}
+
+.textbook-nav-page footer.footer a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+.textbook-nav-page footer.footer hr {
+    border-color: #d7eef1;
+    opacity: .5;
 }
 
 /* Purposeful motion: illustrations and chapter content may move, but titles stay put. */
@@ -1171,7 +1199,7 @@
 
 .page-measurement .gel-figure figcaption,
 .page-measurement .gel-card figcaption small {
-    color: #6c8996;
+    color: var(--vis-copy);
     font-size: .8rem;
 }
 
