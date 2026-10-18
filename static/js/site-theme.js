@@ -71,11 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
       ".platform-candidate h3"
     ].join(",");
 
-    // Human Practices carries the interview and report write-ups at the end of
-    // the page, so a 12-heading cap would silently drop them from the contents.
-    const uncappedToc = document.body.classList.contains("page-notebook")
-      || document.body.classList.contains("page-human-practices");
-    const headingLimit = uncappedToc ? Infinity : 12;
+    // The notebook is one entry per lab day, so it is never capped. Everything
+    // else is bounded, but the bound has to clear the longest real page: Methods
+    // and Human Practices both carry 13 sections, and a cap of 12 was silently
+    // dropping the last one from the contents. The box scrolls, so a longer
+    // list costs nothing.
+    const uncappedToc = document.body.classList.contains("page-notebook");
+    const headingLimit = uncappedToc ? Infinity : 16;
     const headings = [...pageContent.querySelectorAll(headingSelectors)]
       .filter((heading) => heading.textContent.trim())
       .slice(0, headingLimit);
