@@ -1244,3 +1244,41 @@
     color: var(--vis-copy);
     font-size: .84rem;
 }
+
+/* Measurements: the two data-processing equations. A CSS fraction keeps the
+   numerator over the denominator without pulling in a maths typesetter. */
+.page-measurement .formula-block {
+    margin: 18px 0 22px;
+    padding: 20px 24px;
+    border: 2px solid #cfe3e7;
+    border-radius: 8px;
+    background: var(--vis-white);
+    overflow-x: auto;
+}
+
+.page-measurement .formula-block p {
+    margin: 0;
+    color: var(--vis-ink);
+    font-size: 1rem;
+    line-height: 2.4;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.page-measurement .formula-fraction {
+    display: inline-grid;
+    vertical-align: middle;
+    margin: 0 .3em;
+    text-align: center;
+}
+
+.page-measurement .formula-numerator {
+    padding: 0 .5em .2em;
+    border-bottom: 1px solid var(--vis-ink);
+    line-height: 1.4;
+}
+
+.page-measurement .formula-denominator {
+    padding: .2em .5em 0;
+    line-height: 1.4;
+}
