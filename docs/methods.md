@@ -212,7 +212,7 @@
   </section>
 
   <section class="experiment-figure-section" aria-labelledby="protocol-set-title">
-    <div class="experiment-flow-header"><p class="experiment-card-kicker">Protocol set</p><h3 id="protocol-set-title">The sixteen procedures, as run at the bench</h3><p>Each protocol states the reagents, volumes, cycling conditions and checkpoints actually used, so the work can be repeated without reconstructing it from the daily logs. Volumes are per single reaction unless a master-mix multiplier is given. Enzymes, master mixes and competent cells are assembled on ice. Where a protocol here differs from an early notebook entry, this is the corrected version &mdash; the deviations and the reasons for them are in <a href="#protocol-revisions-title">Protocol revisions</a>. The note boxes mark the points where something went wrong in 2026; they are checkpoints, not asides.</p></div>
+    <div class="experiment-flow-header"><p class="experiment-card-kicker">Protocol set</p><h3 id="protocol-set-title">The nineteen procedures, as run at the bench</h3><p>Each protocol states the reagents, volumes, cycling conditions and checkpoints actually used, so the work can be repeated without reconstructing it from the daily logs. Volumes are per single reaction unless a master-mix multiplier is given. Enzymes, master mixes and competent cells are assembled on ice. Where a protocol here differs from an early notebook entry, this is the corrected version &mdash; the deviations and the reasons for them are in <a href="#protocol-revisions-title">Protocol revisions</a>. The note boxes mark the points where something went wrong in 2026; they are checkpoints, not asides.</p></div>
 
     <div class="experiment-log-grid">
 
@@ -281,11 +281,34 @@
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 4</span><strong>DpnI digestion of parental template</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 4</span><strong>Gel excision</strong></summary>
+        <p><strong>Purpose:</strong> recover a target DNA fragment from an agarose gel and remove the agarose and other unwanted fragments. Used in place of a straight column cleanup whenever the gel shows more than one band.</p>
+        <div class="protocol-steps"><ol>
+          <li>Excise the DNA fragment from the agarose gel using a scalpel and transfer it into a 1.5 ml microcentrifuge tube.</li>
+          <li>Add 3 volumes of ADB to each volume of agarose excised from the gel.</li>
+          <li>Incubate at 55 °C for 5&ndash;10 min until the gel slice is completely dissolved.</li>
+          <li>Transfer the melted agarose solution to a Zymo-Spin column in a collection tube.</li>
+          <li>Centrifuge at 13,000 rpm for 60 s. Discard the flow-through.</li>
+          <li>Add 200 µl of DNA Wash Buffer to the column and centrifuge at 13,000 rpm for 60 s. Discard the flow-through.</li>
+          <li>Add 200 µl of DNA Wash Buffer to the column and centrifuge at 13,000 rpm for 60 s. Discard the flow-through.</li>
+          <li>Dry spin at 14,000 rpm for 2 min.</li>
+          <li>Add 32 µl of ddH<sub>2</sub>O directly to the column matrix. Place the column into a 1.5 ml tube and centrifuge for 60 s to elute the DNA.</li>
+          <li>Keep the 1.5 ml tube and discard the spin column.</li>
+        </ol></div>
+        <p>Worked ADB volumes from the pVIS5&ndash;pVIS8 build, at three times the gel weight:</p>
+        <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Fragment</th><th>Gel weight</th><th>ADB</th></tr></thead><tbody>
+          <tr><td>pVIS6</td><td>50 mg</td><td>150 mg</td></tr>
+          <tr><td>pVIS7</td><td>100 mg</td><td>300 mg</td></tr>
+          <tr><td>pVIS8</td><td>110 mg</td><td>330 mg</td></tr>
+        </tbody></table></div>
+      </details>
+
+      <details class="experiment-log-entry">
+        <summary><span class="experiment-log-date">Protocol 5</span><strong>DpnI digestion of parental template</strong></summary>
         <p><strong>Purpose:</strong> destroy the methylated parental plasmid carried over from <em>E. coli</em> so that only the PCR-amplified vector survives into the ligation.</p>
         <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Component</th><th>Volume</th></tr></thead><tbody>
           <tr><td>Purified plasmid (PCR product)</td><td>17.5 µl</td></tr>
-          <tr><td>10&times; reaction buffer</td><td>2.0 µl</td></tr>
+          <tr><td>10&times; CutSmart Buffer</td><td>2.0 µl</td></tr>
           <tr><td>DpnI</td><td>0.5 µl</td></tr>
           <tr><td><strong>Total</strong></td><td><strong>20 µl</strong></td></tr>
         </tbody></table></div>
@@ -293,7 +316,7 @@
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 5</span><strong>Primer reconstitution</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 6</span><strong>Primer reconstitution</strong></summary>
         <p>Reconstitute lyophilised primers (USPrimer 3&ndash;7 and the VISP series) in ddH<sub>2</sub>O to the supplier-specified stock concentration. Vortex briefly, spin down, and leave at room temperature for 10 min before first use so the pellet fully dissolves. Prepare working dilutions in a separate tube; never pipette from the stock at the bench. Store stocks at &minus;20 °C and avoid more than five freeze&ndash;thaw cycles.</p>
         <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Construct</th><th>Forward primer</th><th>Reverse primer</th><th>Annealing T<sub>m</sub></th></tr></thead><tbody>
           <tr><td>MT1 (IaMT2)</td><td>USPrimer 3</td><td>USPrimer 4</td><td>59.8 °C</td></tr>
@@ -305,7 +328,7 @@
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 6</span><strong>Phusion PCR for MT inserts</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 7</span><strong>Phusion PCR for MT inserts</strong></summary>
         <p><strong>Purpose:</strong> amplify each MT coding sequence with flanking restriction sites ready for digestion and ligation. Keep all tubes and master-mix components strictly on ice during setup.</p>
         <h5>Reaction mixture (30 µl)</h5>
         <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Component</th><th>Volume</th></tr></thead><tbody>
@@ -322,16 +345,25 @@
         <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Step</th><th>Temperature</th><th>Time</th><th>Cycles</th></tr></thead><tbody>
           <tr><td>Initial denaturation</td><td>98 °C</td><td>30 s</td><td>1</td></tr>
           <tr><td>Denaturation</td><td>98 °C</td><td>10 s</td><td>30</td></tr>
-          <tr><td>Annealing</td><td>T<sub>m</sub> (see Protocol 5)</td><td>20 s</td><td>30</td></tr>
+          <tr><td>Annealing</td><td>T<sub>m</sub> (see Protocol 6)</td><td>20 s</td><td>30</td></tr>
           <tr><td>Extension</td><td>72 °C</td><td>30 s</td><td>30</td></tr>
           <tr><td>Final extension</td><td>72 °C</td><td>3 min</td><td>1</td></tr>
           <tr><td>Hold</td><td>4 °C</td><td>&infin;</td><td>&mdash;</td></tr>
         </tbody></table></div>
-        <p>Clean up the product (Protocol 3, 1:5 ratio) and quantify. Record the concentration against the construct label &mdash; it feeds directly into the ligation calculation in Protocol 8.</p>
+        <p>Clean up the product (Protocol 3, 1:5 ratio) and quantify. Record the concentration against the construct label &mdash; it feeds directly into the ligation calculation in Protocol 9.</p>
+        <h5>Variant for pVIS5&ndash;pVIS8: amplifying the anchor out</h5>
+        <p>The same reaction is used to rebuild each construct without its Lpp-OmpA anchor, by amplifying outward from either side of the anchor so that it falls outside the product. The template is a verified pVIS1&ndash;pVIS4 miniprep at 8 ng (0.8 µl), with ddH<sub>2</sub>O made up to 21.7 µl, and each strain is run as two samples.</p>
+        <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Template</th><th>Primer 1</th><th>Primer 2</th><th>Template volume</th><th>ddH<sub>2</sub>O for the dilution</th></tr></thead><tbody>
+          <tr><td>pVIS1</td><td>VIS1p8</td><td>VIS1p9</td><td>1 µl</td><td>10.6 µl</td></tr>
+          <tr><td>pVIS2</td><td>VIS1p8</td><td>VIS2p1</td><td>1 µl</td><td>10 µl</td></tr>
+          <tr><td>pVIS3</td><td>VIS1p8</td><td>VIS3p1</td><td>1 µl</td><td>13.81 µl</td></tr>
+          <tr><td>pVIS4</td><td>VIS1p8</td><td>VIS4p1</td><td>1 µl</td><td>13.5 µl</td></tr>
+        </tbody></table></div>
+        <p><strong>Thermocycle:</strong> 98 °C (30 s); [98 °C (10 s), 59.7 °C / 63 °C (20 s), 72 °C (3 min 55 s)] &times; 30 cycles; 72 °C (3 min); 4 °C (&infin;). The product goes to gel excision (Protocol 4) whenever the gel shows more than one band, and to a straight cleanup when it shows one, then on to self-circularisation (Protocol 10).</p>
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 7</span><strong>Restriction digestion (SalI / XbaI)</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 8</span><strong>Restriction digestion (SalI / XbaI)</strong></summary>
         <p><strong>Purpose:</strong> generate compatible sticky ends on both the linearised vector and each MT insert. Both are digested with the same enzyme pair and in parallel.</p>
         <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Component</th><th>Volume</th></tr></thead><tbody>
           <tr><td>Purified DNA fragment</td><td>16 µl</td></tr>
@@ -345,7 +377,7 @@
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 8</span><strong>T4 ligation</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 9</span><strong>T4 ligation</strong></summary>
         <p><strong>Purpose:</strong> covalently join the digested vector and the MT insert to form the complete recombinant plasmid (pVIS1&ndash;pVIS4).</p>
         <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Component</th><th>Amount</th></tr></thead><tbody>
           <tr><td>Vector DNA</td><td>100 ng</td></tr>
@@ -373,7 +405,23 @@
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 9</span><strong>Preparation of electrocompetent <em>E. coli</em></strong></summary>
+        <summary><span class="experiment-log-date">Protocol 10</span><strong>Ligation by self-circularisation</strong></summary>
+        <p><strong>Purpose:</strong> circularise the modified plasmid after the Lpp-OmpA membrane-targeting sequence has been removed. This is the recipe used for pVIS5&ndash;pVIS8, where there is no separate insert to join &mdash; the amplified backbone is simply closed on itself.</p>
+        <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Component</th><th>Amount</th></tr></thead><tbody>
+          <tr><td>Digestion product</td><td>50 ng</td></tr>
+          <tr><td>10&times; T4 DNA Ligase Buffer</td><td>5.0 µl</td></tr>
+          <tr><td>PEG 4000 (50% w/v)</td><td>5.0 µl</td></tr>
+          <tr><td>T4 DNA Ligase</td><td>1.0 µl</td></tr>
+          <tr><td>T4 PNK</td><td>1.0 µl</td></tr>
+          <tr><td>ddH<sub>2</sub>O</td><td>up to 50 µl</td></tr>
+          <tr><td><strong>Total Volume</strong></td><td><strong>50 µl</strong></td></tr>
+        </tbody></table></div>
+        <p><strong>Thermocycler:</strong> 24 °C for 2 h, then hold at 4 °C.</p>
+        <p>Purify with the DNA Clean &amp; Concentrator-5 kit and elute the ligation product in 10 µl ddH<sub>2</sub>O &mdash; not the 20&ndash;28 µl used elsewhere, because the product goes straight into electroporation.</p>
+      </details>
+
+      <details class="experiment-log-entry">
+        <summary><span class="experiment-log-date">Protocol 11</span><strong>Preparation of electrocompetent <em>E. coli</em></strong></summary>
         <p><strong>Purpose:</strong> harvest <em>E. coli</em> Ek317 in mid-exponential phase and strip it of salt by repeated cold, low-salt washes, so that it survives and takes up DNA during electroporation.</p>
         <div class="protocol-steps"><ol>
           <li><strong>Start the day before:</strong> inoculate a tiny amount of Ek317 into 2 ml SOB (or 5 ml LB) and shake overnight at 37 °C, 225 rpm.</li>
@@ -389,7 +437,7 @@
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 10</span><strong>Transformation by electroporation</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 12</span><strong>Transformation by electroporation</strong></summary>
         <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Parameter</th><th>Setting</th></tr></thead><tbody>
           <tr><td>Voltage</td><td>1800 V</td></tr>
           <tr><td>Capacitance</td><td>25 µF</td></tr>
@@ -408,7 +456,7 @@
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 11</span><strong>Dilution and aseptic plating</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 13</span><strong>Dilution and aseptic plating</strong></summary>
         <div class="protocol-steps"><ol>
           <li><strong>Dilution:</strong> mix 10 µl of recovered culture with 90 µl of 0.9% saline to give a 10<sup>&minus;1</sup> dilution.</li>
           <li>Pass the cell spreader through the flame, then stand it in ethanol to cool.</li>
@@ -423,12 +471,12 @@
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 12</span><strong>Colony gridding</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 14</span><strong>Colony gridding</strong></summary>
         <p>Pick 16 well-separated colonies per construct from the transformant plate and patch them onto a mapped 16-square grid plate (LB + Km), keeping the numbering consistent with the colony PCR lane order. Incubate at 37 °C until patches are visible. Grid plates may be stored at 4 °C and screened a day or more later &mdash; screening from a refrigerated grid plate worked reliably through July.</p>
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 13</span><strong>Colony PCR screening (Taq)</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 15</span><strong>Colony PCR screening (Taq)</strong></summary>
         <p><strong>Purpose:</strong> verify insertion of the MT fragment directly from transformant colonies, using primers TK07P1 and PU12P2.</p>
         <h5>Template preparation</h5>
         <div class="protocol-steps"><ol>
@@ -460,13 +508,39 @@
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 14</span><strong>Agarose gel electrophoresis</strong></summary>
-        <p>Standard screening gel: 1% agarose in 1&times; TAE &mdash; for a small tank, 0.22 g agarose in 22 ml TAE. Melt, cool briefly, add stain, cast and allow to set. Load a 1 kb ladder in the first lane, then the samples in grid order. Colony PCR products contain FD Green or loading dye as supplied; Phusion products require added loading dye.</p>
+        <summary><span class="experiment-log-date">Protocol 16</span><strong>Agarose gel electrophoresis</strong></summary>
+        <h5>Casting</h5>
+        <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Tray</th><th>TAE</th><th>SafeView stain</th><th>Agarose for 1%</th><th>Agarose for 2%</th></tr></thead><tbody>
+          <tr><td>7 &times; 7 cm, 8-pin comb</td><td>22 ml</td><td>2 µl</td><td>0.22 g</td><td>0.44 g</td></tr>
+          <tr><td>16 &times; 7 cm, 26-pin comb</td><td>45 ml</td><td>4 µl</td><td>0.45 g</td><td>0.9 g</td></tr>
+          <tr><td>16 &times; 10 cm, two 26-pin combs</td><td>60 ml</td><td>8 µl</td><td>0.60 g</td><td>1.20 g</td></tr>
+        </tbody></table></div>
+        <div class="protocol-steps"><ol>
+          <li>Place the mixture of TAE buffer and agarose in the microwave until it fully dissolves.</li>
+          <li>Balance the gel tray.</li>
+          <li>Add the corresponding amount of nucleic acid gel stain to the gel tray.</li>
+          <li>Pour the fully dissolved mixture into the gel tray.</li>
+          <li>Stir the mixture until the stain is fully dissolved.</li>
+          <li>Attach the comb to the gel tray.</li>
+          <li>Leave the gel to set for at least 30 min.</li>
+        </ol></div>
+
+        <h5>Loading</h5>
+        <div class="protocol-steps"><ol>
+          <li>Carefully take out the comb without breaking the gel.</li>
+          <li>Load 5 µl of ladder at the start and end of the samples. Use the Omics 1 kb DNA RTU ladder for samples from 0.5 kb to 10 kb, and the Bioman 100 bp ladder for samples from 50 bp to 1 kb.</li>
+          <li>Mix 1 µl of Omics-Bio 6&times; nucleic acid load buffer with 5 µl of sample.</li>
+          <li>Load the mixture into the well.</li>
+        </ol></div>
+        <p>Colony PCR products contain FD Green or loading dye as supplied; Phusion products require added loading dye.</p>
+
+        <h5>Running</h5>
+        <p>130 mV for 18 min.</p>
         <p>Expected insert-containing band sizes: MT1 657 bp, MT2 597 bp, MT3 951 bp, MT4 645 bp, plus the flanking amplified region. Photograph every gel, annotate the lane map on the image, and file it in the dated experimental-data folder.</p>
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 15</span><strong>Glycerol stocks and sequencing submission</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 17</span><strong>Glycerol stocks and sequencing submission</strong></summary>
         <div class="protocol-steps"><ol>
           <li>From the original transformant plate, use a sterile inoculating loop to pick each verified colony (for example pVIS1 #2, #9 and #15).</li>
           <li><strong>Sequencing plate:</strong> spread each picked colony over roughly one third of a fresh LB + Km plate.</li>
@@ -474,11 +548,19 @@
           <li>Incubate both at 37 °C overnight, then submit the sequencing plate and store the reference plate at 4 °C.</li>
           <li>For long-term storage, grow a verified clone overnight in LB + Km, mix with sterile glycerol to a final 15&ndash;25% (v/v), and freeze at &minus;80 °C.</li>
         </ol></div>
+        <h5>Streaking from a grid plate</h5>
+        <div class="protocol-steps"><ol>
+          <li>Use an inoculating loop and pick up the bacteria from the grid plate.</li>
+          <li>For a stock plate, cover the plate with bacteria using the loop, entirely or partially depending on sample distribution. For a sequencing plate, draw a single line with the loop on an LB plate.</li>
+          <li>Incubate at 37 °C overnight.</li>
+        </ol></div>
+        <h5>Sequencing primer</h5>
+        <p>Primer : ddH<sub>2</sub>O = 2 µl : 8 µl, giving a total of 10 µl per sample sent for sequencing.</p>
         <p>Align returned sequencing reads against the SnapGene reference map for the construct and confirm the MT insert, both junctions, the linker and the reading frame before the clone enters any characterisation assay.</p>
       </details>
 
       <details class="experiment-log-entry">
-        <summary><span class="experiment-log-date">Protocol 16</span><strong>Plate-reader characterisation (GFP and growth)</strong></summary>
+        <summary><span class="experiment-log-date">Protocol 18</span><strong>Plate-reader characterisation (GFP and growth)</strong></summary>
         <p><strong>Purpose:</strong> measure GFP reporter output and growth rate across a cadmium concentration series, comparing display constructs against the sensor-only control.</p>
         <h5>Overnight pre-culture plate</h5>
         <p>The day before the run, set up a 96-well pre-culture plate. Inoculate each strain into LB + Glu + Km in triplicate wells, fill all perimeter wells (row A, row H, columns 1 and 12) with sterile ddH<sub>2</sub>O as an evaporation barrier, seal, and incubate at 37 °C with shaking overnight.</p>
@@ -512,6 +594,42 @@
         </ol>
       </details>
 
+      <details class="experiment-log-entry">
+        <summary><span class="experiment-log-date">Protocol 19</span><strong>Media, solutions and stocks</strong></summary>
+        <p>Everything prepared in-house. Media are autoclaved; the saline is membrane-filtered, and all culture handling takes place in the laminar flow cabinet.</p>
+
+        <h5>LB medium</h5>
+        <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Component</th><th>Amount</th></tr></thead><tbody>
+          <tr><td>Sodium chloride</td><td>10 g</td></tr>
+          <tr><td>Bacto tryptone</td><td>10 g</td></tr>
+          <tr><td>Bacto yeast extract</td><td>5 g</td></tr>
+          <tr><td>ddH<sub>2</sub>O</td><td>up to 1 L</td></tr>
+        </tbody></table></div>
+
+        <h5>Medium without NaCl</h5>
+        <p>Made from 24 September onward, after the testing centre advised that the sodium in standard LB would force a dilution that pushed the cadmium below what their assay could read.</p>
+        <div class="problem-table-wrap"><table class="problem-table"><thead><tr><th>Component</th><th>Amount</th></tr></thead><tbody>
+          <tr><td>Bacto tryptone</td><td>3.5 g</td></tr>
+          <tr><td>Bacto yeast extract</td><td>3.5 g</td></tr>
+          <tr><td>ddH<sub>2</sub>O</td><td>up to 350 ml</td></tr>
+        </tbody></table></div>
+
+        <h5>0.9% saline</h5>
+        <ul>
+          <li>0.45 g NaCl, ddH<sub>2</sub>O up to 50 ml.</li>
+          <li>Sterilise with a membrane filter rather than the autoclave.</li>
+        </ul>
+
+        <h5>SOC medium</h5>
+        <p>Super Optimal Broth with Catabolite repression = SOB + glucose: 25 ml of SOB with 303 µl of glucose.</p>
+
+        <h5>Glycerol stock</h5>
+        <ul>
+          <li>1 ml of 0.9% saline, 87 µl of DMSO, a glycerol stock vial, and the bacteria.</li>
+          <li>Pick the bacteria from the plate with an inoculating loop.</li>
+          <li>Vortex the vial until the bacteria are fully dissolved.</li>
+        </ul>
+      </details>
     </div>
   </section>
 
@@ -524,7 +642,7 @@
       </div>
       <div class="experiment-note-card experiment-note-bug">
         <p class="mb-1"><strong>Blank colony PCR gels, 9&ndash;16 July.</strong> Four consecutive screening runs gave no bands for MT2, MT3 or MT4 while the MT1 control amplified normally, which localised the fault to the template rather than the master mix or the cycling programme. Root-cause analysis on 13 July identified excessive biomass transfer during template preparation.</p>
-        <p class="mb-0"><strong>Revision:</strong> the template-prep step in Protocol 13 now specifies touching the colony only, and the MT1 positive control is mandatory on every screening plate.</p>
+        <p class="mb-0"><strong>Revision:</strong> the template-prep step in Protocol 15 now specifies touching the colony only, and the MT1 positive control is mandatory on every screening plate.</p>
       </div>
       <div class="experiment-note-card experiment-note-bug">
         <p class="mb-1"><strong>Buffer-mismatched concentration carry-over.</strong> The 20 July ligation redo reused vector concentration values measured on an earlier prep. The vector had since been amplified with GC buffer rather than HF buffer, and the two preparations do not have the same concentration, so the calculated volumes were wrong.</p>
