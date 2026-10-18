@@ -1,6 +1,6 @@
 <section class="experiment-page">
   <div class="experiment-hero">
-    <p class="experiment-eyebrow">WET LAB / METHODS</p>
+    <p class="experiment-eyebrow">WET LAB / EXPERIMENTS</p>
     <h2>Construction of four metallothionein plasmids</h2>
     <p class="experiment-lead">Our wet-lab work follows four MT variants through plasmid extraction, inverse PCR, insert amplification, restriction digestion, ligation, electroporation, colony PCR, and sequencing preparation. This page reflects the procedures documented from June 23 to August 4, 2026, together with the cadmium dose-response assays run that September.</p>
     <div class="experiment-tag-row" aria-label="Experimental workflow"><span>DNA extraction</span><span>Inverse PCR</span><span>XbaI / SalI digestion</span><span>T4 ligation</span><span>Colony PCR</span></div>
@@ -201,7 +201,7 @@
       <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 28</span><strong>Restart from the plasmid</strong></summary><p>The vector was linearised again by inverse PCR, MT2–MT4 were re-amplified, and the template was removed with DpnI. Glycerol stocks were banked for PVIS1 #2, #9, and #15.</p></details>
       <details class="experiment-log-entry"><summary><span class="experiment-log-date">July 30–31</span><strong>Third transformation round</strong></summary><p>MT2, MT3, and MT4 were transformed again and plated at whole-cell, 10⁻¹, and 10⁻². 20 colonies were gridded per construct and the first eight of each were screened.</p></details>
       <details class="experiment-log-entry"><summary><span class="experiment-log-date">August 3</span><strong>Constructs rebuilt from fresh plasmid</strong></summary><p>Plasmid was extracted again at 109–117 ng/µl and the inserts re-amplified, giving 30.0 ng/µl for MT2, 37.5 for MT3, and 18.9 for MT4 before SalI/XbaI digestion and ligation.</p></details>
-      <details class="experiment-log-entry"><summary><span class="experiment-log-date">August 4</span><strong>Sent for sequencing</strong></summary><p>The rebuilt constructs were cleaned, submitted for sequencing, and transformed again. The reads that came back are reported on the <a href="measurement">construction results</a> page.</p></details>
+      <details class="experiment-log-entry"><summary><span class="experiment-log-date">August 4</span><strong>Sent for sequencing</strong></summary><p>The rebuilt constructs were cleaned, submitted for sequencing, and transformed again. The reads that came back are reported on the <a href="measurement">measurements</a> page.</p></details>
     </div>
   </section>
 </section>

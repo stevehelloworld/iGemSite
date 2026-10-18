@@ -1,6 +1,6 @@
 <section class="experiment-page">
   <div class="experiment-hero">
-    <p class="experiment-eyebrow">WET LAB / RESULTS</p>
+    <p class="experiment-eyebrow">WET LAB / MEASUREMENTS</p>
     <h2>Building and verifying the constructs</h2>
     <p class="experiment-lead">This page covers whether the plasmids were built correctly: how many colonies were screened, how many rounds it took, and what the sequencing returned. How the finished constructs behave under cadmium is on the <a href="results">cadmium response</a> page.</p>
     <div class="experiment-tag-row" aria-label="Verification steps"><span>Colony PCR</span><span>Four build rounds</span><span>Sanger sequencing</span><span>Nine reads</span></div>

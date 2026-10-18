@@ -21,7 +21,7 @@ MARKDOWN_EXTENSIONS = ['extra', 'sane_lists', 'smarty', 'toc']
 
 # Pages whose displayed name differs from their file name, so a page can be
 # renamed without moving the file and breaking its existing URL.
-PAGE_TITLES = {'measurement': 'Results'}
+PAGE_TITLES = {'methods': 'Experiments', 'measurement': 'Measurements'}
 
 
 def render_markdown(page):
