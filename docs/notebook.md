@@ -1233,4 +1233,847 @@
       </article>
     </div>
   </details>
+
+  <!-- August 5, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">August 5, 2026</p>
+      <h3>Colony PCR and Gel</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <p>Colony PCR followed by gel electrophoresis.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Screening</span>
+        <small>The last screening round before the August break</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- August 28, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">August 28, 2026</p>
+      <h3>Culturing the Four Verified Clones</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Four 50 ml tubes</span>
+        <small>10 ml LB + 10 µl kanamycin each, one per verified clone</small>
+      </div>
+      <article class="experiment-section-copy">
+        <h4>Bacterial Culture</h4>
+        <p>10 ml of LB medium and 10 µl of kanamycin were added to each 50 ml tube, for all four strains:</p>
+        <ul>
+          <li>pVIS1 #2</li>
+          <li>pVIS2 #8</li>
+          <li>pVIS3 #6</li>
+          <li>pVIS4 #1</li>
+        </ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- August 29, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">August 29, 2026</p>
+      <h3>Plasmid Extraction and Quantification</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>DNA Extraction</h4>
+        <p>Two samples were extracted for each strain.</p>
+
+        <h4>Concentration Test</h4>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead>
+              <tr><th>Strain</th><th>Concentration (sample #1)</th><th>Concentration (sample #2)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>pVIS1 #1</td><td>117.8 ng/µl</td><td>135.9 ng/µl</td></tr>
+              <tr><td>pVIS2 #8</td><td>111.8 ng/µl</td><td>121.6 ng/µl</td></tr>
+              <tr><td>pVIS3 #6</td><td>153.4 ng/µl</td><td>129.5 ng/µl</td></tr>
+              <tr><td>pVIS4 #1</td><td>149.9 ng/µl</td><td>119.8 ng/µl</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Gel Electrophoresis</h4>
+        <ul>
+          <li>1 kb ladder</li>
+          <li>7 &times; 7 cm tray, 1% gel (22 ml TAE and 0.22 g agarose)</li>
+        </ul>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Eight preps</span>
+        <small>Two per clone, all between 111 and 154 ng/µl</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- August 31, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">August 31, 2026</p>
+      <h3>Cutting Out Lpp-OmpA to Build pVIS5&ndash;pVIS8</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Scaffold removal</span>
+        <small>Phusion PCR around the plasmid, leaving the Lpp-OmpA anchor out of the product</small>
+      </div>
+      <article class="experiment-section-copy">
+        <h4>Phusion PCR (excluding Lpp-OmpA)</h4>
+        <p>Amplify the plasmid, excluding Lpp-OmpA, for all four strains. Each strain was run as two samples.</p>
+        <h5>Reaction Mixture</h5>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead><tr><th>Component</th><th>Volume</th></tr></thead>
+            <tbody>
+              <tr><td>Plasmid template</td><td>8 ng &rarr; 0.8 µl</td></tr>
+              <tr><td>5&times; Phusion HF Buffer</td><td>6 µl</td></tr>
+              <tr><td>10 mM dNTP</td><td>0.6 µl</td></tr>
+              <tr><td>Primer 1</td><td>0.3 µl</td></tr>
+              <tr><td>Primer 2</td><td>0.3 µl</td></tr>
+              <tr><td>Phusion polymerase</td><td>0.3 µl</td></tr>
+              <tr><td>ddH<sub>2</sub>O</td><td>21.7 µl</td></tr>
+              <tr><td><strong>Total Volume</strong></td><td><strong>30 µl</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h5>Primer Combinations and Template Dilutions</h5>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead><tr><th>Template</th><th>Primer 1</th><th>Primer 2</th><th>Template</th><th>ddH<sub>2</sub>O</th></tr></thead>
+            <tbody>
+              <tr><td>pVIS1</td><td>VIS1p8</td><td>VIS1p9</td><td>1 µl</td><td>10.6 µl</td></tr>
+              <tr><td>pVIS2</td><td>VIS1p8</td><td>VIS2p1</td><td>1 µl</td><td>10 µl</td></tr>
+              <tr><td>pVIS3</td><td>VIS1p8</td><td>VIS3p1</td><td>1 µl</td><td>13.81 µl</td></tr>
+              <tr><td>pVIS4</td><td>VIS1p8</td><td>VIS4p1</td><td>1 µl</td><td>13.5 µl</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Thermocycle:</strong> 98 °C (30 s); [98 °C (10 s), 59.7 °C / 63 °C (20 s), 72 °C (3 min 55 s)] &times; 30 cycles; 72 °C (3 min); 4 °C (&infin;).</p>
+
+        <h4>Gel Electrophoresis</h4>
+        <ul>
+          <li>1 kb ladder</li>
+          <li>7 &times; 7 cm tray, 1% gel (22 ml TAE and 0.22 g agarose)</li>
+        </ul>
+
+        <h4>Cleanup and Excision</h4>
+        <ul>
+          <li>DNA clean for pVIS5.</li>
+          <li>Gel excision for pVIS6, 7 and 8.</li>
+        </ul>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead><tr><th></th><th>pVIS6</th><th>pVIS7</th></tr></thead>
+            <tbody>
+              <tr><td>Gel weight</td><td>50 mg</td><td>100 mg</td></tr>
+              <tr><td>ADB</td><td>150 mg</td><td>300 mg</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>DpnI digestion, then DNA clean for pVIS5, 6 and 7 after DpnI.</p>
+
+        <div class="experiment-note-card experiment-note-bug">
+          <p class="mb-0"><strong>Troubleshooting:</strong> accidentally cut the band for pVIS8, therefore redo Phusion PCR for pVIS8 tomorrow.</p>
+        </div>
+
+        <div class="experiment-note-card">
+          <p class="mb-1"><strong>Summary:</strong> did Phusion PCR using a designed primer to cut out the Lpp-OmpA part for pVIS1&ndash;4, creating pVIS5&ndash;8, where pVIS1 and pVIS5 share the same MT, and the others follow the same logic.</p>
+          <p class="mb-0"><strong>Explanation:</strong> DNA clean is done for pVIS5 because the gel photo shows one clear band. Gel photos of pVIS5, 6 and 7 show 2 bands, therefore, to better preserve the fragment we want, gel excision is done.</p>
+        </div>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 1, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 1, 2026</p>
+      <h3>pVIS8 Redo, Self-Circularisation and Transformation</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>Phusion PCR using pVIS4 #1</h4>
+        <p>The pVIS8 amplification was repeated from the pVIS4 #1 template.</p>
+
+        <h4>Gel Electrophoresis</h4>
+        <ul>
+          <li>1 kb ladder</li>
+          <li>7 &times; 7 cm tray, 1% gel (22 ml TAE and 0.22 g agarose)</li>
+        </ul>
+
+        <h4>Gel Excision</h4>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead><tr><th></th><th>pVIS8</th></tr></thead>
+            <tbody>
+              <tr><td>Gel weight</td><td>110 mg</td></tr>
+              <tr><td>ADB</td><td>330 mg</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>DpnI digestion, then DNA clean.</p>
+
+        <h4>Concentration Test</h4>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead><tr><th>Plasmid</th><th>Concentration</th></tr></thead>
+            <tbody>
+              <tr><td>pVIS5</td><td>30.05 ng/µl</td></tr>
+              <tr><td>pVIS6</td><td>5.7 ng/µl</td></tr>
+              <tr><td>pVIS7</td><td>20.4 ng/µl</td></tr>
+              <tr><td>pVIS8</td><td>13.2 ng/µl</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>Ligation</h4>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead><tr><th>Plasmid</th><th>Digestion mixture (DM)</th><th>Amount added (DM / concentration)</th></tr></thead>
+            <tbody>
+              <tr><td>pVIS5</td><td>50 ng</td><td>1.67 µl</td></tr>
+              <tr><td>pVIS6</td><td>All</td><td>15.41 µl</td></tr>
+              <tr><td>pVIS7</td><td>50 ng</td><td>2.5 µl</td></tr>
+              <tr><td>pVIS8</td><td>100 ng</td><td>7.7 µl</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>DNA clean, then transformation via electroporation of a total of 4 samples, followed by plating.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Four self-circularised</span>
+        <small>pVIS6 was so dilute at 5.7 ng/µl that the whole digestion mixture went in</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 2, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 2, 2026</p>
+      <h3>Screening the Scaffold-Free Constructs</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>2% gel</span>
+        <small>100 bp ladder, because the screening product is short</small>
+      </div>
+      <article class="experiment-section-copy">
+        <p>Colony PCR followed by gel electrophoresis.</p>
+        <ul>
+          <li>100 bp ladder</li>
+          <li>16 &times; 10 cm tray, 2% gel (60 ml TAE and 1.2 g agarose)</li>
+        </ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 3, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 3, 2026</p>
+      <h3>Second Screening Round</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <p>Colony PCR followed by gel electrophoresis.</p>
+        <ul>
+          <li>100 bp ladder</li>
+          <li>16 &times; 10 cm tray, 2% gel (60 ml TAE and 1.2 g agarose)</li>
+        </ul>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Repeat screen</span>
+        <small>Same gel conditions as the previous day</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 4, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 4, 2026</p>
+      <h3>First Clones Picked for Sequencing</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Three clones</span>
+        <small>pVIS6-1, pVIS7-2 and pVIS8-4 plated for stock and for sequencing</small>
+      </div>
+      <article class="experiment-section-copy">
+        <h4>Stock Plating</h4>
+        <ul><li>pVIS6-1</li><li>pVIS7-2</li><li>pVIS8-4</li></ul>
+        <h4>Sequence Plating and Preparation</h4>
+        <ul><li>pVIS6-1</li><li>pVIS7-2</li><li>pVIS8-4</li></ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 8, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 8, 2026</p>
+      <h3>Plating, and the First Testing Pre-Culture</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>Stock Plating</h4>
+        <ul><li>pVIS5-22</li><li>pVIS6-1</li><li>pVIS7-2</li></ul>
+        <h4>Sequence Plating and Preparation</h4>
+        <ul><li>pVIS5-22</li><li>pVIS6-1</li><li>pVIS7-2</li></ul>
+
+        <h4>Inoculation for Testing &mdash; LB Medium</h4>
+        <p>The references carried on every testing plate from here on:</p>
+        <ul>
+          <li><strong>pMH45</strong> &mdash; original plasmid with only GFP expression</li>
+          <li><strong>pTK03</strong> &mdash; negative control, without GFP expression</li>
+          <li><strong>pYC08</strong> &mdash; positive control, with GFP expression</li>
+        </ul>
+
+        <h5>Pre-culture plate map</h5>
+        <p>The layout below is the pattern every pre-culture plate follows: strains in triplicate rows, with the whole perimeter filled with ddH<sub>2</sub>O as an evaporation barrier.</p>
+        <div class="problem-table-wrap">
+          <table class="problem-table">
+            <thead><tr><th></th><th>01</th><th>02</th><th>03</th><th>04</th><th>05</th><th>06</th><th>07</th><th>08</th><th>09</th><th>10</th><th>11</th><th>12</th></tr></thead>
+            <tbody>
+              <tr><td>A</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td></tr>
+              <tr><td>B</td><td>ddH<sub>2</sub>O</td><td>pMH45</td><td>pVIS1</td><td>pVIS2</td><td>pVIS3</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>pMH45</td><td>pVIS1-2</td><td>pVIS2-8</td><td>pVIS3-6</td><td>ddH<sub>2</sub>O</td></tr>
+              <tr><td>C</td><td>ddH<sub>2</sub>O</td><td>pMH45</td><td>pVIS1</td><td>pVIS2</td><td>pVIS3</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>pMH45</td><td>pVIS1-2</td><td>pVIS2-8</td><td>pVIS3-6</td><td>ddH<sub>2</sub>O</td></tr>
+              <tr><td>D</td><td>ddH<sub>2</sub>O</td><td>pMH45</td><td>pVIS1</td><td>pVIS2</td><td>pVIS3</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>pMH45</td><td>pVIS1-2</td><td>pVIS2-8</td><td>pVIS3-6</td><td>ddH<sub>2</sub>O</td></tr>
+              <tr><td>E</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>pVIS4</td><td>pTK03</td><td>pYC08</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>pVIS4-1</td><td>pTK03</td><td>pYC08</td><td>ddH<sub>2</sub>O</td></tr>
+              <tr><td>F</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>pVIS4</td><td>pTK03</td><td>pYC08</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>pVIS4-1</td><td>pTK03</td><td>pYC08</td><td>ddH<sub>2</sub>O</td></tr>
+              <tr><td>G</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>pVIS4</td><td>pTK03</td><td>pYC08</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>pVIS4-1</td><td>pTK03</td><td>pYC08</td><td>ddH<sub>2</sub>O</td></tr>
+              <tr><td>H</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td><td>ddH<sub>2</sub>O</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Perimeter ddH<sub>2</sub>O</span>
+        <small>Row A, row H and columns 1, 6, 7 and 12 held water against evaporation</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 9, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 9, 2026</p>
+      <h3>Sequencing Sent, EDTA Step Scaled</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>15 samples</span>
+        <small>3.2 µl EDTA into 3,196.8 µl medium</small>
+      </div>
+      <article class="experiment-section-copy">
+        <h4>Send Sequence</h4>
+        <ul><li>pVIS5-22</li><li>pVIS6-1</li><li>pVIS7-2</li></ul>
+
+        <h4>EDTA Addition for Testing &mdash; LB Medium</h4>
+        <ul>
+          <li>Simply add 200 µl of medium for positive and negative control.</li>
+          <li>EDTA : medium = 2 µl : 1998 µl.</li>
+          <li>15 samples: 200 µl &times; 16 (always make 1&ndash;2 additional) = 3,200 µl.</li>
+          <li>3,200 / 2,000 = 1.6.</li>
+          <li>EDTA: 2 &times; 1.6 = 3.2 µl; medium: 1998 &times; 1.6 = 3,196.8 µl.</li>
+        </ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 10, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 10, 2026</p>
+      <h3>First Plate Reader Run</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <p>Plate reader testing in LB medium, covering pMH45 and pVIS1&ndash;pVIS4 against the pTK03 and pYC08 references.</p>
+        <p>Each strain occupied a block of six columns &mdash; condition 0 with no cadmium, then conditions A to E at 8, 40, 200, 300 and 400 nM Cd<sup>2+</sup> &mdash; across three replicate rows, with LB + Glu + Km in the no-cadmium column and LB + Glu + Km + Cd in the rest. The full parameter set is on the <a href="measurement">Measurements</a> page.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>pMH45 and pVIS1&ndash;4</span>
+        <small>Six cadmium conditions, three replicate rows per strain</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 11 ~ September 13, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 11 ~ September 13, 2026</p>
+      <h3>Growth Rate Calculations</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Three days</span>
+        <small>Working the 10 September kinetic data into growth rates</small>
+      </div>
+      <article class="experiment-section-copy">
+        <p>Calculating the growth rate for the result from the plate reader testing.</p>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 14, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 14, 2026</p>
+      <h3>Three Sequences Confirmed</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>Sequence Results Out</h4>
+        <p>pVIS5-22, pVIS6-1 and pVIS7-2 correct.</p>
+        <h4>Making Stock</h4>
+        <ul><li>pVIS5-22</li><li>pVIS6-1</li><li>pVIS7-2</li></ul>
+        <h4>Sequence Plating</h4>
+        <ul><li>pVIS8-4</li></ul>
+        <p>Finished calculating the growth rate for the plate reader testing result from 10 September.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Three of four</span>
+        <small>pVIS5, pVIS6 and pVIS7 verified; pVIS8 still outstanding</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 15, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 15, 2026</p>
+      <h3>pVIS8-4 Sent, GFP Analysis Started</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>GFP pass</span>
+        <small>Working the same kinetic data for fluorescence</small>
+      </div>
+      <article class="experiment-section-copy">
+        <h4>Send Sequence</h4>
+        <ul><li>pVIS8-4</li></ul>
+        <p>Calculating the GFP for the plate reader testing result from 10 September.</p>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 16, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 16, 2026</p>
+      <h3>GFP Calculations Finished</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <p>Finished calculating the GFP for the plate reader testing result from 10 September.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Run one complete</span>
+        <small>Growth rate and GFP both worked up</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 17, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 17, 2026</p>
+      <h3>Wrong Colony Sequenced</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>pVIS8-4 failed</span>
+        <small>The intended clone was pVIS8-12</small>
+      </div>
+      <article class="experiment-section-copy">
+        <h4>Sequence Results Out</h4>
+        <p>pVIS8-4 failed.</p>
+        <div class="experiment-note-card experiment-note-bug">
+          <p class="mb-0"><strong>Troubleshooting:</strong> picked the incorrect colony for sending sequence. We were supposed to send pVIS8-12, however, we sent pVIS8-4.</p>
+        </div>
+        <h4>Sequence Plating</h4>
+        <ul><li>pVIS8-12</li><li>pVIS8-13</li></ul>
+        <h4>Stock Plating</h4>
+        <ul><li>pVIS8-12</li><li>pVIS8-13</li></ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 18, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 18, 2026</p>
+      <h3>Two More pVIS8 Clones Sent</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>Send Sequence</h4>
+        <ul><li>pVIS8-12</li><li>pVIS8-13</li></ul>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Second attempt</span>
+        <small>pVIS8-12 and pVIS8-13 submitted together</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 21, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 21, 2026</p>
+      <h3>Pre-Culture for the Scaffold-Free Set</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>pVIS5&ndash;8</span>
+        <small>pVIS5, pVIS6, pVIS7, pVIS8-12 and pVIS8-13 against the three references</small>
+      </div>
+      <article class="experiment-section-copy">
+        <h4>Inoculation for Testing &mdash; LB Medium</h4>
+        <p>Plated in the same pattern as 8 September, this time carrying pVIS5, pVIS6, pVIS7, pVIS8-12 and pVIS8-13 alongside:</p>
+        <ul>
+          <li><strong>pMH45</strong> &mdash; original plasmid with only GFP expression</li>
+          <li><strong>pTK03</strong> &mdash; negative control, without GFP expression</li>
+          <li><strong>pYC08</strong> &mdash; positive control, with GFP expression</li>
+        </ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 22, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 22, 2026</p>
+      <h3>A Deletion After the RBS</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>EDTA Addition &mdash; LB Medium</h4>
+        <ul>
+          <li>Simply add 200 µl of medium for positive and negative control.</li>
+          <li>EDTA : medium = 2 µl : 1998 µl.</li>
+          <li>12 samples: 200 µl &times; 14 (always make 1&ndash;2 additional) = 2,800 µl.</li>
+          <li>2,800 / 2,000 = 1.4.</li>
+          <li>EDTA: 2 &times; 1.4 = 2.8 µl; medium: 1998 &times; 1.4 = 2,797.2 µl.</li>
+        </ul>
+
+        <h4>Sequence Results Out</h4>
+        <div class="experiment-note-card experiment-note-bug">
+          <p class="mb-0">Both pVIS8-12 and pVIS8-13 have a deletion after the RBS, which makes both unusable. Therefore, we are going to send another sample to sequence again this week.</p>
+        </div>
+
+        <h4>Sequence Plating</h4>
+        <ul><li>pVIS8-11</li><li>pVIS8-14</li></ul>
+        <h4>Stock Plating</h4>
+        <ul><li>pVIS8-11</li><li>pVIS8-14</li></ul>
+        <p>Finished the sample assay design.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Third attempt</span>
+        <small>pVIS8-11 and pVIS8-14 plated after the deletion was found</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 23, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 23, 2026</p>
+      <h3>Second Plate Reader Run</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>LB medium</span>
+        <small>The scaffold-free constructs on the reader for the first time</small>
+      </div>
+      <article class="experiment-section-copy">
+        <p>Plate reader testing in LB medium.</p>
+        <p>The stock plate and sequence plate were put in the refrigerator; sequencing would be sent out the following day.</p>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 24, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 24, 2026</p>
+      <h3>The Run Timed Out, and LB Turned Out to Be Too Salty</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <div class="experiment-note-card experiment-note-bug">
+          <p class="mb-0"><strong>Troubleshooting:</strong> yesterday&rsquo;s plate reader testing wasn&rsquo;t run successfully, because the duration of testing is constrained by 1.5 hours, which stops the measurement at cycle six.</p>
+        </div>
+
+        <h4>Send Sequence</h4>
+        <ul><li>pVIS8-11</li><li>pVIS8-14</li></ul>
+
+        <div class="experiment-note-card">
+          <p class="mb-0"><strong>Additional point:</strong> Don Hua University&rsquo;s testing centre mentioned that the sodium concentration inside LB medium is too high, which requires dilution that may potentially dilute the cadmium concentration to an untestable stage. Therefore, we decided to use a medium without added sodium for sending assay, which will also require the growth rate and GFP intensity test for all the samples.</p>
+        </div>
+
+        <p>Making medium without NaCl.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>No-sodium medium</span>
+        <small>Every construct now has to be re-characterised in the new medium</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 25, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 25, 2026</p>
+      <h3>Starting Again in No-Sodium Medium</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>pVIS1&ndash;4</span>
+        <small>First pre-culture in the sodium-free formulation</small>
+      </div>
+      <article class="experiment-section-copy">
+        <p>Prepared the medium for testing (without sodium), then inoculation for testing of pVIS1&ndash;4 in that medium, carrying pMH45, pTK03 and pYC08 as before.</p>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 26, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 26, 2026</p>
+      <h3>Two Pre-Cultures in Parallel</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>EDTA Addition (pVIS1&ndash;4 testing, without sodium medium)</h4>
+        <ul>
+          <li>EDTA : medium = 2 µl : 1998 µl.</li>
+          <li>15 samples: 200 µl &times; 17 = 3,400 µl.</li>
+          <li>3,400 / 2,000 = 1.7.</li>
+          <li>EDTA: 2 &times; 1.7 = 3.4 µl; medium: 1998 &times; 1.7 = 3,396.6 µl.</li>
+        </ul>
+        <h4>Inoculation for Testing (pVIS5&ndash;7, without sodium medium)</h4>
+        <p>With pMH45, pTK03 and pYC08 as the references.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Overlapping runs</span>
+        <small>One set going onto the reader while the next is pre-cultured</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 27, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 27, 2026</p>
+      <h3>pVIS1&ndash;4 in No-Sodium Medium</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Run three</span>
+        <small>The display constructs re-measured without sodium</small>
+      </div>
+      <article class="experiment-section-copy">
+        <h4>Plate Reader Testing (pVIS1&ndash;4, without sodium medium)</h4>
+        <h4>EDTA Addition (pVIS5&ndash;7 testing, without sodium medium)</h4>
+        <ul>
+          <li>12 samples: 200 µl &times; 14 = 2,800 µl.</li>
+          <li>2,800 / 2,000 = 1.4.</li>
+          <li>EDTA: 2 &times; 1.4 = 2.8 µl; medium: 1998 &times; 1.4 = 2,797.2 µl.</li>
+        </ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 28, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 28, 2026</p>
+      <h3>pVIS5&ndash;7 in No-Sodium Medium</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>Plate Reader Testing (pVIS5&ndash;7, without sodium medium)</h4>
+        <h4>Inoculation for Testing (pVIS5&ndash;8, normal LB medium)</h4>
+        <p>With pMH45, pTK03 and pYC08 as the references.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Run four</span>
+        <small>Scaffold-free set without sodium, then set up again in normal LB</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- September 29, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 29, 2026</p>
+      <h3>EDTA Step for the pVIS5&ndash;8 Plate</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>18 samples</span>
+        <small>The largest EDTA batch of the season</small>
+      </div>
+      <article class="experiment-section-copy">
+        <h4>EDTA Addition (pVIS5&ndash;8 testing, normal LB medium)</h4>
+        <ul>
+          <li>18 samples: 200 µl &times; 20 = 4,000 µl.</li>
+          <li>4,000 / 2,000 = 2.</li>
+          <li>EDTA: 2 &times; 2 = 4 µl; medium: 1998 &times; 2 = 3,996 µl.</li>
+        </ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- September 30, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">September 30, 2026</p>
+      <h3>pVIS8 Finally Verified</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>Sequence Results Out</h4>
+        <p>Both pVIS8-11 and pVIS8-14 show the correct sequence. We chose to use pVIS8-11 for later plate reader testing.</p>
+        <h4>Plate Reader Testing (pVIS5&ndash;8, normal LB medium)</h4>
+        <h4>Inoculation for Testing (pVIS8-11, without sodium medium)</h4>
+        <p>With pMH45, pTK03 and pYC08 as the references.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Fourth attempt</span>
+        <small>pVIS8-11 carried forward after three failed clones</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- October 1, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">October 1, 2026</p>
+      <h3>EDTA Step for pVIS8-11</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>6 samples</span>
+        <small>The smallest batch, for the last construct</small>
+      </div>
+      <article class="experiment-section-copy">
+        <h4>EDTA Addition (pVIS8-11 testing, without sodium medium)</h4>
+        <ul>
+          <li>6 samples: 200 µl &times; 8 = 1,600 µl.</li>
+          <li>1,600 / 2,000 = 0.8.</li>
+          <li>EDTA: 2 &times; 0.8 = 1.6 µl; medium: 1,598.4 µl.</li>
+        </ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- October 2, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">October 2, 2026</p>
+      <h3>Last Plate Reader Run</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <h4>Plate Reader Testing (pVIS8-11, without sodium medium)</h4>
+        <p>Finished the Don Hua University testing centre appointment order sheet.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Characterisation complete</span>
+        <small>All eight constructs measured in both media</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- October 5 ~ October 8, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">October 5 ~ October 8, 2026</p>
+      <h3>Working Up the Last Three Runs</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Four days</span>
+        <small>Growth rate and GFP intensity for three plate reader runs</small>
+      </div>
+      <article class="experiment-section-copy">
+        <p>Calculating growth rate and GFP intensity from the plate reader testing data for the previous 3 tests.</p>
+        <p>Emailed the Don Hua University testing centre our appointment order sheet.</p>
+      </article>
+    </div>
+  </details>
+
+  <!-- October 12, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">October 12, 2026</p>
+      <h3>Booking the Cadmium Assay</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <p>Reserved sample assay testing through the Reservation Service Management System of Core Facilities for Basic Research.</p>
+        <p>Inoculation for the sample assay. The left portion of the black line on the plate map represents the inoculation on 12 October.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>Sample assay</span>
+        <small>Samples prepared for external cadmium quantification</small>
+      </div>
+    </div>
+  </details>
+
+  <!-- October 13, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">October 13, 2026</p>
+      <h3>Medium and EDTA for the Sample Assay</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>27 samples</span>
+        <small>5.8 µl EDTA into 5,794.2 µl of sodium-free medium</small>
+      </div>
+      <article class="experiment-section-copy">
+        <p>Making medium without sodium (350 ml).</p>
+        <h4>EDTA Addition (sample assay)</h4>
+        <ul>
+          <li>The right portion of the black line on the plate map represents the inoculation on 13 October.</li>
+          <li>EDTA : medium = 2 µl : 1998 µl.</li>
+          <li>27 samples: 200 µl &times; 29 (always make 1&ndash;2 additional) = 5,800 µl.</li>
+          <li>5,800 / 2,000 = 2.9.</li>
+          <li>EDTA: 2 &times; 2.9 = 5.8 µl; medium: 1998 &times; 2.9 = 5,794.2 µl.</li>
+        </ul>
+      </article>
+    </div>
+  </details>
+
+  <!-- October 14, 2026 -->
+  <details class="experiment-section notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">October 14, 2026</p>
+      <h3>Last Entry</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <article class="experiment-section-copy">
+        <p>The working log carries a heading for this date with no entry recorded beneath it. It is reproduced here so the record runs to the end of the notebook rather than stopping without explanation.</p>
+      </article>
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>End of the log</span>
+        <small>23 June to 14 October 2026</small>
+      </div>
+    </div>
+  </details>
 </section>
