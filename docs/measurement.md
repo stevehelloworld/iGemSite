@@ -19,7 +19,7 @@
     <div class="experiment-section-layout"><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Per 350 mL LB</span><small>350 µL kanamycin solution and 11.6 mL glucose solution, stored at 4 °C</small></div><article class="experiment-section-copy">
       <p>All culture preparation and liquid-handling procedures were carried out in a laminar flow cabinet.</p>
       <p>The growth medium was supplemented with kanamycin and glucose to support the cultivation of plasmid-bearing <em>E. coli</em> and to maintain the experimental conditions used for fluorescence measurements.</p>
-      <p>For medium preparation, 350 µL of kanamycin solution and 11.6 mL of glucose solution were added to 350 mL of growth LB medium. All media were stored at 4 °C.</p>
+      <p>For medium preparation, 350 µL of kanamycin solution and 11.6 mL of glucose solution were added to 350 mL of LB medium. All media were stored at 4 °C.</p>
     </article></div>
   </section>
 
@@ -53,10 +53,10 @@
       <tr><td>E</td><td>400 nM</td></tr>
     </tbody></table></div>
 
-    <p>For each experimental condition, a preparation mixture consisted of 700 µL growth medium, 7 µL of the corresponding stock solution (stock solutions: 0.8 µM, 4 µM, 20 µM, 30 µM and 40 µM) and 3.5 µL bacterial culture.</p>
+    <p>For each experimental condition, the preparation mixture consisted of 700 µL growth medium, 7 µL of the corresponding stock solution (0.8 µM, 4 µM, 20 µM, 30 µM and 40 µM) and 3.5 µL bacterial culture.</p>
     <p>After mixing, 200 µL of the prepared solution was transferred into its designated well in the 96-well plate.</p>
     <p>Positive and negative controls were prepared separately by adding 1 µL of the corresponding bacterial culture to 200 µL of growth medium without added cadmium.</p>
-    <p>When necessary, 200 µL of water was added to peripheral wells to reduce evaporation during incubation. The plate was sealed with parafilm before being put into the microplate reader.</p>
+    <p>When necessary, 200 µL of water was added to peripheral wells to reduce evaporation during incubation. The plate was sealed with Parafilm before being put into the microplate reader.</p>
   </section>
 
   <section class="experiment-figure-section" aria-labelledby="plate-reader-title">
