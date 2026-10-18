@@ -116,6 +116,7 @@
           <li><strong>Heat:</strong> 55 °C for 3 min, open lid.</li>
           <li>Add 20 µl ddH<sub>2</sub>O directly to the column matrix; incubate at room temperature for 1 min. Centrifuge at 13,000 rpm for 1 min.</li>
         </ol>
+        <p>Save the 1.5 ml collection tube holding the eluate and discard the spin column.</p>
 
         <h4>DpnI Digestion & Incubation</h4>
         <p>Digestion of methylated template DNA (parental plasmid isolated from <em>E. coli</em>).</p>
@@ -196,8 +197,15 @@
           <li><strong>Cycling parameters:</strong> 98 °C (30 s); [98 °C (10 s), TM (20 s), 72 °C (30 s)] × 30 cycles; 72 °C (3 min); 4 °C (∞).</li>
         </ul>
 
+        <h4>Second DNA Clean (Post-PCR)</h4>
+        <p>The clean-up protocol is identical to the Zymo-Spin procedure above; only the Binding Buffer ratio changes with the sample type:</p>
+        <ul>
+          <li><strong><em>E. coli</em> plasmid (DNA Template) : Binding Buffer = 1:2</strong> &mdash; 25 µl : 50 µl.</li>
+          <li><strong>MT (PCR Product) : Binding Buffer = 1:5</strong> &mdash; 25 µl : 125 µl.</li>
+        </ul>
+
         <h4>Restriction Enzyme Digestion</h4>
-        <p>Digestion of purified DNA fragments (<em>E. coli</em> plasmid ×2 & 4 MT PCR products) to generate compatible sticky ends.</p>
+        <p>Digestion of purified DNA fragments (<em>E. coli</em> plasmid ×2 & 4 MT PCR products) to generate compatible sticky ends for the later ligation.</p>
         <h5>Reaction Mixture</h5>
         <div class="problem-table-wrap">
           <table class="problem-table">
@@ -217,6 +225,9 @@
           </table>
         </div>
         <p><strong>Thermocycle:</strong> 37 °C for 2 hr; 4 °C for ∞.</p>
+
+        <h4>Gel Electrophoresis</h4>
+        <p>The digested fragments were run out on an agarose gel to check the products of the day.</p>
       </article>
     </div>
   </details>
@@ -239,6 +250,7 @@
         <h4>Ligation for MT1, 3, and 4</h4>
         <p>Covalent joining of digested vectors (Plasmid MH45) and MT inserts. MT2 was deferred due to a low concentration of 6.</p>
         <p><strong>Vector DNA Volume Calculation:</strong> Vector DNA = 100 ng / 42.9 (Concentration) = 2.33 µl</p>
+        <p><strong>Insert DNA Volume Calculation:</strong> Calculated through NEBioCalculator by entering the insert and vector DNA lengths, using a 3:1 molar ratio.</p>
 
         <h5>Reaction Mixture</h5>
         <div class="problem-table-wrap">
@@ -284,9 +296,10 @@
         </div>
 
         <h4>Bacterial Cultivation</h4>
+        <p>Transformation was planned for the following day, so plasmid-free cells had to be grown up first.</p>
         <ul>
           <li><strong>Strain:</strong> <em>E. coli</em> Ek317.</li>
-          <li><strong>Medium:</strong> 2,000 µl of SOB.</li>
+          <li><strong>Medium:</strong> 2,000 µl of SOB inoculated with a tiny amount of Ek317.</li>
           <li><strong>Conditions:</strong> Shaker at 37 °C, 225 rpm.</li>
         </ul>
       </article>
@@ -311,6 +324,12 @@
       </div>
 
       <article class="experiment-section-copy">
+        <h4>DNA Clean (Ligation Products)</h4>
+        <p>Same Zymo-Spin protocol as June 25, with the Binding Buffer set for ligation products:</p>
+        <ul>
+          <li><strong>Ligation Product : Binding Buffer = 1:5</strong> &mdash; 20 µl : 100 µl (the same for MT2, MT3 and MT4).</li>
+        </ul>
+
         <h4>Phusion PCR for MT2</h4>
         <ul>
           <li><strong>Primer Combination:</strong> Primer 3 & 5.</li>
@@ -318,7 +337,13 @@
           <li><strong>Thermocycle:</strong> 98 °C (30 s); [98 °C (10 s), TM: 60.8 °C (20 s), 72 °C (30 s)] × 30 cycles; 72 °C (3 min); 4 °C (∞).</li>
         </ul>
 
+        <h4>DNA Clean (MT2 PCR Product)</h4>
+        <ul>
+          <li><strong>PCR Product (MT2) : Binding Buffer = 1:5</strong> &mdash; 25 µl : 125 µl.</li>
+        </ul>
+
         <h4>Preparation of Electro-Competent Cells</h4>
+        <p>Harvest <em>E. coli</em> Ek317 during exponential growth (OD<sub>600</sub> ≈ 0.6) and subject it to repeated chilled, low-salt water washes.</p>
         <ol>
           <li><strong>Inoculation & Subculture:</strong> Transfer 0.25 ml overnight culture into 50 ml SOB medium. Incubate for ~2 hours until reaching mid-log phase (OD<sub>600</sub> ~ 0.6).</li>
           <li><strong>Chilling:</strong> Transfer culture to a 50 ml conical tube and incubate on ice for 10 min.</li>
@@ -364,8 +389,9 @@
     <div class="experiment-section-layout">
       <article class="experiment-section-copy">
         <h4>Colony PCR Protocol</h4>
+        <p>Screen transformants straight off the culture plates, so the target insert can be verified without having to pick colonies a day in advance.</p>
         <ul>
-          <li><strong>Grid Setup:</strong> Picked 16 colonies from MT1 transformant plate onto a mapped 16-grid plate (LB+Km).</li>
+          <li><strong>Grid Setup:</strong> Picked 16 colonies from the <em>E. coli</em> Ek317 + MT1 transformant plate onto a mapped 16-grid plate (LB+Km).</li>
           <li><strong>Template Prep:</strong> Resuspend colony in 10 µl sterile ddH<sub>2</sub>O. Heat at 96 °C for 12 min.</li>
         </ul>
 
@@ -384,8 +410,8 @@
               <tr><td>10x Buffer</td><td>1.5 µl</td><td>27 µl</td></tr>
               <tr><td>DMSO</td><td>0.6 µl</td><td>10.8 µl</td></tr>
               <tr><td>10 mM dNTP</td><td>0.3 µl</td><td>5.4 µl</td></tr>
-              <tr><td>50 mM Primer 1</td><td>0.09 µl</td><td>1.62 µl</td></tr>
-              <tr><td>50 mM Primer 2</td><td>0.09 µl</td><td>1.62 µl</td></tr>
+              <tr><td>50 mM Primer 1 (TK07 P1)</td><td>0.09 µl</td><td>1.62 µl</td></tr>
+              <tr><td>50 mM Primer 2 (PU12 P2)</td><td>0.09 µl</td><td>1.62 µl</td></tr>
               <tr><td>Taq Polymerase</td><td>0.07 µl</td><td>1.26 µl</td></tr>
               <tr><td><strong>Total Volume</strong></td><td><strong>14 µl</strong></td><td><strong>252 µl</strong></td></tr>
             </tbody>
@@ -394,9 +420,15 @@
 
         <h5>Thermocycle</h5>
         <p>94 °C (2 min); [94 °C (30 s), 57.6 °C (10 s), 72 °C (2 min)] × 35 cycles; 72 °C (3 min 30 s); 4 °C (∞).</p>
+        <p>Each reaction was assembled from 1 µl of sample and 14 µl of master mix, then run out on a gel.</p>
 
         <h4>Restriction Enzyme (MT2)</h4>
         <p>Double digestion of MT2 constructs using XbaI and SalI (16 µl DNA, 2 µl 10x Buffer, 1 µl XbaI, 1 µl SalI) at 37 °C for 2 hr.</p>
+
+        <h4>DNA Clean (MT2)</h4>
+        <ul>
+          <li><strong>MT2 : Binding Buffer = 1:5.</strong></li>
+        </ul>
 
         <h4>MT3 & MT4 Status</h4>
         <p>Picked 16 colonies for MT3 and MT4 onto grid plates; incubated at 37 °C.</p>
@@ -425,7 +457,7 @@
         <h4>MT2 Ligation</h4>
         <ul>
           <li><strong>Reaction Mixture:</strong> Vector DNA (100 ng), Insert DNA (3:1), T4 Ligase Buffer (2.0 µl), T4 Ligase (0.2 µl), ddH<sub>2</sub>O (up to 20 µl).</li>
-          <li><strong>Calculations:</strong> MT2 Concentration = 14.7; Vector Concentration = 42.9. NEBioCalculator Volume: 29.78 / 14.7 = 2.02 µl insert DNA.</li>
+          <li><strong>Calculations:</strong> MT2 Concentration = 14.7; Vector Concentration = 42.9. Vector volume: 100 / 42.9 ≈ 2.33 µl. NEBioCalculator insert volume: 29.78 / 14.7 ≈ 2.02 µl. ddH<sub>2</sub>O made up to 13.45 µl.</li>
           <li><strong>Thermocycle:</strong> 16 °C (14 hr), 37 °C (1 hr), 4 °C (∞).</li>
         </ul>
 
@@ -453,6 +485,11 @@
     </summary>
     <div class="experiment-section-layout">
       <article class="experiment-section-copy">
+        <h4>DNA Clean (Ligation Product)</h4>
+        <ul>
+          <li><strong>Ligation Product : Binding Buffer = 1:5</strong> &mdash; 20 µl : 100 µl.</li>
+        </ul>
+
         <h4>Electro-Competent Cell Prep</h4>
         <p>Final resuspension: Suspend pellet with 0.8 ml of 10% glycerol. Aliquot 40 µl into 20 tubes on ice. Shock-freeze in liquid nitrogen and store at −80 °C.</p>
 
@@ -504,7 +541,7 @@
           <li><strong>July 9:</strong> Colony PCR (MT2 ×16, MT3 ×16, MT4 ×16, MT1 ×2). Total 52x Master Mix.</li>
           <li><strong>July 13:</strong> Colony PCR (MT2 ×16, MT1 ×2 control). Root cause analysis identified excessive biomass transfer during template preparation.</li>
           <li><strong>July 14:</strong> Colony PCR (MT2 ×16, MT1 ×2). MT1 succeeded; MT2 failed.</li>
-          <li><strong>July 15:</strong> Colony PCR (MT3 ×16, MT1 ×2). No results observed.</li>
+          <li><strong>July 15:</strong> Colony PCR (MT3 ×16, MT1 ×2). No results observed; the log notes a possibility that "this is simply due to chance alone."</li>
           <li><strong>July 16:</strong> Colony PCR (MT4 ×16, MT1 ×2). Decision made to redo ligation for MT2, MT3, and MT4.</li>
         </ul>
 
@@ -524,8 +561,8 @@
               <tr><td>10x Buffer</td><td>1.5 µl</td><td>30 µl</td><td>78 µl</td></tr>
               <tr><td>DMSO</td><td>0.6 µl</td><td>12 µl</td><td>31.2 µl</td></tr>
               <tr><td>10 mM dNTP</td><td>0.3 µl</td><td>6 µl</td><td>15.6 µl</td></tr>
-              <tr><td>50 mM Primer 1</td><td>0.09 µl</td><td>1.8 µl</td><td>4.68 µl</td></tr>
-              <tr><td>50 mM Primer 2</td><td>0.09 µl</td><td>1.8 µl</td><td>4.68 µl</td></tr>
+              <tr><td>50 mM Primer 1 (TK07 P1)</td><td>0.09 µl</td><td>1.8 µl</td><td>4.68 µl</td></tr>
+              <tr><td>50 mM Primer 2 (PU12 P2)</td><td>0.09 µl</td><td>1.8 µl</td><td>4.68 µl</td></tr>
               <tr><td>Taq Polymerase</td><td>0.07 µl</td><td>1.4 µl</td><td>3.64 µl</td></tr>
               <tr><td><strong>Total Volume</strong></td><td><strong>14 µl</strong></td><td><strong>280 µl</strong></td><td><strong>728 µl</strong></td></tr>
             </tbody>
@@ -549,25 +586,31 @@
           <li><strong>Buffer Note:</strong> "We use the GC Buffer for the plasmid, which is different from the MH45 last time, using HF Buffer at Phusion PCR."</li>
         </ul>
 
+        <p><strong>Thermocycle:</strong> 16 °C (16 hr), 37 °C (1 hr), 4 °C (∞).</p>
+
         <h4>Calculation Corrections and Volumes</h4>
         <ul>
           <li><strong>Vector Concentration:</strong> 42.9 (100 ÷ 42.9 ≈ 2.33 µl).</li>
-          <li><strong>MT2 Concentration:</strong> 14.7 (29.78 ÷ 14.7 ≈ 2.02 µl insert).</li>
+          <li><strong>Insert volumes:</strong> calculated through NEBioCalculator at a 3:1 molar ratio.</li>
         </ul>
 
-        <h5>Resulting ddH<sub>2</sub>O Volumes for Redo</h5>
+        <p>The log records the MT2 insert volume for this round as 2.92 µl, where the July 6 ligation recorded 2.02 µl from the same 29.78 / 14.7 calculation. Both figures are reproduced as written in the working log.</p>
+
+        <h5>Concentrations and Resulting Volumes for the Redo</h5>
         <div class="problem-table-wrap">
           <table class="problem-table">
             <thead>
               <tr>
                 <th>Variant</th>
+                <th>Concentration</th>
+                <th>Insert DNA</th>
                 <th>ddH<sub>2</sub>O Volume</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>MT2</td><td>13.95 µl</td></tr>
-              <tr><td>MT3</td><td>13.76 µl</td></tr>
-              <tr><td>MT4</td><td>14.65 µl</td></tr>
+              <tr><td>MT2</td><td>14.7</td><td>2.92 µl</td><td>13.45 µl</td></tr>
+              <tr><td>MT3</td><td>22.7</td><td>2.11 µl</td><td>13.36 µl</td></tr>
+              <tr><td>MT4</td><td>39.2</td><td>0.82 µl</td><td>14.65 µl</td></tr>
             </tbody>
           </table>
         </div>
@@ -598,12 +641,25 @@
       </div>
 
       <article class="experiment-section-copy">
-        <h4>Transformation via Electroporation</h4>
+        <h4>DNA Clean (Ligation Products)</h4>
+        <ul>
+          <li><strong>Ligation Product : Binding Buffer = 1:5</strong> &mdash; the same for MT2, MT3 and MT4.</li>
+        </ul>
+
+        <h4>Transformation via Electroporation (MT2, 3, 4)</h4>
         <ol>
           <li>Combined 4 µl target DNA (ligation product) with 40 µl electro-competent cells.</li>
           <li><strong>System Setup:</strong> 1800 V, 25 µF, 200 Ω, 1 mm cuvette.</li>
-          <li><strong>Recovery:</strong> 800 µl warm SOC, 37 °C shaking (225 rpm) for 1 hour.</li>
+          <li>Immediately added 800 µl warm SOC to the cuvette to rescue the cells, without pipetting.</li>
+          <li>Transferred the entire suspension to a culture tube.</li>
+          <li><strong>Recovery:</strong> 37 °C shaking (225 rpm) for 1 hour.</li>
         </ol>
+
+        <h4>Dilution & Plating</h4>
+        <ul>
+          <li><strong>Dilution:</strong> 10 µl of recovered culture (PVIS2, 3, 4) with 90 µl of 0.9% saline.</li>
+          <li><strong>Plating:</strong> 40 µl of the undiluted culture spread on one side of the plate and 40 µl of the dilution on the other.</li>
+        </ul>
 
         <h4>Sequence Plating + Stock</h4>
         <ul>
@@ -693,7 +749,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>MT2 insert</td><td>2.02 µl</td><td>13.45 µl</td></tr>
+              <tr><td>MT2 insert</td><td>2.92 µl</td><td>13.45 µl</td></tr>
               <tr><td>MT3 insert</td><td>2.11 µl</td><td>13.36 µl</td></tr>
               <tr><td>MT4 insert</td><td>0.82 µl</td><td>14.65 µl</td></tr>
               <tr><td>Vector plasmid (HF/GC)</td><td>2.33 µl</td><td>—</td></tr>
