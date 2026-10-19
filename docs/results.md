@@ -59,7 +59,7 @@ That saturation is partly instrumental. pMH45 at 300 nM reaches 11,780 RFU absol
 
 There is also a kinetic feature worth recording. GFP does not plateau and hold; it peaks and then declines. On the standard-medium run B plate, pMH45 at 300 nM reads 715 RFU at 2.5 h, 4,542 at 3.7 h, 12,732 at 5.0 h and 13,678 at 6.2 h, then falls steadily to 11,780 by 10.6 h. Optical density follows the same arc, peaking near 6.2 h and drifting down afterwards. The decline is what stationary phase does to a reporter: dilution stops, synthesis stops, and photobleaching plus proteolysis take over.
 
-This means the endpoint value at 10.6 h understates the peak by 10–15%. Every ranking below was computed both ways — endpoint and peak — and the ordering of constructs is identical under both, so the choice of timepoint does not drive any conclusion. Endpoint values are quoted in the text because they are what the existing plots use; peak values appear in the methods section.
+This means the endpoint value at 10.6 h understates the peak by 10–15%. Endpoint values are quoted in the text because they are what the existing plots use; peak values are used as a cross-check.
 
 ## Cadmium dose-response across pVIS1–7
 
