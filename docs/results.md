@@ -1,11 +1,11 @@
 <div class="results-report" markdown="1">
 
-# pVIS1–8 cadmium response: growth and GFP results
+# pVIS cadmium response: growth and GFP results
 
 October 6, 2026 · Rain
 {.results-date}
 
-Every tested pVIS construct had lower GFP/OD<sub>600</sub> than the MT-free sensor pMH45 at higher cadmium concentrations. The observed reporter reduction ranged from 42% of pMH45 for pVIS4 to approximately 4–6% for pVIS2, pVIS5, pVIS6, and pVIS8 at 400 nM. Growth also varied by construct: pVIS3 and pVIS7 showed substantial impairment under parts of the tested range. Because the experiment did not directly quantify cadmium or include a cadmium-independent reporter, lower GFP cannot be treated as proof of cadmium capture.
+Every pVIS1–7 construct had lower GFP/OD<sub>600</sub> than the MT-free sensor pMH45 at higher cadmium concentrations. In the pVIS1–7 comparison, reporter output at 400 nM ranged from 42% of pMH45 for pVIS4 to approximately 5.6–6.3% for pVIS2, pVIS5, and pVIS6. Growth also varied by construct: pVIS3 and pVIS7 showed substantial impairment under parts of the tested range. Because the experiment did not directly quantify cadmium or include a cadmium-independent reporter, lower GFP cannot be treated as proof of cadmium capture.
 
 ## What was measured
 
@@ -29,7 +29,7 @@ The plate files do not annotate the MT insert for pVIS5–pVIS8. Their identitie
 
 ### Conditions
 
-Cadmium was supplied at six levels from a 10 mM stock, labelled 0 and A–E on the plate maps: 0, 8, 40, 200, 300 and 400 nM. Base medium was LB with glucose and kanamycin. Two medium variants were run: the standard one, and a sodium-free variant recorded as "No Na" on the plate maps. Three biological replicate wells were read per construct per cadmium level, occupying one row block each.
+Cadmium was supplied at six levels from a 10 mM stock, labelled 0 and A–E on the plate maps: 0, 8, 40, 200, 300 and 400 nM. Base medium was LB with glucose and kanamycin. Two medium variants were run: the standard one, and a sodium-free variant recorded as "No Na" on the plate maps. Three technical replicate wells were read per construct per cadmium level, occupying one row block each. pVIS8 is retained in the source records but excluded from construct rankings because the standard-medium map assigns two clone IDs to its wells.
 
 Reads were taken every 1118 s (0.311 h) for 35 cycles, giving a 10.6 h window on the full plates and 9.1 h on the shorter pVIS8 run, at 37 °C with orbital shaking between reads. Absorbance was read at 600 nm, 9 nm bandwidth, 3×3 reads per well. Fluorescence was read top-down at 488 nm excitation and 528 nm emission, gain 70 manual, 2×2 reads per well.
 
@@ -47,32 +47,32 @@ Both strains also carry the cross-plate normalisation. Because the pVIS1–4 and
 
 pMH45 gives a clean, steep, saturating cadmium response: background-corrected GFP/OD600 rises from 402 at 0 nM to 19,135 at 400 nM, a 48-fold induction, with the curve flattening between 300 and 400 nM.
 
-The shape of that curve is the reference everything else is read against. On the 2026-09-10 standard-medium plate the values run 402, 438, 799, 11,973, 18,859 and 19,135 for 0, 8, 40, 200, 300 and 400 nM. The 2026-09-30 standard-medium plate reproduces it closely: 412, 429, 758, 12,203, 19,454 and 18,968. Two independent plates three weeks apart agreeing within a few percent at every point is the strongest internal evidence that the assay is doing what it should.
+The shape of that curve is the reference everything else is read against. On standard-medium run A, the values run 402, 438, 799, 11,973, 18,859 and 19,135 for 0, 8, 40, 200, 300 and 400 nM. Standard-medium run B reproduces it closely: 412, 429, 758, 12,203, 19,454 and 18,968. The values from the two standard-medium runs are similar across all six points, providing an internal consistency check.
 
 Three features of that curve matter for reading the rest of the data.
 
 The sensor is nearly blind below 40 nM. Between 0 and 8 nM the signal moves by 4–9%, which is inside replicate scatter. At 40 nM it has roughly doubled. The useful response is almost entirely between 40 and 300 nM, where it moves by a factor of about 24. A biosensor with that threshold is well matched to the 200–400 nM range used here but would report nothing useful at single-digit nanomolar.
 
-The sensor saturates at 300 nM. The 400 nM point is not higher than the 300 nM point on either standard-medium plate; on the 2026-09-30 plate it is 2.5% lower. The circuit has run out of either regulator, promoter capacity or GFP maturation headroom.
+The sensor saturates at 300 nM. The 400 nM point is not higher than the 300 nM point on either standard-medium plate; on standard-medium run B it is 2.5% lower. The circuit has run out of either regulator, promoter capacity or GFP maturation headroom.
 
-That saturation is partly instrumental. pMH45 at 300 nM reaches 11,780 RFU absolute on the 2026-09-30 plate, and pYC08, the positive control, reaches 11,017 RFU on the same plate. The induced sensor is sitting at the positive control's level. At gain 70 the detector is at or near its working ceiling, so the flattening between 300 and 400 nM cannot be cleanly attributed to the biology. Any future experiment that needs to resolve the top of the curve should drop the gain or extend the cadmium series downward rather than upward.
+That saturation is partly instrumental. pMH45 at 300 nM reaches 11,780 RFU absolute on standard-medium run B, and pYC08, the positive control, reaches 11,017 RFU on the same plate. The induced sensor is sitting at the positive control's level. At gain 70 the detector is at or near its working ceiling, so the flattening between 300 and 400 nM cannot be cleanly attributed to the biology. Any future experiment that needs to resolve the top of the curve should drop the gain or extend the cadmium series downward rather than upward.
 
-There is also a kinetic feature worth recording. GFP does not plateau and hold; it peaks and then declines. On the 2026-09-30 plate, pMH45 at 300 nM reads 715 RFU at 2.5 h, 4,542 at 3.7 h, 12,732 at 5.0 h and 13,678 at 6.2 h, then falls steadily to 11,780 by 10.6 h. Optical density follows the same arc, peaking near 6.2 h and drifting down afterwards. The decline is what stationary phase does to a reporter: dilution stops, synthesis stops, and photobleaching plus proteolysis take over.
+There is also a kinetic feature worth recording. GFP does not plateau and hold; it peaks and then declines. On the standard-medium run B plate, pMH45 at 300 nM reads 715 RFU at 2.5 h, 4,542 at 3.7 h, 12,732 at 5.0 h and 13,678 at 6.2 h, then falls steadily to 11,780 by 10.6 h. Optical density follows the same arc, peaking near 6.2 h and drifting down afterwards. The decline is what stationary phase does to a reporter: dilution stops, synthesis stops, and photobleaching plus proteolysis take over.
 
 This means the endpoint value at 10.6 h understates the peak by 10–15%. Every ranking below was computed both ways — endpoint and peak — and the ordering of constructs is identical under both, so the choice of timepoint does not drive any conclusion. Endpoint values are quoted in the text because they are what the existing plots use; peak values appear in the methods section.
 
-## Cadmium dose-response across all eight constructs
+## Cadmium dose-response across pVIS1–7
 
-Every MT construct sits below pMH45 at every cadmium level above 40 nM, and they separate into two groups: those that shift the curve right, and those that nearly abolish it.
+Each pVIS1–7 construct sits below pMH45 at cadmium levels above 40 nM. The size and shape of the response differ by construct.
 
 <figure class="results-chart">
-<a href="static/assets/charts/pvis-gfp-dose-response.svg" target="_blank" rel="noopener" aria-label="Open chart at full size"><img src="static/assets/charts/pvis-gfp-dose-response.svg" alt="Every MT construct flattens the cadmium dose-response of the GFP sensor. Log-scale background-corrected GFP/OD600 across six cadmium concentrations for pMH45 and pVIS1–8." loading="lazy"></a>
-<figcaption><strong>Every tested pVIS construct had lower reporter output than pMH45 at higher concentrations.</strong> Background-corrected GFP/OD600, standard medium, endpoint at 10.6 h. Log scale. A lower line means lower measured GFP/OD600; this assay cannot distinguish altered cadmium availability from changes in expression or cell physiology. Cd²⁺ concentrations are evenly spaced, not to scale.</figcaption>
+<a href="static/assets/charts/pvis-gfp-dose-response.svg" target="_blank" rel="noopener" aria-label="Open chart at full size"><img src="static/assets/charts/pvis-gfp-dose-response.svg" alt="Cadmium dose-response for pMH45 and pVIS1–7. Log-scale background-corrected GFP/OD600 across six cadmium concentrations." loading="lazy"></a>
+<figcaption><strong>Reporter output across pVIS1–7 and pMH45.</strong> Background-corrected GFP/OD600, standard medium, endpoint at 10.6 h. Log scale. A lower line means lower measured GFP/OD600; this assay cannot distinguish altered cadmium availability from changes in expression or cell physiology. Cd²⁺ concentrations are evenly spaced, not to scale.</figcaption>
 </figure>
 
 pVIS1 and pVIS4 keep a steep, clearly cadmium-dependent response — they reach 6,862 and 8,083 GFP/OD600 at 400 nM, roughly a third of the MT-free sensor, and both are still climbing at the top of the series. Their curves look like the pMH45 curve translated to the right. pVIS3 is intermediate: it rises sharply to 2,066 at 200 nM, then nearly stops.
 
-pVIS2, pVIS5, pVIS6 and pVIS8 form a low-output group. All four stay within a factor of two of each other across the series and end between 747 and 1,201 GFP/OD600, which is 4–6% of the MT-free sensor. pVIS5 still rises from 28 at 40 nM to 470, 1,107 and 1,198 at 200, 300 and 400 nM. These values show a cadmium-associated reporter response, but they do not establish the intracellular cadmium concentration or explain why overall output is lower.
+pVIS2, pVIS5 and pVIS6 form a low-output group. They end between 1,071 and 1,201 GFP/OD600, or 5.6–6.3% of the MT-free sensor. pVIS5 still rises from 28 at 40 nM to 470, 1,107 and 1,198 at 200, 300 and 400 nM. These values show a cadmium-associated reporter response, but they do not establish the intracellular cadmium concentration or explain why overall output is lower.
 
 pVIS7 is the exception and does not belong on a dose-response reading at all. It tracks the low group up to 200 nM and then drops, reading 67 at 300 nM and 122 at 400 nM. A reporter that goes down as the inducer goes up is not measuring the inducer, and the growth data in the next-but-one section explains why.
 
@@ -80,61 +80,59 @@ The shaded band marks where background subtraction stops being meaningful. Repli
 
 ## How much reporter signal remains
 
-Expressed as a percentage of the MT-free sensor on the same plate at the same cadmium level, the constructs fall into a 10-fold range, and the ranking is stable across both media and both timepoint conventions.
+Expressed as a percentage of the MT-free sensor on the same plate at the same cadmium level, reporter output varies across constructs and medium conditions.
 
 This normalisation compares reporter output with the pMH45 sensor control on the same plate. It helps account for plate-to-plate differences, but it does not identify the mechanism behind lower output or quantify cadmium bound by the cells.
 
 <div class="results-table-wrap" markdown="1">
 
-| Construct | 200 nM | 300 nM | 400 nM | Medium | Plate |
+| Construct | 200 nM | 300 nM | 400 nM | Medium | Run |
 |---|---|---|---|---|---|
-| pVIS4 | 30.1% | 33.3% | 42.2% | standard | 2026-09-10 |
-| pVIS1 | 21.7% | 26.6% | 35.9% | standard | 2026-09-10 |
-| pVIS3 | 17.3% | 13.2% | 14.2% | standard | 2026-09-10 |
-| pVIS2 | 5.4% | 4.9% | 6.3% | standard | 2026-09-10 |
-| pVIS5 | 3.8% | 5.7% | 6.3% | standard | 2026-09-30 |
-| pVIS6 | 3.0% | 3.9% | 5.6% | standard | 2026-09-30 |
-| pVIS8 | 4.0% | 4.1% | 3.9% | standard | 2026-09-30 |
-| pVIS7 | 2.8% | 0.3% | 0.6% | standard | 2026-09-30 |
-| pVIS4 | 28.3% | 34.5% | 36.8% | Na-free | 2026-09-27 |
-| pVIS1 | 18.0% | 22.8% | 27.0% | Na-free | 2026-09-27 |
-| pVIS2 | 6.8% | 7.2% | 8.6% | Na-free | 2026-09-27 |
-| pVIS3 | 6.4% | 4.9% | 4.2% | Na-free | 2026-09-27 |
-| pVIS5 | 4.5% | 4.6% | 4.1% | Na-free | 2026-09-28 |
-| pVIS6 | 3.5% | 4.4% | 2.9% | Na-free | 2026-09-28 |
-| pVIS8 | 3.7% | 4.8% | 3.7% | Na-free | 2026-10-02 |
-| pVIS7 | 0.1% | −0.2% | −0.1% | Na-free | 2026-09-28 |
+| pVIS4 | 30.1% | 33.3% | 42.2% | standard | A |
+| pVIS1 | 21.7% | 26.6% | 35.9% | standard | A |
+| pVIS3 | 17.3% | 13.2% | 14.2% | standard | A |
+| pVIS2 | 5.4% | 4.9% | 6.3% | standard | A |
+| pVIS5 | 3.8% | 5.7% | 6.3% | standard | B |
+| pVIS6 | 3.0% | 3.9% | 5.6% | standard | B |
+| pVIS7 | 2.8% | 0.3% | 0.6% | standard | B |
+| pVIS4 | 28.3% | 34.5% | 36.8% | Na-free | A |
+| pVIS1 | 18.0% | 22.8% | 27.0% | Na-free | A |
+| pVIS2 | 6.8% | 7.2% | 8.6% | Na-free | A |
+| pVIS3 | 6.4% | 4.9% | 4.2% | Na-free | A |
+| pVIS5 | 4.5% | 4.6% | 4.1% | Na-free | B |
+| pVIS6 | 3.5% | 4.4% | 2.9% | Na-free | B |
+| pVIS7 | 0.1% | −0.2% | −0.1% | Na-free | B |
 
 </div>
 
 Three things in this table are worth stating explicitly.
 
-**The reporter-output pattern is similar across media.** pVIS4 and pVIS1 retain the most GFP signal in both media, while pVIS2, pVIS5, pVIS6 and pVIS8 cluster at lower output. pVIS3 changes more between media, but its growth is also impaired in both conditions, so the data do not isolate a binding-related cause.
+**The reporter-output pattern is similar across media.** pVIS4 and pVIS1 retain the most GFP signal in both media, while pVIS2, pVIS5 and pVIS6 cluster at lower output. pVIS3 changes more between media, but its growth is also impaired in both conditions, so the data do not isolate a binding-related cause.
 
-**pVIS1 and pVIS4 retain a larger share of reporter output at higher doses.** Their percentage of the pMH45 signal rises from 21.7% to 35.9% and from 30.1% to 42.2%, respectively. pVIS8 remains near 4% across the same points. These are patterns in GFP/OD<sub>600</sub>; without direct cadmium or expression measurements, they cannot be translated into binding capacity or saturation.
+**pVIS1 and pVIS4 retain a larger share of reporter output at higher doses.** Their percentage of the pMH45 signal rises from 21.7% to 35.9% and from 30.1% to 42.2%, respectively. These are patterns in GFP/OD<sub>600</sub>; without direct cadmium or expression measurements, they cannot be translated into binding capacity or saturation.
 
 **Treat pVIS7 values near zero cautiously.** Values of 0.3% and −0.1% are derived GFP/OD<sub>600</sub> comparisons, not measurements of cadmium capture. At the corresponding high-cadmium conditions, pVIS7 also had severely impaired growth, so these near-zero values cannot be interpreted as a binding result.
 
-Cross-set comparison carries one caveat. pVIS1–pVIS4 and pVIS5–pVIS8 were never on the same plate. The comparison between, say, pVIS2 at 6.3% and pVIS8 at 3.9% rests on both having been normalised to a pMH45 control on their own plate, and on those two pMH45 controls agreeing — which they do, to within 3% at every cadmium level. That is good enough to say pVIS8 and pVIS2 are in the same class, and not quite good enough to rank them against each other. A single plate carrying the best candidate from each set would settle it.
+pVIS1–pVIS4 and pVIS5–pVIS7 were measured on separate plates. Their comparison uses the pMH45 control measured on each plate; one plate carrying the leading candidates from both sets would provide a direct comparison.
 
 ## Growth varies by construct and cadmium concentration
 
 At 0 nM, most pVIS constructs had somewhat lower growth rates than pMH45. At higher concentrations, several grew at or above the same-plate pMH45 rate, while pVIS3 and pVIS7 showed clear growth impairment. These measurements describe growth phenotypes; they do not by themselves identify a metal-binding mechanism.
 
 <figure class="results-chart">
-<a href="static/assets/charts/pvis-relative-growth.svg" target="_blank" rel="noopener" aria-label="Open chart at full size"><img src="static/assets/charts/pvis-relative-growth.svg" alt="Relative growth rates of pVIS1–8 compared with pMH45 across six cadmium concentrations; pVIS3 and pVIS7 show growth impairment." loading="lazy"></a>
+<a href="static/assets/charts/pvis-relative-growth.svg" target="_blank" rel="noopener" aria-label="Open chart at full size"><img src="static/assets/charts/pvis-relative-growth.svg" alt="Relative growth rates of pVIS1–7 compared with pMH45 across six cadmium concentrations; pVIS3 and pVIS7 show growth impairment." loading="lazy"></a>
 <figcaption><strong>Relative growth differs by construct.</strong> Growth rate divided by pMH45 on the same plate, standard medium. Above 1.00 means the measured growth rate was higher than pMH45 in that condition. Cd²⁺ concentrations are evenly spaced, not to scale.</figcaption>
 </figure>
 
 At 0 nM every construct except pVIS5 and pVIS6 grows slightly slower than pMH45: 0.888 to 0.955 of the control rate in standard medium, and 0.843 to 0.921 in the sodium-free variant. This difference is consistent with a construct-related cost, but the assay does not identify its cause. In absolute terms the standard-medium growth rates at 0 nM run 1.55–1.74 h⁻¹, corresponding to estimated doubling times of 24–27 minutes.
 
-The interesting part is what happens as cadmium rises. The MT-free sensor is the construct that suffers most: pMH45 falls from 1.747 h⁻¹ at 0 nM to 1.386 h⁻¹ at 400 nM on the 2026-09-10 plate, and from 1.650 to 1.215 h⁻¹ on the 2026-09-30 plate — a 21–26% loss. Most MT constructs barely move: pVIS5 runs 1.704 h⁻¹ at 0 nM and 1.522 h⁻¹ at 400 nM, a 10% loss. Expressed against the control on the same plate, that shows up as relative growth rates climbing above 1.00 at the top of the series — 1.252 for pVIS5, 1.156 for pVIS2, 1.135 for pVIS1 and pVIS4.
+The interesting part is what happens as cadmium rises. The MT-free sensor is the construct that suffers most: pMH45 falls from 1.747 h⁻¹ at 0 nM to 1.386 h⁻¹ at 400 nM on standard-medium run A, and from 1.650 to 1.215 h⁻¹ on standard-medium run B — a 21–26% loss. Most MT constructs barely move: pVIS5 runs 1.704 h⁻¹ at 0 nM and 1.522 h⁻¹ at 400 nM, a 10% loss. Expressed against the control on the same plate, that shows up as relative growth rates climbing above 1.00 at the top of the series — 1.252 for pVIS5, 1.156 for pVIS2, 1.135 for pVIS1 and pVIS4.
 
 The growth readout is independent of the GFP channel, but it still does not measure cadmium. Higher relative growth at some concentrations is consistent with reduced stress or other construct effects; it is not direct evidence of cadmium sequestration.
 
 Two constructs break the pattern. pVIS3 is impaired from 40 nM upward, bottoming at 0.672 of control at 200 nM, and it never recovers. pVIS7 is normal to 200 nM and then collapses. Those two are taken up next.
 
-One methodological note on the growth data. The existing normalised plot scales the 2026-09-30 plate by 0.90869, the mean of the pTK03 and pYC08 reference ratios between that plate and the 2026-09-10 plate. That factor is reproduced exactly from the source workbooks. It does not, however, reconcile the shared pMH45 control: raw pMH45 differs by 5.5% between the two plates, and applying the reference factor widens that to 14.1%. The reference strains and the sensor control disagree about how different the two plates were. For cross-plate growth comparisons, normalising to pMH45 — which is on every plate and is the correct isogenic control — is the safer choice, and it is what the chart above uses.
+One methodological note on the growth data. The existing normalised plot scales the standard-medium run B plate by 0.90869, the mean of the pTK03 and pYC08 reference ratios between standard-medium runs B and A. That factor is reproduced exactly from the source workbooks. It does not, however, reconcile the shared pMH45 control: raw pMH45 differs by 5.5% between the two plates, and applying the reference factor widens that to 14.1%. The reference strains and the sensor control disagree about how different the two plates were. For cross-plate growth comparisons, normalising to pMH45 — which is on every plate and is the correct isogenic control — is the safer choice, and it is what the chart above uses.
 
 ## pVIS7 shows a prolonged lag at high cadmium
 
@@ -164,7 +162,7 @@ Against that, the sensor itself behaves similarly in both media. pMH45 induction
 
 One number needs care here. Uninduced GFP/OD600 is consistently higher in the sodium-free medium — 1,777 versus 1,295 for raw pMH45, for example — and it would be easy to read that as increased leaky expression. It is not. OD600 is the denominator, and it is a third lower in that medium. The background-corrected numerators are 330 and 402 respectively, which is the opposite direction. Any per-OD normalisation across media compares cultures of different density, and in this dataset the density difference is large enough to dominate the ratio.
 
-At 400 nM, the fraction of pMH45 GFP/OD<sub>600</sub> output was 42.2% in standard medium and 36.8% in the No-Na variant for pVIS4; 35.9% and 27.0% for pVIS1; 6.3% and 4.1% for pVIS5; 5.6% and 2.9% for pVIS6; and 3.9% and 3.7% for pVIS8. pVIS3 was 14.2% and 4.2%, alongside growth 17&ndash;21% below control. These are descriptive reporter-output comparisons across different medium conditions; they do not demonstrate cadmium binding or a consistent medium-independent effect.
+At 400 nM, the fraction of pMH45 GFP/OD<sub>600</sub> output was 42.2% in standard medium and 36.8% in the No-Na variant for pVIS4; 35.9% and 27.0% for pVIS1; 6.3% and 4.1% for pVIS5; 5.6% and 2.9% for pVIS6;  pVIS3 was 14.2% and 4.2%, alongside growth 17&ndash;21% below control. These are descriptive reporter-output comparisons across different medium conditions; they do not demonstrate cadmium binding or a consistent medium-independent effect.
 
 These experiments do not establish whether sodium competes with cadmium for an MT or the sensor. That question would require conditions that isolate sodium while controlling for the accompanying changes in growth and medium composition.
 
@@ -174,11 +172,11 @@ The pMH45 circuit is designed to couple cadmium-responsive regulation to GFP out
 
 The pVIS constructs had lower GFP/OD<sub>600</sub> than pMH45 at higher cadmium concentrations. Metallothionein binding is one possible explanation, but the same observation could also result from altered sensor expression, plasmid burden, changes in cell physiology, or altered transport through the envelope. The assay did not distinguish among these mechanisms.
 
-The low uninduced GFP/OD<sub>600</sub> in several constructs is particularly important: pVIS5, pVIS6, and pVIS8 had background-corrected values of 40, 44, and 105 at 0 nM, compared with 402–412 for pMH45 on the corresponding standard-medium plates. Because no cadmium was added to those wells, the lower baseline warns that the pVIS constructs may affect overall reporter output independently of the added cadmium. A cadmium-independent reporter would help test this possibility.
+The low uninduced GFP/OD<sub>600</sub> in several constructs is particularly important: pVIS5 and pVIS6 had background-corrected values of 40 and 44 at 0 nM, compared with 402–412 for pMH45 on the corresponding standard-medium plates. Because no cadmium was added to those wells, the lower baseline warns that the pVIS constructs may affect overall reporter output independently of the added cadmium. A cadmium-independent reporter would help test this possibility.
 
 ### Construct-specific patterns
 
-pVIS1 and pVIS4 show increasing percentages of the pMH45 signal across the cadmium series, while pVIS2, pVIS5, pVIS6, and pVIS8 remain in a low-output range. These patterns are compatible with several explanations, including differences in MT behavior, protein expression, construct burden, or the sensor circuit. They do not establish a binding capacity or affinity ranking.
+pVIS1 and pVIS4 show increasing percentages of the pMH45 signal across the cadmium series, while pVIS2, pVIS5, and pVIS6 remain in a low-output range. These patterns are compatible with several explanations, including differences in MT behavior, protein expression, construct burden, or the sensor circuit. They do not establish a binding capacity or affinity ranking.
 
 pVIS3 has a growth defect from 40 nM upward in both media, reaching 0.672 of control at 200 nM in standard medium. Its lower GFP signal therefore cannot be interpreted independently of its growth phenotype. pVIS7 also shows a severe growth and reporter phenotype at higher concentrations. Neither construct&rsquo;s low signal should be treated as evidence of strong cadmium capture.
 
@@ -194,7 +192,7 @@ The measured endpoints were OD<sub>600</sub> and GFP fluorescence. The experimen
 
 **The detector ceiling at the top of the series.** pMH45 at 300 nM reads at the level of the pYC08 positive control. The flattening between 300 and 400 nM in the control cannot be separated from instrument saturation at gain 70, and every suppression percentage at 300 and 400 nM uses a possibly-compressed denominator. The practical consequence is that suppression at those two concentrations may be slightly understated for every construct. The 200 nM column, where pMH45 reads 12,000 against a 11,000–11,700 positive control and is clearly still on the linear part of its own curve, is the most trustworthy of the three.
 
-**Replication.** Three wells per condition on one plate is three technical replicates from, as far as these files show, one culture each. The within-condition standard deviations are strikingly small — often under 1% of the mean growth rate — which indicates excellent pipetting and plate uniformity rather than biological reproducibility. The two independent standard-medium plates agreeing on pMH45 is real evidence; the tight error bars within a plate are not. Nothing here should be quoted with a statistical claim attached until independent transformants have been run on separate days.
+**Replication.** Three wells per condition on one plate are technical replicates; they do not measure independent biological replicates. The within-condition standard deviations are small and describe variation within each plate, not biological reproducibility. The close agreement between the two standard-medium runs provides an additional consistency check.
 
 A sixth point is smaller but worth recording: the fitted growth rates come from a window chosen on the summary sheets, and for constructs with disturbed kinetics (pVIS3, pVIS7 at high cadmium) a single exponential fit is not a good description of the curve. Lag time and maximum density should be reported alongside the rate for those conditions, since the rate alone hides the phenotype.
 
@@ -204,11 +202,11 @@ The single most valuable next experiment is a direct cadmium measurement, becaus
 
 **Measure cadmium directly.** Grow each construct at 200 and 400 nM, pellet the cells, and measure cadmium in the spent supernatant and washed cell pellets by ICP-MS or atomic absorption spectroscopy. This would test whether cadmium associates with cells or remains in solution.
 
-**Add a cadmium-independent reporter.** A constitutively expressed second fluorophore in the same cells would help determine whether the low basal GFP in pVIS2, pVIS5, pVIS6 and pVIS8 reflects specific sensor behavior or lower overall expression.
+**Add a cadmium-independent reporter.** A constitutively expressed second fluorophore in the same cells would help determine whether the low basal GFP in pVIS2, pVIS5 and pVIS6 reflects specific sensor behavior or lower overall expression.
 
 **Confirm localization.** Immunolabel the strep tag on intact, non-permeabilised cells and compare signal per cell across constructs to test surface display and relative display level.
 
-**Put the finalists on one plate.** The best construct from each set has never competed directly. One plate carrying pMH45, pVIS2, pVIS5, pVIS6, pVIS8 and a repeat of pVIS1 as a known intermediate, in standard medium, would convert the cross-plate inference into a direct comparison.
+**Put the finalists on one plate.** The best construct from each set has never competed directly. One plate carrying pMH45, pVIS2, pVIS5, pVIS6 and a repeat of pVIS1 as a known intermediate, in standard medium, would convert the cross-plate inference into a direct comparison.
 
 **Re-run the top of the series at lower gain.** The 300 and 400 nM points are near the apparent detector ceiling. Repeating the series at reduced gain would help determine whether the plateau is biological or instrumental.
 
@@ -226,36 +224,36 @@ All values were recomputed from the raw Tecan exports rather than taken from the
 
 <div class="results-table-wrap" markdown="1">
 
-| File | Plate | Medium | Constructs | Reads |
+| Source workbook | Run | Medium | Constructs | Reads |
 |---|---|---|---|---|
-| 20260910pMH45-pVIS1234(student).xlsx | 2026-09-10 | standard | pMH45, pVIS1–4 | 92 wells, 35 cycles, 10.6 h |
-| 20260927pMH45-pVIS1234(No Na).xlsx | 2026-09-27 | Na-free | pMH45, pVIS1–4 | 92 wells, 35 cycles, 10.6 h |
-| 20260928pMH45-pVIS567 (No Na).xlsx | 2026-09-28 | Na-free | pMH45, pVIS5–7 | 74 wells, 35 cycles, 10.1 h |
-| 20260930pMH45-pVIS5678 (Normal).xlsx | 2026-09-30 | standard | pMH45, pVIS5–8 | 92 wells, 35 cycles, 10.6 h |
-| 20261002pMH45-pVIS8 (No Na).xlsx | 2026-10-02 | Na-free | pMH45, pVIS8 | 38 wells, 35 cycles, 9.1 h |
-| 20260921pMH45_pVIS567.xlsx | 2026-09-21 | — | plate map only, no kinetic data | — |
+| 20260910pMH45-pVIS1234(student).xlsx | standard A | standard | pMH45, pVIS1–4 | 92 wells, 35 cycles, 10.6 h |
+| 20260927pMH45-pVIS1234(No Na).xlsx | Na-free A | Na-free | pMH45, pVIS1–4 | 92 wells, 35 cycles, 10.6 h |
+| 20260928pMH45-pVIS567 (No Na).xlsx | Na-free B | Na-free | pMH45, pVIS5–7 | 74 wells, 35 cycles, 10.1 h |
+| 20260930pMH45-pVIS5678 (Normal).xlsx | standard B | standard | pMH45, pVIS5–8 | 92 wells, 35 cycles, 10.6 h |
+| 20261002pMH45-pVIS8 (No Na).xlsx | Na-free C | Na-free | pMH45, pVIS8 | 38 wells, 35 cycles, 9.1 h |
+| 20260921pMH45_pVIS567.xlsx | map only | — | plate map only, no kinetic data | — |
 
 </div>
 
 ### Optical density
 
-The instrument records a 3×3 multi-read per well. The workbooks take the mean of reads 2 and 3 only, discarding read 1 — for well A2 on the 2026-09-30 plate, reads of 0.1934, 0.1030 and 0.1009 give a working value of 0.10195. That convention was preserved. Blank-subtracted OD600 is the final reading minus the minimum reading of that well’s own time series, which removes the well’s optical offset without needing a separate blank well.
+The instrument records a 3×3 multi-read per well. The workbooks take the mean of reads 2 and 3 only, discarding read 1 — for well A2 on standard-medium run B, reads of 0.1934, 0.1030 and 0.1009 give a working value of 0.10195. That convention was preserved. Blank-subtracted OD600 is the final reading minus the minimum reading of that well’s own time series, which removes the well’s optical offset without needing a separate blank well.
 
 ### Growth rate and doubling time
 
-Growth rates are the per-well fitted values in the "GR Mean, SD, DT" sheets, in h⁻¹, with doubling time in minutes. The relationship was verified: pMH45 at 0 nM on the 2026-09-30 plate has a rate of 1.65048 h⁻¹ and a listed doubling time of 25.198 min, and ln2 ÷ 1.65048 × 60 = 25.198. Every quoted group value is the mean of three wells as given on those sheets.
+Growth rates are the per-well fitted values in the "GR Mean, SD, DT" sheets, in h⁻¹, with doubling time in minutes. The relationship was verified: pMH45 at 0 nM on standard-medium run B has a rate of 1.65048 h⁻¹ and a listed doubling time of 25.198 min, and ln2 ÷ 1.65048 × 60 = 25.198. Every quoted group value is the mean of three wells as given on those sheets.
 
-The cross-plate normalisation in the existing figure was reproduced exactly. The factor is the mean of the two reference-strain ratios between the 2026-09-10 and 2026-09-30 plates: pTK03 1.70825 ÷ 1.84651 = 0.92512, pYC08 1.36767 ÷ 1.53284 = 0.89225, mean 0.90869. Applying it to the 2026-09-30 plate gives pMH45 1.4998, pVIS5 1.5479, pVIS6 1.5777 and pVIS7 1.4318 at 0 nM, which match the plotted values. pVIS8 computes to 1.3812 against a plotted value near 1.355, a 2% discrepancy that was not resolved — pVIS8 occupies two separate well groups on that plate and the plotted value may average a different set.
+The cross-plate normalisation in the existing figure was reproduced exactly. The factor is the mean of the two reference-strain ratios between standard-medium runs A and B: pTK03 1.70825 ÷ 1.84651 = 0.92512, pYC08 1.36767 ÷ 1.53284 = 0.89225, mean 0.90869. Applying it to standard-medium run B gives pMH45 1.4998, pVIS5 1.5479, pVIS6 1.5777 and pVIS7 1.4318 at 0 nM, which match the plotted values.
 
 ### Fluorescence
 
 GFP is the instrument’s 2×2 mean, in relative fluorescence units at 488/528 nm, gain 70. Background is the pTK03 reading on the same plate at the same timepoint, since pTK03 carries no GFP: 463, 472, 507, 513 and 558 RFU on the five plates. "GFP/OD600" throughout means (GFP − pTK03 background) ÷ blank-subtracted OD600, per well, averaged over the three replicate wells.
 
-Endpoint values are at the final cycle. Peak values, used as a cross-check, take each well’s own maximum. The two conventions give the same construct ranking: at 400 nM in standard medium the endpoint percentages of pMH45 are pVIS4 42.2%, pVIS1 35.9%, pVIS3 14.2%, pVIS2 6.3%, pVIS5 6.3%, pVIS6 5.6%, pVIS8 3.9%, and the peak percentages are 42.5%, 36.5%, 15.3%, 8.2%, 7.8%, 6.2% and 5.6% respectively. Peak fluorescence is reached at 4.3–6.0 h in all healthy cultures and at 7.9–8.1 h for pVIS7 at the concentrations where it fails.
+Endpoint values are at the final cycle. Peak values, used as a cross-check, take each well’s own maximum. At 400 nM in standard medium, the pVIS1–7 endpoint percentages of pMH45 are pVIS4 42.2%, pVIS1 35.9%, pVIS3 14.2%, pVIS2 6.3%, pVIS5 6.3%, pVIS6 5.6%, and pVIS7 0.6%. Peak fluorescence is reached at 4.3–6.0 h in cultures with sustained growth and later for pVIS7 at concentrations where growth is impaired.
 
 ### Plate maps
 
-Construct and cadmium assignments were read from the second block of each workbook’s map sheet, where cells are labelled in the form `pVIS5-C`. The suffixes map to cadmium as 0 = 0 nM, A = 8 nM, B = 40 nM, C = 200 nM, D = 300 nM, E = 400 nM, from the condition key on the 2026-09-21 sheet. Two wells per plate are read but carry no construct-condition label: these are pTK03 and pYC08, identified from the first map block.
+Construct and cadmium assignments were read from the second block of each workbook’s map sheet, where cells are labelled in the form `pVIS5-C`. The suffixes map to cadmium as 0 = 0 nM, A = 8 nM, B = 40 nM, C = 200 nM, D = 300 nM, E = 400 nM, from the condition key on the map-only workbook. Two wells per plate are read but carry no construct-condition label: these are pTK03 and pYC08, identified from the first map block.
 
 ### Not used
 

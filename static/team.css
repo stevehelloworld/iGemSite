@@ -173,6 +173,22 @@
 }
 
 /* A filled photo slot drops the dashed placeholder treatment. */
+.member-card-photo--initials {
+    flex: 0 0 144px;
+    width: 144px;
+    height: 144px;
+    min-height: 144px;
+    margin: auto;
+    border: 0;
+    border-radius: 50%;
+    background: var(--vis-blue-paper);
+    color: var(--vis-ink);
+    font-family: var(--vis-display);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+
 .member-card-photo--filled {
     padding: 0;
     border: 0;

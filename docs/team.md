@@ -27,7 +27,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Ohanna Liu"><span>OL</span></div>
                         <h4>Ohanna Liu</h4>
                         <p class="team-badges"><span class="team-badge team-badge--leader">Student Leader</span></p>
                     </div>
@@ -42,7 +42,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Lucy Wang"><span>LW</span></div>
                         <h4>Lucy Wang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--leader">Student Leader</span></p>
                     </div>
@@ -68,7 +68,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Sunny Huang"><span>SH</span></div>
                         <h4>Sunny Huang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--wet">Wet Lab</span></p>
                     </div>
@@ -83,7 +83,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Eugenia Liu"><span>EL</span></div>
                         <h4>Eugenia Liu</h4>
                         <p class="team-badges"><span class="team-badge team-badge--wet">Wet Lab</span></p>
                     </div>
@@ -98,7 +98,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Nicholas Lu"><span>NL</span></div>
                         <h4>Nicholas Lu</h4>
                         <p class="team-badges"><span class="team-badge team-badge--wet">Wet Lab</span></p>
                     </div>
@@ -124,7 +124,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Chelsea Chang"><span>CC</span></div>
                         <h4>Chelsea Chang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--dry">Dry Lab</span></p>
                     </div>
@@ -139,7 +139,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Francis Lin"><span>FL</span></div>
                         <h4>Francis Lin</h4>
                         <p class="team-badges"><span class="team-badge team-badge--dry">Dry Lab</span></p>
                     </div>
@@ -154,7 +154,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Ray Shang"><span>RS</span></div>
                         <h4>Ray Shang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--dry">Dry Lab</span></p>
                     </div>
@@ -180,7 +180,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Li-Chi Huang"><span>LH</span></div>
                         <h4>Li-Chi Huang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Primary PI</span></p>
                     </div>
@@ -206,7 +206,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Chau-Ti Ting"><span>CT</span></div>
                         <h4>Chau-Ti Ting</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
                     </div>
@@ -221,7 +221,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Shun-Chern Tsaur"><span>ST</span></div>
                         <h4>Shun-Chern Tsaur</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
                     </div>
@@ -236,7 +236,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Hsin-Hung David Chou"><span>HC</span></div>
                         <h4>Hsin-Hung David Chou</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
                     </div>
@@ -262,7 +262,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Curtis Chen"><span>CC</span></div>
                         <h4>Curtis Chen</h4>
                         <p class="team-badges"><span class="team-badge team-badge--instructor">Instructor</span></p>
                     </div>
@@ -277,7 +277,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Kelly Liao"><span>KL</span></div>
                         <h4>Kelly Liao</h4>
                         <p class="team-badges"><span class="team-badge team-badge--instructor">Instructor</span></p>
                     </div>

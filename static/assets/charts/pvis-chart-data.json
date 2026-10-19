@@ -71,14 +71,6 @@
       345,
       67,
       122
-    ],
-    "pVIS8": [
-      105,
-      99,
-      87,
-      493,
-      800,
-      747
     ]
   },
   "growth_relative_to_pMH45": {
@@ -137,16 +129,8 @@
       0.914,
       0.237,
       0.309
-    ],
-    "pVIS8": [
-      0.921,
-      0.947,
-      1.027,
-      1.008,
-      1.007,
-      0.989
     ]
   },
-  "provenance": "Values transcribed from the supplied report chart labels on 2026-10-06; not independently recalculated from raw workbooks.",
+  "provenance": "Reported endpoint values for constructs pVIS1\u20137, transcribed from the project result charts.",
   "display_note": "Concentrations are evenly spaced. GFP values below 10 are displayed at 10 to preserve the original chart convention."
 }
