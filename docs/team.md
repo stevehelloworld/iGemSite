@@ -27,7 +27,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Ohanna Liu"><span>OL</span></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/ohanna-liu.webp" alt="Portrait of Ohanna Liu" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Ohanna Liu</h4>
                         <p class="team-badges"><span class="team-badge team-badge--leader">Student Leader</span></p>
                     </div>
@@ -68,7 +68,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Sunny Huang"><span>SH</span></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/sunny-huang.webp" alt="Portrait of Sunny Huang" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Sunny Huang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--wet">Wet Lab</span></p>
                     </div>
@@ -83,7 +83,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Eugenia Liu"><span>EL</span></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/eugenia-liu.webp" alt="Portrait of Eugenia Liu" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Eugenia Liu</h4>
                         <p class="team-badges"><span class="team-badge team-badge--wet">Wet Lab</span></p>
                     </div>
@@ -98,7 +98,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Nicholas Lu"><span>NL</span></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/nicholas-lu.webp" alt="Portrait of Nicholas Lu" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Nicholas Lu</h4>
                         <p class="team-badges"><span class="team-badge team-badge--wet">Wet Lab</span></p>
                     </div>
@@ -139,7 +139,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Francis Lin"><span>FL</span></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/francis-lin.webp" alt="Portrait of Francis Lin" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Francis Lin</h4>
                         <p class="team-badges"><span class="team-badge team-badge--dry">Dry Lab</span></p>
                     </div>
@@ -154,7 +154,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Ray Shang"><span>RS</span></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/ray-shang.webp" alt="Portrait of Ray Shang" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Ray Shang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--dry">Dry Lab</span></p>
                     </div>
@@ -206,7 +206,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Chau-Ti Ting"><span>CT</span></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/chau-ti-ting.webp" alt="Portrait of Chau-Ti Ting" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Chau-Ti Ting</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
                     </div>
@@ -236,7 +236,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Hsin-Hung David Chou"><span>HC</span></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/hsin-hung-david-chou.webp" alt="Portrait of Hsin-Hung David Chou" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Hsin-Hung David Chou</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
                     </div>
@@ -262,7 +262,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Curtis Chen"><span>CC</span></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/curtis-chen.webp" alt="Portrait of Curtis Chen" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Curtis Chen</h4>
                         <p class="team-badges"><span class="team-badge team-badge--instructor">Instructor</span></p>
                     </div>
@@ -277,7 +277,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--initials" role="img" aria-label="Initials for Kelly Liao"><span>KL</span></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/kelly-liao.webp" alt="Portrait of Kelly Liao" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Kelly Liao</h4>
                         <p class="team-badges"><span class="team-badge team-badge--instructor">Instructor</span></p>
                     </div>
@@ -303,7 +303,7 @@
             <article class="member-card">
                 <div class="member-card-inner">
                     <div class="member-card-front">
-                        <div class="member-card-photo member-card-photo--filled"><img src="static/assets/images/team/ian-huang.webp" alt="Portrait of Ian Huang" loading="lazy"></div>
+                        <div class="member-card-photo member-card-photo--filled"><img src="https://static.igem.wiki/teams/6423/wiki/static/assests/images/members/ian-huang.webp" alt="Portrait of Ian Huang" width="720" height="720" loading="lazy" decoding="async"></div>
                         <h4>Ian Huang</h4>
                         <p class="team-badges"><span class="team-badge team-badge--support">Supporting</span></p>
                     </div>
