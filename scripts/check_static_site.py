@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import argparse
+import io
 import os
 import re
 import sys
+import zipfile
 from collections import defaultdict
 from html.parser import HTMLParser
 from pathlib import Path
@@ -167,6 +169,12 @@ def main() -> int:
         help="Maximum uncompressed public/ size in MiB (default: PUBLIC_MAX_SIZE_MB or 25)",
     )
     argument_parser.add_argument(
+        '--max-archive-size-mb',
+        type=float,
+        default=float(os.environ.get('PUBLIC_MAX_ARCHIVE_SIZE_MB', '4')),
+        help='Maximum ZIP archive size in MiB (default: 4)',
+    )
+    argument_parser.add_argument(
         "--strict-placeholders",
         action="store_true",
         help="Fail when placeholder copy is present; default mode reports it as a warning.",
@@ -176,8 +184,8 @@ def main() -> int:
     if not PUBLIC.is_dir():
         print("ERROR: public/ does not exist; run the site freeze step first.", file=sys.stderr)
         return 1
-    if args.max_size_mb <= 0:
-        print("ERROR: --max-size-mb must be greater than zero.", file=sys.stderr)
+    if args.max_size_mb <= 0 or args.max_archive_size_mb <= 0:
+        print("ERROR: Size limits must be greater than zero.", file=sys.stderr)
         return 1
 
     pages = html_pages()
@@ -235,10 +243,23 @@ def main() -> int:
     if size_mib > args.max_size_mb:
         errors.append(f"public/ is {size_mib:.1f} MiB; configured limit is {args.max_size_mb:.1f} MiB")
 
+    archive = io.BytesIO()
+    with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as output:
+        for asset in sorted(PUBLIC.rglob('*')):
+            if asset.is_file():
+                output.write(asset, asset.as_posix())
+    archive_mib = archive.tell() / (1024 * 1024)
+    if archive_mib > args.max_archive_size_mb:
+        errors.append(
+            f'Deployment ZIP is {archive_mib:.2f} MiB; '
+            f'configured limit is {args.max_archive_size_mb:.2f} MiB'
+        )
+
     print(
         f"Static site check: {len(pages)} pages, {link_count} local links, "
         f"{resource_count} local assets, {size_mib:.1f} MiB / {args.max_size_mb:.1f} MiB limit"
     )
+    print(f'Deployment ZIP: {archive_mib:.2f} MiB / {args.max_archive_size_mb:.2f} MiB limit')
     if placeholder_pages:
         count = sum(len(markers) for markers in placeholder_pages.values())
         print(f"Placeholder scan: {count} known marker(s) in {len(placeholder_pages)} page(s):")
