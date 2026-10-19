@@ -1769,6 +1769,60 @@
     </div>
 
 </section>
+
+<section class="ihp-section" id="outreach-community">
+    <div class="section-title">
+        <h2>Outreach and Community</h2>
+    </div>
+
+    <article class="hp-community-event">
+        <div class="hp-event-feature">
+            <div class="hp-event-copy">
+                <p class="hp-event-kicker">GUTING JUNIOR HIGH SCHOOL</p>
+                <h3>DNA 101</h3>
+                <p>We visited Guting Junior High School to introduce junior-high students to the basics of DNA. The session combined a short presentation with a hands-on paper-model activity, giving students a chance to explore how DNA is put together.</p>
+            </div>
+            <figure class="hp-outreach-photo hp-outreach-photo-portrait">
+                <img src="static/assets/images/outreach/guting-dna-101-team.webp" alt="The VIS iGEM team and school community at Guting Junior High School" loading="lazy">
+                <figcaption>Our team at Guting Junior High School.</figcaption>
+            </figure>
+        </div>
+
+        <div class="hp-outreach-gallery" aria-label="Photos from the DNA 101 session">
+            <figure class="hp-outreach-photo">
+                <img src="static/assets/images/outreach/guting-dna-101-presentation.webp" alt="A team member presents a DNA 101 lesson to students, with a DNA diagram on screen" loading="lazy">
+                <figcaption>Introducing DNA structure during the lesson.</figcaption>
+            </figure>
+            <figure class="hp-outreach-photo">
+                <img src="static/assets/images/outreach/guting-dna-101-classroom.webp" alt="Students take part in the DNA 101 classroom activity" loading="lazy">
+                <figcaption>Students follow the lesson and activity together.</figcaption>
+            </figure>
+            <figure class="hp-outreach-photo">
+                <img src="static/assets/images/outreach/guting-dna-101-model-activity.webp" alt="A team member helps a student assemble a colored paper DNA model" loading="lazy">
+                <figcaption>Team members guide students through the paper-model activity.</figcaption>
+            </figure>
+            <figure class="hp-outreach-photo">
+                <img src="static/assets/images/outreach/guting-dna-101-student-activity.webp" alt="Students work together on paper DNA models at their desks" loading="lazy">
+                <figcaption>Students build and discuss their DNA models.</figcaption>
+            </figure>
+        </div>
+    </article>
+
+    <article class="hp-community-event hp-meetup-event">
+        <div class="hp-event-feature hp-meetup-feature">
+            <div class="hp-event-copy">
+                <p class="hp-event-kicker">TAIWAN IGEMERS MEETUP 2026</p>
+                <h3>Meeting the iGEM community</h3>
+                <p>Our team also attended the 2026 Taiwan iGEMers Meetup, joining fellow teams and members of Taiwan&rsquo;s iGEM community.</p>
+            </div>
+            <figure class="hp-outreach-photo">
+                <img src="static/assets/images/outreach/taiwan-igemers-meetup-2026.webp" alt="Participants at the 2026 Taiwan iGEMers Meetup" loading="lazy">
+                <figcaption>At the 2026 Taiwan iGEMers Meetup.</figcaption>
+            </figure>
+        </div>
+    </article>
+</section>
+
 <section class="ihp-section">
 
     <div class="section-title">
