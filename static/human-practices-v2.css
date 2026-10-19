@@ -538,3 +538,14 @@
         padding-top: 36px;
     }
 }
+
+.page-education .education-event-links a {
+    color: #285772;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.page-education .ihp-section[id] {
+    scroll-margin-top: calc(var(--nav-offset) + 20px);
+}
