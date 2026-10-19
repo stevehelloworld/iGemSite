@@ -187,7 +187,7 @@
                     <details class="member-card-disclosure">
                         <summary class="member-card-hint">Read Li-Chi Huang’s introduction</summary>
                         <div class="member-card-bio">
-                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                            <p>I’m the Chancellor at VIS, connecting international education and global citizenship through Project-Based Learning. Through Discover Taipei, international field studies, and iGEM, I encourage students to explore real-world challenges through science, culture, and global collaboration. With credentials in educational practice and student wellbeing (FCCT and FRSPH), multidisciplinary fellowships (FRSA, FRGS, FRAS, and FRAI), and strategic governance and impact-building (CMgr FCMI and FCIM), I promote human diversity, geographical understanding, and Asian heritage while advancing international exchange and global learning.</p>
                         </div>
                     </details>
                 </div>
@@ -207,28 +207,13 @@
                 <div class="member-card-inner">
                     <div class="member-card-front">
                         <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
-                        <h4>Hsin-Hung David Chou</h4>
-                        <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
-                    </div>
-                    <details class="member-card-disclosure">
-                        <summary class="member-card-hint">Read Hsin-Hung David Chou’s introduction</summary>
-                        <div class="member-card-bio">
-                            <p>I am a principal investigator in National Taiwan University. I take systems approaches to bridge molecular biology and evolution. The central goal has been to quantitatively decode gene expression, elucidate the functional diversity of regulatory elements, and unravel the principles of gene regulation across the domain Bacteria.</p>
-                        </div>
-                    </details>
-                </div>
-            </article>
-            <article class="member-card">
-                <div class="member-card-inner">
-                    <div class="member-card-front">
-                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
                         <h4>Chau-Ti Ting</h4>
                         <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
                     </div>
                     <details class="member-card-disclosure">
                         <summary class="member-card-hint">Read Chau-Ti Ting’s introduction</summary>
                         <div class="member-card-bio">
-                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                            <p>I am a genetics professor at National Taiwan University. As a Drosophila researcher, I use genetic and genomic approaches to study scientific questions. I have worked with recombinant DNA and transgenic flies for many years to address questions about gene regulatory networks and evolution. Working with the VIS iGEM team allowed me to learn alongside high school students and gain valuable experience through the iGEM project. I am very excited to join the iGEM community and learn from all.</p>
                         </div>
                     </details>
                 </div>
@@ -243,7 +228,22 @@
                     <details class="member-card-disclosure">
                         <summary class="member-card-hint">Read Shun-Chern Tsaur’s introduction</summary>
                         <div class="member-card-bio">
-                            <p class="team-bio-pending">Self-introduction coming soon.</p>
+                            <p>I am a biologist who has spent most of my career teaching and doing research. I have always enjoyed working with students, sharing what I know, and learning from them along the way. Now, through my involvement with VIS and its iGEM team, I am happy to have the opportunity to work with younger students and help them explore their interests in science.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
+            <article class="member-card">
+                <div class="member-card-inner">
+                    <div class="member-card-front">
+                        <div class="member-card-photo"><span>Photo</span><small>Portrait coming soon</small></div>
+                        <h4>Hsin-Hung David Chou</h4>
+                        <p class="team-badges"><span class="team-badge team-badge--pi">Secondary PI</span></p>
+                    </div>
+                    <details class="member-card-disclosure">
+                        <summary class="member-card-hint">Read Hsin-Hung David Chou’s introduction</summary>
+                        <div class="member-card-bio">
+                            <p>I am a principal investigator in National Taiwan University. I take systems approaches to bridge molecular biology and evolution. The central goal has been to quantitatively decode gene expression, elucidate the functional diversity of regulatory elements, and unravel the principles of gene regulation across the domain Bacteria.</p>
                         </div>
                     </details>
                 </div>
