@@ -8,11 +8,11 @@
             <header class="story-heading-v2">
                 <p class="story-chapter-name">THE WATER WE LIVE WITH</p>
                 <h2 id="problem-title">THE PROBLEM</h2>
-                <p>Follow one drop of industrial wastewater as heavy metals move through a river, food, and the people who depend on that water.</p>
+                <p>Follow one drop of industrial wastewater as cadmium moves through water, farmland, and the people who depend on it.</p>
             </header>
 
             <figure class="pollution-panorama-v2">
-                <img src="static/assets/images/problem/pollution-path-panorama-optimized.webp?v=20261013-pb2" alt="A colored-pencil panorama showing heavy metals moving from industrial wastewater through a river and rice fields to a nearby community">
+                <img src="static/assets/images/problem/pollution-path-panorama-optimized.webp?v=20261013-pb2" alt="A colored-pencil panorama illustrating cadmium moving from industrial wastewater through a river and rice fields to a nearby community">
                 <figcaption class="metal-legend-v2"> <span class="metal-cd"></span> Cadmium (Cd)</figcaption>
             </figure>
 
@@ -203,21 +203,21 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="treatment-story-v2" data-treatment-story>
         <div class="treatment-stage-v2">
             <header class="story-heading-v2 treatment-heading-v2">
-                <p class="story-chapter-name">FROM DETECTION TO RECOVERY</p>
-                <h2 id="solution-title">OUR SOLUTION</h2>
-                <p>Instead of five disconnected cards, follow the same water through one complete treatment channel.</p>
+                <p class="story-chapter-name">A PROPOSED TREATMENT CONCEPT</p>
+                <h2 id="solution-title">OUR DESIGN GOAL</h2>
+                <p>This is a proposed pathway for cadmium treatment, not a validated process. Our experiments measured bacterial growth and GFP response; they did not test capture, separation, metal recovery, or water cleanup.</p>
             </header>
 
             <figure class="treatment-panorama-v2">
-                <img src="static/assets/images/solution/bioremediation-process-panorama-optimized.webp?v=20261013-pb2" alt="A colored-pencil treatment channel showing polluted water, engineered bacteria binding metals, membrane separation, metal recovery, and clean water">
+                <img src="static/assets/images/solution/bioremediation-process-panorama-optimized.webp?v=20261013-pb2" alt="An illustration of a proposed cadmium treatment pathway using engineered bacteria, containment, and metal recovery">
             </figure>
 
-            <ol class="treatment-steps-v2" aria-label="Biological heavy-metal treatment steps">
-                <li class="is-active" data-treatment-step="0"><button type="button" aria-pressed="true"><span>1</span><strong>Detect</strong><small>Identify Cd²⁺ in the incoming water.</small></button></li>
-                <li data-treatment-step="1"><button type="button" aria-pressed="false"><span>2</span><strong>Capture</strong><small>Metallothionein domains hold the target ions.</small></button></li>
-                <li data-treatment-step="2"><button type="button" aria-pressed="false"><span>3</span><strong>Separate</strong><small>A membrane keeps engineered bacteria inside the system.</small></button></li>
-                <li data-treatment-step="3"><button type="button" aria-pressed="false"><span>4</span><strong>Recover</strong><small>Bound metals are collected instead of becoming sludge.</small></button></li>
-                <li data-treatment-step="4"><button type="button" aria-pressed="false"><span>5</span><strong>Release</strong><small>Cleaner water returns to the environment.</small></button></li>
+            <ol class="treatment-steps-v2" aria-label="Proposed cadmium treatment steps">
+                <li class="is-active" data-treatment-step="0"><button type="button" aria-pressed="true"><span>1</span><strong>Detect</strong><small>Our assays measured GFP response under controlled Cd²⁺ exposure.</small></button></li>
+                <li data-treatment-step="1"><button type="button" aria-pressed="false"><span>2</span><strong>Bind?</strong><small>MT candidates were selected for study; direct Cd binding remains unmeasured.</small></button></li>
+                <li data-treatment-step="2"><button type="button" aria-pressed="false"><span>3</span><strong>Contain</strong><small>A membrane-based setup is a future design requirement, not tested here.</small></button></li>
+                <li data-treatment-step="3"><button type="button" aria-pressed="false"><span>4</span><strong>Recover</strong><small>Metal recovery would need to be demonstrated in a future system.</small></button></li>
+                <li data-treatment-step="4"><button type="button" aria-pressed="false"><span>5</span><strong>Verify</strong><small>Measure Cd in cells and remaining solution before claiming removal.</small></button></li>
             </ol>
         </div>
     </div>
@@ -234,32 +234,32 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="highlight-box" data-highlight-card>
                         <i class="bi bi-diagram-3-fill"></i>
                         <div>
-                            <h3>Dual-Function System</h3>
-                            <p>One engineered E. coli for detection and remediation.</p>
+                            <h3>Paired Design</h3>
+                            <p>A cadmium-responsive GFP sensor with four MT candidates.</p>
                         </div>
                     </div>
 
                     <div class="highlight-box" data-highlight-card>
                         <i class="bi bi-broadcast-pin"></i>
                         <div>
-                            <h3>Real-Time Biosensing</h3>
-                            <p>Responsive detection of Cd²⁺.</p>
+                            <h3>GFP Response</h3>
+                            <p>We tracked GFP fluorescence during controlled Cd²⁺ exposure.</p>
                         </div>
                     </div>
 
                     <div class="highlight-box" data-highlight-card>
                         <i class="bi bi-magnet-fill"></i>
                         <div>
-                            <h3>Metal Sequestration</h3>
-                            <p>Metallothionein captures toxic heavy metal ions.</p>
+                            <h3>Binding Hypothesis</h3>
+                            <p>Candidate metallothioneins were selected for testing; direct binding was not measured.</p>
                         </div>
                     </div>
 
                     <div class="highlight-box" data-highlight-card>
                         <i class="bi bi-recycle"></i>
                         <div>
-                            <h3>Sustainable Solution</h3>
-                            <p>An eco-friendly approach toward cleaner wastewater.</p>
+                            <h3>Next Measurement</h3>
+                            <p>Quantify cadmium in washed cells and spent medium.</p>
                         </div>
                     </div>
                 </div>
@@ -271,10 +271,10 @@ document.addEventListener("DOMContentLoaded", function () {
                             <span>Towards a Sustainable Future</span>
                         </div>
                         <p>
-                            Developing efficient,
-                            safe, and sustainable
-                            solutions for heavy
-                            metal remediation.
+                            A possible route to
+                            investigate, pending
+                            direct measurements
+                            and containment tests.
                         </p>
                     </div>
 

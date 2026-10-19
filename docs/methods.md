@@ -652,8 +652,8 @@
         <p class="mb-0"><strong>Ligation redo for MT2, MT3 and MT4.</strong> After the July screening failures, ligation was repeated for all three constructs on 20 July with freshly cleaned material, followed by electroporation and plating on 21 July. Verified clones were selected for sequencing from that round.</p>
       </div>
       <div class="experiment-note-card experiment-note-bug">
-        <p class="mb-1"><strong>Dim GFP signal from pVIS1&ndash;pVIS4.</strong> The first plate-reader runs on 10 and 15 September showed all four pVIS constructs giving markedly lower GFP output than the sensor-only pMH45 control. Two explanations are compatible with that result: the display construct imposes a metabolic burden that reduces reporter expression, or surface-displayed MT sequesters Cd<sup>2+</sup> before it can reach the CadR.10 regulator, which is the intended behaviour of the system.</p>
-        <p class="mb-0"><strong>Revision:</strong> the scaffold-only controls pVIS5&ndash;pVIS8 &mdash; Lpp-OmpA with no MT attached &mdash; were built to separate these, and were characterised on 21 September. A scaffold-only construct that is also dim implicates burden; one that matches pMH45 implicates sequestration.</p>
+        <p class="mb-1"><strong>Dim GFP signal from pVIS1&ndash;pVIS4.</strong> The first plate-reader runs on 10 and 15 September showed all four pVIS constructs giving lower GFP output than the sensor-only pMH45 control. This could reflect a change in cadmium availability, reporter expression, growth, or another construct effect; fluorescence alone cannot distinguish these explanations.</p>
+        <p class="mb-0"><strong>Revision:</strong> pVIS5&ndash;pVIS8 were built by removing the Lpp-OmpA anchor while retaining the corresponding MT coding sequence, then characterised alongside pMH45 in September. These are anchor-deleted variants, not MT-free scaffold-only controls. The design adds a comparison, but does not by itself identify why reporter output changes.</p>
       </div>
     </div>
   </section>

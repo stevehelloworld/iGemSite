@@ -1322,7 +1322,7 @@
     </summary>
     <div class="experiment-section-layout">
       <div class="experiment-figure-slot experiment-figure-slot-wide">
-        <span>Scaffold removal</span>
+        <span>Lpp-OmpA anchor deletion</span>
         <small>Phusion PCR around the plasmid, leaving the Lpp-OmpA anchor out of the product</small>
       </div>
       <article class="experiment-section-copy">
@@ -1460,7 +1460,7 @@
   <details class="experiment-section experiment-section-reverse notebook-entry">
     <summary class="experiment-section-header">
       <p class="experiment-card-kicker">September 2, 2026</p>
-      <h3>Screening the Scaffold-Free Constructs</h3>
+      <h3>Screening the Anchor-Deleted Constructs</h3>
     </summary>
     <div class="experiment-section-layout">
       <div class="experiment-figure-slot experiment-figure-slot-wide">
@@ -1732,7 +1732,7 @@
   <details class="experiment-section experiment-section-reverse notebook-entry">
     <summary class="experiment-section-header">
       <p class="experiment-card-kicker">September 21, 2026</p>
-      <h3>Pre-Culture for the Scaffold-Free Set</h3>
+      <h3>Pre-Culture for the Anchor-Deleted Set</h3>
     </summary>
     <div class="experiment-section-layout">
       <div class="experiment-figure-slot experiment-figure-slot-wide">
@@ -1795,7 +1795,7 @@
     <div class="experiment-section-layout">
       <div class="experiment-figure-slot experiment-figure-slot-wide">
         <span>LB medium</span>
-        <small>The scaffold-free constructs on the reader for the first time</small>
+        <small>The anchor-deleted constructs on the reader for the first time</small>
       </div>
       <article class="experiment-section-copy">
         <p>Plate reader testing in LB medium.</p>
@@ -1911,7 +1911,7 @@
       </article>
       <div class="experiment-figure-slot experiment-figure-slot-wide">
         <span>Run four</span>
-        <small>Scaffold-free set without sodium, then set up again in normal LB</small>
+        <small>Anchor-deleted set in the No-Na medium, then set up again in standard LB</small>
       </div>
     </div>
   </details>

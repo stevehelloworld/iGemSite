@@ -1,145 +1,65 @@
 <section class="problem-statement-page">
   <div class="problem-statement-hero">
     <span class="problem-eyebrow">Problem Statement</span>
-    <h1>Cadmium contamination is a long-term environmental and public health problem.</h1>
-    <p>
-      Industrial activity releases toxic heavy metals such as cadmium (Cd²⁺) into soil and water.
-      Unlike organic pollutants, cadmium does not break down. It can persist in farmland,
-      accumulate in crops, and move through the food chain to people.
-    </p>
+    <h1>Cadmium contamination can affect farmland, crops, and food safety.</h1>
+    <p>Cadmium is a persistent toxic metal. In Taiwan, documented cadmium-rice incidents in 1982 and 1984 were linked to industrial wastewater entering irrigation channels and farmland. Our project focuses on cadmium (Cd<sup>2+</sup>) and does not test lead or other metals.</p>
+    <p>Source: Taiwan Ministry of Environment, <a href="https://sgw.moenv.gov.tw/public/services/preventive-investigation/national-farmland-survey" target="_blank" rel="noopener">National Farmland Heavy Metal Pollution Potential Survey</a>.</p>
   </div>
 
   <div class="problem-impact-grid">
     <article>
       <span>01</span>
-      <h2>Persistent Pollution</h2>
-      <p>
-        Cadmium remains in contaminated environments for long periods, making affected
-        agricultural and industrial areas difficult to restore.
-      </p>
+      <h2>Persistence</h2>
+      <p>Cadmium is an element and does not break down like many organic pollutants. Contamination therefore requires monitoring and, where standards are exceeded, appropriate site management and remediation.</p>
     </article>
-
     <article>
       <span>02</span>
-      <h2>Food Chain Risk</h2>
-      <p>
-        Once cadmium enters irrigation water or soil, it can bioaccumulate in crops and
-        create exposure risks for nearby communities.
-      </p>
+      <h2>Food-chain exposure</h2>
+      <p>Cadmium in soil or irrigation water can enter crops. Taiwan&rsquo;s environmental authorities investigate farmland and crops to protect agricultural production and food safety.</p>
     </article>
-
     <article>
       <span>03</span>
-      <h2>Human Health Impact</h2>
-      <p>
-        Long-term cadmium exposure is associated with kidney damage, bone demineralization,
-        itai-itai disease, and increased cancer risks.
-      </p>
+      <h2>Human health</h2>
+      <p>Long-term cadmium exposure can harm health. The Ministry of Environment notes that cadmium can accumulate in the kidneys and liver and describes bone effects associated with chronic exposure.</p>
     </article>
   </div>
 
   <div class="problem-section">
-    <h2>Cadmium contamination in Taiwan is a national problem</h2>
-    <p>
-      Taiwan's cadmium rice-related incidents were first discovered in the 1980s. Since then,
-      long-term national surveys have investigated farmland polluted by cadmium and other
-      heavy metals, including copper, zinc, nickel, arsenic, chromium, and mercury.
-    </p>
-    <p>
-      Officially reported contaminated farmland is highly concentrated in three counties and
-      cities, which together represent more than 98% of listed contaminated farmland.
-    </p>
-
-    <div class="problem-table-wrap">
-      <table class="problem-table">
-        <thead>
-          <tr>
-            <th>Region ≈ Share of Listed Farmland</th>
-            <th>Source of Contamination</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="region-share">Changhua County <strong>≈ 47%</strong></span></td>
-            <td>Dense electroplating and metal-processing industries interlaced with farmland; wastewater discharged into irrigation canals.</td>
-          </tr>
-          <tr>
-            <td><span class="region-share">Taoyuan City <strong>≈ 46%</strong></span></td>
-            <td>Original cadmium rice incidents; chemical plants historically discharged high-cadmium wastewater into local streams and irrigation channels.</td>
-          </tr>
-          <tr>
-            <td><span class="region-share">Taichung City <strong>≈ 5%</strong></span></td>
-            <td>Scattered discharge from metal surface treatment and unregistered factories.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <h2>What official records say about Taiwan</h2>
+    <p>The Ministry of Environment traces the first cadmium-rice incident to Guanyin in 1982 and a second to Luzhu in 1984. The authority reports that later farmland contamination incidents occurred in other regions and that national investigations have covered eight heavy metals. High-potential farmland identified by the national screening approach is distributed across Taoyuan, Changhua, Taichung, and Kaohsiung.</p>
+    <p>These are official historical and monitoring records. They are not measurements from our team, and they do not imply that every listed region or field is currently contaminated with cadmium.</p>
   </div>
 
   <div class="problem-section problem-standards">
     <div>
-      <span class="problem-section-tag">Taiwan regulation</span>
-      <h2>Contamination standards trigger monitoring and crop restrictions</h2>
+      <span class="problem-section-tag">Taiwan soil standards</span>
+      <h2>Monitoring and control use different benchmarks</h2>
+      <p>For edible-crop farmland, the current cadmium soil standards are 2.5 mg/kg for monitoring and 5 mg/kg for control. These are soil regulatory values, not water concentrations and not the nanomolar conditions used in our laboratory assays.</p>
+      <p>If confirmed soil concentrations reach the control standard, the authority may designate a control site and apply legally defined management and remediation measures. The specific response depends on the case.</p>
+      <p>Source: Taiwan Ministry of Environment, <a href="https://sgw.moenv.gov.tw/Public/regulations/standards" target="_blank" rel="noopener">Soil, Groundwater Pollution Standards and Sediment Quality Indicators</a> and <a href="https://sgw.moenv.gov.tw/public/services/preventive-investigation/national-farmland-survey" target="_blank" rel="noopener">National Farmland Survey</a>.</p>
     </div>
-
     <div class="standard-grid">
       <article>
         <strong>2.5 mg/kg</strong>
-        <p>
-          Monitoring standard: indicates that contamination may be emerging and requires
-          more intensive water quality monitoring.
-        </p>
+        <p>Monitoring standard for cadmium in edible-crop farmland soil.</p>
       </article>
       <article>
-        <strong>5.0 mg/kg</strong>
-        <p>
-          Polluted control site standard: can trigger fallowing and a ban on food crop production.
-        </p>
+        <strong>5 mg/kg</strong>
+        <p>Control standard for cadmium in edible-crop farmland soil.</p>
       </article>
     </div>
   </div>
 
   <div class="problem-section">
-    <h2>Why conventional remediation strategies are not enough</h2>
-    <div class="remediation-grid">
-      <article>
-        <h3>Chemical precipitation</h3>
-        <p>
-          Effective, but expensive. It can generate toxic sludge that requires disposal and may
-          introduce secondary contaminants into the environment.
-        </p>
-      </article>
-
-      <article>
-        <h3>Ion exchange and adsorption</h3>
-        <p>
-          These methods can remove heavy metals, but they require continuous consumables,
-          increasing long-term operational costs.
-        </p>
-      </article>
-
-      <article>
-        <h3>Conventional bioremediation</h3>
-        <p>
-          Naturally occurring microbes are more sustainable, but wild-type strains are often
-          not efficient or targeted enough for industrial treatment needs.
-        </p>
-      </article>
-    </div>
+    <h2>Remediation depends on the site</h2>
+    <p>Taiwan&rsquo;s Ministry of Environment describes several approaches for agricultural land, including plowing, soil removal or replacement, extraction, phytoremediation, and electrokinetic methods. The suitability of each method depends on soil conditions, regulatory targets, cost, and time. The authority identifies plowing and soil replacement as commonly used approaches and notes that some green remediation techniques still need more field evaluation.</p>
+    <p>Source: Taiwan Ministry of Environment, <a href="https://sgw.moenv.gov.tw/public/services/preventive-investigation/national-farmland-survey" target="_blank" rel="noopener">National Farmland Survey</a>.</p>
   </div>
 
   <div class="problem-solution-callout">
-    <span class="problem-eyebrow">Our opportunity</span>
-    <h2>The need for a smarter biological solution</h2>
-    <p>
-      A better system should selectively detect cadmium, remove it without compromising cell
-      function, operate at low cost, and scale without expensive inducers, special equipment,
-      or toxic waste products.
-    </p>
-    <p>
-      This is where our project comes in: an engineered <em>E. coli</em> system designed to
-      detect and bind cadmium on the cell surface, intercepting the contaminant before it can
-      enter the cell or move further through the food chain.
-    </p>
+    <span class="problem-eyebrow">Our design question</span>
+    <h2>Can a bacterial design help us study cadmium response?</h2>
+    <p>Cadture combines a cadmium-responsive GFP sensor with candidate metallothioneins in <em>E. coli</em>. We tested cell growth and GFP fluorescence under controlled cadmium exposure to compare construct behavior.</p>
+    <p>The current data do not measure cadmium removed from water or soil, and they do not validate a treatment process. Direct metal quantification and containment tests would be needed before making remediation claims.</p>
   </div>
 </section>

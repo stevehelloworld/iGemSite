@@ -1,543 +1,69 @@
-<!-- ===================================================== -->
-<!-- Hero -->
-<!-- ===================================================== -->
-
 <section class="ihp-hero">
-
     <div class="ihp-hero-content">
-
-        <span class="section-tag">
-            EDUCATION &amp; OUTREACH
-        </span>
-
-        <h1>
-            Teaching Water Science, Together
-        </h1>
-
-        <p class="hero-subtitle">
-
-            Synthetic biology only matters if people understand it, question it,
-            and can act on it.
-
-        </p>
-
-        <p>
-
-            Heavy metal contamination affects everyone who drinks water, eats
-            food, or lives near an industrial district — not just scientists and
-            engineers. Alongside our Human Practices work, we treated education
-            and public engagement as a two-way conversation: we shared what we
-            were learning about cadmium pollution and bioremediation, and in turn
-            we learned how different audiences actually think about water
-            safety.
-
-        </p>
-
+        <span class="section-tag">EDUCATION &amp; OUTREACH</span>
+        <h1>DNA 101 and the iGEM community</h1>
+        <p class="hero-subtitle">A classroom activity introducing DNA, plus a chance to meet Taiwan&rsquo;s iGEM community.</p>
+        <p>This page records two activities supported by the materials currently available: a DNA 101 lesson at Guting Junior High School and our participation in the 2026 Taiwan iGEMers Meetup. The classroom activity focused on DNA structure; it was separate from our cadmium project.</p>
         <p class="education-event-links">
-            Explore our activities: <a href="#dna-101">DNA 101 at Guting Junior High School</a> &middot;
+            Explore: <a href="#dna-101">DNA 101 at Guting Junior High School</a> &middot;
             <a href="#taiwan-igemers-meetup">Taiwan iGEMers Meetup 2026</a>
         </p>
     </div>
 </section>
 
 <section class="ihp-section" id="dna-101">
-    <div class="section-title">
-        <h2>DNA 101 at Guting Junior High School</h2>
-    </div>
+    <div class="section-title"><h2>DNA 101 at Guting Junior High School</h2></div>
     <article class="hp-community-event">
         <div class="hp-event-feature">
             <div class="hp-event-copy">
-                <p class="hp-event-kicker">GUTING JUNIOR HIGH SCHOOL</p>
-                <p>We visited Guting Junior High School to introduce junior-high students to the basics of DNA. The session combined a short presentation with a hands-on paper-model activity, giving students a chance to explore how DNA is put together.</p>
+                <p class="hp-event-kicker">CLASSROOM LESSON</p>
+                <h3>From DNA structure to a paper model</h3>
+                <p>VIS iGEM team members visited Guting Junior High School to introduce students to the basics of DNA. The lesson covered DNA as a molecule, the parts of a nucleotide, and complementary base pairing: A with T and C with G.</p>
+                <p>Students then used colored paper pieces to assemble a DNA model. The activity gave the class a hands-on way to connect the nucleotide components and base-pairing rules introduced in the slides.</p>
+                <p>The model activity was adapted from HHMI BioInteractive&rsquo;s <a href="https://www.biointeractive.org/classroom-resources/modeling-structure-dna" target="_blank" rel="noopener">Modeling the Structure of DNA</a>.</p>
             </div>
             <figure class="hp-outreach-photo hp-outreach-photo-portrait">
-                <img src="static/assets/images/outreach/guting-dna-101-team.webp" alt="The VIS iGEM team and school community at Guting Junior High School" loading="lazy">
-                <figcaption>Our team at Guting Junior High School.</figcaption>
+                <img src="static/assets/images/outreach/guting-dna-101-team.webp" alt="VIS iGEM team members and school community at Guting Junior High School" loading="lazy">
+                <figcaption>VIS iGEM team members at Guting Junior High School.</figcaption>
             </figure>
         </div>
 
-        <div class="hp-outreach-gallery" aria-label="Photos from the DNA 101 session">
+        <div class="hp-outreach-gallery" aria-label="Photos from the DNA 101 lesson and activity">
             <figure class="hp-outreach-photo">
-                <img src="static/assets/images/outreach/guting-dna-101-presentation.webp" alt="A team member presents a DNA 101 lesson to students, with a DNA diagram on screen" loading="lazy">
+                <img src="static/assets/images/outreach/guting-dna-101-presentation.webp" alt="A team member presents a DNA lesson with a molecular diagram on screen" loading="lazy">
                 <figcaption>Introducing DNA structure during the lesson.</figcaption>
             </figure>
             <figure class="hp-outreach-photo">
-                <img src="static/assets/images/outreach/guting-dna-101-classroom.webp" alt="Students take part in the DNA 101 classroom activity" loading="lazy">
-                <figcaption>Students follow the lesson and activity together.</figcaption>
+                <img src="static/assets/images/outreach/guting-dna-101-classroom.webp" alt="Students take part in the classroom DNA activity" loading="lazy">
+                <figcaption>Students work through the lesson and activity.</figcaption>
             </figure>
             <figure class="hp-outreach-photo">
-                <img src="static/assets/images/outreach/guting-dna-101-model-activity.webp" alt="A team member helps a student assemble a colored paper DNA model" loading="lazy">
-                <figcaption>Team members guide students through the paper-model activity.</figcaption>
+                <img src="static/assets/images/outreach/guting-dna-101-model-activity.webp" alt="A team member helps a student assemble a colored-paper DNA model" loading="lazy">
+                <figcaption>Building a DNA model from colored paper pieces.</figcaption>
             </figure>
             <figure class="hp-outreach-photo">
-                <img src="static/assets/images/outreach/guting-dna-101-student-activity.webp" alt="Students work together on paper DNA models at their desks" loading="lazy">
-                <figcaption>Students build and discuss their DNA models.</figcaption>
+                <img src="static/assets/images/outreach/guting-dna-101-student-activity.webp" alt="Students assemble paper DNA models at their desks" loading="lazy">
+                <figcaption>Students assemble their paper models.</figcaption>
             </figure>
         </div>
     </article>
+    <p class="experiment-note-card">The materials document the lesson and model activity. No pre/post assessment or student feedback summary is included here, so we do not make claims about measured learning outcomes.</p>
 </section>
 
 <section class="ihp-section" id="taiwan-igemers-meetup">
-    <div class="section-title">
-        <h2>Taiwan iGEMers Meetup 2026</h2>
-    </div>
+    <div class="section-title"><h2>Taiwan iGEMers Meetup 2026</h2></div>
     <article class="hp-community-event hp-meetup-event">
         <div class="hp-event-feature hp-meetup-feature">
             <div class="hp-event-copy">
-                <p class="hp-event-kicker">TAIWAN IGEMERS MEETUP 2026</p>
-                <h3>Meeting the iGEM community</h3>
-                <p>Our team also attended the 2026 Taiwan iGEMers Meetup, joining fellow teams and members of Taiwan&rsquo;s iGEM community.</p>
+                <p class="hp-event-kicker">JULY 27, 2026 &middot; NYCU</p>
+                <h3>Sharing Cadture with the Taiwan iGEM community</h3>
+                <p>VIS presented Cadture at the 2026 Taiwan iGEMers Meetup at National Yang Ming Chiao Tung University. The presentation introduced the project&rsquo;s cadmium-focused motivation, reviewed existing detection and treatment approaches, and outlined our proposed Cd-responsive sensing and metallothionein capture designs.</p>
+                <p>The talk also described planned growth, GFP-response, and direct-cadmium measurements, alongside modeling and human-practices work. These were the team&rsquo;s plans at the time of the meetup; the presentation itself does not establish that the proposed capture design worked.</p>
             </div>
             <figure class="hp-outreach-photo">
-                <img src="static/assets/images/outreach/taiwan-igemers-meetup-2026.webp" alt="Participants at the 2026 Taiwan iGEMers Meetup" loading="lazy">
-                <figcaption>At the 2026 Taiwan iGEMers Meetup.</figcaption>
+                <img src="static/assets/images/outreach/taiwan-igemers-meetup-2026.webp" alt="VIS team members at the 2026 Taiwan iGEMers Meetup" loading="lazy">
+                <figcaption>VIS team members at the 2026 Taiwan iGEMers Meetup.</figcaption>
             </figure>
         </div>
     </article>
-</section>
-
-
-
-
-<!-- ===================================================== -->
-<!-- Why Education & Outreach -->
-<!-- ===================================================== -->
-
-<section class="ihp-section">
-
-    <div class="section-title">
-
-        <h2>
-            Why Education &amp; Outreach?
-        </h2>
-
-    </div>
-
-    <div class="section-content">
-
-        <p>
-
-            Synthetic biology can feel distant from everyday life — a lab-coat
-            subject for specialists. We wanted our neighbors, classmates, and
-            local community to see heavy metal pollution not as an abstract
-            environmental statistic, but as a problem connected to the rivers,
-            farms, and water they rely on every day.
-
-        </p>
-
-        <p>
-
-            Just as importantly, we did not want outreach to be one-directional.
-            Every workshop, exhibit, or conversation was also a chance for us to
-            hear what people already knew, what worried them, and what questions
-            a lab-based project like ours usually fails to answer.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-
-<!-- ===================================================== -->
-<!-- In the Classroom -->
-<!-- ===================================================== -->
-
-<section class="ihp-section">
-
-    <div class="section-title">
-
-        <h2>
-            In the Classroom
-        </h2>
-
-    </div>
-
-    <p class="section-description">
-
-        As a team built almost entirely of high school students, our first
-        audience was our own school community — classmates who had never heard
-        of synthetic biology, and younger students curious about what an iGEM
-        team actually does.
-
-    </p>
-
-
-
-    <div class="impact-layout">
-
-        <div class="impact-text">
-
-            <h3>
-
-                What We Shared
-
-            </h3>
-
-            <ul>
-
-                <li>
-
-                    How cadmium and lead move from industrial wastewater into
-                    rivers, soil, and food.
-
-                </li>
-
-                <li>
-
-                    What "synthetic biology" means in practice, using Cadture as
-                    a concrete example.
-
-                </li>
-
-                <li>
-
-                    Why engineered bacteria are a realistic, low-cost option for
-                    environmental remediation.
-
-                </li>
-
-            </ul>
-
-
-
-            <h3>
-
-                What We Took Away
-
-            </h3>
-
-            <ul>
-
-                <li>
-
-                    Technical vocabulary needs translating before it means
-                    anything to a general audience.
-
-                </li>
-
-                <li>
-
-                    Hands-on, visual explanations land far better than slides
-                    full of text.
-
-                </li>
-
-            </ul>
-
-        </div>
-
-
-
-        <div class="impact-image">
-
-            <div class="todo-box">
-
-                <h3>PHOTO LOG PLACEHOLDER</h3>
-
-                <p>
-
-                    Insert photos / details from:
-
-                </p>
-
-                <ul>
-
-                    <li>School presentations or club sessions</li>
-
-                    <li>Science fair or classroom demos</li>
-
-                    <li>Any teaching materials designed for younger students</li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-<!-- ===================================================== -->
-<!-- In the Community -->
-<!-- ===================================================== -->
-
-<section class="ihp-section">
-
-    <div class="section-title">
-
-        <h2>
-            In the Community
-        </h2>
-
-    </div>
-
-    <p class="section-description">
-
-        Beyond school, we looked for opportunities to talk with people who
-        encounter water pollution in their daily lives rather than in a
-        textbook — residents, local organizations, and anyone willing to stop
-        and ask what we were working on.
-
-    </p>
-
-
-
-    <div class="impact-layout reverse-layout">
-
-        <div class="impact-image">
-
-            <div class="todo-box">
-
-                <h3>PHOTO LOG PLACEHOLDER</h3>
-
-                <p>
-
-                    Insert photos / details from:
-
-                </p>
-
-                <ul>
-
-                    <li>Public exhibitions or community booths</li>
-
-                    <li>Local events, markets, or open houses</li>
-
-                    <li>Any printed materials, posters, or handouts used</li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="impact-text">
-
-            <h3>
-
-                Meeting People Where They Are
-
-            </h3>
-
-            <p>
-
-                We found that most people did not need to understand plasmids
-                or protein engineering to care about the problem — they needed
-                to see, in plain language, how contaminated water could reach
-                their own tap or dinner table, and what a project like ours
-                could realistically change.
-
-            </p>
-
-            <p>
-
-                Conversations like these fed back into our Human Practices work:
-                community concerns we heard in outreach settings often became
-                questions we brought to the experts and officials we interviewed
-                next.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-<!-- ===================================================== -->
-<!-- Looking Ahead -->
-<!-- ===================================================== -->
-
-<section class="ihp-section">
-
-    <div class="section-title">
-
-        <h2>
-            Looking Ahead
-        </h2>
-
-    </div>
-
-    <p class="section-description">
-
-        Education and outreach do not end when the competition does. Here is
-        what we hope to keep building on.
-
-    </p>
-
-
-
-    <div class="future-grid">
-
-        <div class="future-card">
-
-            <h3>
-
-                Open Resources
-
-            </h3>
-
-            <p>
-
-                Turning our teaching materials into resources other students and
-                teams can reuse and adapt.
-
-            </p>
-
-        </div>
-
-        <div class="future-card">
-
-            <h3>
-
-                Wider Reach
-
-            </h3>
-
-            <p>
-
-                Extending outreach beyond our own school to other classrooms and
-                communities facing similar water concerns.
-
-            </p>
-
-        </div>
-
-        <div class="future-card">
-
-            <h3>
-
-                Two-Way Dialogue
-
-            </h3>
-
-            <p>
-
-                Keeping outreach a conversation, not a lecture — continuing to
-                let community feedback shape the project.
-
-            </p>
-
-        </div>
-
-        <div class="future-card">
-
-            <h3>
-
-                Accessible Science
-
-            </h3>
-
-            <p>
-
-                Explaining synthetic biology in language that does not require a
-                biology background to follow.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-<!-- ===================================================== -->
-<!-- Key Takeaways -->
-<!-- ===================================================== -->
-
-<section class="ihp-section">
-
-    <div class="section-title">
-
-        <h2>
-
-            Key Takeaways
-
-        </h2>
-
-    </div>
-
-    <div class="takeaway-grid">
-
-        <div class="takeaway-card">
-
-            <h3>
-
-                Translate
-
-            </h3>
-
-            <p>
-
-                Make the science legible before asking anyone to care about it.
-
-            </p>
-
-        </div>
-
-        <div class="takeaway-card">
-
-            <h3>
-
-                Listen
-
-            </h3>
-
-            <p>
-
-                Treat every classroom and conversation as a chance to learn, not
-                just to present.
-
-            </p>
-
-        </div>
-
-        <div class="takeaway-card">
-
-            <h3>
-
-                Connect
-
-            </h3>
-
-            <p>
-
-                Feed what we hear in outreach back into our Human Practices and
-                project decisions.
-
-            </p>
-
-        </div>
-
-        <div class="takeaway-card">
-
-            <h3>
-
-                Continue
-
-            </h3>
-
-            <p>
-
-                Treat education as ongoing work, not a one-time event for
-                judging.
-
-            </p>
-
-        </div>
-
-    </div>
-
 </section>

@@ -2,7 +2,7 @@
   <div class="experiment-hero">
     <p class="experiment-eyebrow">WET LAB / MEASUREMENTS</p>
     <h2>Evaluation of bacterial growth and GFP fluorescence</h2>
-    <p class="experiment-lead">To evaluate the performance of our engineered cadmium biosensor&ndash;bioremediator system, we measured bacterial growth and GFP fluorescence under different cadmium concentrations. These measurements were designed to investigate how cadmium exposure influenced bacterial growth, and whether the engineered constructs retained the cadmium-responsive fluorescence system inherited from pMH45.</p>
+    <p class="experiment-lead">We measured bacterial growth and GFP fluorescence under different cadmium concentrations to compare the response of pMH45 and the pVIS constructs. These assays describe growth and reporter output; they did not directly measure cadmium binding, removal from solution, or performance in a treatment system.</p>
     <div class="experiment-tag-row" aria-label="Measurement summary"><span>96-well plate assay</span><span>OD<sub>600</sub> and GFP</span><span>Six cadmium concentrations</span><span>35 kinetic cycles</span></div>
   </div>
 
@@ -116,6 +116,6 @@
     <p>Following baseline correction and control-based normalisation, the processed datasets were used to generate growth and GFP fluorescence graphs.</p>
     <p>The resulting measurements provided a basis for comparing the performance of different metallothionein constructs across cadmium concentrations and experimental conditions. These processed data were subsequently analysed in the <a href="results">Results</a> section to evaluate bacterial growth and cadmium-responsive fluorescence performance.</p>
 
-    <div class="experiment-note-card"><p class="mb-0">The measurement procedure strictly follows the procedure presented in He et al. (2021).</p></div>
+    <div class="experiment-note-card"><p class="mb-0">The pMH45 cadmium-responsive sensor was developed in prior work by He et al. (2021). The procedures described here are the VIS team&rsquo;s documented plate-reader workflow.</p></div>
   </section>
 </section>

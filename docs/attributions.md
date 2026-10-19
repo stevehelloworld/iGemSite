@@ -3,7 +3,7 @@
     <div class="experiment-hero">
         <p class="experiment-eyebrow">VIS iGEM 2026</p>
         <h2>Attributions</h2>
-        <p class="experiment-lead">Accurate attribution is essential in the iGEM Competition. It lets the judges properly assess our team's own contributions and recognize the support we received from people outside the team. This page fulfils the Attributions requirement for judging.</p>
+        <p class="experiment-lead">Accurate attribution helps distinguish the team&rsquo;s work from the guidance and support it received. The official iGEM Project Attribution form is embedded below and is maintained through our team&rsquo;s iGEM page.</p>
     </div>
 
     <section class="experiment-section">
