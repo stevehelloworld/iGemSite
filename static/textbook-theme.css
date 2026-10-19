@@ -363,6 +363,29 @@
     outline: none;
 }
 
+.page-notebook .notebook-plate-map {
+    min-width: 0;
+    margin: 0;
+    padding: clamp(12px, 2vw, 20px);
+    border: 2px solid #cfe3e7;
+    border-radius: 8px;
+    background: var(--vis-white);
+}
+
+.page-notebook .notebook-plate-map img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.page-notebook .notebook-plate-map figcaption {
+    margin-top: 10px;
+    color: var(--vis-copy);
+    font-size: .88rem;
+    line-height: 1.5;
+}
+
 .page-notebook .notebook-entry > summary {
     position: relative;
     display: flex;

@@ -2,39 +2,53 @@
   <div class="experiment-hero">
     <p class="experiment-eyebrow">WET LAB / SAFETY &amp; SECURITY</p>
     <h2>Working safely with engineered bacteria</h2>
-    <p class="experiment-lead">Cadture uses engineered <em>E. coli</em> to take up cadmium contaminants from the environment. Because we are working with bacteria, we underwent strict safety protocols: certified training before touching the bench, lab rules we set and kept, a Risk Group 1 organism carrying only metal-binding parts, and containment of every engineered cell we grew.</p>
+    <p class="experiment-lead">Cadture is developing an engineered <em>E. coli</em> system intended to detect cadmium and bind it through metallothionein. Our work involves both bacteria and cadmium, so we followed laboratory safety procedures for training, containment, chemical handling, and waste disposal.</p>
     <div class="experiment-tag-row" aria-label="Safety summary"><span>BSL-1 laboratory</span><span>NTU safety certification</span><span>Risk Group 1 organism</span><span>No GMO release</span></div>
   </div>
 
   <section class="experiment-section">
     <div class="experiment-section-header"><p class="experiment-card-kicker">Training</p><h3>Certified before any bench work</h3></div>
     <div class="experiment-section-layout"><article class="experiment-section-copy">
-      <p>Before beginning our wet lab, every member signed up for a mandatory online course on lab safety offered by the National University of Taiwan (NTU). The course covered topics ranging from securing a gas cylinder to using the emergency eye-wash machine, performing CPR, and operating an AED.</p>
-      <p>At the end of the course, each member took an online administered exam on the concepts covered in the course. Only after achieving a passing score of 70% on the exam did we receive the certificate of completion and begin actual wet lab work.</p>
+      <p>Before starting wet-lab work, every team member completed NTU's online laboratory safety course. It covered basic laboratory safety, equipment use, and emergency procedures.</p>
+      <p>Each member had to pass the online examination with a score of at least 70% to receive a certificate and begin working in the laboratory.</p>
     </article><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Passing score</span><small>70% on the NTU exam, required of every member before entering the lab</small></div></div>
   </section>
 
   <section class="experiment-section experiment-section-reverse">
     <div class="experiment-section-header"><p class="experiment-card-kicker">In the lab</p><h3>The rules we set and kept</h3></div>
     <div class="experiment-section-layout"><div class="experiment-figure-slot experiment-figure-slot-wide"><span>BSL-1</span><small>The biosafety level of the laboratory we worked in</small></div><article class="experiment-section-copy">
-      <p>Upon starting in the lab, we established realistic lab safety policies to abide by. We enforced rules such as wearing Personal Protective Equipment (PPE), no eating or drinking in the lab, and urging members to rest at home if they feel sick to prevent sample contamination. The Biosafety Level of our lab is BSL-1.</p>
-      <p>We worked with caution; never running or rushing our processes, and always consulted our lab mentors whenever instructions were unclear.</p>
+      <p>Our experiments were conducted in an NTU Biosafety Level 1 (BSL-1) laboratory. We wore appropriate personal protective equipment, kept food and drinks out of the lab, and maintained a clean working area.</p>
+      <p>Team members were reminded not to rush experiments and to ask a mentor whenever a procedure was unclear.</p>
     </article></div>
   </section>
 
   <section class="experiment-section">
-    <div class="experiment-section-header"><p class="experiment-card-kicker">The organism</p><h3>Risk Group 1, carrying metal-binding parts only</h3></div>
+    <div class="experiment-section-header"><p class="experiment-card-kicker">The organism</p><h3>A laboratory strain of <em>E. coli</em></h3></div>
     <div class="experiment-section-layout"><article class="experiment-section-copy">
-      <p>The microorganism selected for our heavy metal bioremediation project is <em>E. coli</em> (Risk Group 1). The genetic parts engineered into our expression vectors were specifically designed to express metallothionein (MT), a safe cadmium-binding protein, along with necessary cellular transport systems.</p>
-      <p>Because these sequences only function to bind and sequester heavy metals within the bacteria and do not encode dangerous toxins, our engineered <em>E. coli</em> pose minimal biological risk to human health.</p>
-    </article><div class="experiment-figure-slot experiment-figure-slot-wide"><span>What the parts do</span><small>Bind and sequester heavy metals &mdash; no toxin genes</small></div></div>
+      <p>We used a laboratory strain of <em>E. coli</em> classified as Risk Group 1. The engineered bacteria express metallothionein (MT), together with other components required by our system.</p>
+      <p>Although the strain is classified as low risk, we continued to use precautions while handling engineered bacteria. All experiments were conducted in the laboratory, and no genetically modified bacteria were released into the environment.</p>
+    </article><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Risk Group 1</span><small>Engineered bacteria were handled in the laboratory and were not released into the environment.</small></div></div>
+  </section>
+
+  <section class="experiment-section">
+    <div class="experiment-section-header"><p class="experiment-card-kicker">Chemical safety</p><h3>Handling cadmium solutions</h3></div>
+    <div class="experiment-section-layout"><article class="experiment-section-copy">
+      <p>Cadmium is toxic to people and the environment. We followed laboratory procedures when handling cadmium-containing solutions and took care to prevent spills and unnecessary exposure.</p>
+    </article><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Cadmium</span><small>Handle cadmium-containing solutions carefully and avoid spills or unnecessary exposure.</small></div></div>
   </section>
 
   <section class="experiment-section experiment-section-reverse">
-    <div class="experiment-section-header"><p class="experiment-card-kicker">Containment</p><h3>Nothing engineered left containment</h3></div>
-    <div class="experiment-section-layout"><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Waste route</span><small>Dedicated biohazard containers, sterilized by NTU environmental safety staff</small></div><article class="experiment-section-copy">
-      <p>We upheld the iGEM rule on Genetically Modified Organisms (GMOs); none of our <em>E. coli</em> were permitted to leave containment. Additionally, all biological waste used for or generated from culturing our engineered <em>E. coli</em> were collected in dedicated biohazard waste containers.</p>
-      <p>These materials were then sterilized by the environmental safety staff at NTU, which prevented unauthorized release of GMOs.</p>
+    <div class="experiment-section-header"><p class="experiment-card-kicker">Containment and waste</p><h3>Separate biological and cadmium waste</h3></div>
+    <div class="experiment-section-layout"><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Two waste streams</span><small>Engineered-cell bio-waste is treated separately from cadmium-containing waste.</small></div><article class="experiment-section-copy">
+      <p>Biological waste containing engineered <em>E. coli</em> was collected in designated containers and sent to NTU environmental safety personnel for treatment.</p>
+      <p>Sterilization does not remove cadmium. Waste containing cadmium therefore also requires appropriate chemical-waste disposal procedures.</p>
     </article></div>
+  </section>
+
+  <section class="experiment-section">
+    <div class="experiment-section-header"><p class="experiment-card-kicker">Reflection</p><h3>Safety includes how we handle and dispose of materials</h3></div>
+    <div class="experiment-section-copy">
+      <p>We learned that laboratory safety means understanding the risks involved in our experiments and handling and disposing of materials carefully. As our project addresses environmental contamination, we also need to ensure that our own work does not create additional risks to people or the environment.</p>
+    </div>
   </section>
 </section>

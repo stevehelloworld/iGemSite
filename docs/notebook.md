@@ -2,7 +2,7 @@
   <div class="experiment-hero">
     <p class="experiment-eyebrow">LABORATORY NOTEBOOK</p>
     <h2>Wet Lab Chronological Record</h2>
-    <p class="experiment-lead">This notebook records the procedures, calculations, observations, and troubleshooting steps documented between June 23 and August 4, 2026. Each entry is collapsed by default — click a date to expand its full protocol.</p>
+    <p class="experiment-lead">This notebook records the procedures, calculations, observations, and troubleshooting steps documented between June 23 and October 15, 2026. Each entry is collapsed by default — click a date to expand the record for that date.</p>
   </div>
 
   <div class="notebook-toolbar">
@@ -2028,10 +2028,10 @@
         <p>Reserved sample assay testing through the Reservation Service Management System of Core Facilities for Basic Research.</p>
         <p>Inoculation for the sample assay. The left portion of the black line on the plate map represents the inoculation on 12 October.</p>
       </article>
-      <div class="experiment-figure-slot experiment-figure-slot-wide">
-        <span>Sample assay</span>
-        <small>Samples prepared for external cadmium quantification</small>
-      </div>
+      <figure class="notebook-plate-map">
+        <img src="static/assets/images/notebook/sample-assay-plate-map-20261012-13.png" alt="Plate map for the October 12 and 13 sample assay, with strains and controls assigned by row and column">
+        <figcaption>Sample-assay plate map recorded for the October 12 and 13 inoculations.</figcaption>
+      </figure>
     </div>
   </details>
 
@@ -2064,16 +2064,46 @@
   <details class="experiment-section notebook-entry">
     <summary class="experiment-section-header">
       <p class="experiment-card-kicker">October 14, 2026</p>
-      <h3>Last Entry</h3>
+      <h3>Overnight Growth for the External Assay</h3>
     </summary>
     <div class="experiment-section-layout">
       <article class="experiment-section-copy">
-        <p>The working log carries a heading for this date with no entry recorded beneath it. It is reproduced here so the record runs to the end of the notebook rather than stopping without explanation.</p>
+        <p>The log records overnight culture preparation for the external sample assay and references a separate file, <em>iGEM Sample Assay - Description.pdf</em>.</p>
+        <h4>Medium preparation and sample setup</h4>
+        <ul>
+          <li>The entry says to add “350 mL of Kanamycin” and 11.6 mL of glucose to the medium prepared the previous day. The kanamycin unit and stock concentration are not specified in this log.</li>
+          <li>The log lists 30 samples at a nominal 200 nM Cd<sup>2+</sup> and 30 at 400 nM. For each concentration it records 39.6 mL medium plus 0.4 mL of 200 µM or 400 µM cadmium stock, respectively, multiplied by four.</li>
+          <li>For each tube, 4,975 µL medium and 25 µL bacterial culture were added to a 15 mL polypropylene centrifuge tube. The recorded naming format was <em>Sample Assay_Sample Name.pdf</em>.</li>
+          <li>The tubes were placed in a shaker at 37 °C and 225 rpm overnight. The log says to leave the lid half-open and secure it to the tube with a sticker.</li>
+        </ul>
+        <p><strong>Values to verify:</strong> The recorded stock concentrations and volumes correspond to 2 µM and 4 µM in a 40 mL batch, rather than the stated 200 nM and 400 nM targets. The log also records “350 mL of Kanamycin” without a stock concentration. These values are preserved as written; confirm the units and recipe before treating them as a protocol.</p>
       </article>
       <div class="experiment-figure-slot experiment-figure-slot-wide">
-        <span>End of the log</span>
-        <small>23 June to 14 October 2026</small>
+        <span>External Cd assay</span>
+        <small>Overnight cultures prepared for testing at Don Hua University Testing Center</small>
       </div>
+    </div>
+  </details>
+
+  <!-- October 15, 2026 -->
+  <details class="experiment-section experiment-section-reverse notebook-entry">
+    <summary class="experiment-section-header">
+      <p class="experiment-card-kicker">October 15, 2026</p>
+      <h3>Sample Filtration and Delivery</h3>
+    </summary>
+    <div class="experiment-section-layout">
+      <div class="experiment-figure-slot experiment-figure-slot-wide">
+        <span>54 samples</span>
+        <small>Centrifuged, syringe-filtered, and delivered for external testing</small>
+      </div>
+      <article class="experiment-section-copy">
+        <ol>
+          <li>Centrifuged all 54 samples at 9,000 rpm for 10 minutes.</li>
+          <li>Passed the liquid through a syringe filter; the log states this was to remove the bacteria.</li>
+          <li>Delivered the samples to Don Hua University Testing Center.</li>
+        </ol>
+        <p>The October 14 entry lists 30 samples at each of two concentrations (60 planned), while this entry says 54 samples were processed. The log does not explain the difference. No testing results are included in this record.</p>
+      </article>
     </div>
   </details>
 </section>
