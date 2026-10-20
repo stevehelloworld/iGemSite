@@ -2046,3 +2046,131 @@
     </div>
 
 </section>
+
+<section class="ihp-section" id="public-survey">
+
+    <div class="section-title">
+
+        <h2>
+            Public Survey: Cadmium, Food Safety &amp; Synthetic Biology
+        </h2>
+
+    </div>
+
+    <p class="section-description">
+
+        We ran a public survey to understand people&rsquo;s awareness of cadmium
+        (Cd<sup>2+</sup>) pollution, their concerns about food and water safety,
+        and their views on synthetic biology. The survey was offered in English
+        and Chinese and ran from 5 to 14 October 2026.
+
+    </p>
+
+    <div class="takeaway-grid" aria-label="Survey headline figures">
+
+        <div class="takeaway-card">
+            <h3>281</h3>
+            <p>Valid responses across the English and Chinese versions.</p>
+        </div>
+
+        <div class="takeaway-card">
+            <h3>84.7%</h3>
+            <p>Had heard of cadmium before the survey (238 of 281).</p>
+        </div>
+
+        <div class="takeaway-card">
+            <h3>63.3%</h3>
+            <p>Had never heard of synthetic biology before (178 of 281).</p>
+        </div>
+
+        <div class="takeaway-card">
+            <h3>77.2%</h3>
+            <p>Want evidence that treated water meets relevant safety standards (217 of 281).</p>
+        </div>
+
+    </div>
+
+    <div class="impact-text">
+
+        <h3>I. Background and objectives</h3>
+
+        <p>Our project explores an engineered <em>E. coli</em> system designed to detect and accumulate cadmium under controlled conditions. Because environmental technologies can affect both communities and ecosystems, we wanted to understand public expectations and concerns while considering the potential applications of our project. The survey focused on three questions:</p>
+
+        <ul>
+            <li>How familiar is the public with cadmium and heavy metal pollution?</li>
+            <li>What are people&rsquo;s attitudes towards genetically engineered bacteria for environmental applications?</li>
+            <li>What safety measures and evidence would people want before accepting this technology?</li>
+        </ul>
+
+        <h3>II. Survey overview</h3>
+
+        <div class="problem-table-wrap">
+            <table class="problem-table">
+                <tbody>
+                    <tr><td>Valid responses</td><td>281 (English and Chinese versions combined)</td></tr>
+                    <tr><td>Survey period</td><td>5&ndash;14 October 2026</td></tr>
+                    <tr><td>Largest age group</td><td>45&ndash;54 (36.7%)</td></tr>
+                    <tr><td>Gender</td><td>Male (51.6%)</td></tr>
+                    <tr><td>Largest occupation group</td><td>Business/administration (33.5%)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>III. Key findings</h3>
+
+        <h4>Awareness of cadmium pollution</h4>
+
+        <p>We asked participants whether they had heard of cadmium and how familiar they were with its environmental and health effects. Of the 281 participants, 238 (84.7%) reported that they had heard of cadmium before the survey, while 43 (15.3%) indicated that they had heard the term but knew very little about it.</p>
+
+        <p>Participants identified possible sources of heavy metal pollution, including electroplating and metal-processing industries, industrial wastewater, and improper disposal of batteries or electronic waste. The most frequently selected source was electroplating and metal-processing industries, chosen by 226 participants (80.4%).</p>
+
+        <p>These findings help us understand which aspects of cadmium pollution may need clearer public communication. Where familiarity is limited, cadmium&rsquo;s sources, environmental impacts, and monitoring methods need to be explained in accessible language.</p>
+
+        <h4>Concerns about food and water safety</h4>
+
+        <p>We asked participants about their concerns regarding heavy metals in food and water, particularly in areas potentially affected by industrial pollution. Overall, 118 of 281 participants (41.9%) reported being very concerned about heavy metal contamination in food, and 133 (47.3%) reported being very concerned about heavy metal contamination in water.</p>
+
+        <p>We also asked how comfortable they would feel eating crops from an agricultural area near an industrial site, where the area had been tested and found to comply with applicable food safety standards. 133 of 281 participants (47.3%) said they would be very or extremely uncomfortable.</p>
+
+        <p>Participants also expressed interest in the health effects of cadmium exposure, how cadmium enters soil, water, and food, and how food and drinking water are tested. This feedback highlights the importance of communicating clearly about environmental monitoring and about the limitations of any proposed treatment technology. A system designed to capture cadmium would still require appropriate testing to determine whether it works effectively and whether treated water meets relevant safety requirements.</p>
+
+        <h4>Public perceptions of synthetic biology</h4>
+
+        <p>To explore attitudes toward synthetic biology, we asked participants about their familiarity with the field and their reactions to using genetically engineered bacteria for environmental applications. 178 of 281 participants (63.3%) reported that they had never heard of synthetic biology before. After reading our project description, 125 respondents (44.5%) expressed positive attitudes toward the proposed technology.</p>
+
+        <p>Participants identified several potential concerns, including whether the treated water would be safe, whether the engineered bacteria could escape, and effects on the environment. The most frequently selected concern was whether the treated water would be safe, reported by 175 respondents (62.3%).</p>
+
+        <p>These responses reminded us that a technology&rsquo;s potential benefits are not enough on their own. Its safety, effectiveness, and environmental consequences must also be carefully evaluated.</p>
+
+        <h4>Conditions for accepting the proposed technology</h4>
+
+        <p>We asked participants what conditions would make them more comfortable with the proposed technology. The most frequently selected conditions were:</p>
+
+        <div class="problem-table-wrap">
+            <table class="problem-table">
+                <thead>
+                    <tr><th scope="col">Condition</th><th scope="col">Respondents</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Evidence that the treated water meets relevant safety standards</td><td>217 (77.2%)</td></tr>
+                    <tr><td>Independent evidence that it effectively captures cadmium</td><td>202 (71.9%)</td></tr>
+                    <tr><td>A clear plan for safely handling the bacteria after treatment</td><td>189 (67.3%)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>These results help us identify what the public expects from an environmental biotechnology project. Because evidence of treated-water safety, independent evidence of cadmium capture, and a plan for handling the bacteria after treatment were each selected by more than two-thirds of respondents, these topics deserve particular attention in our project planning and future communication.</p>
+
+        <h3>IV. Limitations</h3>
+
+        <p>A total of 281 valid responses were included in our analysis. However, respondents were not representative of the entire population, and some groups were underrepresented. The results should therefore be read as an overview of our respondents&rsquo; perspectives rather than as the views of the public as a whole.</p>
+
+        <p>We also recognize that a public survey cannot establish whether a technology is scientifically effective or safe. Instead, it helps us identify questions, expectations, and concerns that deserve further investigation.</p>
+
+        <h3>V. Conclusion</h3>
+
+        <p>Conducting this survey gave us an opportunity to consider our project from perspectives beyond the laboratory. The responses helped us explore public awareness of cadmium pollution, attitudes toward synthetic biology, and expectations for environmental safety.</p>
+
+    </div>
+
+</section>
