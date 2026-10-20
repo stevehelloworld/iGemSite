@@ -1206,6 +1206,15 @@
     margin-bottom: 0;
 }
 
+/* Footnotes carried over from the lab protocol document: buffer choices, cycle
+   repeats and kit references that qualify the table directly above them. */
+.page-methods .protocol-source {
+    margin: 10px 0 0;
+    color: #5f7784;
+    font-size: .85rem;
+    line-height: 1.6;
+}
+
 /* Wet lab results: the screening gels, and the single inline gel figure. */
 .page-measurement .gel-figure {
     margin: 0;

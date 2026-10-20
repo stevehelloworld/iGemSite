@@ -8,37 +8,37 @@
 
   <section class="experiment-section">
     <div class="experiment-section-header"><p class="experiment-card-kicker">What we measured</p><h3>Two readouts, one plate</h3></div>
-    <div class="experiment-section-layout"><article class="experiment-section-copy">
+    <article class="experiment-section-copy">
       <p>We used a 96-well plate-based assay to monitor optical density at 600 nm (OD<sub>600</sub>) and GFP fluorescence over time. OD<sub>600</sub> served as an indicator of bacterial growth, while fluorescence intensity provided a quantitative readout of GFP expression.</p>
       <p>Measurements were performed across six cadmium concentrations, allowing us to compare the responses of different constructs under the same experimental conditions.</p>
-    </article><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Two readouts</span><small>OD<sub>600</sub> for growth, GFP fluorescence for the cadmium-responsive reporter</small></div></div>
+    </article>
   </section>
 
   <section class="experiment-section experiment-section-reverse">
     <div class="experiment-section-header"><p class="experiment-card-kicker">Step 1</p><h3>Growth medium preparation</h3></div>
-    <div class="experiment-section-layout"><div class="experiment-figure-slot experiment-figure-slot-wide"><span>Per 350 mL LB</span><small>350 µL kanamycin solution and 11.6 mL glucose solution, stored at 4 °C</small></div><article class="experiment-section-copy">
+    <article class="experiment-section-copy">
       <p>All culture preparation and liquid-handling procedures were carried out in a laminar flow cabinet.</p>
       <p>The growth medium was supplemented with kanamycin and glucose to support the cultivation of plasmid-bearing <em>E. coli</em> and to maintain the experimental conditions used for fluorescence measurements.</p>
       <p>For medium preparation, 350 µL of kanamycin solution and 11.6 mL of glucose solution were added to 350 mL of LB medium. All media were stored at 4 °C.</p>
-    </article></div>
+    </article>
   </section>
 
   <section class="experiment-section">
     <div class="experiment-section-header"><p class="experiment-card-kicker">Step 2</p><h3>Bacterial inoculation</h3></div>
-    <div class="experiment-section-layout"><article class="experiment-section-copy">
+    <article class="experiment-section-copy">
       <p>Bacterial cultures were prepared using 96-well plates. Each designated well received 200 µL of growth medium supplemented with kanamycin and glucose.</p>
       <p>Bacterial material was transferred from the corresponding microorganism stock into each designated well using a pipette tip. The plate was then placed in a shaker and incubated overnight to establish the initial bacterial cultures.</p>
-    </article><div class="experiment-figure-slot experiment-figure-slot-wide"><span>200 µL per well</span><small>Inoculated from stock with a pipette tip, then shaken overnight</small></div></div>
+    </article>
   </section>
 
   <section class="experiment-section experiment-section-reverse">
     <div class="experiment-section-header"><p class="experiment-card-kicker">Step 3</p><h3>EDTA treatment</h3></div>
-    <div class="experiment-section-layout"><div class="experiment-figure-slot experiment-figure-slot-wide"><span>2 µL : 1998 µL</span><small>EDTA solution to medium, then 200 µL per well plus 1 µL of the overnight culture</small></div><article class="experiment-section-copy">
+    <article class="experiment-section-copy">
       <p>Following initial inoculation, bacterial cultures underwent an additional preparation stage involving ethylenediaminetetraacetic acid (EDTA).</p>
       <p>EDTA is a chelating agent capable of binding metal ions. Its inclusion in the preparation stage was intended to reduce interference from residual metal ions in the preculture medium, an approach also employed in the original pMH45 biosensor study.</p>
       <p>EDTA was added to the growth medium at a ratio of 2 µL EDTA solution to 1998 µL medium. Subsequently, 200 µL of the EDTA-supplemented medium was dispensed into each designated well, followed by 1 µL of bacterial culture from the previous inoculation.</p>
       <p>The plate was incubated overnight in a shaker before proceeding to cadmium exposure measurements.</p>
-    </article></div>
+    </article>
   </section>
 
   <section class="experiment-figure-section" aria-labelledby="cadmium-exposure-title">
