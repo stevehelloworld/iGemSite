@@ -10,9 +10,9 @@
             HUMAN PRACTICES
         </span>
 
-        <h1>
+        <h2>
             Integrated Human Practices
-        </h1>
+        </h2>
 
         <p class="hero-subtitle">
 
