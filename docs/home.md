@@ -12,7 +12,7 @@
             </header>
 
             <figure class="pollution-panorama-v2">
-                <img src="static/assets/images/problem/pollution-path-panorama-optimized.webp?v=20261013-pb2" alt="A colored-pencil panorama illustrating cadmium moving from industrial wastewater through a river and rice fields to a nearby community">
+                <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/problem/pollution-path-panorama-optimized.webp?v=20261013-pb2" alt="A colored-pencil panorama illustrating cadmium moving from industrial wastewater through a river and rice fields to a nearby community">
                 <figcaption class="metal-legend-v2"> <span class="metal-cd"></span> Cadmium (Cd)</figcaption>
             </figure>
 
@@ -41,7 +41,7 @@
             <div id="map-view-taiwan" class="map-view-panel" data-map-view-panel="taiwan">
                 <div class="map-composition-v2">
                     <figure class="persistent-map-v2">
-                        <img src="static/assets/images/taiwan-scenes/taiwan-base-map-flat.png" alt="Hand-drawn physical map of Taiwan">
+                        <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/taiwan-scenes/taiwan-base-map-flat.avif" alt="Hand-drawn physical map of Taiwan">
                         <button class="map-pin-v2 pin-taoyuan is-active" type="button" data-map-pin="0" aria-label="Show Taoyuan" aria-pressed="true"><span></span></button>
                         <button class="map-pin-v2 pin-taichung" type="button" data-map-pin="1" aria-label="Show Taichung" aria-pressed="false"><span></span></button>
                         <button class="map-pin-v2 pin-kaohsiung" type="button" data-map-pin="2" aria-label="Show Kaohsiung" aria-pressed="false"><span></span></button>
@@ -49,7 +49,7 @@
                     </figure>
 
                     <div class="location-window-v2">
-                        <img src="static/assets/images/taiwan-scenes/taiwan-city-vignettes-optimized.webp?v=20261013-pb2" alt="Three colored-pencil scenes showing industrial river discharge, agricultural irrigation, and harbor pollution in Taiwan">
+                        <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/taiwan-scenes/taiwan-city-vignettes-optimized.webp?v=20261013-pb2" alt="Three colored-pencil scenes showing industrial river discharge, agricultural irrigation, and harbor pollution in Taiwan">
                         <div class="location-copy-v2 is-active" data-map-step="0"><span>Taoyuan</span><h3>Industrial parks meet the river</h3><p>Electronics and metal-processing effluent can introduce Cd into northern waterways.</p></div>
                         <div class="location-copy-v2" data-map-step="1"><span>Taichung</span><h3>River pollution reaches farmland</h3><p>Irrigation creates a direct path from contaminated water to soil, crops, and food safety.</p></div>
                         <div class="location-copy-v2" data-map-step="2"><span>Kaohsiung</span><h3>Industry meets the harbor</h3><p>Industrial discharge and busy port activity increase the metal load faced by coastal ecosystems.</p></div>
@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </header>
 
             <figure class="treatment-panorama-v2">
-                <img src="static/assets/images/solution/bioremediation-process-panorama-optimized.webp?v=20261013-pb2" alt="An illustration of a proposed cadmium treatment pathway using engineered bacteria, containment, and metal recovery">
+                <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/solution/bioremediation-process-panorama-optimized.webp?v=20261013-pb2" alt="An illustration of a proposed cadmium treatment pathway using engineered bacteria, containment, and metal recovery">
             </figure>
 
             <ol class="treatment-steps-v2" aria-label="Proposed cadmium treatment steps">
@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
 
                     <img
-                        src="static/assets/images/vis-logo-heart.png"
+                        src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/vis-logo-heart.avif"
                         class="future-image"
                         alt="VIS heart logo">
                 </div>

@@ -2029,7 +2029,7 @@
         <p>Inoculation for the sample assay. The left portion of the black line on the plate map represents the inoculation on 12 October.</p>
       </article>
       <figure class="notebook-plate-map">
-        <img src="static/assets/images/notebook/sample-assay-plate-map-20261012-13.webp" alt="Plate map for the October 12 and 13 sample assay, with strains and controls assigned by row and column">
+        <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/notebook/sample-assay-plate-map-20261012-13.webp" alt="Plate map for the October 12 and 13 sample assay, with strains and controls assigned by row and column">
         <figcaption>Sample-assay plate map recorded for the October 12 and 13 inoculations.</figcaption>
       </figure>
     </div>

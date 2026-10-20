@@ -107,26 +107,26 @@
                 <p>The model activity was adapted from HHMI BioInteractive&rsquo;s <a href="https://www.biointeractive.org/classroom-resources/modeling-structure-dna" target="_blank" rel="noopener">Modeling the Structure of DNA</a>.</p>
             </div>
             <figure class="hp-outreach-photo hp-outreach-photo-portrait">
-                <img src="static/assets/images/outreach/guting-dna-101-team.webp" alt="VIS iGEM team members and school community at Guting Junior High School" loading="lazy">
+                <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/outreach/guting-dna-101-team.webp" alt="VIS iGEM team members and school community at Guting Junior High School" loading="lazy">
                 <figcaption>VIS iGEM team members at Guting Junior High School.</figcaption>
             </figure>
         </div>
 
         <div class="hp-outreach-gallery" aria-label="Photos from the DNA 101 lesson and activity">
             <figure class="hp-outreach-photo">
-                <img src="static/assets/images/outreach/guting-dna-101-presentation.webp" alt="A team member presents a DNA lesson with a molecular diagram on screen" loading="lazy">
+                <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/outreach/guting-dna-101-presentation.webp" alt="A team member presents a DNA lesson with a molecular diagram on screen" loading="lazy">
                 <figcaption>Introducing DNA structure during the lesson.</figcaption>
             </figure>
             <figure class="hp-outreach-photo">
-                <img src="static/assets/images/outreach/guting-dna-101-classroom.webp" alt="Students take part in the classroom DNA activity" loading="lazy">
+                <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/outreach/guting-dna-101-classroom.webp" alt="Students take part in the classroom DNA activity" loading="lazy">
                 <figcaption>Students work through the lesson and activity.</figcaption>
             </figure>
             <figure class="hp-outreach-photo">
-                <img src="static/assets/images/outreach/guting-dna-101-model-activity.webp" alt="A team member helps a student assemble a colored-paper DNA model" loading="lazy">
+                <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/outreach/guting-dna-101-model-activity.webp" alt="A team member helps a student assemble a colored-paper DNA model" loading="lazy">
                 <figcaption>Building a DNA model from colored paper pieces.</figcaption>
             </figure>
             <figure class="hp-outreach-photo">
-                <img src="static/assets/images/outreach/guting-dna-101-student-activity.webp" alt="Students assemble paper DNA models at their desks" loading="lazy">
+                <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/outreach/guting-dna-101-student-activity.webp" alt="Students assemble paper DNA models at their desks" loading="lazy">
                 <figcaption>Students assemble their paper models.</figcaption>
             </figure>
         </div>
@@ -145,7 +145,7 @@
                 <p>The talk also described planned growth, GFP-response, and direct-cadmium measurements, alongside modeling and human-practices work. These were the team&rsquo;s plans at the time of the meetup; the presentation itself does not establish that the proposed capture design worked.</p>
             </div>
             <figure class="hp-outreach-photo">
-                <img src="static/assets/images/outreach/taiwan-igemers-meetup-2026.webp" alt="VIS team members at the 2026 Taiwan iGEMers Meetup" loading="lazy">
+                <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/outreach/taiwan-igemers-meetup-2026.webp" alt="VIS team members at the 2026 Taiwan iGEMers Meetup" loading="lazy">
                 <figcaption>VIS team members at the 2026 Taiwan iGEMers Meetup.</figcaption>
             </figure>
         </div>

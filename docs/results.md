@@ -66,7 +66,7 @@ This means the endpoint value at 10.6 h understates the peak by 10–15%. Endpoi
 Each pVIS1–7 construct sits below pMH45 at cadmium levels above 40 nM. The size and shape of the response differ by construct.
 
 <figure class="results-chart">
-<a href="static/assets/charts/pvis-gfp-dose-response.svg" target="_blank" rel="noopener" aria-label="Open chart at full size"><img src="static/assets/charts/pvis-gfp-dose-response.svg" alt="Cadmium dose-response for pMH45 and pVIS1–7. Log-scale background-corrected GFP/OD600 across six cadmium concentrations." loading="lazy"></a>
+<a href="https://static.igem.wiki/teams/6423/wiki/static/assets/charts/pvis-gfp-dose-response.svg" target="_blank" rel="noopener" aria-label="Open chart at full size"><img src="https://static.igem.wiki/teams/6423/wiki/static/assets/charts/pvis-gfp-dose-response.svg" alt="Cadmium dose-response for pMH45 and pVIS1–7. Log-scale background-corrected GFP/OD600 across six cadmium concentrations." loading="lazy"></a>
 <figcaption><strong>Reporter output across pVIS1–7 and pMH45.</strong> Background-corrected GFP/OD600, standard medium, endpoint at 10.6 h. Log scale. A lower line means lower measured GFP/OD600; this assay cannot distinguish altered cadmium availability from changes in expression or cell physiology. Cd²⁺ concentrations are evenly spaced, not to scale.</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ pVIS1–pVIS4 and pVIS5–pVIS7 were measured on separate plates. Their comparis
 At 0 nM, most pVIS constructs had somewhat lower growth rates than pMH45. At higher concentrations, several grew at or above the same-plate pMH45 rate, while pVIS3 and pVIS7 showed clear growth impairment. These measurements describe growth phenotypes; they do not by themselves identify a metal-binding mechanism.
 
 <figure class="results-chart">
-<a href="static/assets/charts/pvis-relative-growth.svg" target="_blank" rel="noopener" aria-label="Open chart at full size"><img src="static/assets/charts/pvis-relative-growth.svg" alt="Relative growth rates of pVIS1–7 compared with pMH45 across six cadmium concentrations; pVIS3 and pVIS7 show growth impairment." loading="lazy"></a>
+<a href="https://static.igem.wiki/teams/6423/wiki/static/assets/charts/pvis-relative-growth.svg" target="_blank" rel="noopener" aria-label="Open chart at full size"><img src="https://static.igem.wiki/teams/6423/wiki/static/assets/charts/pvis-relative-growth.svg" alt="Relative growth rates of pVIS1–7 compared with pMH45 across six cadmium concentrations; pVIS3 and pVIS7 show growth impairment." loading="lazy"></a>
 <figcaption><strong>Relative growth differs by construct.</strong> Growth rate divided by pMH45 on the same plate, standard medium. Above 1.00 means the measured growth rate was higher than pMH45 in that condition. Cd²⁺ concentrations are evenly spaced, not to scale.</figcaption>
 </figure>
 

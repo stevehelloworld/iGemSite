@@ -73,7 +73,7 @@ Across 126 primary fits, RMSE ranges from 0.0027 to 0.0260 OD. RMSE describes ty
 For pVIS7 in run 20260930 at 300 and 400 nM, relaxing the upper capacity bound permits much larger fitted capacities with only small error improvements. The observed window does not determine a useful plateau. We retain the recorded trajectories and withhold a biological carrying-capacity interpretation.
 
 <figure class="results-chart">
-<a href="static/assets/images/model/fig1-growth-fits-20260930.webp" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="static/assets/images/model/fig1-growth-fits-20260930.webp" alt="Growth curves and residuals for pMH45 and pVIS7 in run 20260930, with observations, fitted logistic curves and residuals at six cadmium doses" loading="lazy"></a>
+<a href="https://static.igem.wiki/teams/6423/wiki/static/assets/images/model/fig1-growth-fits-20260930.webp" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/model/fig1-growth-fits-20260930.webp" alt="Growth curves and residuals for pMH45 and pVIS7 in run 20260930, with observations, fitted logistic curves and residuals at six cadmium doses" loading="lazy"></a>
 <figcaption><strong>Figure 1.</strong> Run 20260930: observations, primary logistic fits and residuals for pMH45 and pVIS7. Colours represent nominal added doses. The pVIS7 high-dose curves have not resolved a plateau; neither slower growth nor fitted capacity measures cadmium removal.</figcaption>
 </figure>
 
@@ -106,7 +106,7 @@ Primary comparisons assume maturation <em>m</em> = 1 h<sup>&minus;1</sup>, incre
 GM has lower residual error in 99 of 126 groups, BP in 24, with three numerical ties. The original run favours GM in all 30 groups, but this preference does not hold across every new condition. Most primary BP fits reach an imposed loss bound, and both models leave temporal patterns in their residuals.
 
 <figure class="results-chart">
-<a href="static/assets/images/model/fig2-reporter-models-pmh45.webp" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="static/assets/images/model/fig2-reporter-models-pmh45.webp" alt="pMH45 fluorescence trajectories at 400 nM from two runs, with the two reporter production models fitted and their residuals" loading="lazy"></a>
+<a href="https://static.igem.wiki/teams/6423/wiki/static/assets/images/model/fig2-reporter-models-pmh45.webp" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/model/fig2-reporter-models-pmh45.webp" alt="pMH45 fluorescence trajectories at 400 nM from two runs, with the two reporter production models fitted and their residuals" loading="lazy"></a>
 <figcaption><strong>Figure 2.</strong> Representative pMH45 trajectories at 400 nM from two runs. Points and error bars show means and across-well sample SD; lines show the two models under identical settings. Residuals reveal departures that fitted curves alone can conceal. Differences between runs are not attributed solely to medium composition.</figcaption>
 </figure>
 
@@ -152,7 +152,7 @@ Model ranking changes with label and time. For pVIS8 in run 20260930, five-hour 
 For pVIS7 in both dose-mapped runs containing that label, the zero-dose baseline predicts omitted responses better than the tested monotone activation curves at all three readouts. These observations do not support a monotone sensing calibration for pVIS7 under those conditions; they do not establish absence of a cadmium response.
 
 <figure class="results-chart">
-<a href="static/assets/images/model/fig3-dose-response-pvis7-pvis8.webp" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="static/assets/images/model/fig3-dose-response-pvis7-pvis8.webp" alt="Dose-response curves for pVIS7 and pVIS8 in run 20260930 at fixed five- and nine-hour readouts, with fitted line, power and Hill candidates" loading="lazy"></a>
+<a href="https://static.igem.wiki/teams/6423/wiki/static/assets/images/model/fig3-dose-response-pvis7-pvis8.webp" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/model/fig3-dose-response-pvis7-pvis8.webp" alt="Dose-response curves for pVIS7 and pVIS8 in run 20260930 at fixed five- and nine-hour readouts, with fitted line, power and Hill candidates" loading="lazy"></a>
 <figcaption><strong>Figure 3.</strong> Run 20260930, pVIS7 and pVIS8 at fixed 5- and 9-hour readouts. Curves are fitted candidates; error bars are across-well sample SD. Vertical scales differ. Curve-fitting error is distinct from omitted-dose prediction error, and total RFU is not per-cell expression.</figcaption>
 </figure>
 
@@ -163,7 +163,7 @@ For pVIS7 in both dose-mapped runs containing that label, the zero-dose baseline
 The shared pMH45 label provides a further check. A five-hour Hill response fitted to run 20260910 predicted all six dose means in run 20260930, without refitting parameters or adjusting the target baseline, with RMSE 274.71 RFU. Reversing the training and prediction runs gave 218.82 RFU.
 
 <figure class="results-chart">
-<a href="static/assets/images/model/fig4-cross-run-prediction.webp" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="static/assets/images/model/fig4-cross-run-prediction.webp" alt="Five-hour dose means with curves fitted separately to each run, beside the prediction errors when parameters from run 20260910 are applied to run 20260930" loading="lazy"></a>
+<a href="https://static.igem.wiki/teams/6423/wiki/static/assets/images/model/fig4-cross-run-prediction.webp" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/model/fig4-cross-run-prediction.webp" alt="Five-hour dose means with curves fitted separately to each run, beside the prediction errors when parameters from run 20260910 are applied to run 20260930" loading="lazy"></a>
 <figcaption><strong>Figure 4.</strong> Left: observed five-hour dose means and curves fitted separately to each run. Right: errors when parameters fitted to 20260910 predict 20260930. The target run is excluded from that fit. Both runs are Normal-labelled; culture independence and protocol matching remain unconfirmed.</figcaption>
 </figure>
 
@@ -182,7 +182,7 @@ For the intended surface-display design, we explored a closed batch with fixed e
 Assumed values <em>C</em><sub>0</sub> = 1 &micro;M, <em>B</em> = 15 &micro;M and <em>K</em><sub>d</sub> = 5 &micro;M give <em>C</em><sub>e</sub> = 0.25961 &micro;M and 74.04% bound at equilibrium. No adsorption parameter was fitted to the reader data. The scenario's initial concentration also exceeds the documented 400 nM reporter-dose maximum.
 
 <figure class="results-chart">
-<a href="static/assets/images/model/fig5-capacity-sweep.webp" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="static/assets/images/model/fig5-capacity-sweep.webp" alt="Bound cadmium fraction against assumed binding capacity at 1 micromolar initial cadmium and a 5 micromolar dissociation constant, marking 74.04 percent bound" loading="lazy"></a>
+<a href="https://static.igem.wiki/teams/6423/wiki/static/assets/images/model/fig5-capacity-sweep.webp" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/model/fig5-capacity-sweep.webp" alt="Bound cadmium fraction against assumed binding capacity at 1 micromolar initial cadmium and a 5 micromolar dissociation constant, marking 74.04 percent bound" loading="lazy"></a>
 <figcaption><strong>Figure 5.</strong> Capacity sweep at initial cadmium of 1 &micro;M and adsorption dissociation constant of 5 &micro;M. The marked 74.04% is a prediction under assumed batch conditions, not measured removal or one-pass performance.</figcaption>
 </figure>
 

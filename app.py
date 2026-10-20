@@ -12,14 +12,9 @@ app.config['FREEZER_DESTINATION'] = 'public'
 app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
 app.config['FREEZER_STATIC_IGNORE'] = [
-    'assets/images/team-collaboration-taiwan.jpg',
-    'assets/images/engineering-cycle-flat.png',
-    'assets/images/solution/capture.png',
-    'assets/images/notebook/sample-assay-plate-map-20261012-13.png',
-    # AlphaFold prediction panels, kept as source material after the Experiments
-    # page was reduced to the protocol set. No page references them, so they are
-    # held in the repository but left out of the deployment archive.
-    'assets/images/mt-structures',
+    # Site imagery and charts are served from the official iGEM Uploads CDN.
+    'assets/images',
+    'assets/charts',
 ]
 app.config['PUBLIC_SITE_ROOT'] = environ.get('CI_PAGES_URL', '').rstrip('/') + '/'
 freezer = Freezer(app)
