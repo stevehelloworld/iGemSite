@@ -228,7 +228,200 @@
 }
 
 .home-page .map-stage-v2 {
-    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr);
+}
+
+.home-page .map-view-switch {
+    display: flex;
+    width: fit-content;
+    gap: 5px;
+    padding: 5px;
+    border: 2px solid #78a995;
+    border-radius: 999px;
+    background: rgba(248, 251, 248, .78);
+}
+
+.home-page .map-view-button {
+    min-width: 92px;
+    padding: 9px 18px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #385565;
+    font-family: var(--home-display);
+    font-size: .9rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.home-page .map-view-button.is-active {
+    background: #285772;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(40, 87, 114, .2);
+}
+
+.home-page .map-view-button:focus-visible {
+    outline: 3px solid #e2bc32;
+    outline-offset: 3px;
+}
+
+.home-page .map-view-panel {
+    min-width: 0;
+}
+
+.home-page .map-view-panel[hidden] {
+    display: none !important;
+}
+
+.home-page .world-map-composition-v2 {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr);
+    gap: clamp(16px, 3vw, 38px);
+    align-items: stretch;
+}
+
+.home-page .world-map-figure-v2 {
+    min-width: 0;
+    align-self: center;
+    margin: 0;
+    padding: clamp(10px, 1.5vw, 18px);
+    border: 3px solid #78a995;
+    background: #f8fbf8;
+    box-shadow: 8px 8px 0 rgba(42, 84, 68, .11);
+}
+
+.home-page .world-map-figure-v2 svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.home-page .world-map-figure-v2 figcaption {
+    margin-top: 9px;
+    color: #55707e;
+    font-size: .78rem;
+    line-height: 1.4;
+}
+
+.home-page .world-map-ocean-v2 {
+    fill: #e6f2f5;
+}
+
+.home-page .world-map-grid-v2 path {
+    fill: none;
+    stroke: #c1dce1;
+    stroke-width: 1.2;
+    stroke-dasharray: 4 8;
+}
+
+.home-page .world-map-land-v2 path {
+    fill: #b7d9c1;
+    stroke: #78a995;
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+}
+
+.home-page .world-map-marker-v2 path {
+    fill: none;
+    stroke: #e28d38;
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+.home-page .world-map-marker-v2 rect {
+    fill: #fff8d8;
+    stroke: #e28d38;
+    stroke-width: 2;
+}
+
+.home-page .world-map-marker-v2 text {
+    fill: #285772;
+    font: 700 13px/1 var(--home-display);
+    letter-spacing: .04em;
+}
+
+.home-page .world-map-marker-halo-v2 {
+    fill: rgba(226, 141, 56, .2);
+    stroke: #e28d38;
+    stroke-width: 2;
+}
+
+.home-page .world-map-marker-dot-v2 {
+    fill: #e28d38;
+    stroke: #fff;
+    stroke-width: 2;
+}
+
+.home-page .water-history-v2 {
+    display: grid;
+    grid-template-columns: minmax(170px, .34fr) minmax(0, 1fr);
+    gap: clamp(18px, 3vw, 42px);
+    align-items: center;
+    margin: 0;
+    padding: clamp(18px, 2.8vw, 32px);
+    border: 3px solid #78a995;
+    background: #f8fbf8;
+    box-shadow: 8px 8px 0 rgba(42, 84, 68, .11);
+}
+
+.home-page .water-history-date span {
+    display: inline-block;
+    padding: 5px 9px;
+    background: #f3d56b;
+    color: #285772;
+    font-family: var(--home-display);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    transform: rotate(-1deg);
+}
+
+.home-page .water-history-date strong,
+.home-page .water-history-date small {
+    display: block;
+}
+
+.home-page .water-history-date strong {
+    margin-top: 8px;
+    color: #285772;
+    font-family: var(--home-display);
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    line-height: .95;
+}
+
+.home-page .water-history-date small {
+    margin-top: 7px;
+    color: #385565;
+    font-size: .88rem;
+    font-weight: 700;
+}
+
+.home-page .water-history-copy h3 {
+    margin: 0 0 8px;
+    color: #285772;
+    font-family: var(--home-display);
+    font-size: clamp(1.3rem, 2.2vw, 2rem);
+    line-height: 1.1;
+}
+
+.home-page .water-history-copy p {
+    max-width: 78ch;
+    margin: 0 0 10px;
+    color: #385565;
+    line-height: 1.55;
+}
+
+.home-page .water-history-copy a {
+    color: #176579;
+    font-size: .88rem;
+    font-weight: 800;
+    text-underline-offset: 3px;
+}
+
+.home-page .water-history-copy a:focus-visible {
+    outline: 3px solid #285772;
+    outline-offset: 3px;
 }
 
 .home-page .map-composition-v2 {
@@ -485,6 +678,20 @@
     line-height: 1.3;
 }
 
+.home-page .treatment-step-status {
+    font-size: .9em;
+    font-weight: 800;
+    letter-spacing: .015em;
+}
+
+.home-page .treatment-step-status--done {
+    color: #267450;
+}
+
+.home-page .treatment-step-status--future {
+    color: #8b5e08;
+}
+
 @keyframes map-pin-ring-v2 {
     from { opacity: .7; transform: scale(.55); }
     to { opacity: 0; transform: scale(1.25); }
@@ -561,6 +768,69 @@
     .home-page .map-composition-v2 {
         grid-template-columns: 31% minmax(0, 1fr);
         gap: 10px;
+    }
+
+    .home-page .map-view-switch {
+        gap: 3px;
+        padding: 4px;
+    }
+
+    .home-page .map-view-button {
+        min-width: 82px;
+        padding: 7px 14px;
+        font-size: .8rem;
+    }
+
+    .home-page .world-map-composition-v2 {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .home-page .world-map-figure-v2 {
+        padding: 8px;
+    }
+
+    .home-page .world-map-figure-v2 figcaption {
+        font-size: .68rem;
+    }
+
+    .home-page .water-history-v2 {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .home-page .water-history-date {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 6px 10px;
+    }
+
+    .home-page .water-history-date strong,
+    .home-page .water-history-date small {
+        margin-top: 0;
+    }
+
+    .home-page .water-history-date strong {
+        font-size: 1.8rem;
+    }
+
+    .home-page .water-history-date small {
+        font-size: .78rem;
+    }
+
+    .home-page .water-history-copy h3 {
+        font-size: 1.12rem;
+    }
+
+    .home-page .water-history-copy p {
+        font-size: .78rem;
+        line-height: 1.45;
+    }
+
+    .home-page .water-history-copy a {
+        font-size: .76rem;
     }
 
     .home-page .persistent-map-v2 {

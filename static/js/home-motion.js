@@ -89,6 +89,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const mapViewButtons = mapStory?.querySelectorAll("[data-map-view-button]");
+  mapViewButtons?.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedView = button.dataset.mapViewButton;
+      mapViewButtons.forEach((viewButton) => {
+        const isActive = viewButton === button;
+        viewButton.classList.toggle("is-active", isActive);
+        viewButton.setAttribute("aria-pressed", String(isActive));
+      });
+      mapStory.querySelectorAll("[data-map-view-panel]").forEach((panel) => {
+        panel.hidden = panel.dataset.mapViewPanel !== selectedView;
+      });
+    });
+  });
+
   waterStory?.querySelectorAll("[data-water-step] button").forEach((button, index) => {
     button.addEventListener("click", () => setWaterIndex(index));
   });
