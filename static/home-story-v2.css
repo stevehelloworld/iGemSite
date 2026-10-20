@@ -276,22 +276,26 @@
 
 .home-page .world-map-composition-v2 {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr);
-    gap: clamp(16px, 3vw, 38px);
-    align-items: stretch;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(22px, 3vw, 38px);
 }
 
 .home-page .world-map-figure-v2 {
     min-width: 0;
-    align-self: center;
     margin: 0;
     padding: clamp(10px, 1.5vw, 18px);
-    border: 3px solid #78a995;
+    border: 4px solid #78a995;
     background: #f8fbf8;
     box-shadow: 8px 8px 0 rgba(42, 84, 68, .11);
 }
 
-.home-page .world-map-figure-v2 svg {
+.home-page .world-map-image-v2 {
+    position: relative;
+    overflow: hidden;
+    background: #d9eef3;
+}
+
+.home-page .world-map-image-v2 > img {
     display: block;
     width: 100%;
     height: auto;
@@ -304,63 +308,53 @@
     line-height: 1.4;
 }
 
-.home-page .world-map-ocean-v2 {
-    fill: #e6f2f5;
+.home-page .world-map-marker-v2 {
+    position: absolute;
+    top: var(--marker-y);
+    left: var(--marker-x);
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #e28d38;
+    box-shadow: 0 0 0 3px #285772, 0 3px 8px rgba(31, 59, 73, .34);
+    color: #fff;
+    font-family: var(--home-display);
+    font-size: .82rem;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+    transform: translate(-50%, -50%);
+    transition: transform 180ms ease, background-color 180ms ease;
 }
 
-.home-page .world-map-grid-v2 path {
-    fill: none;
-    stroke: #c1dce1;
-    stroke-width: 1.2;
-    stroke-dasharray: 4 8;
+.home-page .world-map-marker-v2:hover {
+    background: #bd6720;
+    transform: translate(-50%, -50%) scale(1.12);
 }
 
-.home-page .world-map-land-v2 path {
-    fill: #b7d9c1;
-    stroke: #78a995;
-    stroke-width: 2.5;
-    stroke-linejoin: round;
+.home-page .world-map-marker-v2:focus-visible {
+    outline: 3px solid #285772;
+    outline-offset: 5px;
+    z-index: 2;
 }
 
-.home-page .world-map-marker-v2 path {
-    fill: none;
-    stroke: #e28d38;
-    stroke-width: 3;
-    stroke-linecap: round;
-}
-
-.home-page .world-map-marker-v2 rect {
-    fill: #fff8d8;
-    stroke: #e28d38;
-    stroke-width: 2;
-}
-
-.home-page .world-map-marker-v2 text {
-    fill: #285772;
-    font: 700 13px/1 var(--home-display);
-    letter-spacing: .04em;
-}
-
-.home-page .world-map-marker-halo-v2 {
-    fill: rgba(226, 141, 56, .2);
-    stroke: #e28d38;
-    stroke-width: 2;
-}
-
-.home-page .world-map-marker-dot-v2 {
-    fill: #e28d38;
-    stroke: #fff;
-    stroke-width: 2;
+.home-page .world-map-cases-v2 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(12px, 1.6vw, 20px);
 }
 
 .home-page .water-history-v2 {
     display: grid;
-    grid-template-columns: minmax(170px, .34fr) minmax(0, 1fr);
-    gap: clamp(18px, 3vw, 42px);
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: 14px;
     margin: 0;
-    padding: clamp(18px, 2.8vw, 32px);
-    border: 3px solid #78a995;
+    padding: clamp(15px, 1.8vw, 22px);
+    border: 4px solid #78a995;
     background: #f8fbf8;
     box-shadow: 8px 8px 0 rgba(42, 84, 68, .11);
 }
@@ -383,17 +377,18 @@
 }
 
 .home-page .water-history-date strong {
-    margin-top: 8px;
+    margin-top: 9px;
     color: #285772;
     font-family: var(--home-display);
-    font-size: clamp(2.3rem, 4vw, 4rem);
-    line-height: .95;
+    font-size: clamp(1.45rem, 1.7vw, 1.9rem);
+    letter-spacing: -.035em;
+    line-height: 1.05;
 }
 
 .home-page .water-history-date small {
-    margin-top: 7px;
+    margin-top: 6px;
     color: #385565;
-    font-size: .88rem;
+    font-size: .82rem;
     font-weight: 700;
 }
 
@@ -401,20 +396,20 @@
     margin: 0 0 8px;
     color: #285772;
     font-family: var(--home-display);
-    font-size: clamp(1.3rem, 2.2vw, 2rem);
+    font-size: clamp(1.05rem, 1.4vw, 1.35rem);
     line-height: 1.1;
 }
 
 .home-page .water-history-copy p {
-    max-width: 78ch;
     margin: 0 0 10px;
     color: #385565;
-    line-height: 1.55;
+    font-size: .9rem;
+    line-height: 1.5;
 }
 
 .home-page .water-history-copy a {
     color: #176579;
-    font-size: .88rem;
+    font-size: .82rem;
     font-weight: 800;
     text-underline-offset: 3px;
 }
@@ -786,6 +781,11 @@
         gap: 14px;
     }
 
+    .home-page .world-map-cases-v2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
     .home-page .world-map-figure-v2 {
         padding: 8px;
     }
@@ -800,20 +800,13 @@
         padding: 16px;
     }
 
-    .home-page .water-history-date {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        gap: 6px 10px;
-    }
-
     .home-page .water-history-date strong,
     .home-page .water-history-date small {
         margin-top: 0;
     }
 
     .home-page .water-history-date strong {
-        font-size: 1.8rem;
+        font-size: 1.55rem;
     }
 
     .home-page .water-history-date small {
@@ -844,6 +837,13 @@
         box-shadow: 0 0 0 2px #285772;
     }
 
+    .home-page .world-map-marker-v2 {
+        width: 22px;
+        height: 22px;
+        border-width: 2px;
+        font-size: .68rem;
+    }
+
     .home-page .location-copy-v2 {
         padding: 11px;
     }
@@ -864,6 +864,18 @@
     .home-page .treatment-panorama-v2 img {
         width: 320%;
         transform: translate3d(calc(var(--treatment-index) * -17.1875%), 0, 0);
+    }
+}
+
+@media (max-width: 560px) {
+    .home-page .world-map-cases-v2 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .home-page .world-map-marker-v2 {
+        width: 16px;
+        height: 16px;
+        font-size: .58rem;
     }
 }
 

@@ -30,7 +30,7 @@
             <header class="story-heading-v2 map-heading-v2">
                 <p class="story-chapter-name">TAIWAN + GLOBAL HISTORY</p>
                 <h2 id="taiwan-title">WHERE WATER IS AT RISK</h2>
-                <p>Switch between water risks across Taiwan and a global historical case from Japan.</p>
+                <p>Compare water risks in Taiwan with five documented cadmium pollution cases around the world.</p>
             </header>
 
             <div class="map-view-switch" role="group" aria-label="Choose map view">
@@ -62,51 +62,83 @@
 
             <div id="map-view-world" class="map-view-panel world-map-composition-v2" data-map-view-panel="world" hidden>
                 <figure class="world-map-figure-v2">
-                    <svg viewBox="0 0 1000 500" role="img" aria-labelledby="world-map-title world-map-description">
-                        <title id="world-map-title">Schematic world map with Minamata Bay marked in Japan</title>
-                        <desc id="world-map-description">Simplified continents on a pale blue ocean. A marker identifies Minamata Bay in southwestern Japan.</desc>
-                        <rect class="world-map-ocean-v2" width="1000" height="500" rx="14"/>
-                        <g class="world-map-grid-v2" aria-hidden="true">
-                            <path d="M0 125H1000M0 250H1000M0 375H1000M250 0V500M500 0V500M750 0V500"/>
-                        </g>
-                        <g class="world-map-land-v2" aria-hidden="true">
-                            <path d="M85 106 112 83 145 76 169 84 187 72 212 84 226 101 253 106 269 124 258 140 237 143 229 160 211 165 202 181 187 184 178 201 162 211 153 235 140 244 128 231 119 211 108 199 101 180 86 165 77 148 85 131Z"/>
-                            <path d="M182 215 198 225 208 242 224 252 215 265 204 259 197 246 186 237Z"/>
-                            <path d="M204 270 229 270 248 282 257 298 251 315 260 332 250 350 246 372 235 389 231 411 218 434 211 410 207 388 199 367 195 346 188 324 187 302 194 285Z"/>
-                            <path d="M258 61 280 51 302 58 314 72 304 87 284 97 266 88Z"/>
-                            <path d="M443 111 454 99 469 101 478 111 471 121 458 125Z"/>
-                            <path d="M454 143 477 135 498 143 510 159 509 181 501 197 499 219 488 239 480 263 468 279 461 257 459 236 448 214 445 190 438 171 444 155Z"/>
-                            <path d="M481 104 496 91 515 94 526 105 516 114 500 115Z"/>
-                            <path d="M505 93 535 78 564 82 585 72 612 80 639 76 659 85 683 78 710 86 736 82 760 91 789 91 808 101 831 102 847 114 840 125 822 125 812 136 793 133 781 145 764 140 749 153 730 149 716 161 699 154 682 160 668 148 648 151 632 137 613 143 598 129 578 137 561 126 542 135 528 123 510 126Z"/>
-                            <path d="M618 147 638 151 648 166 645 184 654 196 644 215 633 202 628 184 617 171Z"/>
-                            <path d="M682 179 699 184 707 197 702 209 691 202Z"/>
-                            <path d="M730 203 748 207 761 219 756 231 740 226Z"/>
-                            <path d="M780 241 803 233 829 239 846 252 841 268 824 278 802 274 786 263Z"/>
-                            <path d="M858 146 864 152 861 161 866 168 862 178 857 173 859 164 855 157Z"/>
-                        </g>
-                        <g class="world-map-marker-v2" aria-hidden="true">
-                            <path d="M672 111H823L859 158"/>
-                            <rect x="505" y="94" width="167" height="34" rx="5"/>
-                            <text x="516" y="116">MINAMATA BAY · JAPAN</text>
-                            <circle cx="861" cy="162" r="14" class="world-map-marker-halo-v2"/>
-                            <circle cx="861" cy="162" r="5" class="world-map-marker-dot-v2"/>
-                        </g>
-                    </svg>
-                    <figcaption>Schematic global view · the marker identifies Minamata Bay in southwestern Japan.</figcaption>
+                    <div class="world-map-image-v2">
+                        <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/world-cadmium-map.avif" alt="Hand-painted physical world map with five numbered markers for documented cadmium pollution cases">
+                        <a class="world-map-marker-v2" style="--marker-x:18.7%;--marker-y:24.5%" href="#case-clark-fork" aria-label="Read case 1: Clark Fork River, Montana"><span>1</span></a>
+                        <a class="world-map-marker-v2" style="--marker-x:51.5%;--marker-y:21.5%" href="#case-campine" aria-label="Read case 2: Campine region, Belgium and the Netherlands"><span>2</span></a>
+                        <a class="world-map-marker-v2" style="--marker-x:88.1%;--marker-y:29.6%" href="#case-jinzu" aria-label="Read case 3: Jinzu River basin, Japan"><span>3</span></a>
+                        <a class="world-map-marker-v2" style="--marker-x:77.4%;--marker-y:40.7%" href="#case-mae-sot" aria-label="Read case 4: Mae Sot, Thailand"><span>4</span></a>
+                        <a class="world-map-marker-v2" style="--marker-x:80%;--marker-y:36.3%" href="#case-longjiang" aria-label="Read case 5: Longjiang River, China"><span>5</span></a>
+                    </div>
+                    <figcaption>Hand-painted physical map · numbered locations are approximate and match the cadmium case cards below.</figcaption>
                 </figure>
 
-                <article class="water-history-v2" aria-labelledby="minamata-title">
-                    <div class="water-history-date">
-                        <span>GLOBAL CASE</span>
-                        <strong>1956</strong>
-                        <small>Minamata Bay, Japan</small>
-                    </div>
-                    <div class="water-history-copy">
-                        <h3 id="minamata-title">When pollution reached the food chain</h3>
-                        <p>Minamata disease was first officially identified in 1956. Methylmercury in factory wastewater entered the sea and accumulated in fish and shellfish, exposing people who ate them. This is a mercury pollution case; our project studies cadmium.</p>
-                        <a href="https://www.env.go.jp/en/chemi/hs/minamata2002/summary.html" target="_blank" rel="noopener noreferrer">Read the history from Japan&rsquo;s Ministry of the Environment</a>
-                    </div>
-                </article>
+                <div class="world-map-cases-v2">
+                    <article class="water-history-v2" id="case-clark-fork" aria-labelledby="clark-fork-title">
+                        <div class="water-history-date">
+                            <span>CASE 01</span>
+                            <strong>1880s–1970s</strong>
+                            <small>Clark Fork River, USA</small>
+                        </div>
+                        <div class="water-history-copy">
+                            <h3 id="clark-fork-title">Mining waste entered the river</h3>
+                            <p>More than a century of mining and ore processing left cadmium in the Clark Fork system. The U.S. EPA lists cadmium among the site&rsquo;s main contaminants.</p>
+                            <a href="https://semspub.epa.gov/work/02/206595.pdf" target="_blank" rel="noopener noreferrer">Read the U.S. EPA site fact sheet</a>
+                        </div>
+                    </article>
+
+                    <article class="water-history-v2" id="case-campine" aria-labelledby="campine-title">
+                        <div class="water-history-date">
+                            <span>CASE 02</span>
+                            <strong>Late 1800s–1970s</strong>
+                            <small>Campine, Belgium &amp; Netherlands</small>
+                        </div>
+                        <div class="water-history-copy">
+                            <h3 id="campine-title">Smelter emissions spread cadmium</h3>
+                            <p>Zinc smelters emitted cadmium across the Campine region. A European Commission review describes diffuse contamination over about 350 km&sup2;.</p>
+                            <a href="https://publications.jrc.ec.europa.eu/repository/bitstream/JRC53315/publication_scr_belgium_final.pdf" target="_blank" rel="noopener noreferrer">Read the European Commission review</a>
+                        </div>
+                    </article>
+
+                    <article class="water-history-v2" id="case-jinzu" aria-labelledby="jinzu-title">
+                        <div class="water-history-date">
+                            <span>CASE 03</span>
+                            <strong>1955 / 1968</strong>
+                            <small>Jinzu River basin, Japan</small>
+                        </div>
+                        <div class="water-history-copy">
+                            <h3 id="jinzu-title">Itai-itai disease linked to cadmium</h3>
+                            <p>The disease was reported in 1955. In 1968, Japan&rsquo;s government identified chronic cadmium poisoning in the Jinzu River basin.</p>
+                            <a href="https://www.env.go.jp/en/wpaper/1995/eae240000000065.html" target="_blank" rel="noopener noreferrer">Read Japan&rsquo;s Ministry of the Environment history</a>
+                        </div>
+                    </article>
+
+                    <article class="water-history-v2" id="case-mae-sot" aria-labelledby="mae-sot-title">
+                        <div class="water-history-date">
+                            <span>CASE 04</span>
+                            <strong>2000–2004</strong>
+                            <small>Mae Sot, Thailand</small>
+                        </div>
+                        <div class="water-history-copy">
+                            <h3 id="mae-sot-title">Cadmium reached irrigated rice fields</h3>
+                            <p>Creeks near a zinc mine supplied irrigation to rice fields. Surveys from 2000 to 2004 found cadmium above the permitted level in over 90% of sampled rice grain.</p>
+                            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4555274/" target="_blank" rel="noopener noreferrer">Read the Mae Sot exposure study</a>
+                        </div>
+                    </article>
+
+                    <article class="water-history-v2" id="case-longjiang" aria-labelledby="longjiang-title">
+                        <div class="water-history-date">
+                            <span>CASE 05</span>
+                            <strong>2012</strong>
+                            <small>Longjiang River, China</small>
+                        </div>
+                        <div class="water-history-copy">
+                            <h3 id="longjiang-title">Emergency response to river contamination</h3>
+                            <p>After dead fish were found, water tests showed cadmium above the national limit. The response aimed to lower river levels and protect the downstream water supply.</p>
+                            <a href="https://english.mee.gov.cn/News_service/media_news/201201/t20120131_222997.shtml" target="_blank" rel="noopener noreferrer">Read the report hosted by China&rsquo;s environment ministry</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
