@@ -6,13 +6,13 @@
 
     <div class="ihp-hero-content">
 
-        <span class="section-tag">
+        <span class="section-title">
             HUMAN PRACTICES
         </span>
 
-        <h2>
+        <h1>
             Integrated Human Practices
-        </h2>
+        </h1>
 
         <p class="hero-subtitle">
 
