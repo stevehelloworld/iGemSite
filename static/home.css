@@ -685,10 +685,17 @@
     height: auto;
 }
 
+/* The stage keeps its horizontal clipping. Its ::after is a decorative panel
+   that bleeds 169px past the right edge on purpose. It has to stay positioned:
+   overflow only clips descendants whose containing block is this box, so a
+   static stage would hand the ::after to .highlight-story and let it widen the
+   whole page. Clip across, stay visible down, so the box grows with content. */
 .home-page .highlight-stage {
-    position: static;
+    position: relative;
     height: auto;
-    overflow: visible;
+    overflow: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
 }
 
 .home-page .highlight-scene {
