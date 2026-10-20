@@ -20,13 +20,6 @@ app.config['FREEZER_STATIC_IGNORE'] = [
     # page was reduced to the protocol set. No page references them, so they are
     # held in the repository but left out of the deployment archive.
     'assets/images/mt-structures',
-    # Modelling figures are served from static.igem.wiki; the copies kept here
-    # are the upload sources and must stay out of the deployment archive.
-    'assets/images/model/fig1-growth-fits-20260930.webp',
-    'assets/images/model/fig2-reporter-models-pmh45.webp',
-    'assets/images/model/fig3-dose-response-pvis7-pvis8.webp',
-    'assets/images/model/fig4-cross-run-prediction.webp',
-    'assets/images/model/fig5-capacity-sweep.webp',
 ]
 app.config['PUBLIC_SITE_ROOT'] = environ.get('CI_PAGES_URL', '').rstrip('/') + '/'
 freezer = Freezer(app)
