@@ -16,6 +16,13 @@ app.config['FREEZER_STATIC_IGNORE'] = [
     'assets/images/engineering-cycle-flat.png',
     'assets/images/solution/capture.png',
     'assets/images/notebook/sample-assay-plate-map-20261012-13.png',
+    # Modelling figures are served from static.igem.wiki; the copies kept here
+    # are the upload sources and must stay out of the deployment archive.
+    'assets/images/model/fig1-growth-fits-20260930.webp',
+    'assets/images/model/fig2-reporter-models-pmh45.webp',
+    'assets/images/model/fig3-dose-response-pvis7-pvis8.webp',
+    'assets/images/model/fig4-cross-run-prediction.webp',
+    'assets/images/model/fig5-capacity-sweep.webp',
 ]
 app.config['PUBLIC_SITE_ROOT'] = environ.get('CI_PAGES_URL', '').rstrip('/') + '/'
 freezer = Freezer(app)
