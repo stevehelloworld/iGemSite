@@ -64,45 +64,19 @@
                 <figure class="world-map-figure-v2">
                     <div class="world-map-image-v2">
                         <img src="https://static.igem.wiki/teams/6423/wiki/static/assets/images/world-cadmium-map.avif" alt="Hand-painted physical world map with five numbered markers for documented cadmium pollution cases">
-                        <a class="world-map-marker-v2" style="--marker-x:18.7%;--marker-y:24.5%" href="#case-clark-fork" aria-label="Read case 1: Clark Fork River, Montana"><span>1</span></a>
-                        <a class="world-map-marker-v2" style="--marker-x:51.5%;--marker-y:21.5%" href="#case-campine" aria-label="Read case 2: Campine region, Belgium and the Netherlands"><span>2</span></a>
-                        <a class="world-map-marker-v2" style="--marker-x:88.1%;--marker-y:29.6%" href="#case-jinzu" aria-label="Read case 3: Jinzu River basin, Japan"><span>3</span></a>
-                        <a class="world-map-marker-v2" style="--marker-x:77.4%;--marker-y:40.7%" href="#case-mae-sot" aria-label="Read case 4: Mae Sot, Thailand"><span>4</span></a>
-                        <a class="world-map-marker-v2" style="--marker-x:80%;--marker-y:36.3%" href="#case-longjiang" aria-label="Read case 5: Longjiang River, China"><span>5</span></a>
+                        <a class="world-map-marker-v2" style="--marker-x:88.1%;--marker-y:29.6%" href="#case-jinzu" aria-label="Read case 1: Jinzu River basin, Japan"><span>1</span></a>
+                        <a class="world-map-marker-v2" style="--marker-x:84.5%;--marker-y:36.5%" href="#case-dayu" aria-label="Read case 2: Dayu County, Jiangxi, China"><span>2</span></a>
+                        <a class="world-map-marker-v2" style="--marker-x:76%;--marker-y:42.5%" href="#case-mae-sot" aria-label="Read case 3: Mae Sot, Thailand"><span>3</span></a>
+                        <a class="world-map-marker-v2" style="--marker-x:78.5%;--marker-y:38.5%" href="#case-longjiang" aria-label="Read case 4: Longjiang River, China"><span>4</span></a>
+                        <a class="world-map-marker-v2" style="--marker-x:85.5%;--marker-y:33.5%" href="#case-xiangjiang" aria-label="Read case 5: Xiangjiang River basin, China"><span>5</span></a>
                     </div>
                     <figcaption>Hand-painted physical map · numbered locations are approximate and match the cadmium case cards below.</figcaption>
                 </figure>
 
                 <div class="world-map-cases-v2">
-                    <article class="water-history-v2" id="case-clark-fork" aria-labelledby="clark-fork-title">
-                        <div class="water-history-date">
-                            <span>CASE 01</span>
-                            <strong>1880s–1970s</strong>
-                            <small>Clark Fork River, USA</small>
-                        </div>
-                        <div class="water-history-copy">
-                            <h3 id="clark-fork-title">Mining waste entered the river</h3>
-                            <p>More than a century of mining and ore processing left cadmium in the Clark Fork system. The U.S. EPA lists cadmium among the site&rsquo;s main contaminants.</p>
-                            <a href="https://semspub.epa.gov/work/02/206595.pdf" target="_blank" rel="noopener noreferrer">Read the U.S. EPA site fact sheet</a>
-                        </div>
-                    </article>
-
-                    <article class="water-history-v2" id="case-campine" aria-labelledby="campine-title">
-                        <div class="water-history-date">
-                            <span>CASE 02</span>
-                            <strong>Late 1800s–1970s</strong>
-                            <small>Campine, Belgium &amp; Netherlands</small>
-                        </div>
-                        <div class="water-history-copy">
-                            <h3 id="campine-title">Smelter emissions spread cadmium</h3>
-                            <p>Zinc smelters emitted cadmium across the Campine region. A European Commission review describes diffuse contamination over about 350 km&sup2;.</p>
-                            <a href="https://publications.jrc.ec.europa.eu/repository/bitstream/JRC53315/publication_scr_belgium_final.pdf" target="_blank" rel="noopener noreferrer">Read the European Commission review</a>
-                        </div>
-                    </article>
-
                     <article class="water-history-v2" id="case-jinzu" aria-labelledby="jinzu-title">
                         <div class="water-history-date">
-                            <span>CASE 03</span>
+                            <span>CASE 01</span>
                             <strong>1955 / 1968</strong>
                             <small>Jinzu River basin, Japan</small>
                         </div>
@@ -113,29 +87,55 @@
                         </div>
                     </article>
 
+                    <article class="water-history-v2" id="case-dayu" aria-labelledby="dayu-title">
+                        <div class="water-history-date">
+                            <span>CASE 02</span>
+                            <strong>Since the 1960s</strong>
+                            <small>Dayu County, Jiangxi, China</small>
+                        </div>
+                        <div class="water-history-copy">
+                            <h3 id="dayu-title">Cadmium exposure persisted for decades</h3>
+                            <p>A 19-year follow-up found that rice from exposed areas averaged 0.59 &plusmn; 0.41 mg/kg cadmium in 2006, after decades of environmental exposure.</p>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/24140693/" target="_blank" rel="noopener noreferrer">Read the 19-year cadmium follow-up study</a>
+                        </div>
+                    </article>
+
                     <article class="water-history-v2" id="case-mae-sot" aria-labelledby="mae-sot-title">
                         <div class="water-history-date">
-                            <span>CASE 04</span>
+                            <span>CASE 03</span>
                             <strong>2000–2004</strong>
                             <small>Mae Sot, Thailand</small>
                         </div>
                         <div class="water-history-copy">
                             <h3 id="mae-sot-title">Cadmium reached irrigated rice fields</h3>
-                            <p>Creeks near a zinc mine supplied irrigation to rice fields. Surveys from 2000 to 2004 found cadmium above the permitted level in over 90% of sampled rice grain.</p>
+                            <p>Creeks supplied irrigation to local rice fields. Surveys from 2000 to 2004 found that over 90% of sampled rice grain from the cadmium-contaminated area exceeded the 0.4 mg/kg limit.</p>
                             <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4555274/" target="_blank" rel="noopener noreferrer">Read the Mae Sot exposure study</a>
                         </div>
                     </article>
 
                     <article class="water-history-v2" id="case-longjiang" aria-labelledby="longjiang-title">
                         <div class="water-history-date">
-                            <span>CASE 05</span>
+                            <span>CASE 04</span>
                             <strong>2012</strong>
                             <small>Longjiang River, China</small>
                         </div>
                         <div class="water-history-copy">
-                            <h3 id="longjiang-title">Emergency response to river contamination</h3>
-                            <p>After dead fish were found, water tests showed cadmium above the national limit. The response aimed to lower river levels and protect the downstream water supply.</p>
-                            <a href="https://english.mee.gov.cn/News_service/media_news/201201/t20120131_222997.shtml" target="_blank" rel="noopener noreferrer">Read the report hosted by China&rsquo;s environment ministry</a>
+                            <h3 id="longjiang-title">A cadmium spill triggered an emergency response</h3>
+                            <p>Water tests found cadmium above the national limit. A follow-up study tracked cadmium in river water and sediment after the 2012 pollution accident.</p>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/29197813/" target="_blank" rel="noopener noreferrer">Read the Longjiang River cadmium study</a>
+                        </div>
+                    </article>
+
+                    <article class="water-history-v2" id="case-xiangjiang" aria-labelledby="xiangjiang-title">
+                        <div class="water-history-date">
+                            <span>CASE 05</span>
+                            <strong>2013</strong>
+                            <small>Xiangjiang basin, Hunan, China</small>
+                        </div>
+                        <div class="water-history-copy">
+                            <h3 id="xiangjiang-title">A regional survey documented cadmium in rice-growing areas</h3>
+                            <p>Hunan&rsquo;s 2013 survey covered rice-producing areas across 45 counties in the Xiangjiang basin. It classified 44% of the surveyed area as highly Cd-contaminated and 34% as moderately contaminated.</p>
+                            <a href="https://www.adb.org/projects/50007-001/main" target="_blank" rel="noopener noreferrer">Read the Asian Development Bank project summary</a>
                         </div>
                     </article>
                 </div>
